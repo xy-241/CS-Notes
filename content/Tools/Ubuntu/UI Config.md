@@ -1,0 +1,1 @@
+- [Remove Title Bar with Unite](https://stackoverflow.com/questions/71204126/how-to-remove-the-title-bar-of-gnome-applications)

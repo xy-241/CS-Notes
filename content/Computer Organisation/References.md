@@ -1,0 +1,3 @@
+- [Instruction Set Architectures](https://youtu.be/1KTW32xSs_k)
+- [CPU Pipelining - The cool way your CPU avoids idle time!](https://youtu.be/cZIPxra_apA)
+- 

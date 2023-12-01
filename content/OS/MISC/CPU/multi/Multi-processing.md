@@ -1,0 +1,15 @@
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-11-07T14:50:00
+Last Date: 
+References:
+---
+## Abstract
+- Having multiple [[Process]] running at the same time on [[Multi-core chips]], offers true [[High-performance Computing#Parallelism (并行性)|Parallelism(并行性)]]
+- Can avoid issues like [[Deadlock (死锁)]] & [[Race Condition (竞态条件)]] faced by [[Multi-threading, Hyper-threading]] effectively but more resource heavy, because not sharing the same [[Address Space]], but independent [[Address Space]] comes with a cost 
+- Performance limited by the *number of CPU cores*
