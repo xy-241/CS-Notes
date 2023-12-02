@@ -1,4 +1,15 @@
-#OS #computer_organisation 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+  - computer_organisation
+Creation Date: 
+Last Date: 
+References:
+---
 ## Abstract
 - A group of [[Latch]]
 - Accessible from [[Instruction]]
