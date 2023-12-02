@@ -10,9 +10,9 @@ Last Date:
 References:
 ---
 ## Abstract
-- A *read-modify-write (RMW)* [[Instruction]] that appears to complete *instantaneously* and *without interruption*, even when multiple [[Thread]] or processors attempt to access it simultaneously
-- This ensures that a set of *read-modify-write (RMW)* operation's outcome is always *consistent* and *predictable*
-- Commonly used in [[Semaphore (信号量)]] & [[Mutex (互斥体)]] etc which need to be accessed and modified safely by multiple [[Process]]
+- A *read-modify-write (RMW)* [[Instruction]] on a piece of data, that appears to complete *instantaneously* and *without interruption*, even when multiple [[Thread]] or processors attempt to access the same piece of data simultaneously
+- This ensures that a set of *read-modify-write (RMW)* operation's outcome on a piece of data is always *consistent* and *predictable*
+- Commonly used in [[Semaphore (信号量)]] & [[Mutex (互斥体)]] etc which have state that need to be accessed and modified safely by multiple [[Process]]
 
 
 ## Benefits
@@ -21,7 +21,7 @@ References:
 
 ## Real-World Examples
 ### Acquiring and Releasing [[Spinlock (自旋锁)]]
-- Atomic instructions are used to acquire and release [[Mutex (互斥体)]], which are locks that prevent multiple threads from accessing a shared resource simultaneously.
+- Atomic instructions are also used to acquire and release [[Spinlock (自旋锁)]], which are locks that prevent multiple threads from accessing a shared resource simultaneously.
 ```c
 // XV6-RISCV Kernel Codes, spinlock.c
 

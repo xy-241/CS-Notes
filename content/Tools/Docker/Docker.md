@@ -19,6 +19,10 @@ References:
 1. [[Docker Installation]]
 2. [[Common Docker Command Flags]]
 
+## Troubleshooting
+### Working with M1 
+- Refer to [ISA Unmatch error](https://stackoverflow.com/questions/66662820/m1-docker-preview-and-keycloak-images-platform-linux-amd64-does-not-match-th)
+- `--platform linux/amd64`
 
 ## Terminologies 
 ### Daemon
