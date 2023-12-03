@@ -17,12 +17,16 @@ References:
 - Print out [[#DP Table]] to check any errors
 
 ## Questions
-### Basics: [[#Overlapping Subproblems (重复子问题)]]
+### Basics
 - [509. Fibonacci Number](https://leetcode.cn/problems/fibonacci-number/)
 
-### [[#Optimal Substructure (最优子结构)]]
+### [[#Statelessness (无后效性)]]
 #### CodeForces
 - ⭐  [455A - Boredom (1500)](https://codeforces.com/problemset/problem/455/A)
+
+### Sub Seqence (Continuous)
+#### CodeForces
+- [B - New Skateboard](https://xy241-dsa.notion.site/B-New-Skateboard-99fcc366365b4a579fba2a1466cdf6a8?pvs=4) ([[Number Theory]] Required)
 
 ## Terminologies 
 ### Overlapping Subproblems (重复子问题)
@@ -41,4 +45,5 @@ References:
 - Trade space for time
 - Use extra space to hold intermediate results to avoid duplicated computation
 - A mapping between the [[Backtracking#State (状态)|State]] and the correspnding solution to each sub-problems at that particular [[Backtracking#State (状态)|State]]
+- Can take the form of [[Array]] or simply a variable
 ### State Transition Equation (状态转移方程)
