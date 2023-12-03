@@ -13,6 +13,8 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <hr />
+        <div class="giscus"></div>
+        <hr />
         <p>
           Created by <a href="https://www.linkedin.com/in/xinyang-yu/">Xinyang YU</a>, © {year}
         </p>
