@@ -1,68 +1,83 @@
-#computer_organisation 
-## Basic 
-> [!note]
-> ![[IEEE 754 Floating-Point Rep.png]]
-> - **sign** 0 for positive, 1 for negative
-> - **exponent** by default -127 with all bits set to 0
-> - **mantissa** takes the binary behind the decimal place after normalization 
-> - Usually [[Converted to Hex format]] for better readability 
-> - [Online Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - computer_organisation
+Creation Date: 
+Last Date: 
+References:
+---
+## Abstract
+![[IEEE 754 Floating-Point Rep.png]]
+ - **sign** 0 for positive, 1 for negative
+ - **exponent** by default -127 with all bits set to 0
+ - **mantissa** takes the binary behind the decimal place after normalization 
+ - Precision is *7 decimal digits*
 
->[!caution] Are approximation of [[Real Number]], mantissa gives the precision
->![[floating_point_as_an_approximation.png]]
->- From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point
->- For 2 to 4 (2^1-2^2), there are 22 bits of mantissa used for precision after decision point, one of the bit is used to present the whole number before decimal point
->- With every range of 2, the precision after the decimal point is reduced by /2
->- Thus, the precision of the number after decimal point is getting worse as the number getting bigger
 
+## Approximation of [[Real Number]]
+- mantissa gives the precision
+![[floating_point_as_an_approximation.png]]
+- From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point
+- For 2 to 4 (2^1-2^2), there are 22 bits of mantissa used for precision after decision point, one of the bit is used to present the whole number before decimal point
+- With every range of 2, the precision after the decimal point is reduced by /2
+- Thus, the precision of the number after decimal point is getting worse as the number getting bigger
+
+## Tips 
 - When it comes to store a large whole number, use `long` to represent, because floating options like `double` may have precision loss issues
+- Usually [[Converted to Hex format]] for better readability 
+ - [Online Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
+
+
 ## [[Normalised Number]]
 ### Smallest positive [[Normalised Number]]
->![[smallest_normalized_number.png]]
+![[smallest_normalized_number.png]]
 ### Biggest positive [[Normalised Number]]
->![[biggest_normalised_number.png]]
+![[biggest_normalised_number.png]]
 
 ### Properties
 - The range of real numbers between 0 and smallest [[Normalised Number]] isn't covered, covered by [[Subnormal Number (Denormalized Number)]]
->![[normal_number_range.png]]
+![[normal_number_range.png]]
 - The 1 is implicit when exponent isn't 0. When exponent is 0, we get [[Subnormal Number (Denormalized Number)]]
->![[implicit_1.png]]
+![[implicit_1.png]]
 
 
 
 ## [[Subnormal Number (Denormalized Number)]]
->[!note] Smallest positive [[Subnormal Number (Denormalized Number)]]
->![[smallest_denormalized_exponent.png]] 
->>[!caution] The exponent bias is fixed at -126 when denormalised
+### Smallest positive [[Subnormal Number (Denormalized Number)]]
+![[smallest_denormalized_exponent.png]] 
+- The exponent bias is fixed at -126 when denormalised
 
->[!note] Biggest [[Subnormal Number (Denormalized Number)]]
->![[biggest_denormalized.png]]
+### Biggest [[Subnormal Number (Denormalized Number)]]
+![[biggest_denormalized.png]]
 
->[!info] Why [[Subnormal Number (Denormalized Number)]]
->![[importance_of_subnormal.png]]
->- Without [[Subnormal Number (Denormalized Number)]], we will get a 0 if the difference between 2 numbers is smaller than the smallest [[Normalised Number]]
->>[!caution] In non-debug mode, [[Subnormal Number (Denormalized Number)]] maybe turned off for performance reasons, and this may lead to unexpected errors
+### Why [[Subnormal Number (Denormalized Number)]]
+![[importance_of_subnormal.png]]
+- Without [[Subnormal Number (Denormalized Number)]], we will get a 0 if the difference between 2 numbers is smaller than the smallest [[Normalised Number]]
+>[!caution] In non-debug mode, [[Subnormal Number (Denormalized Number)]] maybe turned off for performance reasons, and this may lead to unexpected errors
 
 
 ## 3 Special Cases
->[!note] 0
->![[float_0.png]]
->- Both Exponent & Mantissa is 0
+### 0
+![[float_0.png]]
+- Both Exponent & Mantissa is 0
 
->[!note] Infinity
->![[float_inf.png]]
->- Exponent is 255, but Mantissa is 0
+### Infinity
+![[float_inf.png]]
+- Exponent is 255, but Mantissa is 0
 
->[!note] NaN
->![[float_NaA.png]]
->- Exponent is 255 & Mantissa isn't 0
+### NaN
+![[float_NaA.png]]
+- Exponent is 255 & Mantissa isn't 0
 
 ## Side Notes
-> [!info] Floating-point rounding error - Binary representation that requires infinite precision 
-> - Decimal number like 0.1 in binary representation is like 1/3 in decimal presentation. With limited precision (32bits), we will lose some precision. That is why 0.1+0.2 in binary isn't strictly 0.3
+### Floating-point rounding error
+- Binary representation that requires infinite precision 
+- Decimal number like 0.1 in binary representation is like 1/3 in decimal presentation. With limited precision (32bits), we will lose some precision. That is why 0.1+0.2 in binary isn't strictly 0.3
 
 ## References 
-> [!quote] Quote, Cite
-> 1. [Hello Algo](https://www.hello-algo.com/chapter_data_structure/number_encoding/#332)
-> 2. [CS2100 Week 1 Lecture](https://www.comp.nus.edu.sg/~cs2100/2_resources/lectures.html)
-> 3. [SimonDev](https://www.youtube.com/watch?v=Oo89kOv9pVk)
+1. [Hello Algo](https://www.hello-algo.com/chapter_data_structure/number_encoding/#332)
+2. [CS2100 Week 1 Lecture](https://www.comp.nus.edu.sg/~cs2100/2_resources/lectures.html)
+3. [SimonDev](https://www.youtube.com/watch?v=Oo89kOv9pVk)
