@@ -57,16 +57,16 @@ References:
 
 ## 3 Special Cases
 ### 0
-![[float_0.png]]
 - Both Exponent & Mantissa is 0
+![[float_0.png]]
 
 ### Infinity
-![[float_inf.png]]
 - Exponent is 255, but Mantissa is 0
+![[float_inf.png]]
 
 ### NaN
-![[float_NaA.png]]
 - Exponent is 255 & Mantissa isn't 0
+![[float_NaA.png]]
 
 ## Tips 
 - When it comes to store a large whole number, use `long` to represent, because floating options like `double` may have precision loss issues
