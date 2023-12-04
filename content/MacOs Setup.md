@@ -28,9 +28,10 @@
 	# Move Ngrok Executable to PATH
 	cp ngrok /Users/<USERNAME>/.local/bin
 	```
-1. [Install Geist Font](https://github.com/vercel/geist-font) 🌟
+20. [Install Geist Font](https://github.com/vercel/geist-font) 🌟
 	- Drag and drop the installed font to built-in app `Font Book`
-2. [Install SurfShark](https://surfshark.com/download/macos) 🌟
+21. [Install SurfShark](https://surfshark.com/download/macos) 🌟
+22. [Install WeChat](https://www.wechat.com/) 🌟
 
 
 
