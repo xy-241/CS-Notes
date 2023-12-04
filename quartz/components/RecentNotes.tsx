@@ -15,7 +15,7 @@ interface Options {
 }
 
 const defaultOptions = (cfg: GlobalConfiguration): Options => ({
-  title: "Recent Notes",
+  title: "Recent Updates",
   limit: 3,
   linkToMore: false,
   filter: () => true,
