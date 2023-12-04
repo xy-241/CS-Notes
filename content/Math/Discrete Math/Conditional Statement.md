@@ -12,6 +12,8 @@ References:
 ## Abstract
 - Given `P`: it rains, `Q`: the floor is wet
 - Compound Statement `P -> Q`: If it rains, then the floor is wet
+>[!caution]
+>- If it doesn't rain, then the floor can be either wet or no wet
 - ***The floor MUST be wet if it rains***
 - *Logically Equivalent* to `~P OR Q`
 
