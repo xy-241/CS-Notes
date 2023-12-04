@@ -50,7 +50,7 @@ export default ((userOpts?: Partial<Options>) => {
                       <Date date={getDate(cfg, page)!} />
                     </p>
                   )}
-                  <ul class="tags">
+                  {/* <ul class="tags">
                     {tags.map((tag) => (
                       <li>
                         <a
@@ -61,7 +61,7 @@ export default ((userOpts?: Partial<Options>) => {
                         </a>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </div>
               </li>
             )
