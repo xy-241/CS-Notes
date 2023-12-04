@@ -47,7 +47,10 @@ References:
 ### Rewrite commit messages
 - Initialise the rebase, and set `r` to the commit we want to modify
 ### Combine multiple commits into one
-- Initialise the rebase, and set `s` to the commit we want to modify (In some cases we can't squash for some reasons, pending for me to find more)
+- Initialise the rebase, and set `s` to the commit we want to modify
+>[!info]
+>- Make sure the oldest commit in the included commits can't be squashed 
+>- Or we will get `error: cannot 'squash' without a previous commit` error
 ### Remove feature branch from [[Git#History]]
 - Initialise the rebase, include commits between the merged commit(inclusive) and the commit(inclusive) where the feature branch starts 
 - If we just want to remove the feature branch, we can just save and quite the rebase plan. And it is done
