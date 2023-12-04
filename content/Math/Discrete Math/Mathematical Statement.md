@@ -11,11 +11,12 @@ References:
 ---
 ## Abstract
 - Also known as *Proposition* 
-- Doesn't depend on any *Variable*, unless it is [[Propositional Logic#Logical Equivalence]] equation
 - 3 important types are [[#Universal]], [[#Conditional]] & [[#Existential]]
 - We can form *statements* that are [[#Universal]] & [[#Conditional]], or more to form *complex statements*
 - Either `True` or `False`
-
+>[!caution] 
+>- Doesn't depend on any *Variable*, unless it is [[Propositional Logic#Logical Equivalence]] equation
+>- Not in a question form
 ## Different Types of Statements
 ### Universal
 - Made of [[Predicate#Symbol]], [[Predicate#Variable]] & [[Predicate#Quantifiers]]
