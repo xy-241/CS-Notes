@@ -22,9 +22,9 @@ References:
 	import { datadogRum } from '@datadog/browser-rum';
 	
 	datadogRum.init({
-	  applicationId: '<GIVEN>',
-	  clientToken: '<GIVEN>',
-	  site: '<GIVEN>',
+	  applicationId: '<AUTO_POPULATED>',
+	  clientToken: '<AUTO_POPULATED>',
+	  site: 'datadoghq.eu',
 	  service: 'aegis-dev',
 	  env: 'aegis-dev',
 	  // Specify a version number to identify the deployed version of your application in Datadog
