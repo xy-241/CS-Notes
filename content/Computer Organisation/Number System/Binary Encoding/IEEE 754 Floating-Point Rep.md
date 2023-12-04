@@ -10,11 +10,11 @@ Last Date:
 References:
 ---
 ## Abstract
-![[IEEE 754 Floating-Point Rep.png]]
  - **sign** 0 for positive, 1 for negative
  - **exponent** by default -127 with all bits set to 0
  - **mantissa** takes the binary behind the decimal place after normalisation (the yellow circle part) 
- - Precision is *7 decimal digits*
+ - Reliable precision is *7 decimal digits*
+![[IEEE 754 Floating-Point Rep.png]]
 
 
 ## Approximation of [[Real Number]]
@@ -32,11 +32,11 @@ References:
 - The 1 is implicit when exponent isn't 0. When exponent is 0, we get [[#Subnormal Number (Denormalized Number)]]
 ![[implicit_1.png]]
 ### Smallest positive [[Normalised Number]]
-![[smallest_normalized_number.png]]
 - One bit for *exponent* to differentiate from [[#Subnormal Number (Denormalized Number)]]
+![[smallest_normalized_number.png]]
 ### Biggest positive [[Normalised Number]]
-![[biggest_normalised_number.png]]
 - All 1s for *exponent* means [[#Infinity]]
+![[biggest_normalised_number.png]]
 
 
 ## Subnormal Number (Denormalized Number)
@@ -45,10 +45,11 @@ References:
  ![[importance_of_subnormal.png]]
  >[!caution] In non-debug mode, Subnormal Number maybe turned off for performance reasons, and this may lead to unexpected errors
 ### Smallest positive [[Subnormal Number (Denormalized Number)]]
-![[smallest_denormalized_exponent.png]] 
 - The exponent bias is fixed at -126 when denormalised, and 0 is implicit instead of 1
+![[smallest_denormalized_exponent.png]] 
 
 ### Biggest [[Subnormal Number (Denormalized Number)]]
+- [[#0]] when Mantissa bits are all 0
 ![[biggest_denormalized.png]]
 
 
