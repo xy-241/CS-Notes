@@ -10,7 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
-- With [[#RUM]], we are able to get the metadata about the client such as the user-agent, [[IP Address]] & record down the user actions on the page in a video format
+- With [[#RUM]], we are able to get the metadata about the client such as the user-agent, [[IP Address]] & record down the user actions on the page in a video format 
 
 ## Setup
 - The example below is based on [next.js](https://nextjs.org/)
