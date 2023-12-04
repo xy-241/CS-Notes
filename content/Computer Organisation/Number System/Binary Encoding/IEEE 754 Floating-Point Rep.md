@@ -13,7 +13,7 @@ References:
 ![[IEEE 754 Floating-Point Rep.png]]
  - **sign** 0 for positive, 1 for negative
  - **exponent** by default -127 with all bits set to 0
- - **mantissa** takes the binary behind the decimal place after normalization 
+ - **mantissa** takes the binary behind the decimal place after normalisation (the yellow circle part) 
  - Precision is *7 decimal digits*
 
 
@@ -22,41 +22,36 @@ References:
 ![[floating_point_as_an_approximation.png]]
 - From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point
 - For 2 to 4 (2^1-2^2), there are 22 bits of mantissa used for precision after decision point, one of the bit is used to present the whole number before decimal point
-- With every range of 2, the precision after the decimal point is reduced by /2
+- With every range of 2, the precision after the decimal point is reduced by 2
 - Thus, the precision of the number after decimal point is getting worse as the number getting bigger
 
-## Tips 
-- When it comes to store a large whole number, use `long` to represent, because floating options like `double` may have precision loss issues
-- Usually [[Converted to Hex format]] for better readability 
- - [Online Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
 
-
-## [[Normalised Number]]
+## Normalised Number
+- The range of real numbers between 0 and smallest [[Normalised Number]] isn't covered, covered by [[#Subnormal Number (Denormalized Number)]]
+![[normal_number_range.png]]
+- The 1 is implicit when exponent isn't 0. When exponent is 0, we get [[#Subnormal Number (Denormalized Number)]]
+![[implicit_1.png]]
 ### Smallest positive [[Normalised Number]]
 ![[smallest_normalized_number.png]]
+- One bit for *exponent* to differentiate from [[#Subnormal Number (Denormalized Number)]]
 ### Biggest positive [[Normalised Number]]
 ![[biggest_normalised_number.png]]
-
-### Properties
-- The range of real numbers between 0 and smallest [[Normalised Number]] isn't covered, covered by [[Subnormal Number (Denormalized Number)]]
-![[normal_number_range.png]]
-- The 1 is implicit when exponent isn't 0. When exponent is 0, we get [[Subnormal Number (Denormalized Number)]]
-![[implicit_1.png]]
+- All 1s for *exponent* means [[#Infinity]]
 
 
-
-## [[Subnormal Number (Denormalized Number)]]
+## Subnormal Number (Denormalized Number)
+- Fill up the gap between 0 and the smallest [[#Normalised Number]]
+- Without, we will get a 0 if the difference between 2 numbers is smaller than the smallest [[#Normalised Number]]
+ ![[importance_of_subnormal.png]]
+ >[!caution] In non-debug mode, Subnormal Number maybe turned off for performance reasons, and this may lead to unexpected errors
 ### Smallest positive [[Subnormal Number (Denormalized Number)]]
 ![[smallest_denormalized_exponent.png]] 
-- The exponent bias is fixed at -126 when denormalised
+- The exponent bias is fixed at -126 when denormalised, and 0 is implicit instead of 1
 
 ### Biggest [[Subnormal Number (Denormalized Number)]]
 ![[biggest_denormalized.png]]
 
-### Why [[Subnormal Number (Denormalized Number)]]
-![[importance_of_subnormal.png]]
-- Without [[Subnormal Number (Denormalized Number)]], we will get a 0 if the difference between 2 numbers is smaller than the smallest [[Normalised Number]]
->[!caution] In non-debug mode, [[Subnormal Number (Denormalized Number)]] maybe turned off for performance reasons, and this may lead to unexpected errors
+
 
 
 ## 3 Special Cases
@@ -71,6 +66,11 @@ References:
 ### NaN
 ![[float_NaA.png]]
 - Exponent is 255 & Mantissa isn't 0
+
+## Tips 
+- When it comes to store a large whole number, use `long` to represent, because floating options like `double` may have precision loss issues
+- Usually [[Converted to Hex format]] for better readability 
+ - [Online Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html) to visualise better
 
 ## Side Notes
 ### Floating-point rounding error
