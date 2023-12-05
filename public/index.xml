@@ -6,6 +6,24 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>2&#039;s Complement</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement</guid>
+    <description>Abstract § We are adding extra 1 to the 反码 to obtain 补码 This makes sure that there is only one 0 by adding 1 to after converting from Sign-and-Magnitude to 1’s Complement .</description>
+    <pubDate>Tue, 05 Dec 2023 10:09:15 GMT</pubDate>
+  </item><item>
+    <title>1&#039;s Complement</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement</guid>
+    <description>Abstract § For negative number, all bits are inverted except the sign bit which is 1 when we need to perform the computation We can use this in addition computation directly, without building extra logic circuit We will have +0 &amp; -0, can be solved by 2’s Complement .</description>
+    <pubDate>Tue, 05 Dec 2023 10:06:49 GMT</pubDate>
+  </item><item>
+    <title>Decimal to Binary</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Decimal-to-Binary</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Decimal-to-Binary</guid>
+    <description>Abstract § Number before decimal point Keep diving by 2 until we get 0 Then the binary form counts from bottom to top Number after decimal point Keep multiple by 2 until we get 1 or infinite loop Then the binary form counts from top to bottom .</description>
+    <pubDate>Tue, 05 Dec 2023 10:01:52 GMT</pubDate>
+  </item><item>
     <title>Pipeline</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Pipeline</link>
     <guid>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Pipeline</guid>
@@ -47,24 +65,6 @@
     <guid>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Out-of-Order-Execution</guid>
     <description>Abstract § Used with Operand Forwarding to handle Pipeline Stall Without Out-of-Order Execution The third Instruction has to stop because the second Instruction stops With Out-of-Order Execution By shifting the starting point of Instruction, we can minimize idle time The idea is to execute independent Instruction in between Instruction that are dependent on each other .</description>
     <pubDate>Tue, 05 Dec 2023 09:45:51 GMT</pubDate>
-  </item><item>
-    <title>Pipeline Stall</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Pipeline-Stall</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Pipeline-Stall</guid>
-    <description>Abstract § Pause the instruction before the previous Instruction has Write Back the data it needs Cons § Performance hit § Too much stall in the Pipeline will reduce the benefits of Pipeline When one Instruction stalls, the other Instruction running will have to stall too We can minimize such situation by using Out-of-Order Execution .</description>
-    <pubDate>Tue, 05 Dec 2023 09:42:40 GMT</pubDate>
-  </item><item>
-    <title>Operand Forwarding</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Operand-Forwarding</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Operand-Forwarding</guid>
-    <description>Abstract § A tunnel that connects one Pipeline Stages of Instruction to another Pipeline Stages of another Instruction As shown in the diagram above, we are able to save the idle time caused by the Write Back of the first Instruction .</description>
-    <pubDate>Tue, 05 Dec 2023 09:41:33 GMT</pubDate>
-  </item><item>
-    <title>Read-After-Write(RAW) Hazard</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Read-After-Write(RAW)-Hazard</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Read-After-Write(RAW)-Hazard</guid>
-    <description>Abstract § x is only ready at t=5 since there’s where the first Instruction finishes Can be countered with simple Pipeline Stall or more complex Operand Forwarding .</description>
-    <pubDate>Tue, 05 Dec 2023 09:36:34 GMT</pubDate>
   </item>
     </channel>
   </rss>
