@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>CS-Notes</title>
+      <link>https://notes.yxy.ninja</link>
+      <description>Last 10 notes on CS-Notes</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Registers</title>
+    <link>https://notes.yxy.ninja/OS/MISC/CPU/Registers</link>
+    <guid>https://notes.yxy.ninja/OS/MISC/CPU/Registers</guid>
+    <description>Abstract § A group of Latch Accessible from Instruction 2 main purposes § Storying values during computations (like Memory Address &amp; value) Configuring CPU MIPS Registers § Register Type § Instruction Address Register § The register that contains the Memory Address to retrieve the Instruction Instruction Register § Contains Instruction retrieved from Main Memory Control &amp; Status Registers (CSRs) § There are multiple such register Stores information about the current state of the processor or device CSRs are typically used to control various aspects of the processor’s operation, such as interrupt handling, memory management, and power management etc Terminologies § Width § The number of Bits inside a register Memory Mapped § Register that is treated as a Main Memory location This means that the register can be accessed using the same Instruction and addressing modes as memory.</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>Dynamic Array (List)</title>
+    <link>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Array/Dynamic-Array-(List)</link>
+    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Array/Dynamic-Array-(List)</guid>
+    <description>Abstract § Resizable Array, achieved by building an Abstraction above the Array Benefits § Convenience § Developers don’t need to re-write the logic of re-sizeing Array etc Built with best practices &amp; battle-tested Cons § More Resource Intense § We can’t fine tune every Array operations because don’t have direct access .</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>My DSA Weak Points</title>
+    <link>https://notes.yxy.ninja/DSA/My-DSA-Weak-Points</link>
+    <guid>https://notes.yxy.ninja/DSA/My-DSA-Weak-Points</guid>
+    <description>Abstract § Weak points to be strengthen Areas to improve § Dynamic Programming § Create custom data structure § Examples are like Sort Zero Number Theory § Examples are like New Skateboard Coding Practices § Java § Always scanner.</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>Conditional Statement</title>
+    <link>https://notes.yxy.ninja/Math/Discrete-Math/Conditional-Statement</link>
+    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Conditional-Statement</guid>
+    <description>Abstract § Given P: it rains, Q: the floor is wet Compound Statement P -&gt; Q: If it rains, then the floor is wet Warning If it doesn’t rain, then the floor can be either wet or no wet The floor MUST be wet if it rains Logically Equivalent to ~P OR Q PQP -&gt; Q~P OR Q0011011110001111 Terminologies § Hypothesis/Antecedent § After if Conclusion/Consequent § After then Vacuously True § True by default When the “if” part of an if-then statement is false, then statement as a whole is said to be true regardless of whether the conclusion is true of false Implication Law § Convert -&gt; to OR Useful when we need to perform Proof by Contradiction (反证法) on Conditional Statement Converse (相反) § Compound Statement Q -&gt; P: If the floor is wet, then it rains When the floor isn’t wet, it can still rain or doesn’t rain It must rain IF the floor is wet QPQ -&gt; P001100011111 Inverse (对立) § Compound Statement ~P -&gt; ~Q: if it doesn’t rain, then the floor isn’t wet When it does rain, the floor can be wet or cant be wet The floor must NOT BE WET IF it isn’t raining Logically Equivalent to Converse PQ~P~Q~P -&gt; ~Q00111011001001111001 Contrapositive (反证) § Compound Statement ~Q -&gt; ~P: If the floor isn’t wet, then it doesn’t rain It must not rain if the floor isn’t wet Logically Equivalent to Standard Conditional Statement QP~Q~P~Q -&gt; ~P00111100110110011001 Bi-conditional § p &lt;-&gt; q, if AND only if, iff Sufficient Condition § r is a sufficient condition for s, r -&gt; s Necessary Condition § r is a necessary condition for s, s -&gt; r .</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>Mathematical Statement</title>
+    <link>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</link>
+    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</guid>
+    <description>Abstract § Also known as Proposition 3 important types are Universal, Conditional &amp; Existential We can form statements that are Universal &amp; Conditional, or more to form complex statements Either True or False Warning Doesn’t depend on any Variable, unless it is Logical Equivalence equation Not in a question form Different Types of Statements § Universal § Made of Symbol, Variable &amp; Quantifiers ∀x∈D,Q(x) true iff Q(x) is true for every x in D false iff Q(x) is false for at least one x in D For simple ones, usually universal comes wiht Conditional Statement Existential § Made of Symbol, Variable &amp; Quantifiers ∃x∈D,Q(x) true iff Q(x) is true for at least one x in D false iff Q(x) is false for all x in D For simple ones, usually existential comes with Conjunction Negation of Universal § Logical Equivalence to Existential There is AT LEAST ONE that IS NOT \neg(\forall x \in D, Q(x)) \equiv \exists x \in D, \neg Q(x) ### Negation of Existential - [[Propositional Logic#logical-equivalence|Logical Equivalence]] to [[#universal|Universal]] - `ALL ARE NOT` - $$ \neg(\exists x \in D, Q(x)) \equiv \forall x \in D, \neg Q(x) Negation of Universal Conditional § Make use of Negation of Universal &amp; Implication Law Universal Conditional § Made of Symbol, Variable &amp; Quantifiers &amp; Conditional Statement ∀x(ifP(x)→Q(x)) Can be simplified to Universal ∀x∈P,Q(x) Conditional § Conditional Statement If…, then… Terminologies § Statement § A sentence that is True or False, but not both Can be presented with variables like p, q, r &amp; s etc Logical Connectives § Negation: NOT performed first Disjunction: OR ,Conjunction: AND coequal, make sure proper parentheses is used to avoid Ambiguous If-then/implies: performed last, coequal with iff Statement/Propositional Form § Make up with Statement variables &amp; Logical Connectives Compound Statement § Make up with Statement variables &amp; Logical Connectives When the statement has Conditional Statement, convert it using Implication Law to make it much less confusing Tautology t § Statement/Propositional Form that is always true Contradiction c § Statement/Propositional Form that is always false Implicitly Quantified § The Quantifiers are assumed without specified explicitly Vacuous Truth of Universal § Given the statement: All balls in the bowl are blue, however no balls in the bowl.</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>Datadog APM</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
+    <description>Abstract § Terminologies § APM § Stands for Application Performance Monitoring Used to obtain Trace of the backend request &amp; database for all the incoming API Requests So we are abke .</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>Datadog RUM</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</guid>
+    <description>Abstract § With RUM, we are able to get the metadata about the client such as the user-agent, IP Address &amp; record down the user actions on the page in a video format Setup § The example below is based on next.</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>Git Rebase</title>
+    <link>https://notes.yxy.ninja/Tools/Git/Git-Rebase</link>
+    <guid>https://notes.yxy.ninja/Tools/Git/Git-Rebase</guid>
+    <description>Abstract § Benefits § Concise History § Sometimes, there are commits that are used to tested the idea If we don’t clean them up, when people branch out, these testing idea commits will follow too which make it harder to read and understand the development of the project To prevent meaningless trails and errors commits from polluting the git history, especially when others are branching out Basics § Include commits to rebase § git rebase -i HEAD~&lt;NUM_COMMITS&gt; NUM_COMMITS is the number of commits, including the current commit HEAD is pointing to Check the rebase plan § git rebase --edit-todo Continue with rebase after resolving a Merge Conflict § git rebase --continue Abandon this current rebase § git rebase --abort Use when we messed up, and don’t know what to do Merge § On the branch(FEATURE_BRANCH) we want to merge back: git rebase &lt;MAIN_BRANCH&gt; Checkout out to MAIN_BRANCH: git rebase &lt;FEATURE_BRANCH&gt; Personally I like to have a pull request, merge, then Remove feature branch from Git History Features § Edit changes in a past commit § Initialise the rebase, and set e to the commit we want to modify After modification, run git commit --amend Complete the rebase with git rebase --continue This will create a new commit, we can then proceed to rebase again to drop the previous old commits Drop commits in the commit history § Initialise the rebase, and set d to the commit we want to drop Rewrite commit messages § Initialise the rebase, and set r to the commit we want to modify Combine multiple commits into one § Initialise the rebase, and set s to the commit we want to modify Info Make sure the oldest commit in the included commits can’t be squashed Or we will get error: cannot &#039;squash&#039; without a previous commit error Remove feature branch from History § Initialise the rebase, include commits between the merged commit(inclusive) and the commit(inclusive) where the feature branch starts If we just want to remove the feature branch, we can just save and quite the rebase plan.</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>IEEE 754 Floating-Point Rep</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/IEEE-754-Floating-Point-Rep</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/IEEE-754-Floating-Point-Rep</guid>
+    <description>Abstract § sign 0 for positive, 1 for negative exponent by default -127 with all bits set to 0 mantissa takes the binary behind the decimal place after normalisation (the yellow circle part) Reliable precision is 7 decimal digits Approximation of Real Number § mantissa gives the precision From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point For 2 to 4 (2^1-2^2), there are 22 bits of mantissa used for precision after decision point, one of the bit is used to present the whole number before decimal point With every range of 2, the precision after the decimal point is reduced by 2 Thus, the precision of the number after decimal point is getting worse as the number getting bigger Normalised Number § The range of real numbers between 0 and smallest Normalised Number isn’t covered, covered by Subnormal Number (Denormalized Number) The 1 is implicit when exponent isn’t 0.</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item><item>
+    <title>Dynamic Programming</title>
+    <link>https://notes.yxy.ninja/DSA/Algorithms/Dynamic-Programming</link>
+    <guid>https://notes.yxy.ninja/DSA/Algorithms/Dynamic-Programming</guid>
+    <description>Abstract § 3 key components - Overlapping Subproblems (重复子问题), Optimal Substructure ( 最优子结构) &amp; Statelessness (无后效性) Leetcode Tips § Debugging § Print out DP Table to check any errors Questions § Basics § 509.</description>
+    <pubDate>Tue, 05 Dec 2023 04:47:36 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
