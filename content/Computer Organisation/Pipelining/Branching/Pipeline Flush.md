@@ -1,9 +1,23 @@
-#computer_organisation 
-![[pipeline_flush.png]]
-- We have remove all the [[Computer Organisation/Instruction Set Architecture (ISA)/Instruction]] we loaded in (In this case, statement 1-4), because we need to execute statement A-D after the [[Branching]]
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - computer_organisation
+Creation Date: 2023-08-18T20:46:00
+lastmod: 2023-12-05T17:24:53+08:00
+References: 
+---
+## Abstract
+- We have to remove all the [[Instruction]] we loaded in (In this case, statement 1-4), because we need to execute statement A-D after the [[Branching]]
 
->[!warning] [[Instruction-Level Parallelism]] Wasted!
->![[parallism wasted.png]]
->- In this case, when there is a [[Branching]] happening, we need to discard all [[Computer Organisation/Instruction Set Architecture (ISA)/Instruction]] running in [[parallel]]
->- This can be optimized by using [[Branch Prediction]]
+![[pipeline_flush.png]]
+
+## Cons
+### [[Instruction-Level Parallelism]] Wasted!
+- In this case, when there is a [[Branching]] happening, we need to discard all [[Instruction]] running in [[Instruction-Level Parallelism]]
+- This can be optimised by using [[Branch Prediction]]
+![[parallism wasted.png]]
+
 

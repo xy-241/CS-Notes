@@ -1,3 +1,6 @@
+---
+lastmod: 2023-12-05T17:54:57+08:00
+---
 #computer_organisation 
 ## Abstract
 - A set of [[Computer Organisation/Instruction Set Architecture (ISA)/Instruction| instructions]] which contains [[Instruction]] & parameters
@@ -16,3 +19,6 @@
  - [[MIPS (RISC)]]
  - x86: a [[CISC (Complex instruction set computer)]] developed by Intel
  - ARM: a [[RISC (Reduced Instruction Set Computer)]] developed by Acorn Computer
+
+## References
+- [Instruction Set Architectures](https://youtu.be/1KTW32xSs_k)

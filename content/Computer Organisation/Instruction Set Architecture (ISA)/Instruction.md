@@ -5,8 +5,8 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - computer_organisation
-Creation Date: 
-Last Date:
+Creation Date: 2023-11-28T20:12:00
+lastmod: 2023-12-05T17:13:29+08:00
 ---
 ## Abstract
 - [[Bit String]] stored in the [[Main Memory]]
@@ -24,6 +24,8 @@ Last Date:
 - [[Registers]] Address
 - [[Memory Address]]
 - Immediate Value
+### Branch
+- An [[Instruction]] that causes [[Process]] to jump to a different location in the codes
 
 
 

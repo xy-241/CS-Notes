@@ -1,5 +1,5 @@
 #OS 
 ## Abstract
-- Control unit, [[Registers]] & [[Pipelining]] are replicated
+- Control unit, [[Registers]] & [[Pipeline]] are replicated
 
 

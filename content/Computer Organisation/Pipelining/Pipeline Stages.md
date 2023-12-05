@@ -5,8 +5,8 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - computer_organisation
-Creation Date: 
-Last Date:
+Creation Date: 2023-10-07T16:57:00
+lastmod: 2023-12-05T17:32:57+08:00
 ---
 #computer_organisation 
 ## Abstract
@@ -22,8 +22,9 @@ Last Date:
 ### Decode
 - Handled by [[Control Unit]]
 ### Execute
-- When [[Operation]] is performed, can be further beak down to [[#Read]] & [[Write back]]
+- When [[Operation]] is performed, can be further beak down to [[#Read]] & [[#Write Back]]
 ### Read
 - Retrieve required data from [[Main Memory]] or [[Registers]]
 ### Write Back
 - Result is stored back into [[Main Memory]] or [[Registers]] 
+

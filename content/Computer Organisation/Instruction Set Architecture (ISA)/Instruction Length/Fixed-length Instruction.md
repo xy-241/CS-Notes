@@ -10,5 +10,5 @@ Last Date:
 ---
 ## Abstract
 - Easy [[Pipeline Stages#Fetch]] & [[Pipeline Stages#Decode]]
-- Simplified [[Pipelining]] & [[Instruction-Level Parallelism]]
+- Simplified [[Pipeline]] & [[Instruction-Level Parallelism]]
 
