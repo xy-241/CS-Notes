@@ -1,3 +1,0 @@
-#!/bin/bash
-echo "Git push received. Running your command..."
-npx quartz build
