@@ -14,7 +14,8 @@ References:
 
 ## Setup
 - The example below is based on [next.js](https://nextjs.org/)
-- We first go to [[#Datadog Dashboard]] to obtain the [[#RUM]] codes, then append the into the [[#Frontend Source Codes]]
+- We first go to [[#Datadog Dashboard]] to obtain the [[#RUM]] codes, then append the [[#RUM]] codes into the [[#Frontend Source Codes]]
+- Bonus: [[#Integration with Datadog APM]]
 ### Datadog Dashboard
 1. Go to the approriate [Datadog Site](https://docs.datadoghq.com/getting_started/site/#access-the-datadog-site). In this case, our site is `https://app.datadoghq.eu`, the [[#RUM]] endpoint is `https://app.datadoghq.eu/rum/list`
 2. Create a **New Application**,  **Application Type** is `JS`, **Instrumentation Type** is `NPM`, and we will get the following codes
@@ -42,7 +43,9 @@ References:
 1. Install the [[npm]] package - `npm i @datadog/browser-rum`
 2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the [[#RUM]] can monitor every page of the frontend
 
-
+### Integration with [[Datadog APM]]
+- This is for application that has both frontend and backend, and we need to have [[Datadog APM]] enabled for the backend before we can integrate it with [[#RUM]]
+- 
 
 
 ## Terminologies
