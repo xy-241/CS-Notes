@@ -6,13 +6,14 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T08:54:00
-Last Date: 
-References:
+Last Date: 2023-12-06T01:41:31+08:00
+References: 
 ---
 ## Abstract
 - *Logical rule* that allows us to derive a [[Mathematical Argument#Conclusion]] from a set of [[Mathematical Argument#Premise]]
 - A form of [[Mathematical Argument]] that is [[Mathematical Argument#Valid|Valid]]
 - Examples rules are [[#Modus Ponens]], [[#Modus Tollens]]
+- Tools that enable [[Deductive Reasoning (演繹推理)]]
 
 
 ## Terminologies

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-18T20:46:00
-lastmod: 2023-12-05T17:36:34+08:00
+Last Date: 2023-12-06T01:52:21+08:00
 References: 
 ---
 ## Abstract

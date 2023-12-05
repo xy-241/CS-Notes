@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-28T20:12:00
-lastmod: 2023-12-05T17:13:29+08:00
+Last Date: 2023-12-05T17:13:29+08:00
 ---
 ## Abstract
 - [[Bit String]] stored in the [[Main Memory]]

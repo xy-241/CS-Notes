@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-19T20:26:00
-Last Date: 
-References:
+Last Date: 2023-12-06T01:36:45+08:00
+References: 
 ---
 ## Abstract
-- Error in *reasoning* that results in an invalid argument
+- Error in *reasoning* that results in an invalid [[Mathematical Argument]]
 - 3 common fallacies causes
 	1. Using *Ambiguous Premises*
 	2. *Circular Reasoning* (Assuming what is to be proved without having derived it from the [[Mathematical Argument#Premise]])

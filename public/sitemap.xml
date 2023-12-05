@@ -294,7 +294,7 @@
     <lastmod>2023-12-05T09:42:40.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Read-After-Write(RAW)-Hazard</loc>
-    <lastmod>2023-12-05T09:36:34.000Z</lastmod>
+    <lastmod>2023-12-05T17:52:21.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Terminologies/Active-high</loc>
     <lastmod>2023-09-06T03:08:59.810Z</lastmod>
@@ -869,6 +869,9 @@
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Conditional-Statement</loc>
     <lastmod>2023-12-05T08:47:19.538Z</lastmod>
   </url><url>
+    <loc>https://notes.yxy.ninja/Math/Discrete-Math/Deductive-Reasoning-(%E6%BC%94%E7%B9%B9%E6%8E%A8%E7%90%86)</loc>
+    <lastmod>2023-12-05T17:30:26.000Z</lastmod>
+  </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Discrete-Math</loc>
     <lastmod>2023-11-14T09:09:24.605Z</lastmod>
   </url><url>
@@ -888,13 +891,13 @@
     <lastmod>2023-11-12T12:21:06.386Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Rule-of-Inference-(%E6%8E%A8%E7%90%86%E8%A7%84%E5%88%99)</loc>
-    <lastmod>2023-11-20T07:08:40.003Z</lastmod>
+    <lastmod>2023-12-05T17:41:31.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Set-Properties</loc>
     <lastmod>2023-11-09T02:36:14.937Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Terminologies/Fallacy</loc>
-    <lastmod>2023-11-19T12:37:13.393Z</lastmod>
+    <lastmod>2023-12-05T17:36:45.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Linear-Algebra/Cross-Product</loc>
     <lastmod>2023-09-19T15:14:03.019Z</lastmod>
@@ -2178,7 +2181,7 @@
     <lastmod>2023-09-22T08:25:41.122Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Templates/General-Template</loc>
-    <lastmod>2023-12-05T08:54:00.000Z</lastmod>
+    <lastmod>2023-12-05T17:37:58.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Templates/NUS-Course-Template</loc>
     <lastmod>2023-07-22T11:56:56.000Z</lastmod>
@@ -2247,7 +2250,7 @@
     <lastmod>2023-09-09T08:48:12.558Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS-Nuke/AWS-Nuke</loc>
-    <lastmod>2023-09-30T14:24:30.696Z</lastmod>
+    <lastmod>2023-09-30T14:24:00.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/AWS-ACL-(Access-Control-List)</loc>
     <lastmod>2023-08-04T03:13:06.000Z</lastmod>
