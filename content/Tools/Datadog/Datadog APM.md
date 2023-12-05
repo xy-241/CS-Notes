@@ -10,4 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
-- 
+
+
+
+
+## Terminologies 
+### APM
+- Stands for *Application Performance Monitoring*
+- Used to obtain [[Trace]] of the backend request & database for all the incoming *API Requests*
+- So we are abke
