@@ -26,9 +26,6 @@
     <loc>https://notes.yxy.ninja/C/Void-Pointer</loc>
     <lastmod>2023-10-04T09:05:00.179Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Adder</loc>
-    <lastmod>2023-10-05T10:16:59.000Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/CPU/ALU</loc>
     <lastmod>2023-10-07T08:26:04.260Z</lastmod>
   </url><url>
@@ -177,16 +174,16 @@
     <lastmod>2023-08-19T11:20:29.062Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction-Length/Fixed-length-Instruction</loc>
-    <lastmod>2023-10-07T09:22:25.777Z</lastmod>
+    <lastmod>2023-12-05T09:48:54.231Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction-Length/Variable-length-Instruction</loc>
     <lastmod>2023-10-07T09:22:08.211Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction-Set-Architecture-(ISA)</loc>
-    <lastmod>2023-10-07T08:16:44.345Z</lastmod>
+    <lastmod>2023-12-05T09:54:57.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction</loc>
-    <lastmod>2023-11-28T12:12:59.322Z</lastmod>
+    <lastmod>2023-12-05T09:13:29.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Function-Code-(6bits)</loc>
     <lastmod>2023-08-18T12:46:44.314Z</lastmod>
@@ -267,61 +264,37 @@
     <lastmod>2023-08-06T08:40:14.030Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Branch-Prediction-Strategies-(Heuristics)</loc>
-    <lastmod>2023-07-19T06:14:43.000Z</lastmod>
+    <lastmod>2023-12-05T09:34:02.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Branch-Prediction</loc>
-    <lastmod>2023-08-27T06:44:16.046Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Branch</loc>
-    <lastmod>2023-08-18T12:46:44.496Z</lastmod>
+    <lastmod>2023-12-05T09:22:10.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Branching</loc>
-    <lastmod>2023-08-28T09:14:20.672Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Dynamic-Branch-Prediction</loc>
-    <lastmod>2023-08-25T11:10:57.699Z</lastmod>
+    <lastmod>2023-12-05T09:53:55.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Pipeline-Flush</loc>
-    <lastmod>2023-08-18T12:46:44.598Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Random-Branch-Prediction</loc>
-    <lastmod>2023-07-19T06:06:17.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Static-Branch-Prediction</loc>
-    <lastmod>2023-08-18T12:46:44.638Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Hazards/Operand-Forwarding</loc>
-    <lastmod>2023-07-20T10:20:15.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Hazards/Out-of-Order-Execution</loc>
-    <lastmod>2023-08-18T12:46:44.672Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Hazards/Pipeline-Stall</loc>
-    <lastmod>2023-08-18T12:46:44.703Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Hazards/Read-After-Write(RAW)-Hazard</loc>
-    <lastmod>2023-08-18T12:46:44.709Z</lastmod>
+    <lastmod>2023-12-05T09:24:53.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Instruction-Level-Parallelism</loc>
-    <lastmod>2023-10-07T09:18:20.696Z</lastmod>
+    <lastmod>2023-12-05T09:46:02.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Pipelining</loc>
-    <lastmod>2023-10-07T08:30:23.764Z</lastmod>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Pipeline-Stages</loc>
+    <lastmod>2023-12-05T09:32:57.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Stages/Decode</loc>
-    <lastmod>2023-10-07T08:44:45.496Z</lastmod>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Pipeline</loc>
+    <lastmod>2023-12-05T09:55:25.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Stages/Execute</loc>
-    <lastmod>2023-10-07T08:50:30.560Z</lastmod>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Operand-Forwarding</loc>
+    <lastmod>2023-12-05T09:41:33.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Stages/Pipeline-Stages</loc>
-    <lastmod>2023-10-07T08:57:26.254Z</lastmod>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Out-of-Order-Execution</loc>
+    <lastmod>2023-12-05T09:45:51.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Stages/Write-back</loc>
-    <lastmod>2023-10-07T08:50:37.081Z</lastmod>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Pipeline-Stall</loc>
+    <lastmod>2023-12-05T09:42:40.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/References</loc>
-    <lastmod>2023-07-20T10:33:06.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Read-After-Write(RAW)-Hazard/Read-After-Write(RAW)-Hazard</loc>
+    <lastmod>2023-12-05T09:36:34.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Terminologies/Active-high</loc>
     <lastmod>2023-09-06T03:08:59.810Z</lastmod>
@@ -505,9 +478,6 @@
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-collision/Load-Factor</loc>
     <lastmod>2023-08-14T11:09:41.234Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Heap</loc>
-    <lastmod>2023-08-25T10:20:19.144Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Linked-List/Circular-Linked-List</loc>
     <lastmod>2023-08-27T06:44:16.884Z</lastmod>
@@ -1551,7 +1521,7 @@
     <lastmod>2023-07-31T14:16:27.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-threaded-Chips</loc>
-    <lastmod>2023-11-07T06:21:57.786Z</lastmod>
+    <lastmod>2023-12-05T09:48:54.260Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-threading,-Hyper-threading</loc>
     <lastmod>2023-11-11T11:28:47.945Z</lastmod>
@@ -2208,7 +2178,7 @@
     <lastmod>2023-09-22T08:25:41.122Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Templates/General-Template</loc>
-    <lastmod>2023-12-05T08:47:29.000Z</lastmod>
+    <lastmod>2023-12-05T08:54:00.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Templates/NUS-Course-Template</loc>
     <lastmod>2023-07-22T11:56:56.000Z</lastmod>
