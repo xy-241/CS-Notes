@@ -9,8 +9,8 @@
     <title>ECS Exec</title>
     <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS-Exec</link>
     <guid>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS-Exec</guid>
-    <description>Abstract § Obtain a shell into ECS from a local machine Enable ECS Exec for ECS § Existing ECS § Only new Task under the Service will have the ECS Exec enabled aws ecs update-service \ --cluster &lt;CLUSTER_NAME&gt; \ --service &lt;SERVICE_NAME&gt; \ --enable-execute-command New ECS § Info Based on what I know, there isn’t a way to enable ECS EXEC from the GUI console Option 1.</description>
-    <pubDate>Thu, 07 Dec 2023 06:47:01 GMT</pubDate>
+    <description>Abstract § Obtain a shell into ECS from a local machine Enable ECS Exec for ECS § Existing ECS § Only new Task under the Service will have the ECS Exec enabled aws ecs update-service \ --cluster &lt;CLUSTER_NAME&gt; \ --service &lt;SERVICE_NAME&gt; \ --enable-execute-command New ECS § Based on what I know, there isn&#039;t a way to enable ECS EXEC from the GUI console Option 1.</description>
+    <pubDate>Thu, 07 Dec 2023 07:00:01 GMT</pubDate>
   </item><item>
     <title>MacOs Setup</title>
     <link>https://notes.yxy.ninja/MacOs-Setup</link>

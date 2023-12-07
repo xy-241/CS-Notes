@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-04T11:16:00
-Last Date: 2023-12-07T14:47:01+08:00
+Last Date: 2023-12-07T15:00:01+08:00
 References: 
 ---
 ## Abstract
@@ -24,8 +24,7 @@ aws ecs update-service \
 
 
 ### New [[ECS]]
->[!info]
->Based on what I know, there isn't a way to enable ECS EXEC from the GUI console
+>[!info] Based on what I know, there isn't a way to enable ECS EXEC from the GUI console
 
 Option 1. [Using Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecs_service#enable_execute_command)
 
@@ -84,7 +83,6 @@ aws ecs execute-command \
 	--interactive  \
 	--command "/bin/sh" 
 ```
->[!tip] Debugging
->If face error connecting, can try create a new [[ECS#Task]] deployment
+>[!tip] If face error connecting, can try create a new [[ECS#Task]] deployment
 
 
