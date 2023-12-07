@@ -6,11 +6,12 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-07-14T18:05:00
-Last Date: 2023-12-07T00:25:31+08:00
+Last Date: 2023-12-07T21:01:02+08:00
 References: 
 ---
 ## Abstract 
 * For *negative number*, all bits are inverted except the [[Sign-and-Magnitude (原码)#Sign Bit|Sign Bit]] which is 1 when we need to perform the computation
+* For *positive number*, all bits remind the same
 ![[1s_complement.png]]
 
 ## Benefits

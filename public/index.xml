@@ -6,6 +6,42 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>2&#039;s Complement (补码)</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</guid>
+    <description>Abstract § We are adding extra 1 to the 1’s Complement (反码) This makes sure that there is only one 0 by adding 1 to after converting from Sign-and-Magnitude (原码) to 1’s Complement (反码) This is the form that computers use to store integers Conversion § From 2’s Complement back to Dec § Taken the value Sign Bit (negative if it is 1) and perform addition with value of whole Magnitude (all are positive) References § 2’s Complement Addition and Subtraction .</description>
+    <pubDate>Thu, 07 Dec 2023 13:32:30 GMT</pubDate>
+  </item><item>
+    <title>Sign-and-Magnitude (原码)</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Sign-and-Magnitude-(%E5%8E%9F%E7%A0%81)</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Sign-and-Magnitude-(%E5%8E%9F%E7%A0%81)</guid>
+    <description>Abstract § Represent positive and negative decimal integers in binary Divide the number of bits into 2 parts, one part for negative number, another part for positive number Cons § Require extra Logic Gates § The Adder logic cant be used for subtraction This can be avoided using 1’s Complement (反码) or 2’s Complement (补码) Terminologies § Sign Bit § The first bit from left 0 denotes positive 1 denotes negative Magnitude § All the bits in the encoding except Sign Bit Reference § Sign-and-Magnitude Addition and Subtraction Hello-Algo .</description>
+    <pubDate>Thu, 07 Dec 2023 13:19:15 GMT</pubDate>
+  </item><item>
+    <title>1&#039;s Complement (反码)</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement-(%E5%8F%8D%E7%A0%81)</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement-(%E5%8F%8D%E7%A0%81)</guid>
+    <description>Abstract § For negative number, all bits are inverted except the Sign Bit which is 1 when we need to perform the computation For positive number, all bits remind the same Benefits § Reuse Logic Gates § We re-can use Adder logic gates, without building extra logic circuit like a subtraction logic gates Cons § Mathematically wrong definition of 0 § We have +0 (when all bits are 0) &amp; -0(when all bits are 1) under this encoding, this can be solved by 2’s Complement (补码) .</description>
+    <pubDate>Thu, 07 Dec 2023 13:01:02 GMT</pubDate>
+  </item><item>
+    <title>Datadog RUM</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</guid>
+    <description>Abstract § With RUM, we are able to get the metadata about the client such as the user-agent, IP Address &amp; record down the user actions on the page in a video format Setup § The example below is based on next.</description>
+    <pubDate>Thu, 07 Dec 2023 10:43:11 GMT</pubDate>
+  </item><item>
+    <title>My DSA Weak Points</title>
+    <link>https://notes.yxy.ninja/DSA/My-DSA-Weak-Points</link>
+    <guid>https://notes.yxy.ninja/DSA/My-DSA-Weak-Points</guid>
+    <description>Abstract § Weak points to be strengthen Areas to improve § Dynamic Programming § Create custom data structure § Examples are like Sort Zero Number Theory § Examples are like New Skateboard Visualisation/Implementation § Examples are like - 1766C - Hamiltonian Wall Coding Practices § Java § Always scanner.</description>
+    <pubDate>Thu, 07 Dec 2023 09:36:08 GMT</pubDate>
+  </item><item>
+    <title>Docker Build</title>
+    <link>https://notes.yxy.ninja/Tools/Docker/Docker-Build</link>
+    <guid>https://notes.yxy.ninja/Tools/Docker/Docker-Build</guid>
+    <description>Abstract § frontend build, env write is from docker env —build-arg.</description>
+    <pubDate>Thu, 07 Dec 2023 08:11:20 GMT</pubDate>
+  </item><item>
     <title>ECS Exec</title>
     <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS-Exec</link>
     <guid>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS-Exec</guid>
@@ -29,42 +65,6 @@
     <guid>https://notes.yxy.ninja/Tools/AWS/Storage/AWS-Parameter-Store</guid>
     <description>Abstract § A central place to store the parameters used by others AWS Services Update Programmatically § One common use case of this service is to add/delete/access/modify the parameters Doing these operations programmatically is less error prone &amp; faster 1) Install aws-parameter-bulk § brew tap gork74/gork7 brew install aws-parameter-bulk 2) Carry out the operation § # Grab all the parameters from &lt;YOUR_AWS_PROFILE&gt; from the &lt;YOUR_AWS_REGION&gt;, and save them to your current directory in a file called `.</description>
     <pubDate>Thu, 07 Dec 2023 03:54:41 GMT</pubDate>
-  </item><item>
-    <title>IEEE 754 Floating-Point Rep (浮点数编码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/IEEE-754-Floating-Point-Rep-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/IEEE-754-Floating-Point-Rep-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</guid>
-    <description>Abstract § sign 0 for positive, 1 for negative exponent by default -127 with all bits set to 0 mantissa takes the binary behind the decimal place after normalisation (the yellow circle part) Reliable precision is 7 decimal digits Approximation of Real Number § mantissa gives the precision From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point For 2 to 4 (2^1-2^2), there are 22 bits of mantissa used for precision after decision point, one of the bit is used to present the whole number before decimal point With every range of 2, the precision after the decimal point is reduced by 2 Thus, the precision of the number after decimal point is getting worse as the number getting bigger Normalised Number § The range of real numbers between 0 and smallest Normalised Number isn’t covered, covered by Subnormal Number (Denormalized Number) The 1 is implicit when exponent isn’t 0.</description>
-    <pubDate>Wed, 06 Dec 2023 16:31:22 GMT</pubDate>
-  </item><item>
-    <title>Sign-and-Magnitude (原码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Sign-and-Magnitude-(%E5%8E%9F%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Sign-and-Magnitude-(%E5%8E%9F%E7%A0%81)</guid>
-    <description>Abstract § Represent positive and negative decimal integers in binary Divide the number of bits into 2 parts, one part for negative number, another part for positive number Cons § Require extra Logic Gates § The Adder logic cant be used for subtraction This can be avoided using 1’s Complement (反码) or 2’s Complement (补码) Terminologies § Sign Bit § The first bit from left 0 denotes positive 1 denotes negative Reference § Hello-Algo .</description>
-    <pubDate>Wed, 06 Dec 2023 16:25:41 GMT</pubDate>
-  </item><item>
-    <title>1&#039;s Complement (反码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement-(%E5%8F%8D%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement-(%E5%8F%8D%E7%A0%81)</guid>
-    <description>Abstract § For negative number, all bits are inverted except the Sign Bit which is 1 when we need to perform the computation Benefits § Reuse Logic Gates § We re-can use Adder logic gates, without building extra logic circuit like a subtraction logic gates Cons § Mathematically wrong definition of 0 § We have +0 (when all bits are 0) &amp; -0(when all bits are 1) under this encoding, this can be solved by 2’s Complement (补码) .</description>
-    <pubDate>Wed, 06 Dec 2023 16:25:31 GMT</pubDate>
-  </item><item>
-    <title>2&#039;s Complement (补码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</guid>
-    <description>Abstract § We are adding extra 1 to the 1’s Complement (反码) This makes sure that there is only one 0 by adding 1 to after converting from Sign-and-Magnitude (原码) to 1’s Complement (反码) .</description>
-    <pubDate>Wed, 06 Dec 2023 16:23:12 GMT</pubDate>
-  </item><item>
-    <title>Immediate Value (16 bits, 2&#039;s Complement)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/I-Type/Immediate-Value-(16-bits,-2's-Complement)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/I-Type/Immediate-Value-(16-bits,-2's-Complement)</guid>
-    <description>#computer_organisation Abstract Used for PC-Relative Addressing 16-bits, can represent up to +-2^15 Word, 2^17 Memory Address because 4-bytes Word Addressing Warning 2&#039;s Complement (补码) .</description>
-    <pubDate>Wed, 06 Dec 2023 16:22:10 GMT</pubDate>
-  </item><item>
-    <title>Rule of Inference (推理规则)</title>
-    <link>https://notes.yxy.ninja/Math/Discrete-Math/Rule-of-Inference-(%E6%8E%A8%E7%90%86%E8%A7%84%E5%88%99)</link>
-    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Rule-of-Inference-(%E6%8E%A8%E7%90%86%E8%A7%84%E5%88%99)</guid>
-    <description>Abstract § Logical rule that allows us to derive a Conclusion from a set of Premise A form of Mathematical Argument that is Valid Examples rules are Modus Ponens, Modus Tollens Tools that enable Deductive Reasoning (演繹推理) Basics § Modus Ponens § Modus Tollens § Denying the consequent Generalization § Case 1 § Premise: p Conclusion: p v q Case 2 § Premise: q Conclusion: p v q Specilisation § Allow us to discard some information to focus on things that we are interested Case 1 § Premise: p AND q Conclusion: p Case 2 § Premise: p AND q Conclusion: q Elimination § Case 1 § Premise: p v q, ~q Conclusion: p Case 2 § Premise: p v q, ~p Conclusion: q Transitivity § Premise: p -&gt; q, q -&gt; r Conclusion: p -&gt; r Division into Cases § Premise: p v q, p -&gt; r, q -&gt; r Conclusion: r The above only 2 cases, we can have more than 2 cases Contradiction Rule § Premise: ~p -&gt; false Conclusion: p The core of Proof by Contradiction (反证法) If a assumption leads to a contradiction, then that assumption must be false With Quantifiers § Universal Modus Ponens § Premise: For all x, if x makes P(x) true, then x makes Q(x) true Premise: a is an element of x, a makes P(x) true Conclusion: a makes Q(x) true .</description>
-    <pubDate>Wed, 06 Dec 2023 15:27:56 GMT</pubDate>
   </item>
     </channel>
   </rss>

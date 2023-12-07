@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 
-References:
+Last Date: 2023-12-07T18:43:11+08:00
+References: 
 ---
 ## Abstract
 - With [[#RUM]], we are able to get the metadata about the client such as the user-agent, [[IP Address]] & record down the user actions on the page in a video format 
@@ -26,7 +26,7 @@ References:
 	  applicationId: '<AUTO_POPULATED>',
 	  clientToken: '<AUTO_POPULATED>',
 	  site: 'datadoghq.eu',
-	  service: 'aegis-dev',
+	  service: 'aegis-dev-frontend',
 	  env: 'aegis-dev',
 	  // Specify a version number to identify the deployed version of your application in Datadog
 	  // version: '1.0.0',
