@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 
-Last Date: 
-References:
+Last Date: 2023-12-06T21:18:18+08:00
+References: 
 ---
 ## Abstract
 - 3 key components - [[#Overlapping Subproblems (重复子问题)]], [[#Optimal Substructure ( 最优子结构)]] & [[#Statelessness (无后效性)]]
@@ -26,7 +26,11 @@ References:
 
 ### Sub Seqence (Continuous)
 #### CodeForces
-- [B - New Skateboard](https://xy241-dsa.notion.site/B-New-Skateboard-99fcc366365b4a579fba2a1466cdf6a8?pvs=4) ([[Number Theory]] Required)
+- [628B - New Skateboard](https://xy241-dsa.notion.site/B-New-Skateboard-99fcc366365b4a579fba2a1466cdf6a8?pvs=4) ([[Number Theory]] Required)
+
+
+### Visualisation (Simulation)
+- [1766C - Hamiltonian Wall](https://xy241-dsa.notion.site/1766C-Hamiltonian-Wall-4908ce5950ef4e9cbb0800225e20f65a?pvs=4)
 
 ## Terminologies 
 ### Overlapping Subproblems (重复子问题)

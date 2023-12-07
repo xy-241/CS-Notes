@@ -1,3 +1,6 @@
+---
+Last Date: 2023-12-07T11:48:55+08:00
+---
 >[!sidenote]
 >- 🌟 denotes tools & settings I must have in MacOS to have a smooth user/developer experience
 ## GUI Apps
@@ -57,6 +60,7 @@
 - `bat`
 - `exa`
 - `gh`
+- [`aws`](https://formulae.brew.sh/formula/awscli)
 - `qemu` (for [[RISCV Kernel Deep Dive]])
 - `ranger-fm` (pipx)
 	```bash
@@ -78,6 +82,14 @@
 	echo "alias ls='exa'" >>~/.zshrc
 	echo "alias ll='exa -alh'" >>~/.zshrc
 	echo "alias tree='exa --tree'" >>~/.zshrc
+	
+	brew install awscli
+	echo >> ~/.zshrc
+	echo "# AWS Cli Env Variables" >> ~/.zshrc
+	echo "export AWS_PROFILE=<DEFAULT_PROFILE_NAME>" >> ~/.zshrc
+	echo "export AWS_REGION=ap-southeast-1" >> ~/.zshrc
+	echo >> ~/.zshrc
+	aws configure # Auth CLi
 	
 	brew install qemu
 	
@@ -145,12 +157,7 @@
 -  ``aws``, ``terraform``, ``wireguard``, ``pipx``, ``terminator``, ``powerlevel10k``, ``ipython``, ``jq``, ``logisim-evolution``, ``infracost``, ``terraform-docs``, `pandoc`, `basictex`, `telnet`, `parallel`, `azure-cli`, `socat`, `pyenv`, `pyenv-virtualenv`, `vagrant`, `entr`, `packer`
 	```bash
 	#!/bin/bash
-	brew install awscli
-	echo >> ~/.zshrc
-	echo "# AWS Cli Env Variables" >> ~/.zshrc
-	echo "export AWS_PROFILE=<DEFAULT_PROFILE_NAME>" >> ~/.zshrc
-	echo "export AWS_REGION=ap-southeast-1" >> ~/.zshrc
-	echo >> ~/.zshrc
+
 	
 	brew install terraform
 	brew install wireguard-tools# Place conf in /usr/local/etc/wireguard/ 
@@ -224,9 +231,8 @@
 	```
 
 
-
-
-
+### Others
+- [[AWS Parameter Store#Update Programmatically]]
 
 
 

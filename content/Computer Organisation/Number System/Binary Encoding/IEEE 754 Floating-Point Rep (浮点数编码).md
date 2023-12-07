@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 
-Last Date: 
-References:
+Last Date: 2023-12-07T00:31:22+08:00
+References: 
 ---
 ## Abstract
  - **sign** 0 for positive, 1 for negative
@@ -17,7 +17,7 @@ References:
 ![[IEEE 754 Floating-Point Rep.png]]
 
 
-## Approximation of [[Real Number]]
+## Approximation of Real Number
 - mantissa gives the precision
 ![[floating_point_as_an_approximation.png]]
 - From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point

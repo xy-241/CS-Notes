@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T08:54:00
-Last Date: 2023-12-06T01:41:31+08:00
+Last Date: 2023-12-06T23:27:56+08:00
 References: 
 ---
 ## Abstract
@@ -16,7 +16,7 @@ References:
 - Tools that enable [[Deductive Reasoning (演繹推理)]]
 
 
-## Terminologies
+## Basics
 ### Modus Ponens
 ### Modus Tollens
 - Denying the consequent
@@ -54,3 +54,9 @@ References:
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p`
 - The core of [[Mathematical Proof#Proof by Contradiction (反证法)]]
 - If a *assumption* leads to a *contradiction*, then that *assumption* must be false
+
+## With [[Predicate#Quantifiers]]
+### Universal Modus Ponens
+-  [[Mathematical Argument#Premise|Premise]]: For all x, if x makes P(x) true, then x makes Q(x) true
+-  [[Mathematical Argument#Premise|Premise]]: a is an element of x, a makes P(x) true
+- [[Mathematical Argument#Conclusion|Conclusion]]: a makes Q(x) true
