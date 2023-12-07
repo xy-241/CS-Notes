@@ -1,5 +1,5 @@
 ---
-Last Date: 2023-12-07T11:48:55+08:00
+Last Date: 2023-12-07T14:13:56+08:00
 ---
 >[!sidenote]
 >- 🌟 denotes tools & settings I must have in MacOS to have a smooth user/developer experience
@@ -61,44 +61,54 @@ Last Date: 2023-12-07T11:48:55+08:00
 - `exa`
 - `gh`
 - [`aws`](https://formulae.brew.sh/formula/awscli)
+- [`terraform`](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - `qemu` (for [[RISCV Kernel Deep Dive]])
 - `ranger-fm` (pipx)
-	```bash
-	#!/bin/bash
-	
-	brew install orbstack
-	
-	brew install zoxide
-	brew install fzf
-	# Append to .zshrc
-	# eval "$(zoxide init zsh --hook prompt)" 
-	# alias cd='z'
-	
-	brew install pipx && pipx ensurepath
-	
-	brew install bat && echo "alias cat='bat'" >>~/.zshrc
-	
-	brew install exa
-	echo "alias ls='exa'" >>~/.zshrc
-	echo "alias ll='exa -alh'" >>~/.zshrc
-	echo "alias tree='exa --tree'" >>~/.zshrc
-	
-	brew install awscli
-	echo >> ~/.zshrc
-	echo "# AWS Cli Env Variables" >> ~/.zshrc
-	echo "export AWS_PROFILE=<DEFAULT_PROFILE_NAME>" >> ~/.zshrc
-	echo "export AWS_REGION=ap-southeast-1" >> ~/.zshrc
-	echo >> ~/.zshrc
-	aws configure # Auth CLi
-	
-	brew install qemu
-	
-	brew install gh
-	gh auth login # Painless Github CLi Auth
-	
-	# Using pipx
-	pipx install ranger-fm
-	```
+- [`az`](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos)
+- `jq`(https://jqlang.github.io/jq/tutorial/)
+```bash
+#!/bin/bash
+
+brew install orbstack
+
+brew install zoxide
+brew install fzf
+# Append to .zshrc
+# eval "$(zoxide init zsh --hook prompt)" 
+# alias cd='z'
+
+brew install pipx && pipx ensurepath
+
+brew install bat && echo "alias cat='bat'" >>~/.zshrc
+
+brew install exa
+echo "alias ls='exa'" >>~/.zshrc
+echo "alias ll='exa -alh'" >>~/.zshrc
+echo "alias tree='exa --tree'" >>~/.zshrc
+
+brew install awscli
+echo >> ~/.zshrc
+echo "# AWS Cli Env Variables" >> ~/.zshrc
+echo "export AWS_PROFILE=<DEFAULT_PROFILE_NAME>" >> ~/.zshrc
+echo "export AWS_REGION=ap-southeast-1" >> ~/.zshrc
+echo >> ~/.zshrc
+aws configure # Auth CLi
+
+brew install terraform
+
+brew install qemu
+
+brew install gh
+gh auth login # Painless Github CLi Auth
+
+# Using pipx
+pipx install ranger-fm
+
+brew install azure-cli
+
+# CLi JSON processor
+brew install jq
+```
 - `.vimrc`
 	```vimrc
 	" Use spaces instead of tabs
@@ -154,12 +164,12 @@ Last Date: 2023-12-07T11:48:55+08:00
 
 ## MISC
 ### Brew
--  ``aws``, ``terraform``, ``wireguard``, ``pipx``, ``terminator``, ``powerlevel10k``, ``ipython``, ``jq``, ``logisim-evolution``, ``infracost``, ``terraform-docs``, `pandoc`, `basictex`, `telnet`, `parallel`, `azure-cli`, `socat`, `pyenv`, `pyenv-virtualenv`, `vagrant`, `entr`, `packer`
+-   ``wireguard``, ``pipx``, ``terminator``, ``powerlevel10k``, ``ipython``, ``logisim-evolution``, ``infracost``, ``terraform-docs``, `pandoc`, `basictex`, `telnet`, `parallel`, `socat`, `pyenv`, `pyenv-virtualenv`, `vagrant`, `entr`, `packer`
 	```bash
 	#!/bin/bash
 
 	
-	brew install terraform
+	
 	brew install wireguard-tools# Place conf in /usr/local/etc/wireguard/ 
 	sudo wg-quick up wg0 # Connect Wireguard
 	
@@ -171,7 +181,7 @@ Last Date: 2023-12-07T11:48:55+08:00
 	
 	
 	brew install ipython
-	brew install jq
+	
 	
 	# Open logisim, get denined, open Privacy, enable
 	brew install --cask logisim-evolution
@@ -188,7 +198,7 @@ Last Date: 2023-12-07T11:48:55+08:00
 	
 	brew install parallel
 	
-	brew install azure-cli
+	
 	
 	brew install socat
 	
@@ -232,7 +242,7 @@ Last Date: 2023-12-07T11:48:55+08:00
 
 
 ### Others
-- [[AWS Parameter Store#Update Programmatically]]
-
+- [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
+- [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
 
 

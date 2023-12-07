@@ -614,9 +614,6 @@
     <loc>https://notes.yxy.ninja/Java/Java</loc>
     <lastmod>2023-07-20T13:02:30.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Java/OS/Threads</loc>
-    <lastmod>2023-07-14T10:47:07.000Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/Java/Wrapper-Class/Auto-boxing</loc>
     <lastmod>2023-07-15T07:51:21.000Z</lastmod>
   </url><url>
@@ -702,7 +699,7 @@
     <lastmod>2023-09-03T08:27:32.750Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/MacOs-Setup</loc>
-    <lastmod>2023-12-07T03:48:55.000Z</lastmod>
+    <lastmod>2023-12-07T06:13:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Boolean-Algebra/Boolean-Algebra</loc>
     <lastmod>2023-10-17T01:37:33.074Z</lastmod>
@@ -2261,26 +2258,14 @@
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/EC2</loc>
     <lastmod>2023-08-10T05:12:02.678Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/Components/ECS-Containers</loc>
-    <lastmod>2023-08-27T10:20:41.152Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/Components/ECS-Service</loc>
-    <lastmod>2023-08-27T10:17:23.120Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/Components/ECS-Task-Definition</loc>
-    <lastmod>2023-08-27T10:11:53.547Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/Components/ECS-Task</loc>
-    <lastmod>2023-08-27T10:13:05.794Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS-Exec</loc>
-    <lastmod>2023-09-04T03:16:47.832Z</lastmod>
+    <lastmod>2023-12-07T06:47:01.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS-Fargate</loc>
     <lastmod>2023-09-07T08:30:33.001Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</loc>
-    <lastmod>2023-09-17T09:31:58.663Z</lastmod>
+    <lastmod>2023-12-07T05:59:45.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/Load-Balancer/ALB</loc>
     <lastmod>2023-09-07T08:24:59.517Z</lastmod>
