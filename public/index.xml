@@ -6,6 +6,12 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Double Pointers</title>
+    <link>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers/Double-Pointers</link>
+    <guid>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers/Double-Pointers</guid>
+    <description>#dsa 3 types Double Pointers(Fast, Slow) Double Pointers (Left, Right) Double Pointers (Sliding Window) Mainly used to solve Array, String &amp; Linked List related problems Reduce time complexity by one dimension, O(n^2) to O(n) for example Example Use Cases .</description>
+    <pubDate>Fri, 08 Dec 2023 11:05:17 GMT</pubDate>
+  </item><item>
     <title>Greedy Algorithm</title>
     <link>https://notes.yxy.ninja/DSA/Algorithms/Greedy-Algorithm</link>
     <guid>https://notes.yxy.ninja/DSA/Algorithms/Greedy-Algorithm</guid>
@@ -59,12 +65,6 @@
     <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
     <description> Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
     <pubDate>Thu, 07 Dec 2023 06:13:56 GMT</pubDate>
-  </item><item>
-    <title>ECS</title>
-    <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</link>
-    <guid>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</guid>
-    <description>Abstract § A lightweight container orchestration service Components § Container § We can obtain a shell into it using ECS Exec Obtain Private IP of the container Must have curl &amp;&amp; jq (JSON Processor) containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r &#039;.</description>
-    <pubDate>Thu, 07 Dec 2023 05:59:45 GMT</pubDate>
   </item>
     </channel>
   </rss>

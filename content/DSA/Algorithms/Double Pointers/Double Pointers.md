@@ -1,7 +1,7 @@
 #dsa 
 >[!note] 3 types
->1. [[Double Pointers(Fast & Slow)]]
->2. [[Double Pointers (Left & Right)]]
+>1. [[Double Pointers(Fast, Slow)]]
+>2. [[Double Pointers (Left, Right)]]
 >3. [[Double Pointers (Sliding Window)]]
 
 >[!note] Mainly used to solve [[Array]], [[DSA/Data Structure/Implementations/String]] & [[Linked List]] related problems
