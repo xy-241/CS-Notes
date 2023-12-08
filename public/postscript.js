@@ -1941,6 +1941,153 @@ document.addEventListener("nav", () => {
           page_location: location.href,
         });
       });})();
+(function () {// node_modules/plausible-tracker/build/module/lib/request.js
+function sendEvent(eventName, data, options) {
+  const isLocalhost = /^localhost$|^127(?:\.[0-9]+){0,2}\.[0-9]+$|^(?:0*:)*?:?0*1$/.test(location.hostname) || location.protocol === "file:";
+  if (!data.trackLocalhost && isLocalhost) {
+    return console.warn("[Plausible] Ignoring event because website is running locally");
+  }
+  try {
+    if (window.localStorage.plausible_ignore === "true") {
+      return console.warn('[Plausible] Ignoring event because "plausible_ignore" is set to "true" in localStorage');
+    }
+  } catch (e) {
+    null;
+  }
+  const payload = {
+    n: eventName,
+    u: data.url,
+    d: data.domain,
+    r: data.referrer,
+    w: data.deviceWidth,
+    h: data.hashMode ? 1 : 0,
+    p: options && options.props ? JSON.stringify(options.props) : void 0
+  };
+  const req = new XMLHttpRequest();
+  req.open("POST", `${data.apiHost}/api/event`, true);
+  req.setRequestHeader("Content-Type", "text/plain");
+  req.send(JSON.stringify(payload));
+  req.onreadystatechange = () => {
+    if (req.readyState !== 4)
+      return;
+    if (options && options.callback) {
+      options.callback();
+    }
+  };
+}
+
+// node_modules/plausible-tracker/build/module/lib/tracker.js
+function Plausible(defaults) {
+  const getConfig = () => ({
+    hashMode: false,
+    trackLocalhost: false,
+    url: location.href,
+    domain: location.hostname,
+    referrer: document.referrer || null,
+    deviceWidth: window.innerWidth,
+    apiHost: "https://plausible.io",
+    ...defaults
+  });
+  const trackEvent = (eventName, options, eventData) => {
+    sendEvent(eventName, { ...getConfig(), ...eventData }, options);
+  };
+  const trackPageview2 = (eventData, options) => {
+    trackEvent("pageview", options, eventData);
+  };
+  const enableAutoPageviews = () => {
+    const page = () => trackPageview2();
+    const originalPushState = history.pushState;
+    if (originalPushState) {
+      history.pushState = function(data, title, url) {
+        originalPushState.apply(this, [data, title, url]);
+        page();
+      };
+      addEventListener("popstate", page);
+    }
+    if (defaults && defaults.hashMode) {
+      addEventListener("hashchange", page);
+    }
+    trackPageview2();
+    return function cleanup() {
+      if (originalPushState) {
+        history.pushState = originalPushState;
+        removeEventListener("popstate", page);
+      }
+      if (defaults && defaults.hashMode) {
+        removeEventListener("hashchange", page);
+      }
+    };
+  };
+  const enableAutoOutboundTracking = (targetNode = document, observerInit = {
+    subtree: true,
+    childList: true,
+    attributes: true,
+    attributeFilter: ["href"]
+  }) => {
+    function trackClick(event) {
+      trackEvent("Outbound Link: Click", { props: { url: this.href } });
+      if (!(typeof process !== "undefined" && process && false)) {
+        setTimeout(() => {
+          location.href = this.href;
+        }, 150);
+      }
+      event.preventDefault();
+    }
+    const tracked = /* @__PURE__ */ new Set();
+    function addNode(node) {
+      if (node instanceof HTMLAnchorElement) {
+        if (node.host !== location.host) {
+          node.addEventListener("click", trackClick);
+          tracked.add(node);
+        }
+      } else if ("querySelectorAll" in node) {
+        node.querySelectorAll("a").forEach(addNode);
+      }
+    }
+    function removeNode(node) {
+      if (node instanceof HTMLAnchorElement) {
+        node.removeEventListener("click", trackClick);
+        tracked.delete(node);
+      } else if ("querySelectorAll" in node) {
+        node.querySelectorAll("a").forEach(removeNode);
+      }
+    }
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "attributes") {
+          removeNode(mutation.target);
+          addNode(mutation.target);
+        } else if (mutation.type === "childList") {
+          mutation.addedNodes.forEach(addNode);
+          mutation.removedNodes.forEach(removeNode);
+        }
+      });
+    });
+    targetNode.querySelectorAll("a").forEach(addNode);
+    observer.observe(targetNode, observerInit);
+    return function cleanup() {
+      tracked.forEach((a) => {
+        a.removeEventListener("click", trackClick);
+      });
+      tracked.clear();
+      observer.disconnect();
+    };
+  };
+  return {
+    trackEvent,
+    trackPageview: trackPageview2,
+    enableAutoPageviews,
+    enableAutoOutboundTracking
+  };
+}
+
+// node_modules/plausible-tracker/build/module/index.js
+var module_default = Plausible;
+
+// quartz/components/scripts/quartz/components/scripts/plausible.inline.ts
+var { trackPageview } = module_default();
+document.addEventListener("nav", () => trackPageview());
+})();
 (function () {// node_modules/micromorph/dist/index.js
 var T = (e) => (t, r) => t[`node${e}`] === r[`node${e}`];
 var b = T("Name");

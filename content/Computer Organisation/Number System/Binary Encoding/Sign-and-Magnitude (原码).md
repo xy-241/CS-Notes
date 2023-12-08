@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-07-14T18:15:00
-Last Date: 2023-12-07T21:19:15+08:00
+Last Date: 2023-12-08T22:00:28+08:00
 References: 
 ---
 ## Abstract
@@ -21,13 +21,7 @@ References:
 ![[signed magnitude representation.png]]
 
 
-## Terminologies
-### Sign Bit
-- The first bit from left
-- 0 denotes positive 
-- 1 denotes negative
-### Magnitude
-- All the bits in the encoding except [[#Sign Bit]]
+
 
 
 ## Reference 

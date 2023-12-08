@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-02T22:09:00
-Last Date: 
-References:
+Last Date: 2023-12-08T20:55:20+08:00
+References: 
 ---
 ## Abstract
 - Also known as *Proposition* 
@@ -37,13 +37,13 @@ $$
 ### Negation of Universal
 - [[Propositional Logic#Logical Equivalence]] to [[#Existential]]
 - `There is AT LEAST ONE that IS NOT`
-- $$
+$$
 \neg(\forall x \in D, Q(x)) \equiv \exists x \in D, \neg  Q(x)
 $$
 ### Negation of Existential
 - [[Propositional Logic#Logical Equivalence]] to [[#Universal]]
 - `ALL ARE NOT`
-- $$
+$$
 \neg(\exists x \in D, Q(x)) \equiv \forall x \in D, \neg  Q(x)
 $$
 ### Negation of Universal Conditional
@@ -87,10 +87,11 @@ $$
 ### Implicitly Quantified
 - The [[Predicate#Quantifiers]] are assumed without specified explicitly
 
-### Vacuous Truth of [[#Universal]]
+### Vacuous Truth of Universal
 - Given the statement: `All balls in the bowl are blue`, however `no balls in the bowl`. The statement is vacuously true, because the [[#Negation of Universal]] is `One of the balls in the bowl isn't blue` which is obviously false
-### Vacuous Truth of [[#Universal Conditional]]
-- Given $$
+### Vacuous Truth of Universal Conditional
+- Given 
+$$
 \forall x \in D, P(x) \rightarrow Q(x)
 $$
 - It is *Vacuously True* if and only if `P(x)` is false `for every x in D`

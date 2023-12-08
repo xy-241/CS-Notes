@@ -94,6 +94,8 @@ function addGlobalPageResources(
           page_location: location.href,
         });
       });`)
+
+      componentResources.afterDOMLoaded.push(plausibleScript)
   } else if (cfg.analytics?.provider === "plausible") {
     componentResources.afterDOMLoaded.push(plausibleScript)
   } else if (cfg.analytics?.provider === "umami") {

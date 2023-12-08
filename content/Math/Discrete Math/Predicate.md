@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-21T11:25:00
-Last Date: 
-References:
+Last Date: 2023-12-08T20:51:42+08:00
+References: 
 ---
 ## Abstract
 - Also known as *Propositional Functions* & *Open Sentences*
@@ -32,8 +32,8 @@ $$
 $$
 \exists
 $$
-### Order of [[#Quantifiers]]
-- Unless the [[#Quantifiers]] are of the same type. Otherwise, the meaning is different
+### Order of Quantifiers
+- Unless the [[#Quantifiers]] are of the **same type**. Otherwise, the meaning is different
 #### Example
 1. For all people x, there is a person y such that x loves y
 2. There is a person y such that all people x, x loves y
@@ -45,7 +45,7 @@ $$
 - Also known as *Domain of Discourse*, *Universe of Discourse*, *Universal Set* & *Universe*
 ### Truth Set
 - The set of values in [[#Domain of Predicate Variable]] substituted to [[#Variable]] that makes the *Predicate* true
-- Detonated by, meaning value of `x` is an element of the [[#Domain of Predicate Variable]], such at the *Predicate* is `true`
+- Detonated by the following expression, meaning value of `x` is an element of the [[#Domain of Predicate Variable]], such at the *Predicate* is `true`
 $$
 {x \in D \mid P(x)}
 $$

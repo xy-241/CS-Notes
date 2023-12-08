@@ -237,19 +237,22 @@
     <lastmod>2023-12-01T14:03:51.360Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement-(%E5%8F%8D%E7%A0%81)</loc>
-    <lastmod>2023-12-07T13:01:02.000Z</lastmod>
+    <lastmod>2023-12-08T13:33:51.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</loc>
-    <lastmod>2023-12-07T13:32:30.000Z</lastmod>
+    <lastmod>2023-12-08T13:52:41.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Decimal-to-Binary</loc>
     <lastmod>2023-12-05T10:01:52.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/IEEE-754-Floating-Point-Rep-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</loc>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/IEEE-754-Floating-Point-Encoding-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</loc>
     <lastmod>2023-12-06T16:31:22.000Z</lastmod>
   </url><url>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Integer-Encoding</loc>
+    <lastmod>2023-12-08T14:00:36.000Z</lastmod>
+  </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Sign-and-Magnitude-(%E5%8E%9F%E7%A0%81)</loc>
-    <lastmod>2023-12-07T13:19:15.000Z</lastmod>
+    <lastmod>2023-12-08T14:00:28.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Converted-to-Hex-format</loc>
     <lastmod>2023-08-06T08:32:12.203Z</lastmod>
@@ -879,10 +882,10 @@
     <lastmod>2023-11-10T13:25:29.962Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</loc>
-    <lastmod>2023-12-05T08:47:19.538Z</lastmod>
+    <lastmod>2023-12-08T12:55:20.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Predicate</loc>
-    <lastmod>2023-11-30T14:53:53.339Z</lastmod>
+    <lastmod>2023-12-08T12:51:42.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Propositional-Logic</loc>
     <lastmod>2023-11-12T12:21:06.386Z</lastmod>
