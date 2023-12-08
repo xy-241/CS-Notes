@@ -7,7 +7,8 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "google",
+      tagId: "G-5SM4KZN6PM"
     },
     baseUrl: "notes.yxy.ninja",
     ignorePatterns: ["private", "templates", ".obsidian", "Personal"],
