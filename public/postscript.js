@@ -1933,7 +1933,7 @@ document.addEventListener("nav", () => {
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag(`js`, new Date());
-      gtag(`config`, `G-5SM4KZN6PM`, { send_page_view: false });
+      gtag(`config`, `G-H0G1YKHC31`, { send_page_view: false });
   
       document.addEventListener(`nav`, () => {
         gtag(`event`, `page_view`, {
