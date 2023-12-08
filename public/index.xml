@@ -6,6 +6,12 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Greedy Algorithm</title>
+    <link>https://notes.yxy.ninja/DSA/Algorithms/Greedy-Algorithm</link>
+    <guid>https://notes.yxy.ninja/DSA/Algorithms/Greedy-Algorithm</guid>
+    <description>Abstract § Note 向日葵朝着太阳转动， 时刻都在寻求当前汲取最大养分的可能。 最优子结构就是追随太阳最高效的移动轨迹。 移除重复子问题让向日葵紧跟太阳的脚步。 贪心策略在一轮轮的简单选择中，逐步导向最佳的答案。 Used to solve Optimisation Problem Usually better performance than Backtracking &amp; Dynamic Programming Think about what is the Local Optimal Solution.</description>
+    <pubDate>Fri, 08 Dec 2023 02:44:34 GMT</pubDate>
+  </item><item>
     <title>2&#039;s Complement (补码)</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</link>
     <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</guid>
@@ -59,12 +65,6 @@
     <guid>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</guid>
     <description>Abstract § A lightweight container orchestration service Components § Container § We can obtain a shell into it using ECS Exec Obtain Private IP of the container Must have curl &amp;&amp; jq (JSON Processor) containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r &#039;.</description>
     <pubDate>Thu, 07 Dec 2023 05:59:45 GMT</pubDate>
-  </item><item>
-    <title>AWS Parameter Store</title>
-    <link>https://notes.yxy.ninja/Tools/AWS/Storage/AWS-Parameter-Store</link>
-    <guid>https://notes.yxy.ninja/Tools/AWS/Storage/AWS-Parameter-Store</guid>
-    <description>Abstract § A central place to store the parameters used by others AWS Services Update Programmatically § One common use case of this service is to add/delete/access/modify the parameters Doing these operations programmatically is less error prone &amp; faster 1) Install aws-parameter-bulk § brew tap gork74/gork7 brew install aws-parameter-bulk 2) Carry out the operation § # Grab all the parameters from &lt;YOUR_AWS_PROFILE&gt; from the &lt;YOUR_AWS_REGION&gt;, and save them to your current directory in a file called `.</description>
-    <pubDate>Thu, 07 Dec 2023 03:54:41 GMT</pubDate>
   </item>
     </channel>
   </rss>

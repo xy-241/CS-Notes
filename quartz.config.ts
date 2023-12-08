@@ -10,7 +10,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     baseUrl: "notes.yxy.ninja",
-    ignorePatterns: ["private", "templates", ".obsidian", "NUS CS Plan (122MCs)", "Personal"],
+    ignorePatterns: ["private", "templates", ".obsidian", "Personal"],
     defaultDateType: "modified",
     theme: {
       typography: {

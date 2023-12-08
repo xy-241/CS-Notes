@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-09T09:10:00
-Last Date: 2023-12-06T23:27:42+08:00
+Last Date: 2023-12-08T10:44:34+08:00
 References: 
 ---
 ## Abstract
@@ -23,7 +23,7 @@ References:
 
 
 ## When to use Greedy
-### Guaranteed to get the [[#Global Optimal Solution]]
+### Guaranteed to get the Global Optimal Solution
 - When we can't find an *counter-example* with the greedy approach 
 ### Sub-optimal solution is good enough 
 - When finding [[#Global Optimal Solution]] takes too much effort & a Sub-optimal solution gets the job done
