@@ -2088,6 +2088,14 @@ var module_default = Plausible;
 var { trackPageview } = module_default();
 document.addEventListener("nav", () => trackPageview());
 })();
+(function () {
+      const umamiScript = document.createElement("script")
+      umamiScript.src = "https://analytics.umami.is/script.js"
+      umamiScript.setAttribute("data-website-id", "5cc5e1c4-8202-4eed-b059-f4867a8f7f0b")
+      umamiScript.async = true
+  
+      document.head.appendChild(umamiScript)
+    })();
 (function () {// node_modules/micromorph/dist/index.js
 var T = (e) => (t, r) => t[`node${e}`] === r[`node${e}`];
 var b = T("Name");

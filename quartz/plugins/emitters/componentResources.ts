@@ -95,7 +95,16 @@ function addGlobalPageResources(
         });
       });`)
 
+      // Add in another 2
       componentResources.afterDOMLoaded.push(plausibleScript)
+      componentResources.afterDOMLoaded.push(`
+      const umamiScript = document.createElement("script")
+      umamiScript.src = "https://analytics.umami.is/script.js"
+      umamiScript.setAttribute("data-website-id", "5cc5e1c4-8202-4eed-b059-f4867a8f7f0b")
+      umamiScript.async = true
+  
+      document.head.appendChild(umamiScript)
+    `)
   } else if (cfg.analytics?.provider === "plausible") {
     componentResources.afterDOMLoaded.push(plausibleScript)
   } else if (cfg.analytics?.provider === "umami") {
