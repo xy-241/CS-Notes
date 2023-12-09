@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:16:00
-Last Date: 2023-12-09T21:46:03+08:00
+Last Date: 2023-12-09T23:25:46+08:00
 References: 
 ---
 ## Abstract
- [[Instruction#Opcode]] is always **000000**
+ - [[Instruction#Opcode]] is always **000000**
 - [[Operation]] is decided by the [[#Function Code]]
 - 6 parts - [[Instruction#Opcode]], [[MIPS Instruction#Source Register]], [[MIPS Instruction#Target Register]], [[MIPS Instruction#Destination Register]], [[#Shift Amount]] & [[#Function Code]]
 

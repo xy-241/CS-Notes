@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-09, 21:24
-Last Date: 2023-12-09T23:15:41+08:00
+Last Date: 2023-12-09T23:25:39+08:00
 References: 
 ---
 ## Abstract
@@ -26,6 +26,6 @@ References:
 ### Target Register
 - 5 bits
 - Labeled `rt`, mapped to `RR2`
-- [[Registers|Register]] with value stored we want to use in [[MIPS R-Type Instruction]] [[Instruction]]
+- [[Registers|Register]] with value stored we want to use in [[MIPS R-Type Instruction]]
 - [[Registers|Register]] that gets the result of [[Operation]] in [[MIPS I-Type Instruction]]
 

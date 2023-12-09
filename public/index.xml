@@ -6,11 +6,23 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Second Brain for CS</title>
+    <link>https://notes.yxy.ninja//</link>
+    <guid>https://notes.yxy.ninja//</guid>
+    <description>Navigation § Homepage is still under development. You can navigate around the notes using the explorer on the left side or visit the list of tags that categories the notes.</description>
+    <pubDate>Sat, 09 Dec 2023 15:30:02 GMT</pubDate>
+  </item><item>
+    <title>MIPS R-Type Instruction</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/MIPS-R-Type-Instruction</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/MIPS-R-Type-Instruction</guid>
+    <description>Abstract § Opcode is always 000000 Operation is decided by the Function Code 6 parts - Opcode, Source Register, Target Register, Destination Register, Shift Amount &amp; Function Code Terminologies § Function Code § 6 bits Give MIPS (2^6-1) + 2^6 = 127 instead of 2^6=64 Instruction Dedicated for MIPS R-Type Instruction (if my understanding isn’t wrong) Shift Amount § 5bits Labeled as shamt .</description>
+    <pubDate>Sat, 09 Dec 2023 15:25:46 GMT</pubDate>
+  </item><item>
     <title>MIPS Instruction</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</link>
     <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</guid>
-    <description>Abstract § The Instruction may specify 3 Registers - Destination Register, Source Register &amp; Target Register Terminologies § Destination Register § 5bits Labeled rd, mapped to WR Registers that gets the result of Operation in MIPS R-Type Instruction Instruction Source Register § 5bits Labeled rs, mapped to RR1 Register with value stored that we want to use to carry out Operation Target Register § 5 bits Labeled rt, mapped to RR2 Register with value stored we want to use in MIPS R-Type Instruction Instruction Register that gets the result of Operation in MIPS I-Type Instruction .</description>
-    <pubDate>Sat, 09 Dec 2023 15:15:41 GMT</pubDate>
+    <description>Abstract § The Instruction may specify 3 Registers - Destination Register, Source Register &amp; Target Register Terminologies § Destination Register § 5bits Labeled rd, mapped to WR Registers that gets the result of Operation in MIPS R-Type Instruction Instruction Source Register § 5bits Labeled rs, mapped to RR1 Register with value stored that we want to use to carry out Operation Target Register § 5 bits Labeled rt, mapped to RR2 Register with value stored we want to use in MIPS R-Type Instruction Register that gets the result of Operation in MIPS I-Type Instruction .</description>
+    <pubDate>Sat, 09 Dec 2023 15:25:39 GMT</pubDate>
   </item><item>
     <title>GPU</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/Terminologies/Processor/GPU</link>
@@ -53,18 +65,6 @@
     <guid>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</guid>
     <description>#problem_solving Note Basically obtaining another piece of information based on reflection/symmetry, basically buy one get one free Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
     <pubDate>Sat, 09 Dec 2023 13:48:46 GMT</pubDate>
-  </item><item>
-    <title>1. Use the defining features of the set-up</title>
-    <link>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</link>
-    <guid>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</guid>
-    <description>#problem_solving Note Look at what is given Ask the definition of each term How the ideas piece up together Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
-    <pubDate>Sat, 09 Dec 2023 13:48:46 GMT</pubDate>
-  </item><item>
-    <title>MIPS R-Type Instruction</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/MIPS-R-Type-Instruction</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/MIPS-R-Type-Instruction</guid>
-    <description>Abstract § Opcode is always 000000 Operation is decided by the Function Code 6 parts - Opcode, Source Register, Target Register, Destination Register, Shift Amount &amp; Function Code Terminologies § Function Code § 6 bits Give MIPS (2^6-1) + 2^6 = 127 instead of 2^6=64 Instruction Dedicated for MIPS R-Type Instruction (if my understanding isn’t wrong) Shift Amount § 5bits Labeled as shamt .</description>
-    <pubDate>Sat, 09 Dec 2023 13:46:03 GMT</pubDate>
   </item>
     </channel>
   </rss>
