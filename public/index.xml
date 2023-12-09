@@ -6,6 +6,36 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>3. Leverage Symmetry</title>
+    <link>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</link>
+    <guid>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</guid>
+    <description>#problem_solving Note Basically obtaining another piece of information based on reflection/symmetry, basically buy one get one free Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem Since the angle is 90degrees, 2 out 3 sides are the same.</description>
+    <pubDate>Sat, 09 Dec 2023 10:56:01 GMT</pubDate>
+  </item><item>
+    <title>2. Giving things (meaningful) names</title>
+    <link>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</link>
+    <guid>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</guid>
+    <description>#problem_solving Give names to objects that describes its properties (Or to differentiate each one) It is like forming an abstraction over something, then we have more brain power to build on top of it Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem Give Θ (Theta) a name .</description>
+    <pubDate>Sat, 09 Dec 2023 10:56:01 GMT</pubDate>
+  </item><item>
+    <title>1. Use the defining features of the set-up</title>
+    <link>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</link>
+    <guid>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</guid>
+    <description>#problem_solving Note Look at what is given Ask the definition of each term How the ideas piece up together Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem We are given a Circle Definition of Circle It has a radius which is a line from the center of circle to its circumference Piece the ideas up Any lines from the center of circle to its circumference is the same length .</description>
+    <pubDate>Sat, 09 Dec 2023 10:56:01 GMT</pubDate>
+  </item><item>
+    <title>4. Try describing 1 object 2 ways</title>
+    <link>https://notes.yxy.ninja/Problem-solving/4.-Try-describing-1-object-2-ways</link>
+    <guid>https://notes.yxy.ninja/Problem-solving/4.-Try-describing-1-object-2-ways</guid>
+    <description>#problem_solving Note Basically explaining something in 2 different perspectives. For example, counting the possible permutation of a string of 5bits.</description>
+    <pubDate>Sat, 09 Dec 2023 10:55:55 GMT</pubDate>
+  </item><item>
+    <title>MacOs Setup</title>
+    <link>https://notes.yxy.ninja/MacOs-Setup</link>
+    <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
+    <description> Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
+    <pubDate>Fri, 08 Dec 2023 17:43:54 GMT</pubDate>
+  </item><item>
     <title>Integer Encoding</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Integer-Encoding</link>
     <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Integer-Encoding</guid>
@@ -35,36 +65,6 @@
     <guid>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</guid>
     <description>Abstract § Also known as Proposition 3 important types are Universal, Conditional &amp; Existential We can form statements that are Universal &amp; Conditional, or more to form complex statements Either True or False Warning Doesn’t depend on any Variable, unless it is Logical Equivalence equation Not in a question form Different Types of Statements § Universal § Made of Symbol, Variable &amp; Quantifiers ∀x∈D,Q(x) true iff Q(x) is true for every x in D false iff Q(x) is false for at least one x in D For simple ones, usually universal comes wiht Conditional Statement Existential § Made of Symbol, Variable &amp; Quantifiers ∃x∈D,Q(x) true iff Q(x) is true for at least one x in D false iff Q(x) is false for all x in D For simple ones, usually existential comes with Conjunction Negation of Universal § Logical Equivalence to Existential There is AT LEAST ONE that IS NOT ¬(∀x∈D,Q(x))≡∃x∈D,¬Q(x) Negation of Existential § Logical Equivalence to Universal ALL ARE NOT ¬(∃x∈D,Q(x))≡∀x∈D,¬Q(x) Negation of Universal Conditional § Make use of Negation of Universal &amp; Implication Law Universal Conditional § Made of Symbol, Variable &amp; Quantifiers &amp; Conditional Statement ∀x(ifP(x)→Q(x)) Can be simplified to Universal ∀x∈P,Q(x) Conditional § Conditional Statement If…, then… Terminologies § Statement § A sentence that is True or False, but not both Can be presented with variables like p, q, r &amp; s etc Logical Connectives § Negation: NOT performed first Disjunction: OR ,Conjunction: AND coequal, make sure proper parentheses is used to avoid Ambiguous If-then/implies: performed last, coequal with iff Statement/Propositional Form § Make up with Statement variables &amp; Logical Connectives Compound Statement § Make up with Statement variables &amp; Logical Connectives When the statement has Conditional Statement, convert it using Implication Law to make it much less confusing Tautology t § Statement/Propositional Form that is always true Contradiction c § Statement/Propositional Form that is always false Implicitly Quantified § The Quantifiers are assumed without specified explicitly Vacuous Truth of Universal § Given the statement: All balls in the bowl are blue, however no balls in the bowl.</description>
     <pubDate>Fri, 08 Dec 2023 12:55:20 GMT</pubDate>
-  </item><item>
-    <title>Predicate</title>
-    <link>https://notes.yxy.ninja/Math/Discrete-Math/Predicate</link>
-    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Predicate</guid>
-    <description>Abstract § Also known as Propositional Functions &amp; Open Sentences Truth value depends on Variable Becomes a Mathematical Statement when specific values are substituted for Variable Returns either true or false, thus cant be used as a Variable Made of Symbol &amp; finite number of Variable Example: let P stand for is a student at NUS, then P(x) = x is a student at NUS, where x is the Variable, P is the Symbol Terminologies § Variable § Symbol § Quantifiers § Instead of manually assign a specific value to Variable to obtain a Mathematical Statement Quantifiers is another way, specific how many of a particular type of values that make the predicate true ∀ ∃ Order of Quantifiers § Unless the Quantifiers are of the same type.</description>
-    <pubDate>Fri, 08 Dec 2023 12:51:42 GMT</pubDate>
-  </item><item>
-    <title>Double Pointers</title>
-    <link>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers/Double-Pointers</link>
-    <guid>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers/Double-Pointers</guid>
-    <description>#dsa 3 types Double Pointers(Fast, Slow) Double Pointers (Left, Right) Double Pointers (Sliding Window) Mainly used to solve Array, String &amp; Linked List related problems Reduce time complexity by one dimension, O(n^2) to O(n) for example Example Use Cases .</description>
-    <pubDate>Fri, 08 Dec 2023 11:05:17 GMT</pubDate>
-  </item><item>
-    <title>Greedy Algorithm</title>
-    <link>https://notes.yxy.ninja/DSA/Algorithms/Greedy-Algorithm</link>
-    <guid>https://notes.yxy.ninja/DSA/Algorithms/Greedy-Algorithm</guid>
-    <description>Abstract § Note 向日葵朝着太阳转动， 时刻都在寻求当前汲取最大养分的可能。 最优子结构就是追随太阳最高效的移动轨迹。 移除重复子问题让向日葵紧跟太阳的脚步。 贪心策略在一轮轮的简单选择中，逐步导向最佳的答案。 Used to solve Optimisation Problem Usually better performance than Backtracking &amp; Dynamic Programming Think about what is the Local Optimal Solution.</description>
-    <pubDate>Fri, 08 Dec 2023 02:44:34 GMT</pubDate>
-  </item><item>
-    <title>Datadog RUM</title>
-    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</link>
-    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</guid>
-    <description>Abstract § With RUM, we are able to get the metadata about the client such as the user-agent, IP Address &amp; record down the user actions on the page in a video format Setup § The example below is based on next.</description>
-    <pubDate>Thu, 07 Dec 2023 10:43:11 GMT</pubDate>
-  </item><item>
-    <title>My DSA Weak Points</title>
-    <link>https://notes.yxy.ninja/DSA/My-DSA-Weak-Points</link>
-    <guid>https://notes.yxy.ninja/DSA/My-DSA-Weak-Points</guid>
-    <description>Abstract § Weak points to be strengthen Areas to improve § Dynamic Programming § Create custom data structure § Examples are like Sort Zero Number Theory § Examples are like New Skateboard Visualisation/Implementation § Examples are like - 1766C - Hamiltonian Wall Coding Practices § Java § Always scanner.</description>
-    <pubDate>Thu, 07 Dec 2023 09:36:08 GMT</pubDate>
   </item>
     </channel>
   </rss>

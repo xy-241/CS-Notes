@@ -1,5 +1,5 @@
 ---
-Last Date: 2023-12-07T14:13:56+08:00
+Last Date: 2023-12-09T01:43:54+08:00
 ---
 >[!sidenote]
 >- 🌟 denotes tools & settings I must have in MacOS to have a smooth user/developer experience
@@ -148,6 +148,7 @@ brew install jq
 ## Cheatsheet
 - Command used to give unverified app permissions to execute - `xattr -r -d com.apple.quarantine/Applications/<APP_NAME>.app`
 - [Terminal Cli Navigation Shortcut](https://support.apple.com/en-sg/guide/terminal/trmlshtcts/mac)
+- [Remove an app from system entirely](https://www.youtube.com/watch?v=IgRi0Z1O_gk)
 
 ## Docker Apps
 - [[AWS Nuke]]
