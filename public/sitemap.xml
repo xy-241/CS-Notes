@@ -104,9 +104,6 @@
     <loc>https://notes.yxy.ninja/Computer-Organisation/Circuits/Sequential-Circuits/Memory/Flip-flops/Flip-flops</loc>
     <lastmod>2023-09-03T09:06:59.486Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Circuits/Sequential-Circuits/Memory/Flip-flops/JK-Flip-Flop</loc>
-    <lastmod>2023-09-02T17:00:11.932Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Circuits/Sequential-Circuits/Memory/Latch/Gated-Latch/Gated-S-R-Latch</loc>
     <lastmod>2023-09-06T03:16:22.130Z</lastmod>
   </url><url>
@@ -217,9 +214,6 @@
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Register-types/Destination-Register-(rd,-5bits)</loc>
     <lastmod>2023-08-25T04:27:02.309Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Register-types/Shift-Amount-(shamt,-5bits)</loc>
-    <lastmod>2023-08-25T04:23:24.528Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Register-types/Source-Register-(rs,-5bits)</loc>
     <lastmod>2023-08-25T04:25:00.980Z</lastmod>
@@ -814,9 +808,6 @@
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Calculus/Ordinary-Differential-Equation/Ordinary-Differential-Equation</loc>
     <lastmod>2023-10-18T11:55:14.843Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Math/Calculus/Series-(%E7%BA%A7%E6%95%B0)/4-Famous-Infinite-Series/Alternating-P-Series</loc>
-    <lastmod>2023-09-14T12:23:51.226Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Calculus/Series-(%E7%BA%A7%E6%95%B0)/4-Famous-Infinite-Series/Geometric-Series</loc>
     <lastmod>2023-10-16T11:34:48.528Z</lastmod>
@@ -1886,9 +1877,6 @@
     <loc>https://notes.yxy.ninja/Problem-solving/Sample-Problems/Probability-Problem</loc>
     <lastmod>2023-08-16T14:24:16.213Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/assets/Untitled</loc>
-    <lastmod>2023-08-13T10:49:24.432Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/Programming-Paradigms/Functional/Closure</loc>
     <lastmod>2023-09-03T02:45:58.000Z</lastmod>
   </url><url>
@@ -2176,9 +2164,6 @@
   </url><url>
     <loc>https://notes.yxy.ninja/Terminologies/User-Principle-Name</loc>
     <lastmod>2023-10-02T08:47:42.278Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Terminologies/binprm-(Binary-Program)</loc>
-    <lastmod>2023-09-09T08:48:12.558Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS-Nuke/AWS-Nuke</loc>
     <lastmod>2023-09-30T14:24:00.000Z</lastmod>
