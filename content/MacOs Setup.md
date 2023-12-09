@@ -1,6 +1,15 @@
 ---
-Last Date: 2023-12-09T01:43:54+08:00
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags: 
+Creation Date: 2023-11-30T16:47:00
+Last Date: 2023-12-09T21:56:09+08:00
+References: 
 ---
+
+## Abstract
 >[!sidenote]
 >- 🌟 denotes tools & settings I must have in MacOS to have a smooth user/developer experience
 ## GUI Apps

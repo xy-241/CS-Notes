@@ -6,9 +6,9 @@ Author Profile:
 tags:
   - OS
   - computer_organisation
-Creation Date: 
-Last Date: 
-References:
+Creation Date: 2023-11-20T10:58:00
+Last Date: 2023-12-09T21:00:03+08:00
+References: 
 ---
 ## Abstract
 - A group of [[Latch]]
@@ -16,13 +16,7 @@ References:
 
 ## 2 main purposes
 1. Storying values during computations (like [[Memory Address]] & value)
-2. Configuring [[Computer Organisation/CPU/CPU]]
-
-
-
-
-## MIPS Registers
-![[MIPS_Register.png]]
+2. Configuring [[CPU]]
 
 
 ## Register Type
@@ -36,9 +30,17 @@ References:
 - Stores information about the current state of the processor or device
 - CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
 
+## MIPS Registers
+![[MIPS_Register.png]]
+
+
+
+
 ## Terminologies
 ### Width
 - The number of [[Bits]] inside a register
+### File
+- A collection of registers that [[CPU]] can quickly store and retrieve [[Data]]
 ### Memory Mapped
 - *Register* that is treated as a [[Main Memory]] location 
 - This means that the register can be accessed using the same [[Instruction]] and addressing modes as memory. 

@@ -10,9 +10,9 @@
 >[!note] Uses 32-bit [[Computer Organisation/Instruction Set Architecture (ISA)/Instruction]]
 > - First 6 bits refers to the [[Instruction]]
 > - 3 Types
-> 	- [[R-Type]]
-> 	- [[I-Type]]
-> 	- [[J-Type]]
+> 	- [[MIPS R-Type Instruction]]
+> 	- [[MIPS I-Type Instruction]]
+> 	- [[MIPS J-Type Instruction]]
 
 >[!example] [[Assembly language]] implementation
 >- [[MIPS32 Assembly Language]]

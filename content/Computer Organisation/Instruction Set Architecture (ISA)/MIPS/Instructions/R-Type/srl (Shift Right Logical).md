@@ -1,6 +1,6 @@
 #computer_organisation 
 >[!abstract] It effectively shifts the value right by n bits, discarding the lower n bits
->- [[R-Type]]
+>- [[MIPS R-Type Instruction]]
 >- Can be perform on [[Registers]] regardless of the values it is holding ([[Memory Address]] & values etc)
 
 >[!caution] [[Source Register (rs, 5bits)]] is 0

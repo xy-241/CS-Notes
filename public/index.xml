@@ -6,65 +6,65 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>3. Leverage Symmetry</title>
-    <link>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</link>
-    <guid>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</guid>
-    <description>#problem_solving Note Basically obtaining another piece of information based on reflection/symmetry, basically buy one get one free Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem Since the angle is 90degrees, 2 out 3 sides are the same.</description>
-    <pubDate>Sat, 09 Dec 2023 10:56:01 GMT</pubDate>
-  </item><item>
-    <title>2. Giving things (meaningful) names</title>
-    <link>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</link>
-    <guid>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</guid>
-    <description>#problem_solving Give names to objects that describes its properties (Or to differentiate each one) It is like forming an abstraction over something, then we have more brain power to build on top of it Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem Give Θ (Theta) a name .</description>
-    <pubDate>Sat, 09 Dec 2023 10:56:01 GMT</pubDate>
-  </item><item>
-    <title>1. Use the defining features of the set-up</title>
-    <link>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</link>
-    <guid>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</guid>
-    <description>#problem_solving Note Look at what is given Ask the definition of each term How the ideas piece up together Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem We are given a Circle Definition of Circle It has a radius which is a line from the center of circle to its circumference Piece the ideas up Any lines from the center of circle to its circumference is the same length .</description>
-    <pubDate>Sat, 09 Dec 2023 10:56:01 GMT</pubDate>
+    <title>MacOs Setup</title>
+    <link>https://notes.yxy.ninja/MacOs-Setup</link>
+    <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
+    <description>Abstract § Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
+    <pubDate>Sat, 09 Dec 2023 13:56:09 GMT</pubDate>
   </item><item>
     <title>4. Try describing 1 object 2 ways</title>
     <link>https://notes.yxy.ninja/Problem-solving/4.-Try-describing-1-object-2-ways</link>
     <guid>https://notes.yxy.ninja/Problem-solving/4.-Try-describing-1-object-2-ways</guid>
     <description>#problem_solving Note Basically explaining something in 2 different perspectives. For example, counting the possible permutation of a string of 5bits.</description>
-    <pubDate>Sat, 09 Dec 2023 10:55:55 GMT</pubDate>
+    <pubDate>Sat, 09 Dec 2023 13:49:35 GMT</pubDate>
   </item><item>
-    <title>MacOs Setup</title>
-    <link>https://notes.yxy.ninja/MacOs-Setup</link>
-    <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
-    <description> Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
-    <pubDate>Fri, 08 Dec 2023 17:43:54 GMT</pubDate>
+    <title>2. Giving things (meaningful) names</title>
+    <link>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</link>
+    <guid>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</guid>
+    <description>#problem_solving Give names to objects that describes its properties (Or to differentiate each one) It is like forming an abstraction over something, then we have more brain power to build on top of it Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
+    <pubDate>Sat, 09 Dec 2023 13:48:46 GMT</pubDate>
   </item><item>
-    <title>Integer Encoding</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Integer-Encoding</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Integer-Encoding</guid>
-    <description>Abstract § There are 3 Variants, computer use the 2’s Complement (补码) variant to store integer Below is a 4-bits Integer Encoding under the 3 Variants 3 Variants § Sign-and-Magnitude (原码) § 1’s Complement (反码) § 2’s Complement (补码) § Terminologies § Sign Bit § The first bit from left 0 denotes positive 1 denotes negative Magnitude § All the bits in the encoding except Sign Bit .</description>
-    <pubDate>Fri, 08 Dec 2023 14:00:36 GMT</pubDate>
+    <title>3. Leverage Symmetry</title>
+    <link>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</link>
+    <guid>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</guid>
+    <description>#problem_solving Note Basically obtaining another piece of information based on reflection/symmetry, basically buy one get one free Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
+    <pubDate>Sat, 09 Dec 2023 13:48:46 GMT</pubDate>
   </item><item>
-    <title>Sign-and-Magnitude (原码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Sign-and-Magnitude-(%E5%8E%9F%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/Sign-and-Magnitude-(%E5%8E%9F%E7%A0%81)</guid>
-    <description>Abstract § Represent positive and negative decimal integers in binary Divide the number of bits into 2 parts, one part for negative number, another part for positive number Cons § Require extra Logic Gates § The Adder logic cant be used for subtraction This can be avoided using 1’s Complement (反码) or 2’s Complement (补码) Reference § Sign-and-Magnitude Addition and Subtraction Hello-Algo .</description>
-    <pubDate>Fri, 08 Dec 2023 14:00:28 GMT</pubDate>
+    <title>1. Use the defining features of the set-up</title>
+    <link>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</link>
+    <guid>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</guid>
+    <description>#problem_solving Note Look at what is given Ask the definition of each term How the ideas piece up together Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
+    <pubDate>Sat, 09 Dec 2023 13:48:46 GMT</pubDate>
   </item><item>
-    <title>2&#039;s Complement (补码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/2's-Complement-(%E8%A1%A5%E7%A0%81)</guid>
-    <description>Abstract § We are adding extra 1 to the 1’s Complement (反码), positive number remain unchanged This makes sure that there is only one 0 by adding 1 to after converting from Sign-and-Magnitude (原码) to 1’s Complement (反码) After computation, take the value Sign Bit (negative if it is 1) and perform addition with value of whole Magnitude (all are positive) This is the form that computers use to store integers References § 2’s Complement Addition and Subtraction .</description>
-    <pubDate>Fri, 08 Dec 2023 13:52:41 GMT</pubDate>
+    <title>MIPS R-Type Instruction</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/MIPS-R-Type-Instruction</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/MIPS-R-Type-Instruction</guid>
+    <description>Abstract § Opcode is always 000000 Operation is decided by the Function Code 6 parts - Opcode, Source Register, Target Register, Destination Register, Shift Amount &amp; Function Code Terminologies § Function Code § 6 bits Give MIPS (2^6-1) + 2^6 = 127 instead of 2^6=64 Instruction Dedicated for MIPS R-Type Instruction (if my understanding isn’t wrong) Shift Amount § 5bits Labeled as shamt .</description>
+    <pubDate>Sat, 09 Dec 2023 13:46:03 GMT</pubDate>
   </item><item>
-    <title>1&#039;s Complement (反码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement-(%E5%8F%8D%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Binary-Encoding/1's-Complement-(%E5%8F%8D%E7%A0%81)</guid>
-    <description>Abstract § For negative number, all bits are inverted except the Sign Bit which is 1 when we need to perform the computation For positive number, all bits remind the same After the computation, we invert all bits except Sign Bit to obtain the final answer.</description>
-    <pubDate>Fri, 08 Dec 2023 13:33:51 GMT</pubDate>
+    <title>MIPS Instruction</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</guid>
+    <description>Abstract § The Instruction may specify 3 Registers - Destination Register, Source Register &amp; Target Register Terminologies § Destination Register § 5bits Labeled rd, mapped to WR Registers that gets the result of Operation in MIPS R-Type Instruction Instruction Source Register § 5bits Labeled rs, mapped to RR1 Register with value stored that we want to use to carry out Operation Target Register § 5 bits Labeled rt, mapped to RR2 Register with value stored we want to use in MIPS R-Type Instruction Instruction Register that gets the result of Operation in MIPS I-Type Instruction .</description>
+    <pubDate>Sat, 09 Dec 2023 13:44:45 GMT</pubDate>
   </item><item>
-    <title>Mathematical Statement</title>
-    <link>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</link>
-    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</guid>
-    <description>Abstract § Also known as Proposition 3 important types are Universal, Conditional &amp; Existential We can form statements that are Universal &amp; Conditional, or more to form complex statements Either True or False Warning Doesn’t depend on any Variable, unless it is Logical Equivalence equation Not in a question form Different Types of Statements § Universal § Made of Symbol, Variable &amp; Quantifiers ∀x∈D,Q(x) true iff Q(x) is true for every x in D false iff Q(x) is false for at least one x in D For simple ones, usually universal comes wiht Conditional Statement Existential § Made of Symbol, Variable &amp; Quantifiers ∃x∈D,Q(x) true iff Q(x) is true for at least one x in D false iff Q(x) is false for all x in D For simple ones, usually existential comes with Conjunction Negation of Universal § Logical Equivalence to Existential There is AT LEAST ONE that IS NOT ¬(∀x∈D,Q(x))≡∃x∈D,¬Q(x) Negation of Existential § Logical Equivalence to Universal ALL ARE NOT ¬(∃x∈D,Q(x))≡∀x∈D,¬Q(x) Negation of Universal Conditional § Make use of Negation of Universal &amp; Implication Law Universal Conditional § Made of Symbol, Variable &amp; Quantifiers &amp; Conditional Statement ∀x(ifP(x)→Q(x)) Can be simplified to Universal ∀x∈P,Q(x) Conditional § Conditional Statement If…, then… Terminologies § Statement § A sentence that is True or False, but not both Can be presented with variables like p, q, r &amp; s etc Logical Connectives § Negation: NOT performed first Disjunction: OR ,Conjunction: AND coequal, make sure proper parentheses is used to avoid Ambiguous If-then/implies: performed last, coequal with iff Statement/Propositional Form § Make up with Statement variables &amp; Logical Connectives Compound Statement § Make up with Statement variables &amp; Logical Connectives When the statement has Conditional Statement, convert it using Implication Law to make it much less confusing Tautology t § Statement/Propositional Form that is always true Contradiction c § Statement/Propositional Form that is always false Implicitly Quantified § The Quantifiers are assumed without specified explicitly Vacuous Truth of Universal § Given the statement: All balls in the bowl are blue, however no balls in the bowl.</description>
-    <pubDate>Fri, 08 Dec 2023 12:55:20 GMT</pubDate>
+    <title>MIPS J-Type Instruction</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/MIPS-J-Type-Instruction</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/MIPS-J-Type-Instruction</guid>
+    <description>Abstract § Instruction that tells CPU jump to Memory Address &amp; execute Instruction starting from that point 2 sections - Opcode, Memory Address .</description>
+    <pubDate>Sat, 09 Dec 2023 13:39:21 GMT</pubDate>
+  </item><item>
+    <title>MIPS</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS</guid>
+    <description>#computer_organisation Note Load-Store, Register-Register ISA Use 32 Registers Uses Word Addressing, each Word 4 Byte Uses 32-bit Instruction First 6 bits refers to the Instruction 3 Types MIPS R-Type Instruction MIPS I-Type Instruction MIPS J-Type Instruction Example Assembly language implementation MIPS32 Assembly Language MIPS64 Assembly Language .</description>
+    <pubDate>Sat, 09 Dec 2023 13:37:49 GMT</pubDate>
+  </item><item>
+    <title>srl (Shift Right Logical)</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/srl-(Shift-Right-Logical)</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/srl-(Shift-Right-Logical)</guid>
+    <description>#computer_organisation It effectively shifts the value right by n bits, discarding the lower n bits MIPS R-Type Instruction Can be perform on Registers regardless of the values it is holding (Memory Address &amp; values etc) Warning Source Register (rs, 5bits) is 0 Example srl $s0, $s0, 4 can be thought of as dividing the value in register $s0 by 16 (2^4) .</description>
+    <pubDate>Sat, 09 Dec 2023 13:37:49 GMT</pubDate>
   </item>
     </channel>
   </rss>

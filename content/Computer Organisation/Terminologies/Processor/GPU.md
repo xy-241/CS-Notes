@@ -1,17 +1,34 @@
-#computer_organisation 
->[!abstract] 
-> - A [[Multi-core chips]] with thousands of tiny cores
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - computer_organisation
+Creation Date: 2023-08-29T14:24:00
+Last Date: 2023-12-09T21:14:08+08:00
+References: 
+---
+## Abstract
+- A [[Multi-core chips]] with thousands of tiny cores
 
->[!success] Optimised for [[Parallel Computing]]
 
->[!success] Allows games to perform a ton of [[linear Algebra]] in parallel
->- We can calculate pixels in batches or parallel 
+## Benefits
+### Optimised for Parallel Computing
+### Allows games to perform a ton of Linear Algebra in parallel
+- We can calculate pixels in batches or parallel 
+### Great for AI related work
+- Allow training Deep Learning Models that perform tons Matrix Multiplication on dataset
 
->[!success] Allow training [[Deep Learning Models]] that perform tons [[Matrix Multiplication]] on dataset
+## Cons
+### Hard to program
 
->[!note] Comparison with [[CPU]]
->![[cpu vs gpu comparison.png]]
->>[!caution] [[CPU]] one core is way more power, and able to handle complication logics like [[Branching]]. A lot of the real world application needs to run [[Instruction]] in a sequential manner
+## Comparison with CPU
+[[CPU]] one core is way more power, and able to handle complication logics like [[Branching]]. A lot of the real world application needs to run [[Instruction]] in a sequential manner
 
->[!caution] Hard to program
+GPU shines when we need [[High-performance Computing#Parallelism (并行性)]]
+![[cpu vs gpu comparison.png]]
+
+
+
 

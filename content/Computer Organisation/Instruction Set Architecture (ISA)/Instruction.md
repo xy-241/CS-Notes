@@ -6,14 +6,15 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-28T20:12:00
-Last Date: 2023-12-05T17:13:29+08:00
+Last Date: 2023-12-09T21:21:18+08:00
 ---
 ## Abstract
 - [[Bit String]] stored in the [[Main Memory]]
 - Passed to CPU to get translated to carry out [[Operation]]
-- Doesn't specify which [[CPU Component]] does what, just specify what outputs are expected with a given input
+- Doesn't specify which [[CPU Datapath]] does what, just specify what outputs are expected with a given input
 - The instruction lifecycle can be broken down into [[Pipeline Stages]]
 - Made up of 2 parts - [[#Opcode]] & [[#Parameter]]
+- 2 forms - [[#Fixed-length]] & [[#Variable-length]]
 
 
 ## Terminologies
@@ -27,6 +28,11 @@ Last Date: 2023-12-05T17:13:29+08:00
 ### Branch
 - An [[Instruction]] that causes [[Process]] to jump to a different location in the codes
 
+### Fixed-length
+- Easy [[Pipeline Stages#Fetch]] & [[Pipeline Stages#Decode]]
+- Simplified [[Pipeline]] & [[Instruction-Level Parallelism]]
+### Variable-length
+- More Flexible BUT Requires more steps for [[Pipeline Stages#Fetch]] & [[Pipeline Stages#Decode]]
 
 
 
