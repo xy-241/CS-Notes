@@ -6,6 +6,18 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Predicate</title>
+    <link>https://notes.yxy.ninja/Math/Discrete-Math/Predicate</link>
+    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Predicate</guid>
+    <description>Abstract § Also known as Propositional Functions &amp; Open Sentences Example: let P stand for is a student at NUS, then P(x) = x is a student at NUS, where x is the Variable, P is the Symbol Truth value depends on Variable Becomes a Mathematical Statement when specific values are substituted for Variable Returns either true or false, thus cant be used as a Variable that is substituted into Symbol like P() Made of Symbol &amp; finite number of Variable Terminologies § Variable § Holds value that determines if Predicate is true or false It doesn&#039;t hold the value of true or false! Only Mathematical Statement can be true or false Symbol § Represents a property or relation Quantifiers § Instead of manually assign a specific value to Variable to obtain a Mathematical Statement Quantifiers is another way, specific how many of a particular type of values that make the predicate true ∀ ∃ Order of Quantifiers § Unless the Quantifiers are of the same type.</description>
+    <pubDate>Sat, 09 Dec 2023 16:41:46 GMT</pubDate>
+  </item><item>
+    <title>Mathematical Statement</title>
+    <link>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</link>
+    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</guid>
+    <description>Abstract § Also known as Proposition 3 important types are Universal, Conditional &amp; Existential We can form statements that are Universal &amp; Conditional, or more to form complex statements Either True or False Warning Doesn’t depend on any Variable, unless it is Logical Equivalence equation Not in a question form Different Types of Statements § Universal § Made of Symbol, Variable &amp; Quantifiers ∀x∈D,Q(x) true iff Q(x) is true for every x in D false iff Q(x) is false for at least one x in D For simple ones, usually universal comes with Conditional Statement Existential § Made of Symbol, Variable &amp; Quantifiers ∃x∈D,Q(x) true iff Q(x) is true for at least one x in D false iff Q(x) is false for all x in D For simple ones, usually existential comes with Conjunction Negation of Universal § Logical Equivalence to Existential There is AT LEAST ONE that IS NOT ¬(∀x∈D,Q(x))≡∃x∈D,¬Q(x) Negation of Existential § Logical Equivalence to Universal ALL ARE NOT ¬(∃x∈D,Q(x))≡∀x∈D,¬Q(x) Negation of Universal Conditional § Make use of Negation of Universal &amp; Implication Law Universal Conditional § Made of Symbol, Variable &amp; Quantifiers &amp; Conditional Statement ∀x(ifP(x)→Q(x)) Can be simplified to Universal ∀x∈P,Q(x) Conditional § Conditional Statement If…, then… Terminologies § Statement § A sentence that is True or False, but not both Can be presented with variables like p, q, r &amp; s etc Logical Connectives § Negation: NOT performed first Disjunction: OR ,Conjunction: AND coequal, make sure proper parentheses is used to avoid Ambiguous If-then/implies: performed last, coequal with iff Statement/Propositional Form § Make up with Statement variables &amp; Logical Connectives Compound Statement § Make up with Statement variables &amp; Logical Connectives When the statement has Conditional Statement, convert it using Implication Law to make it much less confusing Tautology t § Statement/Propositional Form that is always true Contradiction c § Statement/Propositional Form that is always false Implicitly Quantified § The Quantifiers are assumed without specified explicitly Vacuous Truth of Universal § Given the statement: All balls in the bowl are blue, however no balls in the bowl.</description>
+    <pubDate>Sat, 09 Dec 2023 16:34:28 GMT</pubDate>
+  </item><item>
     <title>Second Brain for CS</title>
     <link>https://notes.yxy.ninja//</link>
     <guid>https://notes.yxy.ninja//</guid>
@@ -53,18 +65,6 @@
     <guid>https://notes.yxy.ninja/Problem-solving/4.-Try-describing-1-object-2-ways</guid>
     <description>#problem_solving Note Basically explaining something in 2 different perspectives. For example, counting the possible permutation of a string of 5bits.</description>
     <pubDate>Sat, 09 Dec 2023 13:49:35 GMT</pubDate>
-  </item><item>
-    <title>2. Giving things (meaningful) names</title>
-    <link>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</link>
-    <guid>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</guid>
-    <description>#problem_solving Give names to objects that describes its properties (Or to differentiate each one) It is like forming an abstraction over something, then we have more brain power to build on top of it Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
-    <pubDate>Sat, 09 Dec 2023 13:48:46 GMT</pubDate>
-  </item><item>
-    <title>3. Leverage Symmetry</title>
-    <link>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</link>
-    <guid>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</guid>
-    <description>#problem_solving Note Basically obtaining another piece of information based on reflection/symmetry, basically buy one get one free Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
-    <pubDate>Sat, 09 Dec 2023 13:48:46 GMT</pubDate>
   </item>
     </channel>
   </rss>

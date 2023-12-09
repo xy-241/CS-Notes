@@ -6,23 +6,26 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-21T11:25:00
-Last Date: 2023-12-08T20:51:42+08:00
+Last Date: 2023-12-10T00:41:46+08:00
 References: 
 ---
 ## Abstract
 - Also known as *Propositional Functions* & *Open Sentences*
+- Example: let `P` stand for `is a student at NUS`, then `P(x) = x is a student at NUS`, where `x` is the [[#Variable]], `P` is the [[#Symbol]]
 - Truth value depends on [[#Variable]]
 - Becomes a [[Mathematical Statement]] when specific values are substituted for [[#Variable]]
-- Returns either `true` or `false`, thus cant be used as a [[#Variable]]
+- Returns either `true` or `false`, thus cant be used as a [[#Variable]] that is substituted into [[#Symbol]] like `P()`
 - Made of [[#Symbol]] & finite number of [[#Variable]]
-- Example: let `P` stand for `is a student at NUS`, then `P(x) = x is a student at NUS`, where `x` is the [[#Variable]], `P` is the [[#Symbol]]
+
 
 
 
 ## Terminologies 
 ### Variable
-
+- Holds value that determines if **Predicate** is *true* or *false*
+>[!caution] It doesn't hold the value of *true* or *false*! Only [[Mathematical Statement]] can be *true* or *false*
 ### Symbol
+- Represents a property or *relation*
 ### Quantifiers
 - Instead of manually assign a specific value to [[#Variable]] to obtain a [[Mathematical Statement]]
 - *Quantifiers* is another way, specific how many of a particular type of values that make the *predicate* true

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-02T22:09:00
-Last Date: 2023-12-08T20:55:20+08:00
+Last Date: 2023-12-10T00:34:28+08:00
 References: 
 ---
 ## Abstract
@@ -25,7 +25,7 @@ $$
 $$
 - `true` iff `Q(x)` is `true for every x` in `D`
 - `false` iff `Q(x)` is `false for at least one x` in `D` 
-- For simple ones, usually universal comes wiht [[Conditional Statement]]
+- For simple ones, usually universal comes with [[Conditional Statement]]
 ### Existential
 - Made of [[Predicate#Symbol]], [[Predicate#Variable]] & [[Predicate#Quantifiers]]
 $$
@@ -77,7 +77,8 @@ $$
 - Make up with [[#Statement]] variables & [[#Logical Connectives]]
 ### Compound Statement
 - Make up with [[#Statement]] variables & [[#Logical Connectives]]
-- When the statement has [[Conditional Statement]], convert it using [[Conditional Statement#Implication Law]] to make it much less confusing
+>[!tip] When the statement has [[Conditional Statement]], convert it using [[Conditional Statement#Implication Law]] to make it much less confusing
+
 
 ### Tautology `t`
 - [[#Statement/Propositional Form]] that is *always true* 
