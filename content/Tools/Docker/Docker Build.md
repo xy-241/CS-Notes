@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - docker
 Creation Date: 2023-12-07, 16:09
-Last Date: 2023-12-10T19:55:18+08:00
+Last Date: 2023-12-10T19:58:00+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,7 @@ References:
 
 
 ## Cautions
-### `--build-arg`
+### --build-arg
 - Used to pass dynamic values to [[Docker#Engine]] for the building process
 >[!caution] Not [[Environment Variable]], that is set with  [[Dockerfile#`ENV`]]
 

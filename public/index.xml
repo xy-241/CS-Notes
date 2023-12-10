@@ -6,17 +6,23 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Docker Build</title>
-    <link>https://notes.yxy.ninja/Tools/Docker/Docker-Build</link>
-    <guid>https://notes.yxy.ninja/Tools/Docker/Docker-Build</guid>
-    <description>Abstract § Convert Dockerfile to Docker Container Cautions § --build-arg § Used to pass dynamic values to Engine for the building process Not Environment Variable, that is set with [[Dockerfile#env|ENV]] Frontend Build § Needs the Environment Variable at the container build stage only, not when the container is running .</description>
-    <pubDate>Sun, 10 Dec 2023 11:55:18 GMT</pubDate>
+    <title>Problem Solving</title>
+    <link>https://notes.yxy.ninja/Problem-solving/Problem-Solving</link>
+    <guid>https://notes.yxy.ninja/Problem-solving/Problem-Solving</guid>
+    <description>Abstract § Systematic way of solving a given problem 9 Tips § 1. Use the defining features of the set-up § Look at what is given Ask the definition of each term How the ideas piece up together (infer) Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
+    <pubDate>Sun, 10 Dec 2023 13:46:47 GMT</pubDate>
   </item><item>
     <title>Dockerfile</title>
     <link>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Dockerfile</link>
     <guid>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Dockerfile</guid>
     <description>Abstract § Set of steps for Docker to build Docker Container Keywords § ENV § Set the Environment Variable in the Docker Container .</description>
-    <pubDate>Sun, 10 Dec 2023 11:54:36 GMT</pubDate>
+    <pubDate>Sun, 10 Dec 2023 11:58:31 GMT</pubDate>
+  </item><item>
+    <title>Docker Build</title>
+    <link>https://notes.yxy.ninja/Tools/Docker/Docker-Build</link>
+    <guid>https://notes.yxy.ninja/Tools/Docker/Docker-Build</guid>
+    <description>Abstract § Convert Dockerfile to Docker Container Cautions § —build-arg § Used to pass dynamic values to Engine for the building process Not Environment Variable, that is set with [[Dockerfile#env|ENV]] Frontend Build § Needs the Environment Variable at the container build stage only, not when the container is running .</description>
+    <pubDate>Sun, 10 Dec 2023 11:58:00 GMT</pubDate>
   </item><item>
     <title>Configuration File, Vault</title>
     <link>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Main-Components/Configuration-File,-Vault</link>
@@ -59,12 +65,6 @@
     <guid>https://notes.yxy.ninja/Software-Engineering/Monitoring/Real-User-Monitoring</guid>
     <description>Abstract § Used to monitor the frontend of an application .</description>
     <pubDate>Sun, 10 Dec 2023 11:28:51 GMT</pubDate>
-  </item><item>
-    <title>Datadog RUM</title>
-    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</link>
-    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</guid>
-    <description>Abstract § Real User Monitoring Enable us to get the metadata about the client such as the user-agent, IP Address &amp; record down the user actions on the page in a video format Setup § The example below is based on next.</description>
-    <pubDate>Sun, 10 Dec 2023 11:27:38 GMT</pubDate>
   </item>
     </channel>
   </rss>

@@ -1766,35 +1766,8 @@
     <loc>https://notes.yxy.ninja/OS/Tools/Init-System</loc>
     <lastmod>2023-10-23T07:26:04.292Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/1.-Use-the-defining-features-of-the-set-up</loc>
-    <lastmod>2023-12-09T13:48:46.075Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/2.-Giving-things-(meaningful)-names</loc>
-    <lastmod>2023-12-09T13:48:46.082Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/3.-Leverage-Symmetry</loc>
-    <lastmod>2023-12-09T13:48:46.082Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/4.-Try-describing-1-object-2-ways</loc>
-    <lastmod>2023-12-09T13:49:35.952Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/5.-Draw-a-picture</loc>
-    <lastmod>2023-08-15T18:05:45.403Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/6.-Ask-a-simpler-version-of-the-problem</loc>
-    <lastmod>2023-08-15T18:05:52.406Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/7.-Read-a-lot,-and-think-about-problems-a-lot</loc>
-    <lastmod>2023-08-15T17:51:27.842Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/8.-Always-gut-check-your-answer</loc>
-    <lastmod>2023-08-15T17:56:00.034Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Problem-solving/9.-Learn-at-least-a-little-bit-of-programming</loc>
-    <lastmod>2023-08-16T14:37:46.542Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/Problem-solving/Problem-Solving</loc>
-    <lastmod>2023-08-13T10:45:40.665Z</lastmod>
+    <lastmod>2023-12-10T13:46:47.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Problem-solving/Sample-Problems/Probability-Problem</loc>
     <lastmod>2023-08-16T14:24:16.213Z</lastmod>
@@ -2199,7 +2172,7 @@
     <lastmod>2023-08-28T10:27:21.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Dockerfile</loc>
-    <lastmod>2023-12-10T11:54:36.000Z</lastmod>
+    <lastmod>2023-12-10T11:58:31.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Runtime-Instruction/CMD</loc>
     <lastmod>2023-08-27T14:23:58.705Z</lastmod>
@@ -2223,7 +2196,7 @@
     <lastmod>2023-08-28T14:25:00.931Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Docker/Docker-Build</loc>
-    <lastmod>2023-12-10T11:55:18.000Z</lastmod>
+    <lastmod>2023-12-10T11:58:00.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Docker/Docker-Compose/Docker-Compose</loc>
     <lastmod>2023-08-28T14:16:10.594Z</lastmod>
