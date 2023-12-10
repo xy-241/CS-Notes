@@ -6,17 +6,29 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>AWS Nuke</title>
+    <link>https://notes.yxy.ninja/Tools/AWS/AWS-Nuke</link>
+    <guid>https://notes.yxy.ninja/Tools/AWS/AWS-Nuke</guid>
+    <description>Abstract § A tool to remove all resources in an AWS Account automatically without manually clicking countless buttons Always double check what resources that AWS Nuke aren&#039;t able to remove There are a few resources that require manual removal like AWS Network Firewall AWS Account Setting § We need to create Account Alias in order to start using aws-nuke Refer to Github Repo for more details config.</description>
+    <pubDate>Sun, 10 Dec 2023 11:08:10 GMT</pubDate>
+  </item><item>
+    <title>IEEE 754 Floating-Point Encoding (浮点数编码)</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/IEEE-754-Floating-Point-Encoding-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/IEEE-754-Floating-Point-Encoding-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</guid>
+    <description>Abstract § sign 0 for positive, 1 for negative exponent by default -127 with all bits set to 0 mantissa takes the binary behind the decimal place after normalisation (the yellow circle part) Reliable precision is 7 decimal digits Approximation of Real Number § mantissa gives the precision From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point For 2 to 4 (2^1-2^2), there are 22 bits of mantissa used for precision after decision point, one of the bit is used to present the whole number before decimal point With every range of 2, the precision after the decimal point is reduced by 2 Thus, the precision of the number after decimal point is getting worse as the number getting bigger Normalised Number § The range of real numbers between 0 and smallest Normalised Number isn’t covered, covered by Subnormal Number (Denormalized Number) The 1 is implicit when exponent isn’t 0.</description>
+    <pubDate>Sun, 10 Dec 2023 11:01:12 GMT</pubDate>
+  </item><item>
+    <title>Integer Encoding (数字编码)</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</guid>
+    <description>Abstract § There are 3 Variants, computer use the 2’s Complement (补码) variant to store integer Computers use 2’s Complement (补码) to store the integers, since it solves the flaws in Sign-and-Magnitude (原码) and 1’s Complement (反码) Below is a 4-bits Integer Encoding under the 3 Variants 3 Variants § Sign-and-Magnitude (原码) § Represent positive and negative decimal integers in binary with the help of Sign Bit Divide the number of bits into 2 parts, one part for negative number, another part for positive number Require extra Logic Gates The Adder logic gates cant be used for subtraction This can be avoided using 1’s Complement (反码) or 2’s Complement (补码) 1’s Complement (反码) § For negative number, all bits are inverted except the Sign Bit which is 1 and positive number unchanged We can invert all bits except Sign Bit to obtain Sign-and-Magnitude (原码) Reuse Logic Gates We re-can use Adder logic gates, without building extra logic circuit like a subtraction logic gates Mathematically wrong definition of 0 We have +0 (when all bits are 0) &amp; -0(when all bits are 1) under this encoding, this can be solved by 2’s Complement (补码) 2’s Complement (补码) § This builds on top of 1’s Complement (反码), the only difference is to add extra 1 to the negative number in 1’s Complement (反码) to have only 1 binary encoding for 0 We can calculate the decimal value by taking the value Sign Bit (negative) and perform addition with value of Magnitude (all are positive) Terminologies § Sign Bit § The first bit from left 0 denotes positive 1 denotes negative Magnitude § All the bits in the encoding except Sign Bit Reference § Sign-and-Magnitude Addition and Subtraction Hello-Algo .</description>
+    <pubDate>Sun, 10 Dec 2023 10:32:52 GMT</pubDate>
+  </item><item>
     <title>MIPS I-Type Instruction</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-I-Type-Instruction</link>
     <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-I-Type-Instruction</guid>
     <description>Abstract § I because it is Instruction that contains Immediate Value 4 parts - Opcode, Source Register, Target Register &amp; Immediate Value Meaning: Add the Source Register with the Immediate Value, and store the result to the Target Register Examples § andi § Perform a bitwise Logical Product (AND) operation between a register and an immediate value Get last 4 significant Bits of s0,andstoreitinsidet0 - andi $t0, $s0 , 0xF slti § Set Less Than Immediate If value in Source Register is smaller than Immediate Value, then Target Register is set to 1 else 0 The mips code - slti $t0, $t0, 100 The equivalent more high-level code - R[rt] = (R[rs]&lt;SignExtImm) ? 1 : 0 bne § Branch if Not Equal Terminologies § Immediate Value § Value is 2’s Complement (补码) 16-bits, can represent up to +-2^15 Word, 2^17 Memory Address because 4-bytes Word Addressing Used for PC-Relative Addressing .</description>
     <pubDate>Sun, 10 Dec 2023 10:26:19 GMT</pubDate>
-  </item><item>
-    <title>Integer Encoding (数字编码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</guid>
-    <description>Abstract § There are 3 Variants, computer use the 2’s Complement (补码) variant to store integer Below is a 4-bits Integer Encoding under the 3 Variants Computers use 2’s Complement (补码) to store the integers, since it solves the flaws in Sign-and-Magnitude (原码) and 1’s Complement (反码) 3 Variants § Sign-and-Magnitude (原码) § Represent positive and negative decimal integers in binary with the help of Sign Bit Divide the number of bits into 2 parts, one part for negative number, another part for positive number Require extra Logic Gates The Adder logic cant be used for subtraction This can be avoided using 1’s Complement (反码) or 2’s Complement (补码) 1’s Complement (反码) § For negative number, all bits are inverted except the Sign Bit which is 1 and positive number unchanged We can invert all bits except Sign Bit to obtain Sign-and-Magnitude (原码) Reuse Logic Gates We re-can use Adder logic gates, without building extra logic circuit like a subtraction logic gates Mathematically wrong definition of 0 We have +0 (when all bits are 0) &amp; -0(when all bits are 1) under this encoding, this can be solved by 2’s Complement (补码) 2’s Complement (补码) § This builds on top of 1’s Complement (反码), the only difference is to add extra 1 to the negative number in 1’s Complement (反码) to have only 1 binary encoding for 0 We can calculate the decimal value by taking the value Sign Bit (negative) and perform addition with value of Magnitude (all are positive) Terminologies § Sign Bit § The first bit from left 0 denotes positive 1 denotes negative Magnitude § All the bits in the encoding except Sign Bit Reference § Sign-and-Magnitude Addition and Subtraction Hello-Algo .</description>
-    <pubDate>Sun, 10 Dec 2023 10:25:46 GMT</pubDate>
   </item><item>
     <title>MIPS Instruction</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</link>
@@ -53,18 +65,6 @@
     <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</guid>
     <description>Abstract § Understand the Instruction based on the corresponding Instruction Set Architecture (ISA) Then decide what Registers, ALU &amp; Main Memory to enable to carry out the Operation by genrating Control Signal Terminologies § Control Signal § Electric signals that tells CPU Datapath, Main Memory &amp; IO Devices what to do according to program Instruction .</description>
     <pubDate>Sun, 10 Dec 2023 09:33:51 GMT</pubDate>
-  </item><item>
-    <title>Algorithm Complexity Analysis</title>
-    <link>https://notes.yxy.ninja/DSA/Algorithms/Algorithm-Complexity-Analysis</link>
-    <guid>https://notes.yxy.ninja/DSA/Algorithms/Algorithm-Complexity-Analysis</guid>
-    <description>Abstract § Analysis Space &amp; Time, related with the input size and observing the trend when input size gets bigger The analysis isn’t limited to particular machine.</description>
-    <pubDate>Sun, 10 Dec 2023 09:25:47 GMT</pubDate>
-  </item><item>
-    <title>Java Sorting</title>
-    <link>https://notes.yxy.ninja/Java/Java-Sorting</link>
-    <guid>https://notes.yxy.ninja/Java/Java-Sorting</guid>
-    <description>Abstract § // Sort an array which has elements that are array of size 2 // Sort from the highest first element of sub-array, if same then sort from the lowest second element of sub-array Arrays.</description>
-    <pubDate>Sun, 10 Dec 2023 09:18:41 GMT</pubDate>
   </item>
     </channel>
   </rss>

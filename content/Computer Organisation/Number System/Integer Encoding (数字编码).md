@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-08, 21:54
-Last Date: 2023-12-10T18:25:46+08:00
+Last Date: 2023-12-10T18:32:52+08:00
 References: 
 ---
 ## Abstract
 - There are [[#3 Variants]], computer use the [[#2's Complement (补码)]] variant to store integer
-- Below is a 4-bits **Integer Encoding** under the [[#3 Variants]]
 - Computers use [[#2's Complement (补码)]] to store the integers, since it solves the flaws in [[#Sign-and-Magnitude (原码)]] and [[#1's Complement (反码)]]
+- Below is a 4-bits **Integer Encoding** under the [[#3 Variants]]
 ![[integer_encoding.png]]
 
 
@@ -22,7 +22,7 @@ References:
 - Divide the number of bits into 2 parts, one part for negative number, another part for positive number
 ![[signed magnitude representation.png]]
 >[!caution] Require extra [[Logic Gates]]
->- The [[Adder]] logic cant be used for subtraction
+>- The [[Adder]] logic gates cant be used for subtraction
 >- This can be avoided using [[#1's Complement (反码)]] or [[#2's Complement (补码)]]
 ### 1's Complement (反码)
 - For *negative number*, all bits are inverted except the [[#Sign Bit]] which is 1 and *positive number* unchanged 

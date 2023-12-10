@@ -201,10 +201,10 @@
     <lastmod>2023-12-05T10:01:52.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/IEEE-754-Floating-Point-Encoding-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</loc>
-    <lastmod>2023-12-06T16:31:22.000Z</lastmod>
+    <lastmod>2023-12-10T11:01:12.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</loc>
-    <lastmod>2023-12-10T10:25:46.000Z</lastmod>
+    <lastmod>2023-12-10T10:32:52.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Pipelining/Branching/Branch-Prediction-Strategies-(Heuristics)</loc>
     <lastmod>2023-12-05T09:34:02.000Z</lastmod>
@@ -2087,11 +2087,11 @@
     <loc>https://notes.yxy.ninja/Terminologies/User-Principle-Name</loc>
     <lastmod>2023-10-02T08:47:42.278Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Tools/AWS-Nuke/AWS-Nuke</loc>
-    <lastmod>2023-09-30T14:24:00.000Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/AWS-ACL-(Access-Control-List)</loc>
     <lastmod>2023-08-04T03:13:06.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Tools/AWS/AWS-Nuke</loc>
+    <lastmod>2023-12-10T11:08:10.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ASG</loc>
     <lastmod>2023-08-15T10:46:33.639Z</lastmod>
