@@ -6,65 +6,65 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>AWS Nuke</title>
-    <link>https://notes.yxy.ninja/Tools/AWS/AWS-Nuke</link>
-    <guid>https://notes.yxy.ninja/Tools/AWS/AWS-Nuke</guid>
-    <description>Abstract § A tool to remove all resources in an AWS Account automatically without manually clicking countless buttons Always double check what resources that AWS Nuke aren&#039;t able to remove There are a few resources that require manual removal like AWS Network Firewall AWS Account Setting § We need to create Account Alias in order to start using aws-nuke Refer to Github Repo for more details config.</description>
-    <pubDate>Sun, 10 Dec 2023 11:08:10 GMT</pubDate>
+    <title>Docker Build</title>
+    <link>https://notes.yxy.ninja/Tools/Docker/Docker-Build</link>
+    <guid>https://notes.yxy.ninja/Tools/Docker/Docker-Build</guid>
+    <description>Abstract § Convert Dockerfile to Docker Container Cautions § --build-arg § Used to pass dynamic values to Engine for the building process Not Environment Variable, that is set with [[Dockerfile#env|ENV]] Frontend Build § Needs the Environment Variable at the container build stage only, not when the container is running .</description>
+    <pubDate>Sun, 10 Dec 2023 11:55:18 GMT</pubDate>
   </item><item>
-    <title>IEEE 754 Floating-Point Encoding (浮点数编码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/IEEE-754-Floating-Point-Encoding-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/IEEE-754-Floating-Point-Encoding-(%E6%B5%AE%E7%82%B9%E6%95%B0%E7%BC%96%E7%A0%81)</guid>
-    <description>Abstract § sign 0 for positive, 1 for negative exponent by default -127 with all bits set to 0 mantissa takes the binary behind the decimal place after normalisation (the yellow circle part) Reliable precision is 7 decimal digits Approximation of Real Number § mantissa gives the precision From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point For 2 to 4 (2^1-2^2), there are 22 bits of mantissa used for precision after decision point, one of the bit is used to present the whole number before decimal point With every range of 2, the precision after the decimal point is reduced by 2 Thus, the precision of the number after decimal point is getting worse as the number getting bigger Normalised Number § The range of real numbers between 0 and smallest Normalised Number isn’t covered, covered by Subnormal Number (Denormalized Number) The 1 is implicit when exponent isn’t 0.</description>
-    <pubDate>Sun, 10 Dec 2023 11:01:12 GMT</pubDate>
+    <title>Dockerfile</title>
+    <link>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Dockerfile</link>
+    <guid>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Dockerfile</guid>
+    <description>Abstract § Set of steps for Docker to build Docker Container Keywords § ENV § Set the Environment Variable in the Docker Container .</description>
+    <pubDate>Sun, 10 Dec 2023 11:54:36 GMT</pubDate>
   </item><item>
-    <title>Integer Encoding (数字编码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</guid>
-    <description>Abstract § There are 3 Variants, computer use the 2’s Complement (补码) variant to store integer Computers use 2’s Complement (补码) to store the integers, since it solves the flaws in Sign-and-Magnitude (原码) and 1’s Complement (反码) Below is a 4-bits Integer Encoding under the 3 Variants 3 Variants § Sign-and-Magnitude (原码) § Represent positive and negative decimal integers in binary with the help of Sign Bit Divide the number of bits into 2 parts, one part for negative number, another part for positive number Require extra Logic Gates The Adder logic gates cant be used for subtraction This can be avoided using 1’s Complement (反码) or 2’s Complement (补码) 1’s Complement (反码) § For negative number, all bits are inverted except the Sign Bit which is 1 and positive number unchanged We can invert all bits except Sign Bit to obtain Sign-and-Magnitude (原码) Reuse Logic Gates We re-can use Adder logic gates, without building extra logic circuit like a subtraction logic gates Mathematically wrong definition of 0 We have +0 (when all bits are 0) &amp; -0(when all bits are 1) under this encoding, this can be solved by 2’s Complement (补码) 2’s Complement (补码) § This builds on top of 1’s Complement (反码), the only difference is to add extra 1 to the negative number in 1’s Complement (反码) to have only 1 binary encoding for 0 We can calculate the decimal value by taking the value Sign Bit (negative) and perform addition with value of Magnitude (all are positive) Terminologies § Sign Bit § The first bit from left 0 denotes positive 1 denotes negative Magnitude § All the bits in the encoding except Sign Bit Reference § Sign-and-Magnitude Addition and Subtraction Hello-Algo .</description>
-    <pubDate>Sun, 10 Dec 2023 10:32:52 GMT</pubDate>
+    <title>Configuration File, Vault</title>
+    <link>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Main-Components/Configuration-File,-Vault</link>
+    <guid>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Main-Components/Configuration-File,-Vault</guid>
+    <description>#vault Config file for HashiCorp Vault. Contains different keywords to tune the behaviour of the vault like what storage backend to use &amp; how to unseal the vault etc Some of the config can be done using the specific Environment Variable Can be written in either JSON or HCL Some networking related setting can be set dynamically using go-sockaddr template TCP Listener Example [cluster_address,api_addr] Example Example Production Configuration File seal § # Below is using AWS KMS for [[Auto Unseal]] seal &quot;awskms&quot; { region = &quot;ap-southeast-1&quot; kms_key_id = &quot;5b2b78c8-c4db-43d9-ba6b-73295f2ec154&quot; } Example vault.</description>
+    <pubDate>Sun, 10 Dec 2023 11:48:16 GMT</pubDate>
   </item><item>
-    <title>MIPS I-Type Instruction</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-I-Type-Instruction</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-I-Type-Instruction</guid>
-    <description>Abstract § I because it is Instruction that contains Immediate Value 4 parts - Opcode, Source Register, Target Register &amp; Immediate Value Meaning: Add the Source Register with the Immediate Value, and store the result to the Target Register Examples § andi § Perform a bitwise Logical Product (AND) operation between a register and an immediate value Get last 4 significant Bits of s0,andstoreitinsidet0 - andi $t0, $s0 , 0xF slti § Set Less Than Immediate If value in Source Register is smaller than Immediate Value, then Target Register is set to 1 else 0 The mips code - slti $t0, $t0, 100 The equivalent more high-level code - R[rt] = (R[rs]&lt;SignExtImm) ? 1 : 0 bne § Branch if Not Equal Terminologies § Immediate Value § Value is 2’s Complement (补码) 16-bits, can represent up to +-2^15 Word, 2^17 Memory Address because 4-bytes Word Addressing Used for PC-Relative Addressing .</description>
-    <pubDate>Sun, 10 Dec 2023 10:26:19 GMT</pubDate>
+    <title>MacOs Setup</title>
+    <link>https://notes.yxy.ninja/MacOs-Setup</link>
+    <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
+    <description>Abstract § Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
+    <pubDate>Sun, 10 Dec 2023 11:42:06 GMT</pubDate>
   </item><item>
-    <title>MIPS Instruction</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</guid>
-    <description>Abstract § 32 bits, the first 6 bits are Opcode There are 3 different format types - MIPS R-Type Instruction, MIPS I-Type Instruction and MIPS J-Type Instruction Terminologies § Source Register § 5bits Labeled rs, mapped to RR1 Register with value stored that we want to use to carry out Operation Target Register § 5 bits Labeled rt, mapped to RR2 Register with value stored we want to use in MIPS R-Type Instruction Register that gets the result of Operation in MIPS I-Type Instruction .</description>
-    <pubDate>Sun, 10 Dec 2023 10:08:29 GMT</pubDate>
+    <title>Type System</title>
+    <link>https://notes.yxy.ninja/Software-Engineering/Managing-Complexity/Type-System</link>
+    <guid>https://notes.yxy.ninja/Software-Engineering/Managing-Complexity/Type-System</guid>
+    <description>#software_engineering#cs2030s What is it? A set of rules how variables, expressions &amp; functions interact with each other Covers Sub-types Compule-time Types Run-time Types Parameterized Types (Generics, Generic Types) Type Inference (类型推断) Custom Types .</description>
+    <pubDate>Sun, 10 Dec 2023 11:39:00 GMT</pubDate>
   </item><item>
-    <title>MIPS</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS</guid>
-    <description>Abstract § Load-Store, Register-Register ISA Use 32 Registers Uses Word Addressing, each Word 4 Byte .</description>
-    <pubDate>Sun, 10 Dec 2023 10:06:51 GMT</pubDate>
+    <title>Type Inference (类型推断)</title>
+    <link>https://notes.yxy.ninja/Software-Engineering/Terminologies/Type-Inference-(%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD)</link>
+    <guid>https://notes.yxy.ninja/Software-Engineering/Terminologies/Type-Inference-(%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD)</guid>
+    <description>Abstract § Compiler or Interpreter automatically figure out the Datatype based on the context For example, in [Java, we can do List&lt;Integer&gt; intList = new ArrayList&lt;&gt;() instead of List&lt;Integer&gt; intList = new ArrayList&lt;Integer&gt;(), the Compiler is smart enough to figure out the Datatype for ArrayList based on the context provided by List&lt;Integer&gt; Reduce boilerplate code - more concise &amp; readable Too much may reduce the readability .</description>
+    <pubDate>Sun, 10 Dec 2023 11:38:28 GMT</pubDate>
   </item><item>
-    <title>MIPS R-Type Instruction</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-R-Type-Instruction</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-R-Type-Instruction</guid>
-    <description>Abstract § Opcode is always 000000 Operation is decided by the Function Code 6 parts - Opcode, Source Register, Target Register, Destination Register, Shift Amount &amp; Function Code Examples § srl § Shift Right Logical Source Register is 0 Shifts the value right by n bits, discarding the lower n bits Dividing the value in register $s0 by 16 (2^4) - srl $s0, $s0, 4 Terminologies § Destination Register § 5bits Labeled rd, mapped to WR Registers that gets the result of Operation in MIPS R-Type Instruction Instruction Function Code § 6 bits Give MIPS (2^6-1) + 2^6 = 127 instead of 2^6=64 Instruction Dedicated for MIPS R-Type Instruction (if my understanding isn’t wrong) Shift Amount § 5bits Labeled as shamt .</description>
-    <pubDate>Sun, 10 Dec 2023 10:03:38 GMT</pubDate>
+    <title>Application Performance Monitoring (APM)</title>
+    <link>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</link>
+    <guid>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</guid>
+    <description>Abstract § Collect Trace from backend application code Deep visibility into applications with out-of-the-box performance dashboards for web services, queues, and databases to monitor requests, errors and latency .</description>
+    <pubDate>Sun, 10 Dec 2023 11:33:22 GMT</pubDate>
   </item><item>
-    <title>Instruction Set Architecture (ISA)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction-Set-Architecture-(ISA)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction-Set-Architecture-(ISA)</guid>
-    <description>Abstract § A set of instructions which contains Opcode &amp; parameters Aka the language the CPU speaks Benefit § Portability § Implementation of CPU is decoupled.</description>
-    <pubDate>Sun, 10 Dec 2023 10:00:32 GMT</pubDate>
+    <title>Trace</title>
+    <link>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Trace</link>
+    <guid>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Trace</guid>
+    <description>Abstract § An entity used to track time spent by an app processing a request &amp; the status of the request Made up one or more Span Identify the Span for Latency, then we can carry on with optimisation Terminologies § Metrics § Captures request counts, error counts, and latency measures of requests Runtime Metrics § Allow to view Heap, non-heap memory usage and Garbage Collector activity of the app Datadog can have this enabled with export DD_RUNTIME_METRICS_ENABLED=true Instrumented § Code or tools have been added to the application to monitor, measure, or analyze its behavior during execution Provide insights into the application’s performance, functionality, and other operational characteristics This is particularly useful for debugging, performance tuning, and monitoring purposes Pipeline § Datadog example Host-side § We can tune the Sampling Library Sampling overrides Agent Sampling Trace Metrics are the Metrics, directly connected Instrumented application, calculated based on 100% of the app’s traffic Datadog backend side § Live Search allows us to search Span using any tag or Span Generate Custom Metric from Span Retention Filters - how long we want to retain the trace Dashboard used to give a visual representation of the app for optimisation and debugging .</description>
+    <pubDate>Sun, 10 Dec 2023 11:30:34 GMT</pubDate>
   </item><item>
-    <title>Instruction</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction</guid>
-    <description>Abstract § Bit String stored in the Main Memory Passed to CPU to get translated to carry out Operation Doesn’t specify which CPU Datapath does what, just specify what outputs are expected with a given input The instruction lifecycle can be broken down into Pipeline Stages Made up of 2 parts - Opcode &amp; Parameter 2 forms - Fixed-length &amp; Variable-length Terminologies § Opcode § Config for Control Signal MIPS, 6-bits, 2^6 -&gt; 64 combinations Parameter § Registers Address Memory Address Immediate Value Branch § An Instruction that causes Process to jump to a different location in the codes Fixed-length § Easy Fetch &amp; Decode Simplified Pipeline &amp; Instruction-Level Parallelism Variable-length § More Flexible BUT Requires more steps for Fetch &amp; Decode .</description>
-    <pubDate>Sun, 10 Dec 2023 09:53:48 GMT</pubDate>
+    <title>Real User Monitoring</title>
+    <link>https://notes.yxy.ninja/Software-Engineering/Monitoring/Real-User-Monitoring</link>
+    <guid>https://notes.yxy.ninja/Software-Engineering/Monitoring/Real-User-Monitoring</guid>
+    <description>Abstract § Used to monitor the frontend of an application .</description>
+    <pubDate>Sun, 10 Dec 2023 11:28:51 GMT</pubDate>
   </item><item>
-    <title>Control Unit</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</guid>
-    <description>Abstract § Understand the Instruction based on the corresponding Instruction Set Architecture (ISA) Then decide what Registers, ALU &amp; Main Memory to enable to carry out the Operation by genrating Control Signal Terminologies § Control Signal § Electric signals that tells CPU Datapath, Main Memory &amp; IO Devices what to do according to program Instruction .</description>
-    <pubDate>Sun, 10 Dec 2023 09:33:51 GMT</pubDate>
+    <title>Datadog RUM</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</guid>
+    <description>Abstract § Real User Monitoring Enable us to get the metadata about the client such as the user-agent, IP Address &amp; record down the user actions on the page in a video format Setup § The example below is based on next.</description>
+    <pubDate>Sun, 10 Dec 2023 11:27:38 GMT</pubDate>
   </item>
     </channel>
   </rss>

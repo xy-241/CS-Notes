@@ -6,10 +6,17 @@ Author Profile:
 tags:
   - docker
 Creation Date: 2023-12-07, 16:09
-Last Date: 2023-12-07T16:11:20+08:00
+Last Date: 2023-12-10T19:55:18+08:00
 References: 
 ---
 ## Abstract
-- frontend build, env write is from docker env
+- Convert [[Dockerfile]] to [[Docker Container]]
 
---build-arg
+
+## Cautions
+### `--build-arg`
+- Used to pass dynamic values to [[Docker#Engine]] for the building process
+>[!caution] Not [[Environment Variable]], that is set with  [[Dockerfile#`ENV`]]
+
+### Frontend Build
+- Needs the [[Environment Variable]] at the *container build stage* only, not when the container is running

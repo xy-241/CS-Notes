@@ -4,7 +4,7 @@
 >![[vault_configuration_file_2.png]]
 >![[vault_configuration_file_3.png]]
 
->[!tip] Some of the config can be done using the specific [[Environment Variabels]]
+>[!tip] Some of the config can be done using the specific [[Environment Variable]]
 
 >[!tip] Can be written in either [[JSON]] or [[HCL]]
 

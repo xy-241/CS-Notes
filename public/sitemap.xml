@@ -627,7 +627,7 @@
     <lastmod>2023-09-03T08:27:32.750Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/MacOs-Setup</loc>
-    <lastmod>2023-12-09T15:15:41.000Z</lastmod>
+    <lastmod>2023-12-10T11:42:06.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Boolean-Algebra/Boolean-Algebra</loc>
     <lastmod>2023-10-17T01:37:33.074Z</lastmod>
@@ -1941,25 +1941,22 @@
     <lastmod>2023-07-21T07:23:53.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/Managing-Complexity/Type-System</loc>
-    <lastmod>2023-07-24T09:47:32.000Z</lastmod>
+    <lastmod>2023-12-10T11:39:00.660Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</loc>
-    <lastmod>2023-10-16T09:28:50.477Z</lastmod>
+    <lastmod>2023-12-10T11:33:22.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/Real-User-Monitoring</loc>
+    <lastmod>2023-12-10T11:28:51.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Alert</loc>
     <lastmod>2023-10-15T13:29:27.217Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Instrumented</loc>
-    <lastmod>2023-10-18T08:55:33.184Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Log</loc>
     <lastmod>2023-10-27T13:22:20.344Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Metric</loc>
     <lastmod>2023-10-15T13:17:25.569Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Real-User-Monitoring</loc>
-    <lastmod>2023-10-19T06:13:02.798Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Sampling</loc>
     <lastmod>2023-10-18T08:21:43.203Z</lastmod>
@@ -1968,16 +1965,10 @@
     <lastmod>2023-10-17T01:45:40.335Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/Monitoring/terminologies/Trace</loc>
-    <lastmod>2023-10-19T05:26:11.115Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Software-Engineering/Rapid-Software-Development</loc>
-    <lastmod>2023-09-25T03:24:47.344Z</lastmod>
+    <lastmod>2023-12-10T11:30:34.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/SOLID-Design-Principles/Liskov-Substitution-Principle-(LSP)</loc>
     <lastmod>2023-07-19T16:24:49.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Software-Engineering/Sugar/Type-Inferences</loc>
-    <lastmod>2023-07-24T09:43:27.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Software-Engineering/Terminologies/Middleware-(%E4%B8%AD%E9%97%B4%E4%BB%B6)</loc>
     <lastmod>2023-11-11T08:40:17.802Z</lastmod>
@@ -1988,11 +1979,8 @@
     <loc>https://notes.yxy.ninja/Software-Engineering/Terminologies/Tree-Shaking-(%E6%91%87%E6%A0%91)</loc>
     <lastmod>2023-11-15T03:26:23.954Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Software-Engineering/Tool/Code-Editor-Settings</loc>
-    <lastmod>2023-11-16T05:55:59.973Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Software-Engineering/Tool/Font</loc>
-    <lastmod>2023-11-16T04:55:05.049Z</lastmod>
+    <loc>https://notes.yxy.ninja/Software-Engineering/Terminologies/Type-Inference-(%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD)</loc>
+    <lastmod>2023-12-10T11:38:28.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/System-Design/Architectures/Event-Driven-Architecture</loc>
     <lastmod>2023-10-15T13:21:29.174Z</lastmod>
@@ -2091,7 +2079,7 @@
     <lastmod>2023-08-04T03:13:06.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/AWS-Nuke</loc>
-    <lastmod>2023-12-10T11:08:10.000Z</lastmod>
+    <lastmod>2023-12-10T11:19:32.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ASG</loc>
     <lastmod>2023-08-15T10:46:33.639Z</lastmod>
@@ -2196,7 +2184,7 @@
     <lastmod>2023-12-09T11:44:57.251Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</loc>
-    <lastmod>2023-12-07T10:43:11.000Z</lastmod>
+    <lastmod>2023-12-10T11:27:38.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Datadog/Datadog</loc>
     <lastmod>2023-10-25T09:50:04.603Z</lastmod>
@@ -2211,7 +2199,7 @@
     <lastmod>2023-08-28T10:27:21.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Dockerfile</loc>
-    <lastmod>2023-08-28T02:34:37.492Z</lastmod>
+    <lastmod>2023-12-10T11:54:36.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Runtime-Instruction/CMD</loc>
     <lastmod>2023-08-27T14:23:58.705Z</lastmod>
@@ -2235,7 +2223,7 @@
     <lastmod>2023-08-28T14:25:00.931Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Docker/Docker-Build</loc>
-    <lastmod>2023-12-07T08:11:20.000Z</lastmod>
+    <lastmod>2023-12-10T11:55:18.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Docker/Docker-Compose/Docker-Compose</loc>
     <lastmod>2023-08-28T14:16:10.594Z</lastmod>
@@ -2352,7 +2340,7 @@
     <lastmod>2023-09-03T12:20:55.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Main-Components/Configuration-File,-Vault</loc>
-    <lastmod>2023-09-20T02:20:28.682Z</lastmod>
+    <lastmod>2023-12-10T11:48:16.525Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Main-Components/Secret-Engine-(store,-generate,-encrypt),-Vault</loc>
     <lastmod>2023-09-03T11:53:50.325Z</lastmod>

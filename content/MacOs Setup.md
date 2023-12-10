@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2023-12-09T23:15:41+08:00
+Last Date: 2023-12-10T19:42:06+08:00
 References: 
 ---
 
@@ -142,7 +142,10 @@ brew install jq
 		curl cht.sh/$1
 	}
 	```
--  [[Code Editor Settings]] 
+### Code Editor Settings
+- [Install FiraCode](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)
+- Download the Vim extension to have vim keybinding inside the code editor
+- Turn on *Word Wrap* under `View -> Word Wrap` (VSC example)
 ## System Tools 🌟
 - `neofetch`
 - `bpytop`, `htop`

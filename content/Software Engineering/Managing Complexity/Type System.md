@@ -8,5 +8,5 @@
 >- [[Compule-time Types]]
 >- [[Run-time Types]]
 >- [[Parameterized Types (Generics, Generic Types)]]
->- [[Type Inferences]]
+>- [[Type Inference (类型推断)]]
 >- [[Custom Types]]

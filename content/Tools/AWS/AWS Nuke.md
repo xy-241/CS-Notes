@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-01T16:41:00
-Last Date: 2023-12-10T19:08:10+08:00
+Last Date: 2023-12-10T19:19:32+08:00
 ---
 ## Abstract
 - A tool to remove *all resources* in an AWS Account automatically without manually clicking countless buttons 
@@ -15,7 +15,7 @@ Last Date: 2023-12-10T19:08:10+08:00
 
 
 ## AWS Account Setting
-- We need to create [[Account Alias]] in order to start using `aws-nuke`
+- We need to create **Account Alias** in order to start using `aws-nuke`
 ![[account_alias.png]]
 - Refer to [Github Repo](https://github.com/rebuy-de/aws-nuke) for more details
 

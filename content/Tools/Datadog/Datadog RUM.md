@@ -6,18 +6,19 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2023-12-07T18:43:11+08:00
+Last Date: 2023-12-10T19:27:38+08:00
 References: 
 ---
 ## Abstract
-- With [[#RUM]], we are able to get the metadata about the client such as the user-agent, [[IP Address]] & record down the user actions on the page in a video format 
+- [[Real User Monitoring]]
+- Enable us to get the metadata about the client such as the user-agent, [[IP Address]] & record down the user actions on the page in a video format 
 
 ## Setup
 - The example below is based on [next.js](https://nextjs.org/)
-- We first go to [[#Datadog Dashboard]] to obtain the [[#RUM]] codes, then append the [[#RUM]] codes into the [[#Frontend Source Codes]]
+- We first go to [[#Datadog Dashboard]] to obtain the codes, then append the codes into the [[#Frontend Source Codes]]
 - Bonus: [[#Integration with Datadog APM]]
 ### Datadog Dashboard
-1. Go to the approriate [Datadog Site](https://docs.datadoghq.com/getting_started/site/#access-the-datadog-site). In this case, our site is `https://app.datadoghq.eu`, the [[#RUM]] endpoint is `https://app.datadoghq.eu/rum/list`
+1. Go to the appropriate [Datadog Site](https://docs.datadoghq.com/getting_started/site/#access-the-datadog-site). In this case, our site is `https://app.datadoghq.eu`, the endpoint is `https://app.datadoghq.eu/rum/list`
 2. Create a **New Application**,  **Application Type** is `JS`, **Instrumentation Type** is `NPM`, and we will get the following codes
 	```typescript
 	import { datadogRum } from '@datadog/browser-rum';
@@ -41,14 +42,11 @@ References:
 
 ### Frontend Source Codes
 1. Install the [[npm]] package - `npm i @datadog/browser-rum`
-2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the [[#RUM]] can monitor every page of the frontend
+2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the Datadog can monitor every page of the frontend
 
 ### Integration with [[Datadog APM]]
-- This is for application that has both frontend and backend, and we need to have [[Datadog APM]] enabled for the backend before we can integrate it with [[#RUM]]
+- This is for application that has both frontend and backend, and we need to have [[Datadog APM]] enabled for the backend before we can integrate it with Datadog RUM
 - 
 
 
 ## Terminologies
-### RUM
-- Stands for *Real User Monitoring*
-- Used to monitor the **frontend** of an application
