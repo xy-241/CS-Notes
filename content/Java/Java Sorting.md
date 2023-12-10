@@ -6,14 +6,10 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-02T21:07:00
-Last Date: 
-References:
+Last Date: 2023-12-10T17:18:41+08:00
+References: 
 ---
 ## Abstract
-
-
-## Built-in
-### Java
 ```java
 // Sort an array which has elements that are array of size 2
 // Sort from the highest first element of sub-array, if same then sort from the lowest second element of sub-array

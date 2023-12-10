@@ -305,17 +305,17 @@
     <loc>https://notes.yxy.ninja/Computer-Organisation/Terminologies/Transistors-(%E6%99%B6%E4%BD%93%E7%AE%A1)</loc>
     <lastmod>2023-09-18T09:23:26.119Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/Algorithm-Analysis/Algorithm-Analysis</loc>
-    <lastmod>2023-08-06T07:12:07.267Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/Algorithm-Analysis/Complexity-Analysis</loc>
-    <lastmod>2023-12-01T04:03:53.240Z</lastmod>
+    <loc>https://notes.yxy.ninja/DSA/Algorithms/Algorithm-Complexity-Analysis</loc>
+    <lastmod>2023-12-10T09:25:47.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Algorithms/Algorithms</loc>
-    <lastmod>2023-09-24T16:20:48.160Z</lastmod>
+    <lastmod>2023-12-10T09:15:08.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Algorithms/Backtracking</loc>
     <lastmod>2023-11-07T01:05:05.932Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/DSA/Algorithms/Banker's-Algorithm</loc>
+    <lastmod>2023-10-19T08:33:39.264Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Algorithms/Binary-Search</loc>
     <lastmod>2023-08-06T06:45:06.000Z</lastmod>
@@ -323,32 +323,20 @@
     <loc>https://notes.yxy.ninja/DSA/Algorithms/DFS</loc>
     <lastmod>2023-08-08T12:42:55.435Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers/Double-Pointers-(Left,-Right)</loc>
-    <lastmod>2023-12-09T11:44:57.246Z</lastmod>
+    <loc>https://notes.yxy.ninja/DSA/Algorithms/Dijkstra's-Algorithm</loc>
+    <lastmod>2023-10-14T13:51:57.602Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers/Double-Pointers-(Sliding-Window)</loc>
-    <lastmod>2023-08-02T11:48:46.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers/Double-Pointers(Fast,-Slow)</loc>
-    <lastmod>2023-12-09T11:44:57.246Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers/Double-Pointers</loc>
-    <lastmod>2023-12-09T11:44:57.247Z</lastmod>
+    <loc>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers</loc>
+    <lastmod>2023-12-10T08:52:51.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Algorithms/Dynamic-Programming</loc>
-    <lastmod>2023-12-09T15:15:41.000Z</lastmod>
+    <lastmod>2023-12-10T09:08:09.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Algorithms/Genetic-Algorithms</loc>
     <lastmod>2023-09-18T05:40:55.323Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Algorithms/Greedy-Algorithm</loc>
     <lastmod>2023-12-09T15:15:41.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/KMP</loc>
-    <lastmod>2023-08-24T12:04:35.463Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/OS/Banker's-Algorithm</loc>
-    <lastmod>2023-10-19T08:33:39.264Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Algorithms/Optimisation-Problem</loc>
     <lastmod>2023-11-08T04:04:24.871Z</lastmod>
@@ -358,12 +346,6 @@
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Algorithms/Recursion</loc>
     <lastmod>2023-09-23T11:38:22.725Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/Single-Source-Shortest-Path-Problem/Dijkstra's-Algorithm</loc>
-    <lastmod>2023-10-14T13:51:57.602Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Algorithms/Sorting/Sorting</loc>
-    <lastmod>2023-11-04T08:58:07.679Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Abstract-Data-Type-(ADT)</loc>
     <lastmod>2023-07-30T08:07:58.000Z</lastmod>
@@ -574,6 +556,9 @@
   </url><url>
     <loc>https://notes.yxy.ninja/Java/Java-Built-in-Interface</loc>
     <lastmod>2023-09-01T11:49:17.759Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Java/Java-Sorting</loc>
+    <lastmod>2023-12-10T09:18:41.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Java/Java</loc>
     <lastmod>2023-07-20T13:02:30.000Z</lastmod>

@@ -5,8 +5,8 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - dsa
-Creation Date: 
-Last Date: 2023-12-09T23:15:41+08:00
+Creation Date: 2023-11-30T21:28:00
+Last Date: 2023-12-10T17:08:09+08:00
 References: 
 ---
 ## Abstract
@@ -18,19 +18,25 @@ References:
 
 ## Questions
 ### Basics
-- [509. Fibonacci Number](https://leetcode.cn/problems/fibonacci-number/)
+>[!example] Leetcode
+>- [509. Fibonacci Number](https://leetcode.cn/problems/fibonacci-number/)
+
 
 ### [[#Statelessness (无后效性)]]
-#### CodeForces
-- ⭐  [455A - Boredom (1500)](https://codeforces.com/problemset/problem/455/A)
+>[!example] CodeForces
+>- [455A - Boredom (1500)](https://codeforces.com/problemset/problem/455/A)
 
-### Sub Seqence (Continuous)
-#### CodeForces
-- [628B - New Skateboard](https://xy241-dsa.notion.site/B-New-Skateboard-99fcc366365b4a579fba2a1466cdf6a8?pvs=4) ([[Number Theory]] Required)
+### Sub Sequence (Continuous)
+>[!example] CodeForces
+>- [628B - New Skateboard](https://xy241-dsa.notion.site/B-New-Skateboard-99fcc366365b4a579fba2a1466cdf6a8?pvs=4) ([[Number Theory]] Required)
+
+
 
 
 ### Visualisation (Simulation)
-- [1766C - Hamiltonian Wall](https://xy241-dsa.notion.site/1766C-Hamiltonian-Wall-4908ce5950ef4e9cbb0800225e20f65a?pvs=4)
+>[!example] CodeForces
+>- [1766C - Hamiltonian Wall](https://xy241-dsa.notion.site/1766C-Hamiltonian-Wall-4908ce5950ef4e9cbb0800225e20f65a?pvs=4)
+
 
 ## Terminologies 
 ### Overlapping Subproblems (重复子问题)
