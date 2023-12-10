@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-28T20:12:00
-Last Date: 2023-12-09T21:21:18+08:00
+Last Date: 2023-12-10T17:53:48+08:00
 ---
 ## Abstract
 - [[Bit String]] stored in the [[Main Memory]]
@@ -19,7 +19,7 @@ Last Date: 2023-12-09T21:21:18+08:00
 
 ## Terminologies
 ### Opcode
-- Config for [[Control Unit]] to carry the desired [[Operation]]
+- Config for [[Control Unit#Control Signal]]
 - [[MIPS]], 6-bits, 2^6 -> 64 combinations 
 ### Parameter
 - [[Registers]] Address

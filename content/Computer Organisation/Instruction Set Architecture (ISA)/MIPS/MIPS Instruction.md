@@ -6,19 +6,16 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-09, 21:24
-Last Date: 2023-12-09T23:25:39+08:00
+Last Date: 2023-12-10T18:08:29+08:00
 References: 
 ---
 ## Abstract
-- The [[Instruction]] may specify 3  [[Registers]] - [[#Destination Register]], [[#Source Register]] & [[#Target Register]]
+- **32 bits**, the **first 6 bits** are [[Instruction#Opcode]]
+- There are 3 different format types - [[MIPS R-Type Instruction]], [[MIPS I-Type Instruction]] and [[MIPS J-Type Instruction]]
 
 
 
 ## Terminologies
-### Destination Register 
-- 5bits
-- Labeled `rd`, mapped to `WR`
-- [[Registers]] that gets the result of [[Operation]] in [[MIPS R-Type Instruction]] [[Instruction]]
 ### Source Register 
 - 5bits
 - Labeled `rs`, mapped to `RR1`

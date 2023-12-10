@@ -6,6 +6,54 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>MIPS I-Type Instruction</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-I-Type-Instruction</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-I-Type-Instruction</guid>
+    <description>Abstract § I because it is Instruction that contains Immediate Value 4 parts - Opcode, Source Register, Target Register &amp; Immediate Value Meaning: Add the Source Register with the Immediate Value, and store the result to the Target Register Examples § andi § Perform a bitwise Logical Product (AND) operation between a register and an immediate value Get last 4 significant Bits of s0,andstoreitinsidet0 - andi $t0, $s0 , 0xF slti § Set Less Than Immediate If value in Source Register is smaller than Immediate Value, then Target Register is set to 1 else 0 The mips code - slti $t0, $t0, 100 The equivalent more high-level code - R[rt] = (R[rs]&lt;SignExtImm) ? 1 : 0 bne § Branch if Not Equal Terminologies § Immediate Value § Value is 2’s Complement (补码) 16-bits, can represent up to +-2^15 Word, 2^17 Memory Address because 4-bytes Word Addressing Used for PC-Relative Addressing .</description>
+    <pubDate>Sun, 10 Dec 2023 10:26:19 GMT</pubDate>
+  </item><item>
+    <title>Integer Encoding (数字编码)</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</guid>
+    <description>Abstract § There are 3 Variants, computer use the 2’s Complement (补码) variant to store integer Below is a 4-bits Integer Encoding under the 3 Variants Computers use 2’s Complement (补码) to store the integers, since it solves the flaws in Sign-and-Magnitude (原码) and 1’s Complement (反码) 3 Variants § Sign-and-Magnitude (原码) § Represent positive and negative decimal integers in binary with the help of Sign Bit Divide the number of bits into 2 parts, one part for negative number, another part for positive number Require extra Logic Gates The Adder logic cant be used for subtraction This can be avoided using 1’s Complement (反码) or 2’s Complement (补码) 1’s Complement (反码) § For negative number, all bits are inverted except the Sign Bit which is 1 and positive number unchanged We can invert all bits except Sign Bit to obtain Sign-and-Magnitude (原码) Reuse Logic Gates We re-can use Adder logic gates, without building extra logic circuit like a subtraction logic gates Mathematically wrong definition of 0 We have +0 (when all bits are 0) &amp; -0(when all bits are 1) under this encoding, this can be solved by 2’s Complement (补码) 2’s Complement (补码) § This builds on top of 1’s Complement (反码), the only difference is to add extra 1 to the negative number in 1’s Complement (反码) to have only 1 binary encoding for 0 We can calculate the decimal value by taking the value Sign Bit (negative) and perform addition with value of Magnitude (all are positive) Terminologies § Sign Bit § The first bit from left 0 denotes positive 1 denotes negative Magnitude § All the bits in the encoding except Sign Bit Reference § Sign-and-Magnitude Addition and Subtraction Hello-Algo .</description>
+    <pubDate>Sun, 10 Dec 2023 10:25:46 GMT</pubDate>
+  </item><item>
+    <title>MIPS Instruction</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</guid>
+    <description>Abstract § 32 bits, the first 6 bits are Opcode There are 3 different format types - MIPS R-Type Instruction, MIPS I-Type Instruction and MIPS J-Type Instruction Terminologies § Source Register § 5bits Labeled rs, mapped to RR1 Register with value stored that we want to use to carry out Operation Target Register § 5 bits Labeled rt, mapped to RR2 Register with value stored we want to use in MIPS R-Type Instruction Register that gets the result of Operation in MIPS I-Type Instruction .</description>
+    <pubDate>Sun, 10 Dec 2023 10:08:29 GMT</pubDate>
+  </item><item>
+    <title>MIPS</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS</guid>
+    <description>Abstract § Load-Store, Register-Register ISA Use 32 Registers Uses Word Addressing, each Word 4 Byte .</description>
+    <pubDate>Sun, 10 Dec 2023 10:06:51 GMT</pubDate>
+  </item><item>
+    <title>MIPS R-Type Instruction</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-R-Type-Instruction</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-R-Type-Instruction</guid>
+    <description>Abstract § Opcode is always 000000 Operation is decided by the Function Code 6 parts - Opcode, Source Register, Target Register, Destination Register, Shift Amount &amp; Function Code Examples § srl § Shift Right Logical Source Register is 0 Shifts the value right by n bits, discarding the lower n bits Dividing the value in register $s0 by 16 (2^4) - srl $s0, $s0, 4 Terminologies § Destination Register § 5bits Labeled rd, mapped to WR Registers that gets the result of Operation in MIPS R-Type Instruction Instruction Function Code § 6 bits Give MIPS (2^6-1) + 2^6 = 127 instead of 2^6=64 Instruction Dedicated for MIPS R-Type Instruction (if my understanding isn’t wrong) Shift Amount § 5bits Labeled as shamt .</description>
+    <pubDate>Sun, 10 Dec 2023 10:03:38 GMT</pubDate>
+  </item><item>
+    <title>Instruction Set Architecture (ISA)</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction-Set-Architecture-(ISA)</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction-Set-Architecture-(ISA)</guid>
+    <description>Abstract § A set of instructions which contains Opcode &amp; parameters Aka the language the CPU speaks Benefit § Portability § Implementation of CPU is decoupled.</description>
+    <pubDate>Sun, 10 Dec 2023 10:00:32 GMT</pubDate>
+  </item><item>
+    <title>Instruction</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/Instruction</guid>
+    <description>Abstract § Bit String stored in the Main Memory Passed to CPU to get translated to carry out Operation Doesn’t specify which CPU Datapath does what, just specify what outputs are expected with a given input The instruction lifecycle can be broken down into Pipeline Stages Made up of 2 parts - Opcode &amp; Parameter 2 forms - Fixed-length &amp; Variable-length Terminologies § Opcode § Config for Control Signal MIPS, 6-bits, 2^6 -&gt; 64 combinations Parameter § Registers Address Memory Address Immediate Value Branch § An Instruction that causes Process to jump to a different location in the codes Fixed-length § Easy Fetch &amp; Decode Simplified Pipeline &amp; Instruction-Level Parallelism Variable-length § More Flexible BUT Requires more steps for Fetch &amp; Decode .</description>
+    <pubDate>Sun, 10 Dec 2023 09:53:48 GMT</pubDate>
+  </item><item>
+    <title>Control Unit</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</guid>
+    <description>Abstract § Understand the Instruction based on the corresponding Instruction Set Architecture (ISA) Then decide what Registers, ALU &amp; Main Memory to enable to carry out the Operation by genrating Control Signal Terminologies § Control Signal § Electric signals that tells CPU Datapath, Main Memory &amp; IO Devices what to do according to program Instruction .</description>
+    <pubDate>Sun, 10 Dec 2023 09:33:51 GMT</pubDate>
+  </item><item>
     <title>Algorithm Complexity Analysis</title>
     <link>https://notes.yxy.ninja/DSA/Algorithms/Algorithm-Complexity-Analysis</link>
     <guid>https://notes.yxy.ninja/DSA/Algorithms/Algorithm-Complexity-Analysis</guid>
@@ -17,54 +65,6 @@
     <guid>https://notes.yxy.ninja/Java/Java-Sorting</guid>
     <description>Abstract § // Sort an array which has elements that are array of size 2 // Sort from the highest first element of sub-array, if same then sort from the lowest second element of sub-array Arrays.</description>
     <pubDate>Sun, 10 Dec 2023 09:18:41 GMT</pubDate>
-  </item><item>
-    <title>Algorithms</title>
-    <link>https://notes.yxy.ninja/DSA/Algorithms/Algorithms</link>
-    <guid>https://notes.yxy.ninja/DSA/Algorithms/Algorithms</guid>
-    <description>Abstract § Set of Instruction Terminologies § Analysis § Make Algorithms more Memory-efficient &amp; Space-efficient There is Algorithm Complexity Analysis .</description>
-    <pubDate>Sun, 10 Dec 2023 09:15:08 GMT</pubDate>
-  </item><item>
-    <title>Dynamic Programming</title>
-    <link>https://notes.yxy.ninja/DSA/Algorithms/Dynamic-Programming</link>
-    <guid>https://notes.yxy.ninja/DSA/Algorithms/Dynamic-Programming</guid>
-    <description>Abstract § 3 key components - Overlapping Subproblems (重复子问题), Optimal Substructure ( 最优子结构) &amp; Statelessness (无后效性) Leetcode Tips § Debugging § Print out DP Table to check any errors Questions § Basics § Leetcode 509.</description>
-    <pubDate>Sun, 10 Dec 2023 09:08:09 GMT</pubDate>
-  </item><item>
-    <title>Double Pointers</title>
-    <link>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers</link>
-    <guid>https://notes.yxy.ninja/DSA/Algorithms/Double-Pointers</guid>
-    <description>Abstract § Mainly used to solve Array, String &amp; Linked List related problems. Reduce time complexity by one dimension, O(n^2) to O(n) 3 Types § Fast, Slow § Reduce 2 nested for loops into 1 single for loop Can be used to remove elements from array in-place Can be used to determine if Linked List is a Circular Linked List Practice Questions 27.</description>
-    <pubDate>Sun, 10 Dec 2023 08:52:51 GMT</pubDate>
-  </item><item>
-    <title>Predicate</title>
-    <link>https://notes.yxy.ninja/Math/Discrete-Math/Predicate</link>
-    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Predicate</guid>
-    <description>Abstract § Also known as Propositional Functions &amp; Open Sentences Example: let P stand for is a student at NUS, then P(x) = x is a student at NUS, where x is the Variable, P is the Symbol Truth value depends on Variable Becomes a Mathematical Statement when specific values are substituted for Variable Returns either true or false, thus cant be used as a Variable that is substituted into Symbol like P() Made of Symbol &amp; finite number of Variable Terminologies § Variable § Holds value that determines if Predicate is true or false It doesn&#039;t hold the value of true or false! Only Mathematical Statement can be true or false Symbol § Represents a property or relation Quantifiers § Instead of manually assign a specific value to Variable to obtain a Mathematical Statement Quantifiers is another way, specific how many of a particular type of values that make the predicate true ∀ ∃ Order of Quantifiers § Unless the Quantifiers are of the same type.</description>
-    <pubDate>Sat, 09 Dec 2023 16:41:46 GMT</pubDate>
-  </item><item>
-    <title>Mathematical Statement</title>
-    <link>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</link>
-    <guid>https://notes.yxy.ninja/Math/Discrete-Math/Mathematical-Statement</guid>
-    <description>Abstract § Also known as Proposition 3 important types are Universal, Conditional &amp; Existential We can form statements that are Universal &amp; Conditional, or more to form complex statements Either True or False Warning Doesn’t depend on any Variable, unless it is Logical Equivalence equation Not in a question form Different Types of Statements § Universal § Made of Symbol, Variable &amp; Quantifiers ∀x∈D,Q(x) true iff Q(x) is true for every x in D false iff Q(x) is false for at least one x in D For simple ones, usually universal comes with Conditional Statement Existential § Made of Symbol, Variable &amp; Quantifiers ∃x∈D,Q(x) true iff Q(x) is true for at least one x in D false iff Q(x) is false for all x in D For simple ones, usually existential comes with Conjunction Negation of Universal § Logical Equivalence to Existential There is AT LEAST ONE that IS NOT ¬(∀x∈D,Q(x))≡∃x∈D,¬Q(x) Negation of Existential § Logical Equivalence to Universal ALL ARE NOT ¬(∃x∈D,Q(x))≡∀x∈D,¬Q(x) Negation of Universal Conditional § Make use of Negation of Universal &amp; Implication Law Universal Conditional § Made of Symbol, Variable &amp; Quantifiers &amp; Conditional Statement ∀x(ifP(x)→Q(x)) Can be simplified to Universal ∀x∈P,Q(x) Conditional § Conditional Statement If…, then… Terminologies § Statement § A sentence that is True or False, but not both Can be presented with variables like p, q, r &amp; s etc Logical Connectives § Negation: NOT performed first Disjunction: OR ,Conjunction: AND coequal, make sure proper parentheses is used to avoid Ambiguous If-then/implies: performed last, coequal with iff Statement/Propositional Form § Make up with Statement variables &amp; Logical Connectives Compound Statement § Make up with Statement variables &amp; Logical Connectives When the statement has Conditional Statement, convert it using Implication Law to make it much less confusing Tautology t § Statement/Propositional Form that is always true Contradiction c § Statement/Propositional Form that is always false Implicitly Quantified § The Quantifiers are assumed without specified explicitly Vacuous Truth of Universal § Given the statement: All balls in the bowl are blue, however no balls in the bowl.</description>
-    <pubDate>Sat, 09 Dec 2023 16:34:28 GMT</pubDate>
-  </item><item>
-    <title>Second Brain for CS</title>
-    <link>https://notes.yxy.ninja//</link>
-    <guid>https://notes.yxy.ninja//</guid>
-    <description>Navigation § Homepage is still under development. You can navigate around the notes using the explorer on the left side or visit the list of tags that categories the notes.</description>
-    <pubDate>Sat, 09 Dec 2023 15:30:02 GMT</pubDate>
-  </item><item>
-    <title>MIPS R-Type Instruction</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/MIPS-R-Type-Instruction</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/Instructions/R-Type/MIPS-R-Type-Instruction</guid>
-    <description>Abstract § Opcode is always 000000 Operation is decided by the Function Code 6 parts - Opcode, Source Register, Target Register, Destination Register, Shift Amount &amp; Function Code Terminologies § Function Code § 6 bits Give MIPS (2^6-1) + 2^6 = 127 instead of 2^6=64 Instruction Dedicated for MIPS R-Type Instruction (if my understanding isn’t wrong) Shift Amount § 5bits Labeled as shamt .</description>
-    <pubDate>Sat, 09 Dec 2023 15:25:46 GMT</pubDate>
-  </item><item>
-    <title>MIPS Instruction</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/MIPS-Instruction</guid>
-    <description>Abstract § The Instruction may specify 3 Registers - Destination Register, Source Register &amp; Target Register Terminologies § Destination Register § 5bits Labeled rd, mapped to WR Registers that gets the result of Operation in MIPS R-Type Instruction Instruction Source Register § 5bits Labeled rs, mapped to RR1 Register with value stored that we want to use to carry out Operation Target Register § 5 bits Labeled rt, mapped to RR2 Register with value stored we want to use in MIPS R-Type Instruction Register that gets the result of Operation in MIPS I-Type Instruction .</description>
-    <pubDate>Sat, 09 Dec 2023 15:25:39 GMT</pubDate>
   </item>
     </channel>
   </rss>
