@@ -5,9 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
-Creation Date: 
-Last Date: 
-References:
+Creation Date: 2023-11-29T19:10:00
+Last Date: 2023-12-10T23:51:21+08:00
+References: 
 ---
 ## Abstract
 - When an interrupt occurs, [[Program Counter]] jumps to [[Interrupt Handler (Interrupt Service Routine, ISR)]] & execute 
@@ -32,8 +32,8 @@ References:
 ## Examples
 ### Turn off interrupt in XV6-RISCV
 - This is achieved by writing to the [[Registers#Control & Status Registers (CSRs)]] - `sstatus`
-- The code snippets below going down the [[Abstraction]]
-```c
+- The code snippets below going down the [[Abstraction]], we going down from `intr_off()`
+```c {8}
 // XV6-RISCV kernel codes, spinlock.c
 
 // ...
@@ -47,7 +47,7 @@ push_off(void)
 // ...
 ```
 - We can see from code snippet below, to turn the *interrupt* is setting the second bit from right on the `sstatus` register
-```c
+```c {11}
 // XV6-RISCV kernel codes, riscv.h
 
 // ...
@@ -62,8 +62,8 @@ intr_off()
 }
 // ...
 ```
-
-```c
+- Eventually, it boils down to [[Assembly language]]
+```c {7}
 // XV6-RISCV kernel codes, riscv.h
 
 // ...
