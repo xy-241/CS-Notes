@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - problem_solving
 Creation Date: 2023-08-13T18:45:00
-Last Date: 2023-12-10T21:46:47+08:00
+Last Date: 2023-12-10T23:14:54+08:00
 References: 
 ---
 ## Abstract
@@ -54,9 +54,8 @@ References:
 ### 9. Learn at least a little bit of programming
 - Helps to provide a different perspective to math which is very abstracted
 - We can also take advantage of its ability to generate a massive set of numbers to get a rough estimation trend or pattern
->[!example] [[Probability Problem#^26a4af]]
+>[!example] [[Probability Problem#Take advantage of Python codes to obtain an answer]]
 
-[[Probability]]
 
 ## Reference
 - [Tips to be a better problem solver [Last live lecture] | Ep. 10 Lockdown life math](https://www.youtube.com/watch?v=QvuQH4_05LI&t=3449s&pp=ygUQcHJvYmxlbSBzb2x2aW5nIA%3D%3D)
