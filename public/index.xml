@@ -10,13 +10,13 @@
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
     <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
     <description>Abstract § Application Performance Monitoring (APM) Serverless Setup § The example below is based on ECS Fargate The entire setup is around Task Definition Pipe application log to AWS Firelens § Add the following block to Task Definition inside the application container block Update the highlighted parts with your own values &quot;logConfiguration&quot;: { &quot;logDriver&quot;: &quot;awsfirelens&quot;, &quot;options&quot;: { &quot;Host&quot;: &quot;http-intake.</description>
-    <pubDate>Mon, 11 Dec 2023 06:59:39 GMT</pubDate>
+    <pubDate>Mon, 11 Dec 2023 07:10:17 GMT</pubDate>
   </item><item>
     <title>ECS</title>
     <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</link>
     <guid>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</guid>
-    <description>Abstract § A lightweight container orchestration service We can mount Volume to it for data that can be lost when Container is terminated Components § Container § We can obtain a shell into it using ECS Exec Obtain Private IP of the container Must have curl &amp;&amp; jq (JSON Processor) containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r &#039;.</description>
-    <pubDate>Mon, 11 Dec 2023 02:38:00 GMT</pubDate>
+    <description>Abstract § A lightweight container orchestration service We can mount Volume to it for data that can be lost when Container is terminated Components § Container § We can obtain a shell into it using ECS Exec Obtain Private IP of the container, must have curl &amp;&amp; jq (JSON Processor) containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r &#039;.</description>
+    <pubDate>Mon, 11 Dec 2023 07:08:41 GMT</pubDate>
   </item><item>
     <title>Application Performance Monitoring (APM)</title>
     <link>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</link>

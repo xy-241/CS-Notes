@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-11T14:59:39+08:00
+Last Date: 2023-12-11T15:10:17+08:00
 References: 
 ---
 
@@ -42,6 +42,7 @@ References:
 ### AWS Firelens
 
 - Update the highlighted parts with your own values
+- You can refer to [[ECS#Hardware Details]] for the `cpu` and `memory` configuration
 
 ```json {4-5}
 {
@@ -64,8 +65,6 @@ References:
 }
 ```
 
->[!info] `"cpu": 256` means 256/1024 vCPU
->- Click [here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-cpu-memory-error.html) to find out more about the hardware configuration
 ### Datadog Agent Sidecar
 
 - Add the following block to the same [[ECS#Task Definition]]
