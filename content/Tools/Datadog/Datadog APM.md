@@ -6,35 +6,42 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-11T11:18:26+08:00
+Last Date: 2023-12-11T11:30:30+08:00
 References: 
 ---
+
 ## Abstract
+
 - [[Application Performance Monitoring (APM)]]
 
 ## Serverless Setup
+
 - The example below is based on [[ECS#Fargate|ECS Fargate]]
 - The entire setup is around [[ECS#Task Definition]]
+
 ### Pipe application log to AWS Firelens
+
 - Add the following block to [[ECS#Task Definition]] inside the application container block
 - Update the heightened parts with your own values
+
 ```json {5, 7-9}
 "logConfiguration": {
-	"logDriver": "awsfirelens",
-	"options": {
-		"Host": "http-intake.logs.datadoghq.eu",
-		"Name": "datadog",
-		"TLS": "on",
-		"apikey": "<YOUR_API_KEY>",
-		"dd_service": "AEGIS-dev-backend",
-		"dd_source": "AEGIS-dev-backend-firelens",
-		"provider": "ecs"
-	}
+  "logDriver": "awsfirelens",
+  "options": {
+    "Host": "http-intake.logs.datadoghq.eu",
+    "Name": "datadog",
+    "TLS": "on",
+    "apikey": "<YOUR_API_KEY>",
+    "dd_service": "AEGIS-dev-backend",
+    "dd_source": "AEGIS-dev-backend-firelens",
+    "provider": "ecs"
+  }
 }
 ```
 
 ### AWS Firelens
-```json
+- Update the heightened parts with your own values
+```json {4-5}
 {
 	"name": "log_router",
 	"image": "amazon/aws-for-fluent-bit:stable",
@@ -54,9 +61,12 @@ References:
 	}
 }
 ```
+
 ### Datadog Agent Sidecar
+
 - Add the following block to the same [[ECS#Task Definition]]
 - Update the heightened parts with your own values
+
 ```json {2, 4-5, 15, 19, 23, 27}
 {
 	"name": "datadog-agent",
@@ -92,5 +102,4 @@ References:
 }
 ```
 
-
-## Terminologies 
+## Terminologies
