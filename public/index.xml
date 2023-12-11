@@ -6,6 +6,18 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Discrete Math</title>
+    <link>https://notes.yxy.ninja/Discrete-Math/Discrete-Math</link>
+    <guid>https://notes.yxy.ninja/Discrete-Math/Discrete-Math</guid>
+    <description>Abstract § Mathematical Proof in Mathematical Argument Loosely a collection of interesting applied math topics outside of Calculus Terminologies § Sets § N - All Natural number (0,1,2,3,4…) Z - All integers (315, -9045) Q - All rational numbers (0.</description>
+    <pubDate>Mon, 11 Dec 2023 15:45:25 GMT</pubDate>
+  </item><item>
+    <title>Address Space</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space/Address-Space</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space/Address-Space</guid>
+    <description>Abstract § A list of memory locations from 0 to some maximum (Virtual Memory), which Process can read &amp; write 3 Components 3 Components § Stack Segment § Note Stack (FILO), function variables Grows downwards Expansion done automatically Data Segment Text Segment .</description>
+    <pubDate>Mon, 11 Dec 2023 15:23:30 GMT</pubDate>
+  </item><item>
     <title>Process</title>
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</link>
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</guid>
@@ -52,18 +64,6 @@
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</link>
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</guid>
     <description>#os Put the Thread entirely in User Space The Kernel knows nothing about them As far as the kernel is concerned, it is managing single-threaded Process Thread are implemented by a library The threads run on top of a Runtime-System Each process needs its own private Thread Table When thread becoming blocked locally Thread calls run-time system procedure checks to see if the thread must be put into blocked state.</description>
-    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
-  </item><item>
-    <title>Thread</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</guid>
-    <description>Abstract § Responsible to carry out some features of a running program - Process Note Thread in a process share the same Address Space Per-process items can be accessed by all Thread 3 ways to implement § User-space Threads (N to 1) Kernel Threads (1 to 1) Hybrid Threads (N to M) Benefits § Fast to create/destroy § 10-100 times faster than Process Because without the need of Expensive Context Switching Makes programming easier § Different parts of program able to communicate without the use of Interrupts (中断) and Inter-Process Communication (IPC) etc Better responsiveness aka more user friendly § With Multi-threading, Hyper-threading, each Thread runs for a short while, to make all Threads seem running all the time Example: Powerpoint with Multi-threading, Hyper-threading § One thread can be used to receive inputs from users One thread can be used to format the slides One thread can be used to save the slides automatically on a regular interval 2 benefits over Process § Lighter to create and destroy compared to Process, because it doesn’t require System Call (系统调用) to the underlying OS Share memory among themselves, avoid Memory Page Shifting which is expensive Cons § No protection among threads One thread can bring down the entire Process One thread can read, write, or even wipe out another thread’s stack Warning fork() Should we copy over all the threads or just a single one? Warning Signal (Software Interrupt) handling - which thread should handle it Common Procedures § Terminologies § Blocking § Thread doesn’t do anything while waiting for IO Operations or Network Operations etc Non-blocking § Thread carries out other tasks if the current tasks require it to wait for IO Operations or Network Operations etc Goes back to the current task when the waiting ends - Call back However, it still blocks when the task is CPU Bounded .</description>
-    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
-  </item><item>
-    <title>Thread Pool</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread-Pool</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread-Pool</guid>
-    <description>Abstract § A group of fixed-number worker Thread that are reused to execute tasks submitted to Task Queue by a client. The number of Thread is usually the number of cores the system has.</description>
     <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
   </item>
     </channel>
