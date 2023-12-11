@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-11T16:44:41+08:00
+Last Date: 2023-12-11T16:51:02+08:00
 References: 
 ---
 
@@ -38,7 +38,7 @@ References:
   }
 }
 ```
-- You can configure the Datadog app agent setting the [[Environment Variable]] in the same **application container block**
+- You can configure the Datadog app agent by setting the [[Environment Variable]] in the same **application container block**
 ```json
 "environment": [
 	{
@@ -144,7 +144,7 @@ resource "aws_ecs_task_definition" "backend_app" {
 	  environment = [
 		{
 			"name": "DD_SERVICE",
-			"value": "aegis-dev-backend"
+			"value": ""
 		}
 	  ]
       logConfiguration = {
@@ -154,8 +154,8 @@ resource "aws_ecs_task_definition" "backend_app" {
           "Name": "datadog",
           "TLS": "on",
           "apikey": "<YOUR_API_KEY>",
-          "dd_service": "AEGIS-dev-backend",
-          "dd_source": "AEGIS-dev-backend-firelens",
+          "dd_service": "",
+          "dd_source": "",
           "provider": "ecs"
         }
       }
@@ -192,11 +192,11 @@ resource "aws_ecs_task_definition" "backend_app" {
         },
         {
           "name": "DD_SERVICE",
-          "value": "aegis-dev-backend"
+          "value": ""
         },
         {
           "name": "DD_ENV",
-          "value": "aegis-dev"
+          "value": ""
         },
         {
           "name": "DD_API_KEY",
@@ -204,7 +204,7 @@ resource "aws_ecs_task_definition" "backend_app" {
         },
         {
           "name": "DD_SITE",
-          "value": "datadoghq.eu"
+          "value": ""
         }
       ],
       "mountPoints": [],

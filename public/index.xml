@@ -10,7 +10,7 @@
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
     <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
     <description>Abstract § Application Performance Monitoring (APM) Serverless Setup § The example below is based on ECS Fargate The entire setup is around Task Definition, we need to add in 3 parts into it - Pipe application log to AWS Firelens, AWS Firelens and Datadog Agent Sidecar Pipe application log to AWS Firelens § Add the following block inside the application container block Update the highlighted parts with your own values &quot;logConfiguration&quot;: { &quot;logDriver&quot;: &quot;awsfirelens&quot;, &quot;options&quot;: { &quot;Host&quot;: &quot;http-intake.</description>
-    <pubDate>Mon, 11 Dec 2023 08:44:41 GMT</pubDate>
+    <pubDate>Mon, 11 Dec 2023 08:51:02 GMT</pubDate>
   </item><item>
     <title>ECS</title>
     <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</link>
