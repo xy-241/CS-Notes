@@ -6,6 +6,30 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Datadog APM</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
+    <description>Abstract § Application Performance Monitoring (APM) Serverless Setup § The example below is based on ECS Fargate The entire setup is around Task Definition Pipe application log to AWS Firelens § Add the following block to application container Task Definition &quot;logConfiguration&quot;: { &quot;logDriver&quot;: &quot;awsfirelens&quot;, &quot;options&quot;: { &quot;Host&quot;: &quot;&lt;THE_HOST_ENDPOINT_YOU_WANT&gt;&quot;, &quot;Name&quot;: &quot;&lt;THE_NAME_YOU_WANT&gt;&quot;, &quot;TLS&quot;: &quot;on&quot;, &quot;apikey&quot;: &quot;&lt;YOUR_API_KEY&gt;&quot;, &quot;dd_service&quot;: &quot;&lt;THE_SERVER_NAME_YOU_WANT&gt;&quot;, &quot;provider&quot;: &quot;ecs&quot; }, &quot;secretOptions&quot;: [] } Refer Logging Endpoints for more information on the Host Datadog Agent Sidecar § Add the following block to the same Task Definition { &quot;name&quot;: &quot;datadog-agent&quot;, &quot;image&quot;: &quot;public.</description>
+    <pubDate>Mon, 11 Dec 2023 02:33:53 GMT</pubDate>
+  </item><item>
+    <title>ECS</title>
+    <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</link>
+    <guid>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</guid>
+    <description>Abstract § A lightweight container orchestration service We can mount Volume to it for data that can be lost when Container is terminated Components § Container § We can obtain a shell into it using ECS Exec Obtain Private IP of the container Must have curl &amp;&amp; jq (JSON Processor) containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r &#039;.</description>
+    <pubDate>Mon, 11 Dec 2023 02:07:16 GMT</pubDate>
+  </item><item>
+    <title>Application Performance Monitoring (APM)</title>
+    <link>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</link>
+    <guid>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</guid>
+    <description>Abstract § Collect Trace from backend &amp; database for all the incoming API Requests Deep visibility into applications with out-of-the-box performance dashboards for web services, queues, and databases to monitor requests, errors and latency .</description>
+    <pubDate>Mon, 11 Dec 2023 02:02:14 GMT</pubDate>
+  </item><item>
+    <title>Datadog RUM</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</guid>
+    <description>Abstract § Real User Monitoring Enable us to get the metadata about the client such as the user-agent, IP Address &amp; record down the user actions on the page in a video format Setup § The example below is based on next.</description>
+    <pubDate>Mon, 11 Dec 2023 02:00:03 GMT</pubDate>
+  </item><item>
     <title>Interrupts (中断)</title>
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Interrupts-(%E4%B8%AD%E6%96%AD)</link>
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Interrupts-(%E4%B8%AD%E6%96%AD)</guid>
@@ -41,30 +65,6 @@
     <guid>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Main-Components/Configuration-File,-Vault</guid>
     <description>#vault Config file for HashiCorp Vault. Contains different keywords to tune the behaviour of the vault like what storage backend to use &amp; how to unseal the vault etc Some of the config can be done using the specific Environment Variable Can be written in either JSON or HCL Some networking related setting can be set dynamically using go-sockaddr template TCP Listener Example [cluster_address,api_addr] Example Example Production Configuration File seal § # Below is using AWS KMS for [[Auto Unseal]] seal &quot;awskms&quot; { region = &quot;ap-southeast-1&quot; kms_key_id = &quot;5b2b78c8-c4db-43d9-ba6b-73295f2ec154&quot; } Example vault.</description>
     <pubDate>Sun, 10 Dec 2023 11:48:16 GMT</pubDate>
-  </item><item>
-    <title>MacOs Setup</title>
-    <link>https://notes.yxy.ninja/MacOs-Setup</link>
-    <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
-    <description>Abstract § Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
-    <pubDate>Sun, 10 Dec 2023 11:42:06 GMT</pubDate>
-  </item><item>
-    <title>Type System</title>
-    <link>https://notes.yxy.ninja/Software-Engineering/Managing-Complexity/Type-System</link>
-    <guid>https://notes.yxy.ninja/Software-Engineering/Managing-Complexity/Type-System</guid>
-    <description>#software_engineering#cs2030s What is it? A set of rules how variables, expressions &amp; functions interact with each other Covers Sub-types Compule-time Types Run-time Types Parameterized Types (Generics, Generic Types) Type Inference (类型推断) Custom Types .</description>
-    <pubDate>Sun, 10 Dec 2023 11:39:00 GMT</pubDate>
-  </item><item>
-    <title>Type Inference (类型推断)</title>
-    <link>https://notes.yxy.ninja/Software-Engineering/Terminologies/Type-Inference-(%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD)</link>
-    <guid>https://notes.yxy.ninja/Software-Engineering/Terminologies/Type-Inference-(%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD)</guid>
-    <description>Abstract § Compiler or Interpreter automatically figure out the Datatype based on the context For example, in [Java, we can do List&lt;Integer&gt; intList = new ArrayList&lt;&gt;() instead of List&lt;Integer&gt; intList = new ArrayList&lt;Integer&gt;(), the Compiler is smart enough to figure out the Datatype for ArrayList based on the context provided by List&lt;Integer&gt; Reduce boilerplate code - more concise &amp; readable Too much may reduce the readability .</description>
-    <pubDate>Sun, 10 Dec 2023 11:38:28 GMT</pubDate>
-  </item><item>
-    <title>Application Performance Monitoring (APM)</title>
-    <link>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</link>
-    <guid>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</guid>
-    <description>Abstract § Collect Trace from backend application code Deep visibility into applications with out-of-the-box performance dashboards for web services, queues, and databases to monitor requests, errors and latency .</description>
-    <pubDate>Sun, 10 Dec 2023 11:33:22 GMT</pubDate>
   </item>
     </channel>
   </rss>
