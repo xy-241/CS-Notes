@@ -4,7 +4,7 @@
     - a **clock cycle** is **~0.1-0.2s**, which is more or less instantaneous for humans. This could be, for example, the time to add 2 small numbers that you already have in transistors.
     - If you need to read them off of a page in front of you (**L1/L2 cache**), that could take a few **seconds**
     - A [[System Call (系统调用)]] takes a few **minutes**
-    - [[Context Switching]] is an **hour** or two
+    - [[Context Switch]] is an **hour** or two
     - [[HTTP Request]] takes **several hours**
     - You need to wait **a day** to **read something from SSD**
     - **Writing to SSD** it's gonna be in the mail for around **a week**

@@ -21,7 +21,7 @@ not support threads.
 
 >[!success]  Thread switching is at least an order of magnitude faster than trapping to the kernel 
 > - No [[Trap Interrupt (陷入)]] is needed
-> - No [[Context Switching]] needed
+> - No [[Context Switch]] needed
 > - the [[Cache]] need not be flushed
 
 >[!success] Allow each process to have its own customized [[Scheduling Algorithm]]

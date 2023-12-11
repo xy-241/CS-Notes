@@ -1,6 +1,6 @@
 #OS 
 ## Abstract
- - A mechanism achieved with [[Multi-threaded Chips]]/[[Multi-core chips]]([[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]]) or quick [[Context Switching]]([[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]) or both
+ - A mechanism achieved with [[Multi-threaded Chips]]/[[Multi-core chips]]([[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]]) or quick [[Context Switch]]([[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]) or both
  - Doesn't offer true [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]] on Single-Core [[CPU]]
  	- Only one process running at a time
  	- Thread-switching time is reduced to [[Latency Number |nanosecond]]

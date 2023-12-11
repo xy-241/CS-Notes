@@ -6,65 +6,65 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Dynamic Array (List)</title>
-    <link>https://notes.yxy.ninja/DSA/Data-Structure/Array/Dynamic-Array-(List)</link>
-    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Array/Dynamic-Array-(List)</guid>
-    <description>Abstract § Resizable Array, achieved by building an Abstraction above the Array Benefits § Convenience § Developers don’t need to re-write the logic of re-sizeing Array etc Built with best practices &amp; battle-tested Cons § More Resource Intense § We can’t fine tune every Array operations because don’t have direct access .</description>
-    <pubDate>Mon, 11 Dec 2023 12:59:23 GMT</pubDate>
+    <title>Process</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</guid>
+    <description>Abstract § Container that holds all the information needed to run a program, Abstraction over running program 2 Components - Address Space, Process Control Block (PCB) Process usually don’t share Main Memory among themselves for isolation purposes.</description>
+    <pubDate>Mon, 11 Dec 2023 15:16:44 GMT</pubDate>
   </item><item>
-    <title>Queue (FIFO)</title>
-    <link>https://notes.yxy.ninja/DSA/Data-Structure/Queue-(FIFO)</link>
-    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Queue-(FIFO)</guid>
-    <description>Abstract § Linear Aka Array/Linked List with limitations Can be used in an online ordering system Complexity § Space § Time § O(1) to offer() - push in an element O(1) to poll() - pop out an element O(1) to peek() - read the element that is the first to be pop out Implementation § Implementation with Circular Array Visual push() at the rear index pop() &amp; peek() at the head index Implementation with Single Linked List Visual push() from tail node pop() &amp; peek() from the head node The difference in the 2 implementation is similar to Stack implementation comparison Variant § Monotonic Queue § Implemented with Deque, I am not sure if it can be implemented with Queue (FIFO) Example Sliding Window Maximum Finding the biggest element in a sliding window Questions § Leetcode Questions .</description>
-    <pubDate>Mon, 11 Dec 2023 12:58:22 GMT</pubDate>
-  </item><item>
-    <title>Data Structure</title>
-    <link>https://notes.yxy.ninja/DSA/Data-Structure/Data-Structure</link>
-    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Data-Structure</guid>
-    <description>Abstract § The way Data is organised and structured We want it to save as much space as possible and be accessed as efficient as possible Physical § Continuous Memory § Elements are stored one next to another in theVirtual Memory Physical Memory § Elements are scattered around the Virtual Memory The exact location depends on OS’s Memory Management Logical § Linear § Each element has a predecessor and a successor, except for the first &amp; last element Elements stored in a straight line Example Array Linked List Stack (FILO) Queue (FIFO) Hash Map Non-linear § 2 types - Hierarchical Relationship(Tree) and Interconnected Relationship (Graph) Example Tree Heap Graph Hash Map .</description>
-    <pubDate>Mon, 11 Dec 2023 12:51:17 GMT</pubDate>
-  </item><item>
-    <title>Deque</title>
-    <link>https://notes.yxy.ninja/DSA/Data-Structure/Deque</link>
-    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Deque</guid>
-    <description>#dsa Basics § Abstract Stack (FILO) &amp; Queue (FIFO) combined Linear Data Structure Aka Array/Linked List with limitations Warning %%&gt;[!example] Use as Online ordering system%% %%&gt;[!example] Use Cases%% Implementation § %%&gt;[!note] Implementation wit]] Visual push() at the rear index pop() &amp; peek() at the head index%% Implementation with Double Linked List Visual We need Double Linked List in order to have the ability to pollLast() - delete from the rear.</description>
-    <pubDate>Mon, 11 Dec 2023 12:43:00 GMT</pubDate>
-  </item><item>
-    <title>ECS_Fargate_DataDog</title>
-    <link>https://notes.yxy.ninja/ECS_Fargate_DataDog</link>
-    <guid>https://notes.yxy.ninja/ECS_Fargate_DataDog</guid>
-    <description>Project Title § Pushing ECS Fargate Logs directly into DataDog using Terraform Description § This will allow the intergration of ECS Logs to be pushed into DataDog directly.</description>
-    <pubDate>Mon, 11 Dec 2023 09:19:09 GMT</pubDate>
-  </item><item>
-    <title>Datadog APM</title>
-    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
-    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
-    <description>Abstract § Application Performance Monitoring (APM) Serverless Setup § The example below is based on ECS Fargate The entire setup is around Task Definition, we need to add in 3 parts into it - Pipe application log to AWS Firelens, AWS Firelens and Datadog Agent Sidecar Pipe application log to AWS Firelens § Add the following block inside the application container block Update the highlighted parts with your own values &quot;logConfiguration&quot;: { &quot;logDriver&quot;: &quot;awsfirelens&quot;, &quot;options&quot;: { &quot;Host&quot;: &quot;http-intake.</description>
-    <pubDate>Mon, 11 Dec 2023 09:13:21 GMT</pubDate>
-  </item><item>
-    <title>ECS</title>
-    <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</link>
-    <guid>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</guid>
-    <description>Abstract § A lightweight container orchestration service We can mount Volume to it for data that can be lost when Container is terminated Components § Container § We can obtain a shell into it using ECS Exec Obtain Private IP of the container, must have curl &amp;&amp; jq (JSON Processor) containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r &#039;.</description>
-    <pubDate>Mon, 11 Dec 2023 07:08:41 GMT</pubDate>
-  </item><item>
-    <title>Application Performance Monitoring (APM)</title>
-    <link>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</link>
-    <guid>https://notes.yxy.ninja/Software-Engineering/Monitoring/Application-Performance-Monitoring-(APM)</guid>
-    <description>Abstract § Collect Trace from backend &amp; database for all the incoming API Requests Deep visibility into applications with out-of-the-box performance dashboards for web services, queues, and databases to monitor requests, errors and latency .</description>
-    <pubDate>Mon, 11 Dec 2023 02:02:14 GMT</pubDate>
-  </item><item>
-    <title>Datadog RUM</title>
-    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</link>
-    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</guid>
-    <description>Abstract § Real User Monitoring Enable us to get the metadata about the client such as the user-agent, IP Address &amp; record down the user actions on the page in a video format Setup § The example below is based on next.</description>
-    <pubDate>Mon, 11 Dec 2023 02:00:03 GMT</pubDate>
+    <title>Process Control Block (PCB)</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Control-Block-(PCB)</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Control-Block-(PCB)</guid>
+    <description>Abstract § Contains Metadata of the Process Resources, so that Process can be restarted later as if it had never been stopped Terminologies § Process Table § A collection of Process Control Block (PCB) An array of structure .</description>
+    <pubDate>Mon, 11 Dec 2023 15:15:17 GMT</pubDate>
   </item><item>
     <title>Interrupts (中断)</title>
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Interrupts-(%E4%B8%AD%E6%96%AD)</link>
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Interrupts-(%E4%B8%AD%E6%96%AD)</guid>
     <description>Abstract § When an interrupt occurs, Program Counter jumps to Interrupt Handler (Interrupt Service Routine, ISR) &amp; execute 2 forms - Signal (Software Interrupt) &amp; Hardware interrupts (外中断) Benefits § We don’t need to get CPU to keep Polling for response which may take a long time to produce.</description>
-    <pubDate>Sun, 10 Dec 2023 15:51:21 GMT</pubDate>
+    <pubDate>Mon, 11 Dec 2023 15:09:29 GMT</pubDate>
+  </item><item>
+    <title>Control Unit</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</guid>
+    <description>Abstract § Understand the Instruction based on the corresponding Instruction Set Architecture (ISA) Then decide what Registers, ALU &amp; Main Memory to enable to carry out the Operation by genrating Control Signal Components § Program Counter § Tell CPU which Instruction to execute at any given moment Terminologies § Control Signal § Electric signals that tells CPU Datapath, Main Memory &amp; IO Devices what to do according to program Instruction .</description>
+    <pubDate>Mon, 11 Dec 2023 15:09:07 GMT</pubDate>
+  </item><item>
+    <title>Latency Number</title>
+    <link>https://notes.yxy.ninja/OS/Terminologies/Latency-Number</link>
+    <guid>https://notes.yxy.ninja/OS/Terminologies/Latency-Number</guid>
+    <description>#os latency number visual.webp Put those times on a human scale by setting 1ns CPU time = 1s human time. a clock cycle is ~0.1-0.2s, which is more or less instantaneous for humans.</description>
+    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
+  </item><item>
+    <title>High-performance Computing</title>
+    <link>https://notes.yxy.ninja/OS/Terminologies/High-performance-Computing</link>
+    <guid>https://notes.yxy.ninja/OS/Terminologies/High-performance-Computing</guid>
+    <description>Abstract § Terminologies § Parallelism (并行性) § Thread/Process running at the same time, not an illusion created with Context Switch where only a single Thread/Process is running Mainly for improving performance with the resources on hand Concurrency (并发) § Illusion of multiple Thread/Process running in parallel, but it is actually achieve with quick Context Switch where only a single Thread/Process is running at any point of the time Mainly for handling multiple requests or events .</description>
+    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
+  </item><item>
+    <title>Timeslice (Quantums)</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Timeslice/Timeslice-(Quantums)</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Timeslice/Timeslice-(Quantums)</guid>
+    <description>#os Abstract The duration an Process Scheduler allows a Process to run before Preemption Performance issues with small Timeslice Context Switching is an expense operation So we usually has a Minimum Granularity to ensure it is still worth to perform Context Switch on an overall performance perspective It also means the Target Latency is exceeded when there is enough Process for Minimum Granularity to take effect - Process will seem laggy on user side, so rebooting to clear some Process will make computer seems faster .</description>
+    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
+  </item><item>
+    <title>User-space Threads (N to 1)</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</guid>
+    <description>#os Put the Thread entirely in User Space The Kernel knows nothing about them As far as the kernel is concerned, it is managing single-threaded Process Thread are implemented by a library The threads run on top of a Runtime-System Each process needs its own private Thread Table When thread becoming blocked locally Thread calls run-time system procedure checks to see if the thread must be put into blocked state.</description>
+    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
+  </item><item>
+    <title>Thread</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</guid>
+    <description>Abstract § Responsible to carry out some features of a running program - Process Note Thread in a process share the same Address Space Per-process items can be accessed by all Thread 3 ways to implement § User-space Threads (N to 1) Kernel Threads (1 to 1) Hybrid Threads (N to M) Benefits § Fast to create/destroy § 10-100 times faster than Process Because without the need of Expensive Context Switching Makes programming easier § Different parts of program able to communicate without the use of Interrupts (中断) and Inter-Process Communication (IPC) etc Better responsiveness aka more user friendly § With Multi-threading, Hyper-threading, each Thread runs for a short while, to make all Threads seem running all the time Example: Powerpoint with Multi-threading, Hyper-threading § One thread can be used to receive inputs from users One thread can be used to format the slides One thread can be used to save the slides automatically on a regular interval 2 benefits over Process § Lighter to create and destroy compared to Process, because it doesn’t require System Call (系统调用) to the underlying OS Share memory among themselves, avoid Memory Page Shifting which is expensive Cons § No protection among threads One thread can bring down the entire Process One thread can read, write, or even wipe out another thread’s stack Warning fork() Should we copy over all the threads or just a single one? Warning Signal (Software Interrupt) handling - which thread should handle it Common Procedures § Terminologies § Blocking § Thread doesn’t do anything while waiting for IO Operations or Network Operations etc Non-blocking § Thread carries out other tasks if the current tasks require it to wait for IO Operations or Network Operations etc Goes back to the current task when the waiting ends - Call back However, it still blocks when the task is CPU Bounded .</description>
+    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
+  </item><item>
+    <title>Thread Pool</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread-Pool</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread-Pool</guid>
+    <description>Abstract § A group of fixed-number worker Thread that are reused to execute tasks submitted to Task Queue by a client. The number of Thread is usually the number of cores the system has.</description>
+    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
   </item>
     </channel>
   </rss>

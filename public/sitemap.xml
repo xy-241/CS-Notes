@@ -39,7 +39,7 @@
     <lastmod>2023-08-02T13:51:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</loc>
-    <lastmod>2023-12-10T09:33:51.000Z</lastmod>
+    <lastmod>2023-12-11T15:09:07.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/CPU/Duty-Cycle</loc>
     <lastmod>2023-08-02T13:53:37.000Z</lastmod>
@@ -509,9 +509,6 @@
     <loc>https://notes.yxy.ninja/Distributed-Computing/Replicated-State-Machine/Replicated-State-Machine</loc>
     <lastmod>2023-08-03T04:48:15.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/ECS_Fargate_DataDog</loc>
-    <lastmod>2023-12-11T09:19:09.461Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/Java/Deque%3CT%3E</loc>
     <lastmod>2023-09-04T10:49:41.585Z</lastmod>
   </url><url>
@@ -795,13 +792,13 @@
     <lastmod>2023-11-12T12:21:06.386Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Rule-of-Inference-(%E6%8E%A8%E7%90%86%E8%A7%84%E5%88%99)</loc>
-    <lastmod>2023-12-06T15:27:56.000Z</lastmod>
+    <lastmod>2023-12-11T13:43:16.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Set-Properties</loc>
     <lastmod>2023-11-09T02:36:14.937Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Discrete-Math/Terminologies/Fallacy</loc>
-    <lastmod>2023-12-05T17:36:45.000Z</lastmod>
+    <lastmod>2023-12-11T13:32:45.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Math/Linear-Algebra/Cross-Product</loc>
     <lastmod>2023-09-19T15:14:03.019Z</lastmod>
@@ -1362,10 +1359,10 @@
     <lastmod>2023-12-09T11:44:57.250Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-threading,-Hyper-threading</loc>
-    <lastmod>2023-11-11T11:28:47.945Z</lastmod>
+    <lastmod>2023-12-11T15:00:51.119Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multitasking</loc>
-    <lastmod>2023-11-15T06:51:45.235Z</lastmod>
+    <lastmod>2023-12-11T15:00:51.146Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Sychronous,-Multi-processing,-Multi-threading,-Async.excalidraw</loc>
     <lastmod>2023-11-15T07:01:45.200Z</lastmod>
@@ -1550,7 +1547,7 @@
     <loc>https://notes.yxy.ninja/OS/Main-Components/Memory/Physical/Memory-Frames</loc>
     <lastmod>2023-10-07T08:38:29.112Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/IPC/Inter-Process-Communication-(IPC)</loc>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Inter-Process-Communication-(IPC)</loc>
     <lastmod>2023-10-16T02:11:53.089Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/2-Types/Hardware-interrupts-(%E5%A4%96%E4%B8%AD%E6%96%AD)</loc>
@@ -1566,7 +1563,7 @@
     <lastmod>2023-11-20T00:41:43.214Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Interrupts-(%E4%B8%AD%E6%96%AD)</loc>
-    <lastmod>2023-12-10T15:51:21.000Z</lastmod>
+    <lastmod>2023-12-11T15:09:29.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Preemption</loc>
     <lastmod>2023-09-04T11:09:47.529Z</lastmod>
@@ -1601,47 +1598,26 @@
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space/Text-Segment</loc>
     <lastmod>2023-08-05T07:49:08.497Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Child-Process</loc>
-    <lastmod>2023-07-19T06:24:38.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Context-Switch</loc>
+    <lastmod>2023-12-11T14:59:24.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Context-Switching</loc>
-    <lastmod>2023-11-10T15:12:16.740Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Core-Image</loc>
-    <lastmod>2023-07-18T09:42:42.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Niceness</loc>
-    <lastmod>2023-11-13T11:06:12.731Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Control-Block-(PCB)/Process-Control-Block-(PCB)</loc>
-    <lastmod>2023-08-09T14:56:05.251Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Control-Block-(PCB)/Process-Resources</loc>
-    <lastmod>2023-08-09T14:55:32.080Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Control-Block-(PCB)/Process-Table</loc>
-    <lastmod>2023-08-05T08:04:07.953Z</lastmod>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Control-Block-(PCB)</loc>
+    <lastmod>2023-12-11T15:15:17.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Hierarchy</loc>
     <lastmod>2023-08-09T14:52:46.828Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Scheduler</loc>
-    <lastmod>2023-11-13T11:06:12.776Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-States</loc>
-    <lastmod>2023-08-27T06:44:16.761Z</lastmod>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</loc>
+    <lastmod>2023-12-11T15:00:33.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</loc>
-    <lastmod>2023-10-19T09:12:35.896Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Program-Counter</loc>
-    <lastmod>2023-08-27T06:44:16.785Z</lastmod>
+    <lastmod>2023-12-11T15:16:44.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread-Pool</loc>
-    <lastmod>2023-11-12T11:11:37.363Z</lastmod>
+    <lastmod>2023-12-11T15:00:51.180Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</loc>
-    <lastmod>2023-11-12T10:59:14.884Z</lastmod>
+    <lastmod>2023-12-11T15:00:51.197Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Hybrid-Threads-(N-to-M)</loc>
     <lastmod>2023-08-28T08:43:23.035Z</lastmod>
@@ -1656,7 +1632,7 @@
     <lastmod>2023-08-20T03:24:25.577Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</loc>
-    <lastmod>2023-09-03T08:14:55.502Z</lastmod>
+    <lastmod>2023-12-11T15:00:51.208Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Threads/Goroutines</loc>
     <lastmod>2023-08-20T03:32:36.331Z</lastmod>
@@ -1704,7 +1680,7 @@
     <lastmod>2023-11-13T11:06:12.821Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Timeslice/Timeslice-(Quantums)</loc>
-    <lastmod>2023-09-05T04:11:41.252Z</lastmod>
+    <lastmod>2023-12-11T15:00:51.212Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/OS</loc>
     <lastmod>2023-11-09T02:05:30.960Z</lastmod>
@@ -1713,7 +1689,7 @@
     <lastmod>2023-10-16T01:27:42.964Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Terminologies/High-performance-Computing</loc>
-    <lastmod>2023-11-11T10:55:10.440Z</lastmod>
+    <lastmod>2023-12-11T15:00:51.217Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Terminologies/Kernel-Space</loc>
     <lastmod>2023-10-07T08:38:29.188Z</lastmod>
@@ -1722,7 +1698,7 @@
     <lastmod>2023-08-27T03:25:52.585Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Terminologies/Latency-Number</loc>
-    <lastmod>2023-09-03T08:14:54.906Z</lastmod>
+    <lastmod>2023-12-11T15:00:51.223Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Terminologies/Mode-Switching</loc>
     <lastmod>2023-07-15T09:08:07.000Z</lastmod>

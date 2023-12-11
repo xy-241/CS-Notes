@@ -6,13 +6,11 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T08:54:00
-Last Date: 2023-12-06T23:27:56+08:00
+Last Date: 2023-12-11T21:43:16+08:00
 References: 
 ---
 ## Abstract
-- *Logical rule* that allows us to derive a [[Mathematical Argument#Conclusion]] from a set of [[Mathematical Argument#Premise]]
-- A form of [[Mathematical Argument]] that is [[Mathematical Argument#Valid|Valid]]
-- Examples rules are [[#Modus Ponens]], [[#Modus Tollens]]
+- A form of [[Mathematical Argument]] that is guaranteed to be [[Mathematical Argument#Valid|Valid]] if all its [[Mathematical Argument#Premise]] are true
 - Tools that enable [[Deductive Reasoning (演繹推理)]]
 
 
@@ -57,6 +55,10 @@ References:
 
 ## With [[Predicate#Quantifiers]]
 ### Universal Modus Ponens
--  [[Mathematical Argument#Premise|Premise]]: For all x, if x makes P(x) true, then x makes Q(x) true
--  [[Mathematical Argument#Premise|Premise]]: a is an element of x, a makes P(x) true
+- [[Mathematical Argument#Premise|Premise]]: For all x, if x makes P(x) true, then x makes Q(x) true
+- [[Mathematical Argument#Premise|Premise]]: a is an element of x, a makes P(x) true
 - [[Mathematical Argument#Conclusion|Conclusion]]: a makes Q(x) true
+### Universal Modus Tollens
+- [[Mathematical Argument#Premise|Premise]]: If x makes P(x) true, then x makes Q(x) true
+- [[Mathematical Argument#Premise|Premise]]: a doesn't make Q(x) true
+### Universal Transitivity

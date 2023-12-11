@@ -10,13 +10,13 @@ Last Date:
 References:
 ---
 ## Abstract
-- A group of *fixed-number* worker [[Thread]] that are reused to execute tasks submitted to [[#Task Queue]] by a client. The number of *Thread* is usually the *number of cores* the system has. Less will lead to wasted CPU power, more will introduce [[Context Switching]] which has overhead
+- A group of *fixed-number* worker [[Thread]] that are reused to execute tasks submitted to [[#Task Queue]] by a client. The number of *Thread* is usually the *number of cores* the system has. Less will lead to wasted CPU power, more will introduce [[Context Switch]] which has overhead
 - Commonly used in scenarios where tasks are small, numerous, and independent([[Stateless protocol]]). Examples include web servers handling HTTP requests and applications that perform many asynchronous I/O operations
 
 ## Benefits
 ### Improved Resource Management
 - By limiting the number of [[Thread]] that can be active at any one time
-- A thread pool can help to ensure that the system does not become overwhelmed with too many concurrent threads, which can reduce performance due to [[Context Switching]] or lead to *resource thrashing*
+- A thread pool can help to ensure that the system does not become overwhelmed with too many concurrent threads, which can reduce performance due to [[Context Switch]] or lead to *resource thrashing*
 ### Reduced Overhead
 - Creating a new thread is an expensive operation, so reusing threads can improve performance
 

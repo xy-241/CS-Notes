@@ -17,7 +17,7 @@ Last Date:
 
 ## Terminologies
 ### Time-Sharing ([[High-performance Computing#Concurrency (并发)|Concurrency (并发)]])
-- A specific implementation of [[Multi-tasking]] when there is only a single resource - single [[CPU]], achieve with quick [[Context Switching]]
+- A specific implementation of [[Multi-tasking]] when there is only a single resource - single [[CPU]], achieve with quick [[Context Switch]]
 - All Time-sharing systems are [[Multi-Programming]] systems
 - Allow multiple remote users to run jobs on the same computer at the same time 
 

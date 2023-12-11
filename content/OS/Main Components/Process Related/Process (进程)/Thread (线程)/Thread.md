@@ -28,7 +28,7 @@ References:
 ## Benefits
 ### Fast to create/destroy
 - 10-100 times faster than [[Process]]
-- Because without the need of [[Context Switching#Latency Number An expensive operation|Expensive Context Switching]]
+- Because without the need of [[Context Switch#Latency Number An expensive operation|Expensive Context Switching]]
 
 ### Makes programming easier
 - Different parts of program able to communicate **without** the use of [[Interrupts (中断)]] and [[Inter-Process Communication (IPC)]] etc
