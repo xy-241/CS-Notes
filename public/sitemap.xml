@@ -329,119 +329,98 @@
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Abstract-Data-Type-(ADT)</loc>
     <lastmod>2023-07-30T08:07:58.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Data-Organisation-Method-(Logical)/Linear-Data-Structure</loc>
-    <lastmod>2023-08-25T11:11:31.839Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Data-Organisation-Method-(Logical)/Non-linear-Data-Structure</loc>
-    <lastmod>2023-08-25T11:11:40.122Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Data-Structure</loc>
-    <lastmod>2023-10-07T08:38:28.237Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Array/Array</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Array/Array</loc>
     <lastmod>2023-10-08T12:10:15.570Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Array/Circular-Array</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Array/Circular-Array</loc>
     <lastmod>2023-08-29T05:56:03.548Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Array/Dynamic-Array-(List)</loc>
-    <lastmod>2023-12-09T11:44:57.247Z</lastmod>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Array/Dynamic-Array-(List)</loc>
+    <lastmod>2023-12-11T12:59:23.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/AVL(Balanced-Binary-Search)-Tree--(%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/AVL(Balanced-Binary-Search)-Tree--(%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91)</loc>
     <lastmod>2023-09-25T16:14:31.290Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/Binary-Search-Tree-(%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/Binary-Search-Tree-(%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91)</loc>
     <lastmod>2023-11-05T04:45:05.147Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/Complete-Binary-Tree-(%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/Complete-Binary-Tree-(%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91)</loc>
     <lastmod>2023-09-26T10:29:24.173Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/Full-Binary-Tree-(%E5%AE%8C%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/Full-Binary-Tree-(%E5%AE%8C%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91)</loc>
     <lastmod>2023-09-13T16:25:14.417Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/Perfect-Binary-Tree-(%E5%AE%8C%E7%BE%8E%E4%BA%8C%E5%8F%89%E6%A0%91)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/5-Binary-Tree-Types/Perfect-Binary-Tree-(%E5%AE%8C%E7%BE%8E%E4%BA%8C%E5%8F%89%E6%A0%91)</loc>
     <lastmod>2023-09-13T16:24:47.697Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)/Binary-Tree-(%E4%BA%8C%E5%8F%89%E6%A0%91)</loc>
     <lastmod>2023-11-24T04:39:50.033Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Deque</loc>
-    <lastmod>2023-08-30T04:53:48.400Z</lastmod>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Data-Structure</loc>
+    <lastmod>2023-12-11T12:51:17.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Graph</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Deque</loc>
+    <lastmod>2023-12-11T12:43:00.270Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Graph</loc>
     <lastmod>2023-10-10T06:24:35.542Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-Function/Avalanche-effect-(%E9%9B%AA%E5%B4%A9%E6%95%88%E5%BA%94)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-Function/Avalanche-effect-(%E9%9B%AA%E5%B4%A9%E6%95%88%E5%BA%94)</loc>
     <lastmod>2023-08-22T12:51:12.262Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-Function/Collision-resistance-(%E6%8A%97%E7%A2%B0%E6%92%9E%E6%80%A7)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-Function/Collision-resistance-(%E6%8A%97%E7%A2%B0%E6%92%9E%E6%80%A7)</loc>
     <lastmod>2023-08-22T12:50:08.378Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-Function/Hash-Function</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-Function/Hash-Function</loc>
     <lastmod>2023-09-07T08:41:55.777Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-Map</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-Map</loc>
     <lastmod>2023-09-28T05:12:23.922Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-collision/Avoid/Hash-Map-Expansion</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Avoid/Hash-Map-Expansion</loc>
     <lastmod>2023-08-14T11:15:40.640Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-collision/Hash-Collision</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Hash-Collision</loc>
     <lastmod>2023-11-15T09:26:05.362Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-collision/Live-With/Open-Addressing/Double-Hashing</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Live-With/Open-Addressing/Double-Hashing</loc>
     <lastmod>2023-08-17T12:11:08.841Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-collision/Live-With/Open-Addressing/Linear-Probing</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Live-With/Open-Addressing/Linear-Probing</loc>
     <lastmod>2023-08-17T12:13:22.228Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-collision/Live-With/Open-Addressing/Open-Addressing</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Live-With/Open-Addressing/Open-Addressing</loc>
     <lastmod>2023-08-17T12:13:26.800Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-collision/Live-With/Separate-Chaining</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Live-With/Separate-Chaining</loc>
     <lastmod>2023-10-07T08:38:28.287Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Hash-Map/Hash-collision/Load-Factor</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Load-Factor</loc>
     <lastmod>2023-08-14T11:09:41.234Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Linked-List/Circular-Linked-List</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/Circular-Linked-List</loc>
     <lastmod>2023-08-27T06:44:16.884Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Linked-List/Double-Linked-List</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/Double-Linked-List</loc>
     <lastmod>2023-08-12T08:15:46.376Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Linked-List/Linked-List</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/Linked-List</loc>
     <lastmod>2023-10-07T08:38:28.312Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Linked-List/Single-Linked-List</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/Single-Linked-List</loc>
     <lastmod>2023-08-25T11:11:16.253Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Linked-List/Virtual-nodes</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/Virtual-nodes</loc>
     <lastmod>2023-08-05T06:45:43.388Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Priority-Queue</loc>
-    <lastmod>2023-10-09T05:37:40.851Z</lastmod>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Queue-(FIFO)</loc>
+    <lastmod>2023-12-11T12:58:22.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Queue/Monotonic-Queue</loc>
-    <lastmod>2023-09-04T10:48:18.824Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Queue/Queue-(FIFO)</loc>
-    <lastmod>2023-08-30T04:54:01.743Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Stack/Monotonic-Stack</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Stack/Monotonic-Stack</loc>
     <lastmod>2023-08-31T05:59:32.277Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/Stack/Stack-(FILO)</loc>
+    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Stack/Stack-(FILO)</loc>
     <lastmod>2023-10-07T08:38:28.367Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Implementations/String</loc>
-    <lastmod>2023-08-25T09:46:13.001Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Physical-Structure-(Physical)/Continuous-Memory</loc>
-    <lastmod>2023-09-25T08:46:04.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Physical-Structure-(Physical)/Discrete-Memory</loc>
-    <lastmod>2023-09-25T08:46:04.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/My-DSA-Weak-Points</loc>
     <lastmod>2023-12-07T09:36:08.000Z</lastmod>
@@ -529,6 +508,9 @@
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Replicated-State-Machine/Replicated-State-Machine</loc>
     <lastmod>2023-08-03T04:48:15.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/ECS_Fargate_DataDog</loc>
+    <lastmod>2023-12-11T09:19:09.461Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Java/Deque%3CT%3E</loc>
     <lastmod>2023-09-04T10:49:41.585Z</lastmod>
@@ -2151,7 +2133,7 @@
     <lastmod>2023-09-19T11:05:28.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</loc>
-    <lastmod>2023-12-11T08:51:02.000Z</lastmod>
+    <lastmod>2023-12-11T09:13:21.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</loc>
     <lastmod>2023-12-11T02:00:03.000Z</lastmod>

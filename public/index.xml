@@ -6,11 +6,41 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Dynamic Array (List)</title>
+    <link>https://notes.yxy.ninja/DSA/Data-Structure/Array/Dynamic-Array-(List)</link>
+    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Array/Dynamic-Array-(List)</guid>
+    <description>Abstract § Resizable Array, achieved by building an Abstraction above the Array Benefits § Convenience § Developers don’t need to re-write the logic of re-sizeing Array etc Built with best practices &amp; battle-tested Cons § More Resource Intense § We can’t fine tune every Array operations because don’t have direct access .</description>
+    <pubDate>Mon, 11 Dec 2023 12:59:23 GMT</pubDate>
+  </item><item>
+    <title>Queue (FIFO)</title>
+    <link>https://notes.yxy.ninja/DSA/Data-Structure/Queue-(FIFO)</link>
+    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Queue-(FIFO)</guid>
+    <description>Abstract § Linear Aka Array/Linked List with limitations Can be used in an online ordering system Complexity § Space § Time § O(1) to offer() - push in an element O(1) to poll() - pop out an element O(1) to peek() - read the element that is the first to be pop out Implementation § Implementation with Circular Array Visual push() at the rear index pop() &amp; peek() at the head index Implementation with Single Linked List Visual push() from tail node pop() &amp; peek() from the head node The difference in the 2 implementation is similar to Stack implementation comparison Variant § Monotonic Queue § Implemented with Deque, I am not sure if it can be implemented with Queue (FIFO) Example Sliding Window Maximum Finding the biggest element in a sliding window Questions § Leetcode Questions .</description>
+    <pubDate>Mon, 11 Dec 2023 12:58:22 GMT</pubDate>
+  </item><item>
+    <title>Data Structure</title>
+    <link>https://notes.yxy.ninja/DSA/Data-Structure/Data-Structure</link>
+    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Data-Structure</guid>
+    <description>Abstract § The way Data is organised and structured We want it to save as much space as possible and be accessed as efficient as possible Physical § Continuous Memory § Elements are stored one next to another in theVirtual Memory Physical Memory § Elements are scattered around the Virtual Memory The exact location depends on OS’s Memory Management Logical § Linear § Each element has a predecessor and a successor, except for the first &amp; last element Elements stored in a straight line Example Array Linked List Stack (FILO) Queue (FIFO) Hash Map Non-linear § 2 types - Hierarchical Relationship(Tree) and Interconnected Relationship (Graph) Example Tree Heap Graph Hash Map .</description>
+    <pubDate>Mon, 11 Dec 2023 12:51:17 GMT</pubDate>
+  </item><item>
+    <title>Deque</title>
+    <link>https://notes.yxy.ninja/DSA/Data-Structure/Deque</link>
+    <guid>https://notes.yxy.ninja/DSA/Data-Structure/Deque</guid>
+    <description>#dsa Basics § Abstract Stack (FILO) &amp; Queue (FIFO) combined Linear Data Structure Aka Array/Linked List with limitations Warning %%&gt;[!example] Use as Online ordering system%% %%&gt;[!example] Use Cases%% Implementation § %%&gt;[!note] Implementation wit]] Visual push() at the rear index pop() &amp; peek() at the head index%% Implementation with Double Linked List Visual We need Double Linked List in order to have the ability to pollLast() - delete from the rear.</description>
+    <pubDate>Mon, 11 Dec 2023 12:43:00 GMT</pubDate>
+  </item><item>
+    <title>ECS_Fargate_DataDog</title>
+    <link>https://notes.yxy.ninja/ECS_Fargate_DataDog</link>
+    <guid>https://notes.yxy.ninja/ECS_Fargate_DataDog</guid>
+    <description>Project Title § Pushing ECS Fargate Logs directly into DataDog using Terraform Description § This will allow the intergration of ECS Logs to be pushed into DataDog directly.</description>
+    <pubDate>Mon, 11 Dec 2023 09:19:09 GMT</pubDate>
+  </item><item>
     <title>Datadog APM</title>
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
     <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
     <description>Abstract § Application Performance Monitoring (APM) Serverless Setup § The example below is based on ECS Fargate The entire setup is around Task Definition, we need to add in 3 parts into it - Pipe application log to AWS Firelens, AWS Firelens and Datadog Agent Sidecar Pipe application log to AWS Firelens § Add the following block inside the application container block Update the highlighted parts with your own values &quot;logConfiguration&quot;: { &quot;logDriver&quot;: &quot;awsfirelens&quot;, &quot;options&quot;: { &quot;Host&quot;: &quot;http-intake.</description>
-    <pubDate>Mon, 11 Dec 2023 08:51:02 GMT</pubDate>
+    <pubDate>Mon, 11 Dec 2023 09:13:21 GMT</pubDate>
   </item><item>
     <title>ECS</title>
     <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</link>
@@ -35,36 +65,6 @@
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Interrupts-(%E4%B8%AD%E6%96%AD)</guid>
     <description>Abstract § When an interrupt occurs, Program Counter jumps to Interrupt Handler (Interrupt Service Routine, ISR) &amp; execute 2 forms - Signal (Software Interrupt) &amp; Hardware interrupts (外中断) Benefits § We don’t need to get CPU to keep Polling for response which may take a long time to produce.</description>
     <pubDate>Sun, 10 Dec 2023 15:51:21 GMT</pubDate>
-  </item><item>
-    <title>Integer Encoding (数字编码)</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/Number-System/Integer-Encoding-(%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81)</guid>
-    <description>Abstract § There are 3 Variants, computer use the 2’s Complement (补码) variant to store integer Computers use 2’s Complement (补码) to store the integers, since it solves the flaws in Sign-and-Magnitude (原码) and 1’s Complement (反码) Below is a 4-bits Integer Encoding under the 3 Variants 3 Variants § Sign-and-Magnitude (原码) § Represent positive and negative decimal integers in binary with the help of Sign Bit Divide the number of bits into 2 parts, one part for negative number, another part for positive number Require extra Logic Gates The Adder logic gates cant be used for subtraction This can be avoided using 1’s Complement (反码) or 2’s Complement (补码) 1’s Complement (反码) § For negative number, all bits are inverted except the Sign Bit which is 1 and positive number unchanged We can invert all bits except Sign Bit to obtain Sign-and-Magnitude (原码) Reuse Logic Gates We re-can use Adder logic gates, without building extra logic circuit like a subtraction logic gates Mathematically wrong definition of 0 We have +0 (when all bits are 0) &amp; -0(when all bits are 1) under this encoding, this can be solved by 2’s Complement (补码) 2’s Complement (补码) § This builds on top of 1’s Complement (反码), the only difference is to add extra 1 to the negative number in 1’s Complement (反码) to have only 1 binary encoding for 0 We can calculate the decimal value by taking the value Sign Bit (negative) and perform addition with value of Magnitude (all are positive) Terminologies § Sign Bit § The first bit from left 0 denotes positive 1 denotes negative Magnitude § All the bits in the encoding except Sign Bit Reference § Sign-and-Magnitude Addition and Subtraction Hello-Algo .</description>
-    <pubDate>Sun, 10 Dec 2023 15:38:29 GMT</pubDate>
-  </item><item>
-    <title>Problem Solving</title>
-    <link>https://notes.yxy.ninja/Problem-solving/Problem-Solving</link>
-    <guid>https://notes.yxy.ninja/Problem-solving/Problem-Solving</guid>
-    <description>Abstract § Systematic way of solving a given problem 9 Tips § 1. Use the defining features of the set-up § Look at what is given Ask the definition of each term How the ideas piece up together (infer) Example 1: Approaching a problem related to Circle, Inscribed Angle Theorem.</description>
-    <pubDate>Sun, 10 Dec 2023 15:14:54 GMT</pubDate>
-  </item><item>
-    <title>Dockerfile</title>
-    <link>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Dockerfile</link>
-    <guid>https://notes.yxy.ninja/Tools/Docker/3-Components/Dockerfile/Dockerfile</guid>
-    <description>Abstract § Set of steps for Docker to build Docker Container Keywords § ENV § Set the Environment Variable in the Docker Container .</description>
-    <pubDate>Sun, 10 Dec 2023 11:58:31 GMT</pubDate>
-  </item><item>
-    <title>Docker Build</title>
-    <link>https://notes.yxy.ninja/Tools/Docker/Docker-Build</link>
-    <guid>https://notes.yxy.ninja/Tools/Docker/Docker-Build</guid>
-    <description>Abstract § Convert Dockerfile to Docker Container Cautions § —build-arg § Used to pass dynamic values to Engine for the building process Not Environment Variable, that is set with [[Dockerfile#env|ENV]] Frontend Build § Needs the Environment Variable at the container build stage only, not when the container is running .</description>
-    <pubDate>Sun, 10 Dec 2023 11:58:00 GMT</pubDate>
-  </item><item>
-    <title>Configuration File, Vault</title>
-    <link>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Main-Components/Configuration-File,-Vault</link>
-    <guid>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Main-Components/Configuration-File,-Vault</guid>
-    <description>#vault Config file for HashiCorp Vault. Contains different keywords to tune the behaviour of the vault like what storage backend to use &amp; how to unseal the vault etc Some of the config can be done using the specific Environment Variable Can be written in either JSON or HCL Some networking related setting can be set dynamically using go-sockaddr template TCP Listener Example [cluster_address,api_addr] Example Example Production Configuration File seal § # Below is using AWS KMS for [[Auto Unseal]] seal &quot;awskms&quot; { region = &quot;ap-southeast-1&quot; kms_key_id = &quot;5b2b78c8-c4db-43d9-ba6b-73295f2ec154&quot; } Example vault.</description>
-    <pubDate>Sun, 10 Dec 2023 11:48:16 GMT</pubDate>
   </item>
     </channel>
   </rss>

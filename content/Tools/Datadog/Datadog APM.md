@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-11T16:51:02+08:00
+Last Date: 2023-12-11T17:13:21+08:00
 References: 
 ---
 
@@ -150,8 +150,8 @@ resource "aws_ecs_task_definition" "backend_app" {
       logConfiguration = {
         logDriver : "awsfirelens",
         options : {
-          "Host": "http-intake.logs.datadoghq.eu",
-          "Name": "datadog",
+          "Host": "",
+          "Name": "",
           "TLS": "on",
           "apikey": "<YOUR_API_KEY>",
           "dd_service": "",
@@ -161,7 +161,7 @@ resource "aws_ecs_task_definition" "backend_app" {
       }
     },
     {
-      name: "log_router",
+      name: "",
       image: "amazon/aws-for-fluent-bit:stable",
       cpu: 256,
       memory: 512,
@@ -179,7 +179,7 @@ resource "aws_ecs_task_definition" "backend_app" {
       }
     },
     {
-      "name": "datadog-agent",
+      "name": "",
       "image": "public.ecr.aws/datadog/agent:latest",
       "cpu": 256,
       "memory": 512,
