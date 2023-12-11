@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-11T11:30:30+08:00
+Last Date: 2023-12-11T14:59:39+08:00
 References: 
 ---
 
@@ -22,9 +22,9 @@ References:
 ### Pipe application log to AWS Firelens
 
 - Add the following block to [[ECS#Task Definition]] inside the application container block
-- Update the heightened parts with your own values
+- Update the highlighted parts with your own values
 
-```json {5, 7-9}
+```json {4, 5, 7-9}
 "logConfiguration": {
   "logDriver": "awsfirelens",
   "options": {
@@ -40,12 +40,14 @@ References:
 ```
 
 ### AWS Firelens
-- Update the heightened parts with your own values
+
+- Update the highlighted parts with your own values
+
 ```json {4-5}
 {
 	"name": "log_router",
 	"image": "amazon/aws-for-fluent-bit:stable",
-	"cpu": 10,
+	"cpu": 256,
 	"memory": 512,
 	"portMappings": [],
 	"essential": true,
@@ -62,16 +64,18 @@ References:
 }
 ```
 
+>[!info] `"cpu": 256` means 256/1024 vCPU
+>- Click [here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-cpu-memory-error.html) to find out more about the hardware configuration
 ### Datadog Agent Sidecar
 
 - Add the following block to the same [[ECS#Task Definition]]
-- Update the heightened parts with your own values
+- Update the highlighted parts with your own values
 
 ```json {2, 4-5, 15, 19, 23, 27}
 {
 	"name": "datadog-agent",
 	"image": "public.ecr.aws/datadog/agent:latest",
-	"cpu": 10,
+	"cpu": 256,
 	"memory": 512,
 	"portMappings": [],
 	"essential": true,

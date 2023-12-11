@@ -9,8 +9,8 @@
     <title>Datadog APM</title>
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
     <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
-    <description>Abstract § Application Performance Monitoring (APM) Serverless Setup § The example below is based on ECS Fargate The entire setup is around Task Definition Pipe application log to AWS Firelens § Add the following block to Task Definition inside the application container block Update the heightened parts with your own values &quot;logConfiguration&quot;: { &quot;logDriver&quot;: &quot;awsfirelens&quot;, &quot;options&quot;: { &quot;Host&quot;: &quot;http-intake.</description>
-    <pubDate>Mon, 11 Dec 2023 03:30:30 GMT</pubDate>
+    <description>Abstract § Application Performance Monitoring (APM) Serverless Setup § The example below is based on ECS Fargate The entire setup is around Task Definition Pipe application log to AWS Firelens § Add the following block to Task Definition inside the application container block Update the highlighted parts with your own values &quot;logConfiguration&quot;: { &quot;logDriver&quot;: &quot;awsfirelens&quot;, &quot;options&quot;: { &quot;Host&quot;: &quot;http-intake.</description>
+    <pubDate>Mon, 11 Dec 2023 06:59:39 GMT</pubDate>
   </item><item>
     <title>ECS</title>
     <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</link>
