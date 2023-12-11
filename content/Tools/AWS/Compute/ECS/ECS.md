@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-17T17:31:00
-Last Date: 2023-12-11T10:07:16+08:00
+Last Date: 2023-12-11T10:38:00+08:00
 References: 
 ---
 ## Abstract
@@ -45,6 +45,7 @@ References:
 - 2 types - ``Bind Mounts`` & ``EFS Volumes``
 - [[ECS Fargate]] can only use ``EFS Volumes``, ``Bind Mounts`` are local file system volumes mounted directly from the host to the container. But [[ECS Fargate]] is [[Serverless]]
 ### Fargate
+- The **serverless** version of [[ECS]]
 - The one and only one **Deployment Strategy** is **Spread**
 - Doesn't have control over Deployment Strategy like the ECS powered by [[EC2]]. Because Fargate is serverless, so we don't really have to consider which az's ec2 instance has more cpu power, thus deploy new task to that ec2 in that az
 

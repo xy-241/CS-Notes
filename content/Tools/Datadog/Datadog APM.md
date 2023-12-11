@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-11T10:33:53+08:00
+Last Date: 2023-12-11T11:18:26+08:00
 References: 
 ---
 ## Abstract
@@ -16,25 +16,48 @@ References:
 - The example below is based on [[ECS#Fargate|ECS Fargate]]
 - The entire setup is around [[ECS#Task Definition]]
 ### Pipe application log to AWS Firelens
-- Add the following block to application container [[ECS#Task Definition]]
-```json {4}
+- Add the following block to [[ECS#Task Definition]] inside the application container block
+- Update the heightened parts with your own values
+```json {5, 7-9}
 "logConfiguration": {
 	"logDriver": "awsfirelens",
 	"options": {
-		"Host": "<THE_HOST_ENDPOINT_YOU_WANT>",
-		"Name": "<THE_NAME_YOU_WANT>",
+		"Host": "http-intake.logs.datadoghq.eu",
+		"Name": "datadog",
 		"TLS": "on",
 		"apikey": "<YOUR_API_KEY>",
-		"dd_service": "<THE_SERVER_NAME_YOU_WANT>",
+		"dd_service": "AEGIS-dev-backend",
+		"dd_source": "AEGIS-dev-backend-firelens",
 		"provider": "ecs"
-	},
-	"secretOptions": []
+	}
 }
 ```
-- Refer [Logging Endpoints](https://docs.datadoghq.com/logs/log_collection/?tab=host#logging-endpoints) for more information on the `Host`
+
+### AWS Firelens
+```json
+{
+	"name": "log_router",
+	"image": "amazon/aws-for-fluent-bit:stable",
+	"cpu": 10,
+	"memory": 512,
+	"portMappings": [],
+	"essential": true,
+	"environment": [],
+	"mountPoints": [],
+	"volumesFrom": [],
+	"user": "0",
+	"firelensConfiguration": {
+		"type": "fluentbit",
+		"options": {
+			"enable-ecs-log-metadata": "true"
+		}
+	}
+}
+```
 ### Datadog Agent Sidecar
 - Add the following block to the same [[ECS#Task Definition]]
-```json {10-11, 24-33}
+- Update the heightened parts with your own values
+```json {2, 4-5, 15, 19, 23, 27}
 {
 	"name": "datadog-agent",
 	"image": "public.ecr.aws/datadog/agent:latest",
@@ -44,33 +67,30 @@ References:
 	"essential": true,
 	"environment": [
 		{
-			"name": "DD_SITE",
-			"value": "datadoghq.eu"
-		},
-		{
 			"name": "ECS_FARGATE",
 			"value": "true"
 		},
 		{
+			"name": "DD_SERVICE",
+			"value": "aegis-dev-backend"
+		},
+		{
+			"name": "DD_ENV",
+			"value": "aegis-dev"
+		},
+		{
 			"name": "DD_API_KEY",
 			"value": "<YOUR_API_KEY>"
+		},
+		{
+			"name": "DD_SITE",
+			"value": "datadoghq.eu"
 		}
 	],
 	"mountPoints": [],
-	"volumesFrom": [],
-	"logConfiguration": {
-		"logDriver": "awslogs",
-		"options": {
-			"awslogs-create-group": "true",
-			"awslogs-group": "/ecs/myApp-datadog-agent",
-			"awslogs-region": "ap-southeast-1",
-			"awslogs-stream-prefix": "ecs"
-		},
-		"secretOptions": []
-	}
-},
+	"volumesFrom": []
+}
 ```
-- For `DD_SITE`, update it to the region you are using
-- `logConfiguration` pipes the log of the datadog agent sidecar to **CloudWatch**, can be useful for debugging
+
 
 ## Terminologies 
