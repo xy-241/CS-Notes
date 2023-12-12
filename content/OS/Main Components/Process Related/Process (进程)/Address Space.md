@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2023-12-12T21:56:43+08:00
+Last Date: 2023-12-12T22:01:29+08:00
 References: 
 ---
 ## Abstract
@@ -21,7 +21,7 @@ References:
 - The expansion and shrinking are done automatically
 - Can be used to store function variables
 #### XV6-RISCV Kernel Stack Example 
-```c {11}
+```c {13}
 // xv6-riscv kernel codes, start.c
 
 #include "types.h"
