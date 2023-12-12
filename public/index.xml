@@ -3,14 +3,14 @@
     <channel>
       <title>CS-Notes</title>
       <link>https://notes.yxy.ninja</link>
-      <description>Last 10 notes on CS-Notes</description>
+      <description>Last 40 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>CPU</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/CPU/CPU</link>
     <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/CPU</guid>
-    <description>Abstract § 2 Main Components - ALU, Control Unit Fire the necessary components based on the given Instruction Start in Kernel Mode. Before executing a program, the kernel initiates the switch to User Mode Benefits § Optmised for computation that requires sequential execution(One Instruction after another Instruction), Branching and logic Terminologies § 32-bit § Width that are 32 bits each 64-bit § Width that are 32 bits each Scratch Area § A small amount of high-speed memory that is used to store temporary data Typically located on the CPU die itself Core § Hardware that executes Instruction independently from other cores .</description>
-    <pubDate>Tue, 12 Dec 2023 14:58:22 GMT</pubDate>
+    <description>Abstract § 2 Main Components - ALU, Control Unit Fire the necessary components based on the given Instruction Start in Kernel Mode. Before executing a program, the kernel initiates the switch to User Mode Benefits § Optmised for computation that requires sequential execution(One Instruction after another Instruction), Branching and logic Terminologies § 32-bit § Width that are 32 bits each 64-bit § Width that are 32 bits each Scratch Area § A small amount of high-speed memory that is used to store temporary data Typically located on the CPU die itself Core § One single unit of CPU that executes Instruction independently from other cores .</description>
+    <pubDate>Tue, 12 Dec 2023 15:00:11 GMT</pubDate>
   </item><item>
     <title>Multi-threading</title>
     <link>https://notes.yxy.ninja/OS/MISC/CPU/Multi-threading</link>
@@ -65,6 +65,186 @@
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Thread-Table</guid>
     <description>#os Abstract To keep track of the Threads in that Process Similar to Kernel’s Process Table, except that it keeps track only of the per-thread properties Managed by the runtime system in User-space Threads (N to 1) &amp; Kernel in Kernel Threads (1 to 1) .</description>
     <pubDate>Tue, 12 Dec 2023 14:16:46 GMT</pubDate>
+  </item><item>
+    <title>Kernel Threads (1 to 1)</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Kernel-Threads-(1-to-1)</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Kernel-Threads-(1-to-1)</guid>
+    <description>#os Put the Thread entirely in Kernel Space Thread Table inside Kernel When a thread blocks, the Kernel, at its option, can run either another thread from the same Process (if one is ready) or a thread from a different process Pro § Do not require any new, nonblocking System Call (系统调用) If one thread in a process causes a Page Faults, the kernel can easily check to see if the process has any other runnable threads, and if so, run one of them while waiting for the required page to be brought in from the disk Cons § All calls that might block a Thread are implemented as System Call (系统调用), at considerably greater cost than a call to a runtime system procedure Relatively greater cost of creating and destroying threads in the kernel Recycle threads When a thread is destroyed, it is marked as not runnable, but its kernel data structures are not otherwise affected When a new thread must be created, an old thread is reactivated, saving some overhead Thread recycling is also possible for user-level threads, but since the thread-management overhead is much smaller, there is less incentive to do this.</description>
+    <pubDate>Tue, 12 Dec 2023 14:16:46 GMT</pubDate>
+  </item><item>
+    <title>Address Space</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</guid>
+    <description>Abstract § A list of memory locations from 0 to some maximum (Virtual Memory), which Process can read &amp; write 3 Components - Stack Segment, Data Segment and Text Segment 3 Components § Stack Segment § Stack (FILO) structure Grows downwards The expansion and shrinking are done automatically Can be used to store function variables XV6-RISCV Kernel Stack Example § // xv6-riscv kernel codes, start.</description>
+    <pubDate>Tue, 12 Dec 2023 14:15:02 GMT</pubDate>
+  </item><item>
+    <title>Registers</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/CPU/Registers</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/Registers</guid>
+    <description>Abstract § A group of Latch Accessible from Instruction 2 main purposes § Storying values during computations (like Memory Address &amp; value) Configuring CPU Register Type § Instruction Address Register § The register that contains the Memory Address to retrieve the Instruction Instruction Register § Contains Instruction retrieved from Main Memory Control &amp; Status Registers (CSRs) § There are multiple such register Stores information about the current state of the processor or device CSRs are typically used to control various aspects of the processor’s operation, such as interrupt handling, memory management, and power management etc Stack Pointer § Holds the address of the top of the Stack Segment in the current execution context MIPS Registers § Terminologies § Width § The number of Bits inside a register File § A collection of registers that CPU can quickly store and retrieve Data Memory Mapped § Register that is treated as a Main Memory location This means that the register can be accessed using the same Instruction and addressing modes as memory.</description>
+    <pubDate>Tue, 12 Dec 2023 13:47:13 GMT</pubDate>
+  </item><item>
+    <title>Mathematical Argument</title>
+    <link>https://notes.yxy.ninja/Discrete-Math/Mathematical-Argument</link>
+    <guid>https://notes.yxy.ninja/Discrete-Math/Mathematical-Argument</guid>
+    <description>Abstract § A sequence of Mathematical Statement ending in a Conclusion Every step should follow logically from all previous steps IF (p AND .</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>MacOs Setup</title>
+    <link>https://notes.yxy.ninja/MacOs-Setup</link>
+    <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
+    <description>Abstract § Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>Network Protocol</title>
+    <link>https://notes.yxy.ninja/Networking/Network-Protocol</link>
+    <guid>https://notes.yxy.ninja/Networking/Network-Protocol</guid>
+    <description>Abstract § The Host Host Quote Definites the format and the order of messages exchanged between 2 or more communicating entities, as well as actions taken on the transmission and/or receipt of a message or other event .</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>Host</title>
+    <link>https://notes.yxy.ninja/Networking/Terminologies/Host</link>
+    <guid>https://notes.yxy.ninja/Networking/Terminologies/Host</guid>
+    <description>Abstract § Also known as End System Computers &amp; other devices connected to Internet, thus has a Socket Interface Connected together by a network of Communication Links &amp; Packet Switches Can be identified by Hostname or IP Address 2 types § Client § Desktops, laptops &amp; smartphones, browsers etc Server § Host applications such as web browser program Web servers etc .</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>Process</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</guid>
+    <description>Abstract § Container that holds all the information needed to run a program, Abstraction over running program 2 Components - Address Space, Process Control Block (PCB) Process usually don’t share Main Memory among themselves for isolation purposes.</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>Node.js</title>
+    <link>https://notes.yxy.ninja/Tools/Node.js/Node.js</link>
+    <guid>https://notes.yxy.ninja/Tools/Node.js/Node.js</guid>
+    <description>Abstract § Not a Programming Language or Server Is a JavaScript Runtime Environment Terminologies § JavaScript Runtime Environment § A environment to run Javascript, independent of Browser Module § Basically JavaScript Module The methods to be explicitly exposed, there are mainly 3 ways module.</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>brk()</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</guid>
+    <description>#os Specifies the new Memory Address where the Address Space is to end Not defined in Portable Operating System Interface (POSIX) Programmer encouraged to use malloc .</description>
+    <pubDate>Tue, 12 Dec 2023 13:24:46 GMT</pubDate>
+  </item><item>
+    <title>Fallacy</title>
+    <link>https://notes.yxy.ninja/Discrete-Math/Terminologies/Fallacy</link>
+    <guid>https://notes.yxy.ninja/Discrete-Math/Terminologies/Fallacy</guid>
+    <description>Abstract § Error in reasoning that results in an invalid Mathematical Argument 3 common fallacies causes Using Ambiguous Premises Circular Reasoning (Assuming what is to be proved without having derived it from the Premise) Jumping to a Conclusion Common Errors § Converse Error § Given a -&gt; b is true &amp; b is true, we conclude a is true Going against Modus Tollens Inverse Error § Given a-&gt; b is true &amp; ~a is true, we conclude ~b is true Going against Vacuously True Terminologies §.</description>
+    <pubDate>Tue, 12 Dec 2023 10:04:33 GMT</pubDate>
+  </item><item>
+    <title>Datadog APM</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
+    <description>Abstract § Application Performance Monitoring (APM) Serverless Setup § The example below is based on ECS Fargate The entire setup is around Task Definition, we need to add in 3 parts into it - Pipe application log to AWS Firelens, AWS Firelens and Datadog Agent Sidecar Pipe application log to AWS Firelens § Add the following block inside the application container block Update the highlighted parts with your own values &quot;logConfiguration&quot;: { &quot;logDriver&quot;: &quot;awsfirelens&quot;, &quot;options&quot;: { &quot;Host&quot;: &quot;http-intake.</description>
+    <pubDate>Tue, 12 Dec 2023 05:44:26 GMT</pubDate>
+  </item><item>
+    <title>ECS</title>
+    <link>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</link>
+    <guid>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</guid>
+    <description>Abstract § A lightweight container orchestration service We can mount Volume to it for data that can’t be lost when Container is terminated Components § Container § We can obtain a shell into it using ECS Exec Obtain Private IP of the container, must have curl &amp;&amp; jq (JSON Processor) containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r &#039;.</description>
+    <pubDate>Tue, 12 Dec 2023 05:39:54 GMT</pubDate>
+  </item><item>
+    <title>Stateless protocol</title>
+    <link>https://notes.yxy.ninja/Networking/Stateless-protocol</link>
+    <guid>https://notes.yxy.ninja/Networking/Stateless-protocol</guid>
+    <description>#networking Host don’t maintain information about the Host, vice versa Example HTTP Server .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>Internet Protocol (IP)</title>
+    <link>https://notes.yxy.ninja/Networking/Internet-Protocol-(IP)</link>
+    <guid>https://notes.yxy.ninja/Networking/Internet-Protocol-(IP)</guid>
+    <description>#networking Specifies the format of Packet that are sent &amp; received among Routers and Host .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>TCP</title>
+    <link>https://notes.yxy.ninja/Networking/Transport-Layer/TCP/TCP</link>
+    <guid>https://notes.yxy.ninja/Networking/Transport-Layer/TCP/TCP</guid>
+    <description>Abstract § Implemented by the OS Kernel Stateful Protocol Lab § Create a TCP Server § Listen on port 8080 over TCP Create a new Process for each new TCP Connection socat - TCP-LISTEN:8080,fork Create a TCP Client § Connect to localhost over port 8080 over TCP telnet 127.</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>TCP Connection</title>
+    <link>https://notes.yxy.ninja/Networking/Transport-Layer/TCP/TCP-Connection</link>
+    <guid>https://notes.yxy.ninja/Networking/Transport-Layer/TCP/TCP-Connection</guid>
+    <description>#networking Established after TCP Handshake Resource intensive on both Host &amp; Host side because TCP is Stateful Warm up period To allow TCP to know how much data it can handle Usually browser will keep multiple TCP Connection to the same Host to have a balance between good performance &amp; resource usage(Chrome &amp; Firefox default 6) .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>TLS Certificate</title>
+    <link>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/TLS-Certificate</link>
+    <guid>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/TLS-Certificate</guid>
+    <description> Abstract Contains the Public Key for Host to encrypt the Symmetric Key used for encrypting all the subsequent data transferring between Host &amp; Host .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>Symmetric Key Exchange</title>
+    <link>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/Symmetric-Key-Exchange</link>
+    <guid>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/Symmetric-Key-Exchange</guid>
+    <description>#networking ##abstract Host uses Public Key in TLS Certificate to encrypt the Symmetric Key Host use its Private Key to decrypt Symmetric Key Now both Host &amp; Host can communicate with each other over Network with data encrypt in-transit with the help of the Symmetric Key In this case, the Symmetric Key also known as Session Key .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>UDP</title>
+    <link>https://notes.yxy.ninja/Networking/Transport-Layer/UDP</link>
+    <guid>https://notes.yxy.ninja/Networking/Transport-Layer/UDP</guid>
+    <description>Abstract § UDP Server written in NodeJS Benefits § Smaller Packets § No overhead to implement Benefits Less Bandwidth § Because Smaller Packets Faster than TCP § No waiting incurred by Benefits Stateless protocol § Entities can communicate without setting up connection first Support Horizontal Scaling § Cons § No Acknowledgment § No Guaranteed Delivery § Connectionless § No Congestion Control § No Ordered Packets § Security § Host has no idea about Host, anyone can communicate with Host, can be attacked by DDoS easily.</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>500 (Internal Server Error)</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/5XX-Codes/500-(Internal-Server-Error)</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/5XX-Codes/500-(Internal-Server-Error)</guid>
+    <description>#networking Note Some errors on the Host Example Unable to reach data from Database .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>Content-Type</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Protocol-Components/HTTP-Headers/Content-Type</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Protocol-Components/HTTP-Headers/Content-Type</guid>
+    <description>#networking Telling the Host what is the Object types, so the Object can be better rendered Example content-type: application/pdf The browser is able to open an in-browser pdf reader .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>502 (Bad Gateway)</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/5XX-Codes/502-(Bad-Gateway)</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/5XX-Codes/502-(Bad-Gateway)</guid>
+    <description>#networking Note Network Gateway unable to fulfil the HTTP Request from the Host Example AWS ALB unable to reach out to the Target Group .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>301 (Permanent Redirect)</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/3XX-Codes/301-(Permanent-Redirect)</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/3XX-Codes/301-(Permanent-Redirect)</guid>
+    <description>#networking Note Telling the client (usually a web browser or a web crawler) that the requested resource has moved permanently to a new location Example When Host accessing via HTTP, but Host only want to server via HTTPS .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>404 (Unfound)</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/4XX-Codes/404-(Unfound)</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/4XX-Codes/404-(Unfound)</guid>
+    <description>#networking Note Resources can’t be found on Host .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>204 (No Content)</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/2XX-Codes/204-(No-Content)</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/2XX-Codes/204-(No-Content)</guid>
+    <description>#networking Note Host successfully processed the HTTP Request, but isn&#039;t returning any content .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>POST</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/POST</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/POST</guid>
+    <description>#networking Creates new data Each call has a Side-Effect (new data be created) Has a Request Body Parameters in Request Body, Request Header &amp; URL Use cases Create resources on Host like api keys etc .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>PATCH</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/PATCH</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/PATCH</guid>
+    <description>#networking Updates existing data Each call has a Side-Effect (data updated) Has a Request Body Parameters in Request Body, Request Header &amp; URL Use cases Update resources created on Host .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>DELETE</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/DELETE</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/DELETE</guid>
+    <description>#networking Delete data Each call has a Side-Effect (delete data) Doesn&#039;t have a Request Body Parameters in Request Header &amp; URL Use cases Delete resources created on Host .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>HTTP 1.2 Server Push</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.2/HTTP-1.2-Server-Push</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.2/HTTP-1.2-Server-Push</guid>
+    <description>#networking Abstract Host push Object it thinks Host need without the need to receiving any specific HTTP Request for the object If Host click the wrong web page, a lot of Object will be received Potential DDoS - one single HTTP Request can trigger multiple HTTP Response .</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
