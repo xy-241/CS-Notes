@@ -3,13 +3,13 @@
 >- The [[Kernel]] knows nothing about them
 >- As far as the kernel is concerned, it is managing single-threaded [[Process]]
 >- [[Thread]] are implemented by a library
->- The threads run on top of a [[Pthreads (POSIX threads) | Runtime-System]]
+>- The threads run on top of a [[User Thread| Runtime-System]]
 >![[thread_implementation_in_user_space.png]]
 
 >[!note] Each process needs its own private [[Thread Table]]
 
 >[!note] When thread becoming blocked locally
->- Thread calls [[Pthreads (POSIX threads) | run-time system]] procedure
+>- Thread calls [[User Thread| run-time system]] procedure
 >	1. checks to see if the thread must be put into blocked state. 
 >	2. If so, it stores the thread’s registers (i.e., its own) in the thread table, looks in the table for a ready thread to run
 
@@ -42,6 +42,6 @@ the entire process until the disk I/O is complete, even though other threads mig
 be runnable
 
 >[!caution]  If a thread starts running, no other thread in that process will ever run unless the first thread voluntarily gives up the CPU
->Within a single process, there are no [[Interrupts (中断)]], making it impossible to schedule processes round-robin fashion (taking turns). The [[Interrupts (中断)]] from [[Pthreads (POSIX threads) | Runtime system]] is resource intensive
+>Within a single process, there are no [[Interrupts (中断)]], making it impossible to schedule processes round-robin fashion (taking turns). The [[Interrupts (中断)]] from [[User Thread| Runtime system]] is resource intensive
 
 >[!caution] Programmers generally want threads in applications where the threads block often

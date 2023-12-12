@@ -13,7 +13,7 @@
 
 
 ## Cons
->[!caution] All calls that might block a [[Thread]] are implemented as [[System Call (系统调用)]], at considerably greater cost than a call to a [[Pthreads (POSIX threads) | runtime system]] procedure
+>[!caution] All calls that might block a [[Thread]] are implemented as [[System Call (系统调用)]], at considerably greater cost than a call to a [[User Thread| runtime system]] procedure
 >
 
 >[!caution] Relatively greater cost of creating and destroying threads in the kernel

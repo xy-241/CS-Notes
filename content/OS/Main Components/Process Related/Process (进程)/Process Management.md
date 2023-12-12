@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-12-11, 22:54
-Last Date: 2023-12-12T21:28:56+08:00
+Last Date: 2023-12-12T22:16:56+08:00
 References: 
 ---
 ## Abstract
-- Required in an [[OS]] that has multiple [[Process]] that want to run at the same, like in the [[Multi-Programming]] or [[Multitasking]] systems. Because [[Process]] unlike [[Pthreads (POSIX threads)#^b73e18 |Thread]] will give up its [[CPU]] for other [[Process]]
+- Required in an [[OS]] that has multiple [[Process]] that want to run at the same, like in the [[Multi-Programming]] or [[Multitasking]] systems. Because [[Process]] unlike [[User Thread#^b73e18|Thread]] will give up its [[CPU]] for other [[Process]]
 
 
 ## Components
