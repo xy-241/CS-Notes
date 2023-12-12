@@ -1,5 +1,5 @@
 #distributed_computing
->[!note] A [[Protocol]] for implementing [[(Distributed) Consensus]]
+>[!note] A [[Network Protocol]] for implementing [[(Distributed) Consensus]]
 
 >[!note] 3 states for a node
 >1. [[Follower Nodes]]

@@ -1,2 +1,2 @@
 #distributed_computing 
->[!note] Each [[servers]] has a [[State Machine]] & [[Log]]
+>[!note] Each [[Host]] has a [[State Machine]] & [[Log]]

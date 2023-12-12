@@ -6,65 +6,65 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Discrete Math</title>
-    <link>https://notes.yxy.ninja/Discrete-Math/Discrete-Math</link>
-    <guid>https://notes.yxy.ninja/Discrete-Math/Discrete-Math</guid>
-    <description>Abstract § Mathematical Proof in Mathematical Argument Loosely a collection of interesting applied math topics outside of Calculus Terminologies § Sets § N - All Natural number (0,1,2,3,4…) Z - All integers (315, -9045) Q - All rational numbers (0.</description>
-    <pubDate>Mon, 11 Dec 2023 15:45:25 GMT</pubDate>
-  </item><item>
     <title>Address Space</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space/Address-Space</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space/Address-Space</guid>
-    <description>Abstract § A list of memory locations from 0 to some maximum (Virtual Memory), which Process can read &amp; write 3 Components 3 Components § Stack Segment § Note Stack (FILO), function variables Grows downwards Expansion done automatically Data Segment Text Segment .</description>
-    <pubDate>Mon, 11 Dec 2023 15:23:30 GMT</pubDate>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</guid>
+    <description>Abstract § A list of memory locations from 0 to some maximum (Virtual Memory), which Process can read &amp; write 3 Components 3 Components § Stack Segment § Stack (FILO) structure Grows downwards The expansion and shrinking are done automatically Can be used to store function variables XV6-RISCV Kernel Stack Example § // xv6-riscv kernel codes, start.</description>
+    <pubDate>Tue, 12 Dec 2023 13:56:43 GMT</pubDate>
+  </item><item>
+    <title>Registers</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/CPU/Registers</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/Registers</guid>
+    <description>Abstract § A group of Latch Accessible from Instruction 2 main purposes § Storying values during computations (like Memory Address &amp; value) Configuring CPU Register Type § Instruction Address Register § The register that contains the Memory Address to retrieve the Instruction Instruction Register § Contains Instruction retrieved from Main Memory Control &amp; Status Registers (CSRs) § There are multiple such register Stores information about the current state of the processor or device CSRs are typically used to control various aspects of the processor’s operation, such as interrupt handling, memory management, and power management etc Stack Pointer § Holds the address of the top of the Stack Segment in the current execution context MIPS Registers § Terminologies § Width § The number of Bits inside a register File § A collection of registers that CPU can quickly store and retrieve Data Memory Mapped § Register that is treated as a Main Memory location This means that the register can be accessed using the same Instruction and addressing modes as memory.</description>
+    <pubDate>Tue, 12 Dec 2023 13:47:13 GMT</pubDate>
+  </item><item>
+    <title>Mathematical Argument</title>
+    <link>https://notes.yxy.ninja/Discrete-Math/Mathematical-Argument</link>
+    <guid>https://notes.yxy.ninja/Discrete-Math/Mathematical-Argument</guid>
+    <description>Abstract § A sequence of Mathematical Statement ending in a Conclusion Every step should follow logically from all previous steps IF (p AND .</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>MacOs Setup</title>
+    <link>https://notes.yxy.ninja/MacOs-Setup</link>
+    <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
+    <description>Abstract § Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>Network Protocol</title>
+    <link>https://notes.yxy.ninja/Networking/Network-Protocol</link>
+    <guid>https://notes.yxy.ninja/Networking/Network-Protocol</guid>
+    <description>Abstract § The Host Host Quote Definites the format and the order of messages exchanged between 2 or more communicating entities, as well as actions taken on the transmission and/or receipt of a message or other event .</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>Host</title>
+    <link>https://notes.yxy.ninja/Networking/Terminologies/Host</link>
+    <guid>https://notes.yxy.ninja/Networking/Terminologies/Host</guid>
+    <description>Abstract § Also known as End System Computers &amp; other devices connected to Internet, thus has a Socket Interface Connected together by a network of Communication Links &amp; Packet Switches Can be identified by Hostname or IP Address 2 types § Client § Desktops, laptops &amp; smartphones, browsers etc Server § Host applications such as web browser program Web servers etc .</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+  </item><item>
+    <title>Process Management</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</guid>
+    <description>Abstract § Required in an OS that has multiple Process that want to run at the same, like in the Multi-Programming or Multitasking systems. Because Process unlike Thread will give up its CPU for other Process Components § Process Priority § A value that determines which Process should get executed first Process Scheduler § A program that perform Context Switch of Process based on the Process Priority Linux uses CFS Terminologies § Niceness § An parameter that can be used to adjust the Process Priority for the Process Scheduler In Linux -20 is most not nice 19 is most nice Command to adjust niceness - renice .</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
   </item><item>
     <title>Process</title>
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</link>
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</guid>
     <description>Abstract § Container that holds all the information needed to run a program, Abstraction over running program 2 Components - Address Space, Process Control Block (PCB) Process usually don’t share Main Memory among themselves for isolation purposes.</description>
-    <pubDate>Mon, 11 Dec 2023 15:16:44 GMT</pubDate>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
   </item><item>
-    <title>Process Control Block (PCB)</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Control-Block-(PCB)</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Control-Block-(PCB)</guid>
-    <description>Abstract § Contains Metadata of the Process Resources, so that Process can be restarted later as if it had never been stopped Terminologies § Process Table § A collection of Process Control Block (PCB) An array of structure .</description>
-    <pubDate>Mon, 11 Dec 2023 15:15:17 GMT</pubDate>
+    <title>Node.js</title>
+    <link>https://notes.yxy.ninja/Tools/Node.js/Node.js</link>
+    <guid>https://notes.yxy.ninja/Tools/Node.js/Node.js</guid>
+    <description>Abstract § Not a Programming Language or Server Is a JavaScript Runtime Environment Terminologies § JavaScript Runtime Environment § A environment to run Javascript, independent of Browser Module § Basically JavaScript Module The methods to be explicitly exposed, there are mainly 3 ways module.</description>
+    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
   </item><item>
-    <title>Interrupts (中断)</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Interrupts-(%E4%B8%AD%E6%96%AD)</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Interrupts-(%E4%B8%AD%E6%96%AD)</guid>
-    <description>Abstract § When an interrupt occurs, Program Counter jumps to Interrupt Handler (Interrupt Service Routine, ISR) &amp; execute 2 forms - Signal (Software Interrupt) &amp; Hardware interrupts (外中断) Benefits § We don’t need to get CPU to keep Polling for response which may take a long time to produce.</description>
-    <pubDate>Mon, 11 Dec 2023 15:09:29 GMT</pubDate>
-  </item><item>
-    <title>Control Unit</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</guid>
-    <description>Abstract § Understand the Instruction based on the corresponding Instruction Set Architecture (ISA) Then decide what Registers, ALU &amp; Main Memory to enable to carry out the Operation by genrating Control Signal Components § Program Counter § Tell CPU which Instruction to execute at any given moment Terminologies § Control Signal § Electric signals that tells CPU Datapath, Main Memory &amp; IO Devices what to do according to program Instruction .</description>
-    <pubDate>Mon, 11 Dec 2023 15:09:07 GMT</pubDate>
-  </item><item>
-    <title>Latency Number</title>
-    <link>https://notes.yxy.ninja/OS/Terminologies/Latency-Number</link>
-    <guid>https://notes.yxy.ninja/OS/Terminologies/Latency-Number</guid>
-    <description>#os latency number visual.webp Put those times on a human scale by setting 1ns CPU time = 1s human time. a clock cycle is ~0.1-0.2s, which is more or less instantaneous for humans.</description>
-    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
-  </item><item>
-    <title>High-performance Computing</title>
-    <link>https://notes.yxy.ninja/OS/Terminologies/High-performance-Computing</link>
-    <guid>https://notes.yxy.ninja/OS/Terminologies/High-performance-Computing</guid>
-    <description>Abstract § Terminologies § Parallelism (并行性) § Thread/Process running at the same time, not an illusion created with Context Switch where only a single Thread/Process is running Mainly for improving performance with the resources on hand Concurrency (并发) § Illusion of multiple Thread/Process running in parallel, but it is actually achieve with quick Context Switch where only a single Thread/Process is running at any point of the time Mainly for handling multiple requests or events .</description>
-    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
-  </item><item>
-    <title>Timeslice (Quantums)</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Timeslice/Timeslice-(Quantums)</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Timeslice/Timeslice-(Quantums)</guid>
-    <description>#os Abstract The duration an Process Scheduler allows a Process to run before Preemption Performance issues with small Timeslice Context Switching is an expense operation So we usually has a Minimum Granularity to ensure it is still worth to perform Context Switch on an overall performance perspective It also means the Target Latency is exceeded when there is enough Process for Minimum Granularity to take effect - Process will seem laggy on user side, so rebooting to clear some Process will make computer seems faster .</description>
-    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
-  </item><item>
-    <title>User-space Threads (N to 1)</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</guid>
-    <description>#os Put the Thread entirely in User Space The Kernel knows nothing about them As far as the kernel is concerned, it is managing single-threaded Process Thread are implemented by a library The threads run on top of a Runtime-System Each process needs its own private Thread Table When thread becoming blocked locally Thread calls run-time system procedure checks to see if the thread must be put into blocked state.</description>
-    <pubDate>Mon, 11 Dec 2023 15:00:51 GMT</pubDate>
+    <title>brk()</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</guid>
+    <description>#os Specifies the new Memory Address where the Address Space is to end Not defined in Portable Operating System Interface (POSIX) Programmer encouraged to use malloc .</description>
+    <pubDate>Tue, 12 Dec 2023 13:24:46 GMT</pubDate>
   </item>
     </channel>
   </rss>

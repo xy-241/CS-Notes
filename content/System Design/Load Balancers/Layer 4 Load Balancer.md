@@ -13,8 +13,8 @@ Last Date:
 - [[Networking/Terminologies/Reverse Proxy]]
 - Uses [[NAT]] to [[Proxy]] the incoming/outgoing traffic
 - Listener can only be either `TCP`, `TCP_UDP`, `TLS` or `UDP` (Based on AWS experience)
-- [[Target Group]] can only use [[Protocol]] `TCP`, `TCP_UDP`, `TLS` or `UDP` (Based on AWS experience)
-- [[Health Check]] can use [[Protocol]] `TCP`, `HTTP` or `HTTPS` (Based on AWS experience)
+- [[Target Group]] can only use [[Network Protocol]] `TCP`, `TCP_UDP`, `TLS` or `UDP` (Based on AWS experience)
+- [[Health Check]] can use [[Network Protocol]] `TCP`, `HTTP` or `HTTPS` (Based on AWS experience)
 
 ## Benefits
 ### Simpler load balancing

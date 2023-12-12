@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-17T17:31:00
-Last Date: 2023-12-11T15:08:41+08:00
+Last Date: 2023-12-12T13:39:54+08:00
 References: 
 ---
 
 ## Abstract
 
 - A lightweight container orchestration service
-- We can mount [[#Volume]] to it for data that can be lost when [[#Container]] is terminated
+- We can mount [[#Volume]] to it for data that can't be lost when [[#Container]] is terminated
 
 ## Components
 
@@ -34,22 +34,22 @@ containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r '.Networks[0].IPv4
 
 - Similar to **EC2 Launch Template**
 - Required to spin up [[#Task]]
-- It defines the [[#Hardware Details]], [[IAM Role]], [[Docker Image]] and [[Docker Container]] Config (AMI Config like User Data Script)
+- It defines the *Hardware Details*, [[IAM Role]], [[Docker Image]] and [[Docker Container]] Config (AMI Config like User Data Script)
+>[!tip]  Hardware Details
+>- `"cpu": 256` means 256/1024 vCPU
+>- Click [here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-cpu-memory-error.html) to find out more about the hardware configuration
 
-#### Hardware Details
 
-- `"cpu": 256` means 256/1024 vCPU
-- Click [here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-cpu-memory-error.html) to find out more about the hardware configuration
+
 
 ### Service
 
 - Similar to [[Auto Scaling Group]] in [[EC2]]
-    > [!info] Defines
-    >
-    > -   What [[#Task Definition]] to use
-    > -   [[VPC]] (like which [[VPC Subnet]] to use)
-    > -   Connecting to [[ALB]] & [[Target Group]]
-    > -   [[Auto Scaling Group]]
+>[!info] Defines
+>- What [[#Task Definition]] to use
+>- [[VPC]] (like which [[VPC Subnet]] to use)
+>- Connecting to [[ALB]] & [[Target Group]]
+>- [[Auto Scaling Group]]
 
 ## Terminologies
 

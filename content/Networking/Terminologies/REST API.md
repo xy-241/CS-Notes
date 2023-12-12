@@ -11,9 +11,9 @@ Last Date:
 ---
 ## Abstract
 - REpresentational State Transfer
-- A way to *architecture* an *interface* that enables communication between [[Clients]] & [[Servers]]
+- A way to *architecture* an *interface* that enables communication between [[Host]] & [[Host]]
 - Usually implemented in [[HTTP]]
-- Not a [[Protocol]], but a set of rules - [[#6 Rules]]
+- Not a [[Network Protocol]], but a set of rules - [[#6 Rules]]
 - [[Status Code]] is used to tell the client the complete status of the request
 - Alert-natives are [[GraphQL]] & [[gRPC]] 
 
@@ -38,8 +38,8 @@ Delete - DELETE
 ### Cacheable
 - Support *cacheing* because [[Stateless protocol | Stateless]], `Get` requests are usually cached
 ### Layer System
-- We can have a [[Load Balancer]] infront of the [[Servers]]
-- This increases the difficulty for [[Clients]] to know the [[Servers]] architecture
+- We can have a [[Load Balancer]] infront of the [[Host]]
+- This increases the difficulty for [[Host]] to know the [[Host]] architecture
 - Add in an extra layer of security like *API Gateway* & *Web Application Firewall*
 - And it is easier to scale the architecture - add in *Lambda Functions* for example with the layers acting as abstraction layers
 ### Code on Demand

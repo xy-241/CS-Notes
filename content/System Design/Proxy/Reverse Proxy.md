@@ -11,17 +11,17 @@ References:
 ---
 ## Abstract
 - Sits between [[Internet]] and *Severs*
-- We can have multiple layers of *Reverse Proxy* between the [[Clients]] and [[servers]] to form a [[#Ingress Service]]
+- We can have multiple layers of *Reverse Proxy* between the [[Host]] and [[Host]] to form a [[#Ingress Service]]
 
 
 ## Benefits
 ### Stronger Protection Against [[DDoS]]
 - [[IP Address]] of *Servers* is hidden behind *Reverse Proxy* from clients
 ### Cacheing
-### Relief Load on [[servers]]
+### Relief Load on [[Host]]
 - Handles [[SSL Termination]]
 ### Load Balancing
-- Distribute traffic from [[Clients]] to *Servers* evenly to prevent any single *compute* from overloading 
+- Distribute traffic from [[Host]] to *Servers* evenly to prevent any single *compute* from overloading 
 
 
 ### Ingress Service

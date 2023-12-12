@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-04T19:24:00
-Last Date: 
-References:
+Last Date: 2023-12-12T21:28:56+08:00
+References: 
 ---
 ## Abstract
 - A sequence of [[Mathematical Statement]] ending in a [[#Conclusion]]

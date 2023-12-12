@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 - Establish a *relationship* between *two data sources*
-- Connecting networks that use different [[Protocol]], extending the range of a network
+- Connecting networks that use different [[Network Protocol]], extending the range of a network
 
 ## Use Case
 ### Create Relay Between Local to Remote

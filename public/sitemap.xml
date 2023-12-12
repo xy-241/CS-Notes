@@ -87,10 +87,13 @@
     <lastmod>2023-08-02T13:51:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/CPU/Control-Unit</loc>
-    <lastmod>2023-12-11T15:09:07.000Z</lastmod>
+    <lastmod>2023-12-12T02:41:31.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/CPU/Duty-Cycle</loc>
     <lastmod>2023-08-02T13:53:37.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Computer-Organisation/CPU/Registers</loc>
+    <lastmod>2023-12-12T13:47:13.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/Circuit-Design</loc>
     <lastmod>2023-07-20T10:47:27.000Z</lastmod>
@@ -378,7 +381,7 @@
     <lastmod>2023-07-30T08:07:58.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Array/Array</loc>
-    <lastmod>2023-10-08T12:10:15.570Z</lastmod>
+    <lastmod>2023-12-12T02:24:35.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Array/Circular-Array</loc>
     <lastmod>2023-08-29T05:56:03.548Z</lastmod>
@@ -420,16 +423,16 @@
     <lastmod>2023-08-22T12:50:08.378Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-Function/Hash-Function</loc>
-    <lastmod>2023-09-07T08:41:55.777Z</lastmod>
+    <lastmod>2023-12-12T02:40:58.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-Map</loc>
-    <lastmod>2023-09-28T05:12:23.922Z</lastmod>
+    <lastmod>2023-12-12T02:54:18.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Avoid/Hash-Map-Expansion</loc>
     <lastmod>2023-08-14T11:15:40.640Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Hash-Collision</loc>
-    <lastmod>2023-11-15T09:26:05.362Z</lastmod>
+    <lastmod>2023-12-12T02:44:15.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Live-With/Open-Addressing/Double-Hashing</loc>
     <lastmod>2023-08-17T12:11:08.841Z</lastmod>
@@ -442,9 +445,6 @@
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Live-With/Separate-Chaining</loc>
     <lastmod>2023-10-07T08:38:28.287Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/Hash-collision/Load-Factor</loc>
-    <lastmod>2023-08-14T11:09:41.234Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/Circular-Linked-List</loc>
     <lastmod>2023-08-27T06:44:16.884Z</lastmod>
@@ -522,7 +522,7 @@
     <lastmod>2023-12-11T15:45:25.243Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Discrete-Math/Mathematical-Argument</loc>
-    <lastmod>2023-11-20T06:59:23.411Z</lastmod>
+    <lastmod>2023-12-12T13:28:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Discrete-Math/Mathematical-Proof</loc>
     <lastmod>2023-11-10T13:25:29.962Z</lastmod>
@@ -543,13 +543,13 @@
     <lastmod>2023-11-09T02:36:14.937Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Discrete-Math/Terminologies/Fallacy</loc>
-    <lastmod>2023-12-11T13:32:45.000Z</lastmod>
+    <lastmod>2023-12-12T10:04:33.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Consensus/(Distributed)-Consensus-Algorithms</loc>
-    <lastmod>2023-08-03T04:45:49.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.381Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Consensus/(Distributed)-Consensus</loc>
-    <lastmod>2023-08-03T04:47:26.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.410Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Consensus/Algorithms/Raft-Consensus-Algorithm</loc>
     <lastmod>2023-08-03T05:10:57.000Z</lastmod>
@@ -564,7 +564,7 @@
     <lastmod>2023-08-03T05:51:11.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Consensus/Raft-Consensus-Algorithm/3-types-of-Nodes/Leader-Nodes</loc>
-    <lastmod>2023-08-03T06:19:39.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.428Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Consensus/Raft-Consensus-Algorithm/Append-Entries</loc>
     <lastmod>2023-08-03T06:45:35.000Z</lastmod>
@@ -582,13 +582,13 @@
     <lastmod>2023-08-03T06:37:39.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Consensus/Raft-Consensus-Algorithm/Log-Replication/Log-Replication</loc>
-    <lastmod>2023-08-03T06:47:53.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.456Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Consensus/Raft-Consensus-Algorithm/Raft-Consensus-Algorithm</loc>
-    <lastmod>2023-08-03T07:11:30.000Z</lastmod>
+    <lastmod>2023-12-12T03:41:14.948Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Distributed-Computing/Replicated-State-Machine/Replicated-State-Machine</loc>
-    <lastmod>2023-08-03T04:48:15.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.461Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Java/Deque%3CT%3E</loc>
     <lastmod>2023-09-04T10:49:41.585Z</lastmod>
@@ -687,304 +687,250 @@
     <lastmod>2023-09-03T08:27:32.750Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/MacOs-Setup</loc>
-    <lastmod>2023-12-10T11:42:06.000Z</lastmod>
+    <lastmod>2023-12-12T13:28:56.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Address-Resolution-Protocol</loc>
+    <lastmod>2023-07-15T10:13:28.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/DNS</loc>
+    <lastmod>2023-12-12T03:49:00.594Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Features/DNS-Caching</loc>
+    <lastmod>2023-07-23T10:40:57.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Features/DNS-Rotation</loc>
+    <lastmod>2023-07-19T13:06:54.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Features/Host-Aliasing</loc>
+    <lastmod>2023-12-12T03:49:00.619Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Features/Load-Distribution</loc>
+    <lastmod>2023-12-12T03:49:00.623Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Features/Mail-Server-Aliasing</loc>
+    <lastmod>2023-12-12T03:49:00.630Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Query-Types-(Questions)/Iterative-Queries</loc>
+    <lastmod>2023-07-22T13:58:20.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Query-Types-(Questions)/Recursive-Queries</loc>
+    <lastmod>2023-12-12T03:49:00.645Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Records/A-Record</loc>
+    <lastmod>2023-07-24T10:14:29.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Records/CNAME-Record</loc>
+    <lastmod>2023-07-24T10:30:24.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Records/MX(Mail-Exchanger)-Record</loc>
+    <lastmod>2023-07-24T10:32:28.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Records/Nameserver-Record</loc>
+    <lastmod>2023-07-24T10:15:55.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Records/Terminologies/Resource-Records-(RRs)</loc>
+    <lastmod>2023-07-24T10:08:53.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Servers/Authoritative-DNS-Server</loc>
+    <lastmod>2023-07-25T10:20:14.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Servers/DNS-Servers</loc>
+    <lastmod>2023-12-12T03:49:00.659Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Servers/Hierarchical-Structure</loc>
+    <lastmod>2023-12-12T03:49:00.675Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Servers/Local-DNS-Server-(Default-Name-Server)</loc>
+    <lastmod>2023-07-21T13:15:40.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Servers/Root-DNS-Server</loc>
+    <lastmod>2023-12-12T03:49:00.687Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Servers/Top-Level-Domain-(TLD)-DNS-Server</loc>
+    <lastmod>2023-07-21T13:10:17.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Terminologies/Alias-Hostname</loc>
+    <lastmod>2023-07-19T13:02:45.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Terminologies/Canonical-Hostname-(CNAME)</loc>
+    <lastmod>2023-07-18T08:31:44.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Terminologies/Domain-name</loc>
+    <lastmod>2023-07-24T10:17:13.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/DNS/Terminologies/Hostname</loc>
+    <lastmod>2023-12-12T03:49:00.696Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.0</loc>
+    <lastmod>2023-08-21T02:25:11.423Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.1/HTTP-1.1-Pipelining</loc>
+    <lastmod>2023-08-16T15:56:29.853Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.1/HTTP-1.1</loc>
+    <lastmod>2023-08-21T02:27:17.834Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.1/Keep-Alive-(%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5)</loc>
+    <lastmod>2023-08-21T02:30:58.787Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.2/HTTP-1.2-Multiplexing-(%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8)</loc>
+    <lastmod>2023-08-21T02:35:03.119Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.2/HTTP-1.2-Server-Push</loc>
+    <lastmod>2023-12-12T03:49:00.706Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.2/HTTP-1.2</loc>
+    <lastmod>2023-08-18T04:56:59.258Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.2/HTTP-Frame</loc>
+    <lastmod>2023-08-19T09:43:08.074Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.2/HTTP-Stream</loc>
+    <lastmod>2023-08-19T09:43:54.957Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.3/HTTP-1.3</loc>
+    <lastmod>2023-08-21T02:44:36.420Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.3/QUIC-Frame</loc>
+    <lastmod>2023-08-19T09:48:55.673Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.3/QUIC-Stream</loc>
+    <lastmod>2023-08-21T02:38:29.786Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-1.3/Quick-UDP-Internet-Connections-(QUIC,-TCP-2.0)</loc>
+    <lastmod>2023-08-21T02:37:00.684Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP-Server</loc>
+    <lastmod>2023-07-16T07:50:25.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/HTTP</loc>
+    <lastmod>2023-12-12T03:49:00.613Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Protocol-Components/HTTP-Headers</loc>
+    <lastmod>2023-08-14T03:54:59.525Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Protocol-Components/HTTP-Headers/Content-Type</loc>
+    <lastmod>2023-12-12T03:49:00.787Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Protocol-Components/HTTP-Request</loc>
+    <lastmod>2023-08-14T03:32:57.549Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Protocol-Components/HTTP-Response</loc>
+    <lastmod>2023-08-14T03:33:35.656Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/DELETE</loc>
+    <lastmod>2023-12-12T03:49:00.720Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/GET</loc>
+    <lastmod>2023-07-29T10:09:58.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/PATCH</loc>
+    <lastmod>2023-12-12T03:49:00.722Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/POST</loc>
+    <lastmod>2023-12-12T03:49:00.738Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/2XX-Codes/201-(Created)</loc>
+    <lastmod>2023-07-28T10:47:14.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/2XX-Codes/204-(No-Content)</loc>
+    <lastmod>2023-12-12T03:49:00.743Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/3XX-Codes/301-(Permanent-Redirect)</loc>
+    <lastmod>2023-12-12T03:49:00.772Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/3XX-Codes/302-(Temporary-Redirect)</loc>
+    <lastmod>2023-07-27T08:17:45.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/4XX-Codes/400-(Bad-Request)</loc>
+    <lastmod>2023-07-26T10:21:25.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/4XX-Codes/401-(Unauthorised)</loc>
+    <lastmod>2023-07-27T03:00:54.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/4XX-Codes/404-(Unfound)</loc>
+    <lastmod>2023-12-12T03:49:00.762Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/4XX-Codes/409-(Conflict)</loc>
+    <lastmod>2023-07-28T10:53:20.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/5XX-Codes/500-(Internal-Server-Error)</loc>
+    <lastmod>2023-12-12T03:49:00.793Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/5XX-Codes/502-(Bad-Gateway)</loc>
+    <lastmod>2023-12-12T03:49:00.777Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Status-Code/Status-Code</loc>
+    <lastmod>2023-08-14T03:37:29.012Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/URL-Parameters/Path-Variables</loc>
+    <lastmod>2023-07-27T02:56:07.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/URL-Parameters/Query-Parameters</loc>
+    <lastmod>2023-07-30T10:33:24.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/URL</loc>
+    <lastmod>2023-10-04T03:22:56.967Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/%E9%98%9F%E5%A4%B4%E5%A0%B5%E5%A1%9E/HTTP-Head-of-Line-Blocking</loc>
+    <lastmod>2023-08-18T04:59:20.908Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/%E9%98%9F%E5%A4%B4%E5%A0%B5%E5%A1%9E/Head-of-Line-Blocking-(%E9%98%9F%E5%A4%B4%E5%A0%B5%E5%A1%9E)</loc>
+    <lastmod>2023-08-18T04:59:13.803Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/%E9%98%9F%E5%A4%B4%E5%A0%B5%E5%A1%9E/TCP-Head-of-Line-Blocking</loc>
+    <lastmod>2023-08-21T02:41:48.825Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Application-Layer/HTTPS/HTTPS</loc>
+    <lastmod>2023-12-12T03:49:00.605Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Home-Access</loc>
     <lastmod>2023-07-14T05:46:55.000Z</lastmod>
   </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Internet-Protocol-(IP)</loc>
+    <lastmod>2023-12-12T03:49:00.862Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Network-Layer/IPsec</loc>
+    <lastmod>2023-10-01T13:53:59.673Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Network-Protocol</loc>
+    <lastmod>2023-12-12T13:28:56.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Network</loc>
+    <lastmod>2023-12-12T03:39:22.000Z</lastmod>
+  </url><url>
     <loc>https://notes.yxy.ninja/Networking/OSI</loc>
     <lastmod>2023-10-04T03:19:43.204Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Address-Resolution-Protocol</loc>
-    <lastmod>2023-07-15T10:13:28.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/DNS</loc>
-    <lastmod>2023-08-14T03:18:16.379Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Features/DNS-Caching</loc>
-    <lastmod>2023-07-23T10:40:57.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Features/DNS-Rotation</loc>
-    <lastmod>2023-07-19T13:06:54.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Features/Host-Aliasing</loc>
-    <lastmod>2023-07-18T08:44:43.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Features/Load-Distribution</loc>
-    <lastmod>2023-08-14T03:18:16.423Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Features/Mail-Server-Aliasing</loc>
-    <lastmod>2023-07-24T10:12:45.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Query-Types-(Questions)/Iterative-Queries</loc>
-    <lastmod>2023-07-22T13:58:20.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Query-Types-(Questions)/Recursive-Queries</loc>
-    <lastmod>2023-07-22T13:56:25.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Records/A-Record</loc>
-    <lastmod>2023-07-24T10:14:29.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Records/CNAME-Record</loc>
-    <lastmod>2023-07-24T10:30:24.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Records/MX(Mail-Exchanger)-Record</loc>
-    <lastmod>2023-07-24T10:32:28.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Records/Nameserver-Record</loc>
-    <lastmod>2023-07-24T10:15:55.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Records/Terminologies/Resource-Records-(RRs)</loc>
-    <lastmod>2023-07-24T10:08:53.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Servers/Authoritative-DNS-Server</loc>
-    <lastmod>2023-07-25T10:20:14.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Servers/DNS-Servers</loc>
-    <lastmod>2023-07-23T10:44:41.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Servers/Hierarchical-Structure</loc>
-    <lastmod>2023-10-03T03:15:13.350Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Servers/Local-DNS-Server-(Default-Name-Server)</loc>
-    <lastmod>2023-07-21T13:15:40.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Servers/Root-DNS-Server</loc>
-    <lastmod>2023-07-21T13:05:54.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Servers/Top-Level-Domain-(TLD)-DNS-Server</loc>
-    <lastmod>2023-07-21T13:10:17.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Terminologies/Alias-Hostname</loc>
-    <lastmod>2023-07-19T13:02:45.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Terminologies/Canonical-Hostname-(CNAME)</loc>
-    <lastmod>2023-07-18T08:31:44.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Terminologies/Domain-name</loc>
-    <lastmod>2023-07-24T10:17:13.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/DNS/Terminologies/Hostname</loc>
-    <lastmod>2023-07-24T10:28:17.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.0</loc>
-    <lastmod>2023-08-21T02:25:11.423Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.1/HTTP-1.1-Pipelining</loc>
-    <lastmod>2023-08-16T15:56:29.853Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.1/HTTP-1.1</loc>
-    <lastmod>2023-08-21T02:27:17.834Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.1/Keep-Alive-(%E6%8C%81%E4%B9%85%E8%BF%9E%E6%8E%A5)</loc>
-    <lastmod>2023-08-21T02:30:58.787Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.2/HTTP-1.2-Multiplexing-(%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8)</loc>
-    <lastmod>2023-08-21T02:35:03.119Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.2/HTTP-1.2-Server-Push</loc>
-    <lastmod>2023-08-18T04:52:02.750Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.2/HTTP-1.2</loc>
-    <lastmod>2023-08-18T04:56:59.258Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.2/HTTP-Frame</loc>
-    <lastmod>2023-08-19T09:43:08.074Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.2/HTTP-Stream</loc>
-    <lastmod>2023-08-19T09:43:54.957Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.3/HTTP-1.3</loc>
-    <lastmod>2023-08-21T02:44:36.420Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.3/QUIC-Frame</loc>
-    <lastmod>2023-08-19T09:48:55.673Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.3/QUIC-Stream</loc>
-    <lastmod>2023-08-21T02:38:29.786Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-1.3/Quick-UDP-Internet-Connections-(QUIC,-TCP-2.0)</loc>
-    <lastmod>2023-08-21T02:37:00.684Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP-Server</loc>
-    <lastmod>2023-07-16T07:50:25.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/HTTP</loc>
-    <lastmod>2023-08-21T02:46:43.034Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Protocol-Components/HTTP-Headers</loc>
-    <lastmod>2023-08-14T03:54:59.525Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Protocol-Components/HTTP-Headers/Content-Type</loc>
-    <lastmod>2023-08-14T03:44:12.366Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Protocol-Components/HTTP-Request</loc>
-    <lastmod>2023-08-14T03:32:57.549Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Protocol-Components/HTTP-Response</loc>
-    <lastmod>2023-08-14T03:33:35.656Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Request-Methods/DELETE</loc>
-    <lastmod>2023-07-29T10:41:36.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Request-Methods/GET</loc>
-    <lastmod>2023-07-29T10:09:58.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Request-Methods/PATCH</loc>
-    <lastmod>2023-07-29T11:16:51.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Request-Methods/POST</loc>
-    <lastmod>2023-07-29T10:11:47.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/2XX-Codes/201-(Created)</loc>
-    <lastmod>2023-07-28T10:47:14.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/2XX-Codes/204-(No-Content)</loc>
-    <lastmod>2023-07-29T10:34:48.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/3XX-Codes/301-(Permanent-Redirect)</loc>
-    <lastmod>2023-08-14T03:18:16.447Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/3XX-Codes/302-(Temporary-Redirect)</loc>
-    <lastmod>2023-07-27T08:17:45.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/4XX-Codes/400-(Bad-Request)</loc>
-    <lastmod>2023-07-26T10:21:25.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/4XX-Codes/401-(Unauthorised)</loc>
-    <lastmod>2023-07-27T03:00:54.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/4XX-Codes/404-(Unfound)</loc>
-    <lastmod>2023-07-27T03:01:30.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/4XX-Codes/409-(Conflict)</loc>
-    <lastmod>2023-07-28T10:53:20.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/5XX-Codes/500-(Internal-Server-Error)</loc>
-    <lastmod>2023-08-14T04:04:49.280Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/5XX-Codes/502-(Bad-Gateway)</loc>
-    <lastmod>2023-08-14T04:03:07.427Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/Status-Code/Status-Code</loc>
-    <lastmod>2023-08-14T03:37:29.012Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/URL-Parameters/Path-Variables</loc>
-    <lastmod>2023-07-27T02:56:07.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/URL-Parameters/Query-Parameters</loc>
-    <lastmod>2023-07-30T10:33:24.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/URL</loc>
-    <lastmod>2023-10-04T03:22:56.967Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/%E9%98%9F%E5%A4%B4%E5%A0%B5%E5%A1%9E/HTTP-Head-of-Line-Blocking</loc>
-    <lastmod>2023-08-18T04:59:20.908Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/%E9%98%9F%E5%A4%B4%E5%A0%B5%E5%A1%9E/Head-of-Line-Blocking-(%E9%98%9F%E5%A4%B4%E5%A0%B5%E5%A1%9E)</loc>
-    <lastmod>2023-08-18T04:59:13.803Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTP/%E9%98%9F%E5%A4%B4%E5%A0%B5%E5%A1%9E/TCP-Head-of-Line-Blocking</loc>
-    <lastmod>2023-08-21T02:41:48.825Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Application-Layer/HTTPS/HTTPS</loc>
-    <lastmod>2023-08-06T09:53:45.885Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Internet-Protocol-(IP)</loc>
-    <lastmod>2023-07-13T14:42:42.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Network-Layer/IPsec</loc>
-    <lastmod>2023-10-01T13:53:59.673Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Physical-Layer/Bandwidth</loc>
+    <loc>https://notes.yxy.ninja/Networking/Physical-Layer/Bandwidth</loc>
     <lastmod>2023-09-25T10:11:48.910Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Physical-Layer/Carrier-Sense-Multiple-Access-(CSMA)</loc>
+    <loc>https://notes.yxy.ninja/Networking/Physical-Layer/Carrier-Sense-Multiple-Access-(CSMA)</loc>
     <lastmod>2023-09-25T10:10:40.855Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Physical-Layer/Ethernet</loc>
+    <loc>https://notes.yxy.ninja/Networking/Physical-Layer/Ethernet</loc>
     <lastmod>2023-09-25T09:01:47.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Physical-Layer/Exponential-Backoff</loc>
+    <loc>https://notes.yxy.ninja/Networking/Physical-Layer/Exponential-Backoff</loc>
     <lastmod>2023-09-25T10:11:13.222Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Physical-Layer/Media-Access-Control(MAC)-Address</loc>
+    <loc>https://notes.yxy.ninja/Networking/Physical-Layer/Media-Access-Control(MAC)-Address</loc>
     <lastmod>2023-09-28T03:25:19.823Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Protocol</loc>
-    <lastmod>2023-07-14T05:30:18.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Special-IP-Addresses</loc>
+    <lastmod>2023-12-12T03:27:56.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Stateless-protocol</loc>
-    <lastmod>2023-10-07T09:44:35.285Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TCP/TCP-Connection</loc>
-    <lastmod>2023-08-31T06:51:48.713Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TCP/TCP-Handshake</loc>
-    <lastmod>2023-08-31T06:56:09.556Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TCP/TCP-Slow-Start</loc>
-    <lastmod>2023-08-17T14:11:37.565Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TCP/TCP</loc>
-    <lastmod>2023-10-10T03:23:43.509Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/Symmetric-Key-Exchange</loc>
-    <lastmod>2023-09-09T15:01:27.128Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/TLS-(Transport-Layer-Security)</loc>
-    <lastmod>2023-10-01T09:29:04.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/TLS-1.2</loc>
-    <lastmod>2023-08-31T07:11:20.968Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/TLS-1.3</loc>
-    <lastmod>2023-08-31T07:10:07.092Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/TLS-Certificate-Check</loc>
-    <lastmod>2023-08-31T07:18:35.876Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/TLS-Certificate</loc>
-    <lastmod>2023-08-31T07:04:52.662Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/X.509-Certificate/Certificate-Authority-(CA)</loc>
-    <lastmod>2023-09-11T15:49:36.883Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/X.509-Certificate/Certificate-Issuer</loc>
-    <lastmod>2023-09-11T15:40:23.167Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/X.509-Certificate/Certificate-Signing-Request</loc>
-    <lastmod>2023-09-11T15:45:49.506Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/X.509-Certificate/Digital-Certificate</loc>
-    <lastmod>2023-09-12T07:34:55.910Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/X.509-Certificate/Digital-Signature</loc>
-    <lastmod>2023-09-12T07:32:47.289Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/X.509-Certificate/Self-signed-Certificate</loc>
-    <lastmod>2023-09-11T15:52:45.529Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/TLS/X.509-Certificate/X.509-Certificate</loc>
-    <lastmod>2023-09-01T15:17:04.619Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Protocol/Transport-Layer/UDP</loc>
-    <lastmod>2023-10-03T07:55:38.530Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Special-IP-Addresses/0.0.0.0</loc>
-    <lastmod>2023-09-24T15:57:25.503Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Stateless-protocol</loc>
+    <lastmod>2023-12-12T03:49:00.871Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Access-Network</loc>
-    <lastmod>2023-07-14T05:39:27.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.474Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Applications</loc>
-    <lastmod>2023-07-13T14:45:40.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.494Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Cable</loc>
     <lastmod>2023-07-14T05:52:40.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Terminologies/Clients</loc>
-    <lastmod>2023-08-14T03:41:49.769Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Communication-Links</loc>
     <lastmod>2023-07-13T14:26:52.000Z</lastmod>
@@ -995,11 +941,8 @@
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Distributed-Database</loc>
     <lastmod>2023-07-19T13:18:46.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Terminologies/End-Systems</loc>
-    <lastmod>2023-07-14T05:31:42.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Terminologies/Hosts</loc>
-    <lastmod>2023-10-14T19:01:58.192Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Terminologies/Host</loc>
+    <lastmod>2023-12-12T13:28:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/IP-Address</loc>
     <lastmod>2023-10-03T03:14:38.350Z</lastmod>
@@ -1008,13 +951,13 @@
     <lastmod>2023-07-13T14:39:46.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Internet</loc>
-    <lastmod>2023-07-13T14:46:16.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.504Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Link-layer-switches</loc>
     <lastmod>2023-07-14T05:41:42.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Multicast-%E5%A4%9A%E6%92%AD</loc>
-    <lastmod>2023-10-03T03:27:10.813Z</lastmod>
+    <lastmod>2023-12-12T03:41:14.976Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Network-Operations</loc>
     <lastmod>2023-08-29T06:10:36.673Z</lastmod>
@@ -1023,7 +966,7 @@
     <lastmod>2023-10-04T02:40:11.134Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Network-Relay</loc>
-    <lastmod>2023-10-10T03:01:48.097Z</lastmod>
+    <lastmod>2023-12-12T03:41:14.981Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Object</loc>
     <lastmod>2023-07-16T07:39:21.000Z</lastmod>
@@ -1032,22 +975,22 @@
     <lastmod>2023-07-13T14:32:55.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Packet</loc>
-    <lastmod>2023-10-02T08:29:43.986Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.510Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/REST-API</loc>
-    <lastmod>2023-10-13T10:49:50.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.514Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Reverse-Proxy</loc>
     <lastmod>2023-09-28T03:07:50.777Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Route,-Path-through-network</loc>
-    <lastmod>2023-07-13T14:36:19.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.520Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Routers</loc>
     <lastmod>2023-07-13T14:33:19.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Socket-Inteface</loc>
-    <lastmod>2023-07-13T14:50:23.000Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.539Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Networking/Terminologies/TTL</loc>
     <lastmod>2023-07-24T10:09:59.000Z</lastmod>
@@ -1058,32 +1001,59 @@
     <loc>https://notes.yxy.ninja/Networking/Terminologies/Transmission-rate</loc>
     <lastmod>2023-07-13T14:26:17.000Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Terminologies/servers</loc>
-    <lastmod>2023-07-14T05:36:23.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TCP/TCP-Connection</loc>
+    <lastmod>2023-12-12T03:49:00.837Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Types-of-Networks/Controller-Area-Network-(CAN)</loc>
-    <lastmod>2023-07-20T11:14:28.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TCP/TCP-Handshake</loc>
+    <lastmod>2023-08-31T06:56:09.556Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Types-of-Networks/Local-Area-Network-(LAN)</loc>
-    <lastmod>2023-07-20T11:04:18.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TCP/TCP-Slow-Start</loc>
+    <lastmod>2023-08-17T14:11:37.565Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Types-of-Networks/Metropolitan-Area-Network-(MAN)</loc>
-    <lastmod>2023-07-20T11:08:03.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TCP/TCP</loc>
+    <lastmod>2023-12-12T03:49:00.852Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Types-of-Networks/Network</loc>
-    <lastmod>2023-07-20T11:16:20.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/Symmetric-Key-Exchange</loc>
+    <lastmod>2023-12-12T03:49:00.821Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Types-of-Networks/Personal-Area-Network-(PAN)</loc>
-    <lastmod>2023-07-20T10:58:24.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/TLS-(Transport-Layer-Security)</loc>
+    <lastmod>2023-12-12T03:41:15.055Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Types-of-Networks/Storage-Area-Network-(SAN)</loc>
-    <lastmod>2023-07-20T11:17:59.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/TLS-1.2</loc>
+    <lastmod>2023-08-31T07:11:20.968Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/Networking/Types-of-Networks/Wide-Area-Network-(WAN)</loc>
-    <lastmod>2023-07-20T11:11:02.000Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/TLS-1.3</loc>
+    <lastmod>2023-08-31T07:10:07.092Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/Common-Problems/Producer-Consumer-Problem</loc>
-    <lastmod>2023-11-09T02:11:23.905Z</lastmod>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/TLS-Certificate-Check</loc>
+    <lastmod>2023-08-31T07:18:35.876Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/TLS-Certificate</loc>
+    <lastmod>2023-12-12T03:49:00.826Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/X.509-Certificate/Certificate-Authority-(CA)</loc>
+    <lastmod>2023-09-11T15:49:36.883Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/X.509-Certificate/Certificate-Issuer</loc>
+    <lastmod>2023-09-11T15:40:23.167Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/X.509-Certificate/Certificate-Signing-Request</loc>
+    <lastmod>2023-09-11T15:45:49.506Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/X.509-Certificate/Digital-Certificate</loc>
+    <lastmod>2023-09-12T07:34:55.910Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/X.509-Certificate/Digital-Signature</loc>
+    <lastmod>2023-09-12T07:32:47.289Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/X.509-Certificate/Self-signed-Certificate</loc>
+    <lastmod>2023-09-11T15:52:45.529Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/TLS/X.509-Certificate/X.509-Certificate</loc>
+    <lastmod>2023-09-01T15:17:04.619Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/Networking/Transport-Layer/UDP</loc>
+    <lastmod>2023-12-12T03:49:00.810Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/Booting/BIOS</loc>
     <lastmod>2023-07-15T08:58:57.000Z</lastmod>
@@ -1105,9 +1075,6 @@
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/Privilege-Level/User-Mode</loc>
     <lastmod>2023-11-09T02:02:41.180Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/Registers</loc>
-    <lastmod>2023-12-09T13:00:03.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Asynchronous-Single-Threading</loc>
     <lastmod>2023-11-12T10:57:56.559Z</lastmod>
@@ -1338,7 +1305,7 @@
     <lastmod>2023-09-04T11:09:47.529Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</loc>
-    <lastmod>2023-08-06T13:06:11.383Z</lastmod>
+    <lastmod>2023-12-12T13:24:46.041Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Procedure-Library/Library-Calls-(Library-Procedure)</loc>
     <lastmod>2023-11-21T03:54:54.474Z</lastmod>
@@ -1355,14 +1322,8 @@
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Trap-Interrupt-(%E9%99%B7%E5%85%A5)</loc>
     <lastmod>2023-11-19T09:28:01.769Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space/Address-Space</loc>
-    <lastmod>2023-12-11T15:23:30.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space/Data-Segment</loc>
-    <lastmod>2023-09-03T08:14:55.128Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space/Text-Segment</loc>
-    <lastmod>2023-08-05T07:49:08.497Z</lastmod>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</loc>
+    <lastmod>2023-12-12T13:56:43.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Context-Switch</loc>
     <lastmod>2023-12-11T14:59:24.000Z</lastmod>
@@ -1374,10 +1335,10 @@
     <lastmod>2023-08-09T14:52:46.828Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</loc>
-    <lastmod>2023-12-11T15:00:33.000Z</lastmod>
+    <lastmod>2023-12-12T13:28:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</loc>
-    <lastmod>2023-12-11T15:16:44.000Z</lastmod>
+    <lastmod>2023-12-12T13:28:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread-Pool</loc>
     <lastmod>2023-12-11T15:00:51.180Z</lastmod>
@@ -1450,6 +1411,9 @@
   </url><url>
     <loc>https://notes.yxy.ninja/OS/OS</loc>
     <lastmod>2023-11-09T02:05:30.960Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Producer-Consumer-Problem</loc>
+    <lastmod>2023-11-09T02:11:23.905Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Terminologies/Groups</loc>
     <lastmod>2023-10-16T01:27:42.964Z</lastmod>
@@ -1545,7 +1509,7 @@
     <lastmod>2023-09-20T09:22:16.702Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Security/Authentication/Session-Token</loc>
-    <lastmod>2023-09-12T13:39:19.231Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.554Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Security/Authorisation/Authorisation</loc>
     <lastmod>2023-09-03T23:21:34.000Z</lastmod>
@@ -1692,10 +1656,10 @@
     <lastmod>2023-08-03T04:47:16.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/System-Design/Load-Balancers/Layer-4-Load-Balancer</loc>
-    <lastmod>2023-10-24T07:48:36.446Z</lastmod>
+    <lastmod>2023-12-12T03:41:15.017Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/System-Design/Load-Balancers/Layer-7/Application-Load-Balancer-(Layer-7)</loc>
-    <lastmod>2023-09-29T16:12:48.518Z</lastmod>
+    <lastmod>2023-12-12T03:41:15.022Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/System-Design/Load-Balancers/Layer-7/External-ALB</loc>
     <lastmod>2023-08-02T08:18:16.000Z</lastmod>
@@ -1710,7 +1674,7 @@
     <lastmod>2023-10-24T07:39:57.143Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/System-Design/Proxy/Reverse-Proxy</loc>
-    <lastmod>2023-10-24T15:48:41.451Z</lastmod>
+    <lastmod>2023-12-12T03:49:00.564Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Terminologies/32-bit-System</loc>
     <lastmod>2023-07-26T09:53:26.000Z</lastmod>
@@ -1788,7 +1752,7 @@
     <lastmod>2023-12-07T07:00:01.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/ECS/ECS</loc>
-    <lastmod>2023-12-11T07:08:41.000Z</lastmod>
+    <lastmod>2023-12-12T05:39:54.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/AWS/Compute/Load-Balancer/ALB</loc>
     <lastmod>2023-09-07T08:24:59.517Z</lastmod>
@@ -1836,7 +1800,7 @@
     <lastmod>2023-09-17T08:45:35.424Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Browser/Browser-Navigation</loc>
-    <lastmod>2023-08-26T10:16:13.434Z</lastmod>
+    <lastmod>2023-12-12T03:41:15.032Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Browser/Browser</loc>
     <lastmod>2023-09-18T01:52:38.000Z</lastmod>
@@ -1866,7 +1830,7 @@
     <lastmod>2023-10-07T08:38:29.354Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Browser/Selenium</loc>
-    <lastmod>2023-10-22T03:15:02.102Z</lastmod>
+    <lastmod>2023-12-12T03:41:15.042Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Browser/Terminologies/DOM-(Document-Object-Model)</loc>
     <lastmod>2023-09-17T08:43:30.957Z</lastmod>
@@ -1875,7 +1839,7 @@
     <lastmod>2023-09-19T11:05:28.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</loc>
-    <lastmod>2023-12-11T09:13:21.000Z</lastmod>
+    <lastmod>2023-12-12T05:44:26.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Datadog/Datadog-RUM</loc>
     <lastmod>2023-12-11T02:00:03.000Z</lastmod>
@@ -2103,7 +2067,7 @@
     <lastmod>2023-09-03T10:44:57.051Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Vault-Ports,-Protocols</loc>
-    <lastmod>2023-12-09T11:44:57.251Z</lastmod>
+    <lastmod>2023-12-12T03:41:15.048Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/HashiCorp-Vault/Vault-Replication</loc>
     <lastmod>2023-09-03T11:03:33.444Z</lastmod>
@@ -2115,7 +2079,7 @@
     <lastmod>2023-07-25T07:59:52.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Node.js/Node.js</loc>
-    <lastmod>2023-11-15T03:24:21.978Z</lastmod>
+    <lastmod>2023-12-12T13:28:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Tools/Postman/Automation/Postman-Automation</loc>
     <lastmod>2023-07-30T11:52:06.000Z</lastmod>

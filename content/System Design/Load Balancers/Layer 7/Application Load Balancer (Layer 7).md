@@ -10,8 +10,8 @@ Last Date:
 ---
 ## Abstract
 - Listener can only be either `HTTP` or `HTTPS` (Based on AWS experience)
-- [[Target Group]] can only use [[Protocol]] `HTTP` or `HTTPS` (Based on AWS experience)
-- [[Health Check]] can only use [[Protocol]] `HTTP` or `HTTPS` (Based on AWS experience)
+- [[Target Group]] can only use [[Network Protocol]] `HTTP` or `HTTPS` (Based on AWS experience)
+- [[Health Check]] can only use [[Network Protocol]] `HTTP` or `HTTPS` (Based on AWS experience)
 
 >[!note] 2 Types
 >1. [[Internal ALB]]

@@ -1,4 +1,4 @@
 #networking 
 >[!note]
 >- Distributed
->	- since they involve multiple [[End Systems]] that exchange data with each other
+>	- since they involve multiple [[Host]] that exchange data with each other

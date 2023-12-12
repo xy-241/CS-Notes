@@ -8,4 +8,4 @@
 - Usually comes with [[TTL]], and the token value has no relationship with the user password. So when a session token is leaked, the risk of data loss is smaller
 
 ## Cons
-- [[servers]] need to store the Session inside the [[RAM]] or [[Database]]. With a ton of user traffic, this may lead to traffic overloading
+- [[Host]] need to store the Session inside the [[RAM]] or [[Database]]. With a ton of user traffic, this may lead to traffic overloading

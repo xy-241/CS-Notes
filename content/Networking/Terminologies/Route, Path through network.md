@@ -1,3 +1,3 @@
 #networking 
 > [!note]
-> The sequence of [[Communication Links]] and [[Packet Switches]] traversed by a [[Packet]] from sending [[End Systems]] to receiving end system
+> The sequence of [[Communication Links]] and [[Packet Switches]] traversed by a [[Packet]] from sending [[Host]] to receiving end system

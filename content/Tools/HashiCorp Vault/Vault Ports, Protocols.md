@@ -1,6 +1,6 @@
 #vault
 
-- ## [[Protocol]]
+- ## [[Network Protocol]]
   >[!note]
   >- All communicate for [[HashiCorp Vault]] uses [[TLS]]
 - ## [[Network Port]]

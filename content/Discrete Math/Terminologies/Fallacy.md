@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-19T20:26:00
-Last Date: 2023-12-11T21:32:45+08:00
+Last Date: 2023-12-12T18:04:33+08:00
 References: 
 ---
 ## Abstract
@@ -18,10 +18,10 @@ References:
 
 ## Common Errors
 ### Converse Error
-- Given a -> b & b, we conclude a
+- Given a -> b is true & b is true, we conclude a is true
 - Going against [[Rule of Inference (推理规则)#Modus Tollens]]
 ### Inverse Error
-- Given a-> b & ~a, we conclude ~b
+- Given a-> b is true & ~a is true, we conclude ~b is true
 - Going against [[Conditional Statement#Vacuously True]]
 
 
