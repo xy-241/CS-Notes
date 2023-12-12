@@ -10,7 +10,7 @@
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</link>
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</guid>
     <description>Abstract § A list of memory locations from 0 to some maximum (Virtual Memory), which Process can read &amp; write 3 Components 3 Components § Stack Segment § Stack (FILO) structure Grows downwards The expansion and shrinking are done automatically Can be used to store function variables XV6-RISCV Kernel Stack Example § // xv6-riscv kernel codes, start.</description>
-    <pubDate>Tue, 12 Dec 2023 14:01:29 GMT</pubDate>
+    <pubDate>Tue, 12 Dec 2023 14:10:55 GMT</pubDate>
   </item><item>
     <title>Registers</title>
     <link>https://notes.yxy.ninja/Computer-Organisation/CPU/Registers</link>
