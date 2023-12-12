@@ -81,7 +81,7 @@
     <lastmod>2023-12-09T13:01:05.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/CPU/CPU</loc>
-    <lastmod>2023-12-09T12:48:53.000Z</lastmod>
+    <lastmod>2023-12-12T14:58:22.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/Computer-Organisation/CPU/Clock-Signal</loc>
     <lastmod>2023-08-02T13:51:56.000Z</lastmod>
@@ -1067,6 +1067,24 @@
     <loc>https://notes.yxy.ninja/OS/MISC/Booting/Secondary-Boot-loader</loc>
     <lastmod>2023-07-15T08:59:15.000Z</lastmod>
   </url><url>
+    <loc>https://notes.yxy.ninja/OS/MISC/CPU/Asynchronous-Single-Threading</loc>
+    <lastmod>2023-12-12T14:51:38.750Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/MISC/CPU/Multi-Programming</loc>
+    <lastmod>2023-11-11T11:15:28.758Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/MISC/CPU/Multi-core-chips</loc>
+    <lastmod>2023-11-11T11:03:18.744Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/MISC/CPU/Multi-processing</loc>
+    <lastmod>2023-12-12T14:51:38.772Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/MISC/CPU/Multi-threading</loc>
+    <lastmod>2023-12-12T14:56:21.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/MISC/CPU/Multitasking</loc>
+    <lastmod>2023-12-11T15:00:51.146Z</lastmod>
+  </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/Privilege-Level/Kernel-Mode</loc>
     <lastmod>2023-10-07T08:38:28.479Z</lastmod>
   </url><url>
@@ -1076,31 +1094,7 @@
     <loc>https://notes.yxy.ninja/OS/MISC/CPU/Privilege-Level/User-Mode</loc>
     <lastmod>2023-11-09T02:02:41.180Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Asynchronous-Single-Threading</loc>
-    <lastmod>2023-11-12T10:57:56.559Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-Programming</loc>
-    <lastmod>2023-11-11T11:15:28.758Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-core-chips</loc>
-    <lastmod>2023-11-11T11:03:18.744Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-processing</loc>
-    <lastmod>2023-11-11T11:10:57.703Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-processor</loc>
-    <lastmod>2023-07-31T14:16:27.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-threaded-Chips</loc>
-    <lastmod>2023-12-09T11:44:57.250Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multi-threading,-Hyper-threading</loc>
-    <lastmod>2023-12-11T15:00:51.119Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Multitasking</loc>
-    <lastmod>2023-12-11T15:00:51.146Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/MISC/CPU/multi/Sychronous,-Multi-processing,-Multi-threading,-Async.excalidraw</loc>
+    <loc>https://notes.yxy.ninja/OS/MISC/CPU/Sychronous,-Multi-processing,-Multi-threading,-Async.excalidraw</loc>
     <lastmod>2023-11-15T07:01:45.200Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/MISC/System-Program/GUI</loc>
@@ -1323,7 +1317,7 @@
     <lastmod>2023-11-19T09:28:01.769Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</loc>
-    <lastmod>2023-12-12T14:10:55.000Z</lastmod>
+    <lastmod>2023-12-12T14:15:02.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Context-Switch</loc>
     <lastmod>2023-12-11T14:59:24.000Z</lastmod>
@@ -1335,7 +1329,7 @@
     <lastmod>2023-08-09T14:52:46.828Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</loc>
-    <lastmod>2023-12-12T13:28:56.000Z</lastmod>
+    <lastmod>2023-12-12T14:16:56.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</loc>
     <lastmod>2023-12-12T13:28:56.000Z</lastmod>
@@ -1344,28 +1338,25 @@
     <lastmod>2023-12-11T15:00:51.180Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</loc>
-    <lastmod>2023-12-11T15:00:51.197Z</lastmod>
+    <lastmod>2023-12-12T14:51:38.778Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Hybrid-Threads-(N-to-M)</loc>
     <lastmod>2023-08-28T08:43:23.035Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Kernel-Threads-(1-to-1)</loc>
-    <lastmod>2023-09-03T08:14:55.458Z</lastmod>
+    <lastmod>2023-12-12T14:16:46.762Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Scheduler-Activations</loc>
-    <lastmod>2023-08-21T11:57:48.639Z</lastmod>
+    <lastmod>2023-12-12T14:46:49.689Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Thread-Table</loc>
-    <lastmod>2023-08-20T03:24:25.577Z</lastmod>
+    <lastmod>2023-12-12T14:16:46.768Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</loc>
-    <lastmod>2023-12-11T15:00:51.208Z</lastmod>
+    <lastmod>2023-12-12T14:16:46.773Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Threads/Goroutines</loc>
-    <lastmod>2023-08-20T03:32:36.331Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Threads/Pthreads-(POSIX-threads)</loc>
-    <lastmod>2023-08-16T15:11:44.090Z</lastmod>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</loc>
+    <lastmod>2023-12-12T14:47:27.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-Operations/Process-Creation</loc>
     <lastmod>2023-09-03T08:27:32.720Z</lastmod>

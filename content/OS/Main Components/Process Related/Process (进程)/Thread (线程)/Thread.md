@@ -34,8 +34,8 @@ References:
 - Different parts of program able to communicate **without** the use of [[Interrupts (中断)]] and [[Inter-Process Communication (IPC)]] etc
 
 ### Better responsiveness aka more user friendly
-- With [[Multi-threading, Hyper-threading]], each [[Thread]] runs for a short while, to make all [[Threads]] seem running all the time
-#### Example: Powerpoint with [[Multi-threading, Hyper-threading]]
+- With [[Multi-threading]], each [[Thread]] runs for a short while, to make all [[Threads]] seem running all the time
+#### Example: Powerpoint with [[Multi-threading]]
 1. One thread can be used to receive inputs from users
 2. One thread can be used to format the slides
 3. One thread can be used to save the slides automatically on a regular interval

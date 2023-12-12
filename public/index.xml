@@ -6,65 +6,65 @@
       <description>Last 10 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Address Space</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</guid>
-    <description>Abstract § A list of memory locations from 0 to some maximum (Virtual Memory), which Process can read &amp; write 3 Components 3 Components § Stack Segment § Stack (FILO) structure Grows downwards The expansion and shrinking are done automatically Can be used to store function variables XV6-RISCV Kernel Stack Example § // xv6-riscv kernel codes, start.</description>
-    <pubDate>Tue, 12 Dec 2023 14:10:55 GMT</pubDate>
+    <title>CPU</title>
+    <link>https://notes.yxy.ninja/Computer-Organisation/CPU/CPU</link>
+    <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/CPU</guid>
+    <description>Abstract § 2 Main Components - ALU, Control Unit Fire the necessary components based on the given Instruction Start in Kernel Mode. Before executing a program, the kernel initiates the switch to User Mode Benefits § Optmised for computation that requires sequential execution(One Instruction after another Instruction), Branching and logic Terminologies § 32-bit § Width that are 32 bits each 64-bit § Width that are 32 bits each Scratch Area § A small amount of high-speed memory that is used to store temporary data Typically located on the CPU die itself Core § Hardware that executes Instruction independently from other cores .</description>
+    <pubDate>Tue, 12 Dec 2023 14:58:22 GMT</pubDate>
   </item><item>
-    <title>Registers</title>
-    <link>https://notes.yxy.ninja/Computer-Organisation/CPU/Registers</link>
-    <guid>https://notes.yxy.ninja/Computer-Organisation/CPU/Registers</guid>
-    <description>Abstract § A group of Latch Accessible from Instruction 2 main purposes § Storying values during computations (like Memory Address &amp; value) Configuring CPU Register Type § Instruction Address Register § The register that contains the Memory Address to retrieve the Instruction Instruction Register § Contains Instruction retrieved from Main Memory Control &amp; Status Registers (CSRs) § There are multiple such register Stores information about the current state of the processor or device CSRs are typically used to control various aspects of the processor’s operation, such as interrupt handling, memory management, and power management etc Stack Pointer § Holds the address of the top of the Stack Segment in the current execution context MIPS Registers § Terminologies § Width § The number of Bits inside a register File § A collection of registers that CPU can quickly store and retrieve Data Memory Mapped § Register that is treated as a Main Memory location This means that the register can be accessed using the same Instruction and addressing modes as memory.</description>
-    <pubDate>Tue, 12 Dec 2023 13:47:13 GMT</pubDate>
+    <title>Multi-threading</title>
+    <link>https://notes.yxy.ninja/OS/MISC/CPU/Multi-threading</link>
+    <guid>https://notes.yxy.ninja/OS/MISC/CPU/Multi-threading</guid>
+    <description>Abstract § Also known as Hyper-threading A mechanism achieved with wither Multi-threaded Chip(true Parallelism (并行性)) or quick Context Switch(Concurrency (并发)) or both Doesn’t offer true Parallelism (并行性) on Single-Core CPU which only supports one Process running at a time Thread-switching time is reduced to nanosecond To users, CPU Speed is divided by the total number of Thread executing at the same time when multiple Thread sharing the same Core Performance is a fine balance between performance gains from each Thread and Overhead of Creating Thread Benefits § Improved Responsiveness § Can continue to run other Thread while waiting for I/O operations to complete Run other Thread while one Thread is waiting Improved Performance § When tasks are stateless, independent of each other &amp; long waiting time incurs in the task Cons § More likely to get Race Condition (竞态条件) § Where there is a shared resource More likely to get Deadlock (死锁) § Where there is a shared resource Overhead of Creating Thread § Terminologies § Thread Safety (线程安全) § A piece of code that functions correctly during simultaneous execution by multiple Thread accessing the a shared resource without Race Condition (竞态条件) and Deadlock (死锁) etc Multi-threaded Chip § Control Unit, Registers &amp; Pipeline are replicated .</description>
+    <pubDate>Tue, 12 Dec 2023 14:56:21 GMT</pubDate>
   </item><item>
-    <title>Mathematical Argument</title>
-    <link>https://notes.yxy.ninja/Discrete-Math/Mathematical-Argument</link>
-    <guid>https://notes.yxy.ninja/Discrete-Math/Mathematical-Argument</guid>
-    <description>Abstract § A sequence of Mathematical Statement ending in a Conclusion Every step should follow logically from all previous steps IF (p AND .</description>
-    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+    <title>Thread</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</guid>
+    <description>Abstract § Responsible to carry out some features of a running program - Process Note Thread in a process share the same Address Space Per-process items can be accessed by all Thread 3 ways to implement § User-space Threads (N to 1) Kernel Threads (1 to 1) Hybrid Threads (N to M) Benefits § Fast to create/destroy § 10-100 times faster than Process Because without the need of Expensive Context Switching Makes programming easier § Different parts of program able to communicate without the use of Interrupts (中断) and Inter-Process Communication (IPC) etc Better responsiveness aka more user friendly § With Multi-threading, each Thread runs for a short while, to make all Threads seem running all the time Example: Powerpoint with Multi-threading § One thread can be used to receive inputs from users One thread can be used to format the slides One thread can be used to save the slides automatically on a regular interval 2 benefits over Process § Lighter to create and destroy compared to Process, because it doesn’t require System Call (系统调用) to the underlying OS Share memory among themselves, avoid Memory Page Shifting which is expensive Cons § No protection among threads One thread can bring down the entire Process One thread can read, write, or even wipe out another thread’s stack Warning fork() Should we copy over all the threads or just a single one? Warning Signal (Software Interrupt) handling - which thread should handle it Common Procedures § Terminologies § Blocking § Thread doesn’t do anything while waiting for IO Operations or Network Operations etc Non-blocking § Thread carries out other tasks if the current tasks require it to wait for IO Operations or Network Operations etc Goes back to the current task when the waiting ends - Call back However, it still blocks when the task is CPU Bounded .</description>
+    <pubDate>Tue, 12 Dec 2023 14:51:38 GMT</pubDate>
   </item><item>
-    <title>MacOs Setup</title>
-    <link>https://notes.yxy.ninja/MacOs-Setup</link>
-    <guid>https://notes.yxy.ninja/MacOs-Setup</guid>
-    <description>Abstract § Note 🌟 denotes tools &amp; settings I must have in MacOS to have a smooth user/developer experience GUI Apps § Install Firefox (Replaced with floorp) 🌟 Install Bypass Paywalls Install Dropbox Install Obsidian 🌟 Install Keypass (Replaced with Install StrongBox from App Store) 🌟 Install VSC 🌟 Add code into cli Install Termius 🌟 Modify Default Shell Install Tutanota 🌟 Install Notion 🌟 Install Docker (Replaced with OrbStack) 🌟 Install Podman Install Node Version Manager, npm included 🌟 Install Postman Install GitKraken 🌟 Install Brave Install MySQL Workbench Install Google Drive Client 🌟 Install Java JDK 🌟 Install IntelliJ Community 🌟 Install VirtualBox Install Ngrok # Move Ngrok Executable to PATH cp ngrok /Users/&lt;USERNAME&gt;/.</description>
-    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+    <title>Multi-processing</title>
+    <link>https://notes.yxy.ninja/OS/MISC/CPU/Multi-processing</link>
+    <guid>https://notes.yxy.ninja/OS/MISC/CPU/Multi-processing</guid>
+    <description>Abstract § Having multiple Process running at the same time on Multi-core chips, offers true Parallelism(并行性) Can avoid issues like Deadlock (死锁) &amp; Race Condition (竞态条件) faced by Multi-threading effectively but more resource heavy, because not sharing the same Address Space, but independent Address Space comes with a cost Performance limited by the number of CPU cores .</description>
+    <pubDate>Tue, 12 Dec 2023 14:51:38 GMT</pubDate>
   </item><item>
-    <title>Network Protocol</title>
-    <link>https://notes.yxy.ninja/Networking/Network-Protocol</link>
-    <guid>https://notes.yxy.ninja/Networking/Network-Protocol</guid>
-    <description>Abstract § The Host Host Quote Definites the format and the order of messages exchanged between 2 or more communicating entities, as well as actions taken on the transmission and/or receipt of a message or other event .</description>
-    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+    <title>Asynchronous Single Threading</title>
+    <link>https://notes.yxy.ninja/OS/MISC/CPU/Asynchronous-Single-Threading</link>
+    <guid>https://notes.yxy.ninja/OS/MISC/CPU/Asynchronous-Single-Threading</guid>
+    <description>Abstract § Basically takes the benefits of Multi-threading without the Cons with Non-blocking Thread Cons § No Parallelism (并行性) § Only one single thread, thus can’t take advantage of Multi-core chips Blocking the execution of the program when there is a CPU Bounded task .</description>
+    <pubDate>Tue, 12 Dec 2023 14:51:38 GMT</pubDate>
   </item><item>
-    <title>Host</title>
-    <link>https://notes.yxy.ninja/Networking/Terminologies/Host</link>
-    <guid>https://notes.yxy.ninja/Networking/Terminologies/Host</guid>
-    <description>Abstract § Also known as End System Computers &amp; other devices connected to Internet, thus has a Socket Interface Connected together by a network of Communication Links &amp; Packet Switches Can be identified by Hostname or IP Address 2 types § Client § Desktops, laptops &amp; smartphones, browsers etc Server § Host applications such as web browser program Web servers etc .</description>
-    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+    <title>User Thread</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</guid>
+    <description>Abstract § Thread managed in the User Space Examples § PThread (C) § A Thread package under Portable Operating System Interface (POSIX) Note pthread_yield() The Library Calls (Library Procedure) for thread to give CPU to other threads In Process, we don’t have this.</description>
+    <pubDate>Tue, 12 Dec 2023 14:47:27 GMT</pubDate>
+  </item><item>
+    <title>Scheduler Activations</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Scheduler-Activations</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Scheduler-Activations</guid>
+    <description>#os Instead of relying on the Kernel for every thread management decision, the runtime system is responsible for scheduling Thread Mitigate inefficiency from Kernel .</description>
+    <pubDate>Tue, 12 Dec 2023 14:46:49 GMT</pubDate>
   </item><item>
     <title>Process Management</title>
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</link>
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</guid>
     <description>Abstract § Required in an OS that has multiple Process that want to run at the same, like in the Multi-Programming or Multitasking systems. Because Process unlike Thread will give up its CPU for other Process Components § Process Priority § A value that determines which Process should get executed first Process Scheduler § A program that perform Context Switch of Process based on the Process Priority Linux uses CFS Terminologies § Niceness § An parameter that can be used to adjust the Process Priority for the Process Scheduler In Linux -20 is most not nice 19 is most nice Command to adjust niceness - renice .</description>
-    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+    <pubDate>Tue, 12 Dec 2023 14:16:56 GMT</pubDate>
   </item><item>
-    <title>Process</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</guid>
-    <description>Abstract § Container that holds all the information needed to run a program, Abstraction over running program 2 Components - Address Space, Process Control Block (PCB) Process usually don’t share Main Memory among themselves for isolation purposes.</description>
-    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
+    <title>User-space Threads (N to 1)</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</guid>
+    <description>#os Put the Thread entirely in User Space The Kernel knows nothing about them As far as the kernel is concerned, it is managing single-threaded Process Thread are implemented by a library The threads run on top of a Runtime-System Each process needs its own private Thread Table When thread becoming blocked locally Thread calls run-time system procedure checks to see if the thread must be put into blocked state.</description>
+    <pubDate>Tue, 12 Dec 2023 14:16:46 GMT</pubDate>
   </item><item>
-    <title>Node.js</title>
-    <link>https://notes.yxy.ninja/Tools/Node.js/Node.js</link>
-    <guid>https://notes.yxy.ninja/Tools/Node.js/Node.js</guid>
-    <description>Abstract § Not a Programming Language or Server Is a JavaScript Runtime Environment Terminologies § JavaScript Runtime Environment § A environment to run Javascript, independent of Browser Module § Basically JavaScript Module The methods to be explicitly exposed, there are mainly 3 ways module.</description>
-    <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
-  </item><item>
-    <title>brk()</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</guid>
-    <description>#os Specifies the new Memory Address where the Address Space is to end Not defined in Portable Operating System Interface (POSIX) Programmer encouraged to use malloc .</description>
-    <pubDate>Tue, 12 Dec 2023 13:24:46 GMT</pubDate>
+    <title>Thread Table</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Thread-Table</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Thread-Table</guid>
+    <description>#os Abstract To keep track of the Threads in that Process Similar to Kernel’s Process Table, except that it keeps track only of the per-thread properties Managed by the runtime system in User-space Threads (N to 1) &amp; Kernel in Kernel Threads (1 to 1) .</description>
+    <pubDate>Tue, 12 Dec 2023 14:16:46 GMT</pubDate>
   </item>
     </channel>
   </rss>

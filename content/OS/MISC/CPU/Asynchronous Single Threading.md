@@ -10,7 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
-- Basically takes the benefits of [[Multi-threading, Hyper-threading]] without the [[Multi-threading, Hyper-threading#Cons]] with [[Thread#Non-blocking|Non-blocking Thread]] 
+- Basically takes the benefits of [[Multi-threading]] without the [[Multi-threading#Cons]] with [[Thread#Non-blocking|Non-blocking Thread]] 
 
 
 ## Cons

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-19T16:36:00
-Last Date: 2023-12-09T20:48:53+08:00
+Last Date: 2023-12-12T22:58:22+08:00
 References: 
 ---
 ## Abstract
@@ -26,3 +26,5 @@ References:
 ### Scratch Area
 - A small amount of high-speed memory that is used to store temporary data
 - Typically located on the *CPU* die itself
+### Core
+- Hardware that executes [[Instruction]] independently from other *cores*
