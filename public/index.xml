@@ -16,7 +16,8 @@
 &lt;li&gt;When we see a &lt;code&gt;b&lt;/code&gt; or &lt;code&gt;B&lt;/code&gt;, we just delete the first element from the corresponding stack by replacing the element at that index with either &lt;code&gt;b&lt;/code&gt; or &lt;code&gt;B&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Then we loop the original string, add characters that aren’t &lt;code&gt;b&lt;/code&gt; and &lt;code&gt;B&lt;/code&gt; to form a new string which is the final answer&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&quot;space--time-analysis&quot;&gt;Space &amp;#x26; Time analysis&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#space--time-analysis&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;space--time-analysis&quot;&gt;Space &amp;#x26; Time Analysis&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#space--time-analysis&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The analysis method we are using is &lt;a href=&quot;../DSA/Algorithms/Algorithm-Complexity-Analysis&quot; class=&quot;internal alias&quot; data-slug=&quot;DSA/Algorithms/Algorithm-Complexity-Analysis&quot;&gt;Algorithm Complexity Analysis&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;space---on&quot;&gt;Space - O(n)&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#space---on&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Ignore input size &amp;#x26; language dependent space&lt;/em&gt;&lt;/li&gt;
@@ -69,9 +70,7 @@
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;      &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-constant)&quot;&gt;System&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-constant)&quot;&gt;out&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-constant)&quot;&gt;sb&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;toString&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;());&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;  }&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt; &lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;personal-reflection&quot;&gt;Personal Reflection&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#personal-reflection&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Why it takes so long to solve:&lt;/strong&gt; &lt;em&gt;NIL&lt;/em&gt;&lt;/li&gt;
@@ -81,7 +80,7 @@
 &lt;li&gt;&lt;strong&gt;Ideas you found here that could help you later:&lt;/strong&gt; Understand the properties of &lt;a href=&quot;../DSA/Data-Structure/Data-Structure&quot; class=&quot;internal alias&quot; data-slug=&quot;DSA/Data-Structure/Data-Structure&quot;&gt;Data Structure&lt;/a&gt; well&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ideas that didn’t work and why:&lt;/strong&gt; &lt;em&gt;NIL&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    <pubDate>Wed, 13 Dec 2023 13:52:08 GMT</pubDate>
+    <pubDate>Wed, 13 Dec 2023 15:11:22 GMT</pubDate>
   </item><item>
     <title>Linked List</title>
     <link>https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/Linked-List</link>

@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-13, 21:36
-Last Date: 2023-12-13T21:52:08+08:00
+Last Date: 2023-12-13T23:11:22+08:00
 tags:
   - cp
 ---
@@ -31,7 +31,8 @@ tags:
 - Then we loop the original string, add characters that aren't `b` and `B` to form a new string which is the final answer
 
 
-## Space & Time analysis
+## Space & Time Analysis
+The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(n)
 - *Ignore input size & language dependent space*
 - We are maintaining 2 [[Stack (FILO)]]
@@ -84,8 +85,6 @@ public class Solution {
     }
   }
 }
-
-
 ```
 
 ## Personal Reflection
