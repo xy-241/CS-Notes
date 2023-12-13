@@ -1,6 +1,6 @@
 #security 
 ## Abstract
-- Add a random value to the text before [[Hashing]]
+- Add a random value to the text before [[Hash]]
 
 
 

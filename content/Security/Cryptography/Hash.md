@@ -1,4 +1,14 @@
-#security 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - security
+Creation Date: 2023-09-09T18:10:00
+Last Date: 2023-12-13T18:11:19+08:00
+References: 
+---
 ## Abstract
 - Hash means Chop & Mix
 - Take in a variable-length text and give a fixed-length output

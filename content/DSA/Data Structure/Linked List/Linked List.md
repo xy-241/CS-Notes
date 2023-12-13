@@ -1,11 +1,19 @@
-#dsa 
-## Basics
->[!abstract] Basic Properties
->- [[Linear Data Structure]]
->- A collection of elements of the same [[data types]]
->- Elements stored in [[Discrete Memory]], because each node contains a [[Pointer]] to the next node
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-10-07T16:38:00
+Last Date: 2023-12-13T18:39:21+08:00
+References: 
+---
+## Abstract
+- [[Data Structure#Linear]]
+- [[Data Structure#Discrete Memory]] because each node contains a **Memory Pointer** to the next node
+- A collection of elements of the same [[Datatype]]
 
->
 
 >[!example] [Use Cases](https://github.com/youngyangyang04/leetcode-master#%E9%93%BE%E8%A1%A8)
 
