@@ -286,12 +286,15 @@ h2 {
   font-size: 1.4rem;
   margin-top: 1.9rem;
   margin-bottom: 1rem;
+  text-decoration: underline;
+  color: var(--primary); // Add a custom color to make it visually distinct
 }
 
 h3 {
   font-size: 1.12rem;
   margin-top: 1.62rem;
   margin-bottom: 1rem;
+  color: var(--secondary); // Add a custom color to make it visually distinct
 }
 
 h4,
@@ -300,6 +303,7 @@ h6 {
   font-size: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--tertiary); // Add a custom color to make it visually distinct
 }
 
 div[data-rehype-pretty-code-fragment] {
@@ -329,7 +333,7 @@ pre {
   overflow-x: auto;
   border: 1px solid var(--lightgray);
 
-  margin-left: 2rem;
+  margin-left: 2.5rem;
   margin-right: 0.5rem;
 
   &:has(> code.mermaid) {
