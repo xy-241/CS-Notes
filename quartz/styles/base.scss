@@ -329,6 +329,9 @@ pre {
   overflow-x: auto;
   border: 1px solid var(--lightgray);
 
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+
   &:has(> code.mermaid) {
     border: none;
   }
