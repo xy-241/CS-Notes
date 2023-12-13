@@ -5,9 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
-Creation Date: 
-Last Date: 
-References:
+Creation Date: 2023-11-12T18:59:00
+Last Date: 2023-12-13T17:26:46+08:00
+References: 
 ---
 
 ## Abstract
@@ -19,9 +19,9 @@ References:
 
 
 ## 3 ways to implement
-1. [[User-space Threads (N to 1)]]
-2. [[Kernel Threads (1 to 1)]]
-3. [[Hybrid Threads (N to M)]]
+1. [[User Thread]]
+2. [[Kernel Threads]]
+3. [[Hybrid Threads]]
 
 
 
@@ -66,3 +66,7 @@ References:
 - *Thread* carries out other tasks if the current tasks require it to wait for *IO Operations* or *Network Operations* etc
 - Goes back to the current task when the waiting ends - *Call back*
 - However, it still blocks when the task is *CPU Bounded*
+### Thread Table
+- To keep track of the [[Thread]] in a [[Process]]
+- Similar to [[Kernel]]'s [[Process Control Block (PCB)#Process Table]], except that it keeps track only of the per-thread properties
+- Managed by the [[User Thread#Runtime System]] in [[User Thread]] & [[Kernel]] in [[Kernel Threads]]

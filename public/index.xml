@@ -6,6 +6,258 @@
       <description>Last 40 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>User Thread</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</guid>
+    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; managed in the &lt;a href=&quot;../../../../OS/Terminologies/User-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/User-Space&quot;&gt;User Space&lt;/a&gt; entirely&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; knows nothing about them&lt;/li&gt;
+&lt;li&gt;As far as the kernel is concerned, it is managing single-threaded &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The threads run on top of a &lt;a href=&quot;#runtime-system&quot; class=&quot;internal alias&quot;&gt;Runtime System&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Each process needs its own private &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread#thread-table&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread Table&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; are implemented by a &lt;a href=&quot;#examples&quot; class=&quot;internal alias&quot;&gt;library&lt;/a&gt;
+&lt;img src=&quot;../../../../OS/Assets/thread_implementation_in_user_space.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;When thread becoming blocked locally &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Thread calls &lt;a href=&quot;#runtime-system&quot; class=&quot;internal alias&quot;&gt;Runtime System&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;checks to see if the thread must be put into blocked state.&lt;/li&gt;
+&lt;li&gt;If so, it stores the thread’s registers (i.e., its own) in the thread table, looks in the table for a ready thread to run&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#benefits&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;good-compatibility&quot;&gt;Good Compatibility&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#good-compatibility&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; can be implemented on an &lt;a href=&quot;../../../../OS/OS&quot; class=&quot;internal&quot; data-slug=&quot;OS/OS&quot;&gt;OS&lt;/a&gt; that does
+not support threads.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;great-performance&quot;&gt;Great Performance&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#great-performance&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thread switching is at least an order of magnitude faster than trapping to the kernel&lt;/li&gt;
+&lt;li&gt;No &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/Trap-Interrupt-(陷入)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/Trap-Interrupt-(陷入)&quot;&gt;Trap Interrupt (陷入)&lt;/a&gt; is needed&lt;/li&gt;
+&lt;li&gt;No &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Context-Switch&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Context-Switch&quot;&gt;Context Switch&lt;/a&gt; needed&lt;/li&gt;
+&lt;li&gt;the &lt;a href=&quot;../../../../OS/Main-Components/Memory/Cache/Cache&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Memory/Cache/Cache&quot;&gt;Cache&lt;/a&gt; need not be flushed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;great-customisation&quot;&gt;Great Customisation&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#great-customisation&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow each &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; to have its own customized &lt;strong&gt;Process Scheduling Algorithms&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;better-scalability&quot;&gt;Better Scalability&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#better-scalability&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot;&gt;Kernel Threads&lt;/a&gt; require some table space and &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Address-Space#stack-segment&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot;&gt;Stack Segment&lt;/a&gt; in the &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;, which can be a problem if there are a very large number of threads.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;cons&quot;&gt;Cons&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#cons&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;declined-performance&quot;&gt;Declined Performance&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#declined-performance&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; sees a &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; with multiple &lt;em&gt;user threads&lt;/em&gt; as one single &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;When the running &lt;em&gt;user thread&lt;/em&gt; has a &lt;a href=&quot;../../../../OS/Main-Components/Memory/Logical/Page-Faults&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Memory/Logical/Page-Faults&quot;&gt;Page Faults&lt;/a&gt;, other &lt;em&gt;user threads&lt;/em&gt; aren’t scheduled to run&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;risk-of-thread-hogging&quot;&gt;Risk of Thread Hogging&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#risk-of-thread-hogging&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;If an &lt;em&gt;user thread&lt;/em&gt; starts running, no other &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;User Thread&lt;/a&gt; in that &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; will ever run unless the first thread voluntarily gives up the &lt;a href=&quot;../../../../Computer-Organisation/CPU/CPU&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;CPU&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Within a single process, there are no &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot;&gt;Interrupts (中断)&lt;/a&gt;, making it impossible to schedule processes round-robin fashion (taking turns)&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot;&gt;Interrupts (中断)&lt;/a&gt; from &lt;a href=&quot;#runtime-system&quot; class=&quot;internal alias&quot;&gt;Runtime System&lt;/a&gt; is &lt;em&gt;resource intensive&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Programmers generally want threads in applications where the threads block often &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#examples&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;pthread-c&quot;&gt;PThread (C)&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#pthread-c&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; package under &lt;a href=&quot;../../../../OS/MISC/UNIX-vs-Linux/Portable-Operating-System-Interface-(POSIX)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/MISC/UNIX-vs-Linux/Portable-Operating-System-Interface-(POSIX)&quot;&gt;Portable Operating System Interface (POSIX)&lt;/a&gt;
+&lt;img src=&quot;../../../../OS/Assets/pthread_example.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;code&gt;pthread_yield()&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/System-Calls-(系统调用)/Procedure-Library/Library-Calls-(Library-Procedure)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/System-Calls-(系统调用)/Procedure-Library/Library-Calls-(Library-Procedure)&quot;&gt;Library Calls (Library Procedure)&lt;/a&gt; for &lt;em&gt;thread&lt;/em&gt; to give &lt;a href=&quot;../../../../Computer-Organisation/CPU/CPU&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;CPU&lt;/a&gt; to other &lt;em&gt;threads&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;In &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;, we don’t have this. Because &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; is in the same program, written by the same programmer, so they collaborate to get fulfil a particular feature&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;others&quot;&gt;Others&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#others&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://granulate.io/blog/deep-dive-into-golang-performance/&quot; class=&quot;external alias&quot;&gt;Golang Goroutines&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;terminologies&quot;&gt;Terminologies&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#terminologies&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;runtime-system&quot;&gt;Runtime System&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#runtime-system&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;Thread Scheduler&lt;/strong&gt; in &lt;a href=&quot;../../../../OS/Terminologies/User-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/User-Space&quot;&gt;User Space&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;scheduler-activations&quot;&gt;Scheduler Activations&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#scheduler-activations&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Instead of relying on the &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; for every thread management decision, the &lt;a href=&quot;#runtime-system&quot; class=&quot;internal alias&quot;&gt;Runtime System&lt;/a&gt;  is responsible for scheduling &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mitigates inefficiency from &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    <pubDate>Wed, 13 Dec 2023 09:29:35 GMT</pubDate>
+  </item><item>
+    <title>Hybrid Threads</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Hybrid-Threads</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Hybrid-Threads</guid>
+    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;N to M mapping&lt;/li&gt;
+&lt;li&gt;Put the &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; in both &lt;a href=&quot;../../../../OS/Terminologies/User-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/User-Space&quot;&gt;User Space&lt;/a&gt; &amp;#x26;  &lt;a href=&quot;../../../../OS/Terminologies/Kernel-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/Kernel-Space&quot;&gt;Kernel Space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Programmer can determine how many &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot;&gt;Kernel Threads&lt;/a&gt;  to use and how many &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;User Thread&lt;/a&gt; multiplex on each one&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; is aware of only the &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot;&gt;Kernel Threads&lt;/a&gt; and schedules those&lt;/li&gt;
+&lt;li&gt;Each &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot;&gt;Kernel Threads&lt;/a&gt; has some set of &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;User Thread&lt;/a&gt; that take turns using it
+&lt;img src=&quot;../../../../OS/Assets/hybrid_thread_implementation.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;pros&quot;&gt;Pros&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#pros&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;ultimate-in-flexibility&quot;&gt;Ultimate in flexibility&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#ultimate-in-flexibility&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Used by modern &lt;a href=&quot;../../../../OS/OS&quot; class=&quot;internal&quot; data-slug=&quot;OS/OS&quot;&gt;OS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    <pubDate>Wed, 13 Dec 2023 09:29:20 GMT</pubDate>
+  </item><item>
+    <title>Thread</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</guid>
+    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Responsible to carry out some features of a running program - &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; in a process share the same &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot;&gt;Address Space&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;../../../../OS/Assets/thread_resources.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Per-process items can be accessed by all &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;3-ways-to-implement&quot;&gt;3 ways to implement&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#3-ways-to-implement&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;User Thread&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot;&gt;Kernel Threads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Hybrid-Threads&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Hybrid-Threads&quot;&gt;Hybrid Threads&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#benefits&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;fast-to-createdestroy&quot;&gt;Fast to create/destroy&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#fast-to-createdestroy&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;10-100 times faster than &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Because without the need of &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Context-Switch#latency-number-an-expensive-operation&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Context-Switch&quot;&gt;Expensive Context Switching&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;makes-programming-easier&quot;&gt;Makes programming easier&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#makes-programming-easier&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Different parts of program able to communicate &lt;strong&gt;without&lt;/strong&gt; the use of &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot;&gt;Interrupts (中断)&lt;/a&gt; and &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Inter-Process-Communication-(IPC)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Inter-Process-Communication-(IPC)&quot;&gt;Inter-Process Communication (IPC)&lt;/a&gt; etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;better-responsiveness-aka-more-user-friendly&quot;&gt;Better responsiveness aka more user friendly&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#better-responsiveness-aka-more-user-friendly&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;With &lt;a href=&quot;../../../../OS/MISC/CPU/Multi-threading&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multi-threading&quot;&gt;Multi-threading&lt;/a&gt;, each &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; runs for a short while, to make all &lt;a href=&quot;../../../../Threads&quot; class=&quot;internal&quot; data-slug=&quot;Threads&quot;&gt;Threads&lt;/a&gt; seem running all the time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;example-powerpoint-with-multi-threading&quot;&gt;Example: Powerpoint with &lt;a href=&quot;../../../../OS/MISC/CPU/Multi-threading&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multi-threading&quot;&gt;Multi-threading&lt;/a&gt;&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#example-powerpoint-with-multi-threading&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;One thread can be used to receive inputs from users&lt;/li&gt;
+&lt;li&gt;One thread can be used to format the slides&lt;/li&gt;
+&lt;li&gt;One thread can be used to save the slides automatically on a regular interval&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;2-benefits-over-process&quot;&gt;2 benefits over &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#2-benefits-over-process&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Lighter to create and destroy compared to &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;, because it doesn’t require &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/System-Calls-(系统调用)/System-Call-(系统调用)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/System-Calls-(系统调用)/System-Call-(系统调用)&quot;&gt;System Call (系统调用)&lt;/a&gt; to the underlying &lt;a href=&quot;../../../../OS/OS&quot; class=&quot;internal&quot; data-slug=&quot;OS/OS&quot;&gt;OS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Share memory among themselves, avoid &lt;a href=&quot;../../../../Memory-Page-Shifting&quot; class=&quot;internal alias&quot; data-slug=&quot;Memory-Page-Shifting&quot;&gt;Memory Page Shifting&lt;/a&gt; which is expensive&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;cons&quot;&gt;Cons&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#cons&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;No protection among threads &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;One thread can bring down the entire &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;One thread can read, write, or even wipe out another thread’s stack&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/System-Calls-(系统调用)/Process-Management/fork()&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/System-Calls-(系统调用)/Process-Management/fork()&quot;&gt;fork()&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Should we copy over all the threads or just a single one?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/2-Types/Signal-(Software-Interrupt)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/2-Types/Signal-(Software-Interrupt)&quot;&gt;Signal (Software Interrupt)&lt;/a&gt; handling - which thread should handle it&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;common-procedures&quot;&gt;Common Procedures&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#common-procedures&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;terminologies&quot;&gt;Terminologies&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#terminologies&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;blocking&quot;&gt;Blocking&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#blocking&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Thread&lt;/em&gt; doesn’t do anything while waiting for &lt;em&gt;IO Operations&lt;/em&gt; or &lt;em&gt;Network Operations&lt;/em&gt; etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;non-blocking&quot;&gt;Non-blocking&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#non-blocking&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Thread&lt;/em&gt; carries out other tasks if the current tasks require it to wait for &lt;em&gt;IO Operations&lt;/em&gt; or &lt;em&gt;Network Operations&lt;/em&gt; etc&lt;/li&gt;
+&lt;li&gt;Goes back to the current task when the waiting ends - &lt;em&gt;Call back&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;However, it still blocks when the task is &lt;em&gt;CPU Bounded&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;thread-table&quot;&gt;Thread Table&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#thread-table&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;To keep track of the &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; in a &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Similar to &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;’s &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process-Control-Block-(PCB)#process-table&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process-Control-Block-(PCB)&quot;&gt;Process Table&lt;/a&gt;, except that it keeps track only of the per-thread properties&lt;/li&gt;
+&lt;li&gt;Managed by the &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread#runtime-system&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;Runtime System&lt;/a&gt; in &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;User Thread&lt;/a&gt; &amp;#x26; &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; in &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Kernel-Threads&quot;&gt;Kernel Threads&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    <pubDate>Wed, 13 Dec 2023 09:26:46 GMT</pubDate>
+  </item><item>
+    <title>Kernel Threads</title>
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Kernel-Threads</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Kernel-Threads</guid>
+    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;1 to 1 mapping&lt;/li&gt;
+&lt;li&gt;Put the &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; entirely in &lt;a href=&quot;../../../../OS/Terminologies/Kernel-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/Kernel-Space&quot;&gt;Kernel Space&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; implementation inside &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;
+&lt;img src=&quot;../../../../OS/Assets/thread_implementation_in_kernel_space.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;pro&quot;&gt;Pro&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#pro&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;keep-all-threads-busy&quot;&gt;Keep All Threads Busy&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#keep-all-threads-busy&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;If one thread in a process causes a &lt;a href=&quot;../../../../OS/Main-Components/Memory/Logical/Page-Faults&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Memory/Logical/Page-Faults&quot;&gt;Page Faults&lt;/a&gt;, the &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; can easily check to see if the process has any other runnable threads, and if so, run one of them while waiting for the required page to be brought in from the disk&lt;/li&gt;
+&lt;li&gt;Or &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; can get &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; from other &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;cons&quot;&gt;Cons&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#cons&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;resource-intense&quot;&gt;Resource Intense&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#resource-intense&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;All calls that might block a &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; are implemented as &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/System-Calls-(系统调用)/System-Call-(系统调用)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/System-Calls-(系统调用)/System-Call-(系统调用)&quot;&gt;System Call (系统调用)&lt;/a&gt;, at considerably greater cost than a call to a &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread#runtime-system&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;Runtime System&lt;/a&gt; procedure&lt;/li&gt;
+&lt;li&gt;Relatively greater cost of creating and destroying &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; in the &lt;a href=&quot;../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;tip&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Recycling threads &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;When a thread is destroyed, it is marked as not runnable, but its kernel data structures are not otherwise affected&lt;/li&gt;
+&lt;li&gt;When a new thread must be created, an old thread is reactivated, saving some overhead&lt;/li&gt;
+&lt;li&gt;Thread recycling is also possible for &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;User Thread&lt;/a&gt;, but since the thread-management overhead is much smaller, there is less incentive to do this&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</description>
+    <pubDate>Wed, 13 Dec 2023 09:25:18 GMT</pubDate>
+  </item><item>
     <title>Datadog APM</title>
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
     <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
@@ -430,14 +682,14 @@
 &lt;li&gt;A mechanism achieved with wither &lt;a href=&quot;#multi-threaded-chip&quot; class=&quot;internal alias&quot;&gt;Multi-threaded Chip&lt;/a&gt;(true &lt;a href=&quot;../../../OS/Terminologies/High-performance-Computing#parallelism-并行性&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/High-performance-Computing&quot;&gt;Parallelism (并行性)&lt;/a&gt;) or quick &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Context-Switch&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Context-Switch&quot;&gt;Context Switch&lt;/a&gt;(&lt;a href=&quot;../../../OS/Terminologies/High-performance-Computing#concurrency-并发&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/High-performance-Computing&quot;&gt;Concurrency (并发)&lt;/a&gt;) or &lt;em&gt;both&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Doesn’t offer true &lt;a href=&quot;../../../OS/Terminologies/High-performance-Computing#parallelism-并行性&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/High-performance-Computing&quot;&gt;Parallelism (并行性)&lt;/a&gt; on Single-Core &lt;a href=&quot;../../../Computer-Organisation/CPU/CPU&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;CPU&lt;/a&gt; which only supports one &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; running at a time&lt;/li&gt;
 &lt;li&gt;Thread-switching time is reduced to &lt;a href=&quot;../../../OS/Terminologies/Latency-Number&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/Latency-Number&quot;&gt;nanosecond&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;To users, &lt;a href=&quot;../../../Computer-Organisation/CPU/CPU&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;CPU&lt;/a&gt; Speed is divided by the total number of &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; executing at the same time when multiple &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; sharing the same &lt;a href=&quot;../../../Computer-Organisation/CPU/CPU#core&quot; class=&quot;internal alias&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Performance is a &lt;em&gt;fine balance&lt;/em&gt; between performance gains from each &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; and &lt;a href=&quot;#overhead-of-creating-thread&quot; class=&quot;internal alias&quot;&gt;Overhead of Creating Thread&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;To users, &lt;a href=&quot;../../../Computer-Organisation/CPU/CPU&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;CPU&lt;/a&gt; Speed is divided by the total number of &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; executing at the same time when multiple &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; sharing the same &lt;a href=&quot;../../../Computer-Organisation/CPU/CPU#core&quot; class=&quot;internal alias&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;Core&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Performance is a &lt;em&gt;fine balance&lt;/em&gt; between performance gains from each &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; and &lt;a href=&quot;#overhead-of-creating-thread&quot; class=&quot;internal alias&quot;&gt;Overhead of Creating Thread&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#benefits&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;improved-responsiveness&quot;&gt;Improved Responsiveness&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#improved-responsiveness&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Can continue to run other &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; while waiting for I/O operations to complete&lt;/li&gt;
-&lt;li&gt;Run other &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; while one &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; is waiting&lt;/li&gt;
+&lt;li&gt;Can continue to run other &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; while waiting for I/O operations to complete&lt;/li&gt;
+&lt;li&gt;Run other &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; while one &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; is waiting&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;improved-performance&quot;&gt;Improved Performance&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#improved-performance&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
@@ -452,109 +704,17 @@
 &lt;ul&gt;
 &lt;li&gt;Where there is a &lt;em&gt;shared resource&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;overhead-of-creating-thread&quot;&gt;Overhead of Creating &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#overhead-of-creating-thread&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;overhead-of-creating-thread&quot;&gt;Overhead of Creating &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#overhead-of-creating-thread&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
 &lt;h2 id=&quot;terminologies&quot;&gt;Terminologies&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#terminologies&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;thread-safety-线程安全&quot;&gt;Thread Safety (线程安全)&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#thread-safety-线程安全&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A piece of code that functions correctly during &lt;em&gt;simultaneous execution&lt;/em&gt; by &lt;em&gt;multiple &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;/em&gt; accessing the a &lt;em&gt;shared resource&lt;/em&gt; without &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Synchronization-(同步)/Race-Condition-(竞态条件)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Synchronization-(同步)/Race-Condition-(竞态条件)&quot;&gt;Race Condition (竞态条件)&lt;/a&gt; and &lt;a href=&quot;../../../OS/Main-Components/Deadlock-(死锁)/Deadlock-(死锁)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Deadlock-(死锁)/Deadlock-(死锁)&quot;&gt;Deadlock (死锁)&lt;/a&gt; etc&lt;/li&gt;
+&lt;li&gt;A piece of code that functions correctly during &lt;em&gt;simultaneous execution&lt;/em&gt; by &lt;em&gt;multiple &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;/em&gt; accessing the a &lt;em&gt;shared resource&lt;/em&gt; without &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Synchronization-(同步)/Race-Condition-(竞态条件)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Synchronization-(同步)/Race-Condition-(竞态条件)&quot;&gt;Race Condition (竞态条件)&lt;/a&gt; and &lt;a href=&quot;../../../OS/Main-Components/Deadlock-(死锁)/Deadlock-(死锁)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Deadlock-(死锁)/Deadlock-(死锁)&quot;&gt;Deadlock (死锁)&lt;/a&gt; etc&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;multi-threaded-chip&quot;&gt;Multi-threaded Chip&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#multi-threaded-chip&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;../../../Computer-Organisation/CPU/Control-Unit&quot; class=&quot;internal alias&quot; data-slug=&quot;Computer-Organisation/CPU/Control-Unit&quot;&gt;Control Unit&lt;/a&gt;, &lt;a href=&quot;../../../Computer-Organisation/CPU/Registers&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/Registers&quot;&gt;Registers&lt;/a&gt; &amp;#x26; &lt;a href=&quot;../../../Computer-Organisation/Pipelining/Pipeline&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/Pipelining/Pipeline&quot;&gt;Pipeline&lt;/a&gt; are replicated&lt;/li&gt;
 &lt;/ul&gt;</description>
     <pubDate>Tue, 12 Dec 2023 14:56:21 GMT</pubDate>
-  </item><item>
-    <title>Thread</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</guid>
-    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Responsible to carry out some features of a running program - &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; in a process share the same &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot;&gt;Address Space&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;../../../../../OS/Assets/thread_resources.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Per-process items can be accessed by all &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;3-ways-to-implement&quot;&gt;3 ways to implement&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#3-ways-to-implement&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/User-space-Threads-(N-to-1)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/User-space-Threads-(N-to-1)&quot;&gt;User-space Threads (N to 1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Kernel-Threads-(1-to-1)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Kernel-Threads-(1-to-1)&quot;&gt;Kernel Threads (1 to 1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Hybrid-Threads-(N-to-M)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Hybrid-Threads-(N-to-M)&quot;&gt;Hybrid Threads (N to M)&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#benefits&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;fast-to-createdestroy&quot;&gt;Fast to create/destroy&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#fast-to-createdestroy&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;10-100 times faster than &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Because without the need of &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Context-Switch#latency-number-an-expensive-operation&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Context-Switch&quot;&gt;Expensive Context Switching&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;makes-programming-easier&quot;&gt;Makes programming easier&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#makes-programming-easier&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Different parts of program able to communicate &lt;strong&gt;without&lt;/strong&gt; the use of &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot;&gt;Interrupts (中断)&lt;/a&gt; and &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Inter-Process-Communication-(IPC)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Inter-Process-Communication-(IPC)&quot;&gt;Inter-Process Communication (IPC)&lt;/a&gt; etc&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;better-responsiveness-aka-more-user-friendly&quot;&gt;Better responsiveness aka more user friendly&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#better-responsiveness-aka-more-user-friendly&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;With &lt;a href=&quot;../../../../../OS/MISC/CPU/Multi-threading&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multi-threading&quot;&gt;Multi-threading&lt;/a&gt;, each &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; runs for a short while, to make all &lt;a href=&quot;../../../../../Threads&quot; class=&quot;internal&quot; data-slug=&quot;Threads&quot;&gt;Threads&lt;/a&gt; seem running all the time&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;example-powerpoint-with-multi-threading&quot;&gt;Example: Powerpoint with &lt;a href=&quot;../../../../../OS/MISC/CPU/Multi-threading&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multi-threading&quot;&gt;Multi-threading&lt;/a&gt;&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#example-powerpoint-with-multi-threading&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;One thread can be used to receive inputs from users&lt;/li&gt;
-&lt;li&gt;One thread can be used to format the slides&lt;/li&gt;
-&lt;li&gt;One thread can be used to save the slides automatically on a regular interval&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;2-benefits-over-process&quot;&gt;2 benefits over &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#2-benefits-over-process&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Lighter to create and destroy compared to &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;, because it doesn’t require &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot;&gt;System Call (系统调用)&lt;/a&gt; to the underlying &lt;a href=&quot;../../../../../OS/OS&quot; class=&quot;internal&quot; data-slug=&quot;OS/OS&quot;&gt;OS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Share memory among themselves, avoid &lt;a href=&quot;../../../../../Memory-Page-Shifting&quot; class=&quot;internal alias&quot; data-slug=&quot;Memory-Page-Shifting&quot;&gt;Memory Page Shifting&lt;/a&gt; which is expensive&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;cons&quot;&gt;Cons&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#cons&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;No protection among threads &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;One thread can bring down the entire &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;One thread can read, write, or even wipe out another thread’s stack&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/Process-Management/fork()&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/Process-Management/fork()&quot;&gt;fork()&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Should we copy over all the threads or just a single one?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/2-Types/Signal-(Software-Interrupt)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/2-Types/Signal-(Software-Interrupt)&quot;&gt;Signal (Software Interrupt)&lt;/a&gt; handling - which thread should handle it&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;common-procedures&quot;&gt;Common Procedures&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#common-procedures&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;h2 id=&quot;terminologies&quot;&gt;Terminologies&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#terminologies&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;blocking&quot;&gt;Blocking&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#blocking&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Thread&lt;/em&gt; doesn’t do anything while waiting for &lt;em&gt;IO Operations&lt;/em&gt; or &lt;em&gt;Network Operations&lt;/em&gt; etc&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;non-blocking&quot;&gt;Non-blocking&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#non-blocking&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Thread&lt;/em&gt; carries out other tasks if the current tasks require it to wait for &lt;em&gt;IO Operations&lt;/em&gt; or &lt;em&gt;Network Operations&lt;/em&gt; etc&lt;/li&gt;
-&lt;li&gt;Goes back to the current task when the waiting ends - &lt;em&gt;Call back&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;However, it still blocks when the task is &lt;em&gt;CPU Bounded&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    <pubDate>Tue, 12 Dec 2023 14:51:38 GMT</pubDate>
   </item><item>
     <title>Multi-processing</title>
     <link>https://notes.yxy.ninja/OS/MISC/CPU/Multi-processing</link>
@@ -572,7 +732,7 @@
     <guid>https://notes.yxy.ninja/OS/MISC/CPU/Asynchronous-Single-Threading</guid>
     <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Basically takes the benefits of &lt;a href=&quot;../../../OS/MISC/CPU/Multi-threading&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multi-threading&quot;&gt;Multi-threading&lt;/a&gt; without the &lt;a href=&quot;../../../OS/MISC/CPU/Multi-threading#cons&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/MISC/CPU/Multi-threading&quot;&gt;Cons&lt;/a&gt; with &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread#non-blocking&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Non-blocking Thread&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Basically takes the benefits of &lt;a href=&quot;../../../OS/MISC/CPU/Multi-threading&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multi-threading&quot;&gt;Multi-threading&lt;/a&gt; without the &lt;a href=&quot;../../../OS/MISC/CPU/Multi-threading#cons&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/MISC/CPU/Multi-threading&quot;&gt;Cons&lt;/a&gt; with &lt;a href=&quot;../../../OS/Main-Components/Process-Related/Thread-(线程)/Thread#non-blocking&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/Thread&quot;&gt;Non-blocking Thread&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;cons&quot;&gt;Cons&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#cons&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;no-parallelism-并行性&quot;&gt;No &lt;a href=&quot;../../../OS/Terminologies/High-performance-Computing#parallelism-并行性&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/High-performance-Computing&quot;&gt;Parallelism (并行性)&lt;/a&gt;&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#no-parallelism-并行性&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
@@ -582,60 +742,12 @@
 &lt;/ul&gt;</description>
     <pubDate>Tue, 12 Dec 2023 14:51:38 GMT</pubDate>
   </item><item>
-    <title>User Thread</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</guid>
-    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; managed in the &lt;a href=&quot;../../../../../OS/Terminologies/User-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/User-Space&quot;&gt;User Space&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#examples&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;pthread-c&quot;&gt;PThread (C)&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#pthread-c&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;A &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; package under &lt;a href=&quot;../../../../../OS/MISC/UNIX-vs-Linux/Portable-Operating-System-Interface-(POSIX)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/MISC/UNIX-vs-Linux/Portable-Operating-System-Interface-(POSIX)&quot;&gt;Portable Operating System Interface (POSIX)&lt;/a&gt;
-&lt;img src=&quot;../../../../../OS/Assets/pthread_example.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;code&gt;pthread_yield()&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/Procedure-Library/Library-Calls-(Library-Procedure)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/Procedure-Library/Library-Calls-(Library-Procedure)&quot;&gt;Library Calls (Library Procedure)&lt;/a&gt; for &lt;em&gt;thread&lt;/em&gt; to give &lt;a href=&quot;../../../../../Computer-Organisation/CPU/CPU&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;CPU&lt;/a&gt; to other &lt;em&gt;threads&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;In &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;, we don’t have this. Because &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; is in the same program, written by the same programmer, so they collaborate to get fulfil a particular feature&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;others&quot;&gt;Others&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#others&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://granulate.io/blog/deep-dive-into-golang-performance/&quot; class=&quot;external alias&quot;&gt;Golang Goroutines&lt;/a&gt;&lt;/p&gt;</description>
-    <pubDate>Tue, 12 Dec 2023 14:47:27 GMT</pubDate>
-  </item><item>
-    <title>Scheduler Activations</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Scheduler-Activations</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Scheduler-Activations</guid>
-    <description>&lt;p&gt;&lt;a href=&quot;../../../../../.././../../../../../tags/os&quot; class=&quot;tag-link internal alias&quot; data-slug=&quot;tags/os&quot;&gt;#os&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;abstract&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;rect x=&quot;8&quot; y=&quot;2&quot; width=&quot;8&quot; height=&quot;4&quot; rx=&quot;1&quot; ry=&quot;1&quot;&gt;&lt;/rect&gt;&lt;path d=&quot;M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 11h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 16h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8 11h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8 16h.01&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Instead of relying on the &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; for every thread management decision, the &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot;&gt;runtime system&lt;/a&gt;  is responsible for scheduling &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;success&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Mitigate inefficiency from &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;</description>
-    <pubDate>Tue, 12 Dec 2023 14:46:49 GMT</pubDate>
-  </item><item>
     <title>Process Management</title>
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</link>
     <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process-Management</guid>
     <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Required in an &lt;a href=&quot;../../../../OS/OS&quot; class=&quot;internal&quot; data-slug=&quot;OS/OS&quot;&gt;OS&lt;/a&gt; that has multiple &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; that want to run at the same, like in the &lt;a href=&quot;../../../../OS/MISC/CPU/Multi-Programming&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multi-Programming&quot;&gt;Multi-Programming&lt;/a&gt; or &lt;a href=&quot;../../../../OS/MISC/CPU/Multitasking&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multitasking&quot;&gt;Multitasking&lt;/a&gt; systems. Because &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; unlike &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread#b73e18&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot;&gt;Thread&lt;/a&gt; will give up its &lt;a href=&quot;../../../../Computer-Organisation/CPU/CPU&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;CPU&lt;/a&gt; for other &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Required in an &lt;a href=&quot;../../../../OS/OS&quot; class=&quot;internal&quot; data-slug=&quot;OS/OS&quot;&gt;OS&lt;/a&gt; that has multiple &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; that want to run at the same, like in the &lt;a href=&quot;../../../../OS/MISC/CPU/Multi-Programming&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multi-Programming&quot;&gt;Multi-Programming&lt;/a&gt; or &lt;a href=&quot;../../../../OS/MISC/CPU/Multitasking&quot; class=&quot;internal&quot; data-slug=&quot;OS/MISC/CPU/Multitasking&quot;&gt;Multitasking&lt;/a&gt; systems. Because &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; unlike &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Thread-(线程)/User-Thread#b73e18&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Thread-(线程)/User-Thread&quot;&gt;Thread&lt;/a&gt; will give up its &lt;a href=&quot;../../../../Computer-Organisation/CPU/CPU&quot; class=&quot;internal&quot; data-slug=&quot;Computer-Organisation/CPU/CPU&quot;&gt;CPU&lt;/a&gt; for other &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;components&quot;&gt;Components&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#components&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;process-priority&quot;&gt;Process Priority&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#process-priority&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
@@ -665,196 +777,6 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Tue, 12 Dec 2023 14:16:56 GMT</pubDate>
-  </item><item>
-    <title>User-space Threads (N to 1)</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</guid>
-    <description>&lt;p&gt;&lt;a href=&quot;../../../../../.././../../../../../tags/os&quot; class=&quot;tag-link internal alias&quot; data-slug=&quot;tags/os&quot;&gt;#os&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Put the &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; entirely in &lt;a href=&quot;../../../../../../OS/Terminologies/User-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/User-Space&quot;&gt;User Space&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;The &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; knows nothing about them&lt;/li&gt;
-&lt;li&gt;As far as the kernel is concerned, it is managing single-threaded &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; are implemented by a library&lt;/li&gt;
-&lt;li&gt;The threads run on top of a &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot;&gt;Runtime-System&lt;/a&gt;
-&lt;img src=&quot;../../../../../../OS/Assets/thread_implementation_in_user_space.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Each process needs its own private &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Thread-Table&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Thread-Table&quot;&gt;Thread Table&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;When thread becoming blocked locally &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Thread calls &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot;&gt;run-time system&lt;/a&gt; procedure
-&lt;ol&gt;
-&lt;li&gt;checks to see if the thread must be put into blocked state.&lt;/li&gt;
-&lt;li&gt;If so, it stores the thread’s registers (i.e., its own) in the thread table, looks in the table for a ready thread to run&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;pro&quot;&gt;Pro&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#pro&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;success&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Success &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; can be implemented on an operating system that does
-not support threads.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;success&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Thread switching is at least an order of magnitude faster than trapping to the kernel &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;No &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/Trap-Interrupt-(陷入)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/Trap-Interrupt-(陷入)&quot;&gt;Trap Interrupt (陷入)&lt;/a&gt; is needed&lt;/li&gt;
-&lt;li&gt;No &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Context-Switch&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Context-Switch&quot;&gt;Context Switch&lt;/a&gt; needed&lt;/li&gt;
-&lt;li&gt;the &lt;a href=&quot;../../../../../../OS/Main-Components/Memory/Cache/Cache&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Memory/Cache/Cache&quot;&gt;Cache&lt;/a&gt; need not be flushed&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;success&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Allow each process to have its own customized &lt;a href=&quot;../../../../../../Scheduling-Algorithm&quot; class=&quot;internal alias&quot; data-slug=&quot;Scheduling-Algorithm&quot;&gt;Scheduling Algorithm&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;success&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Scale better &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Kernel-Threads-(1-to-1)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Kernel-Threads-(1-to-1)&quot;&gt;Kernel Threads (1 to 1)&lt;/a&gt; require some table space and stack space in the kernel, which can be a problem if there are a very large number of threads.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;cons&quot;&gt;Cons&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#cons&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Calling blocking &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot;&gt;System Call (系统调用)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Letting the thread actually make the system call is unacceptable, since
-this will stop all the threads&lt;/li&gt;
-&lt;li&gt;The system calls could all be changed to be nonblocking (e.g., a read on the
-keyboard would just return 0 bytes if no characters were already buffered, but requiring changes to the &lt;a href=&quot;../../../../../../OS/OS&quot; class=&quot;internal&quot; data-slug=&quot;OS/OS&quot;&gt;OS&lt;/a&gt; is unattractive&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Warning &lt;a href=&quot;../../../../../../OS/Main-Components/Memory/Logical/Page-Faults&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Memory/Logical/Page-Faults&quot;&gt;Page Faults&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;p&gt;The &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;, unaware of even the existence of threads, naturally blocks
-the entire process until the disk I/O is complete, even though other threads might
-be runnable&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;If a thread starts running, no other thread in that process will ever run unless the first thread voluntarily gives up the CPU &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;p&gt;Within a single process, there are no &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot;&gt;Interrupts (中断)&lt;/a&gt;, making it impossible to schedule processes round-robin fashion (taking turns). The &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/Interrupts-(中断)&quot;&gt;Interrupts (中断)&lt;/a&gt; from &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot;&gt;Runtime system&lt;/a&gt; is resource intensive&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Programmers generally want threads in applications where the threads block often &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;/blockquote&gt;</description>
-    <pubDate>Tue, 12 Dec 2023 14:16:46 GMT</pubDate>
-  </item><item>
-    <title>Thread Table</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Thread-Table</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Thread-Table</guid>
-    <description>&lt;p&gt;&lt;a href=&quot;../../../../../.././../../../../../tags/os&quot; class=&quot;tag-link internal alias&quot; data-slug=&quot;tags/os&quot;&gt;#os&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;abstract&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;rect x=&quot;8&quot; y=&quot;2&quot; width=&quot;8&quot; height=&quot;4&quot; rx=&quot;1&quot; ry=&quot;1&quot;&gt;&lt;/rect&gt;&lt;path d=&quot;M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 11h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M12 16h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8 11h.01&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M8 16h.01&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Abstract &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;To keep track of the &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/User-space-Threads-(N-to-1)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/User-space-Threads-(N-to-1)&quot;&gt;Threads&lt;/a&gt; in that &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Similar to &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;’s &lt;a href=&quot;../../../../../../Process-Table&quot; class=&quot;internal alias&quot; data-slug=&quot;Process-Table&quot;&gt;Process Table&lt;/a&gt;, except that it keeps track only of the per-thread properties&lt;/li&gt;
-&lt;li&gt;Managed by the &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot;&gt;runtime system&lt;/a&gt; in &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/User-space-Threads-(N-to-1)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/User-space-Threads-(N-to-1)&quot;&gt;User-space Threads (N to 1)&lt;/a&gt; &amp;#x26; &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt; in &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Kernel-Threads-(1-to-1)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Kernel-Threads-(1-to-1)&quot;&gt;Kernel Threads (1 to 1)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;</description>
-    <pubDate>Tue, 12 Dec 2023 14:16:46 GMT</pubDate>
-  </item><item>
-    <title>Kernel Threads (1 to 1)</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Kernel-Threads-(1-to-1)</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Kernel-Threads-(1-to-1)</guid>
-    <description>&lt;p&gt;&lt;a href=&quot;../../../../../.././../../../../../tags/os&quot; class=&quot;tag-link internal alias&quot; data-slug=&quot;tags/os&quot;&gt;#os&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Put the &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; entirely in &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Terminologies/Kernel-Space&quot;&gt;Kernel Space&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Thread-Table&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/Thread-Table&quot;&gt;Thread Table&lt;/a&gt; inside &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;When a thread blocks, the &lt;a href=&quot;../../../../../../OS/Terminologies/Kernel&quot; class=&quot;internal&quot; data-slug=&quot;OS/Terminologies/Kernel&quot;&gt;Kernel&lt;/a&gt;, at its option, can run either another thread from the same &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Process&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Process&quot;&gt;Process&lt;/a&gt; (if one is ready) or a thread from a different process
-&lt;img src=&quot;../../../../../../OS/Assets/thread_implementation_in_kernel_space.png&quot; width=&quot;auto&quot; height=&quot;auto&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;pro&quot;&gt;Pro&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#pro&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;success&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;&gt;&lt;/polyline&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Do not require any new, nonblocking &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot;&gt;System Call (系统调用)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;p&gt;If one thread in a process causes a &lt;a href=&quot;../../../../../../OS/Main-Components/Memory/Logical/Page-Faults&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Memory/Logical/Page-Faults&quot;&gt;Page Faults&lt;/a&gt;, the kernel can easily check to see if the process has any other runnable threads, and if so, run one of them while waiting for the required page to be brought in from the disk&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;cons&quot;&gt;Cons&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#cons&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;All calls that might block a &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Thread&quot;&gt;Thread&lt;/a&gt; are implemented as &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot;&gt;System Call (系统调用)&lt;/a&gt;, at considerably greater cost than a call to a &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/User-Thread&quot;&gt;runtime system&lt;/a&gt; procedure&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;warning&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z&quot;&gt;&lt;/path&gt;&lt;line x1=&quot;12&quot; y1=&quot;9&quot; x2=&quot;12&quot; y2=&quot;13&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;12&quot; y1=&quot;17&quot; x2=&quot;12.01&quot; y2=&quot;17&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Relatively greater cost of creating and destroying threads in the kernel &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;tip&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Recycle threads &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;When a thread is destroyed, it is marked as not runnable, but its kernel data structures are not otherwise affected&lt;/li&gt;
-&lt;li&gt;When a new thread must be created, an old thread is reactivated, saving some overhead&lt;/li&gt;
-&lt;li&gt;Thread recycling is also possible for &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/User-space-Threads-(N-to-1)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Thread-(线程)/Types-of-Threads/User-space-Threads-(N-to-1)&quot;&gt;user-level threads&lt;/a&gt;, but since the thread-management overhead is much smaller, there is less incentive to do this.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;</description>
-    <pubDate>Tue, 12 Dec 2023 14:16:46 GMT</pubDate>
   </item><item>
     <title>Address Space</title>
     <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Address-Space</link>
@@ -929,7 +851,7 @@ be runnable&lt;/p&gt;
 &lt;h3 id=&quot;data-segment&quot;&gt;Data Segment&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#data-segment&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Grow upwards&lt;/li&gt;
-&lt;li&gt;Expansion is done explicitly using &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/System-Call-(系统调用)&quot;&gt;System Call (系统调用)&lt;/a&gt; &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/Memory-Management/brk()&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/Memory-Management/brk()&quot;&gt;brk()&lt;/a&gt; or higher level &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/Procedure-Library/Library-Calls-(Library-Procedure)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Interrupts-(中断)/System-Calls-(系统调用)/Procedure-Library/Library-Calls-(Library-Procedure)&quot;&gt;Library Calls (Library Procedure)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Expansion is done explicitly using &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/System-Calls-(系统调用)/System-Call-(系统调用)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/System-Calls-(系统调用)/System-Call-(系统调用)&quot;&gt;System Call (系统调用)&lt;/a&gt; &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/System-Calls-(系统调用)/Memory-Management/brk()&quot; class=&quot;internal&quot; data-slug=&quot;OS/Main-Components/Process-Related/System-Calls-(系统调用)/Memory-Management/brk()&quot;&gt;brk()&lt;/a&gt; or higher level &lt;a href=&quot;../../../../OS/Main-Components/Process-Related/System-Calls-(系统调用)/Procedure-Library/Library-Calls-(Library-Procedure)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/System-Calls-(系统调用)/Procedure-Library/Library-Calls-(Library-Procedure)&quot;&gt;Library Calls (Library Procedure)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;All objects created with the &lt;code&gt;new&lt;/code&gt; keywords in &lt;a href=&quot;../../../../Java/Java&quot; class=&quot;internal&quot; data-slug=&quot;Java/Java&quot;&gt;Java&lt;/a&gt; are created here&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&quot;text-segment&quot;&gt;Text Segment&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#text-segment&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
@@ -1445,24 +1367,24 @@ be runnable&lt;/p&gt;
     <pubDate>Tue, 12 Dec 2023 13:28:56 GMT</pubDate>
   </item><item>
     <title>brk()</title>
-    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</link>
-    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</guid>
-    <description>&lt;p&gt;&lt;a href=&quot;../../../../../.././../../../../../tags/os&quot; class=&quot;tag-link internal alias&quot; data-slug=&quot;tags/os&quot;&gt;#os&lt;/a&gt;&lt;/p&gt;
+    <link>https://notes.yxy.ninja/OS/Main-Components/Process-Related/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</link>
+    <guid>https://notes.yxy.ninja/OS/Main-Components/Process-Related/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</guid>
+    <description>&lt;p&gt;&lt;a href=&quot;../../../../.././../../../../tags/os&quot; class=&quot;tag-link internal alias&quot; data-slug=&quot;tags/os&quot;&gt;#os&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Specifies the new &lt;a href=&quot;../../../../../../Computer-Organisation/Circuits/Sequential-Circuits/Memory/Memory-Address&quot; class=&quot;internal alias&quot; data-slug=&quot;Computer-Organisation/Circuits/Sequential-Circuits/Memory/Memory-Address&quot;&gt;Memory Address&lt;/a&gt; where the &lt;a href=&quot;../../../../../../OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot;&gt;Address Space&lt;/a&gt; is to end&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Specifies the new &lt;a href=&quot;../../../../../Computer-Organisation/Circuits/Sequential-Circuits/Memory/Memory-Address&quot; class=&quot;internal alias&quot; data-slug=&quot;Computer-Organisation/Circuits/Sequential-Circuits/Memory/Memory-Address&quot;&gt;Memory Address&lt;/a&gt; where the &lt;a href=&quot;../../../../../OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/Main-Components/Process-Related/Process-(进程)/Address-Space&quot;&gt;Address Space&lt;/a&gt; is to end&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;/blockquote&gt;
 &lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
 &lt;div class=&quot;callout-title&quot;&gt;
                   &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Not defined in &lt;a href=&quot;../../../../../../OS/MISC/UNIX-vs-Linux/Portable-Operating-System-Interface-(POSIX)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/MISC/UNIX-vs-Linux/Portable-Operating-System-Interface-(POSIX)&quot;&gt;Portable Operating System Interface (POSIX)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Not defined in &lt;a href=&quot;../../../../../OS/MISC/UNIX-vs-Linux/Portable-Operating-System-Interface-(POSIX)&quot; class=&quot;internal alias&quot; data-slug=&quot;OS/MISC/UNIX-vs-Linux/Portable-Operating-System-Interface-(POSIX)&quot;&gt;Portable Operating System Interface (POSIX)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Programmer encouraged to use &lt;a href=&quot;../../../../../../malloc&quot; class=&quot;internal&quot; data-slug=&quot;malloc&quot;&gt;malloc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Programmer encouraged to use &lt;a href=&quot;../../../../../malloc&quot; class=&quot;internal&quot; data-slug=&quot;malloc&quot;&gt;malloc&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Tue, 12 Dec 2023 13:24:46 GMT</pubDate>
@@ -1890,6 +1812,94 @@ be runnable&lt;/p&gt;
                   &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Note &lt;a href=&quot;../../../../../Networking/Terminologies/Host&quot; class=&quot;internal&quot; data-slug=&quot;Networking/Terminologies/Host&quot;&gt;Host&lt;/a&gt; successfully processed the &lt;a href=&quot;../../../../../Networking/Application-Layer/HTTP/Protocol-Components/HTTP-Request&quot; class=&quot;internal alias&quot; data-slug=&quot;Networking/Application-Layer/HTTP/Protocol-Components/HTTP-Request&quot;&gt;HTTP Request&lt;/a&gt;, but isn&#039;t returning any content&lt;/p&gt;&lt;/div&gt;
                   
                 &lt;/div&gt;
+&lt;/blockquote&gt;</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>POST</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/POST</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/POST</guid>
+    <description>&lt;p&gt;&lt;a href=&quot;../../../.././../../../tags/networking&quot; class=&quot;tag-link internal alias&quot; data-slug=&quot;tags/networking&quot;&gt;#networking&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Creates new data &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Each call has a &lt;a href=&quot;../../../../Side-Effect&quot; class=&quot;internal&quot; data-slug=&quot;Side-Effect&quot;&gt;Side-Effect&lt;/a&gt; (new data be created)&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Has a &lt;a href=&quot;../../../../Request-Body&quot; class=&quot;internal alias&quot; data-slug=&quot;Request-Body&quot;&gt;Request Body&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Parameters in &lt;a href=&quot;../../../../Request-Body&quot; class=&quot;internal alias&quot; data-slug=&quot;Request-Body&quot;&gt;Request Body&lt;/a&gt;, &lt;a href=&quot;../../../../Request-Header&quot; class=&quot;internal alias&quot; data-slug=&quot;Request-Header&quot;&gt;Request Header&lt;/a&gt; &amp;#x26; &lt;a href=&quot;../../../../Networking/Application-Layer/HTTP/URL&quot; class=&quot;internal&quot; data-slug=&quot;Networking/Application-Layer/HTTP/URL&quot;&gt;URL&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;example&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;8&quot; y1=&quot;6&quot; x2=&quot;21&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;8&quot; y1=&quot;12&quot; x2=&quot;21&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;8&quot; y1=&quot;18&quot; x2=&quot;21&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;6&quot; x2=&quot;3.01&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;12&quot; x2=&quot;3.01&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;18&quot; x2=&quot;3.01&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Use cases &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Create resources on &lt;a href=&quot;../../../../Networking/Terminologies/Host&quot; class=&quot;internal&quot; data-slug=&quot;Networking/Terminologies/Host&quot;&gt;Host&lt;/a&gt; like api keys etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</description>
+    <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
+  </item><item>
+    <title>PATCH</title>
+    <link>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/PATCH</link>
+    <guid>https://notes.yxy.ninja/Networking/Application-Layer/HTTP/Request-Methods/PATCH</guid>
+    <description>&lt;p&gt;&lt;a href=&quot;../../../.././../../../tags/networking&quot; class=&quot;tag-link internal alias&quot; data-slug=&quot;tags/networking&quot;&gt;#networking&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Updates existing data &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Each call has a &lt;a href=&quot;../../../../Side-Effect&quot; class=&quot;internal&quot; data-slug=&quot;Side-Effect&quot;&gt;Side-Effect&lt;/a&gt; (data updated)&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Has a &lt;a href=&quot;../../../../Request-Body&quot; class=&quot;internal alias&quot; data-slug=&quot;Request-Body&quot;&gt;Request Body&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;note&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;18&quot; y1=&quot;2&quot; x2=&quot;22&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;path d=&quot;M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Parameters in &lt;a href=&quot;../../../../Request-Body&quot; class=&quot;internal alias&quot; data-slug=&quot;Request-Body&quot;&gt;Request Body&lt;/a&gt;, &lt;a href=&quot;../../../../Request-Header&quot; class=&quot;internal alias&quot; data-slug=&quot;Request-Header&quot;&gt;Request Header&lt;/a&gt; &amp;#x26; &lt;a href=&quot;../../../../Networking/Application-Layer/HTTP/URL&quot; class=&quot;internal&quot; data-slug=&quot;Networking/Application-Layer/HTTP/URL&quot;&gt;URL&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;example&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;line x1=&quot;8&quot; y1=&quot;6&quot; x2=&quot;21&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;8&quot; y1=&quot;12&quot; x2=&quot;21&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;8&quot; y1=&quot;18&quot; x2=&quot;21&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;6&quot; x2=&quot;3.01&quot; y2=&quot;6&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;12&quot; x2=&quot;3.01&quot; y2=&quot;12&quot;&gt;&lt;/line&gt;&lt;line x1=&quot;3&quot; y1=&quot;18&quot; x2=&quot;3.01&quot; y2=&quot;18&quot;&gt;&lt;/line&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Use cases &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Update resources created on &lt;a href=&quot;../../../../Networking/Terminologies/Host&quot; class=&quot;internal&quot; data-slug=&quot;Networking/Terminologies/Host&quot;&gt;Host&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;</description>
     <pubDate>Tue, 12 Dec 2023 03:49:00 GMT</pubDate>
   </item>

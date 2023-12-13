@@ -1295,21 +1295,6 @@
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Preemption</loc>
     <lastmod>2023-09-04T11:09:47.529Z</lastmod>
   </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</loc>
-    <lastmod>2023-12-12T13:24:46.041Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Procedure-Library/Library-Calls-(Library-Procedure)</loc>
-    <lastmod>2023-11-21T03:54:54.474Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Procedure-Library/Procedure-Library</loc>
-    <lastmod>2023-09-11T13:10:44.735Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Process-Management/fork()</loc>
-    <lastmod>2023-08-04T14:15:44.383Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/System-Call-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)</loc>
-    <lastmod>2023-11-21T03:55:53.741Z</lastmod>
-  </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Interrupts-(%E4%B8%AD%E6%96%AD)/Trap-Interrupt-(%E9%99%B7%E5%85%A5)</loc>
     <lastmod>2023-11-19T09:28:01.769Z</lastmod>
   </url><url>
@@ -1330,30 +1315,6 @@
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Process</loc>
     <lastmod>2023-12-12T13:28:56.000Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread-Pool</loc>
-    <lastmod>2023-12-11T15:00:51.180Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</loc>
-    <lastmod>2023-12-12T14:51:38.778Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Hybrid-Threads-(N-to-M)</loc>
-    <lastmod>2023-08-28T08:43:23.035Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Kernel-Threads-(1-to-1)</loc>
-    <lastmod>2023-12-12T14:16:46.762Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Scheduler-Activations</loc>
-    <lastmod>2023-12-12T14:46:49.689Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/Thread-Table</loc>
-    <lastmod>2023-12-12T14:16:46.768Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/Types-of-Threads/User-space-Threads-(N-to-1)</loc>
-    <lastmod>2023-12-12T14:16:46.773Z</lastmod>
-  </url><url>
-    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-(%E8%BF%9B%E7%A8%8B)/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</loc>
-    <lastmod>2023-12-12T14:47:27.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Process-Operations/Process-Creation</loc>
     <lastmod>2023-09-03T08:27:32.720Z</lastmod>
@@ -1381,6 +1342,36 @@
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Synchronization-(%E5%90%8C%E6%AD%A5)/Spinlock-(%E8%87%AA%E6%97%8B%E9%94%81)</loc>
     <lastmod>2023-11-28T12:33:55.289Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Memory-Management/brk()</loc>
+    <lastmod>2023-12-12T13:24:46.041Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Procedure-Library/Library-Calls-(Library-Procedure)</loc>
+    <lastmod>2023-11-21T03:54:54.474Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Procedure-Library/Procedure-Library</loc>
+    <lastmod>2023-09-11T13:10:44.735Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/Process-Management/fork()</loc>
+    <lastmod>2023-08-04T14:15:44.383Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/System-Call-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)</loc>
+    <lastmod>2023-11-21T03:55:53.741Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Hybrid-Threads</loc>
+    <lastmod>2023-12-13T09:29:20.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Kernel-Threads</loc>
+    <lastmod>2023-12-13T09:25:18.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Thread-Pool</loc>
+    <lastmod>2023-12-11T15:00:51.180Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/Thread</loc>
+    <lastmod>2023-12-13T09:26:46.000Z</lastmod>
+  </url><url>
+    <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Thread-(%E7%BA%BF%E7%A8%8B)/User-Thread</loc>
+    <lastmod>2023-12-13T09:29:35.000Z</lastmod>
   </url><url>
     <loc>https://notes.yxy.ninja/OS/Main-Components/Process-Related/Timeslice/Dynamic-Timeslice-Round-Robin-Scheduling</loc>
     <lastmod>2023-09-05T04:16:44.688Z</lastmod>
