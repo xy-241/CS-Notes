@@ -12,7 +12,7 @@ function TagList({ fileData, displayClass }: QuartzComponentProps) {
           const linkDest = baseDir + `/tags/${slugTag(tag)}`
           return (
             <li>
-              <a href={linkDest} class="internal tag-link">
+              <a href={linkDest} class="internal tag-link" target="_blank">
                 {display}
               </a>
             </li>
