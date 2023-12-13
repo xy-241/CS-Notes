@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-13T15:19:55+08:00
+Last Date: 2023-12-13T15:33:33+08:00
 References: 
 ---
 
@@ -71,9 +71,9 @@ References:
 - Update the highlighted parts with your own values
 - There is [a list of environment variables](https://docs.datadoghq.com/serverless/guide/agent_configuration/) you can add to fine tune the agent
 
->[!info] `DD_APM_ENV` overrides `DD_ENV` 
+> [!info] `DD_APM_ENV` overrides `DD_ENV`
 
->[!tip] We can use `DD_APM_IGNORE_RESOURCE` to ignore [[Trace]] from transmitted to Datadog
+> [!tip] We can use `DD_APM_IGNORE_RESOURCE` to ignore [[Trace]] from transmitted to Datadog
 
 ```json {2, 4-5, 11, 15, 19, 23, 27}
 {
@@ -97,12 +97,12 @@ References:
 			"value": "datadoghq.eu"
 		},
 		{
-          "name": "DD_APM_ENV",
-          "value": "aegis-stg"
-        },
-        {
-		  "name": "DD_APM_IGNORE_RESOURCES",
-		  "value": "['GET /health']"
+			"name": "DD_APM_ENV",
+			"value": "aegis-stg"
+		},
+		{
+			"name": "DD_APM_IGNORE_RESOURCES",
+			"value": "['GET /health']"
 		}
 	],
 	"mountPoints": [],
@@ -138,15 +138,16 @@ resource "aws_ecs_task_definition" "backend_app" {
       secrets = []
 
 	  environment = [
-		{
-			"name": "DD_SERVICE",
-			"value": ""
-		},
-		{
-		    "name": "DD_ENV",
-		    "value": ""
-        },
+	  {
+          "name": "DD_SERVICE",
+          "value": ""	  
+	  },
+	  {
+          "name": "DD_ENV",
+          "value": ""
+	  }
 	  ]
+	  
       logConfiguration = {
         logDriver : "awsfirelens",
         options : {
@@ -203,9 +204,9 @@ resource "aws_ecs_task_definition" "backend_app" {
           "value": ""
         },
         {
-		  "name": "DD_APM_IGNORE_RESOURCES",
-		  "value": "['GET /health']"
-		}
+          "name": "DD_APM_IGNORE_RESOURCES",
+          "value": ""
+        }
       ],
       "mountPoints": [],
       "volumesFrom": [],
@@ -220,7 +221,7 @@ resource "aws_ecs_task_definition" "backend_app" {
 
 ## Terminologies
 
-
 ## References
+
 - [Official ECS Fargate Integration](https://docs.datadoghq.com/integrations/ecs_fargate/?tab=webui)
 - [Official Datadog Agent Configuration](https://docs.datadoghq.com/serverless/guide/agent_configuration)

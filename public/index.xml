@@ -6,6 +6,37 @@
       <description>Last 40 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Datadog App Tracer</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-App-Tracer</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-App-Tracer</guid>
+    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;There are 2 ways to trace applications, one way is &lt;a href=&quot;https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/nodejs#adding-the-tracer-in-code&quot; class=&quot;external alias&quot;&gt;Adding the tracer in Code&lt;/a&gt;, and another way is &lt;a href=&quot;https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/nodejs#adding-the-tracer-via-command-line-arguments&quot; class=&quot;external alias&quot;&gt;Adding the tracer via command line arguments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;tip&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;I usually start with the second way, since it is not intrusive, so easy to add in. And it is already pretty powerful &lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;We can fine tune the &lt;em&gt;tracer&lt;/em&gt; by using this &lt;a href=&quot;https://ddtrace.readthedocs.io/en/stable/configuration.html#&quot; class=&quot;external alias&quot;&gt;list of environment variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;tip&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;I always set the &lt;code&gt;DD_ENV&lt;/code&gt; and &lt;code&gt;DD_SERVICE&lt;/code&gt; to get &lt;a href=&quot;../../Software-Engineering/Monitoring/terminologies/Trace&quot; class=&quot;internal&quot; data-slug=&quot;Software-Engineering/Monitoring/terminologies/Trace&quot;&gt;Trace&lt;/a&gt; display nicely inside the Datadog dashboard&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#references&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/&quot; class=&quot;external alias&quot;&gt;Official Datadog Tracing Library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ddtrace.readthedocs.io/en/stable/installation_quickstart.html&quot; class=&quot;external alias&quot;&gt;ddtrace Configuration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    <pubDate>Wed, 13 Dec 2023 07:35:36 GMT</pubDate>
+  </item><item>
     <title>Datadog APM</title>
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
     <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
@@ -99,12 +130,12 @@
 &lt;span data-line=&quot;&quot; data-highlighted-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;			&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;datadoghq.eu&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;		}&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;		{&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_APM_ENV&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot; data-highlighted-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;aegis-stg&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;        }&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;        {&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;		  &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_APM_IGNORE_RESOURCES&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot; data-highlighted-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;		  &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;[&#039;GET /health&#039;]&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;			&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_APM_ENV&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot; data-highlighted-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;			&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;aegis-stg&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;		}&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;		{&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;			&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_APM_IGNORE_RESOURCES&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot; data-highlighted-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;			&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;[&#039;GET /health&#039;]&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;		}&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;	]&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;&quot;mountPoints&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; []&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-punctuation)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
@@ -137,15 +168,16 @@
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;      secrets &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt; []&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt; &lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;	  environment &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt; [&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;		{&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;			&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_SERVICE&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;			&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;		},&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;		{&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;		    &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_ENV&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;		    &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;        },&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;	  {&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_SERVICE&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;	  &lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;	  },&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;	  {&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_ENV&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;	  }&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;	  ]&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;	  &lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;      logConfiguration &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt; {&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;        logDriver : &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;awsfirelens&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;        options : {&lt;/span&gt;&lt;/span&gt;
@@ -202,9 +234,9 @@
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;        },&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;        {&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;		  &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_APM_IGNORE_RESOURCES&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;		  &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;[&#039;GET /health&#039;]&quot;&lt;/span&gt;&lt;/span&gt;
-&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;		}&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;DD_APM_IGNORE_RESOURCES&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;,&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;          &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
+&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;        }&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;      ],&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;      &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;mountPoints&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: [],&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;      &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;volumesFrom&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;: [],&lt;/span&gt;&lt;/span&gt;
@@ -221,7 +253,7 @@
 &lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/integrations/ecs_fargate/?tab=webui&quot; class=&quot;external alias&quot;&gt;Official ECS Fargate Integration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/serverless/guide/agent_configuration&quot; class=&quot;external alias&quot;&gt;Official Datadog Agent Configuration&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    <pubDate>Wed, 13 Dec 2023 07:19:55 GMT</pubDate>
+    <pubDate>Wed, 13 Dec 2023 07:33:33 GMT</pubDate>
   </item><item>
     <title>Datadog Integration</title>
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-Integration</link>
@@ -234,7 +266,7 @@
 &lt;ul&gt;
 &lt;li&gt;Below is my notes of the integration I did&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;aws&quot;&gt;AWS&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#aws&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;aws-integration&quot;&gt;AWS Integration&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#aws-integration&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;There are &lt;a href=&quot;https://docs.datadoghq.com/integrations/amazon_web_services/&quot; class=&quot;external alias&quot;&gt;many ways&lt;/a&gt; to integrate &lt;em&gt;AWS&lt;/em&gt; with &lt;em&gt;Datadog&lt;/em&gt;. The easiest way to start is &lt;a href=&quot;https://docs.datadoghq.com/getting_started/integrations/aws/&quot; class=&quot;external alias&quot;&gt;automated integrated using CloudFormation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -243,7 +275,7 @@
 &lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/integrations/#all&quot; class=&quot;external alias&quot;&gt;Official Datadog Supported Integrations&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/integrations/amazon_web_services/&quot; class=&quot;external alias&quot;&gt;Offical Datadog and AWS Integration&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    <pubDate>Wed, 13 Dec 2023 07:19:18 GMT</pubDate>
+    <pubDate>Wed, 13 Dec 2023 07:23:13 GMT</pubDate>
   </item><item>
     <title>Datadog</title>
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog</link>
@@ -285,37 +317,6 @@
 &lt;li&gt;A sharp tool to optimise, debug &amp;#x26; monitor system&lt;/li&gt;
 &lt;/ul&gt;</description>
     <pubDate>Wed, 13 Dec 2023 07:14:06 GMT</pubDate>
-  </item><item>
-    <title>Datadog App Tracer</title>
-    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-App-Tracer</link>
-    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-App-Tracer</guid>
-    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;There are 2 ways to trace applications, one way is &lt;a href=&quot;https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/nodejs#adding-the-tracer-in-code&quot; class=&quot;external alias&quot;&gt;Adding the tracer in Code&lt;/a&gt;, and another way is &lt;a href=&quot;https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/nodejs#adding-the-tracer-via-command-line-arguments&quot; class=&quot;external alias&quot;&gt;Adding the tracer via command line arguments&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;tip&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;I usually start with the second way, since it is not intrusive, so easy to add in. And it is already pretty powerful &lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;We can fine tune the &lt;em&gt;tracer&lt;/em&gt; by using this &lt;a href=&quot;https://ddtrace.readthedocs.io/en/stable/configuration.html#&quot; class=&quot;external alias&quot;&gt;list of environment variables&lt;/a&gt; (More comprehensive)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote class=&quot;callout&quot; data-callout=&quot;tip&quot;&gt;
-&lt;div class=&quot;callout-title&quot;&gt;
-                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
-                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;I always set the &lt;code&gt;DD_ENV&lt;/code&gt; and &lt;code&gt;DD_SERVICE&lt;/code&gt; to get &lt;a href=&quot;../../Software-Engineering/Monitoring/terminologies/Trace&quot; class=&quot;internal&quot; data-slug=&quot;Software-Engineering/Monitoring/terminologies/Trace&quot;&gt;Trace&lt;/a&gt; display nicely inside the Datadog dashboard&lt;/p&gt;&lt;/div&gt;
-                  
-                &lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;references&quot;&gt;References&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#references&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/&quot; class=&quot;external alias&quot;&gt;Official Datadog Tracing Library&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ddtrace.readthedocs.io/en/stable/installation_quickstart.html&quot; class=&quot;external alias&quot;&gt;ddtrace Configuration&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    <pubDate>Wed, 13 Dec 2023 06:32:51 GMT</pubDate>
   </item><item>
     <title>Mathematical Proof</title>
     <link>https://notes.yxy.ninja/Discrete-Math/Mathematical-Proof</link>

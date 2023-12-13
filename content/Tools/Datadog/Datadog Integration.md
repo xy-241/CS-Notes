@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-13, 15:03
-Last Date: 2023-12-13T15:19:18+08:00
+Last Date: 2023-12-13T15:23:13+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,7 @@ References:
 
 ## Integrations
 - Below is my notes of the integration I did
-### AWS
+### AWS Integration
 - There are [many ways](https://docs.datadoghq.com/integrations/amazon_web_services/) to integrate *AWS* with *Datadog*. The easiest way to start is [automated integrated using CloudFormation](https://docs.datadoghq.com/getting_started/integrations/aws/)
 
 
