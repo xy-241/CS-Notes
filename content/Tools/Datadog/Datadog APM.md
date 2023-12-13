@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-13T15:33:33+08:00
+Last Date: 2023-12-13T16:27:19+08:00
 References: 
 ---
 
@@ -102,7 +102,7 @@ References:
 		},
 		{
 			"name": "DD_APM_IGNORE_RESOURCES",
-			"value": "['GET /health']"
+			"value": "GET /health"
 		}
 	],
 	"mountPoints": [],
