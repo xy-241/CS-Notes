@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-12T13:44:26+08:00
+Last Date: 2023-12-13T15:19:55+08:00
 References: 
 ---
 
@@ -14,17 +14,18 @@ References:
 
 - [[Application Performance Monitoring (APM)]]
 
-## Serverless Setup
+## ECS Fargate Setup
 
 - The example below is based on [[ECS#Fargate|ECS Fargate]]
-- The entire setup is around [[ECS#Task Definition]], we need to add in 3 parts into it - [[#Pipe application log to AWS Firelens]], [[#AWS Firelens]] and [[#Datadog Agent Sidecar]]
+- Make sure [[Datadog Integration#AWS]] and [[Datadog App Tracer]] are done
+- The rest of the setup is around [[ECS#Task Definition]], we need to add in 3 parts into it - [[#Pipe log to AWS Firelens]], [[#AWS Firelens]] and [[#Datadog Agent Sidecar]]
 
-### Pipe application log to AWS Firelens
+### Pipe log to AWS Firelens
 
-- Add the following block inside the **application container block**
+- Add the following block inside the [[ECS#Task Definition]] of **container** that we want to access the log
 - Update the highlighted parts with your own values
 
-```json {4, 5, 7-9}
+```json {4-5, 7-9}
 "logConfiguration": {
   "logDriver": "awsfirelens",
   "options": {
@@ -38,15 +39,7 @@ References:
   }
 }
 ```
-- You can configure the Datadog app agent by setting the [[Environment Variable]] in the same **application container block**
-```json
-"environment": [
-	{
-		"name": "DD_SERVICE",
-		"value": "aegis-dev-backend"
-	}
-]
-```
+
 ### AWS Firelens
 
 - Update the highlighted parts with your own values
@@ -78,7 +71,11 @@ References:
 - Update the highlighted parts with your own values
 - There is [a list of environment variables](https://docs.datadoghq.com/serverless/guide/agent_configuration/) you can add to fine tune the agent
 
-```json {2, 4-5, 15, 19, 23, 27}
+>[!info] `DD_APM_ENV` overrides `DD_ENV` 
+
+>[!tip] We can use `DD_APM_IGNORE_RESOURCE` to ignore [[Trace]] from transmitted to Datadog
+
+```json {2, 4-5, 11, 15, 19, 23, 27}
 {
 	"name": "datadog-agent",
 	"image": "public.ecr.aws/datadog/agent:latest",
@@ -92,20 +89,20 @@ References:
 			"value": "true"
 		},
 		{
-			"name": "DD_SERVICE",
-			"value": "aegis-dev-backend"
-		},
-		{
-			"name": "DD_ENV",
-			"value": "aegis-dev"
-		},
-		{
 			"name": "DD_API_KEY",
 			"value": "<YOUR_API_KEY>"
 		},
 		{
 			"name": "DD_SITE",
 			"value": "datadoghq.eu"
+		},
+		{
+          "name": "DD_APM_ENV",
+          "value": "aegis-stg"
+        },
+        {
+		  "name": "DD_APM_IGNORE_RESOURCES",
+		  "value": "['GET /health']"
 		}
 	],
 	"mountPoints": [],
@@ -116,7 +113,6 @@ References:
 ### Terraform Sample Codes
 
 - Refer to the above [[#Pipe application log to AWS Firelens]], [[#AWS Firelens]] and [[#Datadog Agent Sidecar]] for configuration details
-- Update the highlighted parts with your own values
 
 ```hcl
 resource "aws_ecs_task_definition" "backend_app" {
@@ -145,7 +141,11 @@ resource "aws_ecs_task_definition" "backend_app" {
 		{
 			"name": "DD_SERVICE",
 			"value": ""
-		}
+		},
+		{
+		    "name": "DD_ENV",
+		    "value": ""
+        },
 	  ]
       logConfiguration = {
         logDriver : "awsfirelens",
@@ -191,21 +191,21 @@ resource "aws_ecs_task_definition" "backend_app" {
           "value": "true"
         },
         {
-          "name": "DD_SERVICE",
-          "value": ""
-        },
-        {
-          "name": "DD_ENV",
-          "value": ""
-        },
-        {
           "name": "DD_API_KEY",
           "value": "<YOUR_API_KEY>"
         },
         {
           "name": "DD_SITE",
           "value": ""
-        }
+        },
+        {
+          "name": "DD_APM_ENV",
+          "value": ""
+        },
+        {
+		  "name": "DD_APM_IGNORE_RESOURCES",
+		  "value": "['GET /health']"
+		}
       ],
       "mountPoints": [],
       "volumesFrom": [],
@@ -219,3 +219,8 @@ resource "aws_ecs_task_definition" "backend_app" {
 ```
 
 ## Terminologies
+
+
+## References
+- [Official ECS Fargate Integration](https://docs.datadoghq.com/integrations/ecs_fargate/?tab=webui)
+- [Official Datadog Agent Configuration](https://docs.datadoghq.com/serverless/guide/agent_configuration)
