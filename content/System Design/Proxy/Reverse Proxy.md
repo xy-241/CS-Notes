@@ -10,11 +10,13 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Sits between [[Internet]] and *Severs*
 - We can have multiple layers of *Reverse Proxy* between the [[Host]] and [[Host]] to form a [[#Ingress Service]]
 
 
 ## Benefits
+---
 ### Stronger Protection Against [[DDoS]]
 - [[IP Address]] of *Servers* is hidden behind *Reverse Proxy* from clients
 ### Cacheing

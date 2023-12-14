@@ -9,6 +9,7 @@ Creation Date: 2023-09-24T12:23:00
 Last Date:
 ---
 ## Abstract
+---
 - Ability of computer executing multiple tasks at the same time by giving each [[Process]] a very small slice of [[CPU]] time
 - A logical extension of [[Multi-Programming]]
 - Focus on improving user experience 
@@ -16,6 +17,7 @@ Last Date:
 
 
 ## Terminologies
+---
 ### Time-Sharing ([[High-performance Computing#Concurrency (并发)|Concurrency (并发)]])
 - A specific implementation of [[Multi-tasking]] when there is only a single resource - single [[CPU]], achieve with quick [[Context Switch]]
 - All Time-sharing systems are [[Multi-Programming]] systems
@@ -34,5 +36,4 @@ Last Date:
 3. When the [[Timer Chips]] elapses, it triggers a [[Hardware interrupts (外中断)]] to switch to [[Kernel Mode]] and jump to OS code
 4. The OS can now save where the program left off, load a different program, and repeat the process.
 >
-
 

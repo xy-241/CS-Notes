@@ -9,12 +9,14 @@ Creation Date: 2023-09-03T17:32:00
 Last Date: 
 ---
 ## Abstract
+---
 - The maximum number of nodes at ``n``th [[#Level]] is $$
 2^{n-1}
 $$
 
 
 ## Implementation
+---
 ### Implementation with [[Linked List]]
 ![[binary_tree_linked_list.png]]
 
@@ -24,6 +26,7 @@ $$
 
 
 ## Leetcode Questions
+---
 ### Properties 
 - [111. Minimum Depth of Binary Tree](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
 - [104. Maximum Depth of Binary Tree](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
@@ -42,6 +45,7 @@ $$
 
 
 ## Terminologies
+---
 ### Root Node
 - Node without parent node
 ### Leaf Node

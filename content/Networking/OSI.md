@@ -9,9 +9,11 @@ Creation Date: 2023-09-28T11:01:00
 Last Date:
 ---
 ## Abstract
+---
 
 
 ## 7 Layers
+---
 ### Layer 7 (Application Layer)
 - Has access to all the [[Data]]
 ### Layer 4 (Transport Layer)

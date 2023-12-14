@@ -10,6 +10,7 @@ Last Date: 2023-12-05T18:01:52+08:00
 References: 
 ---
 ## Abstract
+---
 - Number before decimal point
 - Keep diving by 2 until we get 0
 - Then the binary form counts from *bottom to top*

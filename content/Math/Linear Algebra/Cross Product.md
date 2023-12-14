@@ -1,5 +1,16 @@
-#linear_algebra 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - linear_algebra
+Creation Date: 2023-09-19T23:14:03+08:00
+Last Date: 2023-09-19T23:14:03+08:00
+References:
+---
 ## Abstract
+---
 1. A [[Vector]] perpendicular to the [[#Plane]]
 $$
 \vec{u} \times \vec{v}
@@ -16,5 +27,6 @@ $$
 
 
 ## Terminologies
+---
 ### Plane
 - Need more than 1 [[Vector]] to form $$\vec{u}$$, $$\vec{v}$$

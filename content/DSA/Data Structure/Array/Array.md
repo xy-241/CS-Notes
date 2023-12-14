@@ -10,6 +10,7 @@ Last Date: 2023-12-12T10:24:35+08:00
 References: 
 ---
 ## Abstract
+---
 - A collection of elements of the same [[Datatype]]
 - [[Data Structure#Linear]] and elements stored in [[Data Structure#Continuous Memory]], the next node is obtained by adding a **constant value** to the [[Memory Address]] of current node
 - Can be used to implement [[Hash Map]] when keys are fixed
@@ -20,6 +21,7 @@ References:
 
 
 ## Complexity 
+---
 ### Time
 - O(n) to search for a value
 - O(1) to access any of the elements
@@ -37,6 +39,7 @@ References:
 
 
 ## Properties
+---
 ### Fixed size
 - If we want to expand, we have to create another bigger array & *copy all the elements* to the new array which is very time consuming 
 
@@ -44,5 +47,6 @@ References:
 
 
 ## Terminologies 
+---
 ### Contiguous Segment
 - A continuous range of [[Array]]

@@ -1,4 +1,14 @@
-#computer_organisation 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - computer_organisation
+Creation Date: 2023-08-20T15:44:21+08:00
+Last Date: 2023-08-20T15:44:21+08:00
+References:
+---
 >[!note]
 >- Think about the solution, without thinking about the logic steps taken to reach the solution
 >- What outputs with given the a set of inputs

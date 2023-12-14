@@ -1,5 +1,16 @@
-#security 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - security
+Creation Date: 2023-12-13T18:10:45+08:00
+Last Date: 2023-12-13T18:10:45+08:00
+References:
+---
 ## Abstract
+---
 - Add a random value to the text before [[Hash]]
 
 
@@ -7,6 +18,7 @@
 
 
 ## Example
+---
 ### Nodejs
 ```js
 const { scryptSync, randomBytes } = require('crypto');
@@ -34,6 +46,7 @@ console.log(login('me@yxy.ninja', 'password123'))
 ```
 
 ## Terminologies
+---
 ### scrypt
 - A salting algorithm
 - A [[PoS (Proof of Work)]] algorithm

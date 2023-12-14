@@ -10,6 +10,7 @@ Last Date: 2023-12-09T23:30:02+08:00
 References: 
 ---
 ## Navigation
+---
 - **Homepage is still under development.** You can navigate around the notes using the explorer on the left side or visit the [list of tags](https://notes.yxy.ninja/tags/) that categories the notes.
 - Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
 

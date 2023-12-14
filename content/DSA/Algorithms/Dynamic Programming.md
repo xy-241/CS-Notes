@@ -10,13 +10,16 @@ Last Date: 2023-12-10T17:08:09+08:00
 References: 
 ---
 ## Abstract
+---
 - 3 key components - [[#Overlapping Subproblems (重复子问题)]], [[#Optimal Substructure ( 最优子结构)]] & [[#Statelessness (无后效性)]]
 
 ## Leetcode Tips
+---
 ### Debugging
 - Print out [[#DP Table]] to check any errors
 
 ## Questions
+---
 ### Basics
 >[!example] Leetcode
 >- [509. Fibonacci Number](https://leetcode.cn/problems/fibonacci-number/)
@@ -39,6 +42,7 @@ References:
 
 
 ## Terminologies 
+---
 ### Overlapping Subproblems (重复子问题)
 - Occur when a problem can be broken down into *smaller subproblems* that are *solved repeatedly*
 - We can store the solutions to the subproblems as we solve them. This allows us to avoid re-solving the subproblems when we encounter them again

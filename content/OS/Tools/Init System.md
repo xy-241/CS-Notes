@@ -10,6 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - A [[Process]] that runs in the background
 - Most important [[Process]] with [[Process IDentifier (PID)]] 1
 - Manages all *services* that run in the background

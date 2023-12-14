@@ -1,9 +1,20 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-08-17T20:11:08+08:00
+Last Date: 2023-08-17T20:11:08+08:00
+References:
+---
 >[!note]
 >- Trying to find the next empty bucket for the conflicted key-value pair by executing the [[Hash Function]] multiple times
 
 
 ## Mechanism 
+---
 > [!note] Search key-value pair with key
 > 1. Obtain the [[Array]] index by passing the key to the [[Hash Function]]
 > 2. If the desired key-value pair isn't inside the bucket, perform the [[Hash Function]] again until we find the correct key-value pair
@@ -15,13 +26,13 @@
 
 
 ## Pros
+---
 >[!success] Not easy to have key-value pair clustering
 
 
 ## Cons
+---
 >[!caution] More [[Hash Function]] performed means more computation is required
-
-
 
 
 

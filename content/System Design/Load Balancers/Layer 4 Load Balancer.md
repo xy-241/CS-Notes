@@ -9,6 +9,7 @@ Creation Date: 2023-09-28T10:59:00
 Last Date:
 ---
 ## Abstract
+---
 - [[OSI#Layer 4 (Transport Layer)]]
 - [[Networking/Terminologies/Reverse Proxy]]
 - Uses [[NAT]] to [[Proxy]] the incoming/outgoing traffic
@@ -17,6 +18,7 @@ Last Date:
 - [[Health Check]] can use [[Network Protocol]] `TCP`, `HTTP` or `HTTPS` (Based on AWS experience)
 
 ## Benefits
+---
 ### Simpler load balancing
 - Only look at [[IP Address]] & [[Network Port]]
 ### Efficient 
@@ -27,6 +29,7 @@ Last Date:
 - from the client to the Load Balancer, and from Load Balancer to the server
 
 ## Cons
+---
 ### No smart load balancing
 - No access to data like [[Cookie]] and [[URL]] etc make routing decisions like [[Application Load Balancer (Layer 7)]]
 ### No applicate to [[micro-services]]
@@ -35,4 +38,5 @@ Last Date:
 - Because no access to [[Data]]
 
 ## References
+---
 - [Load balancing in Layer 4 vs Layer 7 with HAPROXY Examples](https://www.youtube.com/watch?v=aKMLgFVxZYk&t=1186s)

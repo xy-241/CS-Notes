@@ -9,6 +9,7 @@ Creation Date:
 Last Date:
 ---
 ## Abstract
+---
 - Listener can only be either `HTTP` or `HTTPS` (Based on AWS experience)
 - [[Target Group]] can only use [[Network Protocol]] `HTTP` or `HTTPS` (Based on AWS experience)
 - [[Health Check]] can only use [[Network Protocol]] `HTTP` or `HTTPS` (Based on AWS experience)
@@ -23,6 +24,7 @@ Last Date:
 >[AWS ALB](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
 
 ## Benefits
+---
 ### Smart load balancing
 - We can look at the data & [[HTTP Headers]], and this enables [[micro-services]]
 - Enables [[Authentication]] since we have access to the [[HTTP Request]] in plaintext
@@ -31,6 +33,7 @@ Last Date:
 
 
 ## Cons
+---
 ### Expensive
 - It looks at the [[Data]]
 ### [[SSL Termination]]
@@ -40,4 +43,5 @@ Last Date:
 - one for the communication between the client and the load balancer, one for the communication between the load balancer and the servers
 
 ## References
+---
 - [Load balancing in Layer 4 vs Layer 7 with HAPROXY Examples](https://www.youtube.com/watch?v=aKMLgFVxZYk&t=1186s)

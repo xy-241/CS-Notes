@@ -1,4 +1,14 @@
-#OS 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-12-11T23:00:51+08:00
+Last Date: 2023-12-11T23:00:51+08:00
+References:
+---
 >[!abstract]
 >- The duration an [[Process Scheduler]] allows a [[Process]] to run before [[Preemption]]
 

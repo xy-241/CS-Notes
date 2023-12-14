@@ -10,6 +10,7 @@ Last Date: 2023-12-12T18:04:33+08:00
 References: 
 ---
 ## Abstract
+---
 - Error in *reasoning* that results in an invalid [[Mathematical Argument]]
 - 3 common fallacies causes
 	1. Using *Ambiguous Premises*
@@ -17,6 +18,7 @@ References:
 	3. Jumping to a [[Mathematical Argument#Conclusion]]
 
 ## Common Errors
+---
 ### Converse Error
 - Given a -> b is true & b is true, we conclude a is true
 - Going against [[Rule of Inference (推理规则)#Modus Tollens]]
@@ -26,3 +28,4 @@ References:
 
 
 ## Terminologies
+---

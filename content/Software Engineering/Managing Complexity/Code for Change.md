@@ -1,4 +1,15 @@
-#software_engineering #cs2030s 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - software_engineering
+  - cs2030s
+Creation Date: 2023-07-23T17:50:01+08:00
+Last Date: 2023-07-23T17:50:01+08:00
+References:
+---
 >[!note] Purpose
 >Add flexibility to the program without changing codes behind the  [[Abstraction Barrier]]
 

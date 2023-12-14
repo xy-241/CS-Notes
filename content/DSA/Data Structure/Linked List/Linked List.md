@@ -10,6 +10,7 @@ Last Date: 2023-12-13T18:39:21+08:00
 References: 
 ---
 ## Abstract
+---
 - [[Data Structure#Linear]]
 - [[Data Structure#Discrete Memory]] because each node contains a **Memory Pointer** to the next node
 - A collection of elements of the same [[Datatype]]
@@ -24,6 +25,7 @@ References:
 
 
 ## [[Abstract Data Type (ADT)]]
+---
 >[!success] O(1) to Insert
 >- We only need the new node's previous node and next node, make the corresponding pointer changes
 
@@ -38,6 +40,7 @@ References:
 >- We need to traverse n-1 nodes in order to access nth node (assume the node number starts from 1)
 
 ## Side Notes
+---
 >[!success] Fixable size
 >If we want to expand, we just need to modify the pointers of the previous node & the pointers of the next node
 

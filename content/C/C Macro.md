@@ -1,13 +1,26 @@
-#c 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - c
+Creation Date: 2023-09-08T18:16:43+08:00
+Last Date: 2023-09-08T18:16:43+08:00
+References:
+---
 ## Abstract
+---
 - [[Preprocessor]] replaces the [[Macro]] with the value before passing to the [[Compiler]]
 
 
 ## Benefits
+---
 - Saving memory of using variables to store the values
 
 
 ## Example
+---
 ```c
 #include <stdio.h>
 #define PI 3.1415

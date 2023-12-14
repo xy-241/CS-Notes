@@ -1,4 +1,14 @@
-#networking 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - networking
+Creation Date: 2023-12-12T11:49:00+08:00
+Last Date: 2023-12-12T11:49:00+08:00
+References:
+---
 >[!abstract] Defines the format of [[HTTP Request]] & [[HTTP Response]]
 
 >[!note] Uses [[TCP]] as its underlying transport protocol 
@@ -22,4 +32,5 @@
 >[!caution] [[TCP Connection]] has a warm up period 
 
 ## References
+---
 - [HTTP 3 Explained](https://youtu.be/ai8cf0hZ9cQ)

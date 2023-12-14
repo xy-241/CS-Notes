@@ -11,15 +11,18 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - An [[Init System]] 
 
 
 ## Commands
+---
 ### ``systemctl daemon-reload``
 - ``systemctl`` caches the service config files. When we make edits or add in new service config file. We should call this command to take in the changes
 
 
 ## Terminologies
+---
 ### Units
 - Things that *Systemd* can manage for you
 ### Runtime Units

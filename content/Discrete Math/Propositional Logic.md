@@ -10,10 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - The logic of [[Mathematical Statement#Compound Statement]]
 
 
 ## Terminologies 
+---
 ### Ambiguous
 - Happen without the proper use of parentheses to indicate the intended order of operations
 - We need to use proper parentheses to ensure there's *only one way* to interpret and evaluate each expression

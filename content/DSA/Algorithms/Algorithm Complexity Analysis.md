@@ -10,6 +10,7 @@ Last Date: 2023-12-10T17:25:47+08:00
 References: 
 ---
 ## Abstract
+---
 - Analysis [[#Space]] & [[#Time]], related with the input size and observing the trend when input size gets bigger
 - The analysis isn't limited to particular machine. It applies to all the machines
 >[!caution] We are only thinking what is the complexity when the input size is approaching [[Infinity (∞)]]
@@ -19,6 +20,7 @@ References:
 
 
 ## Terminologies
+---
 ### Space
 - The [[Main Memory]] used **relative to the input size**
 ### Time
@@ -30,5 +32,6 @@ References:
 
 
 ## References
+---
 - [SimonDev](https://www.youtube.com/watch?v=gCzOhZ_LUps)
 - [Hello-algo](https://www.hello-algo.com/chapter_computational_complexity/time_complexity/)

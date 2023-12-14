@@ -10,10 +10,12 @@ Last Date: 2023-12-13T10:10:22+08:00
 References: 
 ---
 ## Abstract
+---
 - [[#Concise]], [[#Polished]] [[Mathematical Argument]] explaining the *validity* of [[Mathematical Statement]] to skeptic
 - There are many [[#Proof Methods]]
 
 ## Proof Methods
+---
 ### Direct Proof
 - Is difficult when the thing we want to proof has an absence of a form like *Irrationality of a number*, which is number that does 
 ### Proof by Deduction (演绎推理)
@@ -42,6 +44,7 @@ References:
 - Useful when it is hard to use [[#Direct Proof]], where the negated [[Mathematical Statement]] has form to proof
 
 ## Terminologies
+---
 
 ### Concise
 - There is no irrelevant details

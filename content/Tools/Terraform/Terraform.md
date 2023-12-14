@@ -1,20 +1,33 @@
-#terraform
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - terraform
+Creation Date: 2023-09-30T19:23:19+08:00
+Last Date: 2023-12-14T17:27:12+08:00
+References: 
+---
 >[Terraform Installation](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform)
 
 
 ## Injecting values into file dynamically 
+---
 - [[User Data]] example
 >![[userdata.tpl.png]]
 >![[preparing_dynamic_file.png]]
 >![[substitute_values_dynamically.png]]
 
 ## Dependencies
+---
 - When some resources need to use other resources' info. We can use `-target` to create the dependencies resources first. Example (RAiD Vault), we need to have private subnets, before creating the [[Layer 4 Load Balancer]] attachement
 ```bash
 terraform apply -target=module.networking.aws_subnet.vault_private -target=module.networking.aws_vpc.main --auto-approve && terraform apply --auto-approve
 ```
 
 ## Create a [[Self-signed Certificate]]
+---
 ```hcl
 # Generate a private key so you can create a CA cert with it.
 resource "tls_private_key" "ca" {

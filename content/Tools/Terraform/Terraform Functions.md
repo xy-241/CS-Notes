@@ -1,6 +1,17 @@
-#terraform 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - terraform
+Creation Date: 2023-08-15T18:06:10+08:00
+Last Date: 2023-08-15T18:06:10+08:00
+References:
+---
 
 ## Examples (Functions I used before)
+---
 >[!note] ``base64encode``
 >Applies Base64 encoding to a string
 

@@ -10,10 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 
 
 
 ## Terminologies 
+---
 ### Parallelism (并行性)
 - [[Thread]]/[[Process]] running at the same time, not an illusion created with [[Context Switch]] where only a single [[Thread]]/[[Process]] is running
 - Mainly for improving performance with the resources on hand

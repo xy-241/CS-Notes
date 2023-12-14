@@ -1,17 +1,31 @@
-#database 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - database
+Creation Date: 2023-09-13T11:04:26+08:00
+Last Date: 2023-09-13T11:04:26+08:00
+References:
+---
 ## Abstract
+---
 - [[Database#Transaction]] that is [[#Atomic]], [[#Consistent]], [[#Isolation]] & [[#Durable]]
 - Usually achieved with [[Lock]]
 
 ## Benefits
+---
 - Ensure [[Data]] never falls into an inconsistent state because of an [[Database#Transaction]] that only *partially completes*
 - Guarantees that a ``READ`` will return the latest successful ``WRITE``
 ## Cons
+---
 - Costly
 - Difficult to scale
 
 
 ## Terminologies 
+---
 ### Atomic
 - A quality that ensures each [[Database#Transaction]] is fully committed or not at all
 - It treats each [[Database#Transaction]] as a single unit of change to [[Database]] and can't be partially completed 

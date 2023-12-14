@@ -1,4 +1,14 @@
-#OS 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-09-05T12:16:44+08:00
+Last Date: 2023-09-05T12:16:44+08:00
+References:
+---
 >[!abstract]
 >- [[Timeslice (Quantums)]] = [[Target Latency]] / (total [[Process]] - 1), where total process is >1
 >![[Dynamic_timeslice_round-robin_scheduling.png]]

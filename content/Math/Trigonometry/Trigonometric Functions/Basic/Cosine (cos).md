@@ -1,4 +1,14 @@
-#trigonometry 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - trigonometry
+Creation Date: 2023-08-03T09:47:56+08:00
+Last Date: 2023-08-03T09:47:56+08:00
+References:
+---
 $$
 cos(θ) = \frac{adj}{hyp}
 $$

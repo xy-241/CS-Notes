@@ -10,6 +10,7 @@ Last Date: 2023-12-13T17:29:20+08:00
 References: 
 ---
 ## Abstract
+---
 - N to M mapping
 - Put the [[Thread]] in both [[User Space]] &  [[Kernel Space]]
 - Programmer can determine how many [[Kernel Threads]]  to use and how many [[User Thread]] multiplex on each one
@@ -19,5 +20,6 @@ References:
 
 
 ## Pros
+---
 ### Ultimate in flexibility
 - Used by modern [[OS]]

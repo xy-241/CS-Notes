@@ -9,6 +9,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - The use of an additional bit to check whether the *number of 1s* in a binary number is *even* or *odd*
 - Used to detect *errors* in *data transmission* or *storage*
 - 2 types - [[#Odd]] & [[#Even]], the bit value is the opposite, if odd number, then `0` for [[#Odd]], if even number, then `0` for [[#Even]]
@@ -16,6 +17,7 @@ References:
 
 
 ## Terminologies
+---
 ### Odd
 - The parity bit is set to 
 - `0` if the number of 1s is `odd`

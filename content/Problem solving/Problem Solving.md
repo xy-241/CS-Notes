@@ -10,9 +10,11 @@ Last Date: 2023-12-10T23:14:54+08:00
 References: 
 ---
 ## Abstract
+---
 - Systematic way of solving a given problem
 
 ## 9 Tips
+---
 ### 1. Use the defining features of the set-up
 1. Look at what is given
 2. Ask the definition of each term
@@ -58,4 +60,5 @@ References:
 
 
 ## Reference
+---
 - [Tips to be a better problem solver [Last live lecture] | Ep. 10 Lockdown life math](https://www.youtube.com/watch?v=QvuQH4_05LI&t=3449s&pp=ygUQcHJvYmxlbSBzb2x2aW5nIA%3D%3D)

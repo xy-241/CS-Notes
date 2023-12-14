@@ -1,4 +1,14 @@
-#problem_solving 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - problem_solving
+Creation Date: 2023-08-16T22:24:16+08:00
+Last Date: 2023-08-16T22:24:16+08:00
+References:
+---
 ![[probability_problem.png]]
 
 >[!note] With [[5. Draw a picture]]
@@ -16,6 +26,7 @@
 >[!success] Answer is basically sum of the triangles on the graph
 
 ## Take advantage of Python codes to obtain an answer
+---
 ^6263ac
 ```python
 !pip3 install numpy

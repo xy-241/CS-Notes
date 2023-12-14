@@ -1,4 +1,14 @@
-#networking 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - networking
+Creation Date: 2023-08-18T12:56:59+08:00
+Last Date: 2023-08-18T12:56:59+08:00
+References:
+---
 >[!abstract] [[HTTP 1.1]] but with 
 >1. [[HTTP 1.2 Multiplexing (多路复用)]]
 >2. [[HTTP 1.2 Server Push]]

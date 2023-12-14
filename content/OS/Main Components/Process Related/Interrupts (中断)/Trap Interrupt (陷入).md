@@ -10,6 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - A type of [[Signal (Software Interrupt)]]
 - A special [[Instruction]] used to transfer control to [[OS]]
 	1. Switch from [[User Mode]] to [[Kernel Mode]]

@@ -1,4 +1,14 @@
-#distributed_computing 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - distributed_computing
+Creation Date: 2023-08-03T14:32:43+08:00
+Last Date: 2023-08-03T14:32:43+08:00
+References:
+---
 >[!note] What the [[Candidate Nodes]] will do in a [[Election Term]]
 >1. Vote for itself
 >2. Sends out [[Request Votes]] messages to other nodes

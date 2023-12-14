@@ -1,4 +1,14 @@
-#OS 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-09-03T16:14:54+08:00
+Last Date: 2023-09-03T16:14:54+08:00
+References:
+---
 >[!note]
 >- [[OS]] standard enforced by IEEE
 >- Implements a set of automated conformance test

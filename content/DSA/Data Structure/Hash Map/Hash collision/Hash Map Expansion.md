@@ -1,4 +1,14 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-08-14T19:15:40+08:00
+Last Date: 2023-08-14T19:15:40+08:00
+References:
+---
 >[!note] Expand the output space aka the [[Array]] can reduce [[Hash Collision]]
 >![[hash_collision_expand.png]]
 >```java

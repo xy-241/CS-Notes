@@ -10,6 +10,7 @@ Last Date: 2023-12-10T00:41:46+08:00
 References: 
 ---
 ## Abstract
+---
 - Also known as *Propositional Functions* & *Open Sentences*
 - Example: let `P` stand for `is a student at NUS`, then `P(x) = x is a student at NUS`, where `x` is the [[#Variable]], `P` is the [[#Symbol]]
 - Truth value depends on [[#Variable]]
@@ -21,6 +22,7 @@ References:
 
 
 ## Terminologies 
+---
 ### Variable
 - Holds value that determines if **Predicate** is *true* or *false*
 >[!caution] It doesn't hold the value of *true* or *false*! Only [[Mathematical Statement]] can be *true* or *false*

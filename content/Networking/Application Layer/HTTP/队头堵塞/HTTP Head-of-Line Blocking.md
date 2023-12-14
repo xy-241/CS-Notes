@@ -1,4 +1,14 @@
-#networking 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - networking
+Creation Date: 2023-08-18T12:59:20+08:00
+Last Date: 2023-08-18T12:59:20+08:00
+References:
+---
 >[!example] [[HTTP 1.1]] on a single [[TCP Connection]]
 >![[http1.1_HOL_blocking.png]]
 >- The above diagram shows when we aren't able to receive the CSS file. We aren't able to request for the JS file. Thus, the CSS file is blocking other files in the queue from be requested & received

@@ -1,4 +1,13 @@
->[!note] 5 components
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+Creation Date: 2023-08-03T11:18:21+08:00
+Last Date: 2023-08-03T11:18:21+08:00
+References:
+---
 >1. Compute
 >2. Logging
 >3. Security
@@ -6,6 +15,7 @@
 >5. Storage
 
 ## Compute
+---
 ### Servers
 1. vaultserver launch config
 2. vault server auto scaling group
@@ -25,9 +35,11 @@
 
 
 ## Logging
+---
 1. Vault Log Group
 
 ## Security 
+---
 ### Security Group
 1. Vault client 
 2. Vault Server
@@ -48,10 +60,12 @@
 3. ACM Cert 
 
 ## networking
+---
 1. vault dns record
 2. Existing Terraform codes (VPC with public & private subsets, bastion host)
 
 ## Storage
+---
 1. lambda zip bucket
 2. Vaulter cluster member ssm (ec2 instance IDs)
 4. Vault leader elected SSM (booelean value)

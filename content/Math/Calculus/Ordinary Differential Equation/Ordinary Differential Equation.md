@@ -10,5 +10,6 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Describes how things *change*, so we can predict how those things change like how populations of animals grow or shrink, how diseases spread, how planets move, how economies change etc
 - Require strong [[Integration]] & [[Derivative]] skills, especially [[Trigonometric Functions]] 

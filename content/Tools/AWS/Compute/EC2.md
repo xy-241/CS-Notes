@@ -1,4 +1,14 @@
-#aws 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - aws
+Creation Date: 2023-08-10T13:12:02+08:00
+Last Date: 2023-08-10T13:12:02+08:00
+References:
+---
 >[!note] 2 ways to create
 >1. Using the EC2 page
 >2. Create [[Target Group]] & ([[Launch Templates]],  [[Auto Scaling Group]])
@@ -22,4 +32,3 @@
 >}
 >```
 >
-

@@ -1,4 +1,14 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-08-27T14:44:16+08:00
+Last Date: 2023-08-27T14:44:16+08:00
+References:
+---
 >[!abstract]
 >![[circular linked list.png]]
 

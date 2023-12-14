@@ -1,8 +1,20 @@
-#calculus 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - calculus
+Creation Date: 2023-09-09T15:52:43+08:00
+Last Date: 2023-09-09T15:52:43+08:00
+References:
+---
 ## Abstract
+---
 - Something that can progress from one term to the next
 
 ## 3 Ways to define
+---
 ### List
 - Minimum 3 terms to see a pattern
 - Mathematical Representation $$

@@ -1,4 +1,14 @@
-#vault 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - vault
+Creation Date: 2023-09-03T19:05:11+08:00
+Last Date: 2023-09-03T19:05:11+08:00
+References:
+---
 >[!abstract]
 >- Provide [[High Availability]]
 >- Multiple [[Vault Nodes]] sharing the same [[Storage Backend, Vault]] without extra configuration, and the [[Storage Backend, Vault]] must be [[High Availability]]

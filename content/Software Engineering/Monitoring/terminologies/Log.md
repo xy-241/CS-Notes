@@ -9,11 +9,13 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - A detailed list of [[Event-Driven Architecture#Event|Events]] that happen within the system/application 
 - Examples can be *web server log* which contains the IP, data & time of [[HTTP Request]]
 
 
 ## Terminologies
+---
 ### Router
 ![[log_router_fluentd-architecture.png]]
 - A tool or service that collects log data from *various sources* and *forwards* or routes it to *one or more destinations* 

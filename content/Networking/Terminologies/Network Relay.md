@@ -10,10 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Establish a *relationship* between *two data sources*
 - Connecting networks that use different [[Network Protocol]], extending the range of a network
 
 ## Use Case
+---
 ### Create Relay Between Local to Remote
 - Creating a *Relay* on local machine:port listening on [[TCP]], and forward it to the destination:port over [[TCP]]
 - So for requests hitting `local:<PORT_NUMBER>` on [[TCP]], it is *relay* to the `<PRIVATE_ENDPOINT>:<PORT_NUMBER>` over [[TCP]]

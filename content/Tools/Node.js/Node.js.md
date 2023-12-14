@@ -10,12 +10,14 @@ Last Date: 2023-12-12T21:28:56+08:00
 References: 
 ---
 ## Abstract
+---
 - Not a [[Programming Language]] or [[Host#Server]]
 - Is a [[#JavaScript Runtime Environment]]
 
 
 
 ## Terminologies
+---
 ### JavaScript Runtime Environment
 - A environment to run Javascript, independent of [[Browser]]
 ### Module

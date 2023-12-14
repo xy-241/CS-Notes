@@ -1,4 +1,15 @@
-#vault #security 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - vault
+  - security
+Creation Date: 2023-09-06T15:31:41+08:00
+Last Date: 2023-09-06T15:31:41+08:00
+References:
+---
 >[!note] Delegates the responsibility of securing the [[Vault Unseal Key]] from users to a trusted device or service
 >![[auto_unseal.png]]
 

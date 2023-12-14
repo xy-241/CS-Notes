@@ -10,6 +10,7 @@ Creation Date: 2023-10-07T17:40:00
 Last Date:
 ---
 ## Abstract
+---
 - REpresentational State Transfer
 - A way to *architecture* an *interface* that enables communication between [[Host]] & [[Host]]
 - Usually implemented in [[HTTP]]
@@ -18,12 +19,14 @@ Last Date:
 - Alert-natives are [[GraphQL]] & [[gRPC]] 
 
 ## 2 Cores
+---
 ### REpresentational
 - Represent *resources* in a way([[URI]]) for clients to consume
 ### State Transfer
 - This architecture is [[Stateless protocol|Stateless]], so a *state* is required to be exchanged for client-server to have a continous communication
 
 ## 6 Rules
+---
 ### Client-Server
 ### [[Stateless protocol |Stateless]]
 ### Uniform Interface
@@ -46,6 +49,7 @@ Delete - DELETE
 
 
 ## Best Practices
+---
 ### The endpoint/resource should be noun instead verb
 - Actions verbs are represented by the request type
 ### Use Pagination when server returns a large amount of data
@@ -57,6 +61,7 @@ Delete - DELETE
 
 
 ## Benefits
+---
 ### Simple & Standardised
 - Because the server does not need to programmed to keep track of any state information
 ### Scalable
@@ -67,11 +72,13 @@ Delete - DELETE
 - Server doesn't to need to worry about losing state information in the event of a failure
 
 ## Cons
+---
 ### Requires In-Depth Documentation
 ### Can't Get Customised Resources
 - We get all the data from an [[URI]], then have to perform client-side manipulation to get what we actually want - waste [[Bandwidth]]
 
 ## Terminologies
+---
 ### RESTful
 - A service that uses REST API to communicate 
 ### Resource

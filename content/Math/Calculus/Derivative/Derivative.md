@@ -1,5 +1,16 @@
-#calculus 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - calculus
+Creation Date: 2023-10-16T19:26:54+08:00
+Last Date: 2023-10-16T19:26:54+08:00
+References:
+---
 ## Formal Derivative Definition 
+---
 $$
 \frac{df}{dx} (2) = \lim_{h \to 0} \frac{f(2+h)-f(2)}{h}
 $$
@@ -12,6 +23,7 @@ $$
 dx \rightarrow 0
 $$
 ## Abstract
+---
 - [[#dy]]/[[#dx]]
 - A [[Function]] that gives the slope of [[Tangent]] line at a certain point(some x value)
    - [[Limit]] helps to find the value of derivative at any point of the graph of the original function
@@ -20,6 +32,7 @@ $$
 
 
 ## Terminologies 
+---
 ### Change
 - The difference between 2 points
 ### dx

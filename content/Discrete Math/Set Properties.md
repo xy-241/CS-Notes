@@ -10,10 +10,12 @@ Last Date: 2023-12-14T10:21:32+08:00
 References: 
 ---
 ## Abstract
+---
 
 
 
 ## Terminologies
+---
 ### Closure (闭包)
 - An property of a *set* whereby an operation on members of the set always produces a member of the same set
 - For example, Integers are *closed* under addition and multiplication like *1+1=2*, where 2 is an integer (*By  closure of integers under multiplication and addition*)
@@ -30,4 +32,3 @@ References:
 ### Trichotomy (三分法)
 - For any *two given inputs*, there are exactly *three possible outcomes*. One of the outcomes *must be true*
 - `x=y`, `x<y`, `x>y`
-

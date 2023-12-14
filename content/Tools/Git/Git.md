@@ -10,13 +10,16 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 -
 
 ## Benefits
+---
 ### Disaster Recovery
 - Allow us to roll back to a particular point seamlessly 
 
 ## Basics 
+---
 ### Branching Out
 ```bash
 git branch <NEW_BRANCH_NAME> 
@@ -36,6 +39,7 @@ git reset --hard <COMMIT_ID>
 ```
 
 ## Features
+---
 ### Move local commits from branch A to branch B
 - Merge commits into branch B
 - Delete local branch A, or [[Git Rebase]] for more refine control
@@ -45,6 +49,7 @@ git reset --hard <COMMIT_ID>
 
 
 ## Terminologies
+---
 ### Remote
 - The *Repo* in a central cloud
 - Default name is `origin`

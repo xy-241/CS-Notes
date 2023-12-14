@@ -10,15 +10,18 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Coordinate & *synchronise* [[Thread]]
 - It allows a thread to wait for a *particular condition* to be met before it can continue execution
 - Typically used in conjunction with [[Mutex (互斥体)]] to protect *shared data*
 
 ## Benefis
+---
 ### Handles [[Producer Consumer Problem]]
 - The *condition variables* are used to ensure that the [[Producer Consumer Problem#Producer|Producer]] does not produce more data than the [[Producer Consumer Problem#Consumer|Consumer]] can consume, and that the consumer does not try to consume data from an empty [[Producer Consumer Problem#Buffer|Buffer]]
 
 ## C Example
+---
 ### Wait for a particular condition
 - `condFuel` is the *condition variable*
 - `mutexFuel` is the [[Mutex (互斥体)]] to protect *shared data*

@@ -1,4 +1,14 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-08-17T20:13:22+08:00
+Last Date: 2023-08-17T20:13:22+08:00
+References:
+---
 >[!note]
 >![[linear_probing.png]]
 >- Trying to find the next empty bucket for the conflicted key-value pair linearly
@@ -9,6 +19,7 @@
 >Uses [[Pseudorandomness]] to find the next empty bucket for conflicted key-value pair
 
 ## Mechanism 
+---
 > [!note] Search key-value pair with key
 > 1. Obtain the [[Array]] index by passing the key to the [[Hash Function]]
 > 2. If the key-value pair in the bucket doesn't match with the key, iterate through the buckets linearly until the correct key-value is found
@@ -25,10 +36,9 @@
 
 
 ## Cons
+---
 
 >[!caution] Key-value pair clustering
 >When the array is filled up with key-value pairs in a continuous manner. We may need to iterate through many key-value pairs, including key-value pairs that has a hash index to get/delete the desired key-value pair
-
-
 
 

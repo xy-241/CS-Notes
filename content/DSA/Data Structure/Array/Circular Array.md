@@ -1,4 +1,14 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-08-29T13:56:03+08:00
+Last Date: 2023-08-29T13:56:03+08:00
+References:
+---
 
 >[!abstract] 
 >- 'Connect' the start and end of the [[Array]] to form a loop by taking the remainder of ``frontIndex % arrayCapacity``, so the space before the start index can be reused

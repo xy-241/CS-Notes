@@ -10,6 +10,7 @@ Last Date: 2023-12-10T00:34:28+08:00
 References: 
 ---
 ## Abstract
+---
 - Also known as *Proposition* 
 - 3 important types are [[#Universal]], [[#Conditional]] & [[#Existential]]
 - We can form *statements* that are [[#Universal]] & [[#Conditional]], or more to form *complex statements*
@@ -18,6 +19,7 @@ References:
 >- Doesn't depend on any *Variable*, unless it is [[Propositional Logic#Logical Equivalence]] equation
 >- Not in a question form
 ## Different Types of Statements
+---
 ### Universal
 - Made of [[Predicate#Symbol]], [[Predicate#Variable]] & [[Predicate#Quantifiers]]
 $$
@@ -65,6 +67,7 @@ $$
 
 
 ## Terminologies
+---
 ### Statement
 - A sentence that is `True` or `False`, but not both
 - Can be presented with variables like `p`, `q`, `r` & `s` etc

@@ -1,5 +1,16 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-12-11T20:43:00+08:00
+Last Date: 2023-12-11T20:43:00+08:00
+References:
+---
 ## Basics
+---
 >[!abstract] [[Stack (FILO)]] & [[Queue (FIFO)]] combined
 >![[deque.png]]
 >- [[Linear Data Structure]]
@@ -16,6 +27,7 @@
 
 
 ## Implementation
+---
 
 %%>[!note] Implementation wit[](Circular%20Array.md)]]
 >
@@ -32,6 +44,7 @@
 
 
 ## [[Abstract Data Type (ADT)]]
+---
 >[!success] O(1) to offerFirst() & offerLast()
 >- basically push()
 
@@ -39,4 +52,3 @@
 >- basically pop()
 
 >[!success] O(1) to peekFirst() & peekLast()
-

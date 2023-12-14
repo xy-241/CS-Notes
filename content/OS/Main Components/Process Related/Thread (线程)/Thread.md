@@ -11,6 +11,7 @@ References:
 ---
 
 ## Abstract
+---
 - Responsible to carry out some features of a running program - [[Process]]
 
 >[!note] [[Thread]] in a process share the same [[Address Space]]
@@ -19,6 +20,7 @@ References:
 
 
 ## 3 ways to implement
+---
 1. [[User Thread]]
 2. [[Kernel Threads]]
 3. [[Hybrid Threads]]
@@ -26,6 +28,7 @@ References:
 
 
 ## Benefits
+---
 ### Fast to create/destroy
 - 10-100 times faster than [[Process]]
 - Because without the need of [[Context Switch#Latency Number An expensive operation|Expensive Context Switching]]
@@ -47,6 +50,7 @@ References:
 
 
 ## Cons
+---
 >[!caution] No protection among threads
 >- One thread can bring down the entire [[Process]]
 >- One thread can read, write, or even wipe out another thread’s stack
@@ -57,9 +61,11 @@ References:
 >[!caution] [[Signal (Software Interrupt)]] handling - which thread should handle it
 
 ## Common Procedures
+---
 
 
 ## Terminologies 
+---
 ### Blocking
 - *Thread* doesn't do anything while waiting for *IO Operations* or *Network Operations* etc
 ### Non-blocking

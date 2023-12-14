@@ -10,6 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Stands for Index Node
 - In order to have data stored on the [[Disk]], we must have an *Inode* associated with it, otherwise we will have [[#Inode Exhaustion]]
 - Essentially an identification number associated with a data structure that contains metadata about a piece of data (like a file or directory) stored on the [[File System (Directory Hierarchy)]]
@@ -19,6 +20,7 @@ References:
 
 
 ## Terminologies
+---
 ### Number
 - To uniquely identify a [[File]]
 ```bash

@@ -10,12 +10,14 @@ Last Date: 2023-12-05T17:42:40+08:00
 References: 
 ---
 ## Abstract
+---
 - Pause the instruction before the previous [[Instruction]] has [[Pipeline Stages#Write Back]] the data it needs
 
 ![[Pipeline Stall.png]] 
 
 
 ## Cons
+---
 ### Performance hit
 - Too much stall in the [[Pipeline]] will reduce the benefits of [[Pipeline]]
 - When one [[Instruction]] stalls, the other [[Instruction]] running will have to stall too

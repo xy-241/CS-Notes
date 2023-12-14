@@ -10,6 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Wrap *certain global system resources* in an *abstraction layer*
 - This makes it appear like the [[Process]] within a *namespace* have their own *isolated instance of the resource*
 - The kernels namespace abstraction allows *different groups of processes* to have *different views of the system*
@@ -17,5 +18,6 @@ References:
 
 
 ## API
+---
 - Consists of 3 main [[System Call (系统调用)]]
 ### Clone()

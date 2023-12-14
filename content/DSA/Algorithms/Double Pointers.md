@@ -10,9 +10,11 @@ Last Date: 2023-12-10T16:52:51+08:00
 References: 
 ---
 ## Abstract
+---
 - Mainly used to solve [[Array]], [[Terminologies/String/String|String]] & [[Linked List]] related problems. Reduce time complexity by one dimension, `O(n^2)` to `O(n)`
 
 ## 3 Types
+---
 ### Fast, Slow
 >[!tip] Reduce 2 nested for loops into 1 single for loop
 
@@ -42,6 +44,7 @@ References:
 >[209. Minimum Size Subarray Sum](https://leetcode.cn/problems/minimum-size-subarray-sum/)
 
 ## Terminologies 
+---
 ### Window
 - The elements within the left and right pointers, when we are performing [[#Sliding Window]]
 - The operation of expanding and shrinking the window is usually same

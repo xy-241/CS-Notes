@@ -9,6 +9,7 @@ Creation Date: 2023-10-04T17:02:00
 Last Date:
 ---
 ## Abstract
+---
 - A [[Pointer]] without type aka a pre-defined size
 - Used when we aren't sure what the exact size of a variable like the return type of [[malloc]]
 - We should always try to cast it to a *type* whenever it is possible

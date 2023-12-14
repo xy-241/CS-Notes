@@ -10,10 +10,12 @@ Last Date: 2023-12-07T11:54:41+08:00
 References: 
 ---
 ## Abstract
+---
 - A central place to store the **parameters** used by others *AWS Services*
 
 
 ## Update Programmatically
+---
 - One common use case of this service is to **add/delete/access/modify** the parameters
 - Doing these operations programmatically is **less error prone** & **faster**
 ### 1) Install `aws-parameter-bulk`

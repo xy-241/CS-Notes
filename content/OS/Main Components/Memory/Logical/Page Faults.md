@@ -1,11 +1,23 @@
-#OS 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-10-07T16:38:28+08:00
+Last Date: 2023-10-07T16:38:28+08:00
+References:
+---
 ## Abstract
+---
 - Usually happens when not all [[Process]] has its whole program codes in the [[Main Memory]], and the [[Instruction]] needed isn't in Main Memory. [[OS]] will go and get the missing instruction from disk
 
 >[!caution] The process is blocked while the necessary instruction is being located and read in
 
 
 ## 3 Possible Causes
+---
 ### 1. No Access Rights (doubt )
 - Accessing [[Main Memory]] that isn't assigned to the requesting [[Process]]. Resulting in [[Segmentation Fault]]
 
@@ -17,6 +29,7 @@
 
 
 ## Terminologies
+---
 ### Lazy Allocation
 - Not allocating [[Main Memory]] until it is actually needed
 - By delaying the actual allocation, we speed up startup time & eliminate allocation entirely if it isn't used 

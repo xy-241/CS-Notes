@@ -10,10 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Not Case-Sensitive
 
 
 
 ## Terminologies
+---
 ### Schema
 - A name for [[Database]]

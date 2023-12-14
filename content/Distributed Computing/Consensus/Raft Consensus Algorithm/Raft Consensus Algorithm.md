@@ -1,4 +1,14 @@
-#distributed_computing
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - distributed_computing
+Creation Date: 2023-12-12T11:41:14+08:00
+Last Date: 2023-12-12T11:41:14+08:00
+References:
+---
 >[!note] A [[Network Protocol]] for implementing [[(Distributed) Consensus]]
 
 >[!note] 3 states for a node

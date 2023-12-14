@@ -9,10 +9,12 @@ Creation Date: 2023-10-03T14:42:00
 Last Date:
 ---
 ## Abstract
+---
 - [UDP Server written in NodeJS](https://github.com/hnasr/javascript_playground/blob/master/tcp/udp.js)
 
 
 ## Benefits
+---
 ### Smaller Packets 
 - No overhead to implement [[TCP#Benefits]]
 
@@ -28,6 +30,7 @@ Last Date:
 ### Support Horizontal Scaling
 
 ## Cons
+---
 ### No Acknowledgment 
 
 

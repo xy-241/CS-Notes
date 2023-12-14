@@ -1,5 +1,16 @@
-#computer_organisation 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - computer_organisation
+Creation Date: 2023-10-05T18:22:20+08:00
+Last Date: 2023-10-05T18:22:20+08:00
+References:
+---
 ## Abstract
+---
 - Takes in 3 [[Bits]]
 - Built with 2 [[Half Adder]]
 - The sum of the 1st [[Half Adder]] is added with the `cin` by the 2nd [[Half Adder]]

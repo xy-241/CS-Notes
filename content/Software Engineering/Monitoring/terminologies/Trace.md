@@ -10,12 +10,14 @@ Last Date: 2023-12-10T19:30:34+08:00
 References: 
 ---
 ## Abstract
+---
 - An entity used to track *time spent* by an app processing a request & the *status* of the request
 - Made up one or more [[Span]]
 - Identify the [[Span]] for [[Latency Number |Latency]], then we can carry on with optimisation
 
 
 ## Terminologies
+---
 ### Metrics
 - Captures request counts, error counts, and latency measures of requests
 ### Runtime Metrics

@@ -1,4 +1,14 @@
-#computer_organisation
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - computer_organisation
+Creation Date: 2023-08-18T20:46:09+08:00
+Last Date: 2023-08-18T20:46:09+08:00
+References:
+---
 ![[endianness-2048x634.png]]
 
 ***Big-endian***

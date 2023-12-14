@@ -10,11 +10,13 @@ Last Date: 2023-12-12T22:15:02+08:00
 References: 
 ---
 ## Abstract
+---
 - A list of memory locations from *0* to some maximum ([[Virtual Memory]]), which [[Process]] can read & write
 - 3 Components - [[#Stack Segment]], [[#Data Segment]] and  [[#Text Segment]]
 ![[address_space.png]]
 
 ## 3 Components
+---
 ### Stack Segment
 - [[Stack (FILO)]] structure
 - Grows downwards

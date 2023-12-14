@@ -11,11 +11,13 @@ References:
 ---
 
 ## Abstract
+---
 
 - A lightweight container orchestration service
 - We can mount [[#Volume]] to it for data that can't be lost when [[#Container]] is terminated
 
 ## Components
+---
 
 ### Container
 
@@ -52,6 +54,7 @@ containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r '.Networks[0].IPv4
 >- [[Auto Scaling Group]]
 
 ## Terminologies
+---
 
 ### Volume
 

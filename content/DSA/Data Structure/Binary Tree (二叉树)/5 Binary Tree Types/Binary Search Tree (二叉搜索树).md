@@ -9,6 +9,7 @@ Creation Date: 2023-09-03T17:41:00
 Last Date:
 ---
 ## Abstract
+---
 - Nodes have value attached to it
 - If the left sub-tree isn't empty, all nodes on that sub-tree is smaller than the node value
 - If the right sub-tree isn't empty, all nodes on that sub-tree is bigger than the node value
@@ -17,6 +18,7 @@ Last Date:
 
 
 ## Tips in solving Leetcode Question
+---
 ### Handling relationship between the current node & its previous node
 - Use ``prevNode`` to keep track of the previous smaller node or its parent node
 - Handy in solving some problems
@@ -35,6 +37,7 @@ Last Date:
 
 
 ## Leetcode Question
+---
 ### Properties
 - [700. Search in a Binary Search Tree](https://leetcode.cn/problems/search-in-a-binary-search-tree/)
 - [98. Validate Binary Search Tree](https://leetcode.cn/problems/validate-binary-search-tree/)
@@ -51,5 +54,6 @@ Last Date:
 
 
 ## Terminologies 
+---
 ### Greater Tree
 - Every value of node of the original BST is changed to the original value of node plus the sum of all value of nodes greater than the value of the original node of  in BST

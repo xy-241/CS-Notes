@@ -10,6 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 ![[sequential_circuit.png]]
 - Present output = [[Combination Circuit]] + [[#State]]
 - We need to store the past outputs -> a [[Main Memory]] is needed 
@@ -18,6 +19,7 @@ References:
 
 
 ## Terminologies
+---
 ### State
 - Also known as feedback
 - Past outputs

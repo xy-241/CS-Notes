@@ -1,8 +1,20 @@
-#c 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - c
+Creation Date: 2023-10-02T18:04:26+08:00
+Last Date: 2023-10-02T18:04:26+08:00
+References:
+---
 ## Abstract
+---
 - Convert from C to Machine Codes running as a [[Process]]
 
 ## 5 Steps
+---
 ### 1) [[Preprocessor]]
 - Generates expanded `.I` file
 - Process [[#Pre-processor Directives]]
@@ -39,4 +51,5 @@ gcc -c hello_world.c
 
 
 ## References
+---
 - [C Language Source Code to Exe](https://youtu.be/gSackZtqlUI?si=FXfUYg19cdPkvyRr)

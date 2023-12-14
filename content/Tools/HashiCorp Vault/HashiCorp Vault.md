@@ -1,5 +1,16 @@
-#tool 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - tool
+Creation Date: 2023-09-03T20:06:49+08:00
+Last Date: 2023-09-03T20:06:49+08:00
+References:
+---
 ## Features
+---
 >[!note] Features
 >![[vault_features.png]]
 >![[Automate_x509_certificates.png]]
@@ -13,15 +24,18 @@
 
 
 ## Server Modes
+---
 >[!note] 2 Server Modes
 >1. Dev mode - ``vault server -dev``
 >2. Prod mode ``vault server -config /vault/config/local.json``
 
 
 ## Vault Paths
+---
 ![[vault_path.png]]
 
 ## Architecture & its config
+---
 ![[vault_architecture_3.png]]
 	- [[Vault System Backend]] is a default backend which is mounted at ``/sys`` - handling policies. and access storage backend
 ![[vault_architecture_1.png]]
@@ -40,14 +54,16 @@
 
 
 ## Useful Commands
+---
 ### Get the vault status
 ```bash
 curl  --request POST --data '{"key": "<BASE64_TOKEN>"}'  http://<ENDPOINT>/v1/sys/unseal | jq
 ```
 
 ## [HA Setup & How a HA Cluster work](https://developer.hashicorp.com/vault/docs/concepts/ha)
+---
 
 ## References
+---
 - [Introduction to HashiCorp Vault with Armon Dadgar](https://www.youtube.com/watch?v=VYfl-DpZ5wM)
 - [HashiCorp Vault Tutorial for Beginners | FULL COURSE in 1 Hour](https://youtu.be/ae72pKpXe-s)
-

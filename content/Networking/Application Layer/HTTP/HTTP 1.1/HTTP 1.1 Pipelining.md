@@ -1,4 +1,14 @@
-#networking 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - networking
+Creation Date: 2023-08-16T23:56:29+08:00
+Last Date: 2023-08-16T23:56:29+08:00
+References:
+---
 >[!abstract] Allows send multiple [[HTTP Request]] in a single [[TCP Connection]], so one failed [[HTTP Request]] cant block other [[HTTP Response]]
 
 

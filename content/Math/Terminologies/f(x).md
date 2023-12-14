@@ -1,4 +1,14 @@
-#calculus 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - calculus
+Creation Date: 2023-08-08T12:56:50+08:00
+Last Date: 2023-08-08T12:56:50+08:00
+References:
+---
 >[!note] To uniquely differentiate different equation
 >If every equation is represented with y, then we can't tell a difference. Instead with f(x), g(x), we can tell they are 2 different equations easily
 

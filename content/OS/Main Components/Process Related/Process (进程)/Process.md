@@ -11,6 +11,7 @@ References:
 ---
 
 ## Abstract
+---
 
 - Container that holds all the information needed to run a program, [[Abstraction]] over running program
 - 2 Components - [[Address Space]], [[Process Control Block (PCB)]]
@@ -19,6 +20,7 @@ References:
 
 
 ## Terminologies
+---
 
 ### Core Image
 

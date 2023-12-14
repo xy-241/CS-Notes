@@ -1,5 +1,16 @@
-#security 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - security
+Creation Date: 2023-10-05T11:42:46+08:00
+Last Date: 2023-10-05T11:42:46+08:00
+References:
+---
 ## Abstract 
+---
 >[!info]
 >- Also known as Public key Cryptography or Public Private Key
 - Achieved with [[#Public Key]] & [[#Private Key]] which are mathematically related
@@ -8,12 +19,15 @@
 
 
 ## Benefits
+---
 1) Allows 2 entity to exchange [[Data]] securely (data encrypted-in-transit) without physically exchanging an encryption key
 
 ## Cons
+---
 1) Much more computationally heavy compared to [[Symmetric Cryptography]]
 
 ## Terminologies 
+---
 ### Public Key
 - Distributed to everyone & anyone
 ### Private Key

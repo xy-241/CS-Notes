@@ -1,4 +1,14 @@
-#OS 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-11-20T11:15:17+08:00
+Last Date: 2023-11-20T11:15:17+08:00
+References:
+---
 >[!abstract] Determines what [[Instruction]] may be executed by [[CPU]]
 
 >[!note] 3 modes
@@ -10,6 +20,7 @@
 
 
 ## Example
+---
 ### x86-64
 - The privilege level can be read by CPU from a Registers called `cs`
 ### RISCV

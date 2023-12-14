@@ -10,12 +10,14 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - *Synchronising* [[Thread]] while they are running concurrently. So that they all reach the same point before any of them proceed
 - Used when we need information from multiple [[Thread]] at a particular execution point. For example [[#Roll Dice]]
 - Need to compile with `-pthread` flag
 
 
 ## Code Snippet
+---
 ```c
 #include <pthread.h>
 
@@ -34,6 +36,7 @@ int main(int argc, char *argv[]) {
 ```
 
 ## Example
+---
 ### Roll Dice
 - Each [[Thread]] rolls a dice, the *main thread* decides who is the winner. Then each thread shouts if it is a winner or not
 - [Sample Code](https://code-vault.net/lesson/18ec1942c2da46840693efe9b520f873)

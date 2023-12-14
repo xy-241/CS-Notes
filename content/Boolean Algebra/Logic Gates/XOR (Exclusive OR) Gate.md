@@ -11,10 +11,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Returns true only when 2 inputs aren't the same
 ![[XOR.png]]
 
 ## Tricks
+---
 ### Swapping values 
 ```java
 public class MyClass {
@@ -34,6 +36,7 @@ public class MyClass {
 
 
 ## Terminologies
+---
 ### Self-Inverse
 - `a ^ a = 0`
 ### Own-Inverse

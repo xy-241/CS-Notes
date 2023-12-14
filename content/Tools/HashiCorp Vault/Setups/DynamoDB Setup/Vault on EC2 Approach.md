@@ -1,10 +1,21 @@
-#vault 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - vault
+Creation Date: 2023-08-31T13:38:30+08:00
+Last Date: 2023-08-31T13:38:30+08:00
+References:
+---
 >[!abstract] Current Setup Overview
 >![[raid_vault_drawio_v1.jpg]]
 >- We use DynamoDB as the backend storage for storing all the secrets and HashiCorp Vault configurations. DynamoDB is managed and serverless, making infrastructure management much easier compared to other backend storage options.
 >- The compute component is stateless. Therefore, creating or destroying EC2 instances or Docker containers will not pose any data loss risks
 
 ## 2 methods
+---
 >[!note] Method 1: Running [[HashiCorp Vault]] on EC2
 >1. Run the Terraform code to set up the infrastructure mentioned above
 >2. The User Data Script attached to the EC2 instance will install HashiCorp Vault and configure it to use DynamoDB as a backend storage with the Vault Configuration File
@@ -19,6 +30,7 @@
 
 
 ## Differences between Method 1 and Method 2
+---
 >[!note] Method 1: Running [[HashiCorp Vault]] on EC2
 >- We need to download and install HashiCorp Vault from scratch whenever a new EC2 is created
 
@@ -28,6 +40,7 @@
 
 
 ## Possible optimisation
+---
 >[!info] Method 1: Running [[HashiCorp Vault]] on EC2
 >- Use [[Ansible]] to automate the process of running commands inside the [[EC2]]
 

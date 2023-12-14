@@ -10,6 +10,7 @@ Last Date: 2023-12-13T17:29:35+08:00
 References: 
 ---
 ## Abstract
+---
 - [[Thread]] managed in the [[User Space]] entirely
 - The [[Kernel]] knows nothing about them
 - As far as the kernel is concerned, it is managing single-threaded [[Process]]
@@ -26,6 +27,7 @@ References:
 
 
 ## Benefits
+---
 ### Good Compatibility
 - [[Thread]] can be implemented on an [[OS]] that does
 not support threads.
@@ -43,6 +45,7 @@ not support threads.
 - [[Kernel Threads]] require some table space and [[Address Space#Stack Segment]] in the [[Kernel]], which can be a problem if there are a very large number of threads.
 
 ## Cons
+---
 ### Declined Performance
 - The [[Kernel]] sees a [[Process]] with multiple *user threads* as one single [[Thread]]
 - When the running *user thread* has a [[Page Faults]], other *user threads* aren't scheduled to run 
@@ -55,6 +58,7 @@ not support threads.
 >[!caution] Programmers generally want threads in applications where the threads block often
 
 ## Examples
+---
 ### PThread (C)
 - A [[Thread]] package under [[Portable Operating System Interface (POSIX)]]
 ![[pthread_example.png]]
@@ -67,6 +71,7 @@ not support threads.
 [Golang Goroutines](https://granulate.io/blog/deep-dive-into-golang-performance/)
 
 ## Terminologies
+---
 ### Runtime System
 - The **Thread Scheduler** in [[User Space]]
 ### Scheduler Activations

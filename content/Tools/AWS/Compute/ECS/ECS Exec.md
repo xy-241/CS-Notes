@@ -6,13 +6,15 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-04T11:16:00
-Last Date: 2023-12-07T15:00:01+08:00
+Last Date: 2023-12-14T17:27:12+08:00
 References: 
 ---
 ## Abstract
+---
 - Obtain a **shell** into [[ECS]] from a local machine
 
 ## Enable ECS Exec for [[ECS]]
+---
 ### Existing [[ECS]]
 >[!caution] Only new [[ECS#Task]] under the [[ECS#Service]] will have the ECS Exec enabled
 ```bash
@@ -39,6 +41,7 @@ aws ecs create-service \
 ``` 
 
 ## Obtain a Shell
+---
 ### Install [[Session Manager]] plugin for AWS Cli
 ```bash
 brew install --cask session-manager-plugin
@@ -84,5 +87,4 @@ aws ecs execute-command \
 	--command "/bin/sh" 
 ```
 >[!tip] If face error connecting, can try create a new [[ECS#Task]] deployment
-
 

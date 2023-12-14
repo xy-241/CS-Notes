@@ -1,5 +1,17 @@
-#docker #networking 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - docker
+  - networking
+Creation Date: 2023-08-22T12:09:04+08:00
+Last Date: 2023-08-22T12:09:04+08:00
+References:
+---
 ## 3 Network Types
+---
 1. [[Docker Bridge Network]]
 2. [[Docker Host Network]]
 3. [[Docker Null Network]]
@@ -14,6 +26,7 @@
 >[!caution] We cant remove all the default Docker Network
 
 ## Commands
+---
 >[!note] List all Docker Networks
 >```bash
 >sudo docker network ls

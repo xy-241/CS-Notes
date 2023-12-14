@@ -1,4 +1,14 @@
-#computer_organisation 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - computer_organisation
+Creation Date: 2023-10-07T16:38:28+08:00
+Last Date: 2023-10-07T16:38:28+08:00
+References:
+---
 >[!note]
 >![[accumulator isa.png]]
 >1. ``load A``: Load value from [[Main Memory]] into accumulator

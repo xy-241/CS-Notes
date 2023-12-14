@@ -1,4 +1,14 @@
-#linux 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - linux
+Creation Date: 2023-09-03T16:27:32+08:00
+Last Date: 2023-09-03T16:27:32+08:00
+References:
+---
 >[!abstract] Command is used to modify the behavior of the shell
 
 >[!note] Place this at the start of [[Bash Script]] to ensure script is ran properly or can be debugged easily
@@ -22,4 +32,3 @@
 
 >[!note] ``-o pipefail``
 >- Returns an error whenever part of the [[Pipe (管道)]] has an error
-

@@ -1,4 +1,14 @@
-#security 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - security
+Creation Date: 2023-09-20T17:09:28+08:00
+Last Date: 2023-09-20T17:09:28+08:00
+References:
+---
 By [xy241](https://www.linkedin.com/in/xinyang-yu)
 >[!abstract]
 >- Generate tokens for third-party application to access an account with refined permission control
@@ -16,6 +26,7 @@ By [xy241](https://www.linkedin.com/in/xinyang-yu)
 
 
 ## Terminologies 
+---
 ### Resource Owner (Identity)
 - Owner of the identity, user themselves
 ### Client
@@ -52,5 +63,6 @@ By [xy241](https://www.linkedin.com/in/xinyang-yu)
 
 
 ## References
+---
 - [An Illustrated Guide to OAuth and OpenID Connect](https://www.youtube.com/watch?v=t18YB3xDfXI&t=44s)
 - [Udemy Course](https://nlbsg.udemy.com/course/oauth-2-simplified/learn/lecture/23715618#overview)

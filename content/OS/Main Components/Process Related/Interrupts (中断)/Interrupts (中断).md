@@ -10,14 +10,17 @@ Last Date: 2023-12-11T23:09:29+08:00
 References: 
 ---
 ## Abstract
+---
 - When an interrupt occurs, [[Control Unit#Program Counter]] jumps to [[Interrupt Handler (Interrupt Service Routine, ISR)]] & execute 
 - 2 forms - [[Signal (Software Interrupt)]] & [[Hardware interrupts (外中断)]]
 
 
 ## Benefits
+---
 - We don't need to get [[CPU]] to keep *Polling* for response which may take a long time to produce. Thus wasted computation
 
 ## Cons
+---
 >[!sidenote]
 >Interrupts should complete quickly to prevent the below problems
 ### Generally can't be interrupted
@@ -30,6 +33,7 @@ References:
 - [[Interrupt Priorities]] exist in some systems to handle [[Simultaneous Interrupts]]
 
 ## Examples
+---
 ### Turn off interrupt in XV6-RISCV
 - This is achieved by writing to the [[Registers#Control & Status Registers (CSRs)]] - `sstatus`
 - The code snippets below going down the [[Abstraction]], we going down from `intr_off()`
@@ -76,6 +80,7 @@ w_sstatus(uint64 x)
 ```
 
 ## Terminologies 
+---
 ### Synchronous
 - Locked to [[CPU]]'s cadence of [[Pipeline Stages]] & [[Execute]] [[Instruction]]
 - [[Operation]] that occur in a coordinated and timed manner, in response to [[Clock Cycle]] for example

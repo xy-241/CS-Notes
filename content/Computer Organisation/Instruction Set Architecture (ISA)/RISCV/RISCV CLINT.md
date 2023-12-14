@@ -11,6 +11,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 -  At [[Memory Address]] `0x02000000`
 - *CLINT* stands for *Core-Local Interrupt Controller*,  a hardware component in the RISC-V architecture that provides a simple and efficient mechanism for *generating interrupts within a core*
 - Mainly 2 features:
@@ -20,6 +21,7 @@ References:
 		- CLINT's [[Timer Chips]], which is a 32-bit countdown timer that can be programmed to generate interrupts at a specified frequency, useful for [[Multitasking#Preemptive Multitasking]]
 
 ## Components
+---
 ### MTIMECMP
 - Start at [[Memory Address]] `0x02004000`
 - Stands for *Machine Time Compare*

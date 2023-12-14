@@ -9,9 +9,11 @@ Creation Date: 2023-10-04T14:01:00
 Last Date:
 ---
 ## Abstract
+---
 - Put all the project codes in *one single repo*
 
 ## Benefits
+---
 ### Visibility
 - Just clone one repo, and we can have all the apps in a project in a single folder to view
 ### Consistency 
@@ -25,5 +27,6 @@ Last Date:
 - All apps already unified
 
 ## Cons
+---
 ### Big
 - More things to build, test & stored

@@ -1,4 +1,14 @@
-#tool
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - tool
+Creation Date: 2023-07-30T19:46:40+08:00
+Last Date: 2023-07-30T19:46:40+08:00
+References:
+---
 >[!note] 2 types of values
 >1. Initial value: shared among teammates (password placeholder for example)
 >2. current value: private in our own account (password )

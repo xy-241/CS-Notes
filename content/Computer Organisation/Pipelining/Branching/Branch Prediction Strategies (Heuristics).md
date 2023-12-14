@@ -10,12 +10,14 @@ Last Date: 2023-12-05T17:34:02+08:00
 References: 
 ---
 ## Abstract
+---
 - Basically saying we are guessing with some logic
 
 
 
 
 ## Strategies
+---
 ### Static 
 - [[Rule-based Approaches]] that may only consider one [[Instruction]] at a time
 ### Random
@@ -27,4 +29,3 @@ References:
   - using extra [[Main Memory]] like [[Heap]] to store the state
   - Load up multiple [[Computer Organisation/Instruction Set Architecture (ISA)/Instruction]] to analysis them
 ### Neural
-

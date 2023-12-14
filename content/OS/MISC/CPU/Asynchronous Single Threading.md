@@ -10,10 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Basically takes the benefits of [[Multi-threading]] without the [[Multi-threading#Cons]] with [[Thread#Non-blocking|Non-blocking Thread]] 
 
 
 ## Cons
+---
 ### No [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]]
 - Only one single *thread*, thus can't take advantage of [[Multi-core chips]]
 - Blocking the execution of the program when there is a *CPU Bounded* task

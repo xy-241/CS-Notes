@@ -13,16 +13,19 @@ References:
   - https://labuladong.github.io/algo/di-yi-zhan-da78c/shou-ba-sh-03a72/dijkstra-s-6d0b2/#%E7%A7%92%E6%9D%80%E4%B8%89%E9%81%93%E9%A2%98%E7%9B%AE
 ---
 ## Abstract
+---
 - Used to find the shortest path from any starting node to all other nodes in a [[Graph]] - *Single Source Shortest Path* on a [[Graph#Weighted | Weighted Graph]] that is either [[Graph#Directed | Directed]] or [[Graph#Non-Directed | Non-Directed]]
 - Use [[Greedy Algorithm]] to improve the computation performance via [[Priority Queue]]
 - Use [[Dynamic Programming]] to obtain the shortest distance from the given node to all other nodes -> [[Optimisation Problem]] via [[Dynamic Programming#DP Table|DP Table]]
 
 ## Cons
+---
 ### Negative [[Binary Tree (二叉树)#Edge | Edge]]
 - May not work if there are negative [[Binary Tree (二叉树)#Edge |Edge]] 
 
 
 ## Code Templates
+---
 ### Java
 #### Main
 ```java
@@ -103,10 +106,11 @@ for (int i=0; i<n; i++) {
 ```
 
 ## Leetcode Question
+---
 - [Byte-dance Mock Test (Product Recommendation)](https://www.jdoodle.com/ia/O7d)
 ## Terminologies
+---
 ### Source Vertex
 - The starting node
 ### Edge Relaxation 
 - Update path for already known nodes as soon as we find a shorter path to reach it 
-

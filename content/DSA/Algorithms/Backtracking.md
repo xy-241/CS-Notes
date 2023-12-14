@@ -9,6 +9,7 @@ Creation Date: 2023-09-18T12:15:00
 Last Date: 
 ---
 ## Abstract
+---
 - Basically a brute-force method that explores all possible paths
 - [[Backtracking]] is an *Algorithm Strategy*, while [[Recursion]] is more like a *Algorithm Tool*
 - The application of [[Recursion]] in searching problem 
@@ -17,6 +18,7 @@ Last Date:
 - [[Iterative Recursion]] doesn't work well to implement this algorithm, stick to [[Recursion]] - backtracking allows us to implicitly create multiple nested for-loops until we find the desired answer
 
 ## Tips in solving Leetcode
+---
 ### [[#Pruning (剪枝)]]
 - When in finding sum questions, *sort* the given [[Array]] before backtracking, then we can skip the rest of the loops if +the next element is bigger
 
@@ -56,6 +58,7 @@ if (i>0 && nums[i-1]==nums[i] && visited[i-1]==false) continue;
 ```
 
 ## Leetcode Questions
+---
 >[!important]
 >- For [[#Combination]] & [[#Partition (分割)]], [[#Solution (解)]] is obtained by collecting the [[#State (状态)]] at the [[Binary Tree (二叉树)#Leaf Node | Leaf Node]]
 >- For [[#Subset (子集)]], [[#Solution (解)]] is obtained by collecting the [[#State (状态)]] at all nodes
@@ -92,6 +95,7 @@ if (i>0 && nums[i-1]==nums[i] && visited[i-1]==false) continue;
 - [37. Sudoku Solver](https://leetcode.cn/problems/sudoku-solver/)
 
 ## Terminologies
+---
 ### Solution (解)
 - The answer that fulfil all [[#Constraint (约束条件)]]
 - Can be one or many

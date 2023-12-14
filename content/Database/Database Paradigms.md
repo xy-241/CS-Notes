@@ -10,11 +10,15 @@ Last Date:
 ---
 [Fireship Reference](https://youtu.be/W2Z7fbCLSTw?si=fkKydKtRFdw_tCEN)
 ## Key-Value 
+---
 - Structure like a [[Hash Map]]
 
 ## Wide Column
+---
 
 ## Document 
+---
 
 ## Relational 
+---
 - Has [[ACID Transactions]]

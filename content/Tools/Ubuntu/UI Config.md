@@ -1,1 +1,10 @@
-- [Remove Title Bar with Unite](https://stackoverflow.com/questions/71204126/how-to-remove-the-title-bar-of-gnome-applications)
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+Creation Date: 2023-08-03T10:24:52+08:00
+Last Date: 2023-08-03T10:24:52+08:00
+References:
+---

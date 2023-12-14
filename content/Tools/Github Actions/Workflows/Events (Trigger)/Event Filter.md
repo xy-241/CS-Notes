@@ -1,4 +1,14 @@
-#cicd_tools 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - cicd_tools
+Creation Date: 2023-07-28T18:20:47+08:00
+Last Date: 2023-07-28T18:20:47+08:00
+References:
+---
 >[!exampel] push [[Events (Trigger)]]
 >- Filter based on target branch
 >- Filter based on [[Pathname]] to ignore certain files

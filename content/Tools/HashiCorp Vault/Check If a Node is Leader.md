@@ -1,4 +1,14 @@
-#vault 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - vault
+Creation Date: 2023-08-04T12:39:50+08:00
+Last Date: 2023-08-04T12:39:50+08:00
+References:
+---
 >[!note] 2 Ways to check if it is a [[Leader Nodes]]
 >1. Use [[vault status]], ``HA Enabled`` is ``true`` 
 >2. Run:

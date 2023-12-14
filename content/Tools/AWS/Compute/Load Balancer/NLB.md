@@ -9,9 +9,11 @@ Creation Date: 2023-09-30T19:24:00
 Last Date:
 ---
 ## Abstract
+---
 - [[Layer 4 Load Balancer]]
 
 ## Tips
+---
 ### Obtain Private IPs dynamically using [[Terraform]]
 ```hcl
 data "aws_network_interface" "nlb_private_ip" {

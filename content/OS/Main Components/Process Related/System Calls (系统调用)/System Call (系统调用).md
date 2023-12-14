@@ -1,5 +1,16 @@
-#OS 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-11-21T11:55:53+08:00
+Last Date: 2023-11-21T11:55:53+08:00
+References:
+---
 ## Abstract
+---
 - A special procedure in [[Kernel Space]] that lets a program start a transition from [[User Mode]] to [[Kernel Mode]], jumping from the program’s code into [[OS]] code
 - A way for program to request services from the [[Kernel]] via [[Signal (Software Interrupt)]]
 - Can be traced by [``strace``](https://stackoverflow.com/questions/65510246/can-a-system-call-happen-in-a-c-program)
@@ -7,9 +18,11 @@
 
 
 ## Benefits
+---
 - Allow [[User Space]] program to use **computer hardware** to complete its job with [[OS]]'s security implementation to prevent programs from doing malicious stuff
 
 ## How a system call is triggered
+---
 ![[system_call_triggering_process.png]]
 1. Calling program pushes parameters of the system call to [[Stack (FILO)]] (Step 1-3)
 2. Call to [[Library Calls (Library Procedure)]], same [[Instruction]] to call all procedures inside the [[Library Calls (Library Procedure)]] (Step 4, where the actual [[Library Calls (Library Procedure)]] is happening)
@@ -28,6 +41,7 @@
 
 
 ## Highly [[CPU]] dependent
+---
 - [[Assembly language]] - implementation of system call, is differently across different [[Instruction Set Architecture (ISA)]]
 ![[syscall_architecture_differences.png]]
 ### Parameters of system call
@@ -42,6 +56,7 @@
 
 
 ## Examples
+---
 ### [Full List Docs for Linux System Calls](https://man7.org/linux/man-pages/man2/syscalls.2.html)
 >![[system_calls.png]]
 - [[System Call (系统调用)]] is tightly-coupled with [[Library Calls (Library Procedure)]], almost *1-to-1*
@@ -53,5 +68,6 @@
 
 
 ## Terminologies
+---
 ### Number (Interrupt Number)
 - [[]]

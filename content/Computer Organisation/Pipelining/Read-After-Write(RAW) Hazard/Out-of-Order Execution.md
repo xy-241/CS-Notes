@@ -10,6 +10,7 @@ Last Date: 2023-12-05T17:45:51+08:00
 References: 
 ---
 ## Abstract
+---
 - Used with [[Operand Forwarding]] to handle [[Pipeline Stall]]
 - Without *Out-of-Order Execution*
 ![[out-of-order_before.png]]

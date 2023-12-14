@@ -10,6 +10,7 @@ Last Date: 2023-12-09T23:15:41+08:00
 References: 
 ---
 ## Abstract
+---
 
 >[!sidenote]
 >- 向日葵朝着太阳转动， 时刻都在寻求当前汲取最大养分的可能。 
@@ -23,12 +24,14 @@ References:
 
 
 ## When to use Greedy
+---
 ### Guaranteed to get the Global Optimal Solution
 - When we can't find an *counter-example* with the greedy approach 
 ### Sub-optimal solution is good enough 
 - When finding [[#Global Optimal Solution]] takes too much effort & a Sub-optimal solution gets the job done
 
 ## Comparison with [[Dynamic Programming]]
+---
 - Both rely on [[Dynamic Programming#Optimal Substructure (最优子结构)]]
 - However, greedy
 	- Find a locally optimal solution at each step without the need to consider decisions made previously
@@ -37,6 +40,7 @@ References:
 	- Often simple and efficient
 
 ## Leetcode Tips
+---
 ### Greedy at different stages
 - We can use [[#Greedy Loop]] more than once in a problem
 - For example, for question *1005*, we use the first [[#Greedy Loop]] to ensure all possible negative numbers are negated to positive numbers. Then, we can use the second [[#Greedy Loop]] to negate the smallest positive integer when there is still negation left to use
@@ -46,6 +50,7 @@ References:
 - Basically *limit* the *impact range of each element* to its *adjacent neighbours*
 
 ## Questions
+---
 ### Basics 
 >[!sidenote]
 >- For some questions, we can apply greedy loop more than once, for example the *problem 1005* below
@@ -119,6 +124,7 @@ References:
 
 
 ## Terminologies 
+---
 ### Greedy Loop
 - Looping through a collection, and apply a greedy algorithm on the elements
 ### Local Optimal Solution 

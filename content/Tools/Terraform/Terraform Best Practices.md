@@ -1,6 +1,17 @@
-#terraform 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - terraform
+Creation Date: 2023-09-18T10:37:37+08:00
+Last Date: 2023-09-18T10:37:37+08:00
+References:
+---
 >[Referece](https://cloud.google.com/docs/terraform/best-practices-for-terraform#static-files)
 ## General style and structure guidelines
+---
 ### 1. [Follow a standard module structure](https://cloud.google.com/docs/terraform/best-practices-for-terraform#module-structure)
 - Use [[terraform-docs]] to *automate* the process of generating `README.md` file in Markdown format for each module. In the `README.md` file, include basic documentation about the module
 - Each module has a ``main.tf`` file for the core component
@@ -53,9 +64,11 @@ resource "aws_efs_mount_target" "main" {
 
 
 ## Reusable modules
+---
 
 
 ## Terraform root modules
+---
 ### [1. Minimize the number of resources in each root module](https://cloud.google.com/docs/terraform/best-practices-for-terraform#minimize-resources)
 - A general rule: Don't include more than 100 resources (and ideally only a few dozen) in a single [Terraform State]
 

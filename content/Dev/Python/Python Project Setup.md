@@ -10,11 +10,13 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Mainly 2 parts, 
 	1. use `pyenv` to manage the python interpreter version & virtualenv
 	2. use `poetry` to manage the python dependencies
 
 ## pyenv
+---
 - Install multiple Python versions in a single OS with ease
 ```bash
 # Installation Script
@@ -66,6 +68,7 @@ pyenv uninstall datadog_learn -f
 ```
 
 ## poetry
+---
 ```bash
 # Install Poetry
 

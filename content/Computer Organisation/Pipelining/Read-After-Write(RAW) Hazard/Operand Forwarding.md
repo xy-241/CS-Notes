@@ -10,6 +10,7 @@ Last Date: 2023-12-05T17:41:33+08:00
 References: 
 ---
 ## Abstract
+---
 - A *tunnel* that connects one [[Pipeline Stages]]  of [[Instruction]] to another [[Pipeline Stages]] of another [[Instruction]]
 
 ![[operand_forwarding.png]]

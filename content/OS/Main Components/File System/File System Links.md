@@ -10,9 +10,11 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 
 
 ## Terminologies 
+---
 ### Hard
 - Pointing to [[Inode]]
 - Space saving, we can have multiple references to a single set of data without duplicating the data

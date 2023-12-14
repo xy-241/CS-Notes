@@ -1,4 +1,14 @@
-#terraform 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - terraform
+Creation Date: 2023-08-29T17:18:36+08:00
+Last Date: 2023-08-29T17:18:36+08:00
+References:
+---
 
 >[!example] Passing 4 variables to the .tpl file
 >```bash

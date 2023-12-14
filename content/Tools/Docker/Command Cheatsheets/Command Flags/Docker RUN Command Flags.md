@@ -1,4 +1,14 @@
-#docker 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - docker
+Creation Date: 2023-11-13T19:06:12+08:00
+Last Date: 2023-11-13T19:06:12+08:00
+References:
+---
 >[!note] ``-d``
 >Run in detached mode aka run in background
 
@@ -32,6 +42,7 @@ docker run -d --network host hashicorp/vault server
 
 
 ## [[Docker Volume]]
+---
 >[!note] ``-v``
 >- Used to mount a [[Volume]] inside a Docker container
 >- It allows you to create a link between a directory or file on your host system (the system running Docker) and a directory or file inside the container

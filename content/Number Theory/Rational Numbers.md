@@ -11,10 +11,12 @@ Last Date: 2023-12-14T10:29:59+08:00
 References: 
 ---
 ## Abstract
+---
 - `r` is rational `<->` there are integers `a` and `b` such that `r=a/b` and `b!=0`
 - Represented with the symbol `Q`
 
 ## Theorem
+---
 ### Theorem 4.2.1
 - Every integer is a rational number
 ### Theorem 4.3.2

@@ -1,4 +1,14 @@
-#computer_organisation 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - computer_organisation
+Creation Date: 2023-10-07T16:38:28+08:00
+Last Date: 2023-10-07T16:38:28+08:00
+References:
+---
 >[!note]
 >![[stack isa.png]]
 >1. ``push A``, ``push B``: We load values from [[Main Memory]] onto the [[Stack (FILO)]]

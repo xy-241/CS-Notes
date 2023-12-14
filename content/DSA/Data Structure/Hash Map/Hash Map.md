@@ -10,6 +10,7 @@ Last Date: 2023-12-12T10:54:18+08:00
 References: 
 ---
 ## Abstract
+---
 - Make use of [[Hash Function]] to convert a key into an index which points to a [[#Bucket]]
 - Decide if a key is inside the collection quickly
 - We are using space in exchange for better performance 
@@ -23,12 +24,14 @@ References:
 
 
 ## Complexity
+---
 ### Time
 - O(1) to Insert
 - O(1) to Delete
 - O(1) to Search for a value - where the value we want to search is the key
 
 ## Tips
+---
 ### Use Array to save space
 - When keys are fixed & manageable, we can use the key as the [[Array]] index 
 - This will give us constant space, avoid the extra computation used by [[Hash Function]]
@@ -54,5 +57,6 @@ References:
 >	```
 
 ## Terminologies 
+---
 ### Bucket
 - A *memory space* in an [[Array]] that can be used to hold a value

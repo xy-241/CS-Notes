@@ -1,5 +1,16 @@
-#linear_algebra 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - linear_algebra
+Creation Date: 2023-10-14T23:18:10+08:00
+Last Date: 2023-10-14T23:18:10+08:00
+References:
+---
 ## Abstract
+---
 - Represents both magnitude(norm) & direction
 - Can be added, subtracted, and multiplied by [[Scalar]], requires special rules and operations to account for their direction if we want to perform the same set of [[Operation]] with itself
 - Every pair of numbers gives one and only one vector, vice versa 
@@ -10,6 +21,7 @@
 
 
 ## Centered around 2 [[Operation]]
+---
 1. [[Vector Addition]]
 2. [[Scalar Multiplication]]
 
@@ -17,6 +29,7 @@
 
 
 ## 2 different perspective
+---
 ### 1) Model arrow in space to numerical representation 
 - A more intuitive way, usually used by Physics students
 - A language to describe space & manipulation of space using numbers that can be processed by computer
@@ -28,6 +41,7 @@
 
 
 ## Terminologies 
+---
 ### Position
 - Vector initiate from [[Origin]]
 ### Directional

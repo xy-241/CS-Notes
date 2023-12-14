@@ -10,9 +10,11 @@ Last Date: 2023-12-12T11:39:22+08:00
 References: 
 ---
 ## Abstract
+---
 - A bunch of [[Host]] that connected together
 
 ## 4 MainTypes of Networks 
+---
 - From smallest to biggest
 ### Personal Area Network (PAN)
 - Around a person (about a meter)
@@ -43,6 +45,7 @@ References:
 - Large scale uses undersea fibre optics cables
 
 ## Special Types of Network
+---
 - From smallest to biggest
 ### Controller Area Network (CAN)
 - Similar to [[#Personal Area Network (PAN)]]

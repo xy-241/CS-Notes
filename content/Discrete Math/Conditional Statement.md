@@ -10,6 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Given `P`: it rains, `Q`: the floor is wet
 - Compound Statement `P -> Q`: If it rains, then the floor is wet
 >[!caution]
@@ -26,6 +27,7 @@ References:
 
 
 ## Terminologies 
+---
 ### Hypothesis/Antecedent
 - After `if`
 ### Conclusion/Consequent

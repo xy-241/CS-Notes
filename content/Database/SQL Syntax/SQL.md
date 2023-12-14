@@ -10,9 +10,11 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Because the join is not yet materialized at the time the subquery is evaluated, you cannot refer to the table returned from the join inside the subquery
 
 ## Common Operations
+---
 ### `GROUP BY` with Aggregation Function
 - We can sum up value with `SUM()` under a particular [[#Identifier]] Category Value
 - We avg value with `AVG()` under a particular [[#Identifier]] Category Value
@@ -21,6 +23,7 @@ References:
 - Use `COUNT` to count the occurrence of [[#Identifier]]
 
 ## Comparison
+---
 ### IS
 - Used for `NULL`
 ### =
@@ -28,12 +31,14 @@ References:
 - Any comparison with `NULL` will result in `false`, must use [[#IS]] to evaluate 
 
 ## Aggregation 
+---
 
 ##
 ### JOIN
 ![[sql_join.png]]
 
 ## Terminologies 
+---
 ### Entity 
 - A table that contains unique set of data
 ### Constraints

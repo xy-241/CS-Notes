@@ -1,4 +1,13 @@
->[!abstract] Arrange the [[Bits]] of [[Object]] in 6-bits block (2^6 is 64), map them to [[Base 64 Table]], and we get a string of text that can be transferred without corruption 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+Creation Date: 2023-08-15T18:03:11+08:00
+Last Date: 2023-08-15T18:03:11+08:00
+References:
+---
 
 >[!success] Helps to ensure data that is transferred from one machine to another isn't corrupted
 

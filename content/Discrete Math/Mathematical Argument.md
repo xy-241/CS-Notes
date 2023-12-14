@@ -10,16 +10,19 @@ Last Date: 2023-12-12T21:28:56+08:00
 References: 
 ---
 ## Abstract
+---
 - A sequence of [[Mathematical Statement]] ending in a [[#Conclusion]]
 - Every step should *follow logically* from all previous steps
 - `IF (p AND ... p) THEN Conclusion` is a [[Mathematical Statement#Tautology `t`]]
 - A *argument* can be [[#Valid]], but if the [[#Premise]] is not true, the [[#Conclusion]] is going to be false
 
 ## Testing An Argument Form for [[#Valid]]
+---
 - There is [[#Critical Row]] in which [[#Conclusion]] is false: [[#Form]] is *invalid*
 - The [[#Conclusion]] in every [[#Critical Row]] is true: [[#Form]] is [[#Valid]]
 
 ## Terminologies
+---
 ### Form
 - The [[Mathematical Statement]] in *Mathematical Argument* is expressed in variables
 ### Premise

@@ -11,15 +11,18 @@ Last Date: 2023-12-12T21:47:13+08:00
 References: 
 ---
 ## Abstract
+---
 - A group of [[Latch]]
 - Accessible from [[Instruction]]
 
 ## 2 main purposes
+---
 1. Storying values during computations (like [[Memory Address]] & value)
 2. Configuring [[CPU]]
 
 
 ## Register Type
+---
 ### Instruction Address Register
 - The register that contains the [[Memory Address]] to retrieve the [[Instruction]]
 ### Instruction Register
@@ -34,12 +37,14 @@ References:
 - Holds the address of the top of the [[Address Space#Stack Segment]] in the current **execution context**
 
 ## MIPS Registers
+---
 ![[MIPS_Register.png]]
 
 
 
 
 ## Terminologies
+---
 ### Width
 - The number of [[Bits]] inside a register
 ### File

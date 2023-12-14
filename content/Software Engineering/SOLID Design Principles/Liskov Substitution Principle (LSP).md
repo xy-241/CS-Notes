@@ -1,4 +1,14 @@
-#design_principles
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - design_principles
+Creation Date: 2023-07-20T00:24:49+08:00
+Last Date: 2023-07-20T00:24:49+08:00
+References:
+---
 
 > [!failure] Not all [[IS-A relationships]] should be modeled with [[Inheritance]]
 > ## Example: Square inherits from Rectangle

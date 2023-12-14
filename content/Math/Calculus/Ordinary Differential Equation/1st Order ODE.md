@@ -10,13 +10,16 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 
 
 ## Homogenous 
+---
 ### Separable
 ### Exact
 
 
 ## Non-Homogenous 
+---
 ### Linear
 - [Organic Tutor](https://youtu.be/gd1FYn86P0c?si=DJCXOapsgFmX7RUa)

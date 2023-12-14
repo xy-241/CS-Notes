@@ -10,10 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 
 
 
 ## Terminologies
+---
 ### Prevention
 - Ensure that at least one of the [[Coffman Conditions]] does not hold. For example, by implementing a [[resource allocation policy]] that ensures no [[Coffman Conditions#Circular Wait]]
 ### Avoidance 

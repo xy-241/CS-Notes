@@ -10,16 +10,19 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - 
 
 
 ## Benefits
+---
 ### Concise History
 - Sometimes, there are commits that are used to tested the idea
 - If we don't clean them up, when people branch out, these testing idea commits will follow too which make it harder to read and understand the development of the project
 - To prevent meaningless trails and errors commits from polluting the git history, especially when others are branching out
 
 ## Basics
+---
 ### Include commits to rebase
 - `git rebase -i HEAD~<NUM_COMMITS>`
 - `NUM_COMMITS` is the number of commits, including the current commit HEAD is pointing to
@@ -37,6 +40,7 @@ References:
 
 
 ## Features
+---
 ### Edit changes in a past commit
 - Initialise the rebase, and set `e` to the commit we want to modify
 - After modification, run `git commit --amend`

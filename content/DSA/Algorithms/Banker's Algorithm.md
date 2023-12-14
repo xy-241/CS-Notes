@@ -12,6 +12,7 @@ References:
   - "Jenny: https://www.youtube.com/watch?v=bYFVbzLLxfY"
 ---
 ## Abstract
+---
 - Used for [[Deadlock (死锁)]] Avoidance
 - Used in banking to make sure banks don't run out of liquidity aka money aka in [[#Safe State]]
 - 2 out 3 pieces of info needed - [[#Max]], [[#Allocation]] & [[#Need]], number of [[Process]] and either [[#Total]] or [[#Available]] to calculate the [[#Need]] and check if system in [[#Safe State]] (if safe, we need the find the [[#Safe Sequence]]) 
@@ -19,6 +20,7 @@ References:
 
 
 ## Terminologies 
+---
 ### Safe State
 - When we don't run out of resources 
 ### Safe Sequence

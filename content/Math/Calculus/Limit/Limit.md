@@ -1,5 +1,16 @@
-#calculus 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - calculus
+Creation Date: 2023-10-18T20:16:10+08:00
+Last Date: 2023-10-18T20:16:10+08:00
+References:
+---
 ## Abstract
+---
 $$
 \lim_{h \rightarrow 0} f(h)
 $$
@@ -19,4 +30,3 @@ $$
 >![[undefined limit.png]]
 >- Given an [[Delta (δ)]], there isn't an output within the [[Epsilon (ε)]]
 >- [[Left Limit]] == [[Right Limit]]
-

@@ -1,4 +1,14 @@
-#distributed_computing 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - distributed_computing
+Creation Date: 2023-12-12T11:49:00+08:00
+Last Date: 2023-12-12T11:49:00+08:00
+References:
+---
 >[!note] Log Replication is how a change is made using [[Append Entries]]
 >1. Each change is added as a entry in the [[Leader Nodes]]'s log
 >2. Log entry is currently uncommitted, so it doesn't update the [[Leader Nodes]]'s state
@@ -9,4 +19,3 @@
 >8. Leader then notifies the [[Follower Nodes]] that the entry is committed
 >9. The [[Follower Nodes]] committed the entries, state updated
 >10. Cluster now come to [[(Distributed) Consensus]] about the system state
-

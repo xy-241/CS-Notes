@@ -1,9 +1,20 @@
-#vault 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - vault
+Creation Date: 2023-08-23T21:48:26+08:00
+Last Date: 2023-08-23T21:48:26+08:00
+References:
+---
 >[!abstract] Attached to each [[Token]] sent to the client, specifies the resources the clients can access ([[Authorization]])
 >- [Syntax](https://developer.hashicorp.com/vault/docs/concepts/policies#policy-syntax)
 
 
 ## Useful Commands
+---
 >[!note] List polies
 >```bash
 ># Vault Cli
@@ -28,4 +39,3 @@
 >```
 
 ^f66dd1
-

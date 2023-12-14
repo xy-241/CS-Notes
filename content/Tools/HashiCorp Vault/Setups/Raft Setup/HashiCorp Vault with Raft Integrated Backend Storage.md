@@ -1,7 +1,19 @@
-#vault #distributed_computing 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - vault
+  - distributed_computing
+Creation Date: 2023-08-30T11:01:47+08:00
+Last Date: 2023-08-30T11:01:47+08:00
+References:
+---
 [Vault Integrated Storage Concepts](https://developer.hashicorp.com/vault/docs/concepts/integrated-storage)
 
 ## 1) Intro
+---
 >[!info] HashiCorp Cloud Platform (HCP) Vault clusters use Integrated Storage, see [here](https://developer.hashicorp.com/vault/docs/configuration/storage#integrated-storage-vs-external-storage)
 
 >[!note] Uses [[Raft Consensus Algorithm]] to replicate data across cluster nodes
@@ -10,12 +22,14 @@
 
 
 ## 2) Node Management
+---
 >[!note] Automatic node discovery is achieved with [``auto_join``](https://developer.hashicorp.com/vault/docs/configuration/storage/raft#auto_join)
 >- [Demo](https://nlbsg.udemy.com/course/integrating-hashicorp-vault-with-aws/learn/lecture/23687750#overview)
 
 
 
 ## 3) Integrated Storage
+---
 >[!note] Technical Details
 >- [Integrated Storage Concepts 1](https://developer.hashicorp.com/vault/docs/concepts/integrated-storage#integrated-storage)
 >- [Integrated Storage Concepts 2](https://developer.hashicorp.com/vault/docs/internals/integrated-storage)
@@ -24,6 +38,7 @@
 
 
 ## 4) [[Raft Quorum]] Management
+---
 >[!caution] When we lost more than half of the total nodes. Vault is unable to elect a new leader (For more details, click [here](https://developer.hashicorp.com/vault/docs/internals/integrated-storage#quorum)). Thus, unable to serve requests from clients
 
 >[!note] Technical Details
@@ -32,6 +47,7 @@
 
 
 ## 5) [Vault Autopilot](https://developer.hashicorp.com/vault/docs/internals/integrated-storage#autopilot)
+---
 >[!note] Features
 >- Unhealthy nodes are automatically removed from the Raft cluster without manual operator intervention
 
@@ -41,14 +57,17 @@
 
 
 ## 6) [Vault Health Checks](https://developer.hashicorp.com/vault/api-docs/system/health)
+---
 
 
 ## 7) Optimisation
+---
 - [Production Security Hardening](https://developer.hashicorp.com/vault/tutorials/day-one-raft/production-hardening)
 - [System Requirement](https://developer.hashicorp.com/vault/tutorials/day-one-raft/raft-reference-architecture#system-requirements)
 
 
 ## 8) Useful Commands
+---
 >[!note] List peers in the cluster
 >```bash
 >vault operator raft list-peers
@@ -74,5 +93,6 @@
 >```
 
 ## 9) Sample Setup References
+---
 - [HashiCorp Sample Setup Tutorial](https://developer.hashicorp.com/vault/tutorials/raft/raft-storage-aws)
 - [AWS Sample Setup Tutorial](https://aws.amazon.com/solutions/partners/vault/)

@@ -9,18 +9,21 @@ Creation Date: 2023-08-01T16:41:00
 Last Date: 2023-12-10T19:19:32+08:00
 ---
 ## Abstract
+---
 - A tool to remove *all resources* in an AWS Account automatically without manually clicking countless buttons 
 >[!CAUTION] Always double check what resources that AWS Nuke aren't able to remove
 >- There are a few resources that require manual removal like *AWS Network Firewall*
 
 
 ## AWS Account Setting
+---
 - We need to create **Account Alias** in order to start using `aws-nuke`
 ![[account_alias.png]]
 - Refer to [Github Repo](https://github.com/rebuy-de/aws-nuke) for more details
 
 
 ## config.yml (Configuration File)
+---
 ### Example 1: Remove all
 ```yaml
 regions:
@@ -47,6 +50,7 @@ accounts:
 ```
 
 ## Run in [[Docker]]
+---
 - Pass in the [[#config.yml (Configuration File)]] & AWS Profile to the container using [[Docker Volume]]
 ```bash
 docker run \
@@ -57,4 +61,3 @@ docker run \
    --profile <YOUR_AWS_PROFILE> \
    --config /home/aws-nuke/config.yml
 ```
-

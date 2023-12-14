@@ -10,9 +10,11 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - 
 
 ## 3 Ways to Represent
+---
 ### Adjacency Matrix
 #### Pros
 - Check the relationship of any 2 nodes in O(1)
@@ -25,6 +27,7 @@ References:
 
 
 ## Terminologies
+---
 ### Weighted (加权图)
 - [[Binary Tree (二叉树)#Edge | Edge]] has a value
 ### Directed

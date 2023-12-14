@@ -1,5 +1,16 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-09-22T16:25:41+08:00
+Last Date: 2023-09-22T16:25:41+08:00
+References:
+---
 ## Basics
+---
 >[!abstract] Basic Properties
 >![[hash_map.png]]
 >-
@@ -13,11 +24,14 @@
 >[!example] [Use Cases]()
 
 ## Implementation
+---
 
 ## Example Implementation in [[Java]]
+---
 
 
 ## [[Abstract Data Type (ADT)]]
+---
 >[!success] O(1) to Insert
 
 >[!success] O(1) to Delete
@@ -26,6 +40,7 @@
 
 
 ## Side Notes
+---
 >[!success]
 
 >[!success] 

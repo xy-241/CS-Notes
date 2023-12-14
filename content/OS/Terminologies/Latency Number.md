@@ -1,4 +1,14 @@
-#OS
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-12-11T23:00:51+08:00
+Last Date: 2023-12-11T23:00:51+08:00
+References:
+---
 ![[latency number visual.webp]]
 - Put those times on a human scale by setting **1ns CPU time = 1s human time**.
     - a **clock cycle** is **~0.1-0.2s**, which is more or less instantaneous for humans. This could be, for example, the time to add 2 small numbers that you already have in transistors.

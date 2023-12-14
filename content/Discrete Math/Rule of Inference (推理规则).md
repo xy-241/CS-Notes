@@ -10,11 +10,13 @@ Last Date: 2023-12-11T21:43:16+08:00
 References: 
 ---
 ## Abstract
+---
 - A form of [[Mathematical Argument]] that is guaranteed to be [[Mathematical Argument#Valid|Valid]] if all its [[Mathematical Argument#Premise]] are true
 - Tools that enable [[Deductive Reasoning (演繹推理)]]
 
 
 ## Basics
+---
 ### Modus Ponens
 ### Modus Tollens
 - Denying the consequent
@@ -54,6 +56,7 @@ References:
 - If a *assumption* leads to a *contradiction*, then that *assumption* must be false
 
 ## With [[Predicate#Quantifiers]]
+---
 ### Universal Modus Ponens
 - [[Mathematical Argument#Premise|Premise]]: For all x, if x makes P(x) true, then x makes Q(x) true
 - [[Mathematical Argument#Premise|Premise]]: a is an element of x, a makes P(x) true

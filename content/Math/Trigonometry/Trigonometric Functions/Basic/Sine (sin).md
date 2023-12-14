@@ -1,4 +1,14 @@
-#trigonometry 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - trigonometry
+Creation Date: 2023-07-29T17:15:17+08:00
+Last Date: 2023-07-29T17:15:17+08:00
+References:
+---
 $$
 sin(θ) = \frac{opp}{hyp}
 $$

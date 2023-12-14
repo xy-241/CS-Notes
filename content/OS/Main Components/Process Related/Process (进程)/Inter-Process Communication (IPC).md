@@ -1,5 +1,16 @@
-#OS 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2023-10-16T10:11:53+08:00
+Last Date: 2023-10-16T10:11:53+08:00
+References:
+---
 ## Abstract
+---
 - Allow 2 isolated [[Process]] to communicate with each other 
 - Used to [[Synchronize]] the activities among [[Process]] that are cooperating to get some job done
 

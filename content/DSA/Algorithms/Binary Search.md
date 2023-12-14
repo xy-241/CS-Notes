@@ -1,4 +1,14 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-08-06T14:45:06+08:00
+Last Date: 2023-08-06T14:45:06+08:00
+References:
+---
 >[!caution] Avoid [[data types]] [[Overflow]] when finding the mid index
 >```java
 >int mid = left + (right-left)/2;
@@ -40,5 +50,6 @@
 
 
 ## Practice Question
+---
 >[!example] Practice Questions
 >- [704. Binary Search](https://leetcode.cn/problems/binary-search/)

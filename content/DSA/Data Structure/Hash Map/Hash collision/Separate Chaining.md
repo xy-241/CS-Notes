@@ -1,4 +1,14 @@
-#dsa
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-10-07T16:38:28+08:00
+Last Date: 2023-10-07T16:38:28+08:00
+References:
+---
 >[!note]
 >![[separate_chaining.png]]
 >- Use each bucket in the underlying output space ([[Array]]) to hold a [[Linked List]] node. Put all the conflicted key-value pairs as nodes in the [[Linked List]]
@@ -13,6 +23,7 @@
 >- When there is too many overflowing buckets,  [[Hash Map Expansion]] will be performed to ensure performance
 
 ## Mechanism 
+---
 > [!note] Search key-value pair with key
 > 1. Obtain the [[Array]] index by passing the key to the [[Hash Function]]
 > 2. Obtain the starting node of the [[Linked List]] with the index
@@ -28,8 +39,8 @@
 
 
 ## Cons
+---
 >[!caution] More [[Main Memory]] usage, because each key-value pair node needs space to store a pointer to point to the next node
 
 >[!caution] Reduced search efficiently when [[Linked List]] is getting long. Searching on [[Linked List]] is linear, not constant
 >We can converted the long [[Linked List]] to [[AVL(Balanced Binary Search) Tree  (平衡二叉搜索树)]] or [[Red Black Tree]] to optimise the search efficiency from O(n) to O(logn)
-

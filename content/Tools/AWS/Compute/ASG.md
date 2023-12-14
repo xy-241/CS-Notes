@@ -1,4 +1,14 @@
-#aws 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - aws
+Creation Date: 2023-08-15T18:46:33+08:00
+Last Date: 2023-08-15T18:46:33+08:00
+References:
+---
 
 >[!caution] When [[EC2]] is stopped or terminated. ASG will launch new [[EC2]] to fulfil the desired & minimum active [[EC2]]
 

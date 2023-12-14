@@ -9,12 +9,14 @@ Creation Date: 2023-10-03T11:11:00
 Last Date:
 ---
 ## Abstract
+---
 - A [[Network Protocol]] that allows a single source to send [[Data]] to multiple receivers simultaneously
 - Similar to [[Broadcasting]], but more efficient because data is is only *sent once*, and then replicated by network to reach all receivers
 - When a source sends a *multicast packet*, it uses a [[#Multicast IP address]] as the destination address. The network then replicates the packet and sends it to all of the receivers in the [[#Multicast Group]]
 
 
 ## Common Use Cases
+---
 ### Software Update
 - Used to distribute software updates to multiple devices simultaneously
 ### Video Conferencing
@@ -24,6 +26,7 @@ Last Date:
 
 
 ## Terminologies
+---
 ### Multicast IP address
 - [[IP Address]] in the range `224.0.0.0` to `239.255.255.255`
 

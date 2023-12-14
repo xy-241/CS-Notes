@@ -1,5 +1,16 @@
-#aws 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - aws
+Creation Date: 2023-09-25T18:25:50+08:00
+Last Date: 2023-09-25T18:25:50+08:00
+References:
+---
 ## Abstract 
+---
 - Supports both [[Symmetric Cryptography]] & [[Asymmetric Encryption]]
 - Only manages [[#Customer Master Keys (CMKs)]] using [[Hardware Security Modules (HSMs)]], not [[#Data Keys]]
 
@@ -7,6 +18,7 @@
 
 
 ## Features
+---
 ### 1) [Bring Your Own Key(BYOK)](https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html)
 1. Create an empty KMS Key
 2. Download wrapping public key & import token
@@ -35,6 +47,7 @@ openssl pkeyutl \
 
 
 ## Terminologies
+---
 ### Customer Master Keys (CMKs)
 - Generate, encrypt, decrypt [[#Data Keys]]
 - Never leave the region that it was created

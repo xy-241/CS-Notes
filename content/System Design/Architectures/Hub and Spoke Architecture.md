@@ -9,6 +9,7 @@ Creation Date:
 Last Date:
 ---
 ## Abstract
+---
 - 
 ![[hub_spoke_architecture.jpg]]
 ### Data sharing
@@ -16,6 +17,7 @@ Last Date:
 
 
 ## 2 Components
+---
 ### Hub
 - Serves as a central point for communication & data exchange with multiple [[#Spoke]] resources 
 
@@ -23,6 +25,7 @@ Last Date:
 - Do not directly interact with each other over dedicated 1-1 [[Communication Links]] or [[Internet]], but communicate only through the central [[#Hub]]
 
 ## Benefits
+---
 ### Ease of management
 - [[#Spoke]] only needs to form a 1-1 connection with hub to access other [[#Spoke]], instead of 1-many in order to communicate many other [[#Spoke]]
 - Simplifies network management and allows for easier scalability (Just to update [[#Hub]], so all other [[#Spoke]] can access the new [[#Spoke]])
@@ -34,11 +37,13 @@ Last Date:
 - Apply additional layers of security 
 
 ## Cons
+---
 ### Single Point of Failure
 - If [[#Hub]] is down, all the [[#Spoke]] are down. Thus, entire system is down
 - Make use of redundancy & high-availability on the [[#Hub]] to mitigate this drawback
 
 ## AWS Setup Example
+---
 - The hub and spokes are the individual [[VPC]], glue together using [[Transit Gateway]]
 
 ### VPC
@@ -47,4 +52,3 @@ Last Date:
 
 ### Transit Gateway
 - Allows connecting multiple [[VPC]] connections
-

@@ -1,5 +1,16 @@
-#dsa 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - dsa
+Creation Date: 2023-10-07T16:38:28+08:00
+Last Date: 2023-10-07T16:38:28+08:00
+References:
+---
 ## Basics
+---
 >[!abstract] Basic Properties
 >![[stack.png]]
 >- [[Linear Data Structure]]
@@ -19,6 +30,7 @@
 >- [[Stack Segment]]
 
 ## Implementation
+---
 
 >[!note] Implementation with [[Array]]
 >
@@ -45,6 +57,7 @@
 >- Conclusion, we cant determine which uses more [[Main Memory]], it depends on the use case. If we already know the total elements to store, [[Array]] is better, else [[Linked List]] may be maybe
 
 ## [[Abstract Data Type (ADT)]]
+---
 >[!success] O(1) to push()
 
 >[!success] O(1) to pop()
@@ -53,6 +66,7 @@
 
 
 ## Side Notes
+---
 >[!success]
 
 >[!success] 
@@ -60,4 +74,3 @@
 >[!success] 
 
 >[!success] 
-

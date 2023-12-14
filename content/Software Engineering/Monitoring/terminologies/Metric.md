@@ -10,10 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - A *time-bound information* related to a system captured at a certain point in time like per second/min
 
 
 ## Terminologies 
+---
 ### Work
 - Metric that indicates the *top-level health* of system by measuring its useful output
 - Examples are *success rate* & *error rate*

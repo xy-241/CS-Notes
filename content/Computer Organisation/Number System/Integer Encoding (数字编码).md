@@ -10,6 +10,7 @@ Last Date: 2023-12-10T23:38:29+08:00
 References: 
 ---
 ## Abstract
+---
 - There are [[#3 Variants]], computer use the [[#2's Complement (补码)]] variant to store integer
 - Computers use [[#2's Complement (补码)]] to store the integers, since it solves the flaws in [[#Sign-and-Magnitude (原码)]] and [[#1's Complement (反码)]]
 - Below is a 4-bits **Integer Encoding** under the [[#3 Variants]]
@@ -17,6 +18,7 @@ References:
 
 
 ## 3 Variants
+---
 ### Sign-and-Magnitude (原码)
 - Represent positive and negative decimal integers in binary with the help of [[#Sign Bit]]
 - Divide the number of bits into 2 parts, one part for negative number, another part for positive number
@@ -41,6 +43,7 @@ References:
 
 
 ## Terminologies
+---
 ### Sign Bit
 - The first bit from left
 - 0 denotes positive 
@@ -50,5 +53,6 @@ References:
 
 
 ## Reference 
+---
 - [Sign-and-Magnitude Addition and Subtraction](https://www.youtube.com/watch?v=sJXTo3EZoxM)
 - [Hello-Algo](https://www.hello-algo.com/chapter_data_structure/number_encoding/#331)

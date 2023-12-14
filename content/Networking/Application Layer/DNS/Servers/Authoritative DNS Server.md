@@ -1,4 +1,14 @@
-#networking 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - networking
+Creation Date: 2023-07-25T18:20:14+08:00
+Last Date: 2023-07-25T18:20:14+08:00
+References:
+---
 >[!note] Returns
 >Return [[IP Address]]  of [[Hostname]] -> [[A Record]]
 

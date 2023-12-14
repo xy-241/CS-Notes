@@ -10,6 +10,7 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - A [[Distributed Systems]] Architecture, an *Organization De-Coupling Strategy*
 - Should be [[#Small]], [[#Focused on One Task]], [[#Aligned with a Bounded Context]], [[#Autonomy]], [[#Independently Deployable]] and [[#Loosely Coupled]]
 - The real value is build, test & deploy *Services* independently of other *Services*
@@ -18,6 +19,7 @@ References:
 
 
 ## Terminologies 
+---
 ### Small
 - Each service can be written in one or two weeks
 ### Focused on One Task

@@ -10,12 +10,14 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Coordination of execution of multiple [[Process]] in a [[Multi-process]] system to ensure that they access shared resources in a controlled and predictable manner
 - We can use tools like [[Semaphore (信号量)]]
 
 
 
 ## Terminologies
+---
 ### Busy Waiting (忙等待)
 - Also known as *Spinning*
 - [[CPU]] is involved to keep check for the state 

@@ -10,4 +10,5 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - A triggering [[Event-Driven Architecture|Event]] produced by a monitor when it determines a [[Metric]] value crosses a threshold 

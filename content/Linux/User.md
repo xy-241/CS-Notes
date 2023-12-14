@@ -1,4 +1,14 @@
-#linux
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - linux
+Creation Date: 2023-08-10T00:30:35+08:00
+Last Date: 2023-08-10T00:30:35+08:00
+References:
+---
 
 >[!tip] List users in [[Unix]] liked systems
 >```bash

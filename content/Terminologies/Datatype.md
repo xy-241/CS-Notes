@@ -1,4 +1,13 @@
->[!abstract] A category label assigned to [[Variable-length Instruction]], regarding the [[Data]] stored inside
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+Creation Date: 2023-08-18T20:47:17+08:00
+Last Date: 2023-08-18T20:47:17+08:00
+References:
+---
 
 >[!note] 
 >Each type has a set of [[Operation]] associated with it

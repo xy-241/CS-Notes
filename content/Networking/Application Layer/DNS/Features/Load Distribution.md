@@ -1,4 +1,14 @@
-#networking 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - networking
+Creation Date: 2023-12-12T11:49:00+08:00
+Last Date: 2023-12-12T11:49:00+08:00
+References:
+---
 > [!example] Replicated [[Web Server]]
 > 1. A set of  [[IP Address]] is associated with one [[Alias Hostname]] 
 > 2. When clients make [[DNS]] query for a [[Alias Hostname]] mapped to a set of [[IP Address]]

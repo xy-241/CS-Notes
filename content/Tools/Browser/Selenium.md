@@ -10,9 +10,11 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 
 
 ## Terminologies 
+---
 ### WebDriver
 - An API and [[Network Protocol]] that allows for automation of web browsers
 - It's a part of the [[Selenium]] project and allows you to programmatically control [[Browser]] 

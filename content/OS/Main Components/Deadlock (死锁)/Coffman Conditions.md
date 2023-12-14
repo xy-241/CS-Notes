@@ -10,12 +10,14 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - Useful for understanding and diagnosing [[Deadlock (死锁)]] situations
 - Provide a foundation for designing algorithms and systems that avoid deadlocks
 - 4 *necessary* conditions - [[#Mutual Exclusion]], [[#Hold and Wait]], [[#No Preemption]] & [[#Circular Wait]]
 
 
 ## Terminologies
+---
 ### Mutual Exclusion
 - At least one resource must be held in a *non-shareable mode*.
 - This means that only *one* [[Process]] can use the resource at any given time

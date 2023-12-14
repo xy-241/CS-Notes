@@ -1,9 +1,20 @@
-#browser 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - browser
+Creation Date: 2023-12-12T11:41:15+08:00
+Last Date: 2023-12-12T11:41:15+08:00
+References:
+---
 >[!abstract] User requests a site and the browser prepares to render a page
 
 
 
 ## Chrome (Starts with [[Browser Process]])
+---
 ### 1) Handling input
 ![[browser_navigation_handling_input.png]]
 * The [[Browser Process#^5d9f7f | UI Thread]] decides if it is a search query or an [[URL]]

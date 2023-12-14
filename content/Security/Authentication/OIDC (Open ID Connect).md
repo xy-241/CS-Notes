@@ -1,4 +1,14 @@
-#security By [xy241](https://www.linkedin.com/in/xinyang-yu)
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - security
+Creation Date: 2023-09-20T17:22:16+08:00
+Last Date: 2023-09-20T17:22:16+08:00
+References:
+---
 >[!abstract]
 >![[oidc_basic_sign-in_flow.svg]]
 >- Sits on top of [[OAuth 2.0]]
@@ -15,6 +25,7 @@
 - Contain [[OAuth 2.0#Resource Owner (Identity)]] info like email and username which can be used by [[OAuth 2.0#Client]] to populate the application UI
 
 ## [[HashiCorp Vault]] Config
+---
 ### 1. Enable OIDC
 ```bash
 vault auth enable oidc

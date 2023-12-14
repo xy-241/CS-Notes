@@ -10,12 +10,14 @@ Last Date: 2023-12-13T18:13:47+08:00
 References: 
 ---
 ## Abstract
+---
 - The way [[Data]] is organised and structured
 - We want it to save as much space as possible and be accessed as efficient as possible 
 
 
 
 ## Physical
+---
 ### Continuous Memory
 - Elements are stored one next to another in the[[Virtual Memory]]
 
@@ -25,6 +27,7 @@ References:
 
 
 ## Logical
+---
 ### Linear
 - Each element has a predecessor and a successor, except for the first & last element
 - Elements stored in a straight line

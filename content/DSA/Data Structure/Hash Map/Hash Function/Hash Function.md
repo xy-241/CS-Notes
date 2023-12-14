@@ -11,6 +11,7 @@ References:
 ---
 
 ## Abstract
+---
 
 - Certainty - always gives the same output given the same input
 - Efficient - takes as little computation as possible
@@ -24,6 +25,7 @@ References:
 > -   Thus, we usually use [[Prime Number]] to take the modules, since we can't predict the distribute of the keys
 
 ## Properties
+---
 
 ### Immutable Key
 
@@ -32,11 +34,13 @@ References:
 >[!attention] Custom Objects can be key, because we use its [[Memory Address]] to generate the hash
 
 ## Examples
+---
 
 ### Python
 
 - Insert a random [[Salt]] to prevent [[HashDos Attack]] to improve security
 
 ## Terminologies
+---
 
 ### Hash Value

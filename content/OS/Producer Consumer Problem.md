@@ -10,10 +10,12 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - In this problem, there is a [[#Producer]] collaborating with [[#Consumer]] to carry out a task
 
 
 ## Sample Codes
+---
 ```c
 #include <pthread.h>
 
@@ -75,6 +77,7 @@ int main() {
 
 
 ## Terminologies
+---
 ### Buffer
 - **Temporary storage area for data**
 ### Producer

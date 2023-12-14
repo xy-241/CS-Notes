@@ -1,4 +1,14 @@
-#functional
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - functional
+Creation Date: 2023-09-03T10:54:50+08:00
+Last Date: 2023-09-03T10:54:50+08:00
+References:
+---
 >[!abstract] Considered as values that can be manipulated and used in flexible ways
 >1. Assigned to variables
 >2. Passed as arguments to other functions

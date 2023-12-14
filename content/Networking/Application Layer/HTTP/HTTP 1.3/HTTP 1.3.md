@@ -1,4 +1,14 @@
-#networking 
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - networking
+Creation Date: 2023-08-21T10:44:36+08:00
+Last Date: 2023-08-21T10:44:36+08:00
+References:
+---
 
 >[!abstract] [[HTTP 1.2]] but with
 >1. [[Quick UDP Internet Connections (QUIC, TCP 2.0)]]

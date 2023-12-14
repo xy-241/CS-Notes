@@ -10,12 +10,14 @@ Last Date:
 References:
 ---
 ## Abstract
+---
 - [[Mathematical Proof]] in [[Mathematical Argument]]
 - Loosely a collection of interesting applied math topics outside of *Calculus*
 
 
 
 ## Terminologies 
+---
 ### Sets
 - N - All Natural number (0,1,2,3,4...)
 - Z - All integers (315, -9045)
@@ -38,4 +40,3 @@ References:
 - For example, we proof that `the product of any two odd numbers is always odd`. The corollary is `the product of two sonsecutive odd numbers is always odd`
 ### Conjecture (猜测)
 - [[Mathematical Statement]] *believed to be true*, but there isn't a [[Mathematical Proof]] yet
-

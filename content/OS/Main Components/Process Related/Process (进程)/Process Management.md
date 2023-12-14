@@ -10,10 +10,12 @@ Last Date: 2023-12-12T22:16:56+08:00
 References: 
 ---
 ## Abstract
+---
 - Required in an [[OS]] that has multiple [[Process]] that want to run at the same, like in the [[Multi-Programming]] or [[Multitasking]] systems. Because [[Process]] unlike [[User Thread#^b73e18|Thread]] will give up its [[CPU]] for other [[Process]]
 
 
 ## Components
+---
 ### Process Priority
 - A value that determines which [[Process]] should get executed first
 ### Process Scheduler
@@ -22,6 +24,7 @@ References:
 
 
 ## Terminologies
+---
 ### Niceness
 - An parameter that can be used to adjust the [[#Process Priority]] for the [[#Process Scheduler]]
 
