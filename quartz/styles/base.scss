@@ -150,8 +150,6 @@ a {
 
     & .sidebar.left {
       left: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
-      overflow-y: scroll;
-      overflow-x: hidden;
       @media all and (max-width: $fullPageWidth) {
         gap: 0;
         align-items: center;
