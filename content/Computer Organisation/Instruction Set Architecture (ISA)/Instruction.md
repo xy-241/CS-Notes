@@ -35,5 +35,3 @@ Last Date: 2023-12-10T17:53:48+08:00
 - Simplified [[Pipeline]] & [[Instruction-Level Parallelism]]
 ### Variable-length
 - More Flexible BUT Requires more steps for [[Pipeline Stages#Fetch]] & [[Pipeline Stages#Decode]]
-
-

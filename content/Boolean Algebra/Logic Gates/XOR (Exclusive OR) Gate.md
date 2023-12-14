@@ -7,7 +7,7 @@ tags:
   - boolean_algebra
   - computer_organisation
 Creation Date: 2023-09-21T10:01:00
-Last Date: 
+Last Date: 2023-12-14T18:16:44+08:00
 References:
 ---
 ## Abstract

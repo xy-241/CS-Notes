@@ -34,5 +34,3 @@ References:
 ---
 >[!caution] More [[Hash Function]] performed means more computation is required
 
-
-

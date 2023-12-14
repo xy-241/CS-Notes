@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2023-11-11T16:21:00
-Last Date: 
+Last Date: 2023-12-14T18:16:44+08:00
 References:
 ---
 ## Abstract
@@ -24,4 +24,3 @@ References:
 - When a new version of software is released, it may break compatibility with older applications that rely on the older version's APIs
 - A *shim* can be used to translate between the two versions of the API, allowing older applications to continue to work with the newer software
 - A *shim* might be used to adapt a Windows application to run on Linux
-
