@@ -11,7 +11,7 @@ const config: QuartzConfig = {
       tagId: "G-H0G1YKHC31"
     },
     baseUrl: "notes.yxy.ninja",
-    ignorePatterns: ["private", "Templates", ".obsidian", "Personal", "Math", "Postman"],
+    ignorePatterns: ["private", "Templates", ".obsidian", "Personal", "Archive"],
     defaultDateType: "modified",
     theme: {
       typography: {
