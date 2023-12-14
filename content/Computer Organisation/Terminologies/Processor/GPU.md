@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- A [[Multi-core chips]] with thousands of tiny cores
+- A [[Multi-core Chip]] with thousands of tiny cores
 
 
 ## Benefits

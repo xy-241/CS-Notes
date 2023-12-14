@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-07-15T17:02:04+08:00
-Last Date: 2023-07-15T17:02:04+08:00
-References:
+Last Date: 2023-12-14T19:32:16+08:00
+References: 
 ---
 >[!note]
 >Booting sequence
@@ -21,6 +21,6 @@ References:
 >3. [[Secondary Boot loader]] started
 >4. [[OS]] started
 >	1. Get configuration info from BIOS
->	2. Check missing [[Device Driver]]
+>	2. Check missing [[Device Controller#Device Driver]]
 >	3. [[Initialize table]]
 >	4. Starts up a login program/GUI

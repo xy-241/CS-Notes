@@ -18,7 +18,7 @@ References:
 ### Hard
 - Pointing to [[Inode]]
 - Space saving, we can have multiple references to a single set of data without duplicating the data
-- Must be on the same [[File System (Directory Hierarchy)]]
+- Must be on the same [[File System]]
 - Like an additional name for an existing piece of data on disk. Deleting one hard link does not delete the data, as long as other links to that data remain
 - When we create a *Hard link* on [[#Soft (Symbolic)]], we create a direct link to the existing piece of data on disk, so independent of the [[#Soft (Symbolic)]]
 
@@ -28,10 +28,10 @@ ln /path/to/file path/to/hardlink
 ```
 
 ### Soft (Symbolic)
-- Points to another [[File]] by [[Pathname]]
-- The size is all about the length of the [[Pathname]] it stores
-- Broken if the another [[File]] is broken
-- Across different [[File System (Directory Hierarchy)]]
+- Points to another [[File System]] by [[File System]]
+- The size is all about the length of the [[File System]] it stores
+- Broken if the another [[File System]] is broken
+- Across different [[File System]]
 ```bash
 # To create a symlink:
 ln -s <source-location> <symlink-location>

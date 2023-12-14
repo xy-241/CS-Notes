@@ -27,4 +27,4 @@ References:
 - Simple and efficient synchronization mechanism
 - Shines when *condition is expected to be met very quickly*. Like [[Process]] waiting for input from the keyboard
 #### Cons
-- Can waste [[CPU]] resources if the condition *is not met quickly*, especially on [[Multi-core chips]], generally considered to be a bad practice for most applications
+- Can waste [[CPU]] resources if the condition *is not met quickly*, especially on [[Multi-core Chip]], generally considered to be a bad practice for most applications

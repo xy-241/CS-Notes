@@ -21,7 +21,7 @@ References:
 
 
 >[!example] Use as
->1. Navigation in the [[Directory]] - the parent [[Directory]] is at the top of the stack
+>1. Navigation in the [[File System]] - the parent [[File System]] is at the top of the stack
 >2. Convert [[Recursion]] to be interactive
 
 >[!example] [Use Cases](https://github.com/youngyangyang04/leetcode-master#栈与队列

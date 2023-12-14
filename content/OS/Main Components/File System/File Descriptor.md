@@ -11,5 +11,5 @@ References:
 ---
 >[!note]
 >- A small integer
->- Returned when [[OS/Main Components/File System/File Types/File]] is accessible
+>- Returned when [[File System]] is accessible
 >- Used in subsequent operations

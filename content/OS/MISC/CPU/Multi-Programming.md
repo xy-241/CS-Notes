@@ -20,5 +20,5 @@ References:
 
 ## Benefits
 ---
-### Full utilisation of [[Multi-core chips]]
+### Full utilisation of [[Multi-core Chip]]
 - More 

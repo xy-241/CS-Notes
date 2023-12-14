@@ -17,5 +17,5 @@ References:
 ## Cons
 ---
 ### No [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]]
-- Only one single *thread*, thus can't take advantage of [[Multi-core chips]]
+- Only one single *thread*, thus can't take advantage of [[Multi-core Chip]]
 - Blocking the execution of the program when there is a *CPU Bounded* task

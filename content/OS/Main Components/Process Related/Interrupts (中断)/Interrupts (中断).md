@@ -6,14 +6,21 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-29T19:10:00
-Last Date: 2023-12-11T23:09:29+08:00
+Last Date: 2023-12-14T19:43:33+08:00
 References: 
 ---
 ## Abstract
 ---
 - When an interrupt occurs, [[Control Unit#Program Counter]] jumps to [[Interrupt Handler (Interrupt Service Routine, ISR)]] & execute 
-- 2 forms - [[Signal (Software Interrupt)]] & [[Hardware interrupts (外中断)]]
 
+
+## 2 Types
+---
+### Signal (Software Interrupt
+- See [[Signal (Software Interrupt)]]
+### Hardware interrupts (外中断)
+- [[#Asynchronous]]
+- Examples are [[Timer Chips]] for [[Multitasking]] where [[CPU]] is interrupted to take in inputs from keyboard for example
 
 ## Benefits
 ---

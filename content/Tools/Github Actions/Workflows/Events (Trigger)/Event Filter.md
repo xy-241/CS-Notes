@@ -11,7 +11,7 @@ References:
 ---
 >[!exampel] push [[Events (Trigger)]]
 >- Filter based on target branch
->- Filter based on [[Pathname]] to ignore certain files
+>- Filter based on [[File System]] to ignore certain files
 
 >[!note] Pattern matching
 >1. ``feat-*``: All branch that starts with ``feat-``, but we cant include more ``/``
