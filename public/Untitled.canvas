@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"type":"file","file":"Problem solving/5. Draw a picture.md","id":"5c4269b1ce3b52a9","x":60,"y":20,"width":400,"height":400},
-		{"id":"c144f3db1e75cb4b","type":"file","file":"Tools/HashiCorp Vault/Setups/Raft Setup/HashiCorp Vault with Raft Integrated Backend Storage.md","x":-640,"y":-80,"width":400,"height":400}
-	],
-	"edges":[
-		{"id":"e85b2b019bf0ee25","fromNode":"c144f3db1e75cb4b","fromSide":"top","toNode":"5c4269b1ce3b52a9","toSide":"top"}
-	]
-}
