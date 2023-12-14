@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2023-12-14T11:05:55+08:00
+Last Date: 2023-12-14T12:39:06+08:00
 References: 
 ---
 
@@ -188,8 +188,7 @@ sudo wg-quick up wg0 # Connect Wireguard
 
 
 brew install romkatv/powerlevel10k/powerlevel10k
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
-echo typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet >>~/.zshrc 
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc  
 zsh # Refresh shell to confiure powerlevel10k
 
 
