@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-05T12:16:00
-Last Date: 
-References:
+Last Date: 2023-12-14T10:21:32+08:00
+References: 
 ---
 ## Abstract
 
@@ -31,7 +31,3 @@ References:
 - For any *two given inputs*, there are exactly *three possible outcomes*. One of the outcomes *must be true*
 - `x=y`, `x<y`, `x>y`
 
-### Divisibility (可除性)
-- `d|n` means that there is an integer `k` such as `n = dk`
-- `d` is a factor of `n`
-- `d|n` doesn't involve the actual division. It is a [[Mathematical Statement]] that is either `True` or `False`, not a numerical value

@@ -6,15 +6,17 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-13T16:27:19+08:00
+Last Date: 2023-12-14T10:41:57+08:00
 References: 
 ---
 
 ## Abstract
+---
 
 - [[Application Performance Monitoring (APM)]]
 
 ## ECS Fargate Setup
+---
 
 - The example below is based on [[ECS#Fargate|ECS Fargate]]
 - Make sure [[Datadog Integration#AWS]] and [[Datadog App Tracer]] are done
@@ -112,7 +114,7 @@ References:
 
 ### Terraform Sample Codes
 
-- Refer to the above [[#Pipe application log to AWS Firelens]], [[#AWS Firelens]] and [[#Datadog Agent Sidecar]] for configuration details
+- Refer to the above sections for configuration details
 
 ```hcl
 resource "aws_ecs_task_definition" "backend_app" {
@@ -140,14 +142,14 @@ resource "aws_ecs_task_definition" "backend_app" {
 	  environment = [
 	  {
           "name": "DD_SERVICE",
-          "value": ""	  
+          "value": ""
 	  },
 	  {
           "name": "DD_ENV",
           "value": ""
 	  }
 	  ]
-	  
+
       logConfiguration = {
         logDriver : "awsfirelens",
         options : {
@@ -220,8 +222,10 @@ resource "aws_ecs_task_definition" "backend_app" {
 ```
 
 ## Terminologies
+---
 
 ## References
+---
 
 - [Official ECS Fargate Integration](https://docs.datadoghq.com/integrations/ecs_fargate/?tab=webui)
 - [Official Datadog Agent Configuration](https://docs.datadoghq.com/serverless/guide/agent_configuration)

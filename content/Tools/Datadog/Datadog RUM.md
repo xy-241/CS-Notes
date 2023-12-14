@@ -6,14 +6,16 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2023-12-11T10:00:03+08:00
+Last Date: 2023-12-14T10:55:04+08:00
 References: 
 ---
 ## Abstract
+---
 - [[Real User Monitoring]]
 - Enable us to get the metadata about the client such as the user-agent, [[IP Address]] & record down the user actions on the page in a video format 
 
 ## Setup
+---
 - The example below is based on [next.js](https://nextjs.org/)
 - We first go to [[#Datadog Dashboard]] to obtain the codes, then append the codes into the [[#Frontend Source Codes]]
 - Bonus: [[#Integration with Datadog APM]]
@@ -46,7 +48,8 @@ References:
 
 ### Integration with [[Datadog APM]]
 - This is for application that has both frontend and backend, and we need to have [[Datadog APM]] enabled for the backend before we can integrate it with Datadog RUM
-- 
+
 
 
 ## Terminologies
+----

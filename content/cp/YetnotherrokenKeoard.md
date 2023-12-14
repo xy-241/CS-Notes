@@ -20,18 +20,20 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-13, 21:36
-Last Date: 2023-12-13T23:11:22+08:00
+Last Date: 2023-12-14T10:51:53+08:00
 tags:
   - cp
 ---
 [Original Problem](https://codeforces.com/contest/1907/problem/B)
 ## Idea
+---
 - The idea here is to maintain 2 [[Stack (FILO)]], one for *lowercase*, one for *uppercase*. The stack keeps track the index of the elements that aren't `b` or `B`
 - When we see a `b` or `B`, we just delete the first element from the corresponding stack by replacing the element at that index with either `b` or `B`
 - Then we loop the original string, add characters that aren't `b` and `B` to form a new string which is the final answer
 
 
 ## Space & Time Analysis
+---
 The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(n)
 - *Ignore input size & language dependent space*
@@ -42,6 +44,7 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
  
 
 ## Codes
+---
 ### 1st Attempt (Java)
 ```java
 import java.util.Scanner;
@@ -88,6 +91,7 @@ public class Solution {
 ```
 
 ## Personal Reflection
+---
 - **Why it takes so long to solve:** *NIL*
 - **What you could have done better:** *NIL*
 - **What you missed:** *NIL*

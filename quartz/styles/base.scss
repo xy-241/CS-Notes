@@ -286,7 +286,7 @@ h2 {
   font-size: 1.4rem;
   margin-top: 1.9rem;
   margin-bottom: 1rem;
-  text-decoration: underline;
+  // text-decoration: underline;
   color: var(--primary); // Add a custom color to make it visually distinct
 }
 
@@ -448,7 +448,8 @@ p > img + em {
 
 hr {
   width: 100%;
-  margin: 2rem auto;
+  // margin: 2rem auto;
+  margin-top: -0.5rem;
   height: 1px;
   border: none;
   background-color: var(--lightgray);
