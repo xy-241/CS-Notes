@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-14T11:30:36+08:00
+Last Date: 2023-12-14T11:36:10+08:00
 References: 
 ---
 
@@ -114,6 +114,7 @@ References:
 ### Terraform Sample Codes
 
 - Refer to the above sections for configuration details
+>[!bug] `DD_APM_IGNORE_RESOURCES` takes in a list of resources, but I wasn't able to pass a list object to the key-value pair environment variable. Please let me know if you find a way around it 😃
 
 ```hcl
 resource "aws_ecs_task_definition" "backend_app" {

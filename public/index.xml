@@ -6,31 +6,6 @@
       <description>Last 40 notes on CS-Notes</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Datadog Integration</title>
-    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-Integration</link>
-    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-Integration</guid>
-    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;In order for us to use &lt;em&gt;Datadog services&lt;/em&gt; on other platforms, we need to integrate with those platforms first. &lt;em&gt;Datadog&lt;/em&gt; provides a &lt;a href=&quot;https://docs.datadoghq.com/integrations/#all&quot; class=&quot;external alias&quot;&gt;list of supported integrations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;integrations&quot;&gt;Integrations&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#integrations&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;Below is my notes of the integration I did&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;aws-integration&quot;&gt;AWS Integration&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#aws-integration&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;There are &lt;a href=&quot;https://docs.datadoghq.com/integrations/amazon_web_services/&quot; class=&quot;external alias&quot;&gt;many ways&lt;/a&gt; to integrate &lt;em&gt;AWS&lt;/em&gt; with &lt;em&gt;Datadog&lt;/em&gt;. The easiest way to start is &lt;a href=&quot;https://docs.datadoghq.com/getting_started/integrations/aws/&quot; class=&quot;external alias&quot;&gt;automated AWS integration using CloudFormation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;references&quot;&gt;References&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#references&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/integrations/#all&quot; class=&quot;external alias&quot;&gt;Official Datadog Supported Integrations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/integrations/amazon_web_services/&quot; class=&quot;external alias&quot;&gt;Offical Datadog and AWS Integration&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    <pubDate>Thu, 14 Dec 2023 03:30:53 GMT</pubDate>
-  </item><item>
     <title>Datadog APM</title>
     <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</link>
     <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-APM</guid>
@@ -140,6 +115,13 @@
 &lt;ul&gt;
 &lt;li&gt;Refer to the above sections for configuration details&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote class=&quot;callout&quot; data-callout=&quot;bug&quot;&gt;
+&lt;div class=&quot;callout-title&quot;&gt;
+                  &lt;div class=&quot;callout-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;rect width=&quot;8&quot; height=&quot;14&quot; x=&quot;8&quot; y=&quot;6&quot; rx=&quot;4&quot;&gt;&lt;/rect&gt;&lt;path d=&quot;m19 7-3 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m5 7 3 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m19 19-3-2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m5 19 3-2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M20 13h-4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M4 13h4&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m10 4 1 2&quot;&gt;&lt;/path&gt;&lt;path d=&quot;m14 4-1 2&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+                  &lt;div class=&quot;callout-title-inner&quot;&gt;&lt;p&gt;Bug &lt;code&gt;DD_APM_IGNORE_RESOURCES&lt;/code&gt; takes in a list of resources, but I wasn&#039;t able to pass a list object to the key-value pair environment variable. Please let me know if you find a way around it 😃&lt;/p&gt;&lt;/div&gt;
+                  
+                &lt;/div&gt;
+&lt;/blockquote&gt;
 &lt;div data-rehype-pretty-code-fragment=&quot;&quot;&gt;&lt;pre style=&quot;background-color: var(--shiki-color-background)&quot; tabindex=&quot;0&quot; data-language=&quot;hcl&quot; data-theme=&quot;default&quot;&gt;&lt;code data-language=&quot;hcl&quot; data-theme=&quot;default&quot;&gt;&lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-token-function)&quot;&gt;resource&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &quot;aws_ecs_task_definition&quot; &quot;backend_app&quot; {&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;  family                   &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;/span&gt;
 &lt;span data-line=&quot;&quot;&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;  requires_compatibilities &lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-keyword)&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt; [&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-token-string-expression)&quot;&gt;&quot;FARGATE&quot;&lt;/span&gt;&lt;span style=&quot;color: var(--shiki-color-text)&quot;&gt;]&lt;/span&gt;&lt;/span&gt;
@@ -250,7 +232,32 @@
 &lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/integrations/ecs_fargate/?tab=webui&quot; class=&quot;external alias&quot;&gt;Official ECS Fargate Integration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/serverless/guide/agent_configuration&quot; class=&quot;external alias&quot;&gt;Official Datadog Agent Configuration&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    <pubDate>Thu, 14 Dec 2023 03:30:36 GMT</pubDate>
+    <pubDate>Thu, 14 Dec 2023 03:36:10 GMT</pubDate>
+  </item><item>
+    <title>Datadog Integration</title>
+    <link>https://notes.yxy.ninja/Tools/Datadog/Datadog-Integration</link>
+    <guid>https://notes.yxy.ninja/Tools/Datadog/Datadog-Integration</guid>
+    <description>&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#abstract&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;In order for us to use &lt;em&gt;Datadog services&lt;/em&gt; on other platforms, we need to integrate with those platforms first. &lt;em&gt;Datadog&lt;/em&gt; provides a &lt;a href=&quot;https://docs.datadoghq.com/integrations/#all&quot; class=&quot;external alias&quot;&gt;list of supported integrations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;integrations&quot;&gt;Integrations&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#integrations&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Below is my notes of the integration I did&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;aws-integration&quot;&gt;AWS Integration&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#aws-integration&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;There are &lt;a href=&quot;https://docs.datadoghq.com/integrations/amazon_web_services/&quot; class=&quot;external alias&quot;&gt;many ways&lt;/a&gt; to integrate &lt;em&gt;AWS&lt;/em&gt; with &lt;em&gt;Datadog&lt;/em&gt;. The easiest way to start is &lt;a href=&quot;https://docs.datadoghq.com/getting_started/integrations/aws/&quot; class=&quot;external alias&quot;&gt;automated AWS integration using CloudFormation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;a aria-hidden tabindex=&quot;-1&quot; data-no-popover href=&quot;#references&quot; class=&quot;internal alias&quot;&gt; §&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/integrations/#all&quot; class=&quot;external alias&quot;&gt;Official Datadog Supported Integrations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.datadoghq.com/integrations/amazon_web_services/&quot; class=&quot;external alias&quot;&gt;Offical Datadog and AWS Integration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    <pubDate>Thu, 14 Dec 2023 03:30:53 GMT</pubDate>
   </item><item>
     <title>MacOs Setup</title>
     <link>https://notes.yxy.ninja/MacOs-Setup</link>
