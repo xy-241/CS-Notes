@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-09T08:54:00
-Last Date: 2023-12-14T18:16:44+08:00
+Last Date: 2023-12-14T20:05:53+08:00
 References:
   - "Mike: https://youtu.be/GazC3A4OQTE?si=NZgAiSYMoewpywwF"
   - "Abdul: https://youtu.be/XB4MIexjvY0?si=v5wN_1UZopp7E76u"
@@ -14,13 +14,13 @@ References:
 ---
 ## Abstract
 ---
-- Used to find the shortest path from any starting node to all other nodes in a [[Graph]] - *Single Source Shortest Path* on a [[Graph#Weighted | Weighted Graph]] that is either [[Graph#Directed | Directed]] or [[Graph#Non-Directed | Non-Directed]]
+- Used to find the shortest path from *any starting node* to all other nodes in a [[Graph]] - *Single Source Shortest Path* on a [[Graph#Weighted | Weighted Graph]] that is either [[Graph#Directed | Directed]] or [[Graph#Non-Directed | Non-Directed]]
 - Use [[Greedy Algorithm]] to improve the computation performance via [[Priority Queue]]
 - Use [[Dynamic Programming]] to obtain the shortest distance from the given node to all other nodes -> [[Optimisation Problem]] via [[Dynamic Programming#DP Table|DP Table]]
 
 ## Cons
 ---
-### Negative [[Binary Tree (二叉树)#Edge | Edge]]
+### Negative Edge
 - May not work if there are negative [[Binary Tree (二叉树)#Edge |Edge]] 
 
 

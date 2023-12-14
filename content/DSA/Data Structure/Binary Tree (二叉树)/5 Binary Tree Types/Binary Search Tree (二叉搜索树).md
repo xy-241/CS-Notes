@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-03T17:41:00
-Last Date: 2023-12-14T18:16:44+08:00
+Last Date: 2023-12-14T20:07:51+08:00
 ---
 ## Abstract
 ---
@@ -14,7 +14,7 @@ Last Date: 2023-12-14T18:16:44+08:00
 - If the left sub-tree isn't empty, all nodes on that sub-tree is smaller than the node value
 - If the right sub-tree isn't empty, all nodes on that sub-tree is bigger than the node value
 - Its left sub-tree and right sub-tree are also binary search tree (二叉搜索树)
->![[binary_search_tree.png]]
+![[binary_search_tree.png]]
 
 
 ## Tips in solving Leetcode Question

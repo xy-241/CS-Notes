@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-10-07T16:38:29+08:00
-Last Date: 2023-12-14T19:38:12+08:00
+Last Date: 2023-12-14T20:12:22+08:00
 References: 
 ---
 #OS 

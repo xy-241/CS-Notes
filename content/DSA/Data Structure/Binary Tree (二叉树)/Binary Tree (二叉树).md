@@ -6,23 +6,24 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-03T17:32:00
-Last Date: 2023-12-14T18:16:44+08:00
+Last Date: 2023-12-14T20:12:37+08:00
 ---
 ## Abstract
 ---
-- The maximum number of nodes at ``n``th [[#Level]] is $$
-2^{n-1}
-$$
+- The maximum number of nodes at ``n``th [[#Level]] is `2^(n-1)`
 
 
 ## Implementation
 ---
-### Implementation with [[Linked List]]
+### Implementation with Linked List
+- [[Linked List]]
 ![[binary_tree_linked_list.png]]
 
-### Implementation with [[Array]]
-![[binary_tree_array.png]]
+### Implementation with Array
+- [[Array]]
 - Given the index of parent node is ``i``, the index of its left child is ``i*2+1``, right child is ``i*2+2``
+![[binary_tree_array.png]]
+
 
 
 ## Leetcode Questions
@@ -52,7 +53,7 @@ $$
 - Node without any child nodes
 - Its 2 pointers point to ``null``
 ### Edge
-- The link created by [[Pointer]] that links up 2 nodes
+- The link created by **Memory Pointer** that links up 2 nodes
 ### Level
 - Increments from the top to bottom of the Binary Tree
 - [[#Root Node]] is at level 1
