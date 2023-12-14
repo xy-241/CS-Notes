@@ -5,14 +5,15 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2023-12-14T12:39:06+08:00
+Last Date: 2023-12-14T12:54:02+08:00
 References: 
 ---
 
 ## Abstract
->[!sidenote]
->- 🌟 denotes tools & settings I must have in MacOS to have a smooth user/developer experience
+---
+- 🌟 denotes tools & settings I must have in MacOS to have a smooth user/developer experience
 ## GUI Apps
+---
 1. ~~[Install Firefox](https://www.mozilla.org/en-US/firefox/new/)~~ (Replaced with [floorp](https://floorp.app/en/)) 🌟
 	- [Install Bypass Paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome)
 1. [Install Dropbox](https://www.dropbox.com/install)
@@ -48,6 +49,7 @@ cp ngrok /Users/<USERNAME>/.local/bin
 
 
 ## Basics 🌟
+---
 -  [Install Brew](https://brew.sh/) 
 -  [Install ohmyzsh](https://ohmyz.sh/#install) 
 ```bash
@@ -61,8 +63,16 @@ plugins = (
 	zsh-autosuggestions
 )
 ```
+- [Powerlevel10k theme for ohmyzsh](https://github.com/romkatv/powerlevel10k)
+```shell
+brew install romkatv/powerlevel10k/powerlevel10k
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc  
 
+zsh # Refresh shell to confiure powerlevel10k
+p10k configure # Run this to reconfigure
+```
 ## Dev Tools 🌟
+---
 - `orbstack`,
 - `zoxide`, `fzf`
 - `pipx`
@@ -147,6 +157,7 @@ h() {
 - Download the Vim extension to have vim keybinding inside the code editor
 - Turn on *Word Wrap* under `View -> Word Wrap` (VSC example)
 ## System Tools 🌟
+---
 - `neofetch`
 - `bpytop`, `htop`
 ```bash
@@ -158,14 +169,17 @@ brew install htop
 ```
 
 ## Cheatsheet
+---
 - Command used to give unverified app permissions to execute - `xattr -r -d com.apple.quarantine/Applications/<APP_NAME>.app`
 - [Terminal Cli Navigation Shortcut](https://support.apple.com/en-sg/guide/terminal/trmlshtcts/mac)
 - [Remove an app from system entirely](https://www.youtube.com/watch?v=IgRi0Z1O_gk)
 
 ## Docker Apps
+---
 - [[AWS Nuke]]
 
 ## OS Config
+---
 - Change Hostname
 ```bash
 #!/bin/bash
@@ -176,31 +190,20 @@ sudo scutil --set LocalHostName mac
 - [Add Chinese Input](https://support.apple.com/en-sg/guide/mac-help/mchlp1406/mac) 🌟
 
 ## MISC
+---
 ### Brew
 -   ``wireguard``, ``pipx``, ``terminator``, ``powerlevel10k``, ``ipython``, ``logisim-evolution``, ``infracost``, ``terraform-docs``, `pandoc`, `basictex`, `telnet`, `parallel`, `socat`, `pyenv`, `pyenv-virtualenv`, `vagrant`, `entr`, `packer`
 ```bash
 #!/bin/bash
-
-
-
 brew install wireguard-tools# Place conf in /usr/local/etc/wireguard/ 
 sudo wg-quick up wg0 # Connect Wireguard
 
-
-brew install romkatv/powerlevel10k/powerlevel10k
-echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc  
-zsh # Refresh shell to confiure powerlevel10k
-
-
 brew install ipython
-
 
 # Open logisim, get denined, open Privacy, enable
 brew install --cask logisim-evolution
 
 brew install infracost
-
-
 
 brew install terraform-docs
 
@@ -209,8 +212,6 @@ brew install basictex
 brew install telnet
 
 brew install parallel
-
-
 
 brew install socat
 
