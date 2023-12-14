@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-14T10:41:57+08:00
+Last Date: 2023-12-14T11:30:36+08:00
 References: 
 ---
 
@@ -18,8 +18,7 @@ References:
 ## ECS Fargate Setup
 ---
 
-- The example below is based on [[ECS#Fargate|ECS Fargate]]
-- Make sure [[Datadog Integration#AWS]] and [[Datadog App Tracer]] are done
+- Make sure [[Datadog Integration#AWS Integration]] and [[Datadog App Tracer]] are done
 - The rest of the setup is around [[ECS#Task Definition]], we need to add in 3 parts into it - [[#Pipe log to AWS Firelens]], [[#AWS Firelens]] and [[#Datadog Agent Sidecar]]
 
 ### Pipe log to AWS Firelens
