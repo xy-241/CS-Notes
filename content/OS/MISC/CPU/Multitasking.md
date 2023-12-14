@@ -36,4 +36,3 @@ Last Date:
 3. When the [[Timer Chips]] elapses, it triggers a [[Hardware interrupts (外中断)]] to switch to [[Kernel Mode]] and jump to OS code
 4. The OS can now save where the program left off, load a different program, and repeat the process.
 >
-

@@ -41,4 +41,3 @@ References:
 >[!caution] Key-value pair clustering
 >When the array is filled up with key-value pairs in a continuous manner. We may need to iterate through many key-value pairs, including key-value pairs that has a hash index to get/delete the desired key-value pair
 
-

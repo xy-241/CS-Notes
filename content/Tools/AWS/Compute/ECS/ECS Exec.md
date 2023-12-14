@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-04T11:16:00
-Last Date: 2023-12-14T17:27:12+08:00
+Last Date: 2023-12-14T18:16:54+08:00
 References: 
 ---
 ## Abstract
@@ -87,4 +87,3 @@ aws ecs execute-command \
 	--command "/bin/sh" 
 ```
 >[!tip] If face error connecting, can try create a new [[ECS#Task]] deployment
-

@@ -15,4 +15,3 @@ References:
 - Use 32 [[Registers]]
 - Uses [[Word Addressing]], each [[Word]] 4 [[Byte]]
  ![[mips stages.png]]
-

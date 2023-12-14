@@ -21,4 +21,3 @@ References:
 - In this case, when there is a [[Branching]] happening, we need to discard all [[Instruction]] running in [[Instruction-Level Parallelism]]
 - This can be optimised by using [[Branch Prediction]]
 ![[parallism wasted.png]]
-

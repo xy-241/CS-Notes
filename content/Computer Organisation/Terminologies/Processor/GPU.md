@@ -34,4 +34,3 @@ GPU shines when we need [[High-performance Computing#Parallelism (并行性)]]
 ![[cpu vs gpu comparison.png]]
 
 
-

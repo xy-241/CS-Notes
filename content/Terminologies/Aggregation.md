@@ -24,4 +24,3 @@ References:
 - Involves selecting a subset of the data based on certain criteria
 ### Joining
 - Involves combining data from two or more sources
-

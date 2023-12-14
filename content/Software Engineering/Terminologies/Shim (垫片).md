@@ -25,4 +25,3 @@ References:
 - A *shim* can be used to translate between the two versions of the API, allowing older applications to continue to work with the newer software
 - A *shim* might be used to adapt a Windows application to run on Linux
 
-

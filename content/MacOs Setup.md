@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2023-12-14T17:27:12+08:00
+Last Date: 2023-12-14T18:16:54+08:00
 References: 
 ---
 
@@ -257,4 +257,3 @@ pipx install ddtrace
 ### Others
 - [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
 - [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
-

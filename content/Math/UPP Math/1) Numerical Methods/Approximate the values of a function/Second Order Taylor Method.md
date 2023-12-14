@@ -13,4 +13,3 @@ References:
 >![[Euler method vs. Second Order Taylor method.png]]
 >![[Second Order Taylor method formula.png]]
 >- G(x,y) is the [[Second Derivative]]
-

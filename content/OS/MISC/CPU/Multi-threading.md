@@ -42,4 +42,3 @@ References:
 
 ### Multi-threaded Chip
 - [[Control Unit]], [[Registers]] & [[Pipeline]] are replicated
-
