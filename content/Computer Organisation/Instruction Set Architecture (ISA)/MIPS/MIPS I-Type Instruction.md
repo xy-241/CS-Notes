@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:16:00
-Last Date: 2023-12-10T18:26:19+08:00
+Last Date: 2023-12-15T12:08:04+08:00
 References: 
 ---
 ## Abstract
@@ -34,5 +34,5 @@ References:
 ---
 ### Immediate Value 
 - Value is  [[Integer Encoding (数字编码)#2's Complement (补码)]]
-- 16-bits, can represent up to +-2^15 [[Word]], 2^17 [[Memory Address]] because 4-bytes [[Word Addressing]]
+- 16-bits, can represent up to +-2^15 [[Word]], 2^17 [[Memory Address]] because 4-bytes [[Memory Address#Word Addressing]]
 - Used for **PC-Relative Addressing**
