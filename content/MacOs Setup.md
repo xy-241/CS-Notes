@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2023-12-14T18:27:12+08:00
+Last Date: 2023-12-15T20:07:51+08:00
 References: 
 ---
 
@@ -192,7 +192,7 @@ sudo scutil --set LocalHostName mac
 ## MISC
 ---
 ### Brew
--   ``wireguard``, ``pipx``, ``terminator``, ``powerlevel10k``, ``ipython``, ``logisim-evolution``, ``infracost``, ``terraform-docs``, `pandoc`, `basictex`, `telnet`, `parallel`, `socat`, `pyenv`, `pyenv-virtualenv`, `vagrant`, `entr`, `packer`
+-   ``wireguard``, ``ipython``, ``logisim-evolution``, ``infracost``, ``terraform-docs``, `telnet`, `parallel`, `socat`, `pyenv`, `pyenv-virtualenv`, `vagrant`
 ```bash
 #!/bin/bash
 brew install wireguard-tools# Place conf in /usr/local/etc/wireguard/ 
@@ -207,8 +207,7 @@ brew install infracost
 
 brew install terraform-docs
 
-brew install pandoc
-brew install basictex
+
 brew install telnet
 
 brew install parallel
@@ -227,12 +226,6 @@ eval "$(pyenv virtualenv-init -)"
 brew tap hashicorp/tap
 brew install hashicorp/tap/hashicorp-vagrant
 vagrant plugin install vagrant-share
-
-
-brew install entr
-
-brew tap hashicorp/tap
-brew install hashicorp/tap/packer
 ```
 
 ### [[npm]]

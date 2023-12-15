@@ -10,4 +10,4 @@ Last Date: 2023-12-14T18:16:44+08:00
 ---
 ## Abstract
 ---
-- The rate [[Carrier Sense Multiple Access (CSMA)#Carrier]] transmits [[Data]]
+- The rate [[CSMA#Carrier]] transmits [[Data]]

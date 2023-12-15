@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-12-12T11:49:00+08:00
-Last Date: 2023-12-12T11:49:00+08:00
-References:
+Last Date: 2023-12-15T19:51:43+08:00
+References: 
 ---
 >[!note] How mappings are stored
 >- Mappings are distributed among the [[Host]]
@@ -22,9 +22,3 @@ References:
 >>There is also a type called [[Local DNS Server (Default Name Server)]]
 
 
-
->[!note] Process
->1. [[Host]] contacts [[Local DNS Server (Default Name Server)]] ([[Recursive Queries]])
->2. Then contacts [[Root DNS Server]] ([[Iterative Queries]])
->3. Then contacts [[Top-Level Domain (TLD) DNS Server]] ([[Iterative Queries]])
->4. Finally contacts [[Authoritative DNS Server]] ([[Iterative Queries]])
