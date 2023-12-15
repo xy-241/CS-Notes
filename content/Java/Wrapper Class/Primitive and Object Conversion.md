@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-07-15T12:46:04+08:00
-Last Date: 2023-12-15T23:20:58+08:00
+Last Date: 2023-12-15T23:54:35+08:00
 References: 
 ---
 ## Abstract
@@ -22,11 +22,9 @@ References:
 
 ## Unboxing
 - The opposite of [[#Boxing]]
-
-> [!example]
-> ```java
+```java
 int intVal = numObject.intValue();
-> ```
+```
 
 ## Auto-unboxing
 * [[#Unboxing]] but without explicitly calling built-in method
