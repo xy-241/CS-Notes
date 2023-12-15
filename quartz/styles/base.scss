@@ -55,7 +55,7 @@ ul,
 }
 
 a {
-  font-weight: 600;
+  font-weight: 520;
   text-decoration: none;
   transition: color 0.2s ease;
   color: var(--secondary);
@@ -288,12 +288,15 @@ h2 {
   font-size: 1.4rem;
   margin-top: 1.9rem;
   margin-bottom: 1rem;
+  // text-decoration: underline;
+  color: var(--primary); // Add a custom color to make it visually distinct
 }
 
 h3 {
   font-size: 1.12rem;
   margin-top: 1.62rem;
   margin-bottom: 1rem;
+  color: var(--secondary); // Add a custom color to make it visually distinct
 }
 
 h4,
@@ -302,6 +305,7 @@ h6 {
   font-size: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--tertiary); // Add a custom color to make it visually distinct
 }
 
 div[data-rehype-pretty-code-fragment] {
@@ -330,6 +334,9 @@ pre {
   border-radius: 5px;
   overflow-x: auto;
   border: 1px solid var(--lightgray);
+
+  margin-left: 2.5rem;
+  margin-right: 0.5rem;
 
   &:has(> code.mermaid) {
     border: none;
@@ -443,7 +450,8 @@ p > img + em {
 
 hr {
   width: 100%;
-  margin: 2rem auto;
+  // margin: 2rem auto;
+  margin-top: -0.5rem;
   height: 1px;
   border: none;
   background-color: var(--lightgray);
@@ -461,7 +469,7 @@ video {
 
 ul.overflow,
 ol.overflow {
-  max-height: 400;
+  max-height: 200;
   overflow-y: auto;
 
   // clearfix

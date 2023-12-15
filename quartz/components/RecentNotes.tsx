@@ -15,7 +15,7 @@ interface Options {
 }
 
 const defaultOptions = (cfg: GlobalConfiguration): Options => ({
-  title: "Recent Notes",
+  title: "Recent Updates",
   limit: 3,
   linkToMore: false,
   filter: () => true,
@@ -40,7 +40,7 @@ export default ((userOpts?: Partial<Options>) => {
                 <div class="section">
                   <div class="desc">
                     <h3>
-                      <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">
+                      <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal" >
                         {title}
                       </a>
                     </h3>
@@ -50,18 +50,19 @@ export default ((userOpts?: Partial<Options>) => {
                       <Date date={getDate(cfg, page)!} />
                     </p>
                   )}
-                  <ul class="tags">
+                  {/* <ul class="tags">
                     {tags.map((tag) => (
                       <li>
                         <a
                           class="internal tag-link"
-                          href={resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)}
+                      
+                          href={resolveRelative(fileDaAta.slug!, `tags/${tag}` as FullSlug)}
                         >
                           #{tag}
                         </a>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </div>
               </li>
             )
