@@ -6,17 +6,24 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-20T11:15:17+08:00
-Last Date: 2023-11-20T11:15:17+08:00
-References:
+Last Date: 2023-12-15T11:33:49+08:00
+References: 
 ---
->[!abstract] Determines what [[Instruction]] may be executed by [[CPU]]
+## Abstract
+---
+- Determines what [[Instruction]] may be executed by [[CPU]]
 
->[!note] 3 modes
->1. [[Kernel Mode]]
->2. [[User Mode]]
->3. *Machine Mode*
+## 3 Modes
+---
+### Machine Mode
+- Free to do anything on the computer
 
-
+### Kernel Mode
+- [[CPU]] is allowed to execute any supported [[Instruction]] and access any [[Main Memory]]
+- [[Kernel]] & [[Device Controller#Device Driver]] run in this mode
+### User Mode
+- Only a subset of [[Instruction]] is allowed, I/O and [[Main Memory]] access are limited, and many [[CPU]] settings are locked
+- Applications run in this mode
 
 
 ## Example

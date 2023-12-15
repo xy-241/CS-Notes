@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-20T14:47:00
-Last Date: 2023-10-26T19:41:55+08:00
-References:
+Last Date: 2023-12-15T11:15:29+08:00
+References: 
 ---
 ## Abstract
 ---
@@ -21,7 +21,7 @@ References:
 
 ## Terminologies
 ---
-### Number
+### Inode Number
 - To uniquely identify a [[File System]]
 ```bash
 # Obtian the inode number

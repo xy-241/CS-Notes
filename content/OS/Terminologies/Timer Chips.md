@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Used by [[Process Management#Process Scheduler]] to trigger [[Interrupts (中断)#Hardware interrupts (外中断]] for [[Multitasking]] 
+- Used by [[Process Management#Process Scheduler]] to trigger [[Interrupts (中断)#Hardware interrupts (外中断]] for [[Multi-tasking]] 
 - [Example](https://en.wikipedia.org/wiki/Programmable_interval_timer)
 
 

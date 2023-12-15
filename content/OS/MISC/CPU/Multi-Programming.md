@@ -15,7 +15,7 @@ References:
 - Focus on improving the [[CPU]] utilisation 
 - [[CPU]] switches rapidly from one [[Process]] to another
 - Allow a user to run multiple programs at the same time with a single [[CPU]]
-- Not all Multi-Programming systems are [[Multitasking]]
+- Not all Multi-Programming systems are [[Multi-tasking]]
 - More suitable for *CPU Bounded* tasks
 
 ## Benefits

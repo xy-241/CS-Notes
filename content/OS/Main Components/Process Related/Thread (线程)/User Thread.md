@@ -64,7 +64,7 @@ not support threads.
 ![[pthread_example.png]]
 
 >[!note] ``pthread_yield()``
->- The [[Library Calls (Library Procedure)]] for *thread* to give [[CPU]] to other *threads*
+>- The [[Library Call]] for *thread* to give [[CPU]] to other *threads*
 >- In [[Process]], we don't have this. Because [[Thread]] is in the same program, written by the same programmer, so they collaborate to get fulfil a particular feature
 
 ### Others

@@ -5,18 +5,14 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
-Creation Date: 2023-12-14T18:16:44+08:00
-Last Date: 2023-12-14T18:16:44+08:00
-References:
+Creation Date: 2023-11-19T17:28:44
+Last Date: 2023-12-15T11:50:30+08:00
+References: 
 ---
 ## Abstract
 ---
+- A [[Instruction]] in [[Kernel Space]] starts a transition from [[Privilege Level#User Mode]] to [[Privilege Level#Kernel Mode]], jumping from the program’s code to the execution at a *fixed address* within the [[Kernel]] - [[Interrupt Handler]]
 - A type of [[Signal (Software Interrupt)]]
-- A special [[Instruction]] used to transfer control to [[OS]]
-	1. Switch from [[User Mode]] to [[Kernel Mode]]
-	2. Starts execution at a fixed address within the [[Kernel]] - [[Interrupt Handler (Interrupt Service Routine, ISR)]]
-- For [[x86-64]], it is [INT](https://www.felixcloutier.com/x86/intn:into:int3:int1) is a *Trap Interrupt*
+- *Return Address* is saved on the [[Address Space#Stack Segment]] for use later
 
-
-### Simliar to the call to [[Library Calls (Library Procedure)]]
--  [[Return Address]] is saved on the [[Stack (FILO)]] for use later
+>[!example] For x86-64, it is [INT](https://www.felixcloutier.com/x86/intn:into:int3:int1) is a *Trap Interrupt*

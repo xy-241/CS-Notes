@@ -77,7 +77,7 @@ spin:
 - Then based on the core id (0-7), we set the [[Registers#Stack Pointer]] for each [[CPU]]. We can see the [[Registers#Stack Pointer]] starting point is obtained by adding `(hartid * 4096)` to the base address, this is because *stack segment grows downwards* when we are adding values to the stack
 ### Data Segment
 - Grow upwards
-- Expansion is done explicitly using [[System Call (系统调用)]] [[brk()]] or higher level [[Library Calls (Library Procedure)]]
+- Expansion is done explicitly using [[System Call (系统调用)]] [[brk()]] or higher level [[Library Call]]
 - All objects created with the `new` keywords in [[Java]] are created here 
 ### Text Segment
 - Stores program codes, **unchangeable**

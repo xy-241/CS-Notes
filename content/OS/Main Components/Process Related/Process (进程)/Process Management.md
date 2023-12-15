@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Required in an [[OS]] that has multiple [[Process]] that want to run at the same, like in the [[Multi-Programming]] or [[Multitasking]] systems. Because [[Process]] unlike [[User Thread#^b73e18|Thread]] will give up its [[CPU]] for other [[Process]]
+- Required in an [[OS]] that has multiple [[Process]] that want to run at the same, like in the [[Multi-programming]] or [[Multi-tasking]] systems. Because [[Process]] unlike [[User Thread#^b73e18|Thread]] will give up its [[CPU]] for other [[Process]]
 
 
 ## Components

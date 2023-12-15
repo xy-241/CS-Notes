@@ -19,6 +19,6 @@ References:
 >- Command lines & commands
 >
 
->[!info] Has about 100 [[Library Calls (Library Procedure)]]
+>[!info] Has about 100 [[Library Call]]
 >![[major_POSIX_system_calls.png]]
 >- Isn't one-to-one mapping to [[System Call (系统调用)]]

@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- When an interrupt occurs, [[Control Unit#Program Counter]] jumps to [[Interrupt Handler (Interrupt Service Routine, ISR)]] & execute 
+- When an interrupt occurs, [[Control Unit#Program Counter]] jumps to [[Interrupt Handler]] & execute 
 
 
 ## 2 Types
@@ -20,7 +20,7 @@ References:
 - See [[Signal (Software Interrupt)]]
 ### Hardware interrupts (外中断)
 - [[#Asynchronous]]
-- Examples are [[Timer Chips]] for [[Multitasking]] where [[CPU]] is interrupted to take in inputs from keyboard for example
+- Examples are [[Timer Chips]] for [[Multi-tasking]] where [[CPU]] is interrupted to take in inputs from keyboard for example
 
 ## Benefits
 ---
@@ -35,7 +35,7 @@ References:
 - However, there are exceptions 
 
 ### Some [[Callback Function]] don't work
-- As long as the [[Interrupt Handler (Interrupt Service Routine, ISR)]] is running, other interrupts may not be handled 
+- As long as the [[Interrupt Handler]] is running, other interrupts may not be handled 
 - Generally not queued
 - [[Interrupt Priorities]] exist in some systems to handle [[Simultaneous Interrupts]]
 

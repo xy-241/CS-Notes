@@ -21,7 +21,7 @@ References:
 ---
 1. Causes [[Process]] to temporarily suspend
 2. Save its [[Registers]] on the [[Stack (FILO)]]
-3. When [[Interrupt Handler (Interrupt Service Routine, ISR)]] is done, the running [[Process]] is restarted in the state it was in just before the signal
+3. When [[Interrupt Handler]] is done, the running [[Process]] is restarted in the state it was in just before the signal
 
 ## Benefits
 ---

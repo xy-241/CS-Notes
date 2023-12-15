@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-05T17:45:00
-Last Date: 2023-12-14T18:16:44+08:00
-References:
+Last Date: 2023-12-15T11:53:41+08:00
+References: 
 ---
 ## Abstract
 ---
-- A group of *fixed-number* worker [[Thread]] that are reused to execute tasks submitted to [[#Task Queue]] by a client. The number of *Thread* is usually the *number of cores* the system has. Less will lead to wasted CPU power, more will introduce [[Context Switch]] which has overhead
+- A group of *fixed-number* worker [[Thread]] that are reused to execute tasks submitted to [[#Task Queue]] by a client. The number of *Thread* is usually the *number of cores* the system has. Less will lead to wasted CPU power, more will introduce [[Context Switch]] which has overhead, unless the task isn't *cpu-bounded*
 - Commonly used in scenarios where tasks are small, numerous, and independent([[Stateless protocol]]). Examples include web servers handling HTTP requests and applications that perform many asynchronous I/O operations
 
 ## Benefits
@@ -34,7 +34,6 @@ References:
 
 
 
-The `pthread_cond_wait`, `pthread_cond_init`, and `pthread_cond_signal`
 
 ## Terminologies 
 ---

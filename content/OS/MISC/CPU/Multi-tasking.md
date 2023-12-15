@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-24T12:23:00
-Last Date: 2023-12-14T19:42:42+08:00
+Last Date: 2023-12-15T11:51:18+08:00
 ---
 ## Abstract
 ---
 - Ability of computer executing multiple tasks at the same time by giving each [[Process]] a very small slice of [[CPU]] time
-- A logical extension of [[Multi-Programming]]
+- A logical extension of [[Multi-programming]]
 - Focus on improving user experience 
 - Can be implemented on computers that have a single([[#Time-Sharing]]) or multiple CPU
 
@@ -24,15 +24,15 @@ Last Date: 2023-12-14T19:42:42+08:00
 - Ensure no [[Process]] can hog the [[CPU]] forever
 #### Mechanism
 1. Before jumping to program code, the [[OS]] sets the [[Timer Chips]] to trigger an [[Interrupts (中断)#Hardware interrupts (外中断)]] after some period of time
-2. The OS switches to [[User Mode]] and jumps to the next [[Instruction]] of the program
-3. When the Timer Chips elapses, it triggers a Hardware interrupts (外中断) to switch to [[Kernel Mode]] and jump to OS code
+2. The OS switches to [[Privilege Level#User Mode]] and jumps to the next [[Instruction]] of the program
+3. When the Timer Chips elapses, it triggers a Hardware interrupts (外中断) to switch to [[Privilege Level#Kernel Mode]] and jump to OS code
 4. The OS can now save where the program left off, load a different program, and repeat the process
 
 ## Terminologies
 ---
 ### Time-Sharing
 - A Implementation of [[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]
-- A specific implementation of [[Multitasking]] when there is only a single resource - single [[CPU]], achieve with quick [[Context Switch]]
-- All Time-sharing systems are [[Multi-Programming]] systems
+- A specific implementation of [[Multi-tasking]] when there is only a single resource - single [[CPU]], achieve with quick [[Context Switch]]
+- All Time-sharing systems are [[Multi-programming]] systems
 - Allow multiple remote users to run jobs on the same computer at the same time 
 
