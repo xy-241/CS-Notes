@@ -12,7 +12,7 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <div class="giscus" style={{ marginTop: "10rem" }}></div>
+        <div class="giscus" style={{ marginTop: "5rem" }}></div>
         <hr />
         <p>
           Created by <a href="https://www.linkedin.com/in/xinyang-yu/">Xinyang YU</a>, © {year}
