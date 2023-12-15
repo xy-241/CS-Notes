@@ -18,6 +18,6 @@ References:
 >- [[Sub-types]]
 >- [[Compule-time Types]]
 >- [[Run-time Types]]
->- [[Parameterized Types (Generics, Generic Types)]]
+>- [[Generics]]
 >- [[Type Inference (类型推断)]]
 >- [[Custom Types]]

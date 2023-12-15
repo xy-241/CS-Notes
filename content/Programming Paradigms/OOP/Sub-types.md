@@ -6,13 +6,11 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-24T17:56:06+08:00
-Last Date: 2023-07-24T17:56:06+08:00
-References:
+Last Date: 2023-12-15T23:41:12+08:00
+References: 
 ---
->[!note] What is it?
->- A data type
->- It can be a type that inherits from a [[Class]] or [[Interface]]
-
-
->[!note] Relationship with [[Sub-class]]
->[[Sub-class]] is more specific 
+## Abstract
+---
+- A [[Datatype]]
+- It can be a type that inherits from a [[OOP#OOP Class]] or [[Interface]]
+- Less specific compared to [[Sub-class]]

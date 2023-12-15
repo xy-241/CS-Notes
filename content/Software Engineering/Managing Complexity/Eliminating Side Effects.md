@@ -16,4 +16,4 @@ References:
 
 >[!note] Achieved with
 >- [[Pure Functions]]
->- [[Immutability]]
+>- [[Immutable]]
