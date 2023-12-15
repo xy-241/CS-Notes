@@ -20,9 +20,9 @@ References:
 
 > [!note] Uses modular arithmetic to calculate bucket index
 >
-> -   We can use either [[Prime Number]] or [[Composite number]] if we are sure the key is evenly distributed.
+> -   We can use either [[Prime Number (质数)]] or [[Composite number]] if we are sure the key is evenly distributed.
 > -   Else if there is some kind of pattern like, the key is a multiple of 3, prime number can reduce [[Hash Collision]]
-> -   Thus, we usually use [[Prime Number]] to take the modules, since we can't predict the distribute of the keys
+> -   Thus, we usually use [[Prime Number (质数)]] to take the modules, since we can't predict the distribute of the keys
 
 ## Properties
 ---

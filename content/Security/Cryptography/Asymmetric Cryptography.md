@@ -35,7 +35,7 @@ References:
 
 ### RSA (Rivest-Shamir-Adleman)
 - An [[Algorithms]] used to generate [[#Public Key]] & [[#Private Key]]
-- Relies on the difficulty of factoring large [[Composite number]] into their [[Prime Number]] factor
+- Relies on the difficulty of factoring large [[Composite number]] into their [[Prime Number (质数)]] factor
 ### ECDSA (Elliptic Curve Digital Signature Algorithm)
 - An [[Algorithms]] used to generate [[#Public Key]] & [[#Private Key]]
 ### EdDSA, ED25519 (Edwards-curve Digital Signature Algorithm)
