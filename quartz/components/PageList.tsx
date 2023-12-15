@@ -51,7 +51,7 @@ export function PageList({ cfg, fileData, allFiles, limit }: Props) {
               )}
               <div class="desc">
                 <h3>
-                  <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal" target="_blank">
+                  <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal" >
                     {title}
                   </a>
                 </h3>
