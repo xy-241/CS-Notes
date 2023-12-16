@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2023-12-16T00:38:55+08:00
+Last Date: 2023-12-16T11:43:27+08:00
 References: 
 ---
 ## Abstract
@@ -24,17 +24,17 @@ References:
 ## How a system call is triggered
 ---
 1. Calling program pushes parameters of the system call to [[Stack (FILO)]] (Step 1-3)
-2. Call to [[Library Call]], same [[Instruction]] to call all procedures inside the [[Library Call]] (Step 4, where the actual [[Library Call]] is happening)
-3. [[Library Call]] puts [[System Call Number (Interrupt Number)]] in  a place where [[OS]] expects it, such as a [[Registers]] (Step 5)
+2. Trigger an [[Instruction]] to trigger the corresponding [[Library Call]], the same instruction is used to trigger other library calls (Step 4, where the actual library call is happening)
+3. Library Call puts [[#Syscall Interrupt Number]] in  a place where [[OS]] expects it, such as a [[Registers]] (Step 5)
 4. Execute [[Trap Interrupt (陷入)]] (Step 6)
-5. Kernel code examines [[System Call Number (Interrupt Number)]], dispatch the correct [[Interrupt Handler]] via [[Interrupt Vector Table]](Step 7)
-6. The desired [[Interrupt Handler]] starts running (Step 8)
-7. After [[Interrupt Handler]] finishes, control **maybe** returned to the [[User Space]] [[Library Call]] at the [[Instruction]] following the [[Trap Interrupt (陷入)]] (Step 9)
+5. Kernel code examines Syscall Interrupt Number, dispatch the correct [[Interrupt Handler]] via [[Interrupt Vector Table]](Step 7)
+6. The desired Interrupt Handler starts running (Step 8)
+7. After Interrupt Handler finishes, control **maybe** returned to the [[User Space]] at the Instruction following the Trap Interrupt (陷入) (Step 9)
 >[!attention] Control MAYBE returned to user-space
->- The [[System Call (系统调用)]] may block the caller (in this case [[Library Call]]), preventing it from continuing
+>- The System Call (系统调用) may block the caller (in this case Library Call), preventing it from continuing
 >- For example, keyboard reads system call. When system call tries to read but nothing has been typed yet, the caller has to be blocked
-8. Then, [[Procedure Calls]] returns to the user program  (Step 10)
-9. To finish the job, the user program has to clean up the [[Stack (FILO)]] by incrementing the [[Stack Pointer]] exactly enough to remove the parameters pushed before the making the [[System Call (系统调用)]] (Step 11) ([[Stack (FILO)]] grows downwards, so to remove *Stack frame*, we increment the *Stack Pointer*)
+8. Then, library call returns to the user program  (Step 10)
+9. To finish the job, the user program has to clean up the [[Address Space#Stack Segment]] by incrementing the [[Stack Pointer]] exactly enough to remove the parameters pushed before the making the System Call (系统调用) (Step 11) (Stack Segment grows downwards, so to remove *Stack frame*, we increment the *Stack Pointer*)
 ![[system_call_triggering_process.png]]
 
 
@@ -70,4 +70,4 @@ References:
 
 ## Terminologies
 ---
-### Interrupt Number
+### Syscall Interrupt Number
