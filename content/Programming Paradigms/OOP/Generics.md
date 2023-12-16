@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-24T17:49:41+08:00
-Last Date: 2023-12-15T23:39:49+08:00
+Last Date: 2023-12-16T20:22:05+08:00
 References: 
 ---
 ## Abstract
@@ -19,4 +19,4 @@ References:
 ### Code Re-usability
 - We don't to duplicate the set of codes for each different [[Datatype]]
 ### Type Safety
-- The [[Compiler]] gets enough context to figure out [[Datatype]] mismatch issue during *compilation*
+- The [[Language Processors#Compiler]] gets enough context to figure out [[Datatype]] mismatch issue during *compilation*

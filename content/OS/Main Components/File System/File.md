@@ -15,7 +15,7 @@ References:
 ---
 
 - Hide the nitty gritty of [[IO Devices]]
-- Present programmer a clean [[Abstraction]] of **device-independent** file
+- Present programmer a clean [[Abstraction (抽象)]] of **device-independent** file
 - Examples are Printers & Modems etc
 - 2 parts - _Filename_ & [[Inode#Inode Number]], doesn't have any _metadata_ associated
 

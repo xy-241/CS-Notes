@@ -13,7 +13,7 @@ References:
 ## Abstract
 ---
 
-- Container that holds all the information needed to run a program, [[Abstraction]] over running program
+- Container that holds all the information needed to run a program, [[Abstraction (抽象)]] over running program
 - 2 Components - [[Address Space]], [[Process Control Block (PCB)]]
 - [[Process]] **_usually_** don't share [[Main Memory]] among themselves for isolation purposes. We need [[Inter-Process Communication (IPC)]] for **inter-process communication** 
 

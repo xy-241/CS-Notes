@@ -45,7 +45,7 @@ References:
 ### Parameters of system call
 - Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Stack (FILO)]]
 - Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Registers]]
-### [[Abstraction]] comes to rescue
+### [[Abstraction (抽象)]] comes to rescue
 - [[OS]] provide an abstraction layer on top of these [[Interrupts (中断)]] and [[Interrupt Handler]]
 - Reusable higher-level library functions that wrap the necessary [[Assembly language | Assembly Instruction]] are provided by [libc](https://www.gnu.org/software/libc/) on Unix-like systems and part of a library called [ntdll.dll](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/libraries-and-headers) on Window
 - Specific [[Instruction Set Architecture (ISA)]] [[Instruction]] is generated automatically during [[Compilation]]

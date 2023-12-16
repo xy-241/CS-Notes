@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Resizable [[Array]], achieved by building an [[Abstraction]] above the [[Array]]
+- Resizable [[Array]], achieved by building an [[Abstraction (抽象)]] above the [[Array]]
 
 ## Benefits
 ---

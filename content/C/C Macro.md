@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-09-08T18:16:43+08:00
-Last Date: 2023-09-08T18:16:43+08:00
-References:
+Last Date: 2023-12-16T20:21:54+08:00
+References: 
 ---
 ## Abstract
 ---
-- [[Preprocessor]] replaces the [[Macro]] with the value before passing to the [[Compiler]]
+- [[Language Processors#Preprocessor]] replaces the [[Macro]] with the value before passing to the [[Language Processors#Compiler]]
 
 
 ## Benefits

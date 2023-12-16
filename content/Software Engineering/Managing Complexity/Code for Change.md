@@ -11,7 +11,7 @@ Last Date: 2023-07-23T17:50:01+08:00
 References:
 ---
 >[!note] Purpose
->Add flexibility to the program without changing codes behind the  [[Abstraction Barrier]]
+>Add flexibility to the program without changing codes behind the  [[Abstraction (抽象)]]
 
 >[!note] Achieved with
 >1. [[Inheritance]]

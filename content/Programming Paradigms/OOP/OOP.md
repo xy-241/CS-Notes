@@ -12,14 +12,14 @@ References:
 ## Abstract
 ---
 Core Principles
-- [[Abstraction]]
+- [[Abstraction (抽象)]]
 - [[Inheritance]]
 - [[Polymorphism]]
 - [[Encapsulation]]
 
 ## OOP Class
 ---
-- An [[Abstraction]] over a group of similar items that share the same properties and actions
+- An [[Abstraction (抽象)]] over a group of similar items that share the same properties and actions
 ## OOP Object
 ---
 - An actual instance of [[#OOP Class]] that occupies some space in the [[Address Space#Data Segment]]

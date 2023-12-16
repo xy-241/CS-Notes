@@ -5,11 +5,13 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - computer_organisation
-Creation Date: 2023-11-28T20:12:00
-Last Date: 2023-12-10T17:53:48+08:00
+Creation Date: 2023-09-28T09:59:05+08:00
+Last Date: 2023-12-16T20:10:41+08:00
+References: 
 ---
 ## Abstract
 ---
+- Also known as *Machine Codes*
 - [[Bit String]] stored in the [[Main Memory]]
 - Passed to CPU to get translated to carry out [[Operation]]
 - Doesn't specify which [[CPU Datapath]] does what, just specify what outputs are expected with a given input

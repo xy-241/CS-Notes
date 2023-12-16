@@ -12,4 +12,4 @@ References:
 ## Abstract
 ---
 - Extending from existing [[OOP#OOP Class]] or [[Interface]]
-- Aka building up on existing [[Abstraction]]
+- Aka building up on existing [[Abstraction (抽象)]]
