@@ -6,11 +6,14 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-07-14T13:30:00
-Last Date: 2023-12-12T21:28:56+08:00
+Last Date: 2023-12-16T21:04:59+08:00
 References: 
 ---
 ## Abstract
 ---
-- The [[Host]] [[Host]]
-> [!quote]
-> Definites the [[format]] and the order of [[messages]] exchanged between 2 or more [[communicating entities]],  as well as actions taken on the [[transmission]] and/or [[ | receipt]] of a message or other [[|event]]
+- Defines the format and the order of *messages* exchanged between 2 or more [[Host]]
+
+
+## Stateless Network Protocol
+---
+- [[Host#Server]] don't maintain information about the [[Host#Client]], vice versa

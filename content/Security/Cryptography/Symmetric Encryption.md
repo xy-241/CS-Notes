@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-12T20:20:08+08:00
-Last Date: 2023-09-12T20:20:08+08:00
-References:
+Last Date: 2023-12-16T21:35:24+08:00
+References: 
 ---
 
 ## Abstract
@@ -21,3 +21,6 @@ References:
 ---
 ### AES (Advanced Encryption Standard)
 - A [[Symmetric Encryption]] algorithm
+### Symmetric Key
+- The key that is shared between [[Host#Client]] and [[Host#Server]] to encrypt communication
+- Much more efficient encryption that [[Asymmetric Cryptography]]

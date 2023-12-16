@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-10-03T14:42:00
-Last Date: 2023-12-12T11:49:00+08:00
+Last Date: 2023-12-16T21:06:45+08:00
 ---
 ## Abstract
 ---
@@ -24,7 +24,8 @@ Last Date: 2023-12-12T11:49:00+08:00
 ### Faster than [[TCP]]
 - No waiting incurred by [[TCP#Benefits]]
 
-### [[Stateless protocol]]
+### Efficiency
+- A [[Network Protocol#Stateless Network Protocol]]
 - Entities can communicate without setting up connection first
 
 ### Support Horizontal Scaling

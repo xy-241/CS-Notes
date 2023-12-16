@@ -6,15 +6,15 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-10-05T11:42:46+08:00
-Last Date: 2023-10-05T11:42:46+08:00
-References:
+Last Date: 2023-12-16T21:51:11+08:00
+References: 
 ---
 ## Abstract 
 ---
 >[!info]
 >- Also known as Public key Cryptography or Public Private Key
 - Achieved with [[#Public Key]] & [[#Private Key]] which are mathematically related
-- What [[#Public Key]] encrypts can only be decrypted by [[Private Key]] (used in [[Symmetric Key Exchange]])
+- What [[#Public Key]] encrypts can only be decrypted by [[Private Key]] (used in [[TLS 1.2#Symmetric Key Exchange]])
 - What [[Private Key]] encrypts can only be decrypted by [[Public Key]] (used in [[Digital Signature]]) [[Digital Signature]]
 
 

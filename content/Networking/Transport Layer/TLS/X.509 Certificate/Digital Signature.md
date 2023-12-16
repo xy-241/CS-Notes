@@ -6,20 +6,20 @@ Author Profile:
 tags:
   - networking
   - security
-Creation Date: 2023-12-13T18:10:45+08:00
-Last Date: 2023-12-13T18:10:45+08:00
-References:
+Creation Date: 2023-09-12T15:32:45
+Last Date: 2023-12-16T21:43:26+08:00
+References: 
 ---
 ## Abstract
 ---
-- Prove that something from another entity([[#Signer]]) is really from that entity
+- The purpose is to prove that something from [[#Signer]] is really from that entity
 - [[Asymmetric Cryptography#Private Key]] is used to generate the *signature*
 - [[Asymmetric Cryptography#Public Key]] is distributed for verification of the *signature*
-- Consists of a [[#Message]] [[Hash#Digest]] encrypted with the message [[#Signer]]'s [[Asymmetric Cryptography#Private Key]]. The extra [[Hash]] process is to deal with [[#Con]]
+- Consists of a [[Hash#Digest]] of the [[X.509 Certificate]] encrypted with the [[#Signer]]'s [[Asymmetric Cryptography#Private Key]]. The extra [[Hash]] process is to deal with [[#Con]]
 
 ## Benefits
 ---
-1. Preventing [[Man-in-the-middle Attack]]
+1. Preventing **Man-in-the-middle Attack**
 
 ## Con
 ---
@@ -30,6 +30,4 @@ References:
 - Can be [[Certificate Authority (CA)]]
 
 ### Verifier
-
-### Message
-- Can be a [[Digital Certificate]]
+- The [[Host#Client]]

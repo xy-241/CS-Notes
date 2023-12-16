@@ -26,7 +26,7 @@ References:
 
 >[!success] Unit Testing
 >- Test cases based on expected inputs and resulted outputs 
->- After substituting the parent [[Object]] with child [[Object]], we are expecting the unit test cases return the same output. Otherwise, [[Liskov Substitution Principle (LSP)]] is violated 
+>- After substituting the parent [[Network Object]] with child [[Network Object]], we are expecting the unit test cases return the same output. Otherwise, [[Liskov Substitution Principle (LSP)]] is violated 
 >- [Example](https://nus-cs2030s.github.io/2223-s2/16-lsp.html#lsp-through-the-lens-of-testing)
 
 >[!success] Ensire [[Liskov Substitution Principle (LSP)]] during [[Compile Time]]

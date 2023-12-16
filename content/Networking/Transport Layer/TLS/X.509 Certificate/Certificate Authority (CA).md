@@ -7,11 +7,11 @@ tags:
   - networking
   - security
 Creation Date: 2023-09-11T23:49:36+08:00
-Last Date: 2023-09-11T23:49:36+08:00
-References:
+Last Date: 2023-12-16T21:42:32+08:00
+References: 
 ---
 ## Abstract
 ---
 - Helps to establish trust between 2 different parties
+- Has a [[X.509 Certificate#Self-signed Certificate]]. Its [[Asymmetric Cryptography#Public Key]] is distributed to [[Host#Client]] like the set of trusted public keys included in all modern browsers
 - Validate the identity of the [[Certificate Holder]]
-- Has a [[Digital Certificate]] that is [[Self-signed Certificate]], Aka its [[X.509 Certificate]] isn't signed by anyone else

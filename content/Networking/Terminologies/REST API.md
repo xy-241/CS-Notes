@@ -7,7 +7,7 @@ tags:
   - networking
   - system_design
 Creation Date: 2023-10-07T17:40:00
-Last Date: 2023-12-12T11:49:00+08:00
+Last Date: 2023-12-16T21:08:55+08:00
 ---
 ## Abstract
 ---
@@ -23,12 +23,13 @@ Last Date: 2023-12-12T11:49:00+08:00
 ### REpresentational
 - Represent *resources* in a way([[URI]]) for clients to consume
 ### State Transfer
-- This architecture is [[Stateless protocol|Stateless]], so a *state* is required to be exchanged for client-server to have a continous communication
+- This architecture is [[Network Protocol#Stateless Network Protocol]] so a *state* is required to be exchanged for client-server to have a continous communication
 
 ## 6 Rules
 ---
 ### Client-Server
-### [[Stateless protocol |Stateless]]
+### Stateless
+- [[Network Protocol#Stateless Network Protocol]]
 ### Uniform Interface
 - Each resource is represented by a different [[URI]]
 - With 4 main actions for clients to tell servers what it want to do. The actions can be categories into CRUD, except `Create - POST`, the rest is [[Idempotent]]
@@ -39,7 +40,7 @@ Update - PUT
 Delete - DELETE
 ```
 ### Cacheable
-- Support *cacheing* because [[Stateless protocol | Stateless]], `Get` requests are usually cached
+- Support *cacheing* because [[Network Protocol#Stateless Network Protocol]], `Get` requests are usually cached
 ### Layer System
 - We can have a [[Load Balancer]] infront of the [[Host]]
 - This increases the difficulty for [[Host]] to know the [[Host]] architecture
