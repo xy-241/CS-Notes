@@ -7,7 +7,7 @@ tags:
   - number_theory
   - discrete_math
 Creation Date: 2023-12-14, 10:01
-Last Date: 2023-12-15T16:09:00+08:00
+Last Date: 2023-12-16T17:40:53+08:00
 References: 
 ---
 ## Abstract
@@ -25,3 +25,7 @@ References:
 ### Theorem 4.3.2
 - *Divisors of 1*
 - The only divisors of `1` are `1` and `-1`
+
+### Theorem 4.4.3
+- *Transitivity of Divisibility*
+- For all integers a, b, c. If `a|b` and `b|c`, then `a|c`

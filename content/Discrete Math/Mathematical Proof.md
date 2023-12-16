@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-04T19:10:00
-Last Date: 2023-12-13T10:10:22+08:00
+Last Date: 2023-12-16T17:38:10+08:00
 References: 
 ---
 ## Abstract
@@ -14,9 +14,8 @@ References:
 - [[#Concise]], [[#Polished]] [[Mathematical Argument]] explaining the *validity* of [[Mathematical Statement]] to skeptic
 - There are many [[#Proof Methods]]
 
-## Proof Methods
+## Direct Proof
 ---
-### Direct Proof
 - Is difficult when the thing we want to proof has an absence of a form like *Irrationality of a number*, which is number that does 
 ### Proof by Deduction (演绎推理)
 - [[#Direct Proof]]
@@ -33,7 +32,9 @@ References:
 ### Proof by Construction/Example
 - A form of [[#Direct Proof]]
 - For [[Mathematical Statement#Existential]], we can proof by providing an example that fulfil the conditions
-### Indirect Proof
+## Indirect Proof
+---
+- When [[#Direct Proof]] is hard to derive, we can try indirect proof
 
 ### Proof by Counter Example
 - An example that shows that a [[Mathematical Statement]] isn't always true. Useful for [[Mathematical Statement#Universal]]
@@ -42,6 +43,7 @@ References:
 - [[#Indirect Proof]]
 - Proof the negation is true to proof the given [[Mathematical Proof]] false, vice versa
 - Useful when it is hard to use [[#Direct Proof]], where the negated [[Mathematical Statement]] has form to proof
+>[!example] Proof square root of 2 is irrational 
 
 ## Terminologies
 ---

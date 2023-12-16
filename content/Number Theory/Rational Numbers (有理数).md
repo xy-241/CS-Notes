@@ -5,10 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - number_theory
-  - discrete_math
 Creation Date: 2023-12-14, 10:23
 Last Date: 2023-12-14T10:29:59+08:00
-References: 
+References:
 ---
 ## Abstract
 ---

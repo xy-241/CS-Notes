@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-15, 15:53
-Last Date: 2023-12-15T16:22:15+08:00
+Last Date: 2023-12-16T19:09:33+08:00
 References: 
 ---
 ## Abstract
@@ -29,3 +29,10 @@ public static int nextPrimeGenerator(int currPrime) {
     return nextPrime;
 }
 ```
+
+
+## Theorem
+---
+### Fundamental Theorem of Arithmetic
+- States that **every integer** greater than 1 can be represented **uniquely** as **a product of prime numbers**, up to the order of the factors
+- [[Prime Number (质数)]] is like the *atomic unit* in this case
