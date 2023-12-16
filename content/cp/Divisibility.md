@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-16, 18:29
-Last Date: 2023-12-16T19:07:29+08:00
+Last Date: 2023-12-16T19:14:49+08:00
 tags:
   - cp
 ---
@@ -30,7 +30,7 @@ tags:
 - The idea here is around [[Prime Number (质数)]]
 - Based on [[Prime Number (质数)#Fundamental Theorem of Arithmetic]]. So if a given integer is divisible by a group of [[Integer (整数)]], then the given integer must be divisible by the prime number that make up that group of integers
 
-| divisor | prime components | magic number  |
+| Divisor | Prime Components | Magic Number  |
 | ------- | ---------------- | ------------- |
 | 2       | 2                | 2             |
 | 3       | 3                | 2,3           |

@@ -405,7 +405,9 @@ p {
   overflow-x: auto;
 
   & > table {
-    margin: 1rem;
+    // margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1.5rem;
     border-collapse: collapse;
 
