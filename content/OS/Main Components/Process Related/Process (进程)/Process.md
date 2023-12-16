@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2023-12-12T21:28:56+08:00
+Last Date: 2023-12-16T20:37:59+08:00
 References: 
 ---
 
@@ -35,7 +35,7 @@ References:
 3. Block - [[Process]] is waiting for some other things like **I/O** to finish working (eg. waiting for file to be read)
 ### Process Resources
 - [[Address Space]]
-- [[Registers]] (Include [[Control Unit#Program Counter]] and [[Stack Pointer]])
+- [[Registers]] (Include [[Control Unit#Program Counter]] and [[Registers#Stack Pointer]])
 - A list of [[Open Files]]
 - Outstanding [[Alarm Signal]]
 - List of related processes

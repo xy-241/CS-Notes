@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2023-12-16T11:43:27+08:00
+Last Date: 2023-12-16T20:37:20+08:00
 References: 
 ---
 ## Abstract
@@ -34,7 +34,7 @@ References:
 >- The System Call (系统调用) may block the caller (in this case Library Call), preventing it from continuing
 >- For example, keyboard reads system call. When system call tries to read but nothing has been typed yet, the caller has to be blocked
 8. Then, library call returns to the user program  (Step 10)
-9. To finish the job, the user program has to clean up the [[Address Space#Stack Segment]] by incrementing the [[Stack Pointer]] exactly enough to remove the parameters pushed before the making the System Call (系统调用) (Step 11) (Stack Segment grows downwards, so to remove *Stack frame*, we increment the *Stack Pointer*)
+9. To finish the job, the user program has to clean up the [[Address Space#Stack Segment]] by incrementing the [[Registers#Stack Pointer]] exactly enough to remove the parameters pushed before the making the System Call (系统调用) (Step 11) (Stack Segment grows downwards, so to remove *Stack frame*, we increment the *Stack Pointer*)
 ![[system_call_triggering_process.png]]
 
 
