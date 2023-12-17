@@ -17,7 +17,7 @@ References:
 ---
 ### Agent
 - A service that runs alongside the application to collect various [[Event-Driven Architecture#Event |Events]] and [[Metric]], and sends it to the *Datadog servers*
->[!caution] Different from [[Datadog App Tracer]] which is on the application side
+>[!caution] Different from [[Datadog ddtrace]] which is on the application side
 ### DogStatsD
 - An implementation of [[StatsD]] protocol
 - A *Metrics Aggregation Service* bundled with [[Datadog#Agent]] to send *custom metrics* from application to **Datadog servers**
@@ -26,7 +26,7 @@ References:
 ## Setup
 ---
 - [[Datadog Integration]]
-- [[Datadog App Tracer]]
+- [[Datadog ddtrace]]
 - [[Datadog APM#ECS Fargate Setup]]
 - [[Datadog RUM]]
 

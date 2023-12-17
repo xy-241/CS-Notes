@@ -6,13 +6,16 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-13, 13:55
-Last Date: 2023-12-14T10:54:43+08:00
+Last Date: 2023-12-17T21:56:33+08:00
 References: 
 ---
 ## Abstract
 ---
-- There are 2 ways to trace applications, one way is [Adding the tracer in Code](https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/nodejs#adding-the-tracer-in-code), and another way is [Adding the tracer via command line arguments](https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/nodejs#adding-the-tracer-via-command-line-arguments)
+- There are 2 ways to trace applications, one way is [Adding the tracer in Code](https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/python/#configuration), and another way is [Adding the tracer via command line arguments](https://docs.datadoghq.com/tracing/trace_collection/dd_libraries/python/#instrument-your-application)
 >[!tip] I usually start with the second way, since it is not intrusive, so easy to add in. And it is already pretty powerful
+
+## Fine-tune ddtrace
+---
 - We can fine tune the *tracer* by using this [list of environment variables](https://ddtrace.readthedocs.io/en/stable/configuration.html#) 
 >[!tip] I always set the `DD_ENV` and `DD_SERVICE` to get [[Trace]] display nicely inside the Datadog dashboard
 

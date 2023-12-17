@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-14T17:27:12+08:00
+Last Date: 2023-12-17T21:32:43+08:00
 References: 
 ---
 
@@ -15,11 +15,19 @@ References:
 
 - [[Application Performance Monitoring (APM)]]
 
+>[!info] Whitelist outbound traffic to Datadog Endpoints
+>In some deployment environment, by default all outbound traffic is denied. [Here](https://docs.datadoghq.com/agent/configuration/network/?tab=agentv6v7) is a list of datadog endpoints you can use to whitelist the traffic
+
 ## ECS Fargate Setup
 ---
+Make sure you have done the following first!
+- [ ] [[Datadog Integration#AWS Integration]]
+- [ ] [[Datadog ddtrace]] 
 
-- Make sure [[Datadog Integration#AWS Integration]] and [[Datadog App Tracer]] are done
-- The rest of the setup is around [[ECS#Task Definition]], we need to add in 3 parts into it - [[#Pipe log to AWS Firelens]], [[#AWS Firelens]] and [[#Datadog Agent Sidecar]]
+The rest of the setup is around [[ECS#Task Definition]], we need to add in 3 parts into it
+- [ ] [[#Pipe log to AWS Firelens]]
+- [ ] [[#AWS Firelens]] 
+- [ ] [[#Datadog Agent Sidecar]]
 
 ### Pipe log to AWS Firelens
 

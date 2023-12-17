@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2023-12-14T10:55:04+08:00
+Last Date: 2023-12-17T21:27:27+08:00
 References: 
 ---
 ## Abstract
@@ -22,35 +22,54 @@ References:
 ### Datadog Dashboard
 1. Go to the appropriate [Datadog Site](https://docs.datadoghq.com/getting_started/site/#access-the-datadog-site). In this case, our site is `https://app.datadoghq.eu`, the endpoint is `https://app.datadoghq.eu/rum/list`
 2. Create a **New Application**,  **Application Type** is `JS`, **Instrumentation Type** is `NPM`, and we will get the following codes
-	```typescript
-	import { datadogRum } from '@datadog/browser-rum';
-	
-	datadogRum.init({
-	  applicationId: '<AUTO_POPULATED>',
-	  clientToken: '<AUTO_POPULATED>',
-	  site: 'datadoghq.eu',
-	  service: 'aegis-dev-frontend',
-	  env: 'aegis-dev',
-	  // Specify a version number to identify the deployed version of your application in Datadog
-	  // version: '1.0.0',
-	  sessionSampleRate: 100,
-	  sessionReplaySampleRate: 100,
-	  trackUserInteractions: true,
-	  trackResources: true,
-	  trackLongTasks: true,
-	  defaultPrivacyLevel: 'mask-user-input',
-	});
-	```
+```typescript
+import { datadogRum } from '@datadog/browser-rum';
+
+datadogRum.init({
+  applicationId: '<AUTO_POPULATED>',
+  clientToken: '<AUTO_POPULATED>',
+  site: 'datadoghq.eu',
+  service: 'aegis-dev-frontend',
+  env: 'aegis-dev',
+  // Specify a version number to identify the deployed version of your application in Datadog
+  // version: '1.0.0',
+  sessionSampleRate: 100,
+  sessionReplaySampleRate: 100,
+  trackUserInteractions: true,
+  trackResources: true,
+  trackLongTasks: true,
+  defaultPrivacyLevel: 'mask-user-input',
+});
+```
 
 ### Frontend Source Codes
-1. Install the [[npm]] package - `npm i @datadog/browser-rum`
+1. Install the [[JS Project Setup#NPM]] package - `npm i @datadog/browser-rum`
 2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the Datadog can monitor every page of the frontend
 
-### Integration with [[Datadog APM]]
-- This is for application that has both frontend and backend, and we need to have [[Datadog APM]] enabled for the backend before we can integrate it with Datadog RUM
+### Integration with Datadog APM
+>[!attention] For application that has both frontend and backend
+>We need to have [[Datadog APM]] enabled for the backend before we can integrate it with Datadog RUM!
+- We simply add in `allowedTracingUrls` with your backend base url
+```typescript {9-11}
+import { datadogRum } from '@datadog/browser-rum';
 
+datadogRum.init({
+  applicationId: '<AUTO_POPULATED>',
+  clientToken: '<AUTO_POPULATED>',
+  site: 'datadoghq.eu',
+  service: 'aegis-dev-frontend',
+  env: 'aegis-dev',
+  allowedTracingUrls: [
+    (url) => url.startsWith(<YOUR_BACKEND_API_BASE_URL> ?? ''),
+  ],
+  // Specify a version number to identify the deployed version of your application in Datadog
+  // version: '1.0.0',
+  sessionSampleRate: 100,
+  sessionReplaySampleRate: 100,
+  trackUserInteractions: true,
+  trackResources: true,
+  trackLongTasks: true,
+  defaultPrivacyLevel: 'mask-user-input',
+});
+```
 
-
-## Terminologies
----
-----
