@@ -11,7 +11,7 @@ Last Date: 2023-12-12T10:41:31+08:00
 ## Abstract
 ---
 - Understand the [[Instruction]] based on the corresponding [[Instruction Set Architecture (ISA)]] 
-- Then decide what [[Registers]], [[ALU]] & [[Main Memory]] to enable to carry out the [[Operation]] by generating [[#Control Signal]]
+- Then decide what [[Register]], [[ALU]] & [[Main Memory]] to enable to carry out the [[Operation]] by generating [[#Control Signal]]
 
 ## Components
 ---

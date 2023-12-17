@@ -31,7 +31,7 @@ References:
 ### x86-64
 - The privilege level can be read by CPU from a Registers called `cs`
 ### RISCV
-- The privilege level of the current execution mode is stored in the `mstatus`, a [[Registers#Control & Status Registers (CSRs)]]
+- The privilege level of the current execution mode is stored in the `mstatus`, a [[Register#Control & Status Registers (CSRs)]]
 - Specifically, the *mstatus.MPP* (Mode Privilege Priority) field holds the current privilege level
 - The mstatus.MPP field is a *2-bit field* that can have the following values:
 	- `00`: User mode (U-mode)

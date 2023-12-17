@@ -42,7 +42,7 @@ References:
 ## Examples
 ---
 ### Turn off interrupt in XV6-RISCV
-- This is achieved by writing to the [[Registers#Control & Status Registers (CSRs)]] - `sstatus`
+- This is achieved by writing to the [[Register#Control & Status Registers (CSRs)]] - `sstatus`
 - The code snippets below going down the [[Abstraction (抽象)]], we going down from `intr_off()`
 ```c {8}
 // XV6-RISCV kernel codes, spinlock.c

@@ -28,7 +28,7 @@ References:
 ### Destination Register 
 - 5bits
 - Labeled `rd`, mapped to `WR`
-- [[Registers]] that gets the result of [[Operation]] in [[MIPS R-Type Instruction]] [[Instruction]]
+- [[Register]] that gets the result of [[Operation]] in [[MIPS R-Type Instruction]] [[Instruction]]
 ### Function Code
 - 6 bits 
 - Give [[MIPS]] (2^6-1) + 2^6 = 127 instead of 2^6=64 [[Instruction]]

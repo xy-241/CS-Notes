@@ -26,7 +26,7 @@ References:
 - Config for [[Control Unit#Control Signal]]
 - [[MIPS]], 6-bits, 2^6 -> 64 combinations 
 ### Parameter
-- [[Registers]] Address
+- [[Register]] Address
 - [[Memory Address]]
 - Immediate Value
 ### Branch

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:38:44
-Last Date: 2023-12-15T12:07:01+08:00
+Last Date: 2023-12-17T20:09:07+08:00
 ---
 ## Abstract
 ---
@@ -17,7 +17,7 @@ Last Date: 2023-12-15T12:07:01+08:00
 ## 2 Ways to Address
 ---
 ### Byte Addressing
-- 1 [[Byte]] for every [[Memory Address]]
+- 1 [[Computer Data Representation#Byte]] for every [[Memory Address]]
 
 ### Word Addressing
-- More than 1 [[Byte]] for every [[Memory Address]]
+- 1 [[Computer Data Representation#Word]] for every [[Memory Address]]

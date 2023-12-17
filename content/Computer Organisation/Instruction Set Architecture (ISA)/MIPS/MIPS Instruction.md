@@ -21,9 +21,9 @@ References:
 ### Source Register 
 - 5bits
 - Labeled `rs`, mapped to `RR1`
-- [[Registers|Register]] with value stored that we want to use to carry out [[Operation]]
+- [[Register|Register]] with value stored that we want to use to carry out [[Operation]]
 ### Target Register
 - 5 bits
 - Labeled `rt`, mapped to `RR2`
-- [[Registers|Register]] with value stored we want to use in [[MIPS R-Type Instruction]]
-- [[Registers|Register]] that gets the result of [[Operation]] in [[MIPS I-Type Instruction]]
+- [[Register|Register]] with value stored we want to use in [[MIPS R-Type Instruction]]
+- [[Register|Register]] that gets the result of [[Operation]] in [[MIPS I-Type Instruction]]

@@ -20,12 +20,12 @@ Last Date: 2023-12-05T17:32:57+08:00
 ---
 ### Fetch
 - Retrieve [[Instruction]] from [[RAM]] 
-- Handled by [[Registers#Instruction Address Register]] & [[Registers#Instruction Register]]
+- Handled by [[Register#Instruction Address Register]] & [[Register#Instruction Register]]
 ### Decode
 - Handled by [[Control Unit]]
 ### Execute
 - When [[Operation]] is performed, can be further beak down to [[#Read]] & [[#Write Back]]
 ### Read
-- Retrieve required data from [[Main Memory]] or [[Registers]]
+- Retrieve required data from [[Main Memory]] or [[Register]]
 ### Write Back
-- Result is stored back into [[Main Memory]] or [[Registers]] 
+- Result is stored back into [[Main Memory]] or [[Register]] 

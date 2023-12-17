@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2023-12-12T21:47:13+08:00
+Last Date: 2023-12-17T20:19:22+08:00
 References: 
 ---
 ## Abstract
@@ -34,6 +34,7 @@ References:
 - CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
 
 ### Stack Pointer
+- A [[Register]]
 - Holds the address of the top of the [[Address Space#Stack Segment]] in the current **execution context**
 
 ## MIPS Registers
@@ -45,11 +46,11 @@ References:
 
 ## Terminologies
 ---
-### Width
-- The number of [[Bits]] inside a register
-### File
+### Register Width
+- The number of [[Computer Data Representation#Bit]] a [[Register]] can hold
+### Register File
 - A collection of registers that [[CPU]] can quickly store and retrieve [[Data]]
-### Memory Mapped
+### Memory Mapped Register
 - *Register* that is treated as a [[Main Memory]] location 
 - This means that the register can be accessed using the same [[Instruction]] and addressing modes as memory. 
 - Often used to control *hardware devices*, such as I/O devices (Like the UART in *XV6*) and memory controllers

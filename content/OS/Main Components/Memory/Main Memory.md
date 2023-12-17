@@ -13,7 +13,7 @@ References:
 #OS 
 ## Abstract
 ---
-- Made of [[Memory Elements]]
+- Made of [[Memory Element]]
 - Example [[RAM]]
 
 

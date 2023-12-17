@@ -17,6 +17,6 @@ References:
 
 ## [[Latency Number | An expensive operation]]
 ---
-1. Saving & loading of [[Registers]]
+1. Saving & loading of [[Register]]
 2. Switching out [[Memory Pages]] (More Expensive) - Not needed for *Thread Context Switching*, since all [[Thread]] of a [[Process]] share the same [[Memory Address]]
 3. Updating various [[Kernel]] [[Data Structure]]

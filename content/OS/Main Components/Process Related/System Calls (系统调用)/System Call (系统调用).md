@@ -25,7 +25,7 @@ References:
 ---
 1. Calling program pushes parameters of the system call to [[Stack (FILO)]] (Step 1-3)
 2. Trigger an [[Instruction]] to trigger the corresponding [[Library Call]], the same instruction is used to trigger other library calls (Step 4, where the actual library call is happening)
-3. Library Call puts [[#Syscall Interrupt Number]] in  a place where [[OS]] expects it, such as a [[Registers]] (Step 5)
+3. Library Call puts [[#Syscall Interrupt Number]] in  a place where [[OS]] expects it, such as a [[Register]] (Step 5)
 4. Execute [[Trap Interrupt (陷入)]] (Step 6)
 5. Kernel code examines Syscall Interrupt Number, dispatch the correct [[Interrupt Handler]] via [[Interrupt Vector Table]](Step 7)
 6. The desired Interrupt Handler starts running (Step 8)
@@ -34,7 +34,7 @@ References:
 >- The System Call (系统调用) may block the caller (in this case Library Call), preventing it from continuing
 >- For example, keyboard reads system call. When system call tries to read but nothing has been typed yet, the caller has to be blocked
 8. Then, library call returns to the user program  (Step 10)
-9. To finish the job, the user program has to clean up the [[Address Space#Stack Segment]] by incrementing the [[Registers#Stack Pointer]] exactly enough to remove the parameters pushed before the making the System Call (系统调用) (Step 11) (Stack Segment grows downwards, so to remove *Stack frame*, we increment the *Stack Pointer*)
+9. To finish the job, the user program has to clean up the [[Address Space#Stack Segment]] by incrementing the [[Register#Stack Pointer]] exactly enough to remove the parameters pushed before the making the System Call (系统调用) (Step 11) (Stack Segment grows downwards, so to remove *Stack frame*, we increment the *Stack Pointer*)
 ![[system_call_triggering_process.png]]
 
 
@@ -44,7 +44,7 @@ References:
 ![[syscall_architecture_differences.png]]
 ### Parameters of system call
 - Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Stack (FILO)]]
-- Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Registers]]
+- Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Register]]
 ### [[Abstraction (抽象)]] comes to rescue
 - [[OS]] provide an abstraction layer on top of these [[Interrupts (中断)]] and [[Interrupt Handler]]
 - Reusable higher-level library functions that wrap the necessary [[Assembly language | Assembly Instruction]] are provided by [libc](https://www.gnu.org/software/libc/) on Unix-like systems and part of a library called [ntdll.dll](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/libraries-and-headers) on Window

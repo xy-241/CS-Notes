@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-20T15:42:00
-Last Date: 2023-12-14T18:16:44+08:00
-References:
+Last Date: 2023-12-17T17:54:21+08:00
+References: 
 ---
 ## Abstract
 ---
@@ -61,7 +61,7 @@ References:
 | 0   | 1   | 1    | 0    |        0  |
 | 1   | 0   |  0   |  1   |     1     |
 | 1   | 1   |   0  |   0  |      1    |
-### Contrapositive (反证)
+### Contrapositive (逆否命题)
 - Compound Statement `~Q -> ~P`: If the floor isn't wet, then it doesn't rain 
 - It must not rain if the floor isn't wet
 - *Logically Equivalent* to *Standard Conditional Statement*

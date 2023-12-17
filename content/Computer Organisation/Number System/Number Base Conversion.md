@@ -5,13 +5,29 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - computer_organisation
-Creation Date: 2023-08-06T16:32:12+08:00
-Last Date: 2023-08-06T16:32:12+08:00
-References:
+Creation Date: 2023-12-17, 20:32
+Last Date: 2023-12-17T20:37:13+08:00
+References: 
 ---
-## Memories this table for fast conversion
+## Abstract
 ---
-Magic number **8421**
+
+
+
+## Decimal to Binary
+---
+### Integer
+- Keep diving by 2 until we get 0
+- Then the binary form counts from *bottom to top*
+![[decimal_to_binary_1.png]]
+
+### Decimal Places
+- Keep multiple by 2 until we get *1* or *infinite loop*
+- Then the binary form counts from *top to bottom*
+![[decimal_to_binary_2.png]]
+
+## Binary to Hex
+---
 | Binary | Hexadecimal |
 |--------|-------------|
 | 0000   | 0           |

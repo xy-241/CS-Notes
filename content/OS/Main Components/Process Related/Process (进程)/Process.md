@@ -35,7 +35,7 @@ References:
 3. Block - [[Process]] is waiting for some other things like **I/O** to finish working (eg. waiting for file to be read)
 ### Process Resources
 - [[Address Space]]
-- [[Registers]] (Include [[Control Unit#Program Counter]] and [[Registers#Stack Pointer]])
+- [[Register]] (Include [[Control Unit#Program Counter]] and [[Register#Stack Pointer]])
 - A list of [[Open Files]]
 - Outstanding [[Alarm Signal]]
 - List of related processes

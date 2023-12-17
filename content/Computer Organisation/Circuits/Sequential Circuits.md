@@ -12,9 +12,9 @@ References:
 ## Abstract
 ---
 - Present output = [[Combination Circuit]] + [[#State]]
-- We need to store the past outputs -> a [[Memory Elements]] is needed 
+- We need to store the past outputs -> a [[Memory Element]] is needed 
 - 2 types - [[Synchronous Sequential Circuits]], [[Asynchronous Sequential Circuits]]
-- Examples are [[Flip-flops]] & [[Registers]]
+- Examples are [[Flip-flops]] & [[Register]]
 ![[sequential_circuit.png]]
 
 

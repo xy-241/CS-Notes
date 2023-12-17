@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-04T19:10:00
-Last Date: 2023-12-16T17:38:10+08:00
+Last Date: 2023-12-17T17:57:03+08:00
 References: 
 ---
 ## Abstract
@@ -32,18 +32,23 @@ References:
 ### Proof by Construction/Example
 - A form of [[#Direct Proof]]
 - For [[Mathematical Statement#Existential]], we can proof by providing an example that fulfil the conditions
-## Indirect Proof
+## Indirect Proof (反证法)
 ---
 - When [[#Direct Proof]] is hard to derive, we can try indirect proof
 
-### Proof by Counter Example
+### Proof by Counterexample (反例法)
 - An example that shows that a [[Mathematical Statement]] isn't always true. Useful for [[Mathematical Statement#Universal]]
 
-### Proof by Contradiction (反证法)
+### Proof by Contradiction (矛盾证明法)
 - [[#Indirect Proof]]
 - Proof the negation is true to proof the given [[Mathematical Proof]] false, vice versa
 - Useful when it is hard to use [[#Direct Proof]], where the negated [[Mathematical Statement]] has form to proof
->[!example] Proof square root of 2 is irrational 
+>[!example]
+>- [[Integer (整数)#Theorem 4.6.1]]
+>- Proof square root of 2 is irrational 
+
+### Proof by Contraposition (逆否命证明法)
+- Use when the [[Conditional Statement#Contrapositive (逆否命题)]] is easier to proof
 
 ## Terminologies
 ---

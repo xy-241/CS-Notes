@@ -41,4 +41,4 @@ References:
 - A piece of code that functions correctly during *simultaneous execution* by *multiple [[Thread]]* accessing the a *shared resource* without [[Race Condition (竞态条件)]] and [[Deadlock (死锁)]] etc
 
 ### Multi-threaded Chip
-- [[Control Unit]], [[Registers]] & [[Pipeline]] are replicated
+- [[Control Unit]], [[Register]] & [[Pipeline]] are replicated

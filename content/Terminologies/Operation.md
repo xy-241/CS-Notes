@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- **[[Pipeline Stages#Read]]:** Read from [[Registers]] & Read from [[Main Memory]]
+- **[[Pipeline Stages#Read]]:** Read from [[Register]] & Read from [[Main Memory]]
 - **[[Pipeline Stages#Write Back]]:** Write to Registers & Write to Main Memory
 - **[[Pipeline Stages#Execute]]:** [[ALU]] computation
 

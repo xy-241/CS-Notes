@@ -6,15 +6,16 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-12T15:43:00
-Last Date: 2023-12-10T19:01:12+08:00
+Last Date: 2023-12-17T20:37:28+08:00
 References: 
 ---
 ## Abstract
 ---
- - **sign** 0 for positive, 1 for negative
- - **exponent** by default -127 with all bits set to 0
- - **mantissa** takes the binary behind the decimal place after normalisation (the yellow circle part) 
- - Reliable precision is *7 decimal digits*
+- Based on the [IEEE 754 Standard](https://en.wikipedia.org/wiki/IEEE_754)
+- **sign** 0 for positive, 1 for negative
+- **exponent** by default -127 with all bits set to 0
+- **mantissa** takes the binary behind the decimal place after normalisation (the yellow circle part) 
+- Reliable precision is *7 decimal digits*
 ![[IEEE 754 Floating-Point Rep.png]]
 
 
@@ -76,7 +77,7 @@ References:
 ## Tips 
 ---
 - When it comes to store a large whole number, use `long` to represent, because floating options like `double` may have precision loss issues
-- Usually [[Converted to Hex format]] for better readability 
+- Usually [[Number Base Conversion#Binary to Hex]] for better readability 
  - [Online Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html) to visualise better
 
 ## Side Notes

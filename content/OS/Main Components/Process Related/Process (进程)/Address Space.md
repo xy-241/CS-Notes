@@ -74,7 +74,7 @@ spin:
 	j spin
 ```
 - We load the base address of the *stack segment*
-- Then based on the core id (0-7), we set the [[Registers#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because *stack segment grows downwards* when we are adding values to the stack
+- Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because *stack segment grows downwards* when we are adding values to the stack
 ### Data Segment
 - Grow upwards
 - Expansion is done explicitly using [[System Call (系统调用)]] [[brk()]] or higher level [[Library Call]]

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-09-28T11:01:00
-Last Date: 2023-10-04T11:19:43+08:00
+Last Date: 2023-12-17T20:14:05+08:00
 ---
 ## Abstract
 ---
@@ -18,5 +18,5 @@ Last Date: 2023-10-04T11:19:43+08:00
 - Has access to all the [[Data]]
 ### Layer 4 (Transport Layer)
 - Only know 2 pieces of info - [[IP Address]] & [[Network Port]]
-- It is pointless to look at the data, because it is just stream of [[Bits]] and may be encrypted with [[TLS]]
+- It is pointless to look at the data, because it is just stream of [[Computer Data Representation#Bit]] and may be encrypted with [[TLS]]
 ### Layer 2 (Data Link)

@@ -6,11 +6,12 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-16, 17:40
-Last Date: 2023-12-16T17:41:39+08:00
+Last Date: 2023-12-17T17:57:36+08:00
 References: 
 ---
 ## Abstract
 ---
+- Are **discrete objects**, so used a lot in [[Discrete Math]]
 
 
 ## Theorems

@@ -23,7 +23,7 @@ References:
 ### ALU
 - [[ALU|More Detail]]
 ### Register File
-[[Registers#File|More Detail]]
+[[Register#File|More Detail]]
 ### Adder
 ### Clock
 
