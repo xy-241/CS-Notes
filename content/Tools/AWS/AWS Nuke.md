@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-01T16:41:00
-Last Date: 2023-12-18T13:27:26+08:00
+Last Date: 2023-12-18T13:32:48+08:00
 ---
 ## Abstract
 ---
@@ -31,7 +31,7 @@ regions:
 account-blocklist:
   - 1234567890
 accounts:
-  "106330972965": {}
+  "<YOUR_ACCOUNT_NUMBER>": {}
 ```
 
 >[!caution] Yaml Syntax
@@ -45,7 +45,7 @@ regions:
 account-blocklist:
   - 1234567890
 accounts:
-  "106330972965":
+  "<YOUR_ACCOUNT_NUMBER>":
     filters:
       ACMCertificate:
         - "arn:aws:acm:ap-southeast-1:106330972965:certificate/5212c31a-94f1-4dc9-80a8-b72d8d6b2054"
@@ -57,8 +57,8 @@ accounts:
 ```bash
 docker run \
    --rm -it \
-   -v <HOST_PATH>/config.yml:/home/aws-nuke/config.yml \
-   -v <HOST_PATH>/.aws:/home/aws-nuke/.aws \
+   -v <ABSOLUTE_PATH_TO_CONFIG.YAML>:/home/aws-nuke/config.yml \
+   -v <ABSOLUTE_PATH_TO_.aws>:/home/aws-nuke/.aws \
    rebuy/aws-nuke:latest \
    --profile <YOUR_AWS_PROFILE> \
    --config /home/aws-nuke/config.yml
