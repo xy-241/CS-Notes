@@ -22,4 +22,4 @@ Last Date: 2023-12-12T10:41:31+08:00
 ## Terminologies
 ---
 ### Control Signal
-- Electric signals that tells [[CPU Datapath]], [[Main Memory]] & [[IO Devices]] what to do according to program [[Instruction]]
+- Electric signals that tells [[CPU Datapath]], [[Main Memory]] & [[IO Device]] what to do according to program [[Instruction]]

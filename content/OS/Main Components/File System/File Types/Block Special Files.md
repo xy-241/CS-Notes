@@ -10,7 +10,7 @@ Last Date: 2023-07-26T17:33:37+08:00
 References:
 ---
 >[!note]
->Model [[IO Devices]] that consist of a collection of [[randomly addressable blocks]]
+>Model [[IO Device]] that consist of a collection of [[randomly addressable blocks]]
 
 >[!example]
 >[[disk]]

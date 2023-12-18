@@ -13,7 +13,7 @@ References:
 >Booting sequence
 >1. [[BIOS]] started
 >	1. Checks [[Main Memory]] capacity
->	2. Check [[IO Devices]]
+>	2. Check [[IO Device]]
 >		1. Scanning [[Peripheral Component Interconnect Express (PCIe) bus]] etc to detect all devices attached
 >	3. Determine the [[Boot Device]] by trying out a list of devies stored in the [[CMOS]]
 >2. Boot Device started

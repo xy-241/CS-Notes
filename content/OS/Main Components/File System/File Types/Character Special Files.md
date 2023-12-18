@@ -10,4 +10,4 @@ Last Date: 2023-07-26T17:35:07+08:00
 References:
 ---
 >[!note]
->Model [[IO Devices]] that accept or output a [[character stream]]
+>Model [[IO Device]] that accept or output a [[character stream]]

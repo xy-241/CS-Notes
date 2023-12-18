@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-28T09:59:05+08:00
-Last Date: 2023-12-16T20:10:41+08:00
+Last Date: 2023-12-18T16:54:03+08:00
 References: 
 ---
 ## Abstract
@@ -37,3 +37,7 @@ References:
 - Simplified [[Pipeline]] & [[Instruction-Level Parallelism]]
 ### Variable-length
 - More Flexible BUT Requires more steps for [[Pipeline Stages#Fetch]] & [[Pipeline Stages#Decode]]
+
+### Single Instruction Multiple Data
+- This allows one [[Instruction]] to operate on multiple data at once and have multiple outputs essentially
+- This can reduce the number of instructions in a program significantly, and have more data processed without the involvement of the inefficient [[Main Memory]]
