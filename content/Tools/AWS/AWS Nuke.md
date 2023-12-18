@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-01T16:41:00
-Last Date: 2023-12-10T19:19:32+08:00
+Last Date: 2023-12-18T13:27:26+08:00
 ---
 ## Abstract
 ---
@@ -31,9 +31,11 @@ regions:
 account-blocklist:
   - 1234567890
 accounts:
-  "106330972965":{}
+  "106330972965": {}
 ```
 
+>[!caution] Yaml Syntax
+>Make sure there is a **space** between `:` and `{}`
 ### Example 2: Filter resources (Prevent some resources from be removed)
 ```yaml
 # Achieve this:  ap-southeast-1 - ACMCertificate - arn:aws:acm:ap-southeast-1:106330972965:certificate/5212c31a-94f1-4dc9-80a8-b72d8d6b2054 - [DomainName: "vault.yxy.ninja"] - filtered by config
