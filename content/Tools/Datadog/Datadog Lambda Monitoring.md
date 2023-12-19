@@ -6,16 +6,16 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-18, 14:20
-Last Date: 2023-12-18T15:40:17+08:00
+Last Date: 2023-12-19T10:55:35+08:00
 References: 
 ---
 ## Abstract
 ---
-- The following is the architecture
+- The following is the architecture, we need to [[#Add Datadog Lambda Extension]], [[#Add Datadog Lambda Library]] and [[#Fine tune with Environment Variables]]
 [<img src="https://datadog-docs.imgix.net/images/serverless/serverless_custom_metrics.5c2b598d14c340160ea6a2a0a360af1e.png?fit=max&auto=format">](https://datadog-docs.imgix.net/images/serverless/serverless_custom_metrics.5c2b598d14c340160ea6a2a0a360af1e.png?fit=max&auto=format)
 
 >[!info] Understand messages generated Datadog
->Datadog gives insights to the lambda functions it is monitoring. [Here](https://docs.datadoghq.com/serverless/guide/serverless_warnings/#generated-warnings) is a list of insights it can generate, and the meanings
+>Datadog gives insights to the lambda functions it is monitoring. [Here](https://docs.datadoghq.com/serverless/guide/serverless_warnings/#generated-warnings) is a list of insights it can generate, and the corresponding meanings
 
 ## Setup Example
 ---
@@ -29,8 +29,7 @@ There are mainly 3 things we need to do, and we can automate the process with th
 - [ ] [[#Add Datadog Lambda Library]]
 - [ ] [[#Fine tune with Environment Variables]]
 
->[!attention] Lambda Handler
->We need to modify the lambda handler for certain languages like Python. Please visit [official guide](https://docs.datadoghq.com/serverless/aws_lambda/installation/python/?tab=terraform#installation) for more information
+
 ### Add Datadog Lambda Extension
 - This serves as the [[Datadog#Agent]]
 - We can add it in as a [Lambda Layer](https://docs.aws.amazon.com/lambda/latest/dg/chapter-layers.html)
@@ -54,8 +53,8 @@ Below is a table of commonly used environment variables:
 | DD_TRACE_ENABLED             | If we want to enable [[Trace]] or not                             | Yes      |
 | DD_ENV                       | Logical grouping name of monitoring data on the Datadog dashboard | Yes      |
 | DD_SERVICE                   | Logical grouping name of monitoring data on the Datadog dashboard | Yes      |
-| DD_SERVERLESS_APPSEC_ENABLED | If we want to enable Security Signals on the Lambda function      | Yes         |
-
+| DD_SERVERLESS_APPSEC_ENABLED | If we want to enable Security Signals on the Lambda function      | Yes      |
+| DD_LAMBDA_HANDLER            |   Required for Python and NodeJS Lambda, refer to [official guide](https://docs.datadoghq.com/serverless/guide/handler_wrapper/) for more information                                                                |   Yes/No       |
 
 
 ## References
