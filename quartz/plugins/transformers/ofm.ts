@@ -431,15 +431,25 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
         })
       }
 
+      return plugins
+    },
+    htmlPlugins() {
+      const plugins: PluggableList = [rehypeRaw]
+
       if (opts.mermaid) {
         plugins.push(() => {
-          return (tree: Root, _file) => {
-            visit(tree, "code", (node: Code) => {
-              if (node.lang === "mermaid") {
-                node.data = {
-                  hProperties: {
-                    className: ["mermaid"],
-                  },
+          return (tree: HtmlRoot, _file) => {
+            visit(tree, "element", (node) => {
+              if (node.tagName === "pre") {
+                const firstChild = node.children[0]
+                if (firstChild && firstChild.type === "element" && firstChild.tagName === "code") {
+                  const code = firstChild
+                  const isMermaidBlock =
+                    (code.properties["className"] as Array<string>)?.[0] === "language-mermaid"
+                  if (isMermaidBlock) {
+                    node.children = code.children
+                    node.properties.className = ["mermaid"]
+                  }
                 }
               }
             })
