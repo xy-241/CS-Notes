@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-18, 21:23
-Last Date: 2023-12-18T21:44:23+08:00
+Last Date: 2023-12-19T10:41:20+08:00
 References: 
 ---
 ## Abstract
@@ -32,7 +32,7 @@ $$
 GCD(a, b) = GCD(b, r)
 $$
 - When `r` in `a = bq + r` is `0`, `b` is be the GCD
-- The `gcd()` function implemented with [[Recursion]]
+- The `gcd()` function implemented with [[Recursion]], [[Algorithm Complexity Analysis#Worst Time Complexity]] is `O(logn)`
 ```java
 public static int gcd(int a, int b) {
   int r = a%b;
@@ -40,4 +40,10 @@ public static int gcd(int a, int b) {
   return gcd(b, r);
 }
 ```
-- [Euclidean Algorithm Proof](https://youtu.be/cOwyHTiW4KE?si=hwuNs4Fg1olBe1tf&t=257)
+#### Proof
+>[!attention] Not a very clear proof, just for better understanding
+- [Euclidean Algorithm Proof Reference](https://youtu.be/cOwyHTiW4KE?si=hwuNs4Fg1olBe1tf&t=257)
+- Let `d` be the GCD of `a` and `b` -> `d|a` and `d|b`
+- And we know `a = bq + r`, so `r = a - bq`
+- With `r = a - bq`, we are sure we can factor out a `d` from `a - bq`, since `d|a` and `d|bq`, since `q` is an [[Integer (整数)]]
+- So since `d|r`, and `d|b`

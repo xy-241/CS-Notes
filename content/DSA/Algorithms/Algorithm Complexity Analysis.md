@@ -6,14 +6,15 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T15:13:00
-Last Date: 2023-12-10T17:25:47+08:00
+Last Date: 2023-12-19T10:33:25+08:00
 References: 
 ---
 ## Abstract
 ---
-- Analysis [[#Space]] & [[#Time]], related with the input size and observing the trend when input size gets bigger
+- Analysis *space* & *time* used, related with the input size and observing the trend when input size gets bigger
 - The analysis isn't limited to particular machine. It applies to all the machines
->[!caution] We are only thinking what is the complexity when the input size is approaching [[Infinity (∞)]]
+>[!caution] It is all about [[Infinity (∞)]]
+>- We are only thinking what is the complexity when the input size is approaching Infinity (∞)
 >- So when the actual input size in real world is small, the algorithms with worst time complexity may run fast! 
 >![[time_analysis_worstIsBetter.png]]
 
@@ -21,11 +22,11 @@ References:
 
 ## Terminologies
 ---
-### Space
+### Worst Space Complexity
 - The [[Main Memory]] used **relative to the input size**
-### Time
+### Worst Time Complexity
 - The time it takes **relative to the input size**
-- Not dependent on specs of the machine
+- [[Algorithm Complexity Analysis]]
 
 
 
