@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - js
 Creation Date: 2023-12-15, 20:01
-Last Date: 2023-12-15T20:05:21+08:00
+Last Date: 2023-12-20T13:12:33+08:00
 References: 
 ---
 ## Abstract
@@ -15,7 +15,7 @@ References:
 ## NPM
 ---
 - Tool to install the *JS Modules*, refer to [[MacOs Setup]] for set up details
-### Obtain the absolute path to global node modules 
+- Obtain the absolute path to global node modules 
 ```bash
 npm root -g
 

@@ -6,15 +6,14 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2023-10-07T16:38:28+08:00
-References:
+Last Date: 2023-12-20T16:24:30+08:00
+References: 
 ---
-## Basics
+## Abstract
 ---
->[!abstract] Basic Properties
->![[stack.png]]
->- [[Linear Data Structure]]
->- Aka [[Array]]/[[Linked List]] with limitations
+![[stack.png]]
+- [[Linear Data Structure]]
+- Aka [[Array]]/[[Linked List]] with limitations
 
 
 >[!caution] Stack is more about the having the push(), pop() & peek() in O(1) on a particular data structure 
@@ -47,9 +46,9 @@ References:
 >- Both support without much difference
 
 >[!note] Time Efficiency
->- [[Array]] has [[Cache Locality]] to take advantage of [[Cache]] for extreme fast access. But [[Array]] has fixed size, if there isn't any space, that particular insertion operation will be O(n)
+>- [[Array]] has [[Cache Locality]] to take advantage of [[CPU Cache]] for extreme fast access. But Array has fixed size, if there isn't any space, that particular insertion operation will be O(n)
 >- [[Linked List]] has to use extra time to perform pointer operation 
->- Conclusion: [[Array]] has slightly better time efficiency, since expansion is a low frequency operation, while pointer operation occurs whenever there is an insertion operation. However, [[Linked List]] has more stable performance
+>- Conclusion: Array has slightly better time efficiency, since expansion is a low frequency operation, while pointer operation occurs whenever there is an insertion operation. However, [[Linked List]] has more stable performance
 
 >[!note] Space Efficiency
 >- [[Array]] get a pre-defined [[Main Memory]] size, and each expansion is usually double the original size which may exceed the actual demand
@@ -63,14 +62,3 @@ References:
 >[!success] O(1) to pop()
 
 >[!success] O(1) to peek()
-
-
-## Side Notes
----
->[!success]
-
->[!success] 
-
->[!success] 
-
->[!success] 

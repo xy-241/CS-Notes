@@ -6,10 +6,9 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:16:23+08:00
-Last Date: 2023-10-19T17:16:23+08:00
-References:
+Last Date: 2023-12-20T16:26:57+08:00
+References: 
 ---
-[YouTube Reference](https://youtu.be/2quKyPnUShQ?si=1jc9zDESuSoje2XC)
 ## Abstract
 ---
 - An abstraction that powers [[Address Space]] a [[Process]] use
@@ -25,9 +24,15 @@ References:
 ---
 - Avoid [[Memory Fragmentation]] - the [[Address Space]] can be broken down into sizes to fit inside fragmented [[Main Memory]]. The [[#Virtual Address]] ensures a continuous memory block presented to [[Process]]
 - Isolated [[Address Space]] 
-- Used when a [[Process]] has more [[Address Space]] than [[Main Memory]] by placing them on [[disk]] and using main memory as a kind of [[Cache]] for most heavily executed parts -> but this can lead to [[Page Faults]]
+- Used when a [[Process]] has more [[Address Space]] than [[Main Memory]] by placing them on [[disk]] and using main memory as a kind of cache for most heavily executed parts -> but this can lead to [[Page Faults]]
 
 
 ## Terminologies
 ---
 ### Logical Address
+- Not bounded to physical [[Memory Element]]
+
+
+## References
+---
+- [YouTube Reference](https://youtu.be/2quKyPnUShQ?si=1jc9zDESuSoje2XC)

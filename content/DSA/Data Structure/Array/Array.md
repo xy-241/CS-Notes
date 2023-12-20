@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-08T20:10:00
-Last Date: 2023-12-12T10:24:35+08:00
+Last Date: 2023-12-20T16:19:21+08:00
 References: 
 ---
 ## Abstract
@@ -34,8 +34,8 @@ References:
 >- However, it is Θ(1), Theta(1) to insert/delete
 
 >[!info] Performance comparison with [[Linked List]] when going through all elements
->- Array is much faster if there is [[Cache]], otherwise it will be slightly slower (Because Array has to calculate the address of the next element, while [[Linked List]] is already calculated)
->- Array faster with [[Cache]] is because it is stored in a [[Data Structure#Continuous Memory]] manner, and can take advantage of [[Cache Locality (Locality of Reference)]]
+>- Array is much faster if there is [[CPU Cache]], otherwise it will be slightly slower (Because Array has to calculate the address of the next element, while [[Linked List]] is already calculated)
+>- Array faster with CPU Cache is because it is stored in a [[Data Structure#Continuous Memory]] manner, and can take advantage of [[CPU Cache#Cache Locality]]
 
 
 ## Properties

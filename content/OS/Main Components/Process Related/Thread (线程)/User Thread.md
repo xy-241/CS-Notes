@@ -36,7 +36,7 @@ not support threads.
 - Thread switching is at least an order of magnitude faster than trapping to the kernel 
 - No [[Trap Interrupt (陷入)]] is needed
 - No [[Context Switch]] needed
-- the [[Cache]] need not be flushed
+- the [[CPU Cache]] need not be flushed
 
 ### Great Customisation 
 - Allow each [[Process]] to have its own customized **Process Scheduling Algorithms**
