@@ -6,18 +6,25 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-04T11:16:00
-Last Date: 2023-12-14T18:27:12+08:00
+Last Date: 2023-12-21T10:41:05+08:00
 References: 
 ---
 ## Abstract
 ---
-- Obtain a **shell** into [[ECS]] from a local machine
+**SSH** into [[ECS#Container]] from your own laptops. Great for debugging containers under ECS.
 
-## Enable ECS Exec for [[ECS]]
+**Setup Checklist:**
+- [ ] [[#Enable ECS Exec]]
+- [ ] [[#Install Session Manager Plugin for AWS Cli]]
+- [ ] [[#Add SSM permission via IAM Policy to the ECS Role]]
+- [ ] [[#Check if ECS Exec is configured properly]]
+- [ ] [[#SSH into ECS Container]]
+
+## Enable ECS Exec
 ---
-### Existing [[ECS]]
->[!caution] Only new [[ECS#Task]] under the [[ECS#Service]] will have the ECS Exec enabled
-```bash
+### For Existing ECS Cluster
+- Only new [[ECS#Task]] under the [[ECS#Service]] will have the ECS Exec enabled
+```bash "<CLUSTER_NAME>" "<SERVICE_NAME>"
 aws ecs update-service \
     --cluster <CLUSTER_NAME> \
     --service <SERVICE_NAME> \
@@ -25,30 +32,29 @@ aws ecs update-service \
 ```
 
 
-### New [[ECS]]
->[!info] Based on what I know, there isn't a way to enable ECS EXEC from the GUI console
+### New ECS Cluster
+Based on what I know, there isn't a way to enable ECS EXEC from the GUI console
 
-Option 1. [Using Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecs_service#enable_execute_command)
+- **Option 1:** [Using Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecs_service#enable_execute_command)
 
-Option 2. Using Cli
-```bash
+- **Option 2:** Using Cli
+```bash /<CLUSTER_NAME>/ /<TASK-DEFINITION-NAME>/ /<SERVICE_NAME>/ /1/
 aws ecs create-service \
---cluster cluster-name \
---task-definition task-definition-name \
+--cluster <CLUSTER_NAME> \
+--task-definition <TASK-DEFINITION-NAME> \
 --enable-execute-command \
---service-name service-name \
+--service-name <SERVICE_NAME> \
 --desired-count 1
 ``` 
-
-## Obtain a Shell
+## Get into ECS Container
 ---
-### Install [[Session Manager]] plugin for AWS Cli
+### Install Session Manager Plugin for AWS Cli
 ```bash
 brew install --cask session-manager-plugin
 ```
 
-### Add SSM permission ([[IAM Policy]]) to the ECS Role
->[!caution] NOT the execution role
+### Add SSM permission via IAM Policy to the ECS Role
+**NOT the execution role!!!**
 
 ```json
 {
@@ -68,17 +74,18 @@ brew install --cask session-manager-plugin
 }
 ```
 
-### Check if ECS Exec is enabled on the [[ECS#Task]]
-- [Script is open-sourced](https://github.com/aws-containers/amazon-ecs-exec-checker)
-```bash
+### Check if ECS Exec is configured properly
+Script is [open-sourced](https://github.com/aws-containers/amazon-ecs-exec-checker)
+```bash /<PROFILE_NAME>/ /<AWS_REGION>/ /<CLUSTER_NAME>/ /<TASK_ID>/
 export AWS_PROFILE=<PROFILE_NAME>
 export AWS_REGION=<AWS_REGION>
 
 bash <( curl -Ls https://raw.githubusercontent.com/aws-containers/amazon-ecs-exec-checker/main/check-ecs-exec.sh ) <CLUSTER_NAME> <TASK_ID>
 ```
 
-### SSH into [[ECS#Container]]
-```bash
+### SSH into ECS Container
+If face error connecting, can try create a new [[ECS#Task]] deployment
+```bash /<CLUSTER_NAME>/ /<TASK_ID>/ /<CONTAINER_NAME>/
 aws ecs execute-command \
 	--cluster <CLUSTER_NAME> \
 	--task <TASK_ID> \
@@ -86,4 +93,3 @@ aws ecs execute-command \
 	--interactive  \
 	--command "/bin/sh" 
 ```
->[!tip] If face error connecting, can try create a new [[ECS#Task]] deployment

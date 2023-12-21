@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2023-12-20T10:36:56+08:00
+Last Date: 2023-12-21T10:02:37+08:00
 References: 
 ---
 ## Abstract
@@ -41,7 +41,7 @@ $$
 $$
 \{x \in U | P(x)\}
 $$
-- The set of all `x` in `U` such that `P(x)`` is true
+- The set of all `x` in `U` such that `P(x)` is true
 
 ### Replacement Notation
 $$
@@ -68,13 +68,8 @@ $$
 - The size of the [[Discrete Math/Set|Set]]
 
 
-
-## Terminologies
+## Types of Sets
 ---
-### Object
-- Members or elements of [[Discrete Math/Set|Set]]
-- Example: `1`, `2`, `3` are objects in the set of [[Integer (整数)]]
-
 ### Subset
 $$
 A \subseteq B
@@ -87,14 +82,45 @@ $$
 $$
 B \supseteq A
 $$
-- `B` is the supper `A`
+- `A` is a [[#Subset]] of `B`
 
 
 ### Proper Subset
 $$
-A \subseteq B
+A \subsetneq B
 $$
 iff
 $$
 (A \subseteq B) \land (A \ne B)
 $$
+
+### Empty Set
+$$
+\emptyset
+$$
+$$
+\{\}
+$$
+- A [[Discrete Math/Set|Set]] that contains `0` [[#Object]]
+- Itself is a [[#Object]]
+>[!caution] Not a **Null Set**
+
+### Singleton
+- A [[Discrete Math/Set|Set]] with exactly one [[#Object]]
+
+
+## Theorems
+---
+### Theorem 6.2.4
+- An [[#Empty Set]] is a s [[#Subset]] of every [[Discrete Math/Set|Set]]
+- Assume `A` is all the possible sets
+$$
+\emptyset \subseteq A
+$$
+- Proved using [[Mathematical Statement#Vacuous Truth of Universal]]
+## Terminologies
+---
+### Object
+- Members or elements of [[Discrete Math/Set|Set]]
+- Example: `1`, `2`, `3` are objects in the set of [[Integer (整数)]]
+
