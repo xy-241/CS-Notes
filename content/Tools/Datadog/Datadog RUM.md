@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2023-12-21T11:16:36+08:00
+Last Date: 2023-12-21T13:43:12+08:00
 References: 
 ---
 ## Abstract
@@ -16,7 +16,7 @@ Datadog RUM provides [[Real User Monitoring]]
 
 ## Setup
 ---
-The example below is based on [next.js](https://nextjs.org/)
+The example below is based on [next.js](https://nextjs.org/). The setup process is very similar for other Javascript framework
 
 **Checklist:**
 - [ ] [[#Datadog Dashboard]]
