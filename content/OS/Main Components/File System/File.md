@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - linux
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2023-12-15T11:23:00+08:00
+Last Date: 2023-12-21T15:50:57+08:00
 References: 
 ---
 
@@ -22,6 +23,12 @@ References:
 
 >[!info] In [[Portable Operating System Interface (POSIX)]], **file permissions** are handled by **rwx bits**
 
+## Useful Commands
+---
+```bash
+# Generate a hexdump from a binary file and display the output
+xxd <BINARY_NAME.bin>
+```
 ## Terminologies
 
 ---

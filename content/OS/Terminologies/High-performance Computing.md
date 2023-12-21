@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-11T18:47:00
-Last Date: 2023-12-11T23:00:51+08:00
-References:
+Last Date: 2023-12-21T15:41:11+08:00
+References: 
 ---
 ## Abstract
 ---
-
+- Maximise the resources we have 
 
 
 ## Terminologies 

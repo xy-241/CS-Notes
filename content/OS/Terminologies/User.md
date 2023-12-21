@@ -5,9 +5,40 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
-Creation Date: 2023-07-19T14:25:51+08:00
-Last Date: 2023-07-19T14:25:51+08:00
-References:
+  - linux
+Creation Date: 2023-08-10T00:30:35+08:00
+Last Date: 2023-12-21T15:57:35+08:00
+References: 
+---
+## Abstract
 ---
 - Person authorized to use the system
-- Can be member of [[Groups]]
+
+
+## Linux User
+---
+Based on [[Unix]] & [[Portable Operating System Interface (POSIX)]]
+
+```bash
+# List All Users
+cut -d: -f1 /etc/passwd
+
+# Obtain User Info
+id <USER_NAME>
+
+# Obtain Current User Info
+who
+```
+
+
+## Terminologies 
+---
+### UID
+- Stands for *User IDentification*
+- A number that is assigned to each [[OS/Terminologies/User|User]] by System Administrator
+- One is assigned to **Superuser (UNIX)**
+### User Group
+- Assigned a Group IDentification (GID)
+- [[OS/Terminologies/User|User]] can be members of the group
+
+

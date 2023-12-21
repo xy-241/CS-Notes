@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2023-12-16T20:37:59+08:00
+Last Date: 2023-12-21T15:43:52+08:00
 References: 
 ---
 
@@ -28,7 +28,7 @@ References:
 
 ### Child Process
 
-- Has the same [[User IDentification (UID)]] as its parent
+- Has the same [[OS/Terminologies/User#UID|UID]] as its parent
 ### Process State
 1. Running
 2. Ready to Run - Could be running but [[CPU]] gave processing power to some other [[Process]]

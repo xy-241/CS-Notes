@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2023-10-07T16:38:28+08:00
-References:
+Last Date: 2023-12-21T16:02:50+08:00
+References: 
 ---
 >[!note]
 >![[accumulator isa.png]]
