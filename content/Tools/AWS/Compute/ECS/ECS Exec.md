@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-04T11:16:00
-Last Date: 2023-12-21T10:41:05+08:00
+Last Date: 2023-12-21T11:32:38+08:00
 References: 
 ---
 ## Abstract
@@ -23,7 +23,6 @@ References:
 ## Enable ECS Exec
 ---
 ### For Existing ECS Cluster
-- Only new [[ECS#Task]] under the [[ECS#Service]] will have the ECS Exec enabled
 ```bash "<CLUSTER_NAME>" "<SERVICE_NAME>"
 aws ecs update-service \
     --cluster <CLUSTER_NAME> \
@@ -31,6 +30,7 @@ aws ecs update-service \
     --enable-execute-command
 ```
 
+>[!caution] Only new [[ECS#Task]] under the [[ECS#Service]] will have the ECS Exec enabled
 
 ### New ECS Cluster
 Based on what I know, there isn't a way to enable ECS EXEC from the GUI console

@@ -6,14 +6,13 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-17T21:32:43+08:00
+Last Date: 2023-12-21T11:09:39+08:00
 References: 
 ---
 
 ## Abstract
 ---
-
-- [[Application Performance Monitoring (APM)]]
+Datadog APM is used for [[Application Performance Monitoring (APM)]]
 
 >[!info] Whitelist outbound traffic to Datadog Endpoints
 >In some deployment environment, by default all outbound traffic is denied. [Here](https://docs.datadoghq.com/agent/configuration/network/?tab=agentv6v7) is a list of datadog endpoints you can use to whitelist the traffic
@@ -31,8 +30,9 @@ The rest of the setup is around [[ECS#Task Definition]], we need to add in 3 par
 
 ### Pipe log to AWS Firelens
 
-- Add the following block inside the [[ECS#Task Definition]] of **container** that we want to access the log
-- Update the highlighted parts with your own values
+Add the following block inside the [[ECS#Task Definition]] of **container** that we want to access the log
+
+Update the highlighted parts with your own values
 
 ```json {4-5, 7-9}
 "logConfiguration": {
@@ -50,9 +50,9 @@ The rest of the setup is around [[ECS#Task Definition]], we need to add in 3 par
 ```
 
 ### AWS Firelens
+You can refer to [[ECS#Hardware Details]] for the `cpu` and `memory` configuration
 
-- Update the highlighted parts with your own values
-- You can refer to [[ECS#Hardware Details]] for the `cpu` and `memory` configuration
+Update the highlighted parts with your own values
 
 ```json {2, 4-5}
 {
@@ -76,13 +76,9 @@ The rest of the setup is around [[ECS#Task Definition]], we need to add in 3 par
 ```
 
 ### Datadog Agent Sidecar
+There is [a list of environment variables](https://docs.datadoghq.com/serverless/guide/agent_configuration/) you can add to fine tune the agent
 
-- Update the highlighted parts with your own values
-- There is [a list of environment variables](https://docs.datadoghq.com/serverless/guide/agent_configuration/) you can add to fine tune the agent
-
-> [!info] `DD_APM_ENV` overrides `DD_ENV`
-
-> [!tip] We can use `DD_APM_IGNORE_RESOURCE` to ignore [[Trace]] from transmitted to Datadog
+Update the highlighted parts with your own values
 
 ```json {2, 4-5, 11, 15, 19, 23, 27}
 {
@@ -119,10 +115,13 @@ The rest of the setup is around [[ECS#Task Definition]], we need to add in 3 par
 }
 ```
 
-### Terraform Sample Codes
 
-- Refer to the above sections for configuration details
->[!bug] `DD_APM_IGNORE_RESOURCES` takes in a list of resources, but I wasn't able to pass a list object to the key-value pair environment variable. Please let me know if you find a way around it 😃
+> [!info] `DD_APM_ENV` overrides `DD_ENV`
+
+> [!tip] We can use `DD_APM_IGNORE_RESOURCE` to ignore [[Trace]] from transmitted to Datadog
+### Terraform Sample Codes
+Refer to the above sections for configuration details
+
 
 ```hcl
 resource "aws_ecs_task_definition" "backend_app" {
@@ -229,8 +228,9 @@ resource "aws_ecs_task_definition" "backend_app" {
 }
 ```
 
-## Terminologies
----
+>[!bug] 
+>`DD_APM_IGNORE_RESOURCES` takes in a list of resources, but I wasn't able to pass a list object to the key-value pair environment variable. Please let me know if you find a way around it 😃
+
 
 ## References
 ---

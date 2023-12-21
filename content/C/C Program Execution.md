@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-10-02T18:04:26+08:00
-Last Date: 2023-12-16T20:30:22+08:00
+Last Date: 2023-12-21T11:35:02+08:00
 References: 
 ---
 ## Abstract
@@ -26,7 +26,7 @@ gcc -E hello_world.c
 ```
 
 
-### 2) Stage 2
+### Stage 2
 - [[Language Processors#Compiler]] generates codes in [[Assembly language]] in `.s` format
 - Returns error & warnings if the [[Header File]] isn't defined
 ```bash
@@ -51,4 +51,4 @@ gcc -c hello_world.c
 
 ## References
 ---
-- [C Language Source Code to Exe](https://youtu.be/gSackZtqlUI?si=FXfUYg19cdPkvyRr)
+- [C Language Source Code to EXE](https://youtu.be/gSackZtqlUI?si=FXfUYg19cdPkvyRr)
