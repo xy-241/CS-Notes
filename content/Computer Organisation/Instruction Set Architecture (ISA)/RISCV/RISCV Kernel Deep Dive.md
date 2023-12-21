@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-01T21:55:00
-Last Date: 2023-12-21T15:16:36+08:00
+Last Date: 2023-12-21T15:25:20+08:00
 References: 
 ---
 ## Abstract
@@ -16,7 +16,7 @@ References:
 
 ## Compilation of the Kernel
 ---
-```bash /128M/ /2/
+```bash /-m 128M/ /-smp 2/
 docker run --rm -v $(pwd):/project -it --platform linux/amd64 yuxinyang/rv-tool-chain:latest make
 docker run --rm -v $(pwd):/project -it --platform linux/amd64 yuxinyang/rv-tool-chain:latest make fs.img
 
