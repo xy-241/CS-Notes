@@ -16,5 +16,5 @@ References:
 
 >[!note] Processes (Simple but uses a lot of [[Gates]], can be reduce [[Gates]] with the use of [[Karnaugh Map]])
 >1. Come up with a [[Truth Table]] first
->2. For each true records, we connect the inputs using [[Logical Product (AND)]] gates
->3. We connect true record [[Logical Product (AND)]] gates with [[Logical Sum (OR)]] gates
+>2. For each true records, we connect the inputs using [[AND]] gates
+>3. We connect true record [[AND]] gates with [[OR]] gates

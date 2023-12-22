@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-20, 16:43
-Last Date: 2023-12-21T17:17:16+08:00
+Last Date: 2023-12-21T17:20:31+08:00
 tags:
   - cp
 draft: 
@@ -34,6 +34,7 @@ draft:
 - When `a` and `b` are divisible by `k`, it means by subtracting `y` times from `a` and `z` time from `b`. We obtain `0` aka reaching same level
 - Given `[1,5,13]`, the differences we have are `4` and `8`, the GCD of `4` and `8` is `4` -> `4 = 1*4`, `8 = 2*4`
 - Given `[1,13,5]`, the differences we have are `12` and `8`, the GCD of `12` and `8` is `4` -> `12 = 3*4`, `8 = 2*4`
+- The order doesn't matter since eventually all elements should be reduced to the same integer 
 - We can make the difference is positive, to ensure the GCD calculated is positive
 ## Space & Time Analysis
 ---

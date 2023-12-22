@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2023-12-21T10:02:37+08:00
+Last Date: 2023-12-22T18:04:21+08:00
 References: 
 ---
 ## Abstract
@@ -100,6 +100,12 @@ $$
 $$
 $$
 \{\}
+$$
+$$
+\emptyset \not\in \{\}
+$$
+$$
+\emptyset \subseteq \{\}
 $$
 - A [[Discrete Math/Set|Set]] that contains `0` [[#Object]]
 - Itself is a [[#Object]]

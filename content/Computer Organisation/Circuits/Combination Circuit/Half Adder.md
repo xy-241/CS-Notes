@@ -11,5 +11,5 @@ References:
 ---
 ## Abstract
 ---
-- Built with 1 [[XOR (Exclusive OR) Gate]] for the current bit & 1 [[Logical Product (AND)]] for the carry bit
+- Built with 1 [[XOR]] for the current bit & 1 [[AND]] for the carry bit
 - Takes in 2 [[Computer Data Representation#Bit]]

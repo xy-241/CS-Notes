@@ -7,14 +7,17 @@ tags:
   - boolean_algebra
   - computer_organisation
 Creation Date: 2023-09-21T13:26:58+08:00
-Last Date: 2023-09-21T13:26:58+08:00
-References:
+Last Date: 2023-12-23T00:23:48+08:00
+References: 
 ---
 ## Abstract
 ---
+- Logical Product
 - Made of 2 [[Transistors (晶体管)]]
  ![[AND.png]]
->[!note] Represented
->$$A\times B$$
->Or
->$$AB$$
+
+- Represented by
+
+$$A\times B$$
+
+$$AB$$

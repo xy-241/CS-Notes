@@ -18,7 +18,7 @@ References:
 ## Examples
 ---
 ### `andi`
-- Perform a bitwise [[Logical Product (AND)]] operation between a register and an immediate value
+- Perform a bitwise [[AND]] operation between a register and an immediate value
 - Get last 4 significant [[Computer Data Representation#Bit]] of $s0, and store it inside $t0 - `andi $t0, $s0 , 0xF`
 
 ### `slti`

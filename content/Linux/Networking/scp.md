@@ -4,7 +4,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
-  - bash
+  - linux
 Creation Date: 2023-08-07T16:32:55+08:00
 Last Date: 2023-08-07T16:32:55+08:00
 References:
