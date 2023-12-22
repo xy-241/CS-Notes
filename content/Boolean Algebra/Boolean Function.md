@@ -7,13 +7,14 @@ tags:
   - boolean_algebra
   - computer_organisation
 Creation Date: 2023-08-20T16:09:31+08:00
-Last Date: 2023-12-23T00:22:53+08:00
+Last Date: 2023-12-23T00:31:21+08:00
 References: 
 ---
 ## Abstract
 ---
 - Use **Truth Table** to prove if 2 functions equal to each other
 - The above function is X [[AND]] Y [[AND]] C
+
 ![[boolean functions.png]]
 
 ## Complement Function

@@ -14,6 +14,7 @@ References:
 ---
 - *Exclusive OR*
 - Returns true only when 2 inputs aren't the same
+
 ![[XOR.png]]
 
 ## Properties
