@@ -43,12 +43,12 @@ References:
 - The API that  [[OAuth 2.0#Client]] wants to use on behalf of the  [[#Resource Owner (Identity)]]
 - In some cases, both  [[OAuth 2.0#Authorization Server]] &  [[OAuth 2.0#Resource Server]] are bundled together
 
-## Resource Owner Side
+## Resource Owner
 ---
 ### Consent
 - The [[OAuth 2.0#Authorization Server]] takes the [[OAuth 2.0#Scope]] the [[OAuth 2.0#Client]] is requesting and verifies it with the [[OAuth 2.0#Resource Owner]], see if he/she wants to grant the permissions
 
-## Client Side
+## Client
 ---
 ### Scope
 - The refined permissions [[OAuth 2.0#Client]] wants
@@ -66,7 +66,7 @@ References:
 - The key the [[OAuth 2.0#Client]] uses to communicate with the [[OAuth 2.0#Resource Server]] on the behalf of [[OAuth 2.0#Resource Owner]]
 - Used for [[Authorisation]]
 
-## Authorization Server Side
+## Authorization Server
 ---
 ### Redirect URI (Callback URI)
 - The URI the  [[OAuth 2.0#Authorization Server]] will redirect the  [[OAuth 2.0#Resource Owner]] back to after granting permissions to  [[OAuth 2.0#Client]]
