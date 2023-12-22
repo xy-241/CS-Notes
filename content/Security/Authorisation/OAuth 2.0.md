@@ -6,50 +6,36 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-20T17:09:28+08:00
-Last Date: 2023-12-23T01:12:29+08:00
+Last Date: 2023-12-23T01:21:38+08:00
 References: 
 ---
 ## Abstract
 ---
 - Stands for *Open Authorization*
 - Only for [[Authorisation]]
-- Generate [[#Access Token]] for [[#Client]] to access [[#Resource Server]] with refined permission control
-- Refined access control to resource server
+- [[#Authorization Server]] gets [[#Consent]] from [[#Resource Owner]] to generate [[#Access Token]] for [[#Client]] to access [[#Resource Server]] with refined permission control
 
 
 ## Benefits
 ---
 ### Refined Permission Control
 - We don't need to provide password of the account to [[#Client]] which grants them full control & high risk associated with sharing password 
-- We can give [[#Client]] permissions to access only username and account's contacts, nothing else
+- We can give Client permissions to access only username and account's contacts, nothing else
 
 ### Smaller Attack Surface
 - [[#Access Token]] can be attached with a TTL to expire automatically without manual intervention & creating negative impact on UX
 
 
-## Parties Involved
----
-### Resource Owner (Identity)
-- Owner of the identity, live user themselves
-
-### Client
-- Third-party application that wants to find out more about the [[OAuth 2.0#Resource Owner]] and carry out actions on the behalf of him/her
-
-### Authorization Server
-- The application that hosts the account of the  [[OAuth 2.0#Resource Owner]] 
-- Single source for identity 
-
-### Resource Server
-- The API that  [[OAuth 2.0#Client]] wants to use on behalf of the  [[#Resource Owner (Identity)]]
-- In some cases, both  [[OAuth 2.0#Authorization Server]] &  [[OAuth 2.0#Resource Server]] are bundled together
 
 ## Resource Owner
 ---
+Owner of the identity, live user themselves
 ### Consent
 - The [[OAuth 2.0#Authorization Server]] takes the [[OAuth 2.0#Scope]] the [[OAuth 2.0#Client]] is requesting and verifies it with the [[OAuth 2.0#Resource Owner]], see if he/she wants to grant the permissions
 
 ## Client
 ---
+Third-party application that wants to find out more about the [[OAuth 2.0#Resource Owner]] and carry out actions on the behalf of him/her
 ### Scope
 - The refined permissions [[OAuth 2.0#Client]] wants
 - Access to data & permissions to perform actions on [[OAuth 2.0#Resource Server]] etc
@@ -68,6 +54,8 @@ References:
 
 ## Authorization Server
 ---
+- The application that hosts the account of the  [[OAuth 2.0#Resource Owner]] 
+- Single source for identity 
 ### Redirect URI (Callback URI)
 - The URI the  [[OAuth 2.0#Authorization Server]] will redirect the  [[OAuth 2.0#Resource Owner]] back to after granting permissions to  [[OAuth 2.0#Client]]
 - It is the url on the [[#Client]]
@@ -77,7 +65,10 @@ References:
 ### Authorization Code
 - Short-lived code [[OAuth 2.0#Authorization Server]] sends back to the [[OAuth 2.0#Client]]
 
-
+## Resource Server
+---
+- The API that  [[OAuth 2.0#Client]] wants to use on behalf of the  [[#Resource Owner (Identity)]]
+- In some cases, both  [[OAuth 2.0#Authorization Server]] &  [[OAuth 2.0#Resource Server]] are bundled together
 
 
 ## References
