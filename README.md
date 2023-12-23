@@ -6,25 +6,21 @@
 
 
 ## 💻 Operating System
----
 - [Operating System](https://notes.yxy.ninja/tags/OS)
 - [Computer Organisation](https://notes.yxy.ninja/tags/computer_organisation)
 
 ## 📝 Data Structure & Algorithm
----
 - [Data Structure & Algorithm Basis](https://notes.yxy.ninja/tags/dsa)
 - [Competitive Programming Solutions & Reflections](https://notes.yxy.ninja/tags/cp)
 - [Problem Solving Tricks](https://notes.yxy.ninja/tags/problem_solving)
 
 ## 🧮 Math
----
 - [Number Theory](https://notes.yxy.ninja/tags/number_theory)
 - [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
 - [Discrete Math](https://notes.yxy.ninja/tags/discrete_math)
 
 
 ## 🏗️ Software Engineering 
----
 - [Software Engineering Theories](https://notes.yxy.ninja/tags/software_engineering)
 - [Amazon Web Services](https://notes.yxy.ninja/tags/aws)
 - [C](https://notes.yxy.ninja/tags/c)
@@ -40,6 +36,5 @@
 
 
 ## 🕸️ Networking
----
 - [Networking Basis (Under heavy revision)](https://notes.yxy.ninja/tags/networking)
 
