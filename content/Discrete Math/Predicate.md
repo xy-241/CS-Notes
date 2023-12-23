@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-21T11:25:00
-Last Date: 2023-12-10T00:41:46+08:00
+Last Date: 2023-12-23T19:21:19+08:00
 References: 
 ---
 ## Abstract

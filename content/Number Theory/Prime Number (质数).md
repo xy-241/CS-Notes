@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-15, 15:53
-Last Date: 2023-12-22T18:36:34+08:00
+Last Date: 2023-12-23T16:13:45+08:00
 References: 
 ---
 ## Abstract
@@ -17,6 +17,7 @@ References:
 
 ## Trial Division Method
 ---
+### Prime Number Verification
 Verifying if an [[Integer (整数)]] is a [[Prime Number (质数)]] in `O(sqrt(n))`
 
 ```java
@@ -26,6 +27,20 @@ public static boolean isPrime(long n) {
     if (n % i == 0) return false;
   }
   return true;
+}
+```
+
+### Find Minimal Non-Zero Factor
+Find the minimal factor of a given integer that is `>1`
+```java
+// Time Complexity - O(sqrt(n)), where n is the size of the integer
+public static int minFactor(int n) {
+  for (int i=2; i<=Math.sqrt(n); i++) {
+    if (n%i == 0) return i;
+  }
+
+  // When we cant find factor that is bigger than 2 and smaller than n
+  return n;
 }
 ```
 

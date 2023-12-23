@@ -12,7 +12,7 @@ References:
 ---
 ## Abstract
 ---
-- Logical Product
+- Also known as *Logical Product*, *intersection*
 - Made of 2 [[Transistors (晶体管)]]
  ![[AND.png]]
 
@@ -21,3 +21,6 @@ References:
 $$A\times B$$
 
 $$AB$$
+$$
+A \cap B
+$$

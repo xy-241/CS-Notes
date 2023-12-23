@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2023-12-22T18:04:21+08:00
+Last Date: 2023-12-23T19:15:04+08:00
 References: 
 ---
 ## Abstract
@@ -72,12 +72,9 @@ $$
 ---
 ### Subset
 $$
-A \subseteq B
+A \subseteq B \leftrightarrow \forall x (x \in A \land x \in B)
 $$
-iff
-$$
-\forall x (x \in A \land x \in B)
-$$
+
 ### Superset
 $$
 B \supseteq A
@@ -128,5 +125,35 @@ $$
 ---
 ### Object
 - Members or elements of [[Discrete Math/Set|Set]]
-- Example: `1`, `2`, `3` are objects in the set of [[Integer (整数)]]
+- Example: `1`, `2`, `3` `{1}` are objects in the set of [[Integer (整数)]]
+- It can be either a value or a set
 
+### Set Equality
+- Given [[Discrete Math/Set|Set]] `A` and `B`. The [[#Cardinality of a Set]] must be the same
+- **First way to prove:**
+$$
+A = B \leftrightarrow (A \subseteq B) \land (B \subseteq A)
+$$
+- **Second way to prove:**
+$$
+A = B \leftrightarrow \forall x (x \in A \leftrightarrow x \in B)
+$$
+### Ordered Pair
+$$
+(c, y)
+$$
+$$
+(a, b) = (c, d) \leftrightarrow (a=c) \land (b=d)
+$$
+
+
+### Cartesian Product
+- Given [[Discrete Math/Set|Set]] `A` and `B`, the Cartesian product is a set of [[#Ordered Pair]]
+$$
+A \times B = \{(a,b) : a\in A \land b\in B\}
+$$
+- Thus
+$$
+A \times B \neq B \times A
+$$
+- Cartesian Product of real numbers is basically a set that contains all the possible (x,y) coordinates on the *Cartesian Plane* 
