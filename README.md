@@ -1,6 +1,13 @@
+<p align="center">
+  <img align="center" width="320" src="https://github.com/xy-241/CS-Notes/assets/47915643/97eebd7c-cd9d-4e74-bcba-fef04f640edd" />
+
+
 <div align="center">
     <a href="https://notes.yxy.ninja/"> <img src="https://badgen.net/badge/CS-Notes/Read%20Online/blue?icon=github"></a>
 </div>
+</p>
+
+
 <br>
 
 
