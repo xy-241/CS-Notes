@@ -7,7 +7,7 @@ tags:
   - boolean_algebra
   - computer_organisation
 Creation Date: 2023-11-24T18:38:25+08:00
-Last Date: 2023-12-23T19:24:44+08:00
+Last Date: 2023-12-24T01:09:59+08:00
 References: 
 ---
 ## Abstract
@@ -17,6 +17,7 @@ References:
 
 ![[OR.png]]
 - Represented by
+
 $$A+B$$
 
 $$
