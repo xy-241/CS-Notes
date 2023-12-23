@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - distributed_computing
 Creation Date: 2023-08-03T15:11:14
-Last Date: 2023-12-24T02:40:01+08:00
-References:
+Last Date: 2023-12-24T02:47:22+08:00
+References: 
 ---
 ## Abstract
 ---
@@ -65,6 +65,10 @@ Log Replication is how a change is made using [[#Append Entries]]
 - Heartbeat sent in intervals specified by the [[#Heartbeat Timeout]]
 - When a [[#Follower Node]] receives append entries, it resets [[#Election Timeout]]
 
+### Split Vote
+- Occurs when 2 [[#Candidate Node]] get the same number of votes
+- Countered by starting a new [[#Election Term]]
+
 ### Election Term
 Actions taken by [[#Candidate Node]]
 1. Vote for itself
@@ -75,9 +79,7 @@ Actions taken by [[#Candidate Node]]
 6. Follower Nodes then respond to each Append Entries messages
 7. The Election Term will continue until a Follower Nodes stops receiving Append Entries & becoming a new Candidate Nodes ([[#Election Timeout]])
 
-### Split Vote
-- Occurs when 2 [[#Candidate Node]] get the same number of votes
-- Countered by starting a new [[#Election Term]]
+
 
 ## References
 ---
