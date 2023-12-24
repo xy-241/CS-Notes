@@ -17,7 +17,7 @@ References:
 
 ## Linux User
 ---
-Based on [[Unix]] & [[Portable Operating System Interface (POSIX)]]
+Based on [[Unix]] & [[POSIX]]
 
 ```bash
 # List All Users

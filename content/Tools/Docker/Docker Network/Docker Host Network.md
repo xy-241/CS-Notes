@@ -15,7 +15,7 @@ References:
 
 >[!note] The container has the same [[Network Interface]] as the host machine
 
->[!caution] The above properties only apply to [[OS/MISC/UNIX vs Linux/Linux]] for now
+>[!caution] The above properties only apply to [[Linux]] for now
 
 ## Commands
 ---

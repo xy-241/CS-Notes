@@ -34,7 +34,7 @@ docker run -d --network host hashicorp/vault server
 ```
 
 >[!note] `--cap-add`
->- Used to add specific [[OS/MISC/UNIX vs Linux/Linux]] capabilities to a [[Docker Container]]
+>- Used to add specific [[Linux]] capabilities to a [[Docker Container]]
 >  >[!example] `--cap-add=IPC_LOCK`
 >  >- Granting that container the ability to lock [[Shared Memory]] segments in the host's [[IPC Namespace]]
 >  >- Allows the container to lock shared memory in a way that prevents it from being paged out to [[Disk]], potentially improving performance for applications that rely heavily on shared memory operations.

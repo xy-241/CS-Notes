@@ -60,7 +60,7 @@ not support threads.
 ## Examples
 ---
 ### PThread (C)
-- A [[Thread]] package under [[Portable Operating System Interface (POSIX)]]
+- A [[Thread]] package under [[POSIX]]
 ![[pthread_example.png]]
 
 >[!note] ``pthread_yield()``

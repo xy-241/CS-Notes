@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-07-15T16:58:57+08:00
-Last Date: 2023-12-20T15:28:16+08:00
+Last Date: 2023-12-24T16:20:02+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,7 @@ References:
 - Contains low-level IO software
 - Nowadays, stored in **Flash RAM** - nonvolatile & can be updated
 
-## BIOS in Booting
+## Booting BIOS
 ---
 1. Checks [[Main Memory]] capacity
 2. Check [[IO Device]]

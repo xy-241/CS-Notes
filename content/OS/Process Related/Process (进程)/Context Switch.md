@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-10T23:12:00
-Last Date: 2023-12-11T22:59:24+08:00
+Last Date: 2023-12-24T16:24:22+08:00
 References: 
 ---
 ## Abstract
@@ -15,8 +15,9 @@ References:
 - Switching from one [[Process]]/[[Thread]] to another
 - Make use of [[Process Control Block (PCB)]] to store/retrieve process/thread's state
 
-## [[Latency Number | An expensive operation]]
+## An expensive operation
 ---
+Compare to [[Latency Number#other operations]]
 1. Saving & loading of [[Register]]
 2. Switching out [[Memory Pages]] (More Expensive) - Not needed for *Thread Context Switching*, since all [[Thread]] of a [[Process]] share the same [[Memory Address]]
 3. Updating various [[Kernel]] [[Data Structure]]

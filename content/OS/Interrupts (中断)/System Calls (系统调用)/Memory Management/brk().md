@@ -11,5 +11,5 @@ References:
 ---
 >[!note] Specifies the new [[Memory Address]] where the [[Address Space]] is to end
 
->[!note] Not defined in [[Portable Operating System Interface (POSIX)]]
+>[!note] Not defined in [[POSIX]]
 >- Programmer encouraged to use [[malloc]]

@@ -21,7 +21,7 @@ References:
 - 2 parts - _Filename_ & [[Inode#Inode Number]], doesn't have any _metadata_ associated
 
 
->[!info] In [[Portable Operating System Interface (POSIX)]], **file permissions** are handled by **rwx bits**
+>[!info] In [[POSIX]], **file permissions** are handled by **rwx bits**
 
 ## Useful Commands
 ---

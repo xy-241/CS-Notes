@@ -11,7 +11,7 @@ Last Date: 2023-12-15T11:51:18+08:00
 ## Abstract
 ---
 - Ability of computer executing multiple tasks at the same time by giving each [[Process]] a very small slice of [[CPU]] time
-- A logical extension of [[Multi-programming]]
+- A logical extension of [[Multi-Programming]]
 - Focus on improving user experience 
 - Can be implemented on computers that have a single([[#Time-Sharing]]) or multiple CPU
 
@@ -33,6 +33,6 @@ Last Date: 2023-12-15T11:51:18+08:00
 ### Time-Sharing
 - A Implementation of [[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]
 - A specific implementation of [[Multi-tasking]] when there is only a single resource - single [[CPU]], achieve with quick [[Context Switch]]
-- All Time-sharing systems are [[Multi-programming]] systems
+- All Time-sharing systems are [[Multi-Programming]] systems
 - Allow multiple remote users to run jobs on the same computer at the same time 
 

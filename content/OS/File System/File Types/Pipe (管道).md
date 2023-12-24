@@ -15,7 +15,7 @@ References:
 - Sort of [[Pseudo-file]] that can be used to connect 2 [[Process]]
 - Direct one [[Process]]'s output to another's input
 
-## [[Portable Operating System Interface (POSIX)]] Pipe
+## [[POSIX]] Pipe
 ---
 ### 3 default common channels
 1. ``stdin``: [[File Descriptor]] is `0`
