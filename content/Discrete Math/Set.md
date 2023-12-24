@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2023-12-23T19:15:04+08:00
+Last Date: 2023-12-24T17:25:04+08:00
 References: 
 ---
 ## Abstract
@@ -157,3 +157,16 @@ $$
 A \times B \neq B \times A
 $$
 - Cartesian Product of real numbers is basically a set that contains all the possible (x,y) coordinates on the *Cartesian Plane* 
+
+
+
+### Disjoin Set
+- Given 2 [[Discrete Math/Set|Set]], both dont have any elements in common
+$$
+A \cap B = \emptyset
+$$
+
+### Mutually Disjoin
+
+### Set Partition 
+

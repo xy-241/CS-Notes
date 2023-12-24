@@ -7,12 +7,15 @@ tags:
   - boolean_algebra
   - computer_organisation
 Creation Date: 2023-09-21T10:01:00
-Last Date: 2023-12-23T00:28:33+08:00
+Last Date: 2023-12-24T17:08:01+08:00
 References: 
 ---
 ## Abstract
 ---
-- *Exclusive OR*
+- *Exclusive OR*, *difference*
+$$
+B - A = \{x \in U: x \in B \land x \notin A\}
+$$
 - Returns true only when 2 inputs aren't the same
 
 ![[XOR.png]]

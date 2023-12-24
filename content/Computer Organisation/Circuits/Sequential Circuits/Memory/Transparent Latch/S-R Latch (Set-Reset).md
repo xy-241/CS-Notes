@@ -12,10 +12,10 @@ References:
 ## Abstract
 ---
 - [[Latch]] that stores a single bit
-- Can be built with either [[NOR Gates]]([[Active-high]]) or [[NAND Gates]]([[Active-low]])
+- Can be built with either [[NOR]]([[Active-high]]) or [[NAND Gates]]([[Active-low]])
 >![[S-R_Latch_diagram.png]]
-- Circuit Diagram & [[Truth Table]] using [[NOR Gates]]  (Active-high input S-R Latch)
-- When the pin from ``Q`` or ``Q'`` is low, the [[NOR Gates]] is active which means it is ready to take in the input from either ``R`` or ``S``
+- Circuit Diagram & [[Truth Table]] using [[NOR]]  (Active-high input S-R Latch)
+- When the pin from ``Q`` or ``Q'`` is low, the [[NOR]] is active which means it is ready to take in the input from either ``R`` or ``S``
 >![[S-R Latch.png]]
 
 >[!sidenote] S and R meaning

@@ -7,12 +7,15 @@ tags:
   - boolean_algebra
   - computer_organisation
 Creation Date: 2023-11-24T18:38:25+08:00
-Last Date: 2023-12-24T01:09:59+08:00
+Last Date: 2023-12-24T17:00:42+08:00
 References: 
 ---
 ## Abstract
 ---
-- Also known as *Logical Sum*, **Union** 
+- Also known as *Logical Sum*, *Union* 
+$$
+A \cup B = \{x \in U:x\in A \lor x \in B \}
+$$
 - Made of 2 [[Transistors (晶体管)]]
 
 ![[OR.png]]
