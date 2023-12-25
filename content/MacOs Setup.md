@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2023-12-15T20:07:51+08:00
+Last Date: 2023-12-25T21:09:47+08:00
 References: 
 ---
 
@@ -192,7 +192,7 @@ sudo scutil --set LocalHostName mac
 ## MISC
 ---
 ### Brew
--   ``wireguard``, ``ipython``, ``logisim-evolution``, ``infracost``, ``terraform-docs``, `telnet`, `parallel`, `socat`, `pyenv`, `pyenv-virtualenv`, `vagrant`
+-   ``wireguard``, ``ipython``, ``logisim-evolution``, ``infracost``, ``terraform-docs``, `telnet`, `parallel`, `socat`, `vagrant`
 ```bash
 #!/bin/bash
 brew install wireguard-tools# Place conf in /usr/local/etc/wireguard/ 
@@ -214,14 +214,6 @@ brew install parallel
 
 brew install socat
 
-brew install pyenv
-brew install pyenv-virtualenv
-echo '
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-' >> $HOME/.zshrc
-
 
 brew tap hashicorp/tap
 brew install hashicorp/tap/hashicorp-vagrant
@@ -236,12 +228,10 @@ npm i -g typescript
 ```
 
 ### Pipx
-- ``checkov``,  `poetry`, `ddtrace`
+- ``checkov``, `ddtrace`
 ```bash
 #!/bin/bash
 pipx install checkov
-
-pipx install poetry
 
 pipx install ddtrace
 ```
@@ -250,3 +240,4 @@ pipx install ddtrace
 ### Others
 - [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
 - [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
+- [[10X Python Ninja Setup]]
