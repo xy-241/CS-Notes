@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-18, 21:23
-Last Date: 2023-12-19T10:41:20+08:00
+Last Date: 2023-12-25T22:00:19+08:00
 References: 
 ---
 ## Abstract
@@ -16,7 +16,6 @@ References:
 - The largest positive [[Integer (整数)]] that is a factor of both two or more integers
 
 
-## Find GCD
 ---
 There are mainly 2 ways to find [[GCD]]
 
