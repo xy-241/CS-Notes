@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2023-12-24T17:25:04+08:00
+Last Date: 2023-12-25T21:58:29+08:00
 References: 
 ---
 ## Abstract
@@ -84,11 +84,7 @@ $$
 
 ### Proper Subset
 $$
-A \subsetneq B
-$$
-iff
-$$
-(A \subseteq B) \land (A \ne B)
+A \subsetneq B \leftrightarrow (A \subseteq B) \land (A \ne B)
 $$
 
 ### Empty Set
@@ -110,6 +106,20 @@ $$
 
 ### Singleton
 - A [[Discrete Math/Set|Set]] with exactly one [[#Object]]
+
+### Disjoin Set
+- Given 2 [[Discrete Math/Set|Set]], both dont have any elements in common
+$$
+A \cap B = \emptyset
+$$
+
+### Partition of Sets are Mutually Disjoin
+*Mutually Disjoin* is also known as *Pairwise Disjoint* or *Non-overlapping*
+
+![[union_of_mutually_disjoint_subsets.png]]
+- `A1`, `A2`, `A3`, `A4` are *Mutually Disjoin*
+- `A` is called *Union of Mutually Disjoint Subsets*
+- The collection of sets `{A1, A2, A3, A4}` is said to be a partition of `A` 
 
 
 ## Theorems
@@ -159,14 +169,4 @@ $$
 - Cartesian Product of real numbers is basically a set that contains all the possible (x,y) coordinates on the *Cartesian Plane* 
 
 
-
-### Disjoin Set
-- Given 2 [[Discrete Math/Set|Set]], both dont have any elements in common
-$$
-A \cap B = \emptyset
-$$
-
-### Mutually Disjoin
-
-### Set Partition 
 
