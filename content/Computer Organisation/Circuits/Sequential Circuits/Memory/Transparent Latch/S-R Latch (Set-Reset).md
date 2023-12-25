@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2023-12-25T20:09:02+08:00
+Last Date: 2023-12-25T20:25:28+08:00
 References: 
 ---
 ## Abstract
@@ -19,8 +19,8 @@ References:
 >![[S-R Latch.png]]
 
 >[!sidenote] S and R meaning
->- S means [[Set in digital circuit]]
->- R mean [[Reset in digital circuit]]
+>- S means set `1`
+>- R means `0` to reset
 
 >[!sidenote] ``Q``
 >- The storage that stores the value

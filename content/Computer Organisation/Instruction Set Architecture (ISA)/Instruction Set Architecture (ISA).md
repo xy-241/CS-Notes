@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-04T17:30:24+08:00
-Last Date: 2023-12-17T20:50:19+08:00
+Last Date: 2023-12-25T20:37:43+08:00
 References: 
 ---
 ## Abstract
@@ -62,6 +62,32 @@ References:
 >[!example]
 >X86 developed by Intel
 
+
+## 4 Types
+---
+### Accumulator ISA
+![[accumulator isa.png]]
+1. ``load A``: Load value from [[Main Memory]] into accumulator
+2. ``add B``: Add value from [[Main Memory]] and value in the accumulator. The sum is stored back to the accumulator
+3. ``store C``: Store value in accumulator into [[Main Memory]]
+
+### Load-Store ISA
+- Also known as *Register-Register ISA*
+- The data is decoupled from the [[Register]] to [[Main Memory]]
+![[register-register,load-store isa.png]]
+
+- Can only load data at [[Computer Data Representation#Word]] boundaries
+![[word_alignment.png]]
+
+
+### Memory-Memory ISA
+![[memory-memory isa.png]]
+
+### Stack ISA
+![[stack isa.png]]
+1. ``push A``, ``push B``: We load values from [[Main Memory]] onto the [[Stack (FILO)]]
+2. ``add``: Remove the top 2 values in the [[Stack (FILO)]], add them, and load the sum onto top of [[Stack (FILO)]]
+3. ``pop C``: Transfer value at top of [[Stack (FILO)]] to [[Main Memory]]
 
 ## References
 ---
