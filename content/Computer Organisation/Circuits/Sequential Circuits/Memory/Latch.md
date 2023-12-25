@@ -11,8 +11,8 @@ References:
 ---
 ## Abstract
 ---
-- [[Level-sensitive (Pulse-triggered)]]
-- [[Asynchronous Sequential Circuits]]
+- [[Level-sensitive]]
+- [[Asynchronous Sequential Circuit]]
 - [[Bistable (2 stable states)]]
 
 

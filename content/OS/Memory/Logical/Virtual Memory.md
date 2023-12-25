@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:16:23+08:00
-Last Date: 2023-12-20T16:26:57+08:00
+Last Date: 2023-12-25T20:06:34+08:00
 References: 
 ---
 ## Abstract
@@ -30,7 +30,7 @@ References:
 ## Terminologies
 ---
 ### Logical Address
-- Not bounded to physical [[Memory Element]]
+- Not bounded to physical [[Main Memory]]
 
 
 ## References
