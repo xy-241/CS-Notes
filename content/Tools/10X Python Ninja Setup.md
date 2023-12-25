@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - python
 Creation Date: 2023-10-18T10:49:00
-Last Date: 2023-12-25T21:08:38+08:00
+Last Date: 2023-12-25T21:24:09+08:00
 References: 
 ---
 ## Abstract
@@ -30,11 +30,13 @@ Use `poetry` to manage
 #!/bin/bash
 brew install pyenv
 brew install pyenv-virtualenv
+
 echo '
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ' >> $HOME/.zshrc
+zsh
 ```
 ### poetry
 ```bash
