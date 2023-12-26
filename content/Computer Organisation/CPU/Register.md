@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2023-12-17T20:19:22+08:00
+Last Date: 2023-12-26T19:41:41+08:00
 References: 
 ---
 ## Abstract
@@ -23,8 +23,6 @@ References:
 
 ## Register Type
 ---
-### Instruction Address Register
-- The register that contains the [[Memory Address]] to retrieve the [[Instruction]]
 ### Instruction Register
 - Contains [[Instruction]] retrieved from [[Main Memory]]
 

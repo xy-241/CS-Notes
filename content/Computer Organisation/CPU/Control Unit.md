@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:45:00
-Last Date: 2023-12-12T10:41:31+08:00
+Last Date: 2023-12-26T19:45:29+08:00
 ---
 ## Abstract
 ---
@@ -16,7 +16,8 @@ Last Date: 2023-12-12T10:41:31+08:00
 ## Components
 ---
 ### Program Counter
-- Tell [[CPU]] which [[Instruction]] to execute at any given moment
+- Also known as *Instruction Address Register*, *Instruction Pointer*
+- [[Register]] contains the [[Memory Address]] of the next [[Instruction]] to be executed by the [[CPU]]
 
 
 ## Terminologies

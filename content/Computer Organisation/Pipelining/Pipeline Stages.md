@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:57:00
-Last Date: 2023-12-05T17:32:57+08:00
+Last Date: 2023-12-26T19:44:09+08:00
 ---
 #computer_organisation 
 ## Abstract
@@ -20,7 +20,7 @@ Last Date: 2023-12-05T17:32:57+08:00
 ---
 ### Fetch
 - Retrieve [[Instruction]] from [[RAM]] 
-- Handled by [[Register#Instruction Address Register]] & [[Register#Instruction Register]]
+- Handled by [[Control Unit#Program Counter]] & [[Register#Instruction Register]]
 ### Decode
 - Handled by [[Control Unit]]
 ### Execute
