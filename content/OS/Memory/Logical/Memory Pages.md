@@ -16,5 +16,5 @@ References:
 
 ## Benefits
 ---
-### Managing [[Main Memory]] efficiently
-- ```
+### Memory Efficiency
+- WIP

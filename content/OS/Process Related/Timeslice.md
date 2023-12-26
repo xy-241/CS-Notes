@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-05T12:16:44+08:00
-Last Date: 2023-12-26T22:24:08+08:00
+Last Date: 2023-12-26T22:44:16+08:00
 References: 
 ---
 ## Abstract
@@ -31,18 +31,18 @@ References:
 ## 2 Types of Scheduling
 ---
 ### Fixed Timeslice Round-Robin Scheduling
-Give every [[Process]] the same [[Timeslice]], perhaps10 ms, and cycle through tasks in order
+- Give every [[Process]] the same [[Timeslice]], perhaps10 ms, and cycle through tasks in order
 
 >[!caution]  Laggy Situation
 >When there is a lot of [[Process]], and each of them gets a fixed [[Timeslice]], the one cycle of all Process will take a significant amount of time
 
 ### Dynamic Timeslice Round-Robin Scheduling
-[[Timeslice]] = [[#Target Latency]] / total [[Process]]
+- [[Timeslice]] = [[#Target Latency]] / total [[Process]]
 ![[Dynamic_timeslice_round-robin_scheduling.png]]
 - Used in modern [[Process Management#Process Scheduler]]
 
 >[!success] Helps to make each Process be more responsive
->Ensures each Process will get to run again before it seems laggy to the user
+>Ensures each Process will get to run again before it seems laggy to the user. As long [[#Minimum Granularity]] is ensured and [[#Target Latency]] is not exceeded 
 
 >[!success]  Process gets to run faster when there is less Process
->- The [[Timeslice]] is a ratio of Target Latency and total Process
+>The [[Timeslice]] is a ratio of Target Latency and total Process. Less process means more time for each process
