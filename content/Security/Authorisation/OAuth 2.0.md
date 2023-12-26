@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-20T17:09:28+08:00
-Last Date: 2023-12-23T01:21:38+08:00
+Last Date: 2023-12-26T16:58:11+08:00
 References: 
 ---
 ## Abstract
@@ -31,7 +31,15 @@ References:
 ---
 Owner of the identity, live user themselves
 ### Consent
-- The [[OAuth 2.0#Authorization Server]] takes the [[OAuth 2.0#Scope]] the [[OAuth 2.0#Client]] is requesting and verifies it with the [[OAuth 2.0#Resource Owner]], see if he/she wants to grant the permissions
+The [[OAuth 2.0#Authorization Server]] takes the [[OAuth 2.0#Scope]] the [[OAuth 2.0#Client]] is requesting and verifies it with the [[OAuth 2.0#Resource Owner]], see if he/she wants to grant the permissions
+
+**Microsoft Entra ID**
+<img src="https://learn.microsoft.com/en-us/entra/identity-platform/media/application-consent-experience/consent_prompt.png" style="height:500px">
+- You can read up on the breakdown of each components [here](https://learn.microsoft.com/en-us/entra/identity-platform/application-consent-experience#building-blocks-of-the-consent-prompt)
+- You can manage the apps you consented [here](https://myapps.microsoft.com/)
+
+Google Account
+- You can manage the apps you consented [here](https://myaccount.google.com/connections)
 
 ## Client
 ---
