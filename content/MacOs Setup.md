@@ -240,4 +240,4 @@ pipx install ddtrace
 ### Others
 - [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
 - [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
-- [[Unleash the Python Kraken Pyenv & Poetry - The Holy Grail of Python Project Setups]]
+- [[Unleash the Python Kraken Pyenv and Poetry - The Holy Grail of Python Project Setups]]
