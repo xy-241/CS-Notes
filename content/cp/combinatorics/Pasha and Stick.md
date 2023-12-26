@@ -20,12 +20,12 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-26, 14:54
-Last Date: 2023-12-26T15:26:38+08:00
+Last Date: 2023-12-26T23:30:10+08:00
 tags:
   - cp
 draft: 
 ---
-[Original Problem]()
+[Original Problem](https://codeforces.com/contest/610/problem/A)
 ## Idea
 ---
 - The idea here is that the perimeter of a rectangle must be *an even number* `2k`, where `k` is an [[Integer (整数)]]. Because there are 2 pairs of `height+width` which is `k` to fit into the definition of even number
