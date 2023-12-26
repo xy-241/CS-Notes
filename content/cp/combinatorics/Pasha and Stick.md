@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-26, 14:54
-Last Date: 2023-12-26T15:17:27+08:00
+Last Date: 2023-12-26T15:26:38+08:00
 tags:
   - cp
 draft: 
@@ -35,7 +35,7 @@ draft:
 - We not including `(6,4)` because it is same as `(6,4)`. The order doesn't matter
 - We can observe that after the midpoint `5`, it starts to repeat itself
 - So we can conclude that the possible combination of `height` and `width` given `k` is `k/2` (rounding down)
-- Since we don't want square, which means the `height` and `width` are the same, and this can only happen when `k%2 = 0` aka `k` can be split into 2 equal values
+- Since we don't want square, which means the `height` and `width` are the same -> `(5,5)`, `k=10`, and this can only happen when `k%2 = 0` aka `k` can be split into 2 equal values
 - Thus, we minus 1 to the final answer if `k%2 = 0`
 
 ## Space & Time Analysis
