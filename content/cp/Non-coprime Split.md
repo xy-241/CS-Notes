@@ -1,7 +1,6 @@
 ---
 sthNew: true
 Mastery Level:
-  - 📗
   - 📕
 Time Taken: 
 Space:
@@ -21,17 +20,18 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-23, 16:07
-Last Date: 2023-12-23T16:24:27+08:00
+Last Date: 2023-12-27T11:39:02+08:00
 tags:
   - cp
 draft: "true"
 ---
-[Original Problem]()
+[Original Problem](https://codeforces.com/contest/1872/problem/C)
 ## Idea
 ---
 - The idea here is to loop through the elements between `l` and `r` (inclusive)
-- For each [[Integer (整数)]] we loop through, let it be `j`, we [[Prime Number (质数)#Find Minimal Non-Zero Factor]], and let it be `md`. 
-- We are sure `(j-md)%md == 0`, because `j%md=0`, `j/md - md/md = integer`
+- For each [[Integer (整数)]] we loop through, let it be `j`
+- Then we [[Prime Number (质数)#Find Minimal Non-Zero Factor]], and let it be `md`
+- We are sure `(j-md)%md == 0`, because `j%md=0`, `j/md - md/md = integer - integer = integer`
 - As long as `md != j` which means `j` is a prime and `md - j = 0`, and `minFactor()` guarantees that the `md` is `>=2` which is `>1` 
 
 
