@@ -20,7 +20,7 @@ References:
 ## Mechanism
 ---
 1. Causes [[Process]] to temporarily suspend
-2. Save its [[Register]] on the [[Stack (FILO)]]
+2. Save its [[Register]] on the [[Stack]]
 3. When [[Interrupt Handler]] is done, the running [[Process]] is restarted in the state it was in just before the signal
 
 ## Benefits

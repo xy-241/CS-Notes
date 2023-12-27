@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-10-07T16:38:29+08:00
-Last Date: 2023-12-25T20:06:04+08:00
+Last Date: 2023-12-27T10:44:00+08:00
 References: 
 ---
 ## Abstract
@@ -27,7 +27,7 @@ References:
 - *Fixed-size blocks* that are obtained by dividing the [[Main Memory]]
 - All frames share the same size 
 - Size determined by the [[OS]] & [[Instruction Set Architecture (ISA)]]. 
-- Represent actual blocks of [[Main Memory]] that hold [[Data]] & [[Instruction]]
+- Represent actual blocks of Main Memory that hold [[Data]] & [[Instruction]]
 
 ### Memory Element
 - A device which can remember value *indefinitely*

@@ -27,7 +27,7 @@ tags:
 [Original Problem](https://codeforces.com/contest/1907/problem/B)
 ## Idea
 ---
-- The idea here is to maintain 2 [[Stack (FILO)]], one for *lowercase*, one for *uppercase*. The stack keeps track the index of the elements that aren't `b` or `B`
+- The idea here is to maintain 2 [[Stack]], one for *lowercase*, one for *uppercase*. The stack keeps track the index of the elements that aren't `b` or `B`
 - When we see a `b` or `B`, we just delete the first element from the corresponding stack by replacing the element at that index with either `b` or `B`
 - Then we loop the original string, add characters that aren't `b` and `B` to form a new string which is the final answer
 
@@ -37,7 +37,7 @@ tags:
 The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(n)
 - *Ignore input size & language dependent space*
-- We are maintaining 2 [[Stack (FILO)]]
+- We are maintaining 2 [[Stack]]
 ### Time - O(n)
 - One loop to serialise the given string
 - One loop to form the final answer string
@@ -95,6 +95,6 @@ public class Solution {
 - **Why it takes so long to solve:** *NIL*
 - **What you could have done better:** *NIL*
 - **What you missed:** *NIL*
-- **Ideas you've seen before:** [[Stack (FILO)]], last in first out property
+- **Ideas you've seen before:** [[Stack]], last in first out property
 - **Ideas you found here that could help you later:** Understand the properties of [[Data Structure]] well
 - **Ideas that didn't work and why:** *NIL*

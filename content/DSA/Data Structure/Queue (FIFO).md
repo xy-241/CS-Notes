@@ -38,7 +38,7 @@ References:
 >- push() from tail node
 >- pop() & peek() from the head node
 
-- The difference in the 2 implementation is similar to [[Stack (FILO)#2 implementation comparison| Stack implementation comparison]]
+- The difference in the 2 implementation is similar to [[Stack#2 implementation comparison| Stack implementation comparison]]
 
 ## Variant
 ---

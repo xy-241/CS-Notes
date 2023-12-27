@@ -18,7 +18,7 @@ References:
 ## 3 Components
 ---
 ### Stack Segment
-- [[Stack (FILO)]] structure
+- [[Stack]] structure
 - Grows downwards
 - The expansion and shrinking are done automatically
 - Can be used to store function variables

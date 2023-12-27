@@ -23,7 +23,7 @@ References:
 
 ## How a system call is triggered
 ---
-1. Calling program pushes parameters of the system call to [[Stack (FILO)]] (Step 1-3)
+1. Calling program pushes parameters of the system call to [[Stack]] (Step 1-3)
 2. Trigger an [[Instruction]] to trigger the corresponding [[Library Call]], the same instruction is used to trigger other library calls (Step 4, where the actual library call is happening)
 3. Library Call puts [[#Syscall Interrupt Number]] in  a place where [[OS]] expects it, such as a [[Register]] (Step 5)
 4. Execute [[Trap Interrupt (陷入)]] (Step 6)
@@ -43,7 +43,7 @@ References:
 - [[Assembly language]] - implementation of system call, is differently across different [[Instruction Set Architecture (ISA)]]
 ![[syscall_architecture_differences.png]]
 ### Parameters of system call
-- Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Stack (FILO)]]
+- Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Stack]]
 - Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Register]]
 ### [[Abstraction (抽象)]] comes to rescue
 - [[OS]] provide an abstraction layer on top of these [[Interrupts (中断)]] and [[Interrupt Handler]]

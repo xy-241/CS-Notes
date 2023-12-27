@@ -34,7 +34,7 @@ References:
 >[!example]
 >- [[Array]]
 >- [[Linked List]]
->- [[Stack (FILO)]]
+>- [[Stack]]
 >- [[Queue (FIFO)]]
 >- [[Hash Map]]
 ### Non-linear

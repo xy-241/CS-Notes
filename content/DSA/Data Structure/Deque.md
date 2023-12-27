@@ -11,7 +11,7 @@ References:
 ---
 ## Basics
 ---
->[!abstract] [[Stack (FILO)]] & [[Queue (FIFO)]] combined
+>[!abstract] [[Stack]] & [[Queue (FIFO)]] combined
 >![[deque.png]]
 >- [[Linear Data Structure]]
 >- Aka [[Array]]/[[Linked List]] with limitations
@@ -40,7 +40,7 @@ References:
 >- We need [[Double Linked List]] in order to have the ability to pollLast() - delete from the rear. With [[Single Linked List]], we are unable to get the previous node, which means we cant update rear when we delete from the backl
 
 ### 2 implementation comparison
-- Similar to [[Stack (FILO)#2 implementation comparison| Stack implementation comparison]]
+- Similar to [[Stack#2 implementation comparison| Stack implementation comparison]]
 
 
 ## [[Abstract Data Type (ADT)]]
