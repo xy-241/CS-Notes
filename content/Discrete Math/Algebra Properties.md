@@ -6,15 +6,10 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-05T12:16:00
-Last Date: 2023-12-14T10:21:32+08:00
+Last Date: 2023-12-27T17:25:57+08:00
 References: 
 ---
 ## Abstract
----
-
-
-
-## Terminologies
 ---
 ### Closure (闭包)
 - An property of a *set* whereby an operation on members of the set always produces a member of the same set

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-16, 17:40
-Last Date: 2023-12-26T18:32:34+08:00
+Last Date: 2023-12-27T17:00:14+08:00
 References: 
 ---
 ## Abstract
@@ -22,6 +22,8 @@ References:
 $$
 (n = dq + r) \land (0 \le r < d )
 $$
+
+![[quotient-remainder-theorem.png]]
 ### Theorem 4.6.1
 - *There is no greatest integer*
 - Proved by [[Mathematical Proof#Proof by Contradiction (反证法)]]

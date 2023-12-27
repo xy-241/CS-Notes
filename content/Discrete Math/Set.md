@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2023-12-25T21:58:29+08:00
+Last Date: 2023-12-27T17:20:00+08:00
 References: 
 ---
 ## Abstract
@@ -121,9 +121,39 @@ $$
 - `A` is called *Union of Mutually Disjoint Subsets*
 - The collection of sets `{A1, A2, A3, A4}` is said to be a partition of `A` 
 
+### Power Set
+- The power set of [[Discrete Math/Set|Set]] `A` is all the [[#Subset]] of `A`
+$$
+A = \{x, y\}
+$$
+$$
+\mathcal{P}(A) = \{\emptyset, \{x\}, \{y\}, \{x,y\}\}
+$$
 
 ## Theorems
 ---
+### Theorem 6.2.1
+#### Inclusion of Intersection
+$$
+A \cap B \subseteq A
+$$
+$$
+A \cap B \subseteq B
+$$
+
+#### Inclusion in Union
+$$
+A \subseteq A \cup B
+$$
+$$
+B \subseteq A \cup B
+$$
+
+#### Transitive Property of Subsets
+$$
+(A \subseteq B) \land (B \subseteq C) \rightarrow A \subseteq C
+$$
+
 ### Theorem 6.2.4
 - An [[#Empty Set]] is a s [[#Subset]] of every [[Discrete Math/Set|Set]]
 - Assume `A` is all the possible sets
@@ -131,6 +161,10 @@ $$
 \emptyset \subseteq A
 $$
 - Proved using [[Mathematical Statement#Vacuous Truth of Universal]]
+
+### Theorem 6.3.1
+- The cardinality of [[#Superset]] of finite set is *2 to the power of the cardinality of the finite set*
+
 ## Terminologies
 ---
 ### Object
@@ -168,5 +202,7 @@ A \times B \neq B \times A
 $$
 - Cartesian Product of real numbers is basically a set that contains all the possible (x,y) coordinates on the *Cartesian Plane* 
 
-
+### Order n-tuples
+- `n` denotes the number of [[Discrete Math/Set|Set]] we are multiplying
+- [[#Ordered Pair]] is order 2-tuples, because are multiplying 2 sets
 
