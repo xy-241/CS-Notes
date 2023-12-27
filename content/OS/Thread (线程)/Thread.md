@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-12T18:59:00
-Last Date: 2023-12-13T17:26:46+08:00
+Last Date: 2023-12-27T15:42:17+08:00
 References: 
 ---
 
@@ -55,7 +55,7 @@ References:
 >- One thread can bring down the entire [[Process]]
 >- One thread can read, write, or even wipe out another thread’s stack
 
->[!caution] [[fork()]]
+>[!caution] Forking
 >- Should we copy over all the threads or just a single one?
 
 >[!caution] [[Signal (Software Interrupt)]] handling - which thread should handle it

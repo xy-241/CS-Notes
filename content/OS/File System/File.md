@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2023-12-21T15:50:57+08:00
+Last Date: 2023-12-27T15:36:00+08:00
 References: 
 ---
 
@@ -21,7 +21,9 @@ References:
 - 2 parts - _Filename_ & [[Inode#Inode Number]], doesn't have any _metadata_ associated
 
 
->[!info] In [[POSIX]], **file permissions** are handled by **rwx bits**
+## File Permission
+---
+- In [[POSIX]], file permissions are handled by **rwx bits**
 
 ## Useful Commands
 ---
@@ -32,11 +34,16 @@ xxd <BINARY_NAME.bin>
 ## Terminologies
 
 ---
-
+### File Descriptor
+- A small [[Integer (整数)]]
 ### Special File
 
-- Make [[IO Device]] look like [[File]], so we can reuse the same set of file [[System Call (系统调用)]] on O Devices
+- Make [[IO Device]] look like [[File]], so we can reuse the same set of file [[System Call (系统调用)]] on IO Devices
 - By convention, kept in the `/dev` [[File System#File Directory]]
-- 2 Types
-    1.  [[Block Special Files]]
-    2.  [[Character Special Files]]
+
+**Block Special Files**
+- Model [[IO Device]] that has a collection of *randomly addressable blocks* like like disk
+
+**Character Special Files**
+- Model [[IO Device]] that accept or output a *character stream* like keyboard
+

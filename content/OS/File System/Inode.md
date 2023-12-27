@@ -16,7 +16,7 @@ References:
 - Essentially an identification number associated with a data structure that contains metadata about a piece of data (like a file or directory) stored on the [[File System]]
 - This metadata includes information such as permissions, ownership, timestamps, and pointers to the actual data blocks, but it *does not include the data* itself or the name of the file or directory
 - We can list out the content of the data structure using `stat a`
-- The *data cant be overridden* as long as the [[File System Links#Hard]] isn't 0
+- The *data cant be overridden* as long as the [[File System Link#Hard]] isn't 0
 
 
 ## Terminologies

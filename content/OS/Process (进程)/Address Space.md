@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2023-12-16T20:38:25+08:00
+Last Date: 2023-12-27T15:41:19+08:00
 References: 
 ---
 ## Abstract
@@ -77,7 +77,7 @@ spin:
 - Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because *stack segment grows downwards* when we are adding values to the stack
 ### Data Segment
 - Grow upwards
-- Expansion is done explicitly using [[System Call (系统调用)]] [[brk()]] or higher level [[Library Call]]
 - All objects created with the `new` keywords in [[Java]] are created here 
+- Expansion is done explicitly using [[System Call (系统调用)]] `brk()` or higher level [[Library Call]]. Programmer uses `malloc` in [[C]]
 ### Text Segment
 - Stores program codes, **unchangeable**

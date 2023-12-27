@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-09T22:50:00
-Last Date: 2023-12-13T18:03:51+08:00
+Last Date: 2023-12-27T15:49:57+08:00
 References: 
 ---
 ## Abstract
@@ -17,9 +17,9 @@ References:
 
 ## Process Creation
 ---
-- A 2 steps process - [[fork()]], [[exec()]]
+- A 2 steps process - [[#fork()]], [[exec()]]
 - The two-step process gives the child the flexibility to manipulate its file descriptors(STDIN in the above example) after the fork but before the _execve_ in order to accomplish *redirection* of *standard input, standard output, and standard error*
-- Create a child [[Process]], [[Pipe (管道)]] the input of the child process, load and execute child process
+- The code below creates a child [[Process]], [[Pipe (管道)]] the input of the child process, load and execute child process
 ```c
 int pid = fork();
 if (pid == 0)
@@ -40,3 +40,11 @@ if (pid == 0)
 ### 2 Involuntary Ways
 1. Fatal error - which couldn't be handled by the [[Process]] itself (eg. [[Memory Failure]])
 2. Termination by other process (killem all!)
+
+
+## POSIX 
+---
+### fork()
+- Creates an exact duplicate of the original [[Process]]
+- When return value is `0`: we are inside the duplicate process
+- Duplicated process' s [[Process IDentifier (PID)]] in parent process
