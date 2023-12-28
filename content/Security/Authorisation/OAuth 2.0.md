@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-20T17:09:28+08:00
-Last Date: 2023-12-28T20:13:28+08:00
+Last Date: 2023-12-28T21:23:29+08:00
 References: 
 ---
 ## Abstract
@@ -31,7 +31,8 @@ References:
 ---
 Owner of the identity, live user themselves
 ### Consent
-The [[OAuth 2.0#Authorization Server]] takes the [[OAuth 2.0#Scope]] the [[OAuth 2.0#Client]] is requesting and verifies it with the [[OAuth 2.0#Resource Owner]], see if he/she wants to grant the permissions
+- The [[OAuth 2.0#Authorization Server]] takes the [[OAuth 2.0#Scope]] the [[OAuth 2.0#Client]] is requesting and verifies it with the [[OAuth 2.0#Resource Owner]], see if he/she wants to grant the permissions
+- Resource Owner is directed to the consent page by the client app. Client app includes its [[#Client ID]], [[#Redirect URI]], [[#Response Type]] and [[#Scope]] when redirecting the resource owner to the consent page on the authorization server
 
 **Microsoft Entra ID**
 <img src="https://learn.microsoft.com/en-us/entra/identity-platform/media/application-consent-experience/consent_prompt.png" style="height:500px">
@@ -46,7 +47,7 @@ Google Account
 Third-party application that wants to find out more about the [[OAuth 2.0#Resource Owner]] and carry out actions on the behalf of him/her
 ### Scope
 - The refined permissions [[OAuth 2.0#Client]] wants
-- Access to data & permissions to perform actions on [[OAuth 2.0#Resource Server]] etc
+- Specifies permissions to access the types of data & types of actions on [[OAuth 2.0#Resource Server]] etc
 
 ### Client ID
 - ID used to identify the [[OAuth 2.0#Client]] with the [[OAuth 2.0#Authorization Server]]
@@ -56,15 +57,17 @@ Third-party application that wants to find out more about the [[OAuth 2.0#Resour
 - This allows both entities to share information privately 
 - Used by the [[OAuth 2.0#Client]] to verify its identity with the [[OAuth 2.0#Authorization Server]]
 ### Access Token
-- [[OAuth 2.0#Client]] sends the [[OAuth 2.0#Authorization Code]] & its [[OAuth 2.0#Client Secret]] to the [[OAuth 2.0#Authorization Server]] to obtain the Access Token
+- [[OAuth 2.0#Client]] sends its [[#Client ID]], [[#Client Secret]] and the [[OAuth 2.0#Authorization Code]] to the [[OAuth 2.0#Authorization Server]] to obtain the Access Token
 - The key the [[OAuth 2.0#Client]] uses to communicate with the [[OAuth 2.0#Resource Server]] on the behalf of [[OAuth 2.0#Resource Owner]]
-- Used for [[Authorisation]]
+- Used for [[Authorisation]], NOT [[Authentication]]
+
 
 ## Authorization Server
 ---
 - The application that hosts the account of the  [[OAuth 2.0#Resource Owner]] 
 - Single source for identity 
-### Redirect URI (Callback URI)
+### Redirect URI
+- Also known as *Callback URI*
 - The URI the  [[OAuth 2.0#Authorization Server]] will redirect the  [[OAuth 2.0#Resource Owner]] back to after granting permissions to  [[OAuth 2.0#Client]]
 - It is the url on the [[#Client]]
 ### Response Type

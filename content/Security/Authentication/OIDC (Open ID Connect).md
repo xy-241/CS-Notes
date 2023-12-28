@@ -6,21 +6,22 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-20T17:22:16+08:00
-Last Date: 2023-09-20T17:22:16+08:00
-References:
+Last Date: 2023-12-28T21:26:18+08:00
+References: 
 ---
->[!abstract]
->![[oidc_basic_sign-in_flow.svg]]
->- Sits on top of [[OAuth 2.0]]
->- Instead of just giving back [[OAuth 2.0#Access Token]], it also gives back a 'badge' - information who you are -> [[#ID Token]]
+## Abstract
+---
+![[oidc_basic_sign-in_flow.svg]]
+- Sits on top of [[OAuth 2.0]]
+- Instead of just giving back [[OAuth 2.0#Access Token]], it also gives back a 'badge' - information who you are -> [[#ID Token]]
 
 >[!note] The workflow is pretty similar to [[OAuth 2.0]] except
->1. [[OAuth 2.0#Scope]] is set to ``SCOPE=OPENID``
+>1. [[OAuth 2.0#Scope]] in [[OAuth 2.0#Consent]] has ``OPENID``
 >2. [[OAuth 2.0#Client]] receives both [[OAuth 2.0#Access Token]] & [[#ID Token]]
 
 ### ID Token
 - A [[JWT (JSON Web Token)]]
-- Used for [[Authentication]]
+- Used for [[Authentication]], NOT [[Authorisation]]
 - Contains [[JWT (JSON Web Token)#Claims]] like ``aud`` (Audience Property) which defines which [[OAuth 2.0#Client]] is meant to be the final recipient of the ID Token
 - Contain [[OAuth 2.0#Resource Owner (Identity)]] info like email and username which can be used by [[OAuth 2.0#Client]] to populate the application UI
 
