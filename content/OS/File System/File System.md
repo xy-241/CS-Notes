@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2023-12-27T15:36:35+08:00
+Last Date: 2023-12-28T20:34:47+08:00
 References: 
 ---
 ## Abstract
@@ -29,6 +29,9 @@ References:
 >[!caution] Perform ``mount`` on empty [[File System#File Directory]]
 >Otherwise, the [[File]] in the mounted Directory of the original File System can’t be accessed
 
+## Linux File System
+---
+<img src="https://raw.githubusercontent.com/ByteByteGoHq/system-design-101/main/images/linux-file-systems.jpg" >
 
 ## Terminologies 
 ---

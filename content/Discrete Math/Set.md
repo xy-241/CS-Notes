@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2023-12-27T17:20:00+08:00
+Last Date: 2023-12-28T18:54:11+08:00
 References: 
 ---
 ## Abstract
@@ -154,6 +154,10 @@ $$
 (A \subseteq B) \land (B \subseteq C) \rightarrow A \subseteq C
 $$
 
+### Theorem 6.2.2
+- *Set Identities*
+- Very similar to [[Propositional Logic#Theorem 2.1.1]]
+- Refer to lecture 5.2.2 for more details
 ### Theorem 6.2.4
 - An [[#Empty Set]] is a s [[#Subset]] of every [[Discrete Math/Set|Set]]
 - Assume `A` is all the possible sets

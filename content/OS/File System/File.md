@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2023-12-27T15:36:00+08:00
+Last Date: 2023-12-28T20:35:39+08:00
 References: 
 ---
 
@@ -39,7 +39,7 @@ xxd <BINARY_NAME.bin>
 ### Special File
 
 - Make [[IO Device]] look like [[File]], so we can reuse the same set of file [[System Call (系统调用)]] on IO Devices
-- By convention, kept in the `/dev` [[File System#File Directory]]
+- By convention, kept in the `/dev` [[File System#Linux File System]]
 
 **Block Special Files**
 - Model [[IO Device]] that has a collection of *randomly addressable blocks* like like disk

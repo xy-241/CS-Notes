@@ -6,13 +6,18 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T00:19:00
-Last Date: 2023-12-14T18:16:44+08:00
-References:
+Last Date: 2023-12-28T18:53:23+08:00
+References: 
 ---
 ## Abstract
 ---
 - The logic of [[Mathematical Statement#Compound Statement]]
 
+## Theorems
+---
+### Theorem 2.1.1
+- [[#Logical Equivalence]]
+- Refer to the lectures notes for more details
 
 ## Terminologies 
 ---
