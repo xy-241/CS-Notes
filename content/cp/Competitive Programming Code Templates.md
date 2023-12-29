@@ -6,18 +6,17 @@ Author Profile:
 tags:
   - cp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2023-12-29T16:27:57+08:00
+Last Date: 2023-12-29T16:37:46+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
-A collection of code templates to kickstart the journey of solving interesting problems!
+A collection of code templates to kickstart the journey of solving interesting problems on Codeforces!
 
 
-## Codeforces
+## Java Code Template
 ---
-### Java Code Template
 **When there are multiple inputs in a single test case**
 ```java title="Solution.java"
 import java.util.Scanner;
@@ -57,4 +56,9 @@ public class Solution {
     solve();
   }
 }
+```
+
+**Test the program with test cases inside `input.txt`**
+```bash
+java Solution.java < input.txt
 ```
