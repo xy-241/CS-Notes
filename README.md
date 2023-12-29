@@ -10,7 +10,11 @@
 
 <br>
 
-
+## 💡 System Design
+- [Basis](https://notes.yxy.ninja/System-Design/)
+- [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
+- [Proxy](https://notes.yxy.ninja/System-Design/Proxy/)
+- [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
 
 ## 💻 Operating System
 - [Operating System](https://notes.yxy.ninja/tags/OS)
@@ -36,7 +40,6 @@
 - [Python](https://notes.yxy.ninja/tags/python)
 - [Java](https://notes.yxy.ninja/tags/java)
 - [Javascript](https://notes.yxy.ninja/tags/js)
-- [System Design](https://notes.yxy.ninja/tags/system_design)
 - [Docker (Under heavy revision)](https://notes.yxy.ninja/tags/docker)
 - [Object Oriented Programming](https://notes.yxy.ninja/tags/OOP)
 

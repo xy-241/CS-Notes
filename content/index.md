@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2023-12-24T01:37:00+08:00
+Last Date: 2023-12-30T02:05:06+08:00
 References: 
 ---
 
@@ -14,6 +14,14 @@ References:
 >- I am still reconstructing some of the notes and sorting out the taggings.
 >- Some notes are empty because those ideas weren't the main focus when I was exploring that particular topic
 >- Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
+
+## 💡 System Design
+---
+- [Basis](https://notes.yxy.ninja/System-Design/)
+- [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
+- [Proxy](https://notes.yxy.ninja/System-Design/Proxy/)
+- [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
+
 
 ## 💻 Operating System
 ---
@@ -43,7 +51,6 @@ References:
 - [Python](https://notes.yxy.ninja/tags/python)
 - [Java](https://notes.yxy.ninja/tags/java)
 - [Javascript](https://notes.yxy.ninja/tags/js)
-- [System Design](https://notes.yxy.ninja/tags/system_design)
 - [Docker (Under heavy revision)](https://notes.yxy.ninja/tags/docker)
 - [Object Oriented Programming](https://notes.yxy.ninja/tags/OOP)
 
