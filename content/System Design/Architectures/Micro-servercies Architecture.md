@@ -6,15 +6,15 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-11-02T16:45:00
-Last Date: 2023-12-14T18:16:44+08:00
-References:
+Last Date: 2023-12-30T00:52:30+08:00
+References: 
 ---
 ## Abstract
 ---
 - A [[Distributed Systems]] Architecture, an *Organization De-Coupling Strategy*
 - Should be [[#Small]], [[#Focused on One Task]], [[#Aligned with a Bounded Context]], [[#Autonomy]], [[#Independently Deployable]] and [[#Loosely Coupled]]
-- The real value is build, test & deploy *Services* independently of other *Services*
-- - Isn't [[Service Based Design]]
+- The real value is build, test & deploy *Services* independently of other Service
+- Isn't [[Service Based Design]]
 
 
 

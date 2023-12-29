@@ -17,4 +17,4 @@ References:
 ## Troubleshooting
 ---
 ### Networking
-- In order to have [[HTTP#HTTPS]] Connection between [[ALB]] and [[Target Group]]. Make sure to set [the Protocol](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#protocol) to ``HTTPS``
+- In order to have [[HTTP#HTTPS]] Connection between [[AWS ALB]] and [[Target Group]]. Make sure to set [the Protocol](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#protocol) to ``HTTPS``

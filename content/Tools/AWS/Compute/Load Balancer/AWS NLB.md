@@ -6,15 +6,19 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-30T19:24:00
-Last Date: 2023-12-14T18:16:44+08:00
+Last Date: 2023-12-30T00:34:21+08:00
 ---
 ## Abstract
 ---
-- [[Layer 4 Load Balancer]]
+- AWS's offering of [[Network Load Balancer]]
+- Uses [[NAT]] to [[Proxy]] the incoming/outgoing traffic
+- Listener can only be either `TCP`, `TCP_UDP`, `TLS` or `UDP`
+- [[Target Group]] can only use [[Network Protocol]] `TCP`, `TCP_UDP`, `TLS` or `UDP` (Based on AWS experience)
+- [[Health Check]] can use Network Protocol `TCP`, `HTTP` or `HTTPS` 
 
 ## Tips
 ---
-### Obtain Private IPs dynamically using [[Terraform]]
+### Obtain Private IPs dynamically using Terraform
 ```hcl
 data "aws_network_interface" "nlb_private_ip" {
 	for_each = toset(var.private_subnet_ids)

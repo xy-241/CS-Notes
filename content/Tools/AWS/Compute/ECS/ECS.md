@@ -50,7 +50,7 @@ containerPrivateIP=$(curl $ECS_CONTAINER_METADATA_URI | jq -r '.Networks[0].IPv4
 >[!info] Defines
 >- What [[#Task Definition]] to use
 >- [[VPC]] (like which [[VPC Subnet]] to use)
->- Connecting to [[ALB]] & [[Target Group]]
+>- Connecting to [[AWS ALB]] & [[Target Group]]
 >- [[Auto Scaling Group]]
 
 ## Terminologies
