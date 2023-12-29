@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - cp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2023-12-29T16:23:53+08:00
+Last Date: 2023-12-29T16:27:57+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
-- A collection of code templates to kickstart the 
+A collection of code templates to kickstart the journey of solving interesting problems!
 
 
 ## Codeforces
@@ -27,7 +27,7 @@ public class Solution {
   
   // Write your solution here
   public static void solve() {
-    System.out.println("Hello world");
+    System.out.println("Write your solution inside the solve() method");
   }
   
   public static void main(String[] args) {
@@ -50,7 +50,7 @@ public class Solution {
   
   // Write your solution here
   public static void solve() {
-    System.out.println("Hello world");
+    System.out.println("Write your solution inside the solve() method");
   }
   
   public static void main(String[] args) {
