@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T08:54:00
-Last Date: 2023-12-11T21:43:16+08:00
+Last Date: 2023-12-30T20:26:03+08:00
 References: 
 ---
 ## Abstract
@@ -21,25 +21,29 @@ References:
 ### Modus Tollens
 - Denying the consequent
 ### Generalization
-#### Case 1
+**Case 1**
 - [[Mathematical Argument#Premise|Premise]]: `p`
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p v q`
-#### Case 2
+
+**Case 2**
 - [[Mathematical Argument#Premise|Premise]]: `q`
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p v q`
 ### Specilisation 
 - Allow us to discard some information to focus on things that we are interested
-#### Case 1
+
+**Case 1**
 - [[Mathematical Argument#Premise|Premise]]: `p AND q` 
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p`
-#### Case 2
+
+**Case 2**
 - [[Mathematical Argument#Premise|Premise]]: `p AND q`
 - [[Mathematical Argument#Conclusion|Conclusion]]: `q`
 ### Elimination
-#### Case 1
+**Case 1**
 - [[Mathematical Argument#Premise|Premise]]: `p v q`, `~q`
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p`
-#### Case 2
+
+**Case 2**
 - [[Mathematical Argument#Premise|Premise]]: `p v q`, `~p`
 - [[Mathematical Argument#Conclusion|Conclusion]]: `q`
 ### Transitivity
@@ -55,7 +59,7 @@ References:
 - The core of [[Mathematical Proof#Proof by Contradiction (反证法)]]
 - If a *assumption* leads to a *contradiction*, then that *assumption* must be false
 
-## With [[Predicate#Quantifiers]]
+## With Predicate Quantifier
 ---
 ### Universal Modus Ponens
 - [[Mathematical Argument#Premise|Premise]]: For all x, if x makes P(x) true, then x makes Q(x) true
