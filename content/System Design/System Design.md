@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-30, 01:04
-Last Date: 2023-12-30T02:08:31+08:00
+Last Date: 2023-12-30T21:39:34+08:00
 References: 
 draft: 
 ---
@@ -23,6 +23,23 @@ draft:
 ---
 - **Refers to** the capability of a system to handle a growing amount of work, or its potential to be enlarged to accommodate that growth
 - **It ensures** system can handle increased load efficiently by adding resources or optimizing existing ones. It ensures that the system can grow to meet the demands of a larger user base or increased data volume, ensuring [[#Availability]]
+
+### Vertical Scaling
+- Basically adding more [[CPU]] and [[Main Memory]] to a single [[Host#Server]]
+- Simple to implement, great option when traffic is low
+
+
+#### Vertical Scaling Limitations
+**Hard Limit**
+- It is impossible to add unlimited [[CPU]] and [[Main Memory]] to a single [[Host#Server]]
+
+**No Failover**
+- If one server goes down, the website/app goes down with it completely. No [[#Fault Tolerance (容错性)]]
+
+### Horizontal Scaling
+- Basically adding more [[Host#Server]], handle the traffic in [[High-performance Computing#Parallelism (并行性)]]
+- More desirable for large scale applications due to [[#Vertical Scaling Limitations]]
+- Usually has a [[Load Balancer]] sits between the client and server, to distribute the traffic evenly to the servers
 
 ## Fault Tolerance (容错性)
 ---
