@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-20T17:09:28+08:00
-Last Date: 2023-12-28T21:23:29+08:00
+Last Date: 2023-12-30T23:39:00+08:00
 References: 
 ---
 ## Abstract
@@ -39,8 +39,11 @@ Owner of the identity, live user themselves
 - You can read up on the breakdown of each components [here](https://learn.microsoft.com/en-us/entra/identity-platform/application-consent-experience#building-blocks-of-the-consent-prompt)
 - You can manage the apps you consented [here](https://myapps.microsoft.com/)
 
-Google Account
+**Google Account**
 - You can manage the apps you consented [here](https://myaccount.google.com/connections)
+
+**Github Account**
+- You can manage the apps you consented [here](https://github.com/settings/applications)
 
 ## Client
 ---

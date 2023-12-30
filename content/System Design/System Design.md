@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-30, 01:04
-Last Date: 2023-12-30T21:39:34+08:00
+Last Date: 2023-12-30T22:23:34+08:00
 References: 
 draft: 
 ---
@@ -18,6 +18,7 @@ draft:
 ---
 - **Refers to** the percentage of time that a system is operational and available for use
 - **It ensures** the system is accessible when needed, minimizing downtime and maintaining a consistent user experience
+- Can be achieved using [[Database Replication (数据库复制)#High Availability|Database Replication]]
 
 ## Scalability (可扩展性)
 ---
@@ -45,8 +46,8 @@ draft:
 ---
 - **Refers to** a system's ability to continue operating and providing its intended services even in the presence of hardware or software faults
 - **It ensures** that a system can recover from failures, keeping disruptions minimal and maintaining the [[#Availability]] of services
-- **Fault Tolerance** for **stateless system** can be achieved with [[Load Balancer#Failover Capability|Load Balancer's Failover Capability]]
-- **Fault Tolerance** for **stateful system** can be achieved with [[Replicated State Machine]]
+- **Fault Tolerance** for **stateless system** can be achieved with [[Load Balancer#Failover Capability|Load Balancer's Failover Capability]] etc
+- **Fault Tolerance** for **stateful system** can be achieved with [[Database Replication (数据库复制)#High Fault Tolerance|Database Replication]] and [[Replicated State Machine]] etc
 
 ## Reliability (可靠性)
 ---
