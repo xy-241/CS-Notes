@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2023-12-30T02:05:06+08:00
+Last Date: 2023-12-31T21:15:58+08:00
 References: 
 ---
 
@@ -18,8 +18,10 @@ References:
 ## 💡 System Design
 ---
 - [Basis](https://notes.yxy.ninja/System-Design/)
-- [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
 - [Proxy](https://notes.yxy.ninja/System-Design/Proxy/)
+- [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
+- [Database](https://notes.yxy.ninja/System-Design/Database/)
+- [Cache](https://notes.yxy.ninja/System-Design/Cache/)
 - [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
 
 

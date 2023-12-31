@@ -12,8 +12,10 @@
 
 ## 💡 System Design
 - [Basis](https://notes.yxy.ninja/System-Design/)
-- [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
 - [Proxy](https://notes.yxy.ninja/System-Design/Proxy/)
+- [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
+- [Database](https://notes.yxy.ninja/System-Design/Database/)
+- [Cache](https://notes.yxy.ninja/System-Design/Cache/)
 - [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
 
 ## 💻 Operating System
