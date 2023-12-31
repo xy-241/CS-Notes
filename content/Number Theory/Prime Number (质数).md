@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-15, 15:53
-Last Date: 2023-12-23T16:13:45+08:00
+Last Date: 2023-12-31T18:02:39+08:00
 References: 
 ---
 ## Abstract
@@ -30,8 +30,9 @@ public static boolean isPrime(long n) {
 }
 ```
 
-### Find Minimal Non-Zero Factor
-Find the minimal factor of a given integer that is `>1`
+### Find Minimal Greater-than-One Factor
+- Find the minimal factor of a given integer that is `>1`
+- If the function returns the given `n`, then the given `n` is [[Prime Number (质数)]]
 ```java
 // Time Complexity - O(sqrt(n)), where n is the size of the integer
 public static int minFactor(int n) {

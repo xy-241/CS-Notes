@@ -5,14 +5,14 @@ Mastery Level:
 Time Taken: 
 Space:
   - O(1)
-Time: O(n)
+Time: O(nlogn)
 Appears On:
   - Codeforces
 Brush: 1
 Difficulty:
-  - "1000"
+  - "1100"
 Area:
-  - data structure
+  - number_theory
 Reference 1: 
 Reference 2: 
 Author:
@@ -20,19 +20,19 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-23, 16:07
-Last Date: 2023-12-27T11:39:02+08:00
+Last Date: 2023-12-31T18:15:58+08:00
 tags:
   - cp
-draft: "true"
+draft: 
 ---
 [Original Problem](https://codeforces.com/contest/1872/problem/C)
 ## Idea
 ---
 - The idea here is to loop through the elements between `l` and `r` (inclusive)
 - For each [[Integer (整数)]] we loop through, let it be `j`
-- Then we [[Prime Number (质数)#Find Minimal Non-Zero Factor]], and let it be `md`
-- We are sure `(j-md)%md == 0`, because `j%md=0`, `j/md - md/md = integer - integer = integer`
-- As long as `md != j` which means `j` is a prime and `md - j = 0`, and `minFactor()` guarantees that the `md` is `>=2` which is `>1` 
+- Then we [[Prime Number (质数)#Find Minimal Greater-than-One Factor]], and let it be `md` if we can obtain one, and it will be `a`
+- Then `j-md` will be `b`
+- Then [[GCD]] of `md` and `j-md` will be `md` which is guaranteed to be `>1`
 
 
 ## Space & Time Analysis
@@ -41,8 +41,8 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(1)
 - *Ignore input size & language dependent space*
 - We aren't creating any objects on the [[Address Space#Data Segment]]
-### Time - O()
-- 
+### Time - O(nlogn)
+- Assume `r-l` is `n`, [[Prime Number (质数)#Find Minimal Greater-than-One Factor]] is `O(logn)`, thus overall time complexity is `O(nlogn)`
  
 
 ## Codes
@@ -95,9 +95,9 @@ public class Solution {
 
 ## Personal Reflection
 ---
-- **Why it takes so long to solve:** *NIL*
-- **What you could have done better:** *NIL*
-- **What you missed:** *NIL*
-- **Ideas you've seen before:** *NIL*
-- **Ideas you found here that could help you later:** *NIL*
-- **Ideas that didn't work and why:** *NIL*
+- **Why it takes so long to solve:** Unaware of the [[Prime Number (质数)#Find Minimal Greater-than-One Factor]]
+- **What you could have done better:** Practice more questions on [[Number Theory]]
+- **What you missed:** Find Minimal Greater-than-One Factor. And an [[Integer (整数)]] can be minused all the way to `0` by minusing it with one of its factor after certain number of times 
+- **Ideas you've seen before:** [[Prime Number (质数)]] and [[GCD]]
+- **Ideas you found here that could help you later:** Find Minimal Greater-than-One Factor in `O(logn)`
+- **Ideas that didn't work and why:** Trying to apply GCD concepts on the potential numbers in the range of `l` and `r`, but stuck on how to split the potential number `a+b` into 2 valid Integer (整数), way to complicated and time consuming. We should think about how to find the 2 valid Integer (整数) from all the potential pair of factors that sum up to the potential number `a+b`
