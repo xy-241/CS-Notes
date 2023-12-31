@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-02T22:09:00
-Last Date: 2023-12-10T00:34:28+08:00
+Last Date: 2023-12-31T19:17:23+08:00
 References: 
 ---
 ## Abstract
@@ -71,6 +71,7 @@ $$
 ### Statement
 - A sentence that is `True` or `False`, but not both
 - Can be presented with variables like `p`, `q`, `r` & `s` etc
+- The tip here is to keep it atomic, especially in [[Mathematical Proof]] that is complicated
 ### Logical Connectives 
 - Negation: `NOT` performed first
 - Disjunction: `OR` ,Conjunction: `AND` coequal, make sure proper parentheses is used to avoid [[Propositional Logic#Ambiguous]]

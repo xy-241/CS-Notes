@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-20T15:42:00
-Last Date: 2023-12-17T17:54:21+08:00
+Last Date: 2023-12-31T19:22:19+08:00
 References: 
 ---
 ## Abstract
@@ -17,6 +17,7 @@ References:
 >- If it doesn't rain, then the floor can be either wet or no wet
 - ***The floor MUST be wet if it rains***
 - *Logically Equivalent* to `~P OR Q`
+- `true -> false` is `false`, `false -> true/false` is `true`
 
 | P   | Q   | P -> Q | ~P OR Q |
 | --- | --- | ------ | ------- |

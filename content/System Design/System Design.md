@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-30, 01:04
-Last Date: 2023-12-30T22:23:34+08:00
+Last Date: 2023-12-31T20:59:33+08:00
 References: 
 draft: 
 ---
@@ -18,7 +18,7 @@ draft:
 ---
 - **Refers to** the percentage of time that a system is operational and available for use
 - **It ensures** the system is accessible when needed, minimizing downtime and maintaining a consistent user experience
-- Can be achieved using [[Database Replication (数据库复制)#High Availability|Database Replication]]
+- Can be achieved directly using [[Database Replication (数据库复制)#High Availability|Database Replication]] or indirectly with good [[#Fault Tolerance (容错性)]] and good [[#Reliability (可靠性)]]
 
 ## Scalability (可扩展性)
 ---
@@ -48,6 +48,11 @@ draft:
 - **It ensures** that a system can recover from failures, keeping disruptions minimal and maintaining the [[#Availability]] of services
 - **Fault Tolerance** for **stateless system** can be achieved with [[Load Balancer#Failover Capability|Load Balancer's Failover Capability]] etc
 - **Fault Tolerance** for **stateful system** can be achieved with [[Database Replication (数据库复制)#High Fault Tolerance|Database Replication]] and [[Replicated State Machine]] etc
+
+### Single Point of Failure
+<img src="https://proxy-prod.omnivore-image-cache.app/0x0,snXjF9Ub2BnqAv7-t65xgQIxxskkFXoFQ0Yu-f0GeEoo/https://bytebytego.com/_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fscale-from-zero-to-millions-of-users%2Ffigure-1-8-AVKYQBAQ.png&w=828&q=75" height="300">
+
+- A part of a system that, if it fails, will stop the entire system from working
 
 ## Reliability (可靠性)
 ---
