@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-31, 21:08
-Last Date: 2024-01-01T21:18:22+08:00
+Last Date: 2024-01-01T21:20:38+08:00
 tags:
   - cp
 draft: 
@@ -47,8 +47,8 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 
 ## Codes
 ---
-### 1st Attempt
-```java title="Solution.java"
+### 4th Attempt
+```java
 public class Node {
     int key;
     int val;
