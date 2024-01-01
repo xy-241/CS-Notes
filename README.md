@@ -16,6 +16,7 @@
 - [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
 - [Database](https://notes.yxy.ninja/System-Design/Database/)
 - [Cache](https://notes.yxy.ninja/System-Design/Cache/)
+- [Compute](https://notes.yxy.ninja/Networking/Application-Layer/DNS/DNS)
 - [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
 
 ## 💻 Operating System
