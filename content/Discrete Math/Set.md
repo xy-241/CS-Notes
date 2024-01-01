@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2023-12-28T18:54:11+08:00
+Last Date: 2024-01-01T13:44:05+08:00
 References: 
 ---
 ## Abstract
@@ -116,7 +116,7 @@ $$
 ### Partition of Sets are Mutually Disjoin
 *Mutually Disjoin* is also known as *Pairwise Disjoint* or *Non-overlapping*
 
-![[union_of_mutually_disjoint_subsets.png]]
+![[union_of_mutually_disjoint_subsets.png|300]]
 - `A1`, `A2`, `A3`, `A4` are *Mutually Disjoin*
 - `A` is called *Union of Mutually Disjoint Subsets*
 - The collection of sets `{A1, A2, A3, A4}` is said to be a partition of `A` 
@@ -194,6 +194,9 @@ $$
 (a, b) = (c, d) \leftrightarrow (a=c) \land (b=d)
 $$
 
+### Order n-tuples
+- `n` denotes the number of [[Discrete Math/Set|Set]] we are multiplying
+- [[#Ordered Pair]] is order 2-tuples, because are multiplying 2 sets
 
 ### Cartesian Product
 - Given [[Discrete Math/Set|Set]] `A` and `B`, the Cartesian product is a set of [[#Ordered Pair]]
@@ -205,8 +208,7 @@ $$
 A \times B \neq B \times A
 $$
 - Cartesian Product of real numbers is basically a set that contains all the possible (x,y) coordinates on the *Cartesian Plane* 
+- Depends on the number of set - `n`, the Cartesian product is a set of [[#Order n-tuples]]
 
-### Order n-tuples
-- `n` denotes the number of [[Discrete Math/Set|Set]] we are multiplying
-- [[#Ordered Pair]] is order 2-tuples, because are multiplying 2 sets
+
 

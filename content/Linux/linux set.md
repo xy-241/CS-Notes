@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - linux
 Creation Date: 2023-09-03T16:27:32+08:00
-Last Date: 2023-09-03T16:27:32+08:00
-References:
+Last Date: 2024-01-01T13:47:10+08:00
+References: 
 ---
 >[!abstract] Command is used to modify the behavior of the shell
 
