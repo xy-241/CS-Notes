@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-31, 20:32
-Last Date: 2023-12-31T21:07:45+08:00
+Last Date: 2024-01-01T21:46:51+08:00
 References: 
 draft: 
 ---
@@ -70,4 +70,4 @@ cache.get('myKey')
 ---
 ### Cache Eviction
 - Once the [[Cache Server]] is full, any requests to add items to the cache server might cause existing items to be *removed*
-- Can be handled with [[#Eviction Policy]]
+- Can be handled gracefully with [[#Eviction Policy]]

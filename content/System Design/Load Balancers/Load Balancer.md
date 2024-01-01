@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-09-28T11:29:42+08:00
-Last Date: 2023-12-30T21:41:42+08:00
+Last Date: 2024-01-01T22:46:50+08:00
 References: 
 ---
 ## Abstract
@@ -26,6 +26,12 @@ References:
 - If the traffic grows rapidly, and current set of servers are not enough to handle the traffic
 - We only need to add more servers to the server pool, and the [[Load Balancer]] automatically starts to send requests to them
 
+
+## Terminologies
+---
+### Sticky Session
+- Also known as *session affinity* or *session persistence*
+- Refers to the practice of directing a [[Host#Client]]'s requests to the same [[Host#Server]] consistently for the duration of a session or user's interaction
 ## References
 ---
 - [Scale From Zero To Millions Of Users](https://bytebytego.com/courses/system-design-interview/scale-from-zero-to-millions-of-users)
