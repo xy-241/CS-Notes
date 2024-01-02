@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2024-01-01, 22:38
-Last Date: 2024-01-01T22:54:28+08:00
+Last Date: 2024-01-02T10:41:37+08:00
 References: 
 draft: 
 ---
@@ -19,6 +19,7 @@ draft:
 ## Stateful Compute Server
 ---
 <img src="https://proxy-prod.omnivore-image-cache.app/0x0,spcYlEEBWYbtLl7GxWu4llfQaOY1D5g8VAe7jYtlRTRM/https://bytebytego.com/_next/image?url=%2Fimages%2Fcourses%2Fsystem-design-interview%2Fscale-from-zero-to-millions-of-users%2Ffigure-1-12-WTWFBLWX.png&w=1920&q=75" width="500" />
+
 - Remembers client data like [[Session Token]] (state) from one request to the next
 - From the above diagram, user A’s session data and profile image are stored in Server 1
 - To authenticate User A, HTTP requests must be routed to Server 1

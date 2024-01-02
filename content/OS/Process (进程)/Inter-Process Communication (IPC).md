@@ -16,7 +16,7 @@ References:
 
 >[!note] 6 types
 >1. [[Pipe (管道)]]
->2. [[Message Queue]]
+>2. [[Message Queue (消息队列)]]
 >3. [[Signal (Software Interrupt)]]
 >4. [[Semaphore (信号量)]]
 >5. [[Shared Memory]]
