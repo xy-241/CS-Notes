@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-10-15T21:32:00
-Last Date: 2023-12-14T10:54:31+08:00
+Last Date: 2024-01-02T13:06:39+08:00
 References: 
 ---
 ## Abstract
@@ -16,7 +16,7 @@ References:
 ## Components
 ---
 ### Agent
-- A service that runs alongside the application to collect various [[Event-Driven Architecture#Event |Events]] and [[Metric]], and sends it to the *Datadog servers*
+- A service that runs alongside the application to collect various [[Event-Driven Architecture#Event |Events]] and [[Monitoring#Metric]], and sends it to the *Datadog servers*
 >[!caution] Different from [[Datadog ddtrace]] which is on the application side
 ### DogStatsD
 - An implementation of [[StatsD]] protocol

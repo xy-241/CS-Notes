@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2023-10-17T09:41:00
-Last Date: 2023-12-10T19:30:34+08:00
+Last Date: 2024-01-02T13:06:54+08:00
 References: 
 ---
 ## Abstract
@@ -36,6 +36,6 @@ References:
 - *Trace Metrics* are the [[#Metrics]], directly connected [[#Instrumented]] application, calculated based on 100% of the app's traffic
 #### Datadog backend side
 - *Live Search* allows us to search [[Span]] using any tag or [[Span]]
-- *Generate Custom [[Metric]]* from [[Span]]
+- *Generate Custom [[Monitoring#Metric]]* from [[Span]]
 - *Retention Filters* - how long we want to retain the trace
 - *Dashboard* used to give a visual representation of the app for optimisation and debugging 

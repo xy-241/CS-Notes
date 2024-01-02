@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-30, 01:04
-Last Date: 2024-01-01T23:47:38+08:00
+Last Date: 2024-01-02T14:20:28+08:00
 References: 
 draft: 
 ---
@@ -24,7 +24,7 @@ draft:
 ---
 - **Refers to** the capability of a system to handle a growing amount of work, or its potential to be enlarged to accommodate that growth
 - **It ensures** system can handle increased load efficiently by adding resources or optimizing existing ones. It ensures that the system can grow to meet the demands of a larger user base or increased data volume, ensuring [[#Availability]]
-- Can be achieved with [[Cache Server]] & [[Compute Server#Stateless Compute Server]]
+- Can be achieved with [[Cache Server]], [[Compute Server#Stateless Compute Server]], [[Message Queue (消息队列)]] & [[Database Scaling]]
 
 ### Vertical Scaling
 - Basically adding more [[CPU]] and [[Main Memory]] to a single [[Host#Server]]
@@ -33,10 +33,13 @@ draft:
 
 #### Vertical Scaling Limitations
 **Hard Limit**
-- It is impossible to add unlimited [[CPU]] and [[Main Memory]] to a single [[Host#Server]]
+- It is impossible to add unlimited [[CPU]], [[Main Memory]] & [[Disk]] etc to a single [[Host#Server]]
 
 **No Failover**
-- If one server goes down, the website/app goes down with it completely. No [[#Fault Tolerance (容错性)]]
+- [[#Single Point of Failure]]. No [[#Fault Tolerance (容错性)]]
+
+**Expensive**
+- Powerful servers are much more expensive
 
 ### Horizontal Scaling
 - Basically adding more [[Host#Server]], handle the traffic in [[High-performance Computing#Parallelism (并行性)]]
@@ -60,6 +63,12 @@ draft:
 ---
 - **Refers to** the ability of a system to perform a specified function *without failure over a specified period*
 - **It ensures** consistent and predictable behavior of a system. It involves minimizing the chances of failures and, in case of failures, having mechanisms in place for quick recovery
+- Can be achieved with [[Monitoring]] and automation like ci/cd pipeline
+
+
+## References
+---
+- [ByteByteGo](https://bytebytego.com/courses/system-design-interview/scale-from-zero-to-millions-of-users)
 
 
 
