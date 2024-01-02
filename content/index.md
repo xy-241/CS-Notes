@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-02T09:54:46+08:00
+Last Date: 2024-01-02T14:25:50+08:00
 References: 
 ---
 
@@ -23,6 +23,7 @@ References:
 - [Database](https://notes.yxy.ninja/System-Design/Database/)
 - [Cache](https://notes.yxy.ninja/System-Design/Cache/)
 - [Compute](https://notes.yxy.ninja/System-Design/Compute/)
+- [Monitoring](https://notes.yxy.ninja/System-Design/Monitoring/)
 - [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
 
 
