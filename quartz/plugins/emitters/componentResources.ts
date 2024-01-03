@@ -101,8 +101,7 @@ function addGlobalPageResources(
         });
       });`)
 
-      // Add in another 2
-      componentResources.afterDOMLoaded.push(plausibleScript)
+      // Add in another 1 - umami
       componentResources.afterDOMLoaded.push(`
       const umamiScript = document.createElement("script")
       umamiScript.src = "https://analytics.umami.is/script.js"
