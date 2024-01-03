@@ -21,7 +21,19 @@
 - [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
 
 ## 💻 Operating System
-- [Operating System](https://notes.yxy.ninja/tags/OS)
+- [Basis](https://notes.yxy.ninja/OS/)
+- [Computer Booting](https://notes.yxy.ninja/OS/Booting/)
+- [CPU](https://notes.yxy.ninja/OS/CPU/)
+- [File System](https://notes.yxy.ninja/OS/File-System/)
+- [Interrupt (中断)](https://notes.yxy.ninja/OS/Interrupts-(%E4%B8%AD%E6%96%AD)/)
+- [IO](https://notes.yxy.ninja/OS/IO/)
+- [Memory](https://notes.yxy.ninja/OS/Memory/)
+- [Process (进程)](https://notes.yxy.ninja/OS/Process-(%E8%BF%9B%E7%A8%8B)/)
+- [Synchronization (同步)](https://notes.yxy.ninja/OS/Synchronization-(%E5%90%8C%E6%AD%A5)/)
+- [System-Calls (系统调用)](https://notes.yxy.ninja/OS/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/)
+- [Thread (线程)](https://notes.yxy.ninja/OS/Thread-(%E7%BA%BF%E7%A8%8B)/)
+- [UNIX vs Linux](https://notes.yxy.ninja/OS/UNIX-vs-Linux/)
+- [MISC](https://notes.yxy.ninja/OS/Terminologies/)
 - [Computer Organisation](https://notes.yxy.ninja/tags/computer_organisation)
 
 ## 📝 Data Structure & Algorithm
