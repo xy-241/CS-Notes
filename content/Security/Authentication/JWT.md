@@ -6,11 +6,12 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-13T09:33:16+08:00
-Last Date: 2023-09-13T09:33:16+08:00
-References:
+Last Date: 2024-01-02T17:01:22+08:00
+References: 
 ---
 ## Abstract
 ---
+- Stands for *JSON Web Token*
 - Can be stored inside [[Cookie]], [[Request Body]]
 - Able to tell if anyone has modified itself
 - 

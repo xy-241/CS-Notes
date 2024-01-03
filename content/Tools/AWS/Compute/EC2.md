@@ -24,7 +24,7 @@ References:
 >cat /var/log/syslog
 >```
 
->[!tip] [[Bash Function]] to obtain a temp [[Token]] & reretrieve instance metadata, [MDSV](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
+>[!tip] [[Bash Function]] to obtain a temp [[Token-Based Authentication]] & reretrieve instance metadata, [MDSV](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
 >```bash
 >get_mdsv2 () {
 >	echo $(TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600" 2>/dev/null` \

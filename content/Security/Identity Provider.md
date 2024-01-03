@@ -10,4 +10,4 @@ Last Date: 2023-09-07T10:40:04+08:00
 References:
 ---
 >[!abstract]
->- [[OAuth 2.0#Authorization Server]] that supports [[OIDC (Open ID Connect)]]
+>- [[OAuth 2.0#Authorization Server]] that supports [[OIDC Authentication]]

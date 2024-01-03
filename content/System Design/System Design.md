@@ -6,13 +6,14 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-30, 01:04
-Last Date: 2024-01-02T14:20:28+08:00
+Last Date: 2024-01-03T13:47:31+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
 - Designing robust and efficient systems that fulfil the needs of [[Host#Client]] smoothly 
+- [Kahoot! Quizzes](https://create.kahoot.it/share/availability-vs-scalability-vs-fault-tolerance-vs-reliability/89d22c1e-ff30-4f17-b65f-f1f7c0e37866) to learn about [[#Availability (可用性)]] vs [[#Scalability (可扩展性)]] vs [[#Fault Tolerance (容错性)]] vs [[#Reliability (可靠性)]]
 
 ## Availability (可用性)
 ---
