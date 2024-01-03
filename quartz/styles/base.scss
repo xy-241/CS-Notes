@@ -55,7 +55,7 @@ ul,
 }
 
 a {
-  font-weight: 600;
+  font-weight: 520;
   text-decoration: none;
   transition: color 0.2s ease;
   color: var(--secondary);
@@ -279,21 +279,24 @@ h6 {
 
 // typography improvements
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   margin-top: 2.25rem;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   margin-top: 1.9rem;
   margin-bottom: 1rem;
+  // text-decoration: underline;
+  color: var(--primary); // Add a custom color to make it visually distinct
 }
 
 h3 {
   font-size: 1.12rem;
   margin-top: 1.62rem;
   margin-bottom: 1rem;
+  color: var(--secondary); // Add a custom color to make it visually distinct
 }
 
 h4,
@@ -302,6 +305,7 @@ h6 {
   font-size: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--tertiary); // Add a custom color to make it visually distinct
 }
 
 figure[data-rehype-pretty-code-figure] {
@@ -333,6 +337,9 @@ pre {
   overflow-x: auto;
   border: 1px solid var(--lightgray);
   position: relative;
+
+  margin-left: 1.8rem;
+  margin-right: 0.5rem;
 
   &:has(> code.mermaid) {
     border: none;
@@ -402,13 +409,15 @@ p {
   overflow-x: auto;
 
   & > table {
-    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1.5rem;
     border-collapse: collapse;
 
     th,
     td {
-      min-width: 75px;
+      min-width: 150px;
+      max-width: 390px;
     }
 
     & > * {
@@ -438,6 +447,9 @@ img {
   max-width: 100%;
   border-radius: 5px;
   margin: 1rem 0;
+
+  display: block;
+  margin: auto;
 }
 
 p > img + em {
@@ -447,10 +459,11 @@ p > img + em {
 
 hr {
   width: 100%;
-  margin: 2rem auto;
-  height: 1px;
+  // margin: 2rem auto;
+  margin-top: -0.5rem;
+  height: 2px;
   border: none;
-  background-color: var(--lightgray);
+  background-color: var(--gray);
 }
 
 audio,
@@ -465,7 +478,7 @@ video {
 
 ul.overflow,
 ol.overflow {
-  max-height: 400;
+  max-height: 200;
   overflow-y: auto;
 
   // clearfix

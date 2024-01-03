@@ -12,9 +12,10 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
+        <div class="giscus" style={{ marginTop: "5rem" }}></div>
         <hr />
         <p>
-          Created with <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>, © {year}
+          Created by <a href="https://www.linkedin.com/in/xinyang-yu/">Xinyang YU</a>, © {year}
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (

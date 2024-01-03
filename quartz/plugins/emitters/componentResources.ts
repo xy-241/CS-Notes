@@ -100,6 +100,17 @@ function addGlobalPageResources(
           page_location: location.href,
         });
       });`)
+
+      // Add in another 2
+      componentResources.afterDOMLoaded.push(plausibleScript)
+      componentResources.afterDOMLoaded.push(`
+      const umamiScript = document.createElement("script")
+      umamiScript.src = "https://analytics.umami.is/script.js"
+      umamiScript.setAttribute("data-website-id", "5cc5e1c4-8202-4eed-b059-f4867a8f7f0b")
+      umamiScript.async = true
+  
+      document.head.appendChild(umamiScript)
+    `)
   } else if (cfg.analytics?.provider === "plausible") {
     const plausibleHost = cfg.analytics.host ?? "https://plausible.io"
     componentResources.afterDOMLoaded.push(`

@@ -1,0 +1,19 @@
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - networking
+Creation Date: 2023-07-14T13:30:00
+Last Date: 2023-12-16T21:04:59+08:00
+References: 
+---
+## Abstract
+---
+- Defines the format and the order of *messages* exchanged between 2 or more [[Host]]
+
+
+## Stateless Network Protocol
+---
+- [[Host#Server]] don't maintain information about the [[Host#Client]], vice versa

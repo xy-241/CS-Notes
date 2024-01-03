@@ -9,6 +9,12 @@
   transition: max-height 0.3s ease;
   box-sizing: border-box;
 
+  // width: 95%;
+  // margin-left: auto;
+  // margin-right: 0.5rem;
+  margin-left: 1.6rem;
+  margin-right: 0.5rem;
+  
   & > *:nth-child(2) {
     margin-top: 0;
   }
