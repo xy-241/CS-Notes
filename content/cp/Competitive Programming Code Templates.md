@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - cp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2023-12-29T16:37:46+08:00
+Last Date: 2024-01-02T21:33:21+08:00
 References: 
 draft: 
 ---
@@ -62,3 +62,7 @@ public class Solution {
 ```bash
 java Solution.java < input.txt
 ```
+
+>[!tip]
+>1. Make sure all inputs are read in in sequence 
+>2. Use `long` to prevent integer overflow issue 
