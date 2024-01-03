@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2023-12-27T16:10:19+08:00
+Last Date: 2024-01-03T15:38:46+08:00
 References: 
 ---
 ## Abstract
 ---
-- The process is blocked while the necessary instruction is being located and read in from [[Main Memory]] to [[CPU]]
-- Usually happens when not all [[Process]] has its whole program codes in the [[Main Memory]]
+- The [[Process]] is blocked while the necessary instruction is being located and read in from [[Main Memory]] to [[CPU]]
+- Usually happens when not all Process has its whole program codes in the Main Memory
 
 
 ## 3 Possible Causes

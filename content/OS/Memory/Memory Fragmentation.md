@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T01:24:00
-Last Date: 2023-12-14T19:35:04+08:00
+Last Date: 2024-01-03T15:37:02+08:00
 ---
 ## Abstract
 ---
+![[memory_fragmentation.png|500]]
 - Occurs when [[Main Memory]] is allocated and deallocated in a way that leaves small, unused blocks of memory scattered throughout the memory address space
-![[memory_fragmentation.png]]
->[!success] Can be handled with [[Virtual Memory]]
+- Can be handled with [[Virtual Memory]]
 
 ## Issues
 ---

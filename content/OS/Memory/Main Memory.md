@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-10-07T16:38:29+08:00
-Last Date: 2023-12-27T16:06:09+08:00
+Last Date: 2024-01-03T15:15:45+08:00
 References: 
 ---
 ## Abstract
@@ -24,7 +24,7 @@ References:
 - 2 Types - [[Latch]] & [[Flip-flops]]
 
 ### Physical Address
-- The address that points to a collection of [[#Memory Element]]
+- The address that points to a collection of [[#Memory Element]], usually 8 to form 1 [[Computer Data Representation#Byte]]
 
 ## Memory Frames
 ---

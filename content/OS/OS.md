@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2023-12-24T16:20:38+08:00
+Last Date: 2024-01-03T15:44:09+08:00
 References: 
 ---
 ## Abstract
@@ -48,7 +48,7 @@ References:
 - Example is [[FreeRTOS]], used by [[ESP32]]
 
 ### Personal Computer OS
-- Support [[Multi-Programming]] - dozens of programs started up at boot time
+- Support [[Multi-programming]] - dozens of programs started up at boot time
 - Provide good support to a single user
 - Widely used for word processing, spreadsheets & gaming etc
 - Example are [[Linux]] and [[Windows]]
