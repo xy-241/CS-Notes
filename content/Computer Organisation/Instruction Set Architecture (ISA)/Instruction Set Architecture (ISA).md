@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-04T17:30:24+08:00
-Last Date: 2023-12-25T20:37:43+08:00
+Last Date: 2024-01-04T14:15:39+08:00
 References: 
 ---
 ## Abstract
@@ -66,7 +66,7 @@ References:
 ## 4 Types
 ---
 ### Accumulator ISA
-![[accumulator isa.png]]
+![[accumulator isa.png|150]]
 1. ``load A``: Load value from [[Main Memory]] into accumulator
 2. ``add B``: Add value from [[Main Memory]] and value in the accumulator. The sum is stored back to the accumulator
 3. ``store C``: Store value in accumulator into [[Main Memory]]
@@ -74,17 +74,17 @@ References:
 ### Load-Store ISA
 - Also known as *Register-Register ISA*
 - The data is decoupled from the [[Register]] to [[Main Memory]]
-![[register-register,load-store isa.png]]
+![[register-register,load-store isa.png|150]]
 
 - Can only load data at [[Computer Data Representation#Word]] boundaries
 ![[word_alignment.png]]
 
 
 ### Memory-Memory ISA
-![[memory-memory isa.png]]
+![[memory-memory isa.png|150]]
 
 ### Stack ISA
-![[stack isa.png]]
+![[stack isa.png|150]]
 1. ``push A``, ``push B``: We load values from [[Main Memory]] onto the [[Stack]]
 2. ``add``: Remove the top 2 values in the [[Stack]], add them, and load the sum onto top of [[Stack]]
 3. ``pop C``: Transfer value at top of [[Stack]] to [[Main Memory]]
