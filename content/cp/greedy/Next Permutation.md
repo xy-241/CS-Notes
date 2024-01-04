@@ -21,7 +21,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2024-01-03, 14:45
-Last Date: 2024-01-04T12:08:05+08:00
+Last Date: 2024-01-04T12:17:20+08:00
 tags:
   - cp
 draft: 
@@ -51,15 +51,15 @@ draft:
 
 ### One Last Sort!
 - Given `[1,3,2]`, the next permutation is `[2,1,3]`
-- By [[#Find `nextIndex`]], we obtain `nextIndex = 0`
-- By [[#Find `smallIndex`]], we obtain `smallIndex = 2`
+- By finding `nextIndex`, we obtain `nextIndex = 0`
+- By finding `smallIndex`, we obtain `smallIndex = 2`
 - After swapping, we obtain `[2,3,1]` which is heavier than `[2,1,3]` and incorrect!
 - This can be solved easily by calling the `twoPointerSort()` again, since we know the elements after the `nextIndex` is sorted from biggest to smallest, the reverse is smallest to biggest. This guarantees the lightest sequence of elements after the `nextIndex` 
 
 ### Conclusion
 - That is it!
-- We have one [[Greedy Algorithm#Greedy Loop]] to [[#Find `nextIndex`]] in `O(n)` time 
-- We have another Greedy Loop to [[#Find `smallIndex`]] in `O(n)` time 
+- We have one [[Greedy Algorithm#Greedy Loop]] to find `nextIndex` in `O(n)` time 
+- We have another Greedy Loop to find `smallIndex` in `O(n)` time 
 - Lastly, we have [[#One Last Sort!]] that takes `O(n)` time and `O(1)`
 - Pretty efficient way to solve it, isn't it? 
 
