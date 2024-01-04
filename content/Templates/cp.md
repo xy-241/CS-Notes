@@ -20,15 +20,17 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: "{{date}}, {{time}}"
-Last Date: 2023-12-26T16:28:46+08:00
+Last Date: 2024-01-04T12:01:48+08:00
 tags:
   - cp
-draft:
+draft: 
 ---
 [Original Problem]()
 ## Idea
 ---
-- The idea here is 
+### Consensus
+
+### Conclusion
 
 
 ## Space & Time Analysis
