@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-12T15:43:00
-Last Date: 2023-12-17T20:37:28+08:00
+Last Date: 2024-01-05T17:12:56+08:00
 References: 
 ---
 ## Abstract
 ---
 - Based on the [IEEE 754 Standard](https://en.wikipedia.org/wiki/IEEE_754)
 - **sign** 0 for positive, 1 for negative
-- **exponent** by default -127 with all bits set to 0
+- **exponent** by default -127 with all bits set to 0. If we want positive, we need to set the 8th bit to `1` which is `128`
 - **mantissa** takes the binary behind the decimal place after normalisation (the yellow circle part) 
 - Reliable precision is *7 decimal digits*
 ![[IEEE 754 Floating-Point Rep.png]]
