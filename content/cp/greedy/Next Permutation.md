@@ -20,11 +20,11 @@ Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
-Creation Date: 2024-01-03, 14:45
+Creation Date: 2023-02-26T19:38:00
 Last Date: 2024-01-04T12:17:20+08:00
 tags:
   - cp
-draft: 
+draft:
 ---
 [Original Problem](https://leetcode.cn/problems/next-permutation/description/)
 ## Idea

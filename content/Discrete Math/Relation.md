@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-05T16:19:42+08:00
+Last Date: 2024-01-06T13:43:28+08:00
 References: 
 draft: 
 ---
@@ -33,6 +33,49 @@ $$
 $$
 - $x \in A$ and $z \in C$ are $S\circ R$ related iff there is a 'path' from `x` to `z` via some intermediate element $y \in B$ in the [[#Arrow Diagram]]
 
+### Composition is Associative
+- Let $A, B, C, D$ be [[Set]]
+- The we have 3 [[Relation]]: 
+	- $R \subseteq A \times B$
+	- $S \subseteq B \times C$
+	- $T\subseteq C \times D$
+
+$$
+T \circ (S\circ R) = (T\circ S) \circ R = T \circ S \circ R
+$$
+### Inverse of Composition
+- Let $A, B, C$ be [[Set]]
+- The we have 3 [[Relation]]: 
+	- $R \subseteq A \times B$
+	- $S \subseteq B \times C$
+
+$$
+(S \circ R)^{-1} = R^{-1} \circ S^{-1}
+$$
+
+## Relation Properties 
+---
+- Not properties of the elements of the [[Set]]!
+### Reflexive 
+- Every element in the given [[Set]] must be related to itself
+
+$$
+\forall x \in A (xRx)
+$$
+
+### Symmetric
+- If an element is related to another element, the another element must be related to this element too
+
+$$
+\forall x,y \in A (xRy \rightarrow yRx)
+$$
+
+### Transitive
+- If an element is related to another element, and that element is related to a third element. Then this must be related to the third element
+
+$$
+\forall x,y,z \in A (xRy \cap yRz \rightarrow xRz)
+$$
 
 ## Terminologies
 ---
@@ -53,3 +96,8 @@ $$
 $$
 \{b \in B : aRb \space for \space some \space a\in A\}
 $$
+
+### N-ary Relation 
+- A [[Relation]] involving 2 [[Set]] is called *binary relation*, also known as 2-ary
+- Ternary is 3-ary
+- Quaternary is 4-ary
