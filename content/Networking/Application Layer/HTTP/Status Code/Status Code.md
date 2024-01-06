@@ -6,8 +6,11 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-14T11:37:29+08:00
-Last Date: 2023-08-14T11:37:29+08:00
-References:
+Last Date: 2024-01-06T10:28:37+08:00
+References: 
 ---
->[!note] There is a lot, we can even custom our own one
->![[status_code.png]]
+## Abstract
+---
+![[status_code.png]]
+- There is a lot, we can even custom our own one
+- [Cheatsheet](https://cheatography.com/kstep/cheat-sheets/http-status-codes/?source=post_page-----1353126d9cd9--------------------------------)

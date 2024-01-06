@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - security
 Creation Date: 2024-01-02, 16:40
-Last Date: 2024-01-02T16:57:34+08:00
+Last Date: 2024-01-04T17:25:13+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
 ![[basic_token_authentication.png]]
-- 
+- One example is API Key
 ## Benefits
 ---
 ### Stateless
@@ -21,7 +21,7 @@ draft:
 - [[Token-Based Authentication]] includes a user ID, eliminating the need for the [[Host#Server]] to store token information in memory
 
 ### Cookie Independent 
-- Doesn't reply on [[Cookie]], can work with [[Local Storage]]
+- Doesn't rely on [[Cookie]], can work with [[Local Storage]]
 
 ### Cross Platform Support
 - Support both mobile and web platforms natively 

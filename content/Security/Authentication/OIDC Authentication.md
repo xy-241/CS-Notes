@@ -5,8 +5,8 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - security
-Creation Date: 2023-09-20T17:22:16+08:00
-Last Date: 2024-01-02T17:00:10+08:00
+Creation Date: 2023-09-07T10:40:04+08:00
+Last Date: 2024-01-04T15:40:52+08:00
 References: 
 ---
 ## Abstract
@@ -26,3 +26,5 @@ References:
 - Contains [[JWT#Claims]] like ``aud`` (Audience Property) which defines which [[OAuth 2.0#Client]] is meant to be the final recipient of the ID Token
 - Contain [[OAuth 2.0#Resource Owner (Identity)]] info like email and username which can be used by [[OAuth 2.0#Client]] to populate the application UI
 
+### Identity Provider
+- [[OAuth 2.0#Authorization Server]] that supports [[OIDC Authentication]]
