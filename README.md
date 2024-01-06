@@ -34,7 +34,23 @@
 - [Thread (线程)](https://notes.yxy.ninja/OS/Thread-(%E7%BA%BF%E7%A8%8B)/)
 - [UNIX vs Linux](https://notes.yxy.ninja/OS/UNIX-vs-Linux/)
 - [MISC](https://notes.yxy.ninja/OS/Terminologies/)
-- [Computer Organisation](https://notes.yxy.ninja/tags/computer_organisation)
+
+
+## 🖥️ Computer Organisation 
+---
+- [Number System](https://notes.yxy.ninja/Computer-Organisation/Number-System/)
+- [Processor](https://notes.yxy.ninja/Computer-Organisation/Processor/)
+- [Instruction Set Architecture (ISA)](https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/)
+- [MIPS](https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/)
+- [RISCV](https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/RISCV/)
+- [Pipeline](https://notes.yxy.ninja/Computer-Organisation/Pipeline/)
+- [Pipeline Branching](https://notes.yxy.ninja/Computer-Organisation/Pipeline-Branching/)
+- [Pipeline Hazard](https://notes.yxy.ninja/Computer-Organisation/Pipeline-Hazard/)
+- [Combination Circuit](https://notes.yxy.ninja/Computer-Organisation/Combination-Circuit/)
+- [Synchronous Sequential Circuit](https://notes.yxy.ninja/Computer-Organisation/Synchronous-Sequential-Circuit/)
+- [Asynchronous Sequential Circuits](https://notes.yxy.ninja/Computer-Organisation/Asynchronous-Sequential-Circuits/)
+- [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
+- [MISC](https://notes.yxy.ninja/Computer-Organisation/Terminologies/)
 
 ## 📝 Data Structure & Algorithm
 - [Data Structure & Algorithm Basis](https://notes.yxy.ninja/tags/dsa)
