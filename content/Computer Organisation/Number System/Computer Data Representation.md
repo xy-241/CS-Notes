@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-17, 19:58
-Last Date: 2023-12-17T20:27:24+08:00
+Last Date: 2024-01-06T19:04:57+08:00
 References: 
 ---
 ## Abstract
@@ -29,6 +29,8 @@ $$
 >- Approach 1: `2^2 - 1 = 3`
 >- Approach 2: `2^1 + 2^0 = 3`
 
+### Bit String
+- A collection of 0s & 1s
 ## Byte
 ---
 - A group of 8 [[#Bit]]
