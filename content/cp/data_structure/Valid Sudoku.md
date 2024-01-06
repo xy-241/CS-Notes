@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-02-28T11:11:00
-Last Date: 2024-01-06T18:34:11+08:00
+Last Date: 2024-01-06T18:36:10+08:00
 tags:
   - cp
 draft: 
@@ -53,7 +53,7 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 ## Codes
 ---
 ### 2nd Attempt (Java)
-```java title="Solution.java"
+```java
 class Solution {
     public boolean isValidSudoku(char[][] board) {
         if (!check(0, 0, 9, true, board)) return false;
