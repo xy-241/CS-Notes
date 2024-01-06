@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-03T16:00:04+08:00
+Last Date: 2024-01-06T19:12:25+08:00
 References: 
 ---
 
@@ -42,7 +42,12 @@ References:
 - [Thread (线程)](https://notes.yxy.ninja/OS/Thread-(%E7%BA%BF%E7%A8%8B)/)
 - [UNIX vs Linux](https://notes.yxy.ninja/OS/UNIX-vs-Linux/)
 - [MISC](https://notes.yxy.ninja/OS/Terminologies/)
-- [Computer Organisation](https://notes.yxy.ninja/tags/computer_organisation)
+
+
+## 🖥️ Computer Organisation 
+---
+- [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
+- [Combination Circuit](https://notes.yxy.ninja/Computer-Organisation/Combination-Circuit/)
 
 ## 📝 Data Structure & Algorithm
 ---
