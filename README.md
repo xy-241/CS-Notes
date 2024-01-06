@@ -37,7 +37,6 @@
 
 
 ## 🖥️ Computer Organisation 
----
 - [Number System](https://notes.yxy.ninja/Computer-Organisation/Number-System/)
 - [Processor](https://notes.yxy.ninja/Computer-Organisation/Processor/)
 - [Instruction Set Architecture (ISA)](https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/)
