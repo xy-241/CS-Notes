@@ -22,7 +22,7 @@ References:
 1. Having different domains serving different object, the browser will have a different [[TCP Connection]] with each domain. Thus, if one [[HTTP Request]] failed, it doesn't block browser from retrieving object from other domains
 2. Technologies like [[Webpack]]to consolidate many Object into a few Object
 ### Networking Solution
--  [[HTTP 1.2 Multiplexing (多路复用)]]
+-  [[HTTP Multiplexing (多路复用)]]
 
 
 

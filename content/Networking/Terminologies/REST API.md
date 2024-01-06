@@ -15,7 +15,7 @@ Last Date: 2023-12-16T21:08:55+08:00
 - A way to *architecture* an *interface* that enables communication between [[Host]] & [[Host]]
 - Usually implemented in [[HTTP]]
 - Not a [[Network Protocol]], but a set of rules - [[#6 Rules]]
-- [[Status Code]] is used to tell the client the complete status of the request
+- [[HTTP Status Code]] is used to tell the client the complete status of the request
 - Alert-natives are [[GraphQL]] & [[gRPC]] 
 
 ## 2 Cores

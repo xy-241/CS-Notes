@@ -6,12 +6,19 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-14T11:54:59+08:00
-Last Date: 2023-08-14T11:54:59+08:00
-References:
+Last Date: 2024-01-06T21:26:39+08:00
+References: 
 ---
->[!note] Common headers in [[HTTP Request]]
->- [[Authorization]]
->- [[Cookies | Cookie]]
+## Abstract
+---
+- Contains information used for [[Authentication]]
+- And information like [[Cookie]]
 
->[!note] Common headers in [[HTTP Response]]
->- [[Content-Type]]
+
+## Content-Type
+---
+- Tells the [[Host#Client]] the type of the [[Network Object]], so they can be better rendered
+- With the below info, the browser is able to open an in-browser pdf reader
+```http
+content-type: application/pdf
+```

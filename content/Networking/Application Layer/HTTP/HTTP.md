@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-21T10:46:00
-Last Date: 2023-12-16T21:21:25+08:00
+Last Date: 2024-01-06T21:46:18+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,7 @@ References:
 - Defines the format of [[HTTP Request]] & [[HTTP Response]]
 - [[Network Protocol#Stateless Network Protocol]]
 >[!caution] User Authentication
->[[HTTP Server]] doesn't know if [[Host]] login before or not, client needs to include things like [[Cookies]] in [[HTTP Headers]] to show it is authenticated
+>[[Host#Server]] doesn't know if [[Host#Client]] login before or not, client needs to include things like [[Cookies]] in [[HTTP Headers]] to show it is authenticated
 - Uses [[TCP]] as its underlying transport protocol. So HTTP doesn't need to worry about data integrity - handled by TCP
 - Allow transfer any types of [[Network Object]] 
 
