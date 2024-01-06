@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-12-12T11:49:00+08:00
-Last Date: 2024-01-06T21:32:44+08:00
+Last Date: 2024-01-06T21:57:30+08:00
 References: 
 ---
 ## Abstract
@@ -52,6 +52,10 @@ References:
 ### 401
 - *Unauthorised*
 - You need to provide valid credentials (e.g., login information) to access this resource, and the ones you provided are not accepted
+
+### 403
+- *Forbidden*
+- Happens when the provided [[Authentication]] information is rejected
 ### 404
 - *Unfound*
 - Resources can't be found on [[Host#Server]]
