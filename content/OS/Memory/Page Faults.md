@@ -23,7 +23,7 @@ References:
 - But this means slower execution speed because Main Memory is only allocated when needed & we are risky to run-time allocation errors aka more likely to crash when running the app halfway 
 
 ### Swap
-- The required data or instruction are in the [[Swap]]
+- The required data or instruction are in the [[Swap Space]]
 
 ### No Access Rights
 - Accessing [[Main Memory]] that isn't assigned to the requesting [[Process]]. Resulting in [[Segmentation Fault]]

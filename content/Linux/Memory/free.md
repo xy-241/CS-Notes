@@ -10,7 +10,7 @@ Last Date: 2023-08-26T23:14:22+08:00
 References:
 ---
 
->[!note] Check for [[Swap]]
+>[!note] Check for [[Swap Space]]
 >```bash
 >free -h
 >```

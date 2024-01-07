@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-24T12:23:00
-Last Date: 2023-12-15T11:51:18+08:00
+Last Date: 2024-01-07T17:52:43+08:00
 ---
 ## Abstract
 ---
@@ -22,7 +22,8 @@ Last Date: 2023-12-15T11:51:18+08:00
 
 ### Preemptive Multitasking
 - Ensure no [[Process]] can hog the [[CPU]] forever
-#### Mechanism
+
+**Mechanism**
 1. Before jumping to program code, the [[OS]] sets the [[Timer Chips]] to trigger an [[Interrupts (中断)#Hardware interrupts (外中断)]] after some period of time
 2. The OS switches to [[Privilege Level#User Mode]] and jumps to the next [[Instruction]] of the program
 3. When the Timer Chips elapses, it triggers a Hardware interrupts (外中断) to switch to [[Privilege Level#Kernel Mode]] and jump to OS code

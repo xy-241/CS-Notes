@@ -6,22 +6,30 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:16:23+08:00
-Last Date: 2024-01-03T15:29:25+08:00
+Last Date: 2024-01-07T18:07:53+08:00
 References: 
 ---
 # Abstract
 ---
 - An abstraction that powers [[Address Space]]
-- Helps to decouple address space from the physical Main Memory
-- Each [[Process]] thinks it is the only one running inside the [[Main Memory]]
 - Mapping handled by [[Memory Management Unit (MMU)]]
 
 
 ## Benefits
 ---
-- Avoid [[Memory Fragmentation]] - the [[Address Space]] can be broken down into sizes to fit inside fragmented [[Main Memory]]. The [[#Virtual Address]] ensures a continuous memory block presented to [[Process]]
-- Isolated [[Address Space]] 
-- Used when a [[Process]] has more [[Address Space]] than [[Main Memory]] by placing them on [[disk]] and using main memory as a kind of cache for most heavily executed parts -> but this can lead to [[Page Faults]]
+### Handle Memory Fragmentation
+- With [[Virtual Memory]], the [[Address Space]] can be broken down into sizes to fit inside fragmented [[Main Memory]]. The [[#Logical Address]] ensures a continuous memory block presented to [[Process]]
+- Thus, handles the [[Memory Fragmentation]] issue
+
+### Easier Resource Management
+- With [[Virtual Memory]], [[Address Space]] is decoupled from the physical [[Main Memory]]
+- The [[Memory Address]] for the process starts from 0
+- Each [[Process]] has its own isolated [[Address Space]], each [[Process]] thinks it is the only one running inside the Main Memory
+
+
+### Offers More Main Memory
+- With [[Virtual Memory]], we can have [[Swap Space]] to provide extra '[[Main Memory]]' to the [[Process]] 
+- But this can lead to [[Page Faults]]
 
 
 ## C Implementation
