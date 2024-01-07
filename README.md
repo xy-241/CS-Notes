@@ -10,15 +10,16 @@
 
 <br>
 
-## 💡 System Design
+## 🏭 System Design
 - [Basis](https://notes.yxy.ninja/System-Design/)
 - [Proxy](https://notes.yxy.ninja/System-Design/Proxy/)
 - [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
 - [Database](https://notes.yxy.ninja/System-Design/Database/)
 - [Cache](https://notes.yxy.ninja/System-Design/Cache/)
-- [Compute](https://notes.yxy.ninja/Networking/Application-Layer/DNS/DNS)
+- [Compute](https://notes.yxy.ninja/System-Design/Compute/)
 - [Monitoring](https://notes.yxy.ninja/System-Design/Monitoring/)
 - [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
+
 
 ## 💻 Operating System
 - [Basis](https://notes.yxy.ninja/OS/)
@@ -51,18 +52,33 @@
 - [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
 - [MISC](https://notes.yxy.ninja/Computer-Organisation/Terminologies/)
 
-## 📝 Data Structure & Algorithm
-- [Data Structure & Algorithm Basis](https://notes.yxy.ninja/tags/dsa)
-- [Competitive Programming Solutions & Reflections](https://notes.yxy.ninja/tags/cp)
+## 🧠 Data Structure & Algorithm
 - [Problem Solving Tricks](https://notes.yxy.ninja/tags/problem_solving)
+- [Array](https://notes.yxy.ninja/DSA/Data-Structure/Array/)
+- [Binary Tree (二叉树)](https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(二叉树)/)
+- [Hash Map](https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/)
+- [Linked List](https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/)
+- [Other Common Data Structures](https://notes.yxy.ninja/DSA/Data-Structure/)
+- [Common Algorithms](https://notes.yxy.ninja/DSA/Algorithms/)
+- [MISC](https://notes.yxy.ninja/DSA/terminologies/)
 
-## 🧮 Math
+
+## 👩‍💻 Competitive Programming
+- [Code Template](https://notes.yxy.ninja/cp/Competitive-Programming-Code-Templates)
+- [Data Structure](https://notes.yxy.ninja/cp/data_structure/)
+- [Prefix Sum](https://notes.yxy.ninja/cp/prefix_sum/)
+- [Greedy](https://notes.yxy.ninja/cp/greedy/)
+- [Number Theory](https://notes.yxy.ninja/cp/number_theory/)
+- [Combinatorics](https://notes.yxy.ninja/cp/combinatorics/)
+
+
+## ➕ Math
 - [Number Theory](https://notes.yxy.ninja/tags/number_theory)
 - [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
 - [Discrete Math](https://notes.yxy.ninja/tags/discrete_math)
 
 
-## 🏗️ Software Engineering 
+## 🛠️ Software Engineering 
 - [Software Engineering Theories](https://notes.yxy.ninja/tags/software_engineering)
 - [Amazon Web Services](https://notes.yxy.ninja/tags/aws)
 - [C](https://notes.yxy.ninja/tags/c)
@@ -78,4 +94,3 @@
 
 ## 🕸️ Networking
 - [Networking Basis (Under heavy revision)](https://notes.yxy.ninja/tags/networking)
-

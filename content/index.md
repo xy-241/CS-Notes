@@ -6,13 +6,13 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-06T21:36:10+08:00
+Last Date: 2024-01-07T17:29:00+08:00
 References: 
 ---
 
 I am still reconstructing some of the notes and sorting out the taggings. Some notes are empty because those ideas weren't the main focus when I was exploring that particular topic. Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
 
-## 💡 System Design
+## 🏭 System Design
 ---
 - [Basis](https://notes.yxy.ninja/System-Design/)
 - [Proxy](https://notes.yxy.ninja/System-Design/Proxy/)
@@ -57,20 +57,36 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 - [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
 - [MISC](https://notes.yxy.ninja/Computer-Organisation/Terminologies/)
 
-## 📝 Data Structure & Algorithm
+## 🧠 Data Structure & Algorithm
 ---
-- [Data Structure & Algorithm Basis](https://notes.yxy.ninja/tags/dsa)
-- [Competitive Programming Solutions & Reflections](https://notes.yxy.ninja/tags/cp)
 - [Problem Solving Tricks](https://notes.yxy.ninja/tags/problem_solving)
+- [Array](https://notes.yxy.ninja/DSA/Data-Structure/Array/)
+- [Binary Tree (二叉树)](https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(二叉树)/)
+- [Hash Map](https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/)
+- [Linked List](https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/)
+- [Other Common Data Structures](https://notes.yxy.ninja/DSA/Data-Structure/)
+- [Common Algorithms](https://notes.yxy.ninja/DSA/Algorithms/)
+- [MISC](https://notes.yxy.ninja/DSA/terminologies/)
 
-## 🧮 Math
+
+## 👩‍💻 Competitive Programming
+---
+- [Code Template](https://notes.yxy.ninja/cp/Competitive-Programming-Code-Templates)
+- [Data Structure](https://notes.yxy.ninja/cp/data_structure/)
+- [Prefix Sum](https://notes.yxy.ninja/cp/prefix_sum/)
+- [Greedy](https://notes.yxy.ninja/cp/greedy/)
+- [Number Theory](https://notes.yxy.ninja/cp/number_theory/)
+- [Combinatorics](https://notes.yxy.ninja/cp/combinatorics/)
+
+
+## ➕ Math
 ---
 - [Number Theory](https://notes.yxy.ninja/tags/number_theory)
 - [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
 - [Discrete Math](https://notes.yxy.ninja/tags/discrete_math)
 
 
-## 🏗️ Software Engineering 
+## 🛠️ Software Engineering 
 ---
 - [Software Engineering Theories](https://notes.yxy.ninja/tags/software_engineering)
 - [Amazon Web Services](https://notes.yxy.ninja/tags/aws)
