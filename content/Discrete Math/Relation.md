@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-06T13:43:28+08:00
+Last Date: 2024-01-07T16:14:15+08:00
 References: 
 draft: 
 ---
@@ -77,6 +77,10 @@ $$
 \forall x,y,z \in A (xRy \cap yRz \rightarrow xRz)
 $$
 
+
+
+
+
 ## Terminologies
 ---
 ### Arrow Diagram 
@@ -101,3 +105,17 @@ $$
 - A [[Relation]] involving 2 [[Set]] is called *binary relation*, also known as 2-ary
 - Ternary is 3-ary
 - Quaternary is 4-ary
+
+### Congruence Modulo 3
+$$
+\forall x,y \in \mathbb{Z} (xRy \leftrightarrow 3 |(x-y))
+$$
+- A [[Relation]] that is [[#Reflexive]] [[#Symmetric]] & [[#Transitive]]
+
+### Transitive Closure of Relation
+- The [[Relation]] obtained by adding the least number of [[Set#Ordered Pair]] to ensure [[#Transitive]]
+- Represented with $R^{t}$
+- Following 3 properties:
+	1. $R^{t}$ is transitive
+	2. $R \subseteq R^{t}$
+	3. $R^{t} \subseteq S$, where $S$ is any other transitive relation that contains $R$
