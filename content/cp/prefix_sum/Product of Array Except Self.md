@@ -57,7 +57,7 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 ## Codes
 ---
 ### 5th Attempt (Java)
-```java title="Solution.java"
+```java
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int[] prefix = new int[nums.length];
