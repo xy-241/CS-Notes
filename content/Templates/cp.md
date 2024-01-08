@@ -1,18 +1,13 @@
 ---
 sthNew: true
-Mastery Level:
-  - 📗
-Time Taken: 19
-Space:
-  - O(n)
-Time: O(n)
-Appears On:
-  - Codeforces
+Mastery Level: 
+Time Taken: 
+Space: 
+Time: 
+Appears On: 
 Brush: 1
-Difficulty:
-  - "1000"
-Area:
-  - data structure
+Difficulty: []
+Area: []
 Reference 1: 
 Reference 2: 
 Author:
@@ -20,13 +15,13 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: "{{date}}, {{time}}"
-Last Date: 2024-01-04T12:01:48+08:00
+Last Date: 2024-01-08T12:54:57+08:00
 tags:
   - cp
-draft: 
+draft:
 ---
 [Original Problem]()
-## Idea
+## Approach
 ---
 ### Consensus
 
@@ -45,7 +40,7 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 
 ## Codes
 ---
-### 1st Attempt
+### 1st Attempt (Java)
 ```java title="Solution.java"
 
 ```
