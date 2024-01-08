@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2023-12-25T21:09:47+08:00
+Last Date: 2024-01-08T10:44:41+08:00
 References: 
 ---
 
@@ -151,6 +151,10 @@ set relativenumber
 h() {
 	curl cht.sh/$1
 }
+```
+- Install [Rust](https://www.rust-lang.org/tools/install)
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 ### Code Editor Settings
 - [Install FiraCode](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)
