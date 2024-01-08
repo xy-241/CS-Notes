@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - python
 Creation Date: 2023-10-18T10:49:00
-Last Date: 2023-12-26T22:50:19+08:00
+Last Date: 2024-01-08T14:42:24+08:00
 References: 
+title: Unleash the Python Kraken Pyenv and Poetry - The Holy Grail of Python Project Setups
 ---
 ## Abstract
 ---

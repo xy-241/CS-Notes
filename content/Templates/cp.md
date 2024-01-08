@@ -15,10 +15,10 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: "{{date}}, {{time}}"
-Last Date: 2024-01-08T12:54:57+08:00
+Last Date: 2024-01-08T13:16:37+08:00
 tags:
   - cp
-draft:
+draft: 
 ---
 [Original Problem]()
 ## Approach
@@ -41,7 +41,7 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 ## Codes
 ---
 ### 1st Attempt (Java)
-```java title="Solution.java"
+```java
 
 ```
 
