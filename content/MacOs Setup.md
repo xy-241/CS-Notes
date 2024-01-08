@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-08T10:44:41+08:00
+Last Date: 2024-01-08T16:33:36+08:00
 References: 
 ---
 
@@ -25,9 +25,6 @@ References:
 	-  [Modify Default Shell](https://support.termius.com/hc/en-us/articles/8414917685145-How-to-change-the-default-shell-in-local-terminal-)
 6. [Install Tutanota](https://tutanota.com/#download) 🌟
 7. [Install Notion](https://www.notion.so/desktop) 🌟
-8. ~~[Install Docker](https://docs.docker.com/desktop/install/mac-install/)~~ (Replaced with OrbStack) 🌟
-9. [Install Podman](https://podman.io/)
-10. [Install Node Version Manager, npm included](https://github.com/nvm-sh/nvm#install--update-script) 🌟
 11. [Install Postman](https://www.postman.com/downloads/)
 12. [Install GitKraken](https://www.gitkraken.com/download) 🌟
 13. [Install Brave](https://brave.com/download/)
@@ -224,7 +221,8 @@ brew install hashicorp/tap/hashicorp-vagrant
 vagrant plugin install vagrant-share
 ```
 
-### [[npm]]
+### NPM
+- Make sure you have [[JS Toolset#Install NVM]]
 - `typescript`
 ```bash
 #!/bin/bash
@@ -244,4 +242,5 @@ pipx install ddtrace
 ### Others
 - [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
 - [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
-- [[Python Project Setup]]
+- [[Python Toolset]]
+- [[JS Toolset]]

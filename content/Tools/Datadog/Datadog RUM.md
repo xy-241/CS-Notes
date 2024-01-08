@@ -47,7 +47,7 @@ datadogRum.init({
 ```
 
 ### Changes for Frontend Source Codes
-1. Install the [[JS Project Setup#NPM]] package - `npm i @datadog/browser-rum`
+1. Install the [[JS Toolset#NPM]] package - `npm i @datadog/browser-rum`
 2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the Datadog can monitor every page of the frontend
 
 ### Integration with Datadog APM
