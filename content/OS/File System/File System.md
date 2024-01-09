@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - linux
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2023-12-28T20:34:47+08:00
+Last Date: 2024-01-09T20:41:58+08:00
 References: 
 ---
 ## Abstract
@@ -31,8 +32,26 @@ References:
 
 ## Linux File System
 ---
-<img src="https://raw.githubusercontent.com/ByteByteGoHq/system-design-101/main/images/linux-file-systems.jpg" >
+<img src="https://raw.githubusercontent.com/ByteByteGoHq/system-design-101/main/images/linux-file-systems.jpg" width="500">
 
+### `/etc/profile.d`
+-  Used for storing shell script files that are automatically sourced when a [[User|User]] logs into the system
+- These scripts are used to set environment variables, customize the shell's behavior, and configure user-specific settings globally for all users
+
+### `/src`
+- Typically used to store data that is served by the system
+- The name "srv" stands for "service" 
+- Often used to store data related to various services running on the system, such as websites, FTP servers, and other network services
+
+### `mkdir`
+
+**`-p` flag** 
+- Tells the `mkdir` command to create parent directories as needed 
+- If you omit this option and the parent directory doesn't exist, you'll get an error
+
+**`-m` flag**
+- Used to set the mode (permissions) for the newly created directory
+- `mkdir -pm 0755 /etc/vault.d`
 ## Terminologies 
 ---
 ### Pathname

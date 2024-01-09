@@ -6,17 +6,19 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2023-12-25T20:25:28+08:00
+Last Date: 2024-01-09T21:13:38+08:00
 References: 
 ---
 ## Abstract
 ---
+![[S-R_Latch_diagram.png|300]]
+
 - [[Latch]] that stores a single bit
-- Can be built with either [[NOR]]([[Level-sensitive#Active High]]) or [[NAND Gates]]([[Level-sensitive#Active Low]])
->![[S-R_Latch_diagram.png]]
+- Can be built with either [[NOR]] [[Asynchronous Sequential Circuit#Level Sensitive]] is high or [[NAND Gates]] level sensitive is low
+
 - Circuit Diagram & [[Truth Table]] using [[NOR]]  (Active-high input S-R Latch)
 - When the pin from ``Q`` or ``Q'`` is low, the [[NOR]] is active which means it is ready to take in the input from either ``R`` or ``S``
->![[S-R Latch.png]]
+![[S-R Latch.png]]
 
 >[!sidenote] S and R meaning
 >- S means set `1`
