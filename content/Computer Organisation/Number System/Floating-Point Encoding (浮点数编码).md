@@ -90,11 +90,11 @@ References:
 ---
 - Wait, so comparisons in floating point only just KINDA work? What DOES work?
 
-![](https://youtu.be/Oo89kOv9pVk?si=noZ4DOmQWjy7uEsp)
+![Wait, so comparisons in floating point only just KINDA work? What DOES work? - YouTube](https://youtu.be/Oo89kOv9pVk?si=noZ4DOmQWjy7uEsp)
 
 - Why Is This Happening?! [[#Floating-point rounding error]]
 
-![](https://youtu.be/2gIxbTn7GSc?si=vEfOf70rThDTwYOj)
+![Why Is This Happening?! Floating Point Approximation - YouTube](https://youtu.be/2gIxbTn7GSc?si=vEfOf70rThDTwYOj)
 
 -  [Hello Algo](https://www.hello-algo.com/chapter_data_structure/number_encoding/#332)
 - [CS2100 Week 1 Lecture](https://www.comp.nus.edu.sg/~cs2100/2_resources/lectures.html)

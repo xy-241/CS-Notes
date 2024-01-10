@@ -11,7 +11,7 @@ References:
 ---
 >[!abstract] Command is used to modify the behavior of the shell
 
->[!note] Place this at the start of [[Bash Script]] to ensure script is ran properly or can be debugged easily
+>[!note] Place this at the start of [[Bash Scripting]] to ensure script is ran properly or can be debugged easily
 >```bash
 >set -exuo pipefail
 >```
