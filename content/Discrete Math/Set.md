@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2024-01-01T13:44:05+08:00
+Last Date: 2024-01-10T10:26:45+08:00
 References: 
 ---
 ## Abstract
@@ -113,14 +113,29 @@ $$
 A \cap B = \emptyset
 $$
 
-### Partition of Sets are Mutually Disjoin
-*Mutually Disjoin* is also known as *Pairwise Disjoint* or *Non-overlapping*
+### Mutually Disjoin
+- Also known as *Pairwise Disjoint* or *Non-overlapping*
 
 ![[union_of_mutually_disjoint_subsets.png|300]]
 - `A1`, `A2`, `A3`, `A4` are *Mutually Disjoin*
 - `A` is called *Union of Mutually Disjoint Subsets*
 - The collection of sets `{A1, A2, A3, A4}` is said to be a partition of `A` 
 
+### Partition
+- A partition of [[Set]] $A$ is a finite or infinite collection of noempty, [[#Mutually Disjoin]] [[#Subset]] that can be chained with [[OR]] to form $A$
+
+$$
+\forall x \in A \exists ! S \in \zeta (x\in S)
+$$
+
+- $S$ is one of the mutually disjoin subset, also known as component of the partition
+- $\zeta$ is the partition
+- So basically each $S$ isn't empty, and its elements are not in other mutually disjoin subset
+
+>[!caution] Subset can contain duplicate elements
+>Given a set $A =\{a,b,c,d,e,f\}$ , 
+>
+>$\{\{a\},\{b,f,b\},\{c,e,d,e\}\}$ is a valid partition
 ### Power Set
 - The power set of [[Discrete Math/Set|Set]] `A` is all the [[#Subset]] of `A`
 $$
@@ -168,6 +183,12 @@ $$
 
 ### Theorem 6.3.1
 - The cardinality of [[#Superset]] of finite set is *2 to the power of the cardinality of the finite set*
+
+### Theorem 8.3.1
+- *[[Relation]] induced by [[#Partition]]*
+- Let $A$ be a [[Set]] with a Partition
+- Let $R$ be the relation induced by the partition
+- Then $R$ is [[Relation#Reflexive]], [[Relation#Symmetric]] and [[Relation#Transitive]]
 
 ## Terminologies
 ---
