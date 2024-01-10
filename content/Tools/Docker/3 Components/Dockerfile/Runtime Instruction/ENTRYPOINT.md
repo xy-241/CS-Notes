@@ -15,4 +15,4 @@ References:
  >[!caution] Can't be overwritten by the [[Docker Run Command]] 
  
  
->[!example] Usually custom [[Bash Script]], functions like [[User Data]]
+>[!example] Usually custom [[Bash Scripting]], functions like [[User Data]]
