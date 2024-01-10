@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - js
 Creation Date: 2023-12-15, 20:01
-Last Date: 2024-01-10T19:10:39+08:00
+Last Date: 2024-01-11T00:06:13+08:00
 References: 
 title: Confused About Setting Up a JavaScript Project? This Guide Has Your Back!
 ---
@@ -17,6 +17,8 @@ title: Confused About Setting Up a JavaScript Project? This Guide Has Your Back!
 **Setup Steps:**
 - [ ] [[#Install NVM]]
 - [ ] [[#Install Code Quality Assurance Tools]]
+- [ ] [[#Install Git related Tools]]
+- [ ] [[#Integrate Code Quality Assurance Tools with Git]]
 
 
 ## Install NVM
@@ -56,12 +58,7 @@ npm pkg set scripts.pre-commit="npx prettier . --write && npx oxlint"
 - [ ] [[#oxlint]]
 - [ ] [[#prettier]]
 
-**2 git related tools to run the quality assurance tools automatically:**
-- [ ] [[#husky]]
-- [ ] [[#lint-staged]]
 
-**Lastly:**
-- [ ] [[#Integrate All Tools]] 
 ### oxlint
 - A JS [[Code Quality Assurance Tools#Linter]]
 - Setup script
@@ -96,6 +93,18 @@ touch .prettierrc # Config prettier
 - Run `npx prettier . --write` to format all the files in current directory recursively
 - Refer to [prettier official docs](https://prettier.io/docs/en/install.html) for more configuration information
 
+
+
+
+
+## Install Git related Tools
+---
+- Tools that help [[Code Quality Assurance Tools]] to leverage on the power of [[Git]]
+
+**2 git related tools to run the quality assurance tools automatically:**
+- [ ] [[#husky]]
+- [ ] [[#lint-staged]]
+
 ### husky
 - A tool to auto run the [[#prettier]] & [[#oxlint]] when making a git commit  
 - Configuration details see [[Git Hook#Husky|here]]
@@ -103,7 +112,9 @@ touch .prettierrc # Config prettier
 ### lint-staged
 - A tool usually integrates with [[#husky]] to ensure the [[Code Quality Assurance Tools]] like [[#prettier]] & [[#oxlint]] only run on current staged files to fasten the process of each commit. Since only the staged files are going to be pushed to the database, no point to run the tools on all files to slow the current commit
 
-### Integrate All Tools
+## Integrate Code Quality Assurance Tools with Git
+---
+
 ```bash title=".husky/pre-commit" {4}
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
@@ -165,4 +176,4 @@ npx prettier . --write
 echo -e "\n\033[1;32m👍 Code Quality Assurance Tools Passed! \033[0m"
 ```
 - The `codeAssurance.sh` basically run all the code quality assurance tools we configured above
-- Remember to `set -e` at line 2, refer to [[Bash Script#Bash Script Exit Code]] for more details
+- Remember to `set -e` at line 2, refer to [[Bash Scripting#Bash Script Exit Code]] for more details
