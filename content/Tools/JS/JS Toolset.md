@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - js
 Creation Date: 2023-12-15, 20:01
-Last Date: 2024-01-10T19:04:45+08:00
+Last Date: 2024-01-10T19:10:39+08:00
 References: 
 title: Confused About Setting Up a JavaScript Project? This Guide Has Your Back!
 ---
@@ -14,7 +14,7 @@ title: Confused About Setting Up a JavaScript Project? This Guide Has Your Back!
 ---
 - This is how a 10X developer starts his/her JS project
 
-Setup Steps:
+**Setup Steps:**
 - [ ] [[#Install NVM]]
 - [ ] [[#Install Code Quality Assurance Tools]]
 
@@ -52,15 +52,15 @@ npm pkg set scripts.pre-commit="npx prettier . --write && npx oxlint"
 ---
 - [[Code Quality Assurance Tools|What are code quality assurance tools]]
 
-2 code quality assurance tools:
+**2 code quality assurance tools:**
 - [ ] [[#oxlint]]
 - [ ] [[#prettier]]
 
-2 git automation tools to run the quality assurance tools:
+**2 git related tools to run the quality assurance tools automatically:**
 - [ ] [[#husky]]
 - [ ] [[#lint-staged]]
 
-Lastly:
+**Lastly:**
 - [ ] [[#Integrate All Tools]] 
 ### oxlint
 - A JS [[Code Quality Assurance Tools#Linter]]
