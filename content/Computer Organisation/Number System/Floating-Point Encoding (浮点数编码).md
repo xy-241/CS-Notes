@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-12T15:43:00
-Last Date: 2024-01-05T17:12:56+08:00
+Last Date: 2024-01-10T16:12:47+08:00
 References: 
 ---
 ## Abstract
@@ -88,6 +88,13 @@ References:
 
 ## References 
 ---
-1. [Hello Algo](https://www.hello-algo.com/chapter_data_structure/number_encoding/#332)
-2. [CS2100 Week 1 Lecture](https://www.comp.nus.edu.sg/~cs2100/2_resources/lectures.html)
-3. [SimonDev](https://www.youtube.com/watch?v=Oo89kOv9pVk)
+- Wait, so comparisons in floating point only just KINDA work? What DOES work?
+
+![](https://youtu.be/Oo89kOv9pVk?si=noZ4DOmQWjy7uEsp)
+
+- Why Is This Happening?! [[#Floating-point rounding error]]
+
+![](https://youtu.be/2gIxbTn7GSc?si=vEfOf70rThDTwYOj)
+
+-  [Hello Algo](https://www.hello-algo.com/chapter_data_structure/number_encoding/#332)
+- [CS2100 Week 1 Lecture](https://www.comp.nus.edu.sg/~cs2100/2_resources/lectures.html)

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-28T09:59:05+08:00
-Last Date: 2024-01-06T19:05:22+08:00
+Last Date: 2024-01-10T16:12:33+08:00
 References: 
 ---
 ## Abstract
@@ -46,3 +46,10 @@ References:
 
 ### Expanding Opcode Scheme
 - The [[#Opcode]] in an [[Instruction]] can be *extended* to accommodate additional instructions in the future without changing the basic format of the instruction set
+
+
+## References
+---
+- Reinventing the Processor
+
+![](https://youtu.be/rDnqmVnrZKs?si=NZli6pp_ubxKEOPm)
