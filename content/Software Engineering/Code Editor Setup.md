@@ -16,7 +16,7 @@ draft:
 
 ## Basics
 ---
-A set of command configurations for code editors listed below
+A set of common configurations for code editors:
 - [Install FiraCode Font](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)
 - Download the Vim extension to have vim keybinding inside the code editor
 - Turn on *Word Wrap* under `View -> Word Wrap` (VSC example)
