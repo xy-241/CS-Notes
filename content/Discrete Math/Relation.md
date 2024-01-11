@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-10T10:27:25+08:00
+Last Date: 2024-01-11T11:47:06+08:00
 References: 
 draft: 
 ---
@@ -78,13 +78,18 @@ $$
 $$
 
 ### Equivalence Relation
-- Let $A$ be a [[Set]] and $R$ a [[Relation]] on $A$
+- Let $A$ be a [[Set]] and $R$ be a [[Relation]] on $A$
 - $R$ is equivalence relation iff $R$ is [[#Reflexive]], [[#Symmetric]] and [[#Transitive]]
 
 ### Equivalence Class
-- Basically same as the *component* of a [[Set#Partition]]
+- Basically same as the *component* of a [[Set#Partition]] or elements of [[#Equivalence Relation]]
+- Can be represented with $[a]_{\textasciitilde}$, it means the Equivalence Class contains element $a$
+- $[a]_{\textasciitilde}$ and $[b]_{\textasciitilde}$ are the same iff $b$ is in the same equivalence class as $a$
 
-
+## Theorem
+---
+### Lemma Rel.1
+- *[[#Equivalence Class]]*
 
 ## Terminologies
 ---
