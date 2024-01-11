@@ -5,8 +5,8 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-27T20:22:00
-Last Date: 2023-11-27T20:33:43+08:00
-References:
+Last Date: 2024-01-11T23:32:37+08:00
+References: 
 ---
 ## Abstract
 ---
@@ -16,15 +16,15 @@ References:
 - Commonly used with *ASCII*
 
 
-## Terminologies
+## Odd Parity Bit (奇校验码)
 ---
-### Odd
 - The parity bit is set to 
 - `0` if the number of 1s is `odd`
 - `1` if the number of 1s is `even`
 - Can't produce a string that is all `0`
 
-### Even
+## Even Parity Bit (偶校验码)
+---
 - The parity bit is set to 
 - `0` if the number of 1s is `even`
 - `1` if the number of 1s is `odd`

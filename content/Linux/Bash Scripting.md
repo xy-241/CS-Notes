@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - linux
 Creation Date: 2024-01-10, 15:57
-Last Date: 2024-01-10T20:44:26+08:00
+Last Date: 2024-01-11T21:39:46+08:00
 References: 
 draft: 
 ---
@@ -55,7 +55,11 @@ fi
 
 - However, if you want the bash script to terminate when one of the commands in [[Pipe (管道)]] fails. You need to also add in `set -o pipefail`
 
-
+## Bash Debugging
+---
+- We can place `set -x` to enable debugging info for the bash script
+- The shell will print each command before it's executed, preceded by a '+' sign
+- This is useful for debugging scripts, as it allows you to see exactly what commands are being executed and spot any issues
 ## Bash Variable
 ---
 - By default, undefined bash variables are empty strings. They will not terminate the bash script!

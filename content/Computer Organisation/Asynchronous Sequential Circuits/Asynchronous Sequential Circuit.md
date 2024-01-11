@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-04T19:50:49+08:00
-Last Date: 2024-01-09T21:12:53+08:00
+Last Date: 2024-01-11T22:00:08+08:00
 References: 
 ---
 ## Abstract
@@ -30,6 +30,6 @@ References:
 
 
 - Also known as *Pulse-triggered*
-- Output changes immediately with any change in the input as long as the control signal ([[Clock Signal]], Enable in the diagram) is active
+- Output changes immediately with any change in the input as long as the control signal ([[Clock Oscillator#Clock Signal]], high in the diagram) is active
 - *Active High* when level sensitive is high
 - *Active Low* when level sensitive is low

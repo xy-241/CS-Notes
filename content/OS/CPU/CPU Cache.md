@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-07-14T20:41:40+08:00
-Last Date: 2023-12-20T16:29:25+08:00
+Last Date: 2024-01-11T23:21:39+08:00
 References: 
 ---
 ## Abstract
@@ -33,3 +33,6 @@ References:
 - Also known as *Locality of Reference*
 - [[#Cache Line]] is transferred into [[CPU Cache]] when we obtain [[Instruction]] or [[Data]] from [[Main Memory]]
 - If we are retrieving the same data or surrounding data. For the [[CPU]], it instead of going to Main Memory to retrieve. We can obtain directly from the [[CPU Cache]] which is much faster
+</br>
+
+- [[Process]] accesses only a small portion of the [[Memory Address]] space within a small time interval 
