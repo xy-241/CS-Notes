@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-11T00:46:58+08:00
+Last Date: 2024-01-12T00:20:02+08:00
 References: 
 ---
 ## General Apps
@@ -96,12 +96,14 @@ h() {
 ```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+
 - `typescript`, make sure you have [[JS Toolset#Install NVM]]
 ```bash
 #!/bin/bash
 npm i -g typescript
 ```
-- [Java JDK](https://www.oracle.com/java/technologies/downloads/) with [IntelliJ Community Code Editor](https://www.jetbrains.com/idea/download/?fromIDE=&section=mac)
+
+- [Java JDK](https://www.oracle.com/java/technologies/downloads/)
 
 ## System Tools 🌟
 ---
@@ -117,8 +119,7 @@ brew install htop
 
 ## Software Engineering Tools
 ---
-- [Visual Studio Code](https://code.visualstudio.com/)
-	- [Add `code` into cli](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+- [[Code Editor Setup]]
 - [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
 - [Postman - API Testing Tool](https://www.postman.com/downloads/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
@@ -142,27 +143,6 @@ brew install qemu
 brew install socat
 ```
 
-### Code Editor Settings
-- [Install FiraCode](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)
-- Download the Vim extension to have vim keybinding inside the code editor
-- Turn on *Word Wrap* under `View -> Word Wrap` (VSC example)
-- `.vimrc`
-```vimrc
-" Use spaces instead of tabs
-set expandtab
-
-" Set the number of spaces for each tab stop (e.g., 4 spaces per tab)
-set tabstop=2
-
-" Set the number of spaces used for each level of indentation (e.g., 4 spaces)
-set shiftwidth=2
-
-
-syntax enable
-
-set number
-set relativenumber
-```
 
 
 ## OS Config
