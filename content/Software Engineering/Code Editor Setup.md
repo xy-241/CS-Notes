@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2024-01-12, 00:12
-Last Date: 2024-01-12T00:22:08+08:00
+Last Date: 2024-01-12T00:28:21+08:00
 References: 
 draft: 
 ---
@@ -23,23 +23,17 @@ A set of command configurations for code editors listed below
 
 ## VIM
 ---
-```vimrc title=".vimrc"
-" Use spaces instead of tabs
-set expandtab
-
-" Set the number of spaces for each tab stop (e.g., 4 spaces per tab)
-set tabstop=2
-
-" Set the number of spaces used for each level of indentation (e.g., 4 spaces)
-set shiftwidth=2
-
-
+```vim title=".vimrc"
+" Must Have
 syntax enable
-
 set number
 set relativenumber
-
 set mouse=a
+
+" Good to have
+set expandtab
+set tabstop=2
+set shiftwidth=2
 ```
 
 
