@@ -92,7 +92,7 @@ h() {
 ---
 - [[Python Toolset]]
 - [[JS Toolset]]
-- [Rust](https://www.rust-lang.org/tools/install)
+- [Rust](https://www.rust-lang.org/tools/install) - [Holy Bible of Rust](https://rust-book.cs.brown.edu/foreword.html)
 ```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
