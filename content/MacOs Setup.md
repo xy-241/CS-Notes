@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-12T16:23:14+08:00
+Last Date: 2024-01-12T17:08:32+08:00
 References: 
 ---
 ## General Apps
@@ -128,6 +128,7 @@ brew install htop
 - `gh`
 - `qemu` (for [[RISCV Kernel Deep Dive]])
 - `socat`
+- `hyperfine`
 ```bash
 #!/bin/bash
 
@@ -139,6 +140,8 @@ gh auth login # Painless Github CLi Auth
 brew install qemu
 
 brew install socat
+
+brew install hyperfine # A command-line benchmarking tool
 ```
 
 
