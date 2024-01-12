@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-11T11:47:06+08:00
+Last Date: 2024-01-12T11:40:52+08:00
 References: 
 draft: 
 ---
@@ -83,13 +83,17 @@ $$
 
 ### Equivalence Class
 - Basically same as the *component* of a [[Set#Partition]] or elements of [[#Equivalence Relation]]
-- Can be represented with $[a]_{\textasciitilde}$, it means the Equivalence Class contains element $a$
-- $[a]_{\textasciitilde}$ and $[b]_{\textasciitilde}$ are the same iff $b$ is in the same equivalence class as $a$
+- Can be represented with $[a]_{relation}$, it means the Equivalence Class contains element $a$
+- $[a]_{relation}$ and $[b]_{relation}$ are the same iff $b$ is in the same equivalence class as $a$
 
 ## Theorem
 ---
 ### Lemma Rel.1
-- *[[#Equivalence Class]]*
+- [[#Equivalence Relation]]
+- Let `~` be an *[[#Equivalence Class]]* on [[Set]] $A$ and $x, y \in A$
+	1. $x$ is equivalent related to $y$
+	2. The equivalent class $x$ is in is same as the equivalent class $y$ is in
+	3. $[x] \cap [y] \ne \emptyset$
 
 ## Terminologies
 ---
