@@ -20,8 +20,8 @@ Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
-Creation Date: 2024-01-09, 16:17
-Last Date: 2024-01-12T12:01:10+08:00
+Creation Date: 2022-05-09T13:29:00
+Last Date: 2024-01-12T12:20:35+08:00
 tags:
   - cp
 draft: 
@@ -30,9 +30,9 @@ draft:
 ## Approach
 ---
 ### Consensus
-- The area is the product of the height and width
-- Height: the shorter side of the left right side
-- Width: the distance of from left side to the right side
+- **Area:** product of the height and width
+- **Height:** shorter side of the left right side
+- **Width:** distance of from left side to the right side
 
 ### Main Idea
 - We start from the most left hand side and most right side, so we have the maximum possible width 
