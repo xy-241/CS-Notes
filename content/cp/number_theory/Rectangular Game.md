@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-15, 16:16
-Last Date: 2023-12-15T16:58:36+08:00
+Last Date: 2024-01-12T22:19:08+08:00
 tags:
   - cp
 ---
@@ -48,44 +48,14 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 ## Codes
 ---
 ### 1st Attempt (Java)
-```java
-import java.util.Scanner;
 
-public class Solution {
-
-  public static void main(String[] args) {
-    // Read input data
-    Scanner scanner = new Scanner(System.in);
-    int n = scanner.nextInt();
-
-    int res = n;
-    int prime = 2;
-
-    while (n > 1) {
-      while (n % prime != 0) prime = nextPrimeGenerator(prime);
-      n /= prime;
-      res += n;
-    }
-
-    System.out.println(res);
-  }
-
-  // Helper functions
-  public static boolean isPrime(int n) {
-    for (int i=3; i<n; i++) {
-      if (n % i == 0) return false;
-    }
-    return true;
-  }
-  public static int nextPrimeGenerator(int currPrime) {
-    int nextPrime = currPrime + 1;
-    while (!isPrime(nextPrime)) {
-      nextPrime++;
-    }
-    return nextPrime;
-  }
-}
-```
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/3zz7xm397?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true" 
+ ></iframe>
+ </div>
 
 ## Personal Reflection
 ---

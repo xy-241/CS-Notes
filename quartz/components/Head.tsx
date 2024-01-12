@@ -38,6 +38,7 @@ export default (() => {
               trackResources: true,
               trackLongTasks: true,
               defaultPrivacyLevel: 'allow',
+              usePartitionedCrossSiteSessionCookie: true,
             });
           `,
         }}
