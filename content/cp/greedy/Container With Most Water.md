@@ -3,8 +3,9 @@ sthNew: true
 Mastery Level:
   - 📕
 Time Taken: 
-Space: 
-Time: 
+Space:
+  - O(1)
+Time: O(n)
 Appears On:
   - Grind 75
 Brush: 4
@@ -13,17 +14,17 @@ Difficulty:
 Area:
   - greedy
   - two_pointers
-Reference 1: 
+Reference 1: https://algo.itcharge.cn/Solutions/0001-0099/container-with-most-water/#%E9%A2%98%E7%9B%AE%E5%A4%A7%E6%84%8F
 Reference 2: 
 Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2024-01-09, 16:17
-Last Date: 2024-01-10T11:57:53+08:00
+Last Date: 2024-01-12T12:01:10+08:00
 tags:
   - cp
-draft: "true"
+draft: 
 ---
 [Original Problem](https://leetcode.com/problems/container-with-most-water/description/)
 ## Approach
@@ -39,7 +40,7 @@ draft: "true"
 - There is a chance that the max volume has a different left index and right index, so the next step is to find that potential left index and right index
 - How do we do that?
 - We can use a [[Greedy Algorithm]] approach here. The only possible way to increase the volume is to replace the shorter side with a new height.
-- So if height at left index is shorter, we replace it with height at the right side, if height at the right index is shorter, we replace it with height at the left side
+- So if height at left index is shorter, we replace it with height at the right side, if height at the right index is shorter, we replace it with height at the left side. This can be achieved easily with [[Two Pointers (双指针）#Left-Right Pointers]]
 - There 3 possible situations
 	1. Left side is shorter: replace left side with height that is at the right side of the current left
 	2. Right side is shorter: replace right side with heigh that is at the left side of the current right
@@ -53,15 +54,18 @@ draft: "true"
 - So we only left with replacing shorter side with a new side that has the potential to give us a higher volume. The greediness!
 
 ### Conclusion
+- We start with left at index 0 and right at the most right hand side
+- Then with [[Greedy Algorithm]], we replace the side with shorter height with the help of [[Two Pointers (双指针）#Left-Right Pointers]]
+- At the same time, we are using a `res` variable to keep track the highest volume across all potential volumes 
 
 ## Space & Time Analysis
 ---
 The analysis method we are using is [[Algorithm Complexity Analysis]]
-### Space - O()
+### Space - O(1)
 - *Ignore input size & language dependent space*
-- 
-### Time - O()
-- 
+- Constant space used for two pointers and `res`
+### Time - O(n)
+- We need to process each height once
 
 ## Codes
 ---
@@ -96,9 +100,9 @@ class Solution {
 
 ## Personal Reflection
 ---
-- **Why it takes so long to solve:** *NIL*
-- **What you could have done better:** *NIL*
+- **Why it takes so long to solve:** Unable to abstract the problem to apply the [[Greedy Algorithm]]
+- **What you could have done better:** Simply practice more on similar problems
 - **What you missed:** *NIL*
-- **Ideas you've seen before:** *NIL*
+- **Ideas you've seen before:** Greedy algorithm and left right pointers
 - **Ideas you found here that could help you later:** *NIL*
 - **Ideas that didn't work and why:** *NIL*
