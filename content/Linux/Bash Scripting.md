@@ -4,9 +4,9 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
-  - linux
+  - bash
 Creation Date: 2024-01-10, 15:57
-Last Date: 2024-01-11T21:39:46+08:00
+Last Date: 2024-01-12T16:34:48+08:00
 References: 
 draft: 
 ---
@@ -22,24 +22,21 @@ draft:
 ## Bash Boolean
 ---
 - There isn't `true` or `false`
-- There is only exit code `0` means success, anything is failure 
-- A script has a return code of its last command which can be examined using `echo $?$`
-```bash
-#!/bin/bash
-f() {
-exit 1
-}
+- There is only exit code `0` means success, anything else is failure 
+- A script has a return code of its last command which can be examined using `echo $?`
 
-if [ f ]; then
-	echo "0 is true"
+## Bash Testing Conditions
+---
+- We need to use either `test` or `[ ]` to evaluate conditions 
+```shell
+if [ -z "$a" ]; then
+	echo "hello"
 fi
 
-if [ 1 ]; then
-	echo "1 is true"
-fi
+a="123"
 
-if [ 2 ]; then
-	echo "2 is true"
+if [ -z "$a" ]; then
+	echo "hello"
 fi
 ```
 
@@ -69,7 +66,7 @@ fi
 ---
 - Keyword `return` is for [[#Bash Script Exit Code]], not return value
 - For return value, use `echo` instead
-- And use `$(<BASH_FUNCTION_HERE>)` to capture the return value
+- And use `$(<BASH_FUNCTION_HERE>)` command substitution to capture the return value
 
 ## References
 ---

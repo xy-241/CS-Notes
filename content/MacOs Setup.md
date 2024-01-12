@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-12T00:20:02+08:00
+Last Date: 2024-01-12T16:23:14+08:00
 References: 
 ---
 ## General Apps
@@ -123,9 +123,9 @@ brew install htop
 - [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
 - [Postman - API Testing Tool](https://www.postman.com/downloads/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+- [[jq (JSON Processor)]]
 - `ngrok`
 - `gh`
-- `jq`(https://jqlang.github.io/jq/tutorial/)
 - `qemu` (for [[RISCV Kernel Deep Dive]])
 - `socat`
 ```bash
@@ -135,8 +135,6 @@ brew install ngrok/ngrok/ngrok
 
 brew install gh
 gh auth login # Painless Github CLi Auth
-
-brew install jq # CLi JSON processor
 
 brew install qemu
 

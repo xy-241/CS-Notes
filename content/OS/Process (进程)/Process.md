@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - bash
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2023-12-21T15:43:52+08:00
+Last Date: 2024-01-12T16:19:17+08:00
 References: 
 ---
 
@@ -14,10 +15,18 @@ References:
 ---
 
 - Container that holds all the information needed to run a program, [[Abstraction (抽象)]] over running program
+</br>
+
 - 2 Components - [[Address Space]], [[Process Control Block (PCB)]]
+</br>
+
 - [[Process]] **_usually_** don't share [[Main Memory]] among themselves for isolation purposes. We need [[Inter-Process Communication (IPC)]] for **inter-process communication** 
 
-
+## Useful Commands
+---
+**`source`**
+- Execute commands from a [[File]] in the current shell [[Process]]
+- So all changes made by file, such as environment variables or directory changes, will persist in the current shell process
 
 ## Terminologies
 ---

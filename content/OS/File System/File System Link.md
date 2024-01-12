@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - bash
 Creation Date: 2023-10-20T14:13:00
-Last Date: 2023-12-27T15:34:57+08:00
+Last Date: 2024-01-12T16:19:01+08:00
 References: 
 ---
 ## Abstract
@@ -44,3 +45,12 @@ ln -sf <source-location> <symlink-location>
 ## Dangling File System Link
 ---
 - When [[#Soft (Symbolic)]] points to an nonexistent file
+
+
+## Useful Commands
+---
+**`realpath`**
+- Display the resolved [[#Hard File System Link]] for a [[File]] or [[File System#File Directory]]
+```bash
+realpath path/to/file_or_directory
+```

@@ -5,10 +5,10 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
-  - linux
+  - bash
 Creation Date: 2023-10-23T15:22:00
-Last Date: 2023-10-25T20:54:31+08:00
-References:
+Last Date: 2024-01-12T16:20:57+08:00
+References: 
 ---
 ## Abstract
 ---
@@ -17,7 +17,7 @@ References:
 
 ## Commands
 ---
-### ``systemctl daemon-reload``
+**`systemctl daemon-reload`**
 - ``systemctl`` caches the service config files. When we make edits or add in new service config file. We should call this command to take in the changes
 
 

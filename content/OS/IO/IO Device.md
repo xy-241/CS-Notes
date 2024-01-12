@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - bash
 Creation Date: 2023-07-14T20:53:45+08:00
-Last Date: 2023-12-20T15:44:46+08:00
+Last Date: 2024-01-12T16:18:52+08:00
 References: 
 ---
 ## Abstract
@@ -14,6 +15,15 @@ References:
 * Controlled by [[Device Controller]]
 * Examples are like keyboard and monitor 
 
+
+## Useful Commands
+---
+**`read`**
+- BASH builtin for retrieving data from standard input
+```bash
+# Display a prompt before the input:
+read -p "Enter your input here: " variable
+```
 
 
  ## Terminologies

@@ -4,10 +4,10 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
-  - linux
+  - bash
 Creation Date: 2023-08-07T16:32:55+08:00
-Last Date: 2023-08-07T16:32:55+08:00
-References:
+Last Date: 2024-01-12T16:21:03+08:00
+References: 
 ---
 >[!example] Transfer a file to another server with [[SSH Key Pair]]
 >```bash

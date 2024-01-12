@@ -4,10 +4,10 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
-  - linux
+  - bash
 Creation Date: 2023-08-23T20:12:50+08:00
-Last Date: 2023-08-23T20:12:50+08:00
-References:
+Last Date: 2024-01-12T16:20:27+08:00
+References: 
 ---
 
 >[!note] Check the version of [[HTTP]]

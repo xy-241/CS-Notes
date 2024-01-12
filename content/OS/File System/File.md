@@ -5,9 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
-  - linux
+  - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-01-07T18:15:04+08:00
+Last Date: 2024-01-12T16:19:23+08:00
 References: 
 ---
 
@@ -18,6 +18,8 @@ References:
 - Hide the nitty gritty of [[IO Device]], so users can focus on manipulating the content inside the IO Device
 - Present programmer a clean [[Abstraction (抽象)]] of **device-independent** file
 - Examples are Printers & Modems etc
+</br>
+
 - 2 parts - _Filename_ & [[Inode#Inode Number]], doesn't have any _metadata_ associated
 
 
