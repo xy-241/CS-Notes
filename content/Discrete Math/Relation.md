@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-12T11:40:52+08:00
+Last Date: 2024-01-13T15:24:16+08:00
 References: 
 draft: 
 ---
@@ -17,6 +17,9 @@ draft:
 
 
 
+## Binary Relation
+---
+- Let $x \in A, y \in B$, we say $x~R~y \leftrightarrow (x,y) \in R$
 ## Inversion of Relation
 ---
 - Basically reverse the order of elements of the [[Set#Order n-tuples]]
@@ -31,7 +34,9 @@ $$
 $$
 \forall x \in A, \forall z \in C (x S \circ R z \leftrightarrow (\exists y \in B (xRy \cap ySz)))
 $$
-- $x \in A$ and $z \in C$ are $S\circ R$ related iff there is a 'path' from `x` to `z` via some intermediate element $y \in B$ in the [[#Arrow Diagram]]
+- $x \in A$ and $z \in C$ are $S\circ R$ related
+	1. If there is a 'path' from `x` to `z`, there must have a path from ($x$ to $y$ and $y$ to $z$ )
+	2. If there is a path from ($x$ to $y$  and $y$ to $z$), there must a path from $x$ to $z$
 
 ### Composition is Associative
 - Let $A, B, C, D$ be [[Set]]
@@ -99,6 +104,8 @@ $$
 ---
 ### Arrow Diagram 
 - Visualize  [[Relation]]
+- Usually used when there is more than one [[Set]] involve in the relation
+
 
 ### Relation Domain
 - Basically the [[Set]] of elements of the left hand Set that is involved in the [[Relation]]
@@ -133,3 +140,4 @@ $$
 	1. $R^{t}$ is transitive
 	2. $R \subseteq R^{t}$
 	3. $R^{t} \subseteq S$, where $S$ is any other transitive relation that contains $R$
+	

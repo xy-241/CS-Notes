@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - dsa
+  - discrete_math
 Creation Date: 2023-10-09T09:08:00
-Last Date: 2023-12-14T20:21:47+08:00
+Last Date: 2024-01-13T15:13:11+08:00
 References: 
 ---
 ## Abstract
@@ -30,11 +31,12 @@ References:
 
 ## Terminologies
 ---
-### Weighted (加权图)
+### Weighted Graph (加权图)
 - [[Binary Tree (二叉树)#Edge |Edge]] has a value
-### Directed
+### Directed Graph
+- Can be used to represent [[Relation]] which only involves one [[Set]]  
 
-### Non-Directed
+### Non-Directed Graph
 
 ### Sparse Graph
 - A graph in which the number of edges is much less than the possible number of edges
