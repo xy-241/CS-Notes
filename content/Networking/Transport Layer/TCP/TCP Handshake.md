@@ -6,9 +6,10 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-31T14:56:09+08:00
-Last Date: 2023-08-31T14:56:09+08:00
-References:
+Last Date: 2024-01-13T22:02:38+08:00
+References: 
 ---
->[!abstract]
->![[TCP_handshake.png]]
->- To establish a [[TCP Connection]]
+## Abstract
+---
+![[TCP_handshake.png|500]]
+- To establish a [[TCP Connection]]

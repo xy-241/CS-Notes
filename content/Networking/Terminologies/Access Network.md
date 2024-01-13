@@ -10,4 +10,4 @@ Last Date: 2023-12-12T11:49:00+08:00
 References:
 ---
 > [!note]
-> [[Network]] that physically connects an [[Host]] to first [[Routers]] (also know as "edge router") on a [[Route, Path through network | path]] to other distant end system
+> [[Network]] that physically connects an [[Host]] to first [[Routers]] (also know as "edge router") on a [[Network Route| path]] to other distant end system

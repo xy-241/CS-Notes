@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-07-14T13:30:00
-Last Date: 2023-12-16T21:04:59+08:00
+Last Date: 2024-01-13T21:58:54+08:00
 References: 
 ---
 ## Abstract
@@ -16,4 +16,8 @@ References:
 
 ## Stateless Network Protocol
 ---
-- [[Host#Server]] don't maintain information about the [[Host#Client]], vice versa
+- [[Host#Server]] does't maintain information about the [[Host#Client]], vice versa
+
+## Stateful Network Protocol
+---
+- [[Host#Server]] maintains information about the [[Host#Client]], vice versa

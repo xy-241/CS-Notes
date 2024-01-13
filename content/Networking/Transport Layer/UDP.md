@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-10-03T14:42:00
-Last Date: 2023-12-16T21:06:45+08:00
+Last Date: 2024-01-13T22:19:03+08:00
 ---
 ## Abstract
 ---
@@ -18,7 +18,7 @@ Last Date: 2023-12-16T21:06:45+08:00
 ### Smaller Packets 
 - No overhead to implement [[TCP#Benefits]]
 
-### Less [[Bandwidth]]
+### Less Bandwidth Usage
 - Because [[#Smaller Packets]]
 
 ### Faster than [[TCP]]
@@ -29,24 +29,21 @@ Last Date: 2023-12-16T21:06:45+08:00
 - Entities can communicate without setting up connection first
 
 ### Support Horizontal Scaling
+- Since each [[Host#Server]] doesn't maintain a stateful connection with [[Host#Client]]
 
 ## Cons
 ---
-### No Acknowledgment 
-
-
-### No Guaranteed Delivery
-- 
-
-### Connectionless
-- 
-
-### No Congestion Control
-- 
-
-
-### No Ordered Packets
-
-
 ### Security
-- [[Host]] has no idea about [[Host]], anyone can communicate with [[Host]], can be attacked by [[DDoS]] easily. [[TCP]] can filter [[Data]] it receives by examining the identity of [[Host]] like [[IP Address]]
+- [[Host#Server]] has no idea about [[Host#Client]], anyone can communicate with server
+- Can be attacked by [[DDoS]] easily. [[TCP]] can filter data it receives by examining the identity of client like [[IP Address]]
+
+### Other Cons
+- No Acknowledgment 
+- No Guaranteed Delivery
+- Connectionless
+- No Ordered Packets
+- No Congestion Control
+
+
+
+

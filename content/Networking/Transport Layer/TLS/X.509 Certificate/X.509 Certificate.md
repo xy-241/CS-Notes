@@ -7,7 +7,7 @@ tags:
   - networking
   - security
 Creation Date: 2023-09-12T15:34:55+08:00
-Last Date: 2023-12-16T21:57:29+08:00
+Last Date: 2024-01-13T22:21:24+08:00
 References: 
 ---
 ## Abstract
@@ -21,6 +21,8 @@ References:
 ## Self-signed Certificate
 ---- 
 - A self-created [[X.509 Certificate]] that isn't signed by anyone else
->[!caution] [[Host#Client]] prone to Man-in-the-middle Attack
->- The content of certificate can be modified without ways to notice
+- The Certificate Issuer of the X.509 Certificate is same as the entity that is using it
+</br>
+
+- Without a trusted [[Digital Signature]] on the X.509 Certificate, it is prone to [[Man-in-the-middle Attack]]. Because the X.509 Certificate can modified without ways to notice
 

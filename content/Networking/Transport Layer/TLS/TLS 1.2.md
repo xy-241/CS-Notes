@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-31T15:18:35+08:00
-Last Date: 2023-12-16T21:58:04+08:00
+Last Date: 2024-01-13T22:15:10+08:00
 References: 
 ---
 ## Abstract
@@ -15,16 +15,23 @@ References:
 - Takes 2 [[Network Round-trip]] - [[#Certificate Check]]& [[#Symmetric Key Exchange]]
 
 ## Certificate Check
+---
+![[TLS_certificate_check.png|500]]
 - [[X.509 Certificate]] is exchanged over the [[Network]]
-![[TLS_certificate_check.png]]
-## Symmetric Key Exchange
-![[symmetric_key_exchange.png]]
-- [[Host#Client]] uses [[Asymmetric Cryptography#Public Key]] in [[X.509 Certificate]] to encrypt the [[Symmetric Encryption#Symmetric Key]]
-- [[Host#Server]] use its [[Asymmetric Cryptography#Private Key]] to obtain the Symmetric Key
-- Now both client & server can communicate with each other with data encrypted in-transit with the help of the using the efficient [[Symmetric Encryption]] 
-- [[Asymmetric Encryption]] is much more computing intensive compared to [[Symmetric Encryption]]
 
->[!info] In this case, the Symmetric Key also known as **Session Key**
+
+## Symmetric Key Exchange
+---
+![[symmetric_key_exchange.png|700]]
+- [[Host#Client]] uses [[Asymmetric Cryptography#Public Key]] in [[X.509 Certificate]] to encrypt the [[Symmetric Encryption#Symmetric Key]] it generated
+- [[Host#Server]] use its [[Asymmetric Cryptography#Private Key]] to obtain the Symmetric Key
+</br>
+
+- Now both client & server can communicate with each other with data encrypted in-transit using [[Symmetric Encryption]] which is way more efficient than [[Asymmetric Cryptography]] 
+
+### Session Key
+- The [[Symmetric Encryption#Symmetric Key]] obtained from [[#Symmetric Key Exchange]]
+
 
 
 
