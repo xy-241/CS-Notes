@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-07T17:29:00+08:00
+Last Date: 2024-01-13T19:53:17+08:00
 References: 
 ---
 
@@ -96,6 +96,7 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 - [Python](https://notes.yxy.ninja/tags/python)
 - [Java](https://notes.yxy.ninja/tags/java)
 - [Javascript](https://notes.yxy.ninja/tags/js)
+- [Rust](https://notes.yxy.ninja/tags/rust)
 - [Docker (Under heavy revision)](https://notes.yxy.ninja/tags/docker)
 - [Object Oriented Programming](https://notes.yxy.ninja/tags/OOP)
 

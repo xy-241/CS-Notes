@@ -87,6 +87,7 @@
 - [Python](https://notes.yxy.ninja/tags/python)
 - [Java](https://notes.yxy.ninja/tags/java)
 - [Javascript](https://notes.yxy.ninja/tags/js)
+- [Rust](https://notes.yxy.ninja/tags/rust)
 - [Docker (Under heavy revision)](https://notes.yxy.ninja/tags/docker)
 - [Object Oriented Programming](https://notes.yxy.ninja/tags/OOP)
 

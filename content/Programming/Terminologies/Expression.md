@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - programming
+  - rust
 Creation Date: 2024-01-13, 18:46
-Last Date: 2024-01-13T19:24:26+08:00
+Last Date: 2024-01-13T19:52:18+08:00
 References: 
 draft: 
 ---
