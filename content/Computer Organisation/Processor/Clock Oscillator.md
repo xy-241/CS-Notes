@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-01-11, 21:59
-Last Date: 2024-01-11T23:20:49+08:00
+Last Date: 2024-01-13T15:37:36+08:00
 References: 
 draft: 
 ---
@@ -26,11 +26,19 @@ draft:
 ![[clock_cycle.png|300]]
 - Refers to the time interval between two successive rising (or falling) edges of the [[Clock Signal]]
 
+### Clock Frequency
+- The total number of [[#Clock Cycle]] in one second
+
 ### Duty Cycle
 ![[duty_cycle.png|350]]
 
 - The ratio of time the [[Clock Signal]] is in the high state (logical 1) to the total period of the signal
 
+## Terminologies 
+---
+### Propagation Delay
+- The time it takes for the [[#Clock Signal]] to traverse the entire circuit
+- We need to wait for the propagation delay, in order to have a proper clock signal that has both active high and active low
 
 ## References
 ---

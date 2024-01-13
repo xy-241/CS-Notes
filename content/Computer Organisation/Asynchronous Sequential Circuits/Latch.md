@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-07T22:09:50+08:00
-Last Date: 2024-01-10T15:03:09+08:00
+Last Date: 2024-01-13T15:45:10+08:00
 References: 
 ---
 ## Abstract
@@ -22,4 +22,3 @@ References:
 - Without [[Steering Gate]]
 ### Gated Latch
 - With [[Steering Gate]]
-### Asynchronous Latch
