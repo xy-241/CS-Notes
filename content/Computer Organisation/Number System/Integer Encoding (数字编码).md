@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-08, 21:54
-Last Date: 2024-01-05T17:40:53+08:00
+Last Date: 2024-01-13T18:09:57+08:00
 References: 
 ---
 ## Abstract
@@ -44,8 +44,11 @@ References:
 
 ![[2's Complement.png|400]]
 
-## Check for Integer Overflow
+## Integer Overflow
 ---
+- When a value is out of the range that the [[Datatype]] can hold
+
+### Check for Integer Overflow
 - If the sign of the two operand are the same, and the sign of the result is different. Then we have an *[[Integer (整数)]] overflow*
 - Think about how can the sum of two positive integer result in a negative number
 - And how the sum of two negative integer result in a positive number

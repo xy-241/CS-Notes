@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-01-08, 09:48
-Last Date: 2024-01-08T10:34:03+08:00
+Last Date: 2024-01-13T18:23:40+08:00
 References: 
 draft: 
 ---
@@ -42,3 +42,9 @@ int main() {
 	return 0;
 }
 ```
+
+
+## Ways to Handle
+---
+### Use Rust
+- Rust checks the index with the the range the program can access, if out of range, exit immediately with helpful error message instead of continuing and cause Segmentation Fault
