@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-11-15T17:13:00
-Last Date: 2023-12-15T23:29:20+08:00
+Last Date: 2024-01-13T17:51:45+08:00
 References: 
 ---
 ## Abstract
@@ -15,7 +15,7 @@ References:
 
 
 ## Arrays
-- For `Arrays.sort()`, the elements inside the [[Array]] must be a type of [[OOP Object]]. `int[]` can't, because `int` is a [[Primitive Datatype]]
+- For `Arrays.sort()`, the elements inside the [[Array]] must be a type of [[OOP Object]]. `int[]` can't, because `int` is a [[Datatype#Primitive Datatype]]
 
 ## ArrayDeque
 - Doesn't support ``null`` elements, but `LinkedList` can 

@@ -6,12 +6,13 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-08-25T19:10:57+08:00
-Last Date: 2023-12-15T23:34:34+08:00
+Last Date: 2024-01-13T17:52:33+08:00
 References: 
 ---
 ## Abstract
 - [[Immutable]] - a new object is created when a new value is assigned
-- Make [[Primitive Datatype]] to fit into the [[OOP]] concept
+- [[Datatype#Custom Datatype]]
+- Make [[Datatype#Primitive Datatype]] to fit into the [[OOP]] concept
 - Has built-in method to convert current value to other Primitive Datatype or [[Datatype]] 
 
 

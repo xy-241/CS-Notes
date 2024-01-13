@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-12T17:08:32+08:00
+Last Date: 2024-01-13T16:59:37+08:00
 References: 
 ---
 ## General Apps
@@ -92,10 +92,7 @@ h() {
 ---
 - [[Python Toolset]]
 - [[JS Toolset]]
-- [Rust](https://www.rust-lang.org/tools/install) - [Holy Bible of Rust](https://rust-book.cs.brown.edu/foreword.html)
-```shell
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+- [[Rust Toolset]]
 
 - `typescript`, make sure you have [[JS Toolset#Install NVM]]
 ```bash

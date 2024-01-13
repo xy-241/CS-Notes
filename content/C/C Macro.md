@@ -33,7 +33,7 @@ int main()
 
 ## Function-like Macro
 ---
-Not same as [[Functions]], doesn't have [[Type Safety]]
+Not same as [[Function]], doesn't have [[Type Safety]]
 
 ```c {3} {10}
 #include <stdio.h>
