@@ -7,7 +7,7 @@ tags:
   - programming
   - rust
 Creation Date: 2023-07-23T18:06:39+08:00
-Last Date: 2024-01-13T17:31:10+08:00
+Last Date: 2024-01-14T20:12:36+08:00
 References: 
 ---
 ## Abstract
@@ -22,7 +22,7 @@ References:
 - Help in understanding & reasoning about code behaviour
 
 ### Easy Concurrency
-- Immutable creates a single source of truth 
+- Immutability provides a single source of truth 
 
 ## Rust
 ---

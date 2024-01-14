@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-14T18:58:00+08:00
+Last Date: 2024-01-14T20:10:50+08:00
 References: 
 ---
 ## Abstract
@@ -89,16 +89,17 @@ spin:
 </br>
 
 - Require manual memory management - process of allocating memory and deallocating memory
+- When assigning one variable to another variable, data is **not duplicated**, instead the [[Pointer]] to the data is duplicated and assigned
 - A nice visualisation on memory allocation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#boxes-live-in-the-heap)
 
 **Java**
 - Memory allocation with `new` keyword, and memory deallocation is done by [[Garbage Collector]] automatically
 
 **Rust**
-- Memory allocation with `Box::new()` keyword 
+- Memory allocation with `Box::new()` function
 
 **C**
-- Memory allocation with `malloc` keyword, and manual memory deallocation is with `free()` keyword
+- Memory allocation with `malloc()` function, and manual memory deallocation is with `free()` function
 
 ### Text Segment
 - Stores program codes, **unchangeable**
