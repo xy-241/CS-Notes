@@ -3,12 +3,17 @@ sthNew: true
 Mastery Level:
   - 📙
 Time Taken: 
-Space: 
-Time: 
-Appears On: 
+Space:
+  - O(n)
+Time: O(nm)
+Appears On:
+  - Grind 75
 Brush: 4
-Difficulty: 
-Area: 
+Difficulty:
+  - Medium
+Area:
+  - dynamic_programming
+  - 力扣加加
 Reference 1: https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/medium/139.word-break
 Reference 2: 
 Author:
@@ -16,7 +21,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2022-10-31T10:26:00
-Last Date: 2024-01-12T12:48:55+08:00
+Last Date: 2024-01-14T15:01:58+08:00
 tags:
   - cp
 draft: 
@@ -56,16 +61,18 @@ draft:
 - The answer is simply to check the state of the substructure which is the full `s` from `dp[]`
 
 ### Conclusion
+- The idea here is to see that the current segment of string aka substructure is built on-top of the previous sub-segment of `s`
 
 
 ## Space & Time Analysis
 ---
 The analysis method we are using is [[Algorithm Complexity Analysis]]
-### Space - O()
+### Space - O(n)
 - *Ignore input size & language dependent space*
-- 
-### Time - O()
-- 
+- We are using an [[Array]] to keep track of the if we are able to using the string from `wordDict` to construct that particular sub-segment
+### Time - O(nm)
+- n is the length of `s` and m is is the size of `wordDict`
+- We need to go through each character of `s`, and each character is used as the endpoint of that particular sub-segment, and we need to loop through all strings inside `wordDict` to check if we can create that particular sub-segment (Pruning, when a word match is found, we can terminate the wordList loop, and move to the next sub-segment)
  
 
 ## Codes
@@ -100,9 +107,9 @@ class Solution {
 
 ## Personal Reflection
 ---
-- **Why it takes so long to solve:** Unable to think the question in the [[Dynamic Programming]] mindset
-- **What you could have done better:** *NIL*
-- **What you missed:** *NIL*
-- **Ideas you've seen before:** *NIL*
-- **Ideas you found here that could help you later:** *NIL*
+- **Why it takes so long to solve:** Unable to think the question in the [[Dynamic Programming]] mindset， seeing the [[Dynamic Programming#Optimal Substructure (最优子结构)]]
+- **What you could have done better:** Practice more
+- **What you missed:** each sub-segment of `s` is the optimal substructure(最优子结构)
+- **Ideas you've seen before:** optimal substructure(最优子结构)
+- **Ideas you found here that could help you later:** if a current segment depends on the previous segment, maybe can think about optimal substructure(最优子结构) and dynamic programming 
 - **Ideas that didn't work and why:** [[Backtracking]], it takes too much time which leads to time exceed error
