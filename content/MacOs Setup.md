@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-13T16:59:37+08:00
+Last Date: 2024-01-14T16:26:53+08:00
 References: 
+title:  My Macos Setup
 ---
 ## General Apps
 ---

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2023-12-24T15:52:53+08:00
+Last Date: 2024-01-14T16:28:55+08:00
 References: 
 ---
 ## Abstract
@@ -15,8 +15,8 @@ References:
 
 
 >[!example]
->- [[MacOs Setup | MacOs]]'s kernel is **XNU**
->- **Windows**'s kernel is **NT Kernel**
+>- [[MacOS]]'s kernel is **XNU**
+>- [[Windows]]'s kernel is **NT Kernel**
 
 
 ## Kernel Architecture
