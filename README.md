@@ -67,6 +67,7 @@
 - [Code Template](https://notes.yxy.ninja/cp/Competitive-Programming-Code-Templates)
 - [Data Structure](https://notes.yxy.ninja/cp/data_structure/)
 - [Prefix Sum](https://notes.yxy.ninja/cp/prefix_sum/)
+- [Dynamic Programming](https://notes.yxy.ninja/cp/dynamic_programming/)
 - [Greedy](https://notes.yxy.ninja/cp/greedy/)
 - [Number Theory](https://notes.yxy.ninja/cp/number_theory/)
 - [Combinatorics](https://notes.yxy.ninja/cp/combinatorics/)

@@ -1,12 +1,6 @@
 @use "./base.scss";
 
-
-.clipboard-button {
-  margin-top: 0.35rem;
-  margin-right: 0.5rem;
-}
-
-// put your custom CSS here!
+// Override
 .external-embed {
   display: block;
   margin: 0 auto;
@@ -14,6 +8,25 @@
   border-radius: 10px;
 }
 
+.clipboard-button {
+  margin-top: 0.35rem;
+  margin-right: 0.5rem;
+}
+
+a {
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+thead {
+  font-weight: 500;
+}
+
+// My Own Custom Class
 .onecompilerCode-wrapper {
   width: 100%;
 }
