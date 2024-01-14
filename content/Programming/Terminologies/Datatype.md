@@ -7,19 +7,19 @@ tags:
   - programming
   - rust
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-01-13T19:09:04+08:00
+Last Date: 2024-01-14T17:22:54+08:00
 References: 
 ---
 ## Abstract
 ---
 - Each type has a set of [[Operation]] associated with it
 
-## Primitive Datatype
+### Primitive Datatype
 - Also known as *Built-in Datatype*
 * Great performance since there isn't much abstraction like [[#Custom Datatype]]
 
-## Custom Datatype
----
+### Custom Datatype
+
 - Examples are [[OOP Class]] and [[Structure]]
 
 
@@ -35,8 +35,8 @@ References:
 ### Rust Compound Type
 - Basically [[#Custom Datatype]] rust supports natively
 	1. Tuple, basically [[Array]] that contains elements of different [[Datatype]]
-	2. Array, basically [[Array]]
-- Refer to [Rust Compound Data Types] for more details
+	2. Array, basically Array
+- Refer to [Rust Compound Data Types](https://rust-book.cs.brown.edu/ch03-02-data-types.html#compound-types) for more details
 ## Terminologies 
 ---
 ### Statically Typed

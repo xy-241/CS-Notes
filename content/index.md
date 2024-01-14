@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-13T19:53:17+08:00
+Last Date: 2024-01-14T17:34:42+08:00
 References: 
 ---
 
@@ -74,6 +74,7 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 - [Code Template](https://notes.yxy.ninja/cp/Competitive-Programming-Code-Templates)
 - [Data Structure](https://notes.yxy.ninja/cp/data_structure/)
 - [Prefix Sum](https://notes.yxy.ninja/cp/prefix_sum/)
+- [Dynamic Programming](https://notes.yxy.ninja/cp/dynamic_programming/)
 - [Greedy](https://notes.yxy.ninja/cp/greedy/)
 - [Number Theory](https://notes.yxy.ninja/cp/number_theory/)
 - [Combinatorics](https://notes.yxy.ninja/cp/combinatorics/)
