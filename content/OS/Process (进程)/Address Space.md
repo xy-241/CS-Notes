@@ -5,8 +5,11 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - java
+  - c
+  - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2023-12-27T15:41:19+08:00
+Last Date: 2024-01-14T18:58:00+08:00
 References: 
 ---
 ## Abstract
@@ -15,14 +18,18 @@ References:
 - 3 Components - [[#Stack Segment]], [[#Data Segment]] and  [[#Text Segment]]
 ![[address_space.png]]
 
-## 3 Components
----
 ### Stack Segment
 - [[Stack]] structure
 - Grows downwards
 - The expansion and shrinking are done automatically
+- Made up of Stack Frames which are associated with a specific function
+</br>
+
 - Can be used to store function variables
-#### XV6-RISCV Kernel Stack Example 
+- When assigning one variable to another variable, data is **duplicated**
+- For example, `a=1` `b=a`, the value `1` is duplicated and assigned to `b`
+- A nice visualisation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#variables-live-in-the-stack) 
+#### XV6-RISCV Kernel Stack
 ```c {13}
 // xv6-riscv kernel codes, start.c
 
@@ -77,7 +84,21 @@ spin:
 - Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because *stack segment grows downwards* when we are adding values to the stack
 ### Data Segment
 - Grow upwards
-- All objects created with the `new` keywords in [[Java]] are created here 
-- Expansion is done explicitly using [[System Call (系统调用)]] `brk()` or higher level [[Library Call]]. Programmer uses `malloc` in [[C]]
+- Region of [[Virtual Memory]] where data can live indefinitely even when function returns
+- Expansion is done explicitly using [[System Call (系统调用)]] `brk()` or higher level [[Library Call]]
+</br>
+
+- Require manual memory management - process of allocating memory and deallocating memory
+- A nice visualisation on memory allocation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#boxes-live-in-the-heap)
+
+**Java**
+- Memory allocation with `new` keyword, and memory deallocation is done by [[Garbage Collector]] automatically
+
+**Rust**
+- Memory allocation with `Box::new()` keyword 
+
+**C**
+- Memory allocation with `malloc` keyword, and manual memory deallocation is with `free()` keyword
+
 ### Text Segment
 - Stores program codes, **unchangeable**

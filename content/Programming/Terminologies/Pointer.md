@@ -3,15 +3,19 @@ Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
-tags: 
+tags:
+  - programming
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-01-08T10:30:16+08:00
+Last Date: 2024-01-14T18:44:39+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
 - A variable whose value is [[Memory Address]]
+
+### Pointee
+- The value that a pointer points-to 
 
 
 

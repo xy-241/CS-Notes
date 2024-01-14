@@ -6,17 +6,16 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-01-14T16:28:55+08:00
+Last Date: 2024-01-14T18:00:29+08:00
 References: 
 ---
 ## Abstract
 ---
 - Decides on hardware allocation and management with regard to software
+</br>
 
-
->[!example]
->- [[MacOS]]'s kernel is **XNU**
->- [[Windows]]'s kernel is **NT Kernel**
+- [[MacOS]]'s kernel is **XNU**
+- [[Windows]]'s kernel is **NT Kernel**
 
 
 ## Kernel Architecture
