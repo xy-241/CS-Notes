@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-14T13:52:20+08:00
+Last Date: 2024-01-14T14:23:52+08:00
 References: 
 draft: 
 ---
@@ -131,6 +131,7 @@ $$
 - Quaternary is 4-ary
 
 ### Congruence Modulo 3
+- [[Modulo#Congruence Modulo]] 3 means the [[Integer (整数)]] is divisible by 3
 $$
 \forall x,y \in \mathbb{Z} (xRy \leftrightarrow 3 |(x-y))
 $$

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - cp
 Creation Date: 2023-12-31, 18:38
-Last Date: 2023-12-31T18:47:12+08:00
+Last Date: 2024-01-14T15:24:36+08:00
 References: 
 draft: 
 ---
@@ -33,7 +33,14 @@ draft:
 ---
 - [Erase First or Second Letter](https://codeforces.com/contest/1917/problem/B)
 
+## Dynamic Programming
+---
+- [Summation Game](https://codeforces.com/contest/1920/problem/B) (Solved, pending review)
 
+## Number Theory
+---
+- [Partitioning the Array](https://codeforces.com/contest/1920/problem/C)
 ## CF Contest Questions
 ---
 - [Bicycles](https://codeforces.com/contest/1915/problem/G)
+
