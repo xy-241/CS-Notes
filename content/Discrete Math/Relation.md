@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-13T15:24:16+08:00
+Last Date: 2024-01-14T13:52:20+08:00
 References: 
 draft: 
 ---
@@ -100,6 +100,9 @@ $$
 	2. The equivalent class $x$ is in is same as the equivalent class $y$ is in
 	3. $[x] \cap [y] \ne \emptyset$
 
+### Theorem 8.3.4
+- The [[Set#Partition]] induced by [[#Equivalence Relation]]
+- If $R$ is equivalence relation on [[Set]] $A$, then the distinct [[#Equivalence Class]] form a partition of $A$
 ## Terminologies
 ---
 ### Arrow Diagram 
