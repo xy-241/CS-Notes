@@ -83,7 +83,6 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 ## ➕ Math
 ---
 - [Number Theory Basis](https://notes.yxy.ninja/tags/number_theory)
-- [Congruences](https://notes.yxy.ninja/Number-Theory/Congruences/)
 - [Divisibility & Primes](https://notes.yxy.ninja/Number-Theory/Divisibility-and-Primes/)
 </br>
 

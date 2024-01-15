@@ -6,17 +6,16 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2024-01-14, 14:18
-Last Date: 2024-01-14T14:21:06+08:00
+Last Date: 2024-01-15T10:49:30+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
-- Returns the remainder or signed remainder of a division
+- Returns the **remainder** or **signed remainder** of a **division**
 
 
-## Congruence Modulo
----
+### Congruence Modulo
 - Congruence means "the same"
 - Represented with $\equiv$
 - $a \equiv b$ (mod $m$) is read as "$a$ is congruent to $b$ modulo $m$ 
