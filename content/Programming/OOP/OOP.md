@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OOP
-Creation Date: 2023-07-23T17:43:50+08:00
-Last Date: 2023-12-15T23:45:46+08:00
+  - programming
+Creation Date: 2023-09-14T14:01:42+08:00
+Last Date: 2024-01-15T17:02:08+08:00
 References: 
 ---
 ## Abstract
@@ -28,3 +29,4 @@ Core Principles
 ## OOP Method
 ---
 - The functions we specify in the [[#OOP Class]]
+

@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Mainly used to solve [[Array]], [[Terminologies/String/String|String]] & [[Linked List]] related problems
+- Mainly used to solve [[Array]], [[OOP|OOP]] & [[Linked List]] related problems
 - Reduce time complexity by one dimension, `O(n^2)` to `O(n)`
 
 ## Fast-Slow Pointers
