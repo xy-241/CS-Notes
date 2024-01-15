@@ -52,4 +52,4 @@ console.log(hash(password));
 shasum -a 256 <FILE_NAME>
 ```
 ### Digest
-- A hash value that is commonly formatted as hex or [[Base 64]]
+- A hash value that is commonly formatted as hex or [[Base 64 Encoding]]

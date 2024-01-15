@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- [[Base 64]]-encoded ASCII files
+- [[Base 64 Encoding]]-encoded ASCII files
 - Doesn't determine the content. The encoded content & header/footer markers define the data's purpose
 
 
