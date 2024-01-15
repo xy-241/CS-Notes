@@ -77,6 +77,7 @@
 - [Number Theory Basis](https://notes.yxy.ninja/tags/number_theory)
 - [Congruences](https://notes.yxy.ninja/Number-Theory/Congruences/)
 - [Divisibility & Primes](https://notes.yxy.ninja/Number-Theory/Divisibility-and-Primes/)
+</br>
 
 - [Discrete Math](https://notes.yxy.ninja/tags/discrete_math)
 - [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
