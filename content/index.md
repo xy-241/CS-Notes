@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-14T17:34:42+08:00
+Last Date: 2024-01-15T10:40:07+08:00
 References: 
 ---
 
@@ -82,9 +82,14 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 
 ## ➕ Math
 ---
-- [Number Theory](https://notes.yxy.ninja/tags/number_theory)
-- [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
+- [Number Theory Basis](https://notes.yxy.ninja/tags/number_theory)
+- [Congruences](https://notes.yxy.ninja/Number-Theory/Congruences/)
+- [Divisibility & Primes](https://notes.yxy.ninja/Number-Theory/Divisibility-and-Primes/)
+</br>
+
 - [Discrete Math](https://notes.yxy.ninja/tags/discrete_math)
+- [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
+
 
 
 ## 🛠️ Software Engineering 

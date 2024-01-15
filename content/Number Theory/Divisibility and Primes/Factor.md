@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2024-01-15, 10:02
-Last Date: 2024-01-15T10:10:04+08:00
+Last Date: 2024-01-15T10:35:34+08:00
 References: 
 draft: 
 ---
@@ -20,8 +20,8 @@ draft:
 ![[trial_division_method.png]]
 
 ### Find Minimal Greater-than-One Factor
-- Find the minimal factor of a given integer that is `>1`
-- If the function returns the given `n`, then the given `n` is [[Prime Number (质数)]]
+Find the minimal factor of a given integer that is `>1`
+
 ```java
 // Time Complexity - O(sqrt(n)), where n is the size of the integer
 public static int minFactor(int n) {
@@ -33,3 +33,5 @@ public static int minFactor(int n) {
   return n;
 }
 ```
+- If the function returns the given `n`, then the given `n` is [[Prime Number (质数)]]
+- For `i<=Math.sqrt(n)`, see [[#Factor Maximum Value]]
