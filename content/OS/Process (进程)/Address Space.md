@@ -9,14 +9,14 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-14T20:10:50+08:00
+Last Date: 2024-01-15T17:27:55+08:00
 References: 
 ---
 ## Abstract
 ---
+![[address_space.png]]
 - A list of memory locations from *0* to some maximum ([[Virtual Memory]]), which [[Process]] can read & write
 - 3 Components - [[#Stack Segment]], [[#Data Segment]] and  [[#Text Segment]]
-![[address_space.png]]
 
 ### Stack Segment
 - [[Stack]] structure
