@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-15T10:40:07+08:00
+Last Date: 2024-01-15T17:24:46+08:00
 References: 
 ---
 
@@ -90,18 +90,21 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 - [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
 
 
+## 🔤 Programming Language
+---
+- [C](https://notes.yxy.ninja/tags/c)
+- [Python](https://notes.yxy.ninja/tags/python)
+- [Rust](https://notes.yxy.ninja/tags/rust)
+- [Java](https://notes.yxy.ninja/tags/java)
+- [Javascript](https://notes.yxy.ninja/tags/js)
+
 
 ## 🛠️ Software Engineering 
 ---
 - [Software Engineering Theories](https://notes.yxy.ninja/tags/software_engineering)
 - [Amazon Web Services](https://notes.yxy.ninja/tags/aws)
-- [C](https://notes.yxy.ninja/tags/c)
 - [Datadog - Application Monitoring](https://notes.yxy.ninja/tags/Datadog)
 - [Security](https://notes.yxy.ninja/tags/security)
-- [Python](https://notes.yxy.ninja/tags/python)
-- [Java](https://notes.yxy.ninja/tags/java)
-- [Javascript](https://notes.yxy.ninja/tags/js)
-- [Rust](https://notes.yxy.ninja/tags/rust)
 - [Docker (Under heavy revision)](https://notes.yxy.ninja/tags/docker)
 - [Object Oriented Programming](https://notes.yxy.ninja/tags/OOP)
 

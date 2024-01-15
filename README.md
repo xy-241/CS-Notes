@@ -82,18 +82,24 @@
 - [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
 
 
-## 🛠️ Software Engineering 
-- [Software Engineering Theories](https://notes.yxy.ninja/tags/software_engineering)
-- [Amazon Web Services](https://notes.yxy.ninja/tags/aws)
+## 🔤 Programming Language
+---
 - [C](https://notes.yxy.ninja/tags/c)
-- [Datadog - Application Monitoring](https://notes.yxy.ninja/tags/Datadog)
-- [Security](https://notes.yxy.ninja/tags/security)
 - [Python](https://notes.yxy.ninja/tags/python)
+- [Rust](https://notes.yxy.ninja/tags/rust)
 - [Java](https://notes.yxy.ninja/tags/java)
 - [Javascript](https://notes.yxy.ninja/tags/js)
-- [Rust](https://notes.yxy.ninja/tags/rust)
+
+
+## 🛠️ Software Engineering 
+---
+- [Software Engineering Theories](https://notes.yxy.ninja/tags/software_engineering)
+- [Amazon Web Services](https://notes.yxy.ninja/tags/aws)
+- [Datadog - Application Monitoring](https://notes.yxy.ninja/tags/Datadog)
+- [Security](https://notes.yxy.ninja/tags/security)
 - [Docker (Under heavy revision)](https://notes.yxy.ninja/tags/docker)
 - [Object Oriented Programming](https://notes.yxy.ninja/tags/OOP)
+
 
 
 
