@@ -7,15 +7,15 @@ tags:
   - number_theory
   - discrete_math
 Creation Date: 2023-12-14, 10:01
-Last Date: 2023-12-16T17:40:53+08:00
+Last Date: 2024-01-15T10:02:59+08:00
 References: 
 ---
 ## Abstract
 ---
 - `d|n` means that there is an integer `k` such as `n = dk`
-- `d` is a factor of `n`
+- `d` is a [[Factor]] of `n`
 - `d|n` doesn't involve the actual division. It is a [[Mathematical Statement]] that is either `True` or `False`, not a numerical value
-- Used frequently under the topic of **Relation**
+- Used frequently under the topic of [[Relation]]
 
 ## Theorems
 ---
@@ -29,3 +29,5 @@ References:
 ### Theorem 4.4.3
 - *Transitivity of Divisibility*
 - For all integers a, b, c. If `a|b` and `b|c`, then `a|c`
+
+

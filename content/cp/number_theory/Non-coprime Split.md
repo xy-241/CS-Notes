@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-23, 16:07
-Last Date: 2023-12-31T18:15:58+08:00
+Last Date: 2024-01-15T10:10:44+08:00
 tags:
   - cp
 draft: 
@@ -30,7 +30,7 @@ draft:
 ---
 - The idea here is to loop through the elements between `l` and `r` (inclusive)
 - For each [[Integer (整数)]] we loop through, let it be `j`
-- Then we [[Prime Number (质数)#Find Minimal Greater-than-One Factor]], and let it be `md` if we can obtain one, and it will be `a`
+- Then we [[Factor#Find Minimal Greater-than-One Factor]], and let it be `md` if we can obtain one, and it will be `a`
 - Then `j-md` will be `b`
 - Then [[GCD]] of `md` and `j-md` will be `md` which is guaranteed to be `>1`
 
@@ -42,7 +42,7 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 - *Ignore input size & language dependent space*
 - We aren't creating any objects on the [[Address Space#Data Segment]]
 ### Time - O(nlogn)
-- Assume `r-l` is `n`, [[Prime Number (质数)#Find Minimal Greater-than-One Factor]] is `O(logn)`, thus overall time complexity is `O(nlogn)`
+- Assume `r-l` is `n`, [[Factor#Find Minimal Greater-than-One Factor]] is `O(logn)`, thus overall time complexity is `O(nlogn)`
  
 
 ## Codes
@@ -95,7 +95,7 @@ public class Solution {
 
 ## Personal Reflection
 ---
-- **Why it takes so long to solve:** Unaware of the [[Prime Number (质数)#Find Minimal Greater-than-One Factor]]
+- **Why it takes so long to solve:** Unaware of the [[Factor#Find Minimal Greater-than-One Factor]]
 - **What you could have done better:** Practice more questions on [[Number Theory]]
 - **What you missed:** Find Minimal Greater-than-One Factor. And an [[Integer (整数)]] can be minused all the way to `0` by minusing it with one of its factor after certain number of times 
 - **Ideas you've seen before:** [[Prime Number (质数)]] and [[GCD]]
