@@ -83,7 +83,6 @@
 
 
 ## 🔤 Programming Language
----
 - [C](https://notes.yxy.ninja/tags/c)
 - [Python](https://notes.yxy.ninja/tags/python)
 - [Rust](https://notes.yxy.ninja/tags/rust)
@@ -92,7 +91,6 @@
 
 
 ## 🛠️ Software Engineering 
----
 - [Software Engineering Theories](https://notes.yxy.ninja/tags/software_engineering)
 - [Amazon Web Services](https://notes.yxy.ninja/tags/aws)
 - [Datadog - Application Monitoring](https://notes.yxy.ninja/tags/Datadog)
