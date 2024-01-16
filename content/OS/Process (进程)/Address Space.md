@@ -9,12 +9,12 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-15T17:27:55+08:00
+Last Date: 2024-01-16T16:17:00+08:00
 References: 
 ---
 ## Abstract
 ---
-![[address_space.png]]
+	![[address_space.png]]
 - A list of memory locations from *0* to some maximum ([[Virtual Memory]]), which [[Process]] can read & write
 - 3 Components - [[#Stack Segment]], [[#Data Segment]] and  [[#Text Segment]]
 
@@ -96,10 +96,14 @@ spin:
 - Memory allocation with `new` keyword, and memory deallocation is done by [[Garbage Collector]] automatically
 
 **Rust**
-- Memory allocation with `Box::new()` function
+- Memory allocation with `Box::new()` function, and memory deallocation is done automatically using [[Rust Ownership#Box Deallocation Principle]]
 
 **C**
 - Memory allocation with `malloc()` function, and manual memory deallocation is with `free()` function
 
+>[!caution] Manual Memory Deallocation is Dangerous!
+>When we manually deallocated, and try to read data from the [[Pointer]], it will lead to undefined behaviors. Thus, violating [[Memory Safety]]
+>
+>Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details
 ### Text Segment
 - Stores program codes, **unchangeable**

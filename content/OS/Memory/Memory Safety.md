@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-01-13, 21:20
-Last Date: 2024-01-14T18:03:50+08:00
+Last Date: 2024-01-16T16:41:57+08:00
 References: 
 draft: 
 ---
@@ -14,6 +14,10 @@ draft:
 ---
 - Ensure a program get and only get expected data from [[Main Memory]] and [[Register]]
 - To achieve Memory Safety, we need to achieve the *absence* of *undefined behavior*
+
+>[!note]
+>It can be perfectly safe to have a pointer to freed memory in a [[Address Space#Stack Segment]] frame. The important thing is to not _use_ that pointer again, e.g. by reading it or freeing it.
+
 </br>
 
 ### Poor memory safety

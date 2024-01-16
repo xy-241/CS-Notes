@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - programming
+  - rust
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-01-14T18:44:39+08:00
+Last Date: 2024-01-16T16:21:04+08:00
 References: 
 draft: 
 ---
@@ -30,3 +31,7 @@ draft:
 - A [[Pointer]] without type aka a pre-defined size
 - Used when we aren't sure what the exact size of a variable like the return type of [[malloc]]
 - We should always try to cast it to a *type* whenever it is possible
+
+## Rust Box
+---
+- A smart [[Pointer]] that represents [[Rust Ownership]] of values allocated on the [[Address Space#Data Segment]]
