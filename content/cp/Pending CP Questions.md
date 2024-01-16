@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - cp
 Creation Date: 2023-12-31, 18:38
-Last Date: 2024-01-14T15:24:36+08:00
+Last Date: 2024-01-16T17:08:32+08:00
 References: 
 draft: 
 ---
@@ -20,6 +20,7 @@ draft:
 
 ## Greedy
 ---
+- [Very Different Array](https://codeforces.com/contest/1921/problem/D)
 - [Unnatural Language Processing](https://codeforces.com/contest/1915/problem/D)
 - [Watering an Array](https://codeforces.com/contest/1917/problem/C)
 - [Quests](https://codeforces.com/contest/1914/problem/C)

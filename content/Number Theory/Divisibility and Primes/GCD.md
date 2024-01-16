@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-18, 21:23
-Last Date: 2024-01-15T10:03:35+08:00
+Last Date: 2024-01-16T17:25:51+08:00
 References: 
 ---
 ## Abstract
@@ -15,15 +15,14 @@ References:
 - Also known as  *Greatest Common Factor(GCF)*
 - The largest positive [[Integer (整数)]] that is a factor of both two or more integers
 
+>[!tip] Zero
+>The GCD of `0` and another number is another number, since `0` divided by any number results in a remainder of `0`
 
----
-There are mainly 2 ways to find [[GCD]]
-
-### List Factors
+### Find GCD by Listing Factors
 - Write out the [[Prime Number (质数)]] of each [[Integer (整数)]] and identify the prime numbers that appears in both. The [[GCD]] is the product of the common set of prime numbers
 - *Not efficient*
 
-### Euclidean Algorithm
+### Find GCD by Euclidean Algorithm
 - The *efficient way* of finding [[GCD]]
 - To find GCD between 2 [[Integer (整数)]] - `a` & `b`, where `a>=b`. We can conclude that `a = bq + r`, where `q` and `r` are integers
 - The Euclidean Algorithm states that
