@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2024-01-14, 14:18
-Last Date: 2024-01-15T10:49:30+08:00
+Last Date: 2024-01-16T13:26:25+08:00
 References: 
 draft: 
 ---
@@ -16,7 +16,8 @@ draft:
 
 
 ### Congruence Modulo
-- Congruence means "the same"
+- **Congruence** means "the same"
+- **Congruence Modulo** basically means **two numbers** have the **same remainder** when divided by the **same [[Factor]]**
 - Represented with $\equiv$
 - $a \equiv b$ (mod $m$) is read as "$a$ is congruent to $b$ modulo $m$ 
 </br>

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-14T14:23:52+08:00
+Last Date: 2024-01-16T13:20:49+08:00
 References: 
 draft: 
 ---
@@ -16,12 +16,10 @@ draft:
 - Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation. Each row is a actual [[Set#Order n-tuples]] inside the relation
 
 
-
-## Binary Relation
----
+### Binary Relation
 - Let $x \in A, y \in B$, we say $x~R~y \leftrightarrow (x,y) \in R$
-## Inversion of Relation
----
+
+### Inversion of Relation
 - Basically reverse the order of elements of the [[Set#Order n-tuples]]
 $$
 R^{-1} = \{(y,x) \in B \times A : (x,y) \in R\}
@@ -126,7 +124,7 @@ $$
 $$
 
 ### N-ary Relation 
-- A [[Relation]] involving 2 [[Set]] is called *binary relation*, also known as 2-ary
+- A [[Relation]] involving 2 [[Set]] is called **binary relation**, also known as 2-ary
 - Ternary is 3-ary
 - Quaternary is 4-ary
 
