@@ -46,7 +46,7 @@ export default (() => {
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="CS Notes by Xinyang YU" />
+        <meta property="og:site_name" content="CS Notes by Xinyang YU" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         {cfg.baseUrl && <meta property="og:image" content={ogImagePath} />}
