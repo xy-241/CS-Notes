@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-07-24T18:28:00
-Last Date: 2024-01-01T23:12:17+08:00
-References:
+Last Date: 2024-01-17T00:21:47+08:00
+References: 
 ---
 ## Abstract
 ---
@@ -19,6 +19,14 @@ References:
 - Difficult to process by [[Routers]]
 - Can be solved by using [[IP Address]]
 
-## Domain Name
----
+### Domain Name
 - Examples are `notes.yxy.ninja` and  `google.com` etc
+
+### Canonical Hostname (CNAME)
+- A less readable [[Hostname]]
+
+> [!example]
+> My blog Cloudfront URL: ``d29nyp1p0lllzw.cloudfront.net``
+
+### Alias Hostname
+- A more readable [[Hostname]], usually aliasing to [[#Canonical Hostname (CNAME)]] or [[IP Address]]
