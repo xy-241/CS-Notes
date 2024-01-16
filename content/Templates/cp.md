@@ -6,8 +6,8 @@ Space:
 Time: 
 Appears On: 
 Brush: 1
-Difficulty: []
-Area: []
+Difficulty: 
+Area: 
 Reference 1: 
 Reference 2: 
 Author:
@@ -15,10 +15,11 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: "{{date}}, {{time}}"
-Last Date: 2024-01-08T13:16:37+08:00
+Last Date: 2024-01-17T01:02:51+08:00
 tags:
   - cp
 draft: 
+description: CP Solution
 ---
 [Original Problem]()
 ## Approach
