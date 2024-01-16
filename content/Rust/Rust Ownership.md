@@ -7,9 +7,11 @@ tags:
   - rust
   - OS
 Creation Date: 2024-01-13, 20:38
-Last Date: 2024-01-16T16:49:31+08:00
+Last Date: 2024-01-17T00:49:22+08:00
 References: 
 draft: 
+description: The way Rust manages heap memory (data segment) efficiently and safely
+site_name: CS Notes by xy241
 ---
 ## Abstract
 ---
