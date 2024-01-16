@@ -6,16 +6,22 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-10T13:12:02+08:00
-Last Date: 2024-01-16T21:05:27+08:00
+Last Date: 2024-01-16T21:07:49+08:00
 References: 
 ---
 ## Abstract
 ---
 - Basically a virtual machine 
 
-### Accessing Running on Private EC2
+
+## EC2 Secure Access
+---
+### Accessing Running Service on Private EC2
 - Refer to [[Port Forwarding#Port Forwarding into EC2 Bastion]]
 
+
+## EC2 Debugging
+---
 ### Obtain User Data in EC2
 ```bash
 sudo cat /var/lib/cloud/instance/user-data.txt
