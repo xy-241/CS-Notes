@@ -9,7 +9,7 @@ tags:
 Creation Date: 2023-10-20T14:13:00
 Last Date: 2024-01-17T19:05:12+08:00
 References: 
-description: Embark on a journey through file connections! Hard links save space by directly referencing data, while soft links navigate paths across different file territories. Explore this link magic using commands like ln and realpath for effortless file navigation.
+description: Hard links save space by directly referencing data, while soft links navigate paths across different file territories.
 ---
 ## Abstract
 ---
