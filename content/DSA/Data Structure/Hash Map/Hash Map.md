@@ -6,16 +6,18 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-28T13:12:00
-Last Date: 2023-12-27T10:43:18+08:00
+Last Date: 2024-01-17T23:40:08+08:00
 References: 
 ---
 ## Abstract
 ---
-- Make use of [[Hash Function]] to convert a key into an index which points to a [[#Bucket]]
+- Make use of [[Hash Function]] to convert a key into an index which points to a [[#Bucket]]. To avoid [[Hash Collision]], we want the hash function to evenly distribute the outputs
 - Decide if a key is inside the collection quickly
 - We are using space in exchange for better performance 
 - [[Hash Set]] is another variant
 - [LeetCode Questions](https://github.com/youngyangyang04/leetcode-master#%E5%93%88%E5%B8%8C%E8%A1%A8)
+
+
 
 ![[hash_map.png]]
 
@@ -64,4 +66,4 @@ for (String val: map.values()) {
 ## Terminologies 
 ---
 ### Bucket
-- A *memory space* in an [[Array]] that can be used to hold a value
+- A *memory space* for the output space of [[Hash Map]] that can be used to hold a value
