@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-15T17:24:46+08:00
+Last Date: 2024-01-17T19:25:08+08:00
 References: 
 ---
 
@@ -26,17 +26,25 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 
 ## 💻 Operating System
 ---
-- [Basis](https://notes.yxy.ninja/OS/)
+- [Intro](https://notes.yxy.ninja/OS/)
 - [Computer Booting](https://notes.yxy.ninja/OS/Booting/)
+</br>
+
 - [CPU](https://notes.yxy.ninja/OS/CPU/)
 - [File System](https://notes.yxy.ninja/OS/File-System/)
-- [Interrupt (中断)](https://notes.yxy.ninja/OS/Interrupts-(%E4%B8%AD%E6%96%AD)/)
 - [IO](https://notes.yxy.ninja/OS/IO/)
 - [Memory](https://notes.yxy.ninja/OS/Memory/)
+</br>
+
 - [Process (进程)](https://notes.yxy.ninja/OS/Process-(%E8%BF%9B%E7%A8%8B)/)
-- [Synchronization (同步)](https://notes.yxy.ninja/OS/Synchronization-(%E5%90%8C%E6%AD%A5)/)
-- [System-Calls (系统调用)](https://notes.yxy.ninja/OS/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/)
 - [Thread (线程)](https://notes.yxy.ninja/OS/Thread-(%E7%BA%BF%E7%A8%8B)/)
+- [Synchronization (同步)](https://notes.yxy.ninja/OS/Synchronization-(%E5%90%8C%E6%AD%A5)/)
+</br>
+
+- [Interrupt (中断)](https://notes.yxy.ninja/OS/Interrupts-(%E4%B8%AD%E6%96%AD)/)
+- [System-Calls (系统调用)](https://notes.yxy.ninja/OS/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/)
+</br>
+
 - [UNIX vs Linux](https://notes.yxy.ninja/OS/UNIX-vs-Linux/)
 - [MISC](https://notes.yxy.ninja/OS/Terminologies/)
 
@@ -45,16 +53,24 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 ---
 - [Number System](https://notes.yxy.ninja/Computer-Organisation/Number-System/)
 - [Processor](https://notes.yxy.ninja/Computer-Organisation/Processor/)
+</br>
+
 - [Instruction Set Architecture (ISA)](https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/)
 - [MIPS](https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/MIPS/)
 - [RISCV](https://notes.yxy.ninja/Computer-Organisation/Instruction-Set-Architecture-(ISA)/RISCV/)
+</br>
+
 - [Pipeline](https://notes.yxy.ninja/Computer-Organisation/Pipeline/)
 - [Pipeline Branching](https://notes.yxy.ninja/Computer-Organisation/Pipeline-Branching/)
 - [Pipeline Hazard](https://notes.yxy.ninja/Computer-Organisation/Pipeline-Hazard/)
+</br>
+
 - [Combination Circuit](https://notes.yxy.ninja/Computer-Organisation/Combination-Circuit/)
 - [Synchronous Sequential Circuit](https://notes.yxy.ninja/Computer-Organisation/Synchronous-Sequential-Circuit/)
 - [Asynchronous Sequential Circuits](https://notes.yxy.ninja/Computer-Organisation/Asynchronous-Sequential-Circuits/)
 - [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
+</br>
+
 - [MISC](https://notes.yxy.ninja/Computer-Organisation/Terminologies/)
 
 ## 🧠 Data Structure & Algorithm
