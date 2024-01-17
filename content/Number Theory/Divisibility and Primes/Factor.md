@@ -6,14 +6,15 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2024-01-15, 10:02
-Last Date: 2024-01-15T10:35:34+08:00
+Last Date: 2024-01-17T16:32:03+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
-- Also known as *divisor*
+- Also known as **divisor**
 - A number that divides another number without leaving a remainder
+- `1` is a factor for all [[Integer (整数)]]
 
 ### Factor Maximum Value
 - [[Factor]] maximum value `<=` square root of a given number, below is a visualisation. It is also know as **Trial Division Method**
