@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-07-14T20:53:45+08:00
-Last Date: 2024-01-12T16:18:52+08:00
+Last Date: 2024-01-17T17:34:09+08:00
 References: 
 ---
 ## Abstract
@@ -19,7 +19,7 @@ References:
 ## Useful Commands
 ---
 **`read`**
-- BASH builtin for retrieving data from standard input
+- **BASH**, not for **ZSH** builtin for retrieving data from standard input
 ```bash
 # Display a prompt before the input:
 read -p "Enter your input here: " variable

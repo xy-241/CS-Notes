@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - bash
 Creation Date: 2024-01-10, 15:57
-Last Date: 2024-01-12T16:34:48+08:00
+Last Date: 2024-01-17T17:30:12+08:00
 References: 
 draft: 
 ---
@@ -68,6 +68,10 @@ fi
 - For return value, use `echo` instead
 - And use `$(<BASH_FUNCTION_HERE>)` command substitution to capture the return value
 
+## Keep the Changes in Current Shell
+---
+- By default, the temporary changes like setting [[Environment Variable]] are going to be removed once the bash script finishes
+- We can run the bash script with `source` which executes commands from a bash script in the current shell, so temporary changes are preserved after the bash script finishes running
 ## References
 ---
 - Solving the Dotfiles Problem (And Learning Bash)
