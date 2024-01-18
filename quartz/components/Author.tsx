@@ -8,6 +8,7 @@ import { JSXInternal } from "preact/src/jsx"
 
 const profilePhotos: Record<string, string> = {
   "Xinyang YU": "https://github.com/xy-241.png",
+  "Yufan Zhu": "https://github.com/Yufannnn.png",
   "default": "https://imgflip.com/s/meme/Doge.jpg",
 }
 function createAuthorElement(author: string, link: string) {

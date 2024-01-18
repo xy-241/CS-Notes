@@ -6,8 +6,10 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-05T10:27:00
-Last Date: 2023-12-21T11:09:39+08:00
+Last Date: 2024-01-18T16:16:36+08:00
 References: 
+title: "Mastering Datadog APM in ECS Fargate: A Comprehensive Guide for Seamless AWS Integration"
+description: "Unlock the full potential of Datadog APM for Application Performance Monitoring (APM) with our comprehensive guide on setting up Datadog APM in ECS Fargate. Whitelist outbound traffic, integrate AWS Firelens, and deploy the Datadog Agent Sidecar effortlessly. Optimize your ECS Fargate setup with Terraform sample codes and fine-tune Datadog Agent settings. Dive into seamless monitoring with Datadog and elevate your AWS integration game. #APM #Datadog #ECSFargate #AWSIntegration"
 ---
 
 ## Abstract
