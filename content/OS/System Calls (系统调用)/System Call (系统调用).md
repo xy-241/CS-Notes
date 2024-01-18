@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-01-18T18:18:32+08:00
+Last Date: 2024-01-18T18:45:31+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
@@ -24,7 +24,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 ## How a system call is triggered
 ---
-1. Calling program pushes parameters of the system call to [[Stack]] (Step 1-3)
+1. Calling program pushes parameters of the system call to [[Address Space#Stack Segment]] (Step 1-3)
 2. Trigger an [[Instruction]] to trigger the corresponding [[Library Call]], the same instruction is used to trigger other library calls (Step 4, where the actual library call is happening)
 	1. Library Call puts Syscall Interrupt Number in  a place where [[OS]] expects it, such as a [[Register]] (Step 5)
 3. Execute [[Trap Interrupt (陷入)]] (Step 6)
@@ -35,7 +35,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 >- The System Call (系统调用) may block the caller (in this case Library Call), preventing it from continuing
 >- For example, keyboard reads system call. When system call tries to read but nothing has been typed yet, the caller has to be blocked
 8. Then, library call returns to the user program  (Step 10)
-9. To finish the job, the user program has to clean up the [[Address Space#Stack Segment]] by incrementing the [[Register#Stack Pointer]] exactly enough to remove the parameters pushed before the making the System Call (系统调用) (Step 11) (Stack Segment grows downwards, so to remove *Stack frame*, we increment the *Stack Pointer*)
+9. To finish the job, the user program has to clean up the Stack Segment by incrementing the [[Register#Stack Pointer]] exactly enough to remove the parameters pushed before the making the System Call (系统调用) (Step 11) (Stack Segment grows downwards, so to remove *Stack frame*, we increment the [[Register#Stack Pointer]])
 ![[system_call_triggering_process.png]]
 
 

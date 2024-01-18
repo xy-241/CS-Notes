@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - bash
 Creation Date: 2024-01-10, 15:57
-Last Date: 2024-01-17T17:30:12+08:00
+Last Date: 2024-01-18T18:40:29+08:00
 References: 
 draft: 
 ---
@@ -70,7 +70,7 @@ fi
 
 ## Keep the Changes in Current Shell
 ---
-- By default, the temporary changes like setting [[Environment Variable]] are going to be removed once the bash script finishes
+- By default, the temporary changes like setting [[Environment Variable]] or directory changes is going to be removed once the bash script finishes
 - We can run the bash script with `source` which executes commands from a bash script in the current shell, so temporary changes are preserved after the bash script finishes running
 ## References
 ---
