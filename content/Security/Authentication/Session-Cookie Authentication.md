@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-12-12T11:49:00+08:00
-Last Date: 2024-01-02T16:14:24+08:00
+Last Date: 2024-01-18T11:50:36+08:00
 References: 
 ---
 ## Abstract
 ---
-![[session-cookie_authentication.png]]
+![[session-cookie_authentication.png|500]]
 
 - Addresses [[HTTP Basic Authentication#Cons]]. A *session ID* is generated to track the user's status during their visit
 - The session ID is recorded both [[Host#Server]] and in the [[Host#Client]]
