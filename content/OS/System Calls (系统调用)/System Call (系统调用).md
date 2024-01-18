@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-01-18T18:45:31+08:00
+Last Date: 2024-01-18T18:54:00+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---

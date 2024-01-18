@@ -6,9 +6,10 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2024-01-17, 00:10
-Last Date: 2024-01-17T00:29:37+08:00
+Last Date: 2024-01-18T21:06:19+08:00
 References: 
 draft: 
+description: Dive into DNS records, the powerful mappings that connect hostnames to IP addresses, email servers, and more. ️ Explore A, CNAME, MX, and NS records, and learn how they keep your online experience seamless.
 ---
 ## Abstract
 ---
@@ -19,16 +20,23 @@ draft:
 - Standard [[Hostname#Domain Name]] to [[IP Address]] mapping
 
 ### CNAME Record
+![[cname_record.png|500]]
 - Symbol is `CNAME`
-- [[Hostname#Alias Hostname]] to [[Hostname#Canonical Hostname (CNAME)]] mapping
+- Powers **Host Aliasing** which allows a [[Hostname#Alias Hostname]] to be mapped to [[Hostname#Canonical Hostname (CNAME)]]
+- In the above example, all requests go to`notes.yxy.ninja` are handled by servers under `notes.pages.dev`
 
 ### MX Record
+![[MX_Record.png|500]]
 - Symbol ``MX`` which stands for **Mail Exchanger**
-- [[Hostname#Canonical Hostname (CNAME)]] of [[Mail Server]] to [[Hostname#Alias Hostname]]
-</br>
+- Powers **Mail Server Aliasing** which allow root [[Hostname#Domain Name]] to be mapped to [[E-mail Server]]'s [[Hostname]]
+- In this above example, all the emails sent to `hello@yxy.ninja` is handled by the email servers behind `mail.tutanota.de`
 
-- Allows [[Mail Server]]  endpoint to be mapped the root [[Hostname#Domain Name]]
 
 ### NS Record
 - Symbol is ``NS`` which stands for **Name Server** 
 - [[Hostname#Domain Name]] to [[Hostname]] of the [[DNS Server#Authoritative DNS Server]]
+
+
+## References
+---
+- [DNS record types · Cloudflare DNS docs](https://developers.cloudflare.com/dns/manage-dns-records/reference/dns-record-types/)
