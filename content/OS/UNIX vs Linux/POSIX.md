@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-03T16:14:54+08:00
-Last Date: 2024-01-09T19:13:39+08:00
+Last Date: 2024-01-18T15:35:39+08:00
 References: 
+description: "Exploring POSIX: A Standard Interface for Operating Systems"
 ---
 ## Abstract
 ---

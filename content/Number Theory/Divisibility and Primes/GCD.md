@@ -6,14 +6,15 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-18, 21:23
-Last Date: 2024-01-17T16:35:22+08:00
+Last Date: 2024-01-18T14:30:14+08:00
 References: 
 ---
 ## Abstract
 ---
 - Stands for **Greatest Common Divisor**
 - Also known as  **Greatest Common Factor(GCF)**
-- The largest positive [[Integer (整数)]] that is a [[Factor]] of both two or more integers
+- The largest positive [[Integer (整数)]] that is a [[Factor]] for both two or more integers
+- Basically a product of all the **common [[Prime Number (质数)]]** factor in the given set of integers
 
 >[!tip] Zero
 >The GCD of `0` and another number is another number, since `0` divided by any number results in a remainder of `0`
