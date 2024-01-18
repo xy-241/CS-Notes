@@ -6,17 +6,22 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-11T19:15:28+08:00
-Last Date: 2024-01-03T15:04:49+08:00
+Last Date: 2024-01-18T18:09:12+08:00
 References: 
+description: Unlock the power of multi-programming and supercharge your computer's performance!
 ---
 ## Abstract
 ---
 - Ability of computer to store multiple program in [[Main Memory]] at the same time & switch between them quickly 
-- Focus on improving the [[CPU]] utilisation 
-- [[CPU]] switches rapidly from one [[Process]] to another
+- Focus on improving the [[CPU]] utilisation since [[Process]] will be idle for a relative long time when interacting with [[OS/IO/IO Device|IO Device]]
+</br>
+
+- [[CPU]] switches rapidly from one Process to another
 - Allow a user to run multiple programs at the same time with a single [[CPU]]
-- Not all Multi-Programming systems are [[Multi-tasking]]
-- More suitable for *CPU Bounded* tasks
+</br>
+
+- **Not all Multi-Programming** systems are [[Multi-tasking]]
+- More suitable for **CPU Bounded** tasks
 
 ## Benefits
 ---

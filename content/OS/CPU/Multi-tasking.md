@@ -6,17 +6,18 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-24T12:23:00
-Last Date: 2024-01-07T17:52:43+08:00
+Last Date: 2024-01-18T18:11:08+08:00
+description: "Unlock the Power of Multitasking in Computer Science: Explore the intricacies of Corporative and Preemptive Multitasking, extending the capabilities of traditional multi-programming."
 ---
 ## Abstract
 ---
-- Ability of computer executing multiple tasks at the same time by giving each [[Process]] a very small slice of [[CPU]] time
 - A logical extension of [[Multi-programming]]
+- Ability of computer executing multiple tasks at the same time by giving each [[Process]] a very small slice of [[CPU]] time
+</br>
+
 - Focus on improving user experience 
 - Can be implemented on computers that have a single([[#Time-Sharing]]) or multiple CPU
-
-## 2 Approaches
-### Corporative
+### Corporative Multitasking
 - Rather than [[OS]] decides when to preempt [[Process]]. Process gives up [[CPU]] and let other Process to run
 >[!caution] Process can hog to CPU forever, modern [[OS]] moves to [[#Preemptive Multitasking]]
 

@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-01-14T18:00:29+08:00
+Last Date: 2024-01-18T18:25:57+08:00
 References: 
+description: Dive into the heart of your operating system and discover how kernels manage hardware, allocate resources, and keep your system running smoothly. Explore the trade-offs between microkernels and monolithic kernels, and learn about preemptive kernels that ensure a responsive user experience.
 ---
 ## Abstract
 ---
@@ -21,7 +22,9 @@ References:
 ## Kernel Architecture
 ---
 ### Micro Kernel Architecture 
-- [[Kernel]] only handles critical part of the system like [[Inter-Process Communication (IPC)]]. The rest runs in [[User Space]]. Used by [[MINIX]]
+- [[Kernel]] only handles critical part of the system. The rest runs in [[User Space]]
+- Different kernel components communicate with each other via  [[Inter-Process Communication (IPC)]]
+- Used by [[MINIX]]
 ![[microkernel.png]]
 
 >[!success] So if one of in the kernel [[Process]] crashes, it doesn't crash the entire system 
@@ -38,7 +41,7 @@ References:
 
 >[!caution]  But having thousands of Procedures that can call each other without restriction may also lead to a system that is unwieldy and difficult to understand
 
->[!caution] A crash in any of these [[Procedures]] will take down the entire Kernel
+>[!caution] A crash in any of these Procedures will take down the entire Kernel
 
 ## Terminologies 
 ---

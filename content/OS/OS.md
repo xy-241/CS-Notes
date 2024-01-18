@@ -6,14 +6,16 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-01-03T15:44:09+08:00
+Last Date: 2024-01-18T17:54:02+08:00
 References: 
 ---
 ## Abstract
 ---
-1. Provide user as an *extended machine*
-2. Resource Manager for resources like [[IO Device]] & [[Main Memory]] etc
 - Consists of [[Kernel]] and [[OS System Program]]
+- 2 main functionalities
+	1. Provide user like you and me features to interact with the hardware like browsing the web
+	2. Resource Manager for resources like [[IO Device]] & [[Main Memory]] etc
+
 
 ## Booting OS
 ---
