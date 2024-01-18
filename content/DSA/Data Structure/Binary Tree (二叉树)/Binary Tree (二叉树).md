@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-03T17:32:00
-Last Date: 2023-12-14T20:12:37+08:00
+Last Date: 2024-01-18T16:32:13+08:00
 ---
 ## Abstract
 ---
@@ -53,7 +53,7 @@ Last Date: 2023-12-14T20:12:37+08:00
 - Node without any child nodes
 - Its 2 pointers point to ``null``
 ### Edge
-- The link created by **Memory Pointer** that links up 2 nodes
+- The link created by [[Pointer]] that links up 2 nodes
 ### Level
 - Increments from the top to bottom of the Binary Tree
 - [[#Root Node]] is at level 1
@@ -71,9 +71,9 @@ Last Date: 2023-12-14T20:12:37+08:00
 > In some questions or textbook, [[#Height]] and [[#Depth]] are defined based on the number of nodes traversed instead of [[#Edge]]. In this case, we need to +1
 
 ### Balance Factor
-- The difference in [[#Height]] between the left and right subtrees of a node
+- The **difference** in [[#Height]] between the left and right subtrees of **a node**
 - A measure of how unbalanced the tree is at that node
 ### Height-Balanced
-- For all nodes, [[#Balance Factor]] should be no greater than 1 or smaller than -1
+- For **all nodes**, [[#Balance Factor]] should be no greater than 1 or smaller than -1
 - This means that the tree is relatively evenly distributed, and no one subtree is significantly taller than the others
 - More efficient for search, insertion, and deletion operations
