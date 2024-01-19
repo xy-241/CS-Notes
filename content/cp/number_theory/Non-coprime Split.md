@@ -40,7 +40,7 @@ draft:
 The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(1)
 - *Ignore input size & language dependent space*
-- We aren't creating any objects on the [[Address Space#Data Segment]]
+- We aren't creating any objects on the [[Address Space#Heap Segment]]
 ### Time - O(nlogn)
 - Assume `r-l` is `n`, [[Factor#Find Minimal Greater-than-One Factor]] is `O(logn)`, thus overall time complexity is `O(nlogn)`
  

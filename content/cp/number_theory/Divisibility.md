@@ -53,7 +53,7 @@ $$
 The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(1)
 - *Ignore input size & language dependent space*
-- Not using any space on the [[Address Space#Data Segment]]
+- Not using any space on the [[Address Space#Heap Segment]]
 ### Time - O(1)
 - Regardless the value of n, we just need to perform a simple division to obtain the answer
  

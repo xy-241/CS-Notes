@@ -34,4 +34,4 @@ draft:
 
 ## Rust Box
 ---
-- A smart [[Pointer]] that represents [[Rust Ownership]] of values allocated on the [[Address Space#Data Segment]]
+- A smart [[Pointer]] that represents [[Rust Ownership]] of values allocated on the [[Address Space#Heap Segment]]

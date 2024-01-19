@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-12-26, 14:54
-Last Date: 2023-12-26T23:30:10+08:00
+Last Date: 2024-01-19T17:10:39+08:00
 tags:
   - cp
 draft: 
@@ -29,7 +29,7 @@ draft:
 ## Idea
 ---
 - The idea here is that the perimeter of a rectangle must be *an even number* `2k`, where `k` is an [[Integer (整数)]]. Because there are 2 pairs of `height+width` which is `k` to fit into the definition of even number
-- Thus, we can return `0` straight 
+- Thus, we can return `0` straight if `n%2 == 1`
 - Otherwise, we can obtain `k` by dividing the given `n` by 2
 - Remember `k` is `height+width`, so if `k` is `10`, the possible combination of `height` and `width` is `(1,9)`, `(2,8)`, `(3,7)`, `(4,6)` and `(5,5)`
 - We not including `(6,4)` because it is same as `(6,4)`. The order doesn't matter
@@ -43,7 +43,7 @@ draft:
 The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(1)
 - *Ignore input size & language dependent space*
-- We aren't creating any objects on the [[Address Space#Data Segment]]
+- We aren't creating any objects on the [[Address Space#Heap Segment]]
 ### Time - O(1)
 - No looping is needed to loop through all possible pairs of `height` and `width` by leveraging on the beauty of counting 
  

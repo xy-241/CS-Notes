@@ -39,7 +39,7 @@ tags:
 The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(1)
 - *Ignore input size & language dependent space*
-- Not creating any objects on the [[Address Space#Data Segment]]
+- Not creating any objects on the [[Address Space#Heap Segment]]
 ### Time - O(?)
 - I am not too sure, requires more readings on the time complexity of finding the next prime number
 - But the solution takes `590 ms` to complete on codeforces

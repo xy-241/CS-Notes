@@ -22,7 +22,7 @@ References:
 
 
 ## Resource Demanding
-- Comes with cost of allocating [[Address Space#Data Segment]] for OOP Object & [[Garbage Collector | collecting garbage]] afterward
+- Comes with cost of allocating [[Address Space#Heap Segment]] for OOP Object & [[Garbage Collector | collecting garbage]] afterward
 - Less efficient than Primitive Datatype
 ![[wrapper_class_benchmarking.png]]
 

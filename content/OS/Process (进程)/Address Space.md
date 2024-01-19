@@ -9,25 +9,59 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-18T17:47:07+08:00
+Last Date: 2024-01-19T18:12:51+08:00
 References: 
 description: Stack (automatic memory for function variables), Data (manual memory managed with brk()), and Text (stores unchangeable program codes). XV6-RISCV kernel code for Stack implementation and discusses memory management in Java, Rust, and C.
 ---
 ## Abstract
 ---
-![[address_space.png]]
+![[address_space.png|300]]
 
 - A list of memory locations from *0* to some maximum ([[Virtual Memory]]), which [[Process]] can read & write
-- 3 Components - [[#Stack Segment]], [[#Data Segment]] and  [[#Text Segment]]
+- 4 main components
+	1. [[#Text Segment]] (the orange block shown above)
+	2. [[#Data Segment]]
+	3. [[#Heap Segment]]
+	4. [[#Stack Segment]]
 
-### Stack Segment
-- [[Stack]] structure
-- Grows downwards
-- The expansion and shrinking are done automatically
-- Made up of Stack Frames which are associated with a specific function
+### Heap Segment
+- **Dynamically allocated region** where the [[Process]] can create new data structures as needed
+- **Grows** and **shrinks** as the **process** allocates and deallocates memory
+
+- Grow upwards
+- Region of [[Virtual Memory]] where data can live indefinitely even when function returns
+- Expansion is done explicitly using [[System Call (系统调用)]] `brk()` or higher level [[Library Call]] during **program runtime**
 </br>
 
-- Can be used to store function variables
+- Require manual memory management - process of allocating memory and deallocating memory
+- When assigning one variable to another variable, data is **not duplicated**, instead the [[Pointer]] to the data is duplicated and assigned
+- A nice visualisation on memory allocation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#boxes-live-in-the-heap)
+
+**Java**
+- Memory allocation with `new` keyword, and memory deallocation is done by [[Garbage Collector]] automatically
+
+**Rust**
+- Memory allocation with `Box::new()` function, and memory deallocation is done automatically using [[Rust Ownership#Box Deallocation Principle]]
+
+**C**
+- Memory allocation with `malloc()` function, and manual memory deallocation is with `free()` function
+
+>[!caution] Manual Memory Deallocation is Dangerous!
+>When we manually deallocated, and try to read data from the [[Pointer]], it will lead to undefined behaviors. Thus, violating [[Memory Safety]]
+>
+>Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details
+
+
+### Stack Segment
+- **Dynamically allocated region** used to store **function calls**, local variables, and temporary data etc
+- Made up of **Stack Frames** which are associated with a specific function
+- **Grows** as functions are called and **shrinks** as they return
+</br>
+
+- [[Stack]] structure
+- Grows downwards
+</br>
+
 - When assigning one variable to another variable, data is **duplicated**
 - For example, `a=1` `b=a`, the value `1` is duplicated and assigned to `b`
 - A nice visualisation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#variables-live-in-the-stack) 
@@ -85,27 +119,13 @@ spin:
 - We load the base address of the *stack segment*
 - Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because *stack segment grows downwards* when we are adding values to the stack
 ### Data Segment
-- Grow upwards
-- Region of [[Virtual Memory]] where data can live indefinitely even when function returns
-- Expansion is done explicitly using [[System Call (系统调用)]] `brk()` or higher level [[Library Call]]
-</br>
+- This region stores **global** and **static variables** and **constants** used by the program, pre-defined before the execution of the program
+- Can be both read and write, allowing the [[Process]] to manipulate the data as needed
 
-- Require manual memory management - process of allocating memory and deallocating memory
-- When assigning one variable to another variable, data is **not duplicated**, instead the [[Pointer]] to the data is duplicated and assigned
-- A nice visualisation on memory allocation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#boxes-live-in-the-heap)
-
-**Java**
-- Memory allocation with `new` keyword, and memory deallocation is done by [[Garbage Collector]] automatically
-
-**Rust**
-- Memory allocation with `Box::new()` function, and memory deallocation is done automatically using [[Rust Ownership#Box Deallocation Principle]]
-
-**C**
-- Memory allocation with `malloc()` function, and manual memory deallocation is with `free()` function
-
->[!caution] Manual Memory Deallocation is Dangerous!
->When we manually deallocated, and try to read data from the [[Pointer]], it will lead to undefined behaviors. Thus, violating [[Memory Safety]]
->
->Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details
 ### Text Segment
 - Stores program codes, **unchangeable**
+
+
+## References
+---
+- [Dive Into Systems - Virtual Memory](https://diveintosystems.org/book/C13-OS/vm.html)

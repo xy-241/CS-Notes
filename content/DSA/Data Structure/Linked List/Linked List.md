@@ -64,7 +64,7 @@ public void printLinkedList(ListNode node) {
 - O(1) to Delete 
 	- we only need the new node's previous node and next node, make the corresponding pointer changes
 >[!caution] [[Memory Leak]]
->- For languages without [[Garbage Collector]] like C, we need to manually release it from the [[Address Space#Data Segment]] occupied by the deleted node to prevent Memory Leak
+>- For languages without [[Garbage Collector]] like C, we need to manually release it from the [[Address Space#Heap Segment]] occupied by the deleted node to prevent Memory Leak
 
 - O(n) to Search for a value
 - O(n) to access any of the elements

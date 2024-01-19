@@ -28,5 +28,5 @@ References:
 ### Immutable Key
 
 - Because if the key changes, then its hash value will change, and we will lose the mapping between the key & the bucket index
-- Objects created on [[Address Space#Data Segment]] can be key, because we use its [[Memory Address]] to generate the hash
+	- Objects created on [[Address Space#Heap Segment]] can be key, because we use its [[Memory Address]] to generate the hash
 

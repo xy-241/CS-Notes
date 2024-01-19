@@ -41,7 +41,7 @@ draft:
 The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(1)
 - *Ignore input size & language dependent space*
-- We aren't creating anything on [[Address Space#Data Segment]]
+- We aren't creating anything on [[Address Space#Heap Segment]]
 ### Time - O(n logn)
 - We need to loop through each element to find the difference which is `O(n)`, and perform `gcd()` on each element pair which is `O(logn)`. So overall is `O(n logn)``
  
