@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2024-01-12, 00:12
-Last Date: 2024-01-12T00:28:21+08:00
+Last Date: 2024-01-19T16:41:37+08:00
 References: 
 draft: 
 ---
@@ -29,6 +29,7 @@ syntax enable
 set number
 set relativenumber
 set mouse=a
+set autoindent
 
 " Good to have
 set expandtab
