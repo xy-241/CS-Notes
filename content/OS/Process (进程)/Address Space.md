@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-19T18:12:51+08:00
+Last Date: 2024-01-19T19:12:54+08:00
 References: 
 description: Stack (automatic memory for function variables), Data (manual memory managed with brk()), and Text (stores unchangeable program codes). XV6-RISCV kernel code for Stack implementation and discusses memory management in Java, Rust, and C.
 ---
@@ -17,7 +17,7 @@ description: Stack (automatic memory for function variables), Data (manual memor
 ---
 ![[address_space.png|300]]
 
-- A list of memory locations from *0* to some maximum ([[Virtual Memory]]), which [[Process]] can read & write
+- A list of memory locations from **0** to **some maximum** ([[Virtual Memory]]), which [[Process]] can access
 - 4 main components
 	1. [[#Text Segment]] (the orange block shown above)
 	2. [[#Data Segment]]
