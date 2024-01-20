@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-20T18:40:21+08:00
+Last Date: 2024-01-20T22:17:30+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -29,7 +29,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 - Grow upwards
 - Region of [[Virtual Memory]] where data can live indefinitely even when function returns
-- Expansion is done explicitly using [[System Call (系统调用)]] like `brk()` in [[OS]] that follow [[POSIX]] or higher level [[Library Call]] during **program runtime**
+- Expansion is done explicitly during **program runtime** using [[System Call (系统调用)]] like `brk()` in [[OS]] that follow [[POSIX]] or higher level [[Library Call]] 
 </br>
 
 - Require manual memory management from the process - process of allocating memory and deallocating memory. See language examples below
