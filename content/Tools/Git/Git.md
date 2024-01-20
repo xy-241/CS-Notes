@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - git
 Creation Date: 2023-12-14T18:16:44+08:00
-Last Date: 2024-01-19T21:49:33+08:00
+Last Date: 2024-01-19T22:21:20+08:00
 References: 
 ---
 ## Abstract
@@ -40,7 +40,7 @@ git merge <FEATURE_BRANCH>
 ---
 ### Setup a Private Email in Git with Github
 - Don't expose you personal email, while still get emails sent to your personal email!
-- Go to [https://github.com/settings/emails](https://github.com/settings/emails), scroll down and config your as shown in the picture below
+- Go to https://github.com/settings/emails, scroll down and config your as shown in the picture below
 ![[github_private_email.png|700]]
 - Don't forget to change your local git user email with `git config --global user.email "YOUR_PRIVATE_GITHUB_EMAIL"`
 - More info refer to [Setting your commit email address - GitHub Docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address)
