@@ -10,7 +10,7 @@ Creation Date: 2024-01-13, 20:38
 Last Date: 2024-01-19T18:29:10+08:00
 References: 
 draft: 
-description: The way Rust manages heap memory (data segment) efficiently and safely
+description: The way Rust manages heap memory efficiently and safely
 site_name: CS Notes by xy241
 ---
 ## Abstract
