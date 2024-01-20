@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-20T17:27:33+08:00
+Last Date: 2024-01-20T17:34:42+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -17,12 +17,11 @@ description: Stack (automatic memory management for function variables), Heap (d
 ---
 ![[address_space.png|300]]
 
-- A list of memory locations from **0** to **some maximum** ([[Virtual Memory]]), which [[Process]] can access
+- A list of memory locations from **0** to **some maximum**, which [[Process]] can access
+- Address space is powered by [[Virtual Memory]], so everything in address space is dedicated to that particular process
 - 4 main components
-	1. [[#Text Segment]] (the orange block shown above)
-	2. [[#Data Segment]]
-	3. [[#Heap Segment]]
-	4. [[#Stack Segment]]
+	- Data in [[#Text Segment]] (the **orange** block shown above) and [[#Data Segment]] (the **red** block shown above) are shipped with the program
+	- Data in [[#Heap Segment]] (the **blue** block shown above) and [[#Stack Segment]] (the **green** block shown above) are allocated dynamically when the program is running
 
 ### Heap Segment
 - **Dynamically allocated region** where the [[Process]] can create new data structures as needed
@@ -123,7 +122,7 @@ spin:
 - Can be both read and write, allowing the [[Process]] to manipulate the data as needed
 
 ### Text Segment
-- Stores program codes, **unchangeable**
+- Stores program codes, **unchangeable**, **read-only**
 
 
 ## References
