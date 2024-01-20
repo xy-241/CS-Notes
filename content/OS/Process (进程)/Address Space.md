@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-20T18:01:24+08:00
+Last Date: 2024-01-20T18:19:59+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -64,6 +64,11 @@ description: Stack (automatic memory management for function variables), Heap (d
 - When assigning one variable to another variable, data is **duplicated**
 - For example, `a=1` `b=a`, the value `1` is duplicated and assigned to `b`
 - A nice visualisation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#variables-live-in-the-stack) 
+
+>[!success] Data management in Stack Segment is more efficient than Heap Segment
+>1. Stack memory is allocated and deallocated in a **Last In, First Out (LIFO) manner**, making it faster than heap memory. This is because all it needs to do is move the [[Register#Stack Pointer]] up or down, while heap memory requires more complex memory management.
+>2. No overhead of complex [[Synchronization (同步)]], unlike data inside heap segment, data inside the stack segment is usually dedicated to that particular [[Process]] or [[Thread]]. Thus, manipulation of data inside the stack segment doesn't require the complex synchronisation 
+
 #### XV6-RISCV Kernel Stack
 ```c {13}
 // xv6-riscv kernel codes, start.c

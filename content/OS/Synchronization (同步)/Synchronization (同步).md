@@ -6,13 +6,18 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-16T09:30:00
-Last Date: 2023-11-28T20:32:59+08:00
-References:
+Last Date: 2024-01-20T18:14:50+08:00
+References: 
 ---
 ## Abstract
 ---
-- Coordination of execution of multiple [[Process]] in a [[Multi-process]] system to ensure that they access shared resources in a controlled and predictable manner
-- We can use tools like [[Semaphore (信号量)]]
+- Coordination of execution of multiple [[Process]] or [[Thread]] in a system to ensure that they access shared resources in a controlled and predictable manner 
+- We can use tools like 
+	- [[Barrier (屏障)]]
+	- [[Condition Variable (条件变量)]]
+	- [[Mutex (互斥体)]]
+	- [[Semaphore (信号量)]]
+	- [[Spinlock (自旋锁)]]
 
 
 
