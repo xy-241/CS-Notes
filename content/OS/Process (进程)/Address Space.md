@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-20T17:34:42+08:00
+Last Date: 2024-01-20T18:01:24+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -29,7 +29,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 - Grow upwards
 - Region of [[Virtual Memory]] where data can live indefinitely even when function returns
-- Expansion is done explicitly using [[System Call (系统调用)]] `brk()` or higher level [[Library Call]] during **program runtime**
+- Expansion is done explicitly using [[System Call (系统调用)]] like `brk()` in [[OS]] that follow [[POSIX]] or higher level [[Library Call]] during **program runtime**
 </br>
 
 - Require manual memory management from the process - process of allocating memory and deallocating memory. See language examples below
@@ -43,10 +43,10 @@ description: Stack (automatic memory management for function variables), Heap (d
 - Memory allocation with `Box::new()` function, and memory deallocation is done automatically using [[Rust Ownership#Box Deallocation Principle]]
 
 **C**
-- Memory allocation with `malloc()` function, and manual memory deallocation is with `free()` function
+- Memory allocation with `malloc()` function, and manual memory deallocation is done with `free()` function
 
 >[!caution] Manual Memory Deallocation is Dangerous!
->When we manually deallocated, and try to read data from the [[Pointer]], it will lead to undefined behaviors. Thus, violating [[Memory Safety]]
+>After we manually deallocated the heap memory associated with a [[Pointer]], then try to read data from the same pointer, it will lead to undefined behaviours. Thus, resulting in [[Memory Safety#Poor memory safety]]
 >
 >Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details
 
@@ -128,3 +128,4 @@ spin:
 ## References
 ---
 - [Dive Into Systems - Virtual Memory](https://diveintosystems.org/book/C13-OS/vm.html)
+- [What is Ownership? - The Rust Programming Language](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html)

@@ -7,7 +7,7 @@ tags:
   - rust
   - OS
 Creation Date: 2024-01-13, 20:38
-Last Date: 2024-01-19T18:29:10+08:00
+Last Date: 2024-01-20T18:03:05+08:00
 References: 
 draft: 
 description: The way Rust manages heap memory efficiently and safely
@@ -48,3 +48,8 @@ site_name: CS Notes by xy241
 - In some use cases, we still want to keep a copy of original data in the [[Address Space#Heap Segment]]
 - We can do it by calling `clone()` on the [[Pointer#Rust Box]] which create a new copy of original data in the heap segment, and we can assign the ownership of this new copy to other parts of the program to manipulate, and the ownership of the original piece of data is left untouched
 - Refer to [Cloning Avoids Moves](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#cloning-avoids-moves)
+
+
+## Reference
+---
+- [What is Ownership? - The Rust Programming Language](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html)
