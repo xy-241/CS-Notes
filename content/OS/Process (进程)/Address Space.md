@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-20T17:25:10+08:00
+Last Date: 2024-01-20T17:27:33+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -33,7 +33,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 - Expansion is done explicitly using [[System Call (系统调用)]] `brk()` or higher level [[Library Call]] during **program runtime**
 </br>
 
-- Require manual memory management from the process - process of allocating memory and deallocating memory
+- Require manual memory management from the process - process of allocating memory and deallocating memory. See language examples below
 - When assigning one variable to another variable, data is **not duplicated**, instead the [[Pointer]] to the data is duplicated and assigned
 - A nice visualisation on memory allocation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#boxes-live-in-the-heap)
 
