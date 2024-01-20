@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-20T18:19:59+08:00
+Last Date: 2024-01-20T18:40:21+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -50,7 +50,10 @@ description: Stack (automatic memory management for function variables), Heap (d
 >
 >Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details
 
-
+>[!caution] Memory leak
+>Happens when we **forget to release** data in heap memory using `free()` in the example of C
+>
+>This can eventually lead to the exhaustion of available [[Main Memory]], resulting in **degraded performance** or even **program crashes**
 ### Stack Segment
 - **Dynamically allocated region** used to store **function calls**, local variables, and temporary data etc
 - Made up of **Stack Frames** which are associated with a specific function
@@ -59,6 +62,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 - [[Stack]] structure
 - Grows downwards
+- Has a **default fixed size**, too many stack frame will lead to Stack Overflow
 </br>
 
 - When assigning one variable to another variable, data is **duplicated**
@@ -66,8 +70,11 @@ description: Stack (automatic memory management for function variables), Heap (d
 - A nice visualisation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#variables-live-in-the-stack) 
 
 >[!success] Data management in Stack Segment is more efficient than Heap Segment
->1. Stack memory is allocated and deallocated in a **Last In, First Out (LIFO) manner**, making it faster than heap memory. This is because all it needs to do is move the [[Register#Stack Pointer]] up or down, while heap memory requires more complex memory management.
+>1. Stack memory is allocated and deallocated in a **Last In, First Out (LIFO) manner**, making it faster than heap memory. This is because all it needs to do is move the [[Register#Stack Pointer]] up or down, while heap memory requires more complex memory management
 >2. No overhead of complex [[Synchronization (同步)]], unlike data inside heap segment, data inside the stack segment is usually dedicated to that particular [[Process]] or [[Thread]]. Thus, manipulation of data inside the stack segment doesn't require the complex synchronisation 
+
+>[!caution] Stack Overflow
+>Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment
 
 #### XV6-RISCV Kernel Stack
 ```c {13}
