@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-14T16:26:53+08:00
+Last Date: 2024-01-20T21:29:49+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -26,23 +26,38 @@ title:  My Macos Setup
 - [WeChat](https://www.wechat.com/)
 
 
-## A Must Have 
+## Basic Terminal - Must Have
 ---
-- [Termius - Terminal GUI](https://www.termius.com/download/macos)
-	-  [Modify Default Shell](https://support.termius.com/hc/en-us/articles/8414917685145-How-to-change-the-default-shell-in-local-terminal-)
 -  [Brew - Package Manager](https://brew.sh/) 
--  [Install ohmyzsh](https://ohmyz.sh/#install) 
+- [Install ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-on-many-platforms)
+</br>
+
+- [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+- [Termius - Terminal GUI](https://www.termius.com/download/macos)
+	- [Modify Default Shell](https://support.termius.com/hc/en-us/articles/8414917685145-How-to-change-the-default-shell-in-local-terminal-)
+	- Your Termius configuration page should look something like the following picture
+![[termius_config.png|700]]
+</br>
+
+
+- [Install ohmyzsh](https://ohmyz.sh/#install) 
+- Install zsh plugins, all plugins are install under the path that is stored in `$ZSH_CUSTOM`
 ```bash
-# Install zsh-autosuggestions
-# Autosuggestions
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# Install zsh-autosuggestions plugin
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# Install zsh-syntax-highlighting plugin
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 
 # Replace the .zshrc plugins config
 plugins = (
 	git
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 ```
+</br>
+
 - [Powerlevel10k theme for ohmyzsh](https://github.com/romkatv/powerlevel10k)
 ```shell
 brew install romkatv/powerlevel10k/powerlevel10k
@@ -52,7 +67,7 @@ zsh # Refresh shell to confiure powerlevel10k
 p10k configure # Run this to reconfigure
 ```
 
-## Dev Productivity Tools
+## Terminal Productivity Tools
 ---
 - `zoxide`, `fzf`
 - `pipx`
@@ -72,9 +87,9 @@ brew install pipx && pipx ensurepath
 brew install bat && echo "alias cat='bat'" >>~/.zshrc
 
 brew install exa
-echo "alias ls='exa'" >>~/.zshrc
-echo "alias ll='exa -alh'" >>~/.zshrc
-echo "alias tree='exa --tree'" >>~/.zshrc
+echo "alias ls='exa --icons'" >>~/.zshrc
+echo "alias ll='ls -lhig --git --icons'" >>~/.zshrc
+echo "alias tree='exa --tree --icons'" >>~/.zshrc
 
 # Using pipx
 pipx install ranger-fm

@@ -34,8 +34,10 @@ div.authorWLink {
       border-radius: 25%;
       border-top-right-radius: 0%;  /* Adjust the radius as needed */
       border-bottom-right-radius: 0%;
-      padding-right: 3px;
+      margin-right: 3px;
       transition: border-radius 0.2 ease;
+
+      // border: 1px solid var(--secondary);
     }
 
     & > span {
