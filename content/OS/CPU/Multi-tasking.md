@@ -25,7 +25,7 @@ description: "Unlock the Power of Multitasking in Computer Science: Explore the 
 - Ensure no [[Process]] can hog the [[CPU]] forever
 
 **Mechanism**
-1. Before jumping to program code, the [[OS]] sets the [[Timer Chips]] to trigger an [[Interrupts (中断)#Hardware interrupts (外中断)]] after some period of time
+1. Before jumping to program code, the [[OS]] sets the [[Timer Chip]] to trigger an [[Interrupts (中断)#Hardware interrupts (外中断)]] after some period of time
 2. The OS switches to [[Privilege Level#User Mode]] and jumps to the next [[Instruction]] of the program
 3. When the Timer Chips elapses, it triggers a Hardware interrupts (外中断) to switch to [[Privilege Level#Kernel Mode]] and jump to OS code
 4. The OS can now save where the program left off, load a different program, and repeat the process

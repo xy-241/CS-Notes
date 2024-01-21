@@ -20,7 +20,7 @@ References:
 - See [[Signal (Software Interrupt)]]
 ### Hardware interrupts (外中断)
 - [[#Asynchronous]]
-- Examples are [[Timer Chips]] for [[Multi-tasking]] where [[CPU]] is interrupted to take in inputs from keyboard for example
+- Examples are [[Timer Chip]] for [[Multi-tasking]] where [[CPU]] is interrupted to take in inputs from keyboard for example
 
 ## Benefits
 ---
