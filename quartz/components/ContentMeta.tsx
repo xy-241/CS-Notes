@@ -2,14 +2,28 @@ import { formatDate, getDate } from "./Date"
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import readingTime from "reading-time"
 
-export default (() => {
+interface ContentMetaOptions {
+  /**
+   * Whether to display reading time
+   */
+  showReadingTime: boolean
+}
+
+const defaultOptions: ContentMetaOptions = {
+  showReadingTime: true,
+}
+
+export default ((opts?: Partial<ContentMetaOptions>) => {
+  // Merge options with defaults
+  const options: ContentMetaOptions = { ...defaultOptions, ...opts }
+
   function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
     const text = fileData.text
+
     if (text) {
       var modifiedSegment: string = ""
       var createdSegment: string = ""
-      const segments: string[] = []
-      const { text: timeTaken, words: _words } = readingTime(text)
+      // const segments: string[] = []
 
       if (fileData.dates) {
         const cfgDefaultDataType = cfg.defaultDateType // For backward compatibility, just in case this is used somewhere else by the original author
@@ -27,11 +41,16 @@ export default (() => {
         cfg.defaultDateType = cfgDefaultDataType
       }
 
-      segments.push(timeTaken)
+      // Display reading time if enabled
+      var readingTimeStr: string = ""
+      if (options.showReadingTime) {
+        const { text: timeTaken, words: _words } = readingTime(text)
+        readingTimeStr = `${_words} words, ${timeTaken}`
+      }
+
       return (
         <p class={`content-meta ${displayClass ?? ""}`}>
-          Created: &nbsp;{createdSegment} <br /> Modified: {modifiedSegment} <br /> {_words} words,{" "}
-          {timeTaken}
+          Created: &nbsp;{createdSegment} <br /> Modified: {modifiedSegment} <br /> {readingTimeStr}
         </p>
       )
     } else {
