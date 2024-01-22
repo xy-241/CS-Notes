@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-20T21:57:41+08:00
+Last Date: 2024-01-22T16:56:38+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -18,6 +18,7 @@ title:  My Macos Setup
 - [StrongBox - Password Manager](https://apps.apple.com/us/app/strongbox-password-manager/id897283731)
 - [Tutanota - Email Client](https://tutanota.com/#download)
 - [Notion - Note Taking App](https://www.notion.so/desktop)
+- [List of Wonderful Apps Waiting to Be Explored!](https://sindresorhus.com/apps)
 
 **Optional:**
 - [Dropbox](https://www.dropbox.com/install)
@@ -138,7 +139,7 @@ brew install htop
 - [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
 - [Postman - API Testing Tool](https://www.postman.com/downloads/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
-- [[jq (JSON Processor)]]
+- [[jq]]
 - `ngrok`
 - `gh`
 - `qemu` (for [[RISCV Kernel Deep Dive]])
