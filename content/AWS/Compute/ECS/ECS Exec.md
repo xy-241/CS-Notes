@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-09-04T11:16:00
-Last Date: 2023-12-21T11:32:38+08:00
+Last Date: 2024-01-22T16:32:27+08:00
 References: 
 ---
 ## Abstract
@@ -23,6 +23,9 @@ References:
 ## Enable ECS Exec
 ---
 ### For Existing ECS Cluster
+>[!caution] Only new ECS Task under the ECS Service will have the ECS Exec enabled
+
+
 ```bash "<CLUSTER_NAME>" "<SERVICE_NAME>"
 aws ecs update-service \
     --cluster <CLUSTER_NAME> \
@@ -30,13 +33,9 @@ aws ecs update-service \
     --enable-execute-command
 ```
 
->[!caution] Only new [[ECS#Task]] under the [[ECS#Service]] will have the ECS Exec enabled
 
 ### New ECS Cluster
-Based on what I know, there isn't a way to enable ECS EXEC from the GUI console
-
 - **Option 1:** [Using Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecs_service#enable_execute_command)
-
 - **Option 2:** Using Cli
 ```bash /<CLUSTER_NAME>/ /<TASK-DEFINITION-NAME>/ /<SERVICE_NAME>/ /1/
 aws ecs create-service \
@@ -46,6 +45,7 @@ aws ecs create-service \
 --service-name <SERVICE_NAME> \
 --desired-count 1
 ``` 
+- Based on what I know, there isn't a way to enable ECS EXEC from the GUI console
 ## Get into ECS Container
 ---
 ### Install Session Manager Plugin for AWS Cli
@@ -54,7 +54,8 @@ brew install --cask session-manager-plugin
 ```
 
 ### Add SSM permission via IAM Policy to the ECS Role
-**NOT the execution role!!!**
+
+>[!attention] NOT the execution role!!!
 
 ```json
 {
@@ -74,17 +75,18 @@ brew install --cask session-manager-plugin
 }
 ```
 
+
 ### Check if ECS Exec is configured properly
-Script is [open-sourced](https://github.com/aws-containers/amazon-ecs-exec-checker)
+
 ```bash /<PROFILE_NAME>/ /<AWS_REGION>/ /<CLUSTER_NAME>/ /<TASK_ID>/
 export AWS_PROFILE=<PROFILE_NAME>
 export AWS_REGION=<AWS_REGION>
 
 bash <( curl -Ls https://raw.githubusercontent.com/aws-containers/amazon-ecs-exec-checker/main/check-ecs-exec.sh ) <CLUSTER_NAME> <TASK_ID>
 ```
-
+- Script is [open-sourced](https://github.com/aws-containers/amazon-ecs-exec-checker)
 ### SSH into ECS Container
-If face error connecting, can try create a new [[ECS#Task]] deployment
+
 ```bash /<CLUSTER_NAME>/ /<TASK_ID>/ /<CONTAINER_NAME>/
 aws ecs execute-command \
 	--cluster <CLUSTER_NAME> \
@@ -93,3 +95,9 @@ aws ecs execute-command \
 	--interactive  \
 	--command "/bin/sh" 
 ```
+
+>[!tip] Don't want to type the command all the time?
+>You can make use of [[AWS Explorer]] which can be integrated into your code editor. Then you just need to click a few buttons to have a shell into the ECS Container. No more manual copy-paste and modifying the command!
+
+>[!bug] Error Connecting?
+>Try create a new [[ECS#Task]] deployment

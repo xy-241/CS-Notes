@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-10T13:12:02+08:00
-Last Date: 2024-01-16T21:07:49+08:00
+Last Date: 2024-01-22T16:46:03+08:00
 References: 
 ---
 ## Abstract
@@ -14,24 +14,25 @@ References:
 - Basically a virtual machine 
 
 
-## EC2 Secure Access
----
-### Accessing Running Service on Private EC2
-- Refer to [[Port Forwarding#Port Forwarding into EC2 Bastion]]
+```bash title="Cheatsheet"
+# Obtain the tags and id of all EC2
+aws ec2 describe-instances | jq '.Reservations[].Instances[] | {Tags: .Tags, InstanceId: .InstanceId}'
 
-
-## EC2 Debugging
----
-### Obtain User Data in EC2
-```bash
-sudo cat /var/lib/cloud/instance/user-data.txt
+# Start a particular EC2 instance
+aws ec2 start-instances --instance-ids
 ```
+- [[Port Forwarding#Port Forwarding into EC2 Bastion|SSH into Private EC2]]
 
-### Obtain the outputs of system outputs
-- Including outputs of [[User Data]]
-```bash
+## Debugging inside EC2
+---
+```bash title="Cheatsheet"
+# Obtain User Data in EC2
+sudo cat /var/lib/cloud/instance/user-data.txt
+
+# Obtain the outputs of system outputs, including outputs of user data
 cat /var/log/syslog
 ```
+
 
 ### Obtain EC2 Metadata
 - With the new [MDSV](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html), we need to perform [[Token-Based Authentication]] to access EC2 Metadata. Below is a short bash function to does it easily
