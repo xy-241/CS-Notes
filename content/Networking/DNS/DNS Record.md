@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-01-17, 00:10
-Last Date: 2024-01-22T18:04:01+08:00
+Last Date: 2024-01-22T19:26:06+08:00
 References: 
 draft: 
 description: Dive into DNS records, the powerful mappings that connect hostnames to IP addresses, email servers, and more. ️ Explore A, CNAME, MX, and NS records, and learn how they keep your online experience seamless.
@@ -26,7 +26,7 @@ description: Dive into DNS records, the powerful mappings that connect hostnames
 - Powers **Host Aliasing** which allows a [[Hostname#Alias Hostname]] to be mapped to [[Hostname#Canonical Hostname (CNAME)]]
 - In the above example, all requests go to`notes.yxy.ninja` are handled by servers under `notes.pages.dev`
 
->[!tip] 
+>[!tip] Create CNAME Record for Root Domain
 >Based on the [DNS Specification](https://www.ietf.org/rfc/rfc1035.txt), We can't create CNAME Record for **Root Domain**. The good new is with [Cloudflare's CNAME Flattening](https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/), we are able to create a CNAME Record for Root Domain
 >
 >The CNAME Record we created in the the Cloudflare side directs traffic hitting the root domain to **Cloudflare Network**
