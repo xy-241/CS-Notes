@@ -7,7 +7,7 @@ tags:
   - programming
   - rust
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-01-16T16:21:04+08:00
+Last Date: 2024-01-22T15:05:50+08:00
 References: 
 draft: 
 ---
@@ -16,8 +16,10 @@ draft:
 - A variable whose value is [[Memory Address]]
 
 ### Pointee
-- The value that a pointer points-to 
+- The actual data that a pointer points-to inside the [[Address Space#Heap Segment]]
 
+### Pointer Dereference
+- The process of accessing [[#Pointee]] of a [[Pointer]]
 
 
 ## Null Pointer
