@@ -8,14 +8,15 @@ interface Options {
 
 export default ((opts?: Options) => {
   function Footer({ displayClass }: QuartzComponentProps) {
-    const year = new Date().getFullYear()
+    const startYear = 2023
+    const currYear = new Date().getFullYear()
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
         <div class="giscus" style={{ marginTop: "5rem" }}></div>
         <hr />
         <p>
-          Created by <a href="https://www.linkedin.com/in/xinyang-yu/">Xinyang YU</a>, © {year}
+          Created by <a href="https://www.linkedin.com/in/xinyang-yu/">Xinyang YU</a>, © {startYear} - {currYear}
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
