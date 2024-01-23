@@ -13,9 +13,9 @@ References:
 ---
 - N to M mapping
 - Put the [[Thread]] in both [[User Space]] &  [[Kernel Space]]
-- Programmer can determine how many [[Kernel Threads]]  to use and how many [[User Thread]] multiplex on each one
-- [[Kernel]] is aware of only the [[Kernel Threads]] and schedules those
-- Each [[Kernel Threads]] has some set of [[User Thread]] that take turns using it
+- Programmer can determine how many [[Kernel Thread]]  to use and how many [[User Thread]] multiplex on each one
+- [[Kernel]] is aware of only the [[Kernel Thread]] and schedules those
+- Each [[Kernel Thread]] has some set of [[User Thread]] that take turns using it
 ![[hybrid_thread_implementation.png]]
 
 

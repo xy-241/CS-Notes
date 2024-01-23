@@ -19,7 +19,7 @@ References:
 
 - There are 3 types 
 	1. [[User Thread]]
-	2. [[Kernel Threads]]
+	2. [[Kernel Thread]]
 	3. [[Hybrid Threads]]
 
 
@@ -74,4 +74,4 @@ References:
 ### Thread Table
 - To keep track of the [[Thread]] in a [[Process]]
 - Similar to [[Kernel]]'s [[Process Control Block (PCB)#Process Table]], except that it keeps track only of the per-thread properties
-- Managed by the [[User Thread#Runtime System]] in [[User Thread]] & [[Kernel]] in [[Kernel Threads]]
+- Managed by the [[User Thread#Runtime System]] in [[User Thread]] & [[Kernel]] in [[Kernel Thread]]

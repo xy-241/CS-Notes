@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2024-01-12, 00:12
-Last Date: 2024-01-19T16:41:37+08:00
+Last Date: 2024-01-23T17:07:10+08:00
 References: 
 draft: 
 ---
@@ -17,7 +17,13 @@ draft:
 ## Basics
 ---
 A set of common configurations for code editors:
-- [Install FiraCode Font](https://github.com/tonsky/FiraCode/wiki/VS-Code-Instructions)
+- Use a **coding friendly** font - FireCode
+	- [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+	- Configure the editor to use this font, below is VSC example 
+	- Configure Editor Font
+	![[vsc_editor_font.png|400]]
+	- Configure Terminal Font
+	![[vsc_terminal_font.png|400]]
 - Download the Vim extension to have vim keybinding inside the code editor
 - Turn on *Word Wrap* under `View -> Word Wrap` (VSC example)
 

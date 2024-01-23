@@ -42,7 +42,7 @@ not support threads.
 - Allow each [[Process]] to have its own customized **Process Scheduling Algorithms**
 
 ### Better Scalability 
-- [[Kernel Threads]] require some table space and [[Address Space#Stack Segment]] in the [[Kernel]], which can be a problem if there are a very large number of threads.
+- [[Kernel Thread]] require some table space and [[Address Space#Stack Segment]] in the [[Kernel]], which can be a problem if there are a very large number of threads.
 
 ## Cons
 ---
