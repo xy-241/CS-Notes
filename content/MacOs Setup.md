@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-22T16:56:38+08:00
+Last Date: 2024-01-23T14:58:55+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -74,7 +74,8 @@ p10k configure # Run this to reconfigure
 - `pipx`
 - `bat`
 - `exa`
-- `ranger-fm` (pipx)
+- `ranger-fm`
+- `watch`
 ```bash
 #!/bin/bash
 brew install zoxide
@@ -96,6 +97,8 @@ echo "alias tree='exa --tree --icons'" >>~/.zshrc
 pipx install ranger-fm
 # Alias to have Ranger to exit in the current directory it is in
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+brew install watch
 ```
 
 - Custom bash commands (to be added to `.zshrc`)

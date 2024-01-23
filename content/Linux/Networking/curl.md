@@ -6,12 +6,18 @@ Author Profile:
 tags:
   - bash
 Creation Date: 2023-08-23T20:12:50+08:00
-Last Date: 2024-01-12T16:20:27+08:00
+Last Date: 2024-01-23T15:11:31+08:00
 References: 
 ---
+## Abstract
+---
+- Can be used to transfer data to or from a [[Host#Server]] using various supported protocols, such as [[HTTP]]
+- Widely used for **testing APIs** and **downloading files** etc 
+</br>
 
->[!note] Check the version of [[HTTP]]
->- -I stands for [[HTTP Headers]] only
->```bash
->curl -I <ENDPOINT>
->```
+- Download file with a given endpoint, `-O` tells `curl` to save the downloaded file with the **same name** as it has on the remote server
+```bash
+curl -O <ENDPOINT>
+```
+
+
