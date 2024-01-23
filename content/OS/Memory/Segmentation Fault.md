@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - rust
 Creation Date: 2024-01-08, 09:48
-Last Date: 2024-01-13T18:23:40+08:00
+Last Date: 2024-01-23T17:41:03+08:00
 References: 
 draft: 
 ---
@@ -25,9 +26,9 @@ draft:
 #include <iostream>
 
 int main() {
-//	int xs[10];
-	//int x = xs[100000];
-	std::cout << "Hello World!";
+	int xs[10];
+	int x = xs[100000];
+
 	return 0;
 }
 ```
@@ -46,5 +47,4 @@ int main() {
 
 ## Ways to Handle
 ---
-### Use Rust
-- Rust checks the index with the the range the program can access, if out of range, exit immediately with helpful error message instead of continuing and cause Segmentation Fault
+- Use [[Rust]], Rust checks the index with the the range the program can access, if out of range, exit immediately with helpful error message instead of continuing and cause Segmentation Fault
