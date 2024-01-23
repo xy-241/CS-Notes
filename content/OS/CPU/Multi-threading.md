@@ -13,7 +13,7 @@ References:
 ---
 - Also known as *Hyper-threading*
 - A mechanism achieved with wither [[#Multi-threaded Chip]](true [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]]) or quick [[Context Switch]]([[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]) or *both*
-- Doesn't offer true [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]] on Single-Core [[CPU]] which only supports one [[Process]] running at a time
+- Doesn't offer true [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]] on Single-Core [[CPU]] which only supports one [[Process (进程)]] running at a time
 - Thread-switching time is reduced to [[Latency Number |nanosecond]]
 - To users, [[CPU]] Speed is divided by the total number of [[Thread]] executing at the same time when multiple [[Thread]] sharing the same [[CPU#Core]]
 - Performance is a *fine balance* between performance gains from each [[Thread]] and [[#Overhead of Creating Thread]]

@@ -14,7 +14,7 @@ draft:
 ---
 - Also known as *Segmentation Violation*
 - Represented with `SIGSEGV`
-- A common [[Runtime Error]] that occurs when a [[Process]] wants access [[Virtual Memory]] that it isn't permitted to 
+- A common [[Runtime Error]] that occurs when a [[Process (进程)]] wants access [[Virtual Memory]] that it isn't permitted to 
 - Can be handled with [[Null Safety]]
 
 

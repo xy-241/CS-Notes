@@ -32,7 +32,7 @@ References:
 ## Terminologies
 ---
 ### Branch
-- An [[Instruction]] that causes [[Process]] to jump to a different location in the codes
+- An [[Instruction]] that causes [[Process (进程)]] to jump to a different location in the codes
 
 ### Fixed-length
 - Easy [[Pipeline Stages#Fetch]] & [[Pipeline Stages#Decode]]

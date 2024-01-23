@@ -35,4 +35,4 @@ References:
 - If we are retrieving the same data or surrounding data. For the [[CPU]], it instead of going to Main Memory to retrieve. We can obtain directly from the [[CPU Cache]] which is much faster
 </br>
 
-- [[Process]] accesses only a small portion of the [[Memory Address]] space within a small time interval 
+- [[Process (进程)]] accesses only a small portion of the [[Memory Address]] space within a small time interval 

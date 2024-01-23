@@ -12,15 +12,15 @@ References:
 ---
 ## Abstract
 ---
-- Used to limit the number of [[Process]]/[[Thread]] running on a particular resource at any time with a *non-negative integer*
+- Used to limit the number of [[Process (进程)]]/[[Thread]] running on a particular resource at any time with a *non-negative integer*
 - Used in environments with [[Inter-Process Communication (IPC)]] and can also be useful in managing *synchronisation* across different systems, such as in [[Distributed Systems]]
 
 
 ## Code Snippets
 ---
 - `sem_t semaphore;` & `sem_init(&semaphore, 0, 1);`
-- Decrement the value when a [[Process]]/[[Thread]] running - `sem_wait(&semaphore);`
-- Increase the value when a [[Process]]/[[Thread]] finishes running - `sem_post(&semaphore);`
+- Decrement the value when a [[Process (进程)]]/[[Thread]] running - `sem_wait(&semaphore);`
+- Increase the value when a [[Process (进程)]]/[[Thread]] finishes running - `sem_post(&semaphore);`
 ```c
 #include <semaphore.h>
 
@@ -39,8 +39,8 @@ int main() {
 ## Differences compared to [[Mutex (互斥体)]]
 ---
 ### Simultaneous Multi-Locking
-- Semaphore can be used to *lock a resource* at more than one [[Process]]/[[Thread]] at the *same time*
+- Semaphore can be used to *lock a resource* at more than one [[Process (进程)]]/[[Thread]] at the *same time*
 - For example, maximum 5 database connections & online game queueing system 
 ### Decoupled Locking & Releasing 
-- The locking & releasing can be decoupled into 2 different [[Process]]/[[Thread]]
-- We can use this property to control how many times a [[Process]]/[[Thread]] runs (locking) based on the number of [[Interrupts (中断)]] (releasing )
+- The locking & releasing can be decoupled into 2 different [[Process (进程)]]/[[Thread]]
+- We can use this property to control how many times a [[Process (进程)]]/[[Thread]] runs (locking) based on the number of [[Interrupts (中断)]] (releasing )

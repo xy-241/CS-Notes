@@ -28,14 +28,14 @@ description: Dive into the world of processes in operating systems!
 
 ### Core Image
 
-- A _suspended_ [[Process]] consists of its [[Address Space]]
+- A _suspended_ [[Process (进程)]] consists of its [[Address Space]]
 
 ### Child Process
 
 - Has the same [[OS/Terminologies/User#UID|UID]] as its parent
 ### Process State
 1. Running
-2. Ready to Run - Could be running but [[CPU]] gave processing power to some other [[Process]]
+2. Ready to Run - Could be running but [[CPU]] gave processing power to some other [[Process (进程)]]
 3. Block - Process is waiting for some other things like **I/O** to finish working (eg. waiting for file to be read)
 ### Process Resources
 - The followings are examples of process resources

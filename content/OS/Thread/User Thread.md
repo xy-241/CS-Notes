@@ -13,7 +13,7 @@ References:
 ---
 - [[Thread]] managed in the [[User Space]] entirely
 - The [[Kernel]] knows nothing about them
-- As far as the kernel is concerned, it is managing single-threaded [[Process]]
+- As far as the kernel is concerned, it is managing single-threaded [[Process (进程)]]
 - The threads run on top of a [[#Runtime System]]
 - Each process needs its own private [[Thread#Thread Table]]
 - [[Thread]] are implemented by a [[#Examples|library]]
@@ -39,7 +39,7 @@ not support threads.
 - the [[CPU Cache]] need not be flushed
 
 ### Great Customisation 
-- Allow each [[Process]] to have its own customized **Process Scheduling Algorithms**
+- Allow each [[Process (进程)]] to have its own customized **Process Scheduling Algorithms**
 
 ### Better Scalability 
 - [[Kernel Thread]] require some table space and [[Address Space#Stack Segment]] in the [[Kernel]], which can be a problem if there are a very large number of threads.
@@ -47,11 +47,11 @@ not support threads.
 ## Cons
 ---
 ### Declined Performance
-- The [[Kernel]] sees a [[Process]] with multiple *user threads* as one single [[Thread]]
+- The [[Kernel]] sees a [[Process (进程)]] with multiple *user threads* as one single [[Thread]]
 - When the running *user thread* has a [[Page Faults]], other *user threads* aren't scheduled to run 
 
 ### Risk of Thread Hogging
-- If an *user thread* starts running, no other [[User Thread]] in that [[Process]] will ever run unless the first thread voluntarily gives up the [[CPU]]
+- If an *user thread* starts running, no other [[User Thread]] in that [[Process (进程)]] will ever run unless the first thread voluntarily gives up the [[CPU]]
 - Within a single process, there are no [[Interrupts (中断)]], making it impossible to schedule processes round-robin fashion (taking turns) 
 - The [[Interrupts (中断)]] from [[#Runtime System]] is *resource intensive*
 
@@ -65,7 +65,7 @@ not support threads.
 
 >[!note] ``pthread_yield()``
 >- The [[Library Call]] for *thread* to give [[CPU]] to other *threads*
->- In [[Process]], we don't have this. Because [[Thread]] is in the same program, written by the same programmer, so they collaborate to get fulfil a particular feature
+>- In [[Process (进程)]], we don't have this. Because [[Thread]] is in the same program, written by the same programmer, so they collaborate to get fulfil a particular feature
 
 ### Others
 [Golang Goroutines](https://granulate.io/blog/deep-dive-into-golang-performance/)

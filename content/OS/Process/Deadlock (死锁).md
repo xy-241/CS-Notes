@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Waiting for something for *infinite time*, in which there is *no progress* for waiting [[Process]]
+- Waiting for something for *infinite time*, in which there is *no progress* for waiting [[Process (进程)]]
 - When all [[#Coffman conditions]] are fulfilled, it doesn't guarantee one, just prone to one
 - We have [[#Handling Strategies]] to handle deadlocks
 - Can only happen if there is *more than one lock*
@@ -24,7 +24,7 @@ References:
 - 4 *necessary* conditions - [[#Mutual Exclusion]], [[#Hold and Wait]], [[#No Preemption]] & [[#Circular Wait]]
 ### Mutual Exclusion
 - At least one resource must be held in a *non-shareable mode*.
-- This means that only *one* [[Process]] can use the resource at any given time
+- This means that only *one* [[Process (进程)]] can use the resource at any given time
 - If another process requests the resource, that process must wait until the resource has been released
 
 ### Hold and Wait

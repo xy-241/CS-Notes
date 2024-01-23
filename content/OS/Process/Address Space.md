@@ -17,14 +17,14 @@ description: Stack (automatic memory management for function variables), Heap (d
 ---
 ![[address_space.png|300]]
 
-- A list of memory locations from **0** to **some maximum**, which [[Process]] can access
+- A list of memory locations from **0** to **some maximum**, which [[Process (进程)]] can access
 - Address space is powered by [[Virtual Memory]], so everything in address space is dedicated to that particular process
 - 4 main components
 	- Data in [[#Text Segment]] (the **orange** block shown above) and [[#Data Segment]] (the **red** block shown above) are shipped with the program
 	- Data in [[#Heap Segment]] (the **blue** block shown above) and [[#Stack Segment]] (the **green** block shown above) are allocated dynamically when the program is running
 
 ### Heap Segment
-- **Dynamically allocated region** where the [[Process]] can create new data structures as needed
+- **Dynamically allocated region** where the [[Process (进程)]] can create new data structures as needed
 - **Grows** and **shrinks** as the **process** allocates and deallocates memory
 
 - Grow upwards
@@ -71,7 +71,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 >[!success] Data management in Stack Segment is more efficient than Heap Segment
 >1. Stack memory is allocated and deallocated in a **Last In, First Out (LIFO) manner**, making it faster than heap memory. This is because all it needs to do is move the [[Register#Stack Pointer]] up or down, while heap memory requires more complex memory management
->2. No overhead of complex [[Synchronization (同步)]], unlike data inside heap segment, data inside the stack segment is usually dedicated to that particular [[Process]] or [[Thread]]. Thus, manipulation of data inside the stack segment doesn't require the complex synchronisation 
+>2. No overhead of complex [[Synchronization (同步)]], unlike data inside heap segment, data inside the stack segment is usually dedicated to that particular [[Process (进程)]] or [[Thread]]. Thus, manipulation of data inside the stack segment doesn't require the complex synchronisation 
 
 >[!caution] Stack Overflow
 >Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment
@@ -131,7 +131,7 @@ spin:
 - Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because *stack segment grows downwards* when we are adding values to the stack
 ### Data Segment
 - This region stores **global** and **static variables** and **constants** used by the program, pre-defined before the execution of the program
-- Can be both read and write, allowing the [[Process]] to manipulate the data as needed
+- Can be both read and write, allowing the [[Process (进程)]] to manipulate the data as needed
 
 ### Text Segment
 - Stores program codes, **unchangeable**, **read-only**

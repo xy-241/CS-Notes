@@ -64,7 +64,7 @@ Last Date: 2024-01-13T22:09:00+08:00
 ---
 ### Create a TCP Server
 - Listen on port `8080` over TCP
-- Create a new [[Process]] for each new [[TCP Connection]]
+- Create a new [[Process (进程)]] for each new [[TCP Connection]]
 ```bash
 socat - TCP-LISTEN:8080,fork
 ```

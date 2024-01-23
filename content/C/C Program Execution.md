@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Convert from C program to [[Instruction]], then execute it as a [[Process]]
+- Convert from C program to [[Instruction]], then execute it as a [[Process (进程)]]
 
 ## 5 Steps
 ---
@@ -46,7 +46,7 @@ gcc -c hello_world.c
 - We can use `ldd` to show the dependencies 
 - Will return error if unable to link up some of the required `.o` files
 ### Stage 5
-- **Loader** loads the executable from [[Disk]] to [[Main Memory]] to create a [[Process]]
+- **Loader** loads the executable from [[Disk]] to [[Main Memory]] to create a [[Process (进程)]]
 
 
 ## References

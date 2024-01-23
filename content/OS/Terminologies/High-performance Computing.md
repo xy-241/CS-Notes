@@ -17,8 +17,8 @@ References:
 ## Terminologies 
 ---
 ### Parallelism (并行性)
-- [[Thread]]/[[Process]] running at the same time, not an illusion created with [[Context Switch]] where only a single [[Thread]]/[[Process]] is running
+- [[Thread]]/[[Process (进程)]] running at the same time, not an illusion created with [[Context Switch]] where only a single [[Thread]]/[[Process (进程)]] is running
 - Mainly for improving performance with the resources on hand
 ### Concurrency (并发)
-- Illusion of multiple [[Thread]]/[[Process]] running in parallel, but it is actually achieve with quick [[Context Switch]] where only a single [[Thread]]/[[Process]] is running at any point of the time
+- Illusion of multiple [[Thread]]/[[Process (进程)]] running in parallel, but it is actually achieve with quick [[Context Switch]] where only a single [[Thread]]/[[Process (进程)]] is running at any point of the time
 - Mainly for handling multiple requests or events

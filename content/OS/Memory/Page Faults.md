@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- The [[Process]] is blocked while the necessary instruction is being located and read in from [[Main Memory]] to [[CPU]]
+- The [[Process (进程)]] is blocked while the necessary instruction is being located and read in from [[Main Memory]] to [[CPU]]
 - Usually happens when not all Process has its whole program codes in the Main Memory
 
 
@@ -26,4 +26,4 @@ References:
 - The required data or instruction are in the [[Swap Space]]
 
 ### No Access Rights
-- Accessing [[Main Memory]] that isn't assigned to the requesting [[Process]]. Resulting in [[Segmentation Fault]]
+- Accessing [[Main Memory]] that isn't assigned to the requesting [[Process (进程)]]. Resulting in [[Segmentation Fault]]

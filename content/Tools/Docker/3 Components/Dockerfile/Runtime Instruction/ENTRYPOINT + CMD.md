@@ -19,4 +19,4 @@ References:
 
 >[!note] With [[exec "$@"]] in [[ENTRYPOINT]] executable
 >- The [[ENTRYPOINT]] executable ends itself
->- The stuff specified inside the [[CMD]] will execute in its own [[Process]]
+>- The stuff specified inside the [[CMD]] will execute in its own [[Process (进程)]]

@@ -12,7 +12,7 @@ References:
 
 ## Abstract
 ---
-- Responsible to carry out some features of a [[Process]]
+- Responsible to carry out some features of a [[Process (进程)]]
 - Thread in a process share the same [[Address Space]] & other per-process items as shown below
 ![[thread_resources.png]]
 </br>
@@ -26,7 +26,7 @@ References:
 ## Benefits
 ---
 ### Fast to Create/Destroy
-- 10-100 times faster than [[Process]]
+- 10-100 times faster than [[Process (进程)]]
 - Because without the need of [[Context Switch#Latency Number An expensive operation|Expensive Context Switching]]
 
 ### Makes Programming Easier
@@ -45,14 +45,14 @@ References:
 
 
 ### Benefits over Process
-1. Lighter to create and destroy compared to [[Process]], because it doesn't require [[System Call (系统调用)]] to the underlying [[OS]]
+1. Lighter to create and destroy compared to [[Process (进程)]], because it doesn't require [[System Call (系统调用)]] to the underlying [[OS]]
 2. Share memory among themselves, avoid [[Memory Page Shifting]] which is expensive 
 
 
 ## Cons
 ---
 ### No protection among threads
-- One thread can bring down the entire [[Process]]
+- One thread can bring down the entire [[Process (进程)]]
 - One thread can read, write, or even wipe out another thread’s stack
 
 ### Forking
@@ -72,6 +72,6 @@ References:
 - Goes back to the current task when the waiting ends - **Call back**
 - However, it still blocks when the task is **CPU Bounded**
 ### Thread Table
-- To keep track of the [[Thread]] in a [[Process]]
+- To keep track of the [[Thread]] in a [[Process (进程)]]
 - Similar to [[Kernel]]'s [[Process Control Block (PCB)#Process Table]], except that it keeps track only of the per-thread properties
 - Managed by the [[User Thread#Runtime System]] in [[User Thread]] & [[Kernel]] in [[Kernel Thread]]

@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Contains [[Metadata]] of the [[Process Resources]], so that [[Process]] can be restarted later as if it had never been stopped
+- Contains [[Metadata]] of the [[Process Resources]], so that [[Process (进程)]] can be restarted later as if it had never been stopped
 ![[PCB.png]]
 
 

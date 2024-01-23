@@ -23,7 +23,7 @@ References:
 ## Pro
 ---
 ### Keep All Threads Busy
-- If one [[Thread]] in a [[Process]] causes a [[Page Faults]], the [[Kernel]] can easily check to see if the process has any other runnable threads, and if so, run one of them while waiting for the required page to be brought in from the disk
+- If one [[Thread]] in a [[Process (进程)]] causes a [[Page Faults]], the [[Kernel]] can easily check to see if the process has any other runnable threads, and if so, run one of them while waiting for the required page to be brought in from the disk
 - Or Kernel can get thread from other process
 
 

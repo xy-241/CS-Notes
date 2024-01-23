@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Allow data to flow between two [[Process]] in a *uni-directional* manner. One process writes to the pipe, and the other reads from it
+- Allow data to flow between two [[Process (进程)]] in a *uni-directional* manner. One process writes to the pipe, and the other reads from it
 - Sort of [[Pseudo-file]] that can be used to connect 2 Process
 - Direct one Process's output to another's input
 

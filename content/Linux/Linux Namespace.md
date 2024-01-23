@@ -12,7 +12,7 @@ References:
 ## Abstract
 ---
 - Wrap *certain global system resources* in an *abstraction layer*
-- This makes it appear like the [[Process]] within a *namespace* have their own *isolated instance of the resource*
+- This makes it appear like the [[Process (进程)]] within a *namespace* have their own *isolated instance of the resource*
 - The kernels namespace abstraction allows *different groups of processes* to have *different views of the system*
 - currently seven distinct namespaces implemented: _mnt, pid, net, ipc, uts, user_ and _cgroup_
 

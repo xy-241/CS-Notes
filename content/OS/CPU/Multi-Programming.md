@@ -13,7 +13,7 @@ description: Unlock the power of multi-programming and supercharge your computer
 ## Abstract
 ---
 - Ability of computer to store multiple program in [[Main Memory]] at the same time & switch between them quickly 
-- Focus on improving the [[CPU]] utilisation since [[Process]] will be idle for a relative long time when interacting with [[OS/IO/IO Device|IO Device]]
+- Focus on improving the [[CPU]] utilisation since [[Process (进程)]] will be idle for a relative long time when interacting with [[OS/IO/IO Device|IO Device]]
 </br>
 
 - [[CPU]] switches rapidly from one Process to another
@@ -26,4 +26,4 @@ description: Unlock the power of multi-programming and supercharge your computer
 ## Benefits
 ---
 ### Full utilisation of Multi-core Chip
-- Since there are multiple [[Process]] ready to run at the same time, we can distribute each process to each [[CPU#Core]] on the [[Multi-core Chip]]
+- Since there are multiple [[Process (进程)]] ready to run at the same time, we can distribute each process to each [[CPU#Core]] on the [[Multi-core Chip]]

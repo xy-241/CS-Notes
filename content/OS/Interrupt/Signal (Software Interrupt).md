@@ -19,9 +19,9 @@ References:
 
 ## Mechanism
 ---
-1. Causes [[Process]] to temporarily suspend
+1. Causes [[Process (进程)]] to temporarily suspend
 2. Save its [[Register]] on the [[Stack]]
-3. When [[Interrupt Handler]] is done, the running [[Process]] is restarted in the state it was in just before the signal
+3. When [[Interrupt Handler]] is done, the running [[Process (进程)]] is restarted in the state it was in just before the signal
 
 ## Benefits
 ---
@@ -33,5 +33,5 @@ References:
 ## Examples
 ---
 ### Alarm Signal
-- Sent after a specified number of seconds has elapsed to notify a [[Process]] of an *event*
+- Sent after a specified number of seconds has elapsed to notify a [[Process (进程)]] of an *event*
 - [[Signal (Software Interrupt)]]

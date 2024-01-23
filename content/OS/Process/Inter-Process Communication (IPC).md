@@ -11,8 +11,8 @@ References:
 ---
 ## Abstract
 ---
-- Allow 2 isolated [[Process]] to communicate with each other 
-- Used to [[Synchronize]] the activities among [[Process]] that are cooperating to get some job done
+- Allow 2 isolated [[Process (进程)]] to communicate with each other 
+- Used to [[Synchronize]] the activities among [[Process (进程)]] that are cooperating to get some job done
 
 >[!note] 6 types
 >1. [[Pipe (管道)]]

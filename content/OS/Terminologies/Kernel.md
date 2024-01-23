@@ -27,7 +27,7 @@ description: Dive into the heart of your operating system and discover how kerne
 - Used by [[MINIX]]
 ![[microkernel.png]]
 
->[!success] So if one of in the kernel [[Process]] crashes, it doesn't crash the entire system 
+>[!success] So if one of in the kernel [[Process (进程)]] crashes, it doesn't crash the entire system 
 
 >[!caution] Lower performance due to the overhead of communication between different modules
 
@@ -46,6 +46,6 @@ description: Dive into the heart of your operating system and discover how kerne
 ## Terminologies 
 ---
 ### Preemptive Kernel
-- [[Kernel]] that can be [[Interrupts (中断) |interrupted]] and scheduled just like [[Process]] in the [[User Space]] 
+- [[Kernel]] that can be [[Interrupts (中断) |interrupted]] and scheduled just like [[Process (进程)]] in the [[User Space]] 
 
 >[!success] This prevents the Kernel from hogging the [[CPU]], and slow down user space process

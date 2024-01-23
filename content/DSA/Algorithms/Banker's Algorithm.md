@@ -15,7 +15,7 @@ References:
 ---
 - Used for [[Deadlock (死锁)]] Avoidance
 - Used in banking to make sure banks don't run out of liquidity aka money aka in [[#Safe State]]
-- 2 out 3 pieces of info needed - [[#Max]], [[#Allocation]] & [[#Need]], number of [[Process]] and either [[#Total]] or [[#Available]] to calculate the [[#Need]] and check if system in [[#Safe State]] (if safe, we need the find the [[#Safe Sequence]]) 
+- 2 out 3 pieces of info needed - [[#Max]], [[#Allocation]] & [[#Need]], number of [[Process (进程)]] and either [[#Total]] or [[#Available]] to calculate the [[#Need]] and check if system in [[#Safe State]] (if safe, we need the find the [[#Safe Sequence]]) 
 
 
 
@@ -24,21 +24,21 @@ References:
 ### Safe State
 - When we don't run out of resources 
 ### Safe Sequence
-- Running through all [[Process]] without running out of [[#Safe State]]
+- Running through all [[Process (进程)]] without running out of [[#Safe State]]
 - There can be multiple possible sequences
 ### Max
-- How many instances of each resource each [[Process]] can request
+- How many instances of each resource each [[Process (进程)]] can request
 - Represented with 2D [[Array]]
 ### Allocation 
-- How many instances of each resource each [[Process]] currently hold
+- How many instances of each resource each [[Process (进程)]] currently hold
 - Represented with 2D [[Array]]
 ### Available 
 - How many instances of each resource is available in the the system after the [[#Allocation]]
 - Represented with 1D [[Array]]
-- Add the [[#Allocation]] back when [[Process]] finishes running
+- Add the [[#Allocation]] back when [[Process (进程)]] finishes running
 ### Total
 - The sum of [[#Allocation]] + [[#Available]]
 ### Need
-- How many instances of resource each [[Process]] needs
+- How many instances of resource each [[Process (进程)]] needs
 - Obtained from [[#Max]] - [[#Allocation]]
 - Represented with 2D [[Array]]

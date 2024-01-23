@@ -12,7 +12,7 @@ References:
 ## Abstract
 ---
 - Also known as *Quantums*
-- The period of time for which a [[Process]] is allowed to run in a [[Multi-tasking#Preemptive Multitasking]] system
+- The period of time for which a [[Process (进程)]] is allowed to run in a [[Multi-tasking#Preemptive Multitasking]] system
 
 
 ## Minimum Granularity
@@ -23,21 +23,21 @@ References:
 
 ## Target Latency 
 ---
-- The desired maximum amount of time that a [[Process]] should wait before being given a chance to run again. So the process doesn't seem laggy on the user side
+- The desired maximum amount of time that a [[Process (进程)]] should wait before being given a chance to run again. So the process doesn't seem laggy on the user side
 - In [[Linux]], it is 6ms
-- [[#Target Latency]] is exceeded when there is enough [[Process]] for [[#Minimum Granularity]] to take effect - Process will seem laggy on user side, so rebooting to clear some Process will make computer seems faster
+- [[#Target Latency]] is exceeded when there is enough [[Process (进程)]] for [[#Minimum Granularity]] to take effect - Process will seem laggy on user side, so rebooting to clear some Process will make computer seems faster
 
 
 ## 2 Types of Scheduling
 ---
 ### Fixed Timeslice Round-Robin Scheduling
-- Give every [[Process]] the same [[Timeslice]], perhaps10 ms, and cycle through tasks in order
+- Give every [[Process (进程)]] the same [[Timeslice]], perhaps10 ms, and cycle through tasks in order
 
 >[!caution]  Laggy Situation
->When there is a lot of [[Process]], and each of them gets a fixed [[Timeslice]], the one cycle of all Process will take a significant amount of time
+>When there is a lot of [[Process (进程)]], and each of them gets a fixed [[Timeslice]], the one cycle of all Process will take a significant amount of time
 
 ### Dynamic Timeslice Round-Robin Scheduling
-- [[Timeslice]] = [[#Target Latency]] / total [[Process]]
+- [[Timeslice]] = [[#Target Latency]] / total [[Process (进程)]]
 ![[Dynamic_timeslice_round-robin_scheduling.png]]
 - Used in modern [[Process Management#Process Scheduler]]
 

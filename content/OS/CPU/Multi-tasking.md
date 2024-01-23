@@ -12,17 +12,17 @@ description: "Unlock the Power of Multitasking in Computer Science: Explore the 
 ## Abstract
 ---
 - A logical extension of [[Multi-programming]]
-- Ability of computer executing multiple tasks at the same time by giving each [[Process]] a very small slice of [[CPU]] time
+- Ability of computer executing multiple tasks at the same time by giving each [[Process (进程)]] a very small slice of [[CPU]] time
 </br>
 
 - Focus on improving user experience 
 - Can be implemented on computers that have a single([[#Time-Sharing]]) or multiple CPU
 ### Corporative Multitasking
-- Rather than [[OS]] decides when to preempt [[Process]]. Process gives up [[CPU]] and let other Process to run
+- Rather than [[OS]] decides when to preempt [[Process (进程)]]. Process gives up [[CPU]] and let other Process to run
 >[!caution] Process can hog to CPU forever, modern [[OS]] moves to [[#Preemptive Multitasking]]
 
 ### Preemptive Multitasking
-- Ensure no [[Process]] can hog the [[CPU]] forever
+- Ensure no [[Process (进程)]] can hog the [[CPU]] forever
 
 **Mechanism**
 1. Before jumping to program code, the [[OS]] sets the [[Timer Chip]] to trigger an [[Interrupts (中断)#Hardware interrupts (外中断)]] after some period of time
