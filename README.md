@@ -32,13 +32,13 @@
 - [Memory](https://notes.yxy.ninja/OS/Memory/)
 </br>
 
-- [Process (进程)](https://notes.yxy.ninja/OS/Process-(%E8%BF%9B%E7%A8%8B)/)
-- [Thread (线程)](https://notes.yxy.ninja/OS/Thread-(%E7%BA%BF%E7%A8%8B)/)
-- [Synchronization (同步)](https://notes.yxy.ninja/OS/Synchronization-(%E5%90%8C%E6%AD%A5)/)
+- [Process (进程)](https://notes.yxy.ninja/OS/Process/)
+- [Thread (线程)](https://notes.yxy.ninja/OS/Thread/)
+- [Synchronization (同步)](https://notes.yxy.ninja/OS/Synchronization/)
 </br>
 
-- [Interrupt (中断)](https://notes.yxy.ninja/OS/Interrupts-(%E4%B8%AD%E6%96%AD)/)
-- [System-Calls (系统调用)](https://notes.yxy.ninja/OS/System-Calls-(%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8)/)
+- [Interrupt (中断)](https://notes.yxy.ninja/OS/Interrupt/)
+- [System-Calls (系统调用)](https://notes.yxy.ninja/OS/System-Call/)
 </br>
 
 - [UNIX vs Linux](https://notes.yxy.ninja/OS/UNIX-vs-Linux/)
