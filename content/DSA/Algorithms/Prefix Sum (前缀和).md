@@ -6,12 +6,13 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-08T19:28:00
-Last Date: 2024-01-23T12:33:12+08:00
+Last Date: 2024-01-24T13:32:38+08:00
 ---
 ## Abstract
 ---
 - Basically an [[Array]] same length of the given array
 - The value at each index is the sum of values from index 0
+- Efficiently calculates sums of **ranges within an array** by leveraging on [[Memoization]]
 
 ## Property
 ---
@@ -40,3 +41,4 @@ $$
 ---
 - [[Product of Array Except Self]]
 - [[Romantic Glasses]]
+- [[Closest Cities]]

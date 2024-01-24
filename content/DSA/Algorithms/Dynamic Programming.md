@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2023-12-10T17:08:09+08:00
+Last Date: 2024-01-24T12:43:39+08:00
 References: 
 ---
 ## Abstract
@@ -48,11 +48,11 @@ References:
 - We can store the solutions to the subproblems as we solve them. This allows us to avoid re-solving the subproblems when we encounter them again
 ### Optimal Substructure (最优子结构)
 - Occurs when the optimal solution to a problem can be found by *combining* the *optimal solutions to its subproblems*
-- 原问题的最优解可以从子问题的最优解构建得来
+- 如果原问题的最优解可以从子问题的最优解构建得来，则它就具有最优子结构
 - For example, the optimal solution to the knapsack problem can be found by combining the optimal solutions to the knapsack problem with smaller weights and values
 - When a problem has optimal substructure, we can use the solutions to the subproblems to construct the solution to the original problem. This also allows us to avoid re-solving the subproblems
 ### Statelessness (无后效性)
-- 给定一个确定的状态，其未来发展只与该状态有关， 与该状态所经历的过去的所有状态无关
+- 给定一个**确定的状态**，其**未来发展**只与**该状态有关**， 与该状态所经历的过去的所有**状态无关**
 - 如果未来发展与该状态和该状态的前一个状态相关，我们可以靠矩阵来解。但如果回溯的状态过多，就难了
 - 许多[[Backtracking]] problems 都不具有*无后效性*， 无法使用*动态规划*快速求解
 ### DP Table
