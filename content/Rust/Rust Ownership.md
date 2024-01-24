@@ -7,7 +7,7 @@ tags:
   - rust
   - OS
 Creation Date: 2024-01-13, 20:38
-Last Date: 2024-01-20T18:03:05+08:00
+Last Date: 2024-01-24T17:32:51+08:00
 References: 
 draft: 
 description: The way Rust manages heap memory efficiently and safely
@@ -31,6 +31,11 @@ site_name: CS Notes by xy241
 >[!caution]
 >Rust Compiler will not compile if there is a transfer of ownership in a *if else statement* and we are using the [[Pointer#Rust Box]] that transfers ownership in the *if else statement* after the *if else statement* regardless if the *if else statement* will execute or not
 
+>[!caution] Verbose Code
+>We need to create new [[Pointer#Rust Box]] after we transfer the ownership to function parameters due to [[#Moved Heap Data Principle]]. See [References and Borrowing](https://rust-book.cs.brown.edu/ch04-02-references-and-borrowing.html#references-and-borrowing) for more details
+>
+>This can be handled with [[Rust Borrowing]]
+
 ### Box Deallocation Principle
 - If a variable owns a [[Pointer#Rust Box]], when Rust deallocates the variable's frame in [[Address Space#Stack Segment]], then Rust deallocates the box's [[Address Space#Heap Segment]]
 - Refer to [Box's Owner Manages Deallocation](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#a-boxs-owner-manages-deallocation)
@@ -41,7 +46,7 @@ site_name: CS Notes by xy241
 >Therefore the data is still available in heap segment after the ownership is transferred 
 
 ### Moved Heap Data Principle
-- If a variable `x` moves ownership of data in [[Address Space#Heap Segment]] to another variable `y`, then `x` cannot be used after the move
+- If a variable `x` moves ownership of data in [[Address Space#Heap Segment]] to another variable `y`, then `x` **cannot be used after the move**
 - Refer to [Variables Cannot Be Used After Being Moved](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#variables-cannot-be-used-after-being-moved)
 
 ### Cloning Avoids Moves
