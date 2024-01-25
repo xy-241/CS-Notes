@@ -1,6 +1,8 @@
 import { QuartzTransformerPlugin } from "../types"
 import rehypePrettyCode, { Options as CodeOptions } from "rehype-pretty-code"
 
+import darkPlus from 'tm-themes/themes/dark-plus.json'
+
 export const SyntaxHighlighting: QuartzTransformerPlugin = () => ({
   name: "SyntaxHighlighting",
   htmlPlugins() {
@@ -10,8 +12,8 @@ export const SyntaxHighlighting: QuartzTransformerPlugin = () => ({
         {
           keepBackground: true,
           theme: {
-            dark: "github-dark",
-            light: "github-light",
+            dark: "poimandres",
+            light: "light-plus",
           },
         } satisfies Partial<CodeOptions>,
       ],
