@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-18, 21:23
-Last Date: 2024-01-18T14:30:14+08:00
+Last Date: 2024-01-25T10:01:33+08:00
 References: 
 ---
 ## Abstract
@@ -49,4 +49,4 @@ public static int gcd(int a, int b) {
 - Let `d` be the GCD of `a` and `b` -> `d|a` and `d|b`
 - And we know `a = bq + r`, so `r = a - bq`
 - With `r = a - bq`, we are sure we can factor out a `d` from `a - bq`, since `d|a` and `d|bq`, since `q` is an [[Integer (整数)]]
-- So since `d|r`, and `d|b`, we can reduce the range by finding `gcd(r, b)`
+- So since `d|r`, and `d|b`, we can reduce the range by finding `gcd(b, r)`

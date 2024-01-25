@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-04T19:50:49+08:00
-Last Date: 2024-01-11T22:00:08+08:00
+Last Date: 2024-01-25T15:37:49+08:00
 References: 
 ---
 ## Abstract
@@ -29,7 +29,13 @@ References:
 ![[level_trigger.png|400]]
 
 
-- Also known as *Pulse-triggered*
+- Also known as **Pulse-triggered**
 - Output changes immediately with any change in the input as long as the control signal ([[Clock Oscillator#Clock Signal]], high in the diagram) is active
-- *Active High* when level sensitive is high
-- *Active Low* when level sensitive is low
+- **Active High** when level sensitive is high
+- **Active Low** when level sensitive is low
+
+
+## References
+---
+- How Do Computers Remember? - YouTube
+![How Do Computers Remember? - YouTube](https://youtu.be/I0-izyq6q5s?si=uCiyGmIsDyOfcte9)

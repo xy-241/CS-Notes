@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - cp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2024-01-23T09:50:31+08:00
+Last Date: 2024-01-25T13:20:53+08:00
 References: 
 draft: 
 ---
@@ -19,10 +19,7 @@ A collection of code templates to kickstart the journey of solving interesting p
 ---
 **When there are multiple inputs in a single test case**
 ```java title="Solution.java"
-import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class Solution {
   static Scanner scanner = new Scanner(System.in);
@@ -45,10 +42,7 @@ public class Solution {
 
 **When there is only a single input in a given test case**
 ```java title="Solution.java"
-import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
  
 public class Solution {
   static Scanner scanner = new Scanner(System.in);
