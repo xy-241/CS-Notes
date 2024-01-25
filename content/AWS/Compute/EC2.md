@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-10T13:12:02+08:00
-Last Date: 2024-01-23T14:31:14+08:00
+Last Date: 2024-01-25T17:31:00+08:00
 References: 
 ---
 ## Abstract
@@ -14,17 +14,24 @@ References:
 - Basically a virtual machine 
 
 
-```bash title="Cheatsheet"
-# Obtain the tags and id of all EC2
+## Accessing EC2
+---
+- **Obtain** the **tags** and **id** of all EC2
+```bash
 aws ec2 describe-instances \
 | jq '.Reservations[].Instances[] | {Tags: .Tags, InstanceId: .InstanceId}'
+```
 
-# Start a particular EC2 instance
+- **Start** a particular **EC2 instance**
+```bash
 aws ec2 start-instances --instance-ids <YOUR_INTANCE_ID>
+```
 
-# SSH into Private EC2 on Local Machine
+- **SSH** into Private EC2 on **Local Machine**
+```bash
 aws ssm start-session --target <INTANCE_ID>
 ```
+
 - [[Port Forwarding#Port Forwarding into EC2 Bastion]]
 
 ## Debugging inside EC2

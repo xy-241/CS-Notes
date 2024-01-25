@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-23T15:59:39+08:00
-Last Date: 2024-01-23T14:14:55+08:00
+Last Date: 2024-01-25T18:16:03+08:00
 References: 
 ---
 ## RDS
 ---
-```bash title="Cheatsheet"
-# List out the endpoint of all RDS instances inside an account
+- List out the endpoint of all RDS instances inside an account
+```bash
 aws rds describe-db-instances | jq ".DBInstances[].Endpoint"
 ```
 
