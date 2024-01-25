@@ -6,9 +6,12 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2024-01-12, 00:12
-Last Date: 2024-01-23T17:07:10+08:00
+Last Date: 2024-01-25T22:58:12+08:00
 References: 
 draft: 
+sr-due: 2024-01-26
+sr-interval: 1
+sr-ease: 225
 ---
 ## Abstract
 ---
@@ -42,7 +45,14 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 ```
+- [Unlock Full Vim Features](https://learnvim.irian.to/read_this_first#vimrc)
 
+- [Opening Multiple Windows](https://learnvim.irian.to/basics/starting_vim#opening-multiple-windows)
+- [Suspending](https://learnvim.irian.to/basics/starting_vim#suspending)
+- [Starting Vim The Smart Way](https://learnvim.irian.to/basics/starting_vim#starting-vim-the-smart-way)
+</br>
+
+- [Basic Macros](https://learnvim.irian.to/basics/macros#basic-macros)
 
 ## Visual Studio Code
 ---
