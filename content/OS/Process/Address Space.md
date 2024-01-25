@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-20T22:17:30+08:00
+Last Date: 2024-01-25T16:38:58+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -76,59 +76,61 @@ description: Stack (automatic memory management for function variables), Heap (d
 >[!caution] Stack Overflow
 >Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment
 
-#### XV6-RISCV Kernel Stack
-```c {13}
-// xv6-riscv kernel codes, start.c
+>[!example]- XV6-RISCV Kernel Stack
+>```c {13}
+>// xv6-riscv kernel codes, start.c
+>
+>#include "types.h"
+>#include "param.h"
+>#include "memlayout.h"
+>#include "riscv.h"
+>#include "defs.h"
+>
+>void main();
+>void timerinit();
+>
+>// entry.S needs one stack per CPU.
+>__attribute__ ((aligned (16))) char stack0[4096 * NCPU];
+>
+>// a scratch area per CPU for machine-mode timer interrupts.
+>uint64 timer_scratch[NCPU][5];
+>
+>// assembly code in kernelvec.S for machine-mode timer interrupt.
+>extern void timervec();
+>
+>// ...
+>```
+>- A **stack segment** is created, and it is shared by all the [[CPU]], each takes **4096 bytes**
+>- **NCPU** is hard-coded to `8`, so the stack has a length of **32768 bytes**
+>```asm {14-19}
+># xv6-riscv kernel codes, entry.S
+>
+># qemu -kernel loads the kernel at 0x80000000
+># and causes each hart (i.e. CPU) to jump there.
+># kernel.ld causes the following code to
+># be placed at 0x80000000.
+>.section .text
+>.global _entry
+>_entry:
+>	# set up a stack for C.
+>	# stack0 is declared in start.c,
+>	# with a 4096-byte stack per CPU.
+>	# sp = stack0 + (hartid * 4096)
+>	la sp, stack0
+>	li a0, 1024*4
+>	csrr a1, mhartid
+>	addi a1, a1, 1
+>	mul a0, a0, a1
+>	add sp, sp, a0
+>	# jump to start() in start.c
+>    call start
+>spin:
+>	j spin
+>```
+>
+>- We load the base address of the **stack segment**
+>- Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because **stack segment grows downwards** when we are adding values to the stack
 
-#include "types.h"
-#include "param.h"
-#include "memlayout.h"
-#include "riscv.h"
-#include "defs.h"
-
-void main();
-void timerinit();
-
-// entry.S needs one stack per CPU.
-__attribute__ ((aligned (16))) char stack0[4096 * NCPU];
-
-// a scratch area per CPU for machine-mode timer interrupts.
-uint64 timer_scratch[NCPU][5];
-
-// assembly code in kernelvec.S for machine-mode timer interrupt.
-extern void timervec();
-
-// ...
-```
-- A *stack segment* is created, and it is shared by all the [[CPU]], each takes *4096 bytes*
-- *NCPU* is hard-coded to `8`, so the stack has a length of *32768 bytes*
-```asm {14-19}
-# xv6-riscv kernel codes, entry.S
-
-# qemu -kernel loads the kernel at 0x80000000
-# and causes each hart (i.e. CPU) to jump there.
-# kernel.ld causes the following code to
-# be placed at 0x80000000.
-.section .text
-.global _entry
-_entry:
-	# set up a stack for C.
-	# stack0 is declared in start.c,
-	# with a 4096-byte stack per CPU.
-	# sp = stack0 + (hartid * 4096)
-	la sp, stack0
-	li a0, 1024*4
-	csrr a1, mhartid
-	addi a1, a1, 1
-	mul a0, a0, a1
-	add sp, sp, a0
-	# jump to start() in start.c
-    call start
-spin:
-	j spin
-```
-- We load the base address of the *stack segment*
-- Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because *stack segment grows downwards* when we are adding values to the stack
 ### Data Segment
 - This region stores **global** and **static variables** and **constants** used by the program, pre-defined before the execution of the program
 - Can be both read and write, allowing the [[Process (进程)]] to manipulate the data as needed
