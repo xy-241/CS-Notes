@@ -6,8 +6,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-24T16:53:07+08:00
+Last Date: 2024-01-26T11:18:34+08:00
 References: 
+description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---
 
 I am still reconstructing some of the notes and sorting out the taggings. Some notes are empty because those ideas weren't the main focus when I was exploring that particular topic. Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
