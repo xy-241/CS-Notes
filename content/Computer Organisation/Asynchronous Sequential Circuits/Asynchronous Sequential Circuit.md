@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-04T19:50:49+08:00
-Last Date: 2024-01-25T15:37:49+08:00
+Last Date: 2024-01-26T22:59:55+08:00
 References: 
 ---
 ## Abstract
@@ -18,7 +18,7 @@ References:
 
 
 >[!example]
->- [[S-R Latch (Set-Reset)]]
+>- [[S-R Latch]]
 
 ## Terminologies
 ---
