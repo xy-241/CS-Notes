@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - cp
 Creation Date: 2023-12-31, 18:38
-Last Date: 2024-01-16T17:08:32+08:00
+Last Date: 2024-01-27T00:44:40+08:00
 References: 
 draft: 
 ---
@@ -14,6 +14,10 @@ draft:
 ---
 - A list of questions I want to explore more when i got the time
 
+>[!tip] Learning References
+>[Competitive Programming Handbook](https://cses.fi/book/book.pdf)
+>
+>[GFG CP Handbook](https://www.geeksforgeeks.org/competitive-programming-cp-handbook-with-complete-roadmap/)
 ## Bitmask
 ---
 - [Odd One Out](https://codeforces.com/contest/1915/problem/A)

@@ -7,16 +7,18 @@ tags:
   - networking
   - system_design
 Creation Date: 2023-10-07T17:40:00
-Last Date: 2023-12-16T21:08:55+08:00
+Last Date: 2024-01-27T01:28:34+08:00
 ---
 ## Abstract
 ---
+<img src="https://yt3.ggpht.com/M6anxyOhsmc8TiSf8ntQyuuEiaD-cXW2arYjg5SgVZ6ZXV1heseOV_hvQ1h2ozwK0EHG5iNBI1MovQ=s1400-nd-v1" width="800" />
+
 - REpresentational State Transfer
-- A way to *architecture* an *interface* that enables communication between [[Host]] & [[Host]]
+- A way to **architect** an **interface** that enables communication between [[Host#Server]] & [[Host#Client]]
 - Usually implemented in [[HTTP]]
 - Not a [[Network Protocol]], but a set of rules - [[#6 Rules]]
 - [[HTTP Status Code]] is used to tell the client the complete status of the request
-- Alert-natives are [[GraphQL]] & [[gRPC]] 
+- Alternatives are [[GraphQL]] & [[gRPC]] 
 
 ## 2 Cores
 ---
