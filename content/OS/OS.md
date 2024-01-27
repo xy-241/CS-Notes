@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-01-18T18:38:06+08:00
+Last Date: 2024-01-27T19:40:45+08:00
 References: 
 description: The giant that powers the software application we use on a daily basis!
 ---
@@ -17,13 +17,6 @@ description: The giant that powers the software application we use on a daily ba
 	1. Provide user like you and me features to interact with the hardware like browsing the web
 	2. Resource Manager for resources like [[IO Device]] & [[Main Memory]] etc
 
-
-## Booting OS
----
-1. Get configuration info from [[BIOS]]
-2. Check for missing [[Device Controller#Device Driver]]
-3. Initialise [[Page Table]]
-4. Starts up a login program/GUI
 
 
 ## Types of OS

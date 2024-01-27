@@ -35,10 +35,10 @@ who
 ---
 ### UID
 - Stands for *User IDentification*
-- A number that is assigned to each [[OS/Terminologies/User|User]] by System Administrator
+- A number that is assigned to each [[User|User]] by System Administrator
 - One is assigned to **Superuser (UNIX)**
 ### User Group
 - Assigned a Group IDentification (GID)
-- [[OS/Terminologies/User|User]] can be members of the group
+- [[User|User]] can be members of the group
 
 

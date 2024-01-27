@@ -32,7 +32,7 @@ description: Dive into the world of processes in operating systems!
 
 ### Child Process
 
-- Has the same [[OS/Terminologies/User#UID|UID]] as its parent
+- Has the same [[User#UID|UID]] as its parent
 ### Process State
 1. Running
 2. Ready to Run - Could be running but [[CPU]] gave processing power to some other [[Process (进程)]]

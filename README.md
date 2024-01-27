@@ -23,7 +23,6 @@
 
 ## 💻 Operating System
 - [Intro](https://notes.yxy.ninja/OS/)
-- [Computer Booting](https://notes.yxy.ninja/OS/Booting/)
 </br>
 
 - [CPU](https://notes.yxy.ninja/OS/CPU/)

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-01-18T18:25:57+08:00
+Last Date: 2024-01-27T20:03:51+08:00
 References: 
 description: Dive into the heart of your operating system and discover how kernels manage hardware, allocate resources, and keep your system running smoothly. Explore the trade-offs between microkernels and monolithic kernels, and learn about preemptive kernels that ensure a responsive user experience.
 ---
@@ -18,6 +18,14 @@ description: Dive into the heart of your operating system and discover how kerne
 - [[MacOS]]'s kernel is **XNU**
 - [[Windows]]'s kernel is **NT Kernel**
 
+## Kernel Booting
+---
+1. Get configuration info from [[Computer Booting#BIOS]]
+2. Check for missing [[Device Controller#Device Driver]]
+3. Start up [[Init System]]
+4. Initialise [[Page Table]]
+5. Starts up [[OS System Program]]
+6. [[OS]] is booted up and ready to be used by the [[User]]
 
 ## Kernel Architecture
 ---

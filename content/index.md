@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-26T11:18:34+08:00
+Last Date: 2024-01-27T20:01:09+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---
@@ -28,7 +28,6 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 ## 💻 Operating System
 ---
 - [Intro](https://notes.yxy.ninja/OS/)
-- [Computer Booting](https://notes.yxy.ninja/OS/Booting/)
 </br>
 
 - [CPU](https://notes.yxy.ninja/OS/CPU/)
