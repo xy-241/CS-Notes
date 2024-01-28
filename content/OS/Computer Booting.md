@@ -3,15 +3,20 @@ Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
-tags: 
+tags:
+  - OS
 Creation Date: 2024-01-27, 19:55
-Last Date: 2024-01-27T19:59:15+08:00
+Last Date: 2024-01-27T20:33:20+08:00
 References: 
 draft: 
 description: 
+sr-due: 2024-01-28
+sr-interval: 1
+sr-ease: 230
 ---
 ## Abstract
 ---
+![[computer_booting.png|700]]
 - When the power is switched on, [[#BIOS]] is executed first, followed by [[#Boot Device]], lastly [[Kernel#Kernel Booting]]
 
 
@@ -40,3 +45,9 @@ description:
 </br>
 
 - Common boot loaders are [Grub2](https://help.ubuntu.com/community/Grub2)
+
+
+## References
+---
+- How Does Linux Boot Process Work?
+![How Does Linux Boot Process Work? - YouTube](https://youtu.be/XpFsMB6FoOs?si=uBxjBymSdHkESwsr)

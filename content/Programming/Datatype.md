@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - programming
   - rust
+  - java
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-01-14T17:22:54+08:00
+Last Date: 2024-01-27T20:17:18+08:00
 References: 
 ---
 ## Abstract
@@ -17,9 +18,12 @@ References:
 ### Primitive Datatype
 - Also known as *Built-in Datatype*
 * Great performance since there isn't much abstraction like [[#Custom Datatype]]
+</br>
+
+- In [[Java]], primitive datatypes are [[Immutable]]
 
 ### Custom Datatype
-
+- In [[Java]], custom datatypes **aren't** [[Immutable]]
 - Examples are [[OOP Class]] and [[Structure]]
 
 
@@ -37,6 +41,7 @@ References:
 	1. Tuple, basically [[Array]] that contains elements of different [[Datatype]]
 	2. Array, basically Array
 - Refer to [Rust Compound Data Types](https://rust-book.cs.brown.edu/ch03-02-data-types.html#compound-types) for more details
+
 ## Terminologies 
 ---
 ### Statically Typed

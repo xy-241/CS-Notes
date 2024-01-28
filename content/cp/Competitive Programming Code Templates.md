@@ -8,7 +8,7 @@ tags:
   - java
   - cpp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2024-01-26T18:09:37+08:00
+Last Date: 2024-01-27T20:38:53+08:00
 References: 
 draft: 
 ---
@@ -70,7 +70,8 @@ java Solution.java < input.txt
 >}
 >```
 
-
+>[!tip] Basic Data Structure Operation Cheatsheet
+>[Java List](https://chat.openai.com/share/81de8ffd-081b-4f69-8503-cc7d08be3b9f)
 
 
 ## CPP Code Template
