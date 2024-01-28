@@ -10,8 +10,8 @@ Last Date: 2024-01-27T20:33:20+08:00
 References: 
 draft: 
 description: 
-sr-due: 2024-01-28
-sr-interval: 1
+sr-due: 2024-01-30
+sr-interval: 2
 sr-ease: 230
 ---
 ## Abstract

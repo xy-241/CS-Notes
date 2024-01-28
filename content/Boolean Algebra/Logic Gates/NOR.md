@@ -6,9 +6,11 @@ Author Profile:
 tags:
   - boolean_algebra
 Creation Date: 2023-09-21T13:27:29+08:00
-Last Date: 2023-09-21T13:27:29+08:00
-References:
+Last Date: 2024-01-28T20:28:00+08:00
+References: 
 ---
 ## Abstract
 ---
-- Whenever one of the 2 inputs is 1, the outputs are always 0
+![[NOR.png|700]]
+- Only true when both inputs are false
+- Made of 1 [[OR]] and 1 [[NOT]]
