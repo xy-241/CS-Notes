@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - cp
 Creation Date: 2023-12-31, 18:38
-Last Date: 2024-01-27T00:44:40+08:00
+Last Date: 2024-01-28T16:49:33+08:00
 References: 
 draft: 
 ---
@@ -29,6 +29,10 @@ draft:
 - [Watering an Array](https://codeforces.com/contest/1917/problem/C)
 - [Quests](https://codeforces.com/contest/1914/problem/C)
 - [Three Activities](https://codeforces.com/contest/1914/problem/D)
+</br>
+
+- [We Got Everything Covered!](https://codeforces.com/contest/1925/problem/A) (reflection)
+- [Did We Get Everything Covered?](https://codeforces.com/contest/1925/problem/C)
 
 ## Divide & Conquer
 ---
@@ -44,7 +48,8 @@ draft:
 
 ## Number Theory
 ---
-- [Partitioning the Array](https://codeforces.com/contest/1920/problem/C)
+- [Partitioning the Array](https://codeforces.com/contest/1920/problem/C) (reflection)
+- [A Balanced Problemset](https://codeforces.com/contest/1925/problem/B) (reflection)
 ## CF Contest Questions
 ---
 - [Bicycles](https://codeforces.com/contest/1915/problem/G)

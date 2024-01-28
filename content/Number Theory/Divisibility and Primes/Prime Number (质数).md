@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-15, 15:53
-Last Date: 2024-01-15T10:34:34+08:00
+Last Date: 2024-01-28T16:42:07+08:00
 References: 
 ---
 ## Abstract
@@ -50,3 +50,9 @@ public static int nextPrimeGenerator(int currPrime) {
 ---
 ### Set of Primes is Infinite
 - There is an infinite number of [[Prime Number (质数)]]
+
+
+## Terminologies 
+---
+### Co-prime
+- We call 2 [[Integer (整数)]] co-prime iff the only common [[Factor]] between these two numbers are `1`

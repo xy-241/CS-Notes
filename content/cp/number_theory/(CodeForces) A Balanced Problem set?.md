@@ -1,33 +1,29 @@
 ---
 sthNew: true
 Mastery Level:
-  - 📕
+  - 📘
 Time Taken: 
 Space: 
 Time: 
 Appears On:
   - Codeforces
 Brush: 1
-Difficulty:
-  - "1200"
-Area:
-  - combinatorics
-  - math
-  - number_theory
+Difficulty: 
+Area: 
 Reference 1: 
 Reference 2: 
 Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
-Creation Date: 2024-01-25, 12:41
-Last Date: 2024-01-28T16:37:02+08:00
+Creation Date: 2024-01-28, 16:42
+Last Date: 2024-01-28T16:44:58+08:00
 tags:
   - cp
 draft: "true"
 description: CP Solution
 ---
-[Original Problem (CodeForces)](https://codeforces.com/contest/1922/problem/B)
+[Original Problem](https://codeforces.com/contest/1925/problem/B)
 ## Approach
 ---
 ### Consensus
@@ -49,7 +45,41 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 ---
 ### 1st Attempt (Java)
 ```java
+import java.util.*;
 
+public class Solution {
+static Scanner scanner = new Scanner(System.in);
+
+// Write your solution here
+public static void solve() {
+  long x = scanner.nextLong();
+  long n = scanner.nextLong();
+
+  long res = 1;
+
+  for (int i=1; i<=Math.sqrt(x); i++) {
+    if (x%i == 0) {
+      if (i * n > x) break;
+      
+      res = Math.max(res, i);
+
+      long oppFactor = x/i;
+      if (oppFactor * n <= x) res = Math.max(res, oppFactor);
+    }
+  }
+
+  System.out.println(res);
+}
+
+public static void main(String[] args) {
+  int t = scanner.nextInt();
+  scanner.nextLine();
+  
+  while(t-- > 0) {
+    solve();
+  }
+}
+}
 ```
 
 ## Personal Reflection
