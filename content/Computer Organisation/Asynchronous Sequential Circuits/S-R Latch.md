@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-01-28T22:07:38+08:00
+Last Date: 2024-01-29T19:23:01+08:00
 References: 
-sr-due: 2024-01-29
+sr-due: 2024-01-30
 sr-interval: 1
-sr-ease: 230
+sr-ease: 210
 ---
 ## Abstract
 ---
@@ -23,14 +23,22 @@ sr-ease: 230
 
 
 ### Circuit 2
-![[S-R_Latch_Start.png|700]]
+![[S-R_Latch_nor.png|700]]
 - Can be built with two [[NOR]]
-- The diagram above shows the state when the circuit is **first turned on**
 - Refer to footnote for a nice visualisation of how it works[^2]
 </br>
 
+>[!question] What is the output when latch first turned on without any inputs?
+> In an ideal case, the output will be switching from **on** to **off** in **super short interval**
+> 
+> However, in the real world, even the same two gates with the same wire will have a slightly different [[Logic Gates#Gate Delay]]. Sometimes, one gate may have a shorter gate delay than another
+> 
+> Thus, the output can be `0` or `1` when the latch is first turned on
+> 
+> Refer to footnote for a nice visualisation of how it works[^3]
+
+### Circuit Diagram & Truth Table
 ![[S-R Latch.png|500]]
-- Circuit Diagram & [[Truth Table]] using NOR  (high [[Asynchronous Sequential Circuit#Level Sensitive]] input S-R Latch)
 - `Q` is the 1 bit storage
 
 >[!caution] Invalid condition exists and must be avoided
@@ -48,4 +56,6 @@ sr-ease: 230
 [^1]: [[#Circuit 1]] (From `1:15` to `2:36`)
 ![How Do Computers Remember? - YouTube](https://youtu.be/I0-izyq6q5s?si=uCiyGmIsDyOfcte9)
 [^2]: [[#Circuit 2]] (From `2:57` to `4:33`)
+![How Do Computers Remember? - YouTube](https://youtu.be/I0-izyq6q5s?si=uCiyGmIsDyOfcte9)
+[^3]: [[#Circuit 2]] Race Condition (From `5:56` to `7:35`)
 ![How Do Computers Remember? - YouTube](https://youtu.be/I0-izyq6q5s?si=uCiyGmIsDyOfcte9)

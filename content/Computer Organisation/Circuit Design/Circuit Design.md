@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-07-20T18:47:27+08:00
-Last Date: 2024-01-13T15:43:27+08:00
+Last Date: 2024-01-29T19:29:22+08:00
 References: 
 ---
 ## Abstract
@@ -15,7 +15,7 @@ References:
 - The language we use is [[Boolean Algebra]]
 </br>
 
-- [[Clock Oscillator#Propagation Delay]] of [[Logic Gates]] will decide the maximum [[Clock Oscillator#Clock Frequency]]
+- [[Logic Gates#Gate Delay]] will decide the maximum [[Clock Oscillator#Clock Frequency]]
 
 ## 2 Directions of Thoughts
 ---
