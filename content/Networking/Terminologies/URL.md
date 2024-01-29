@@ -6,22 +6,20 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-10-04T11:22:56+08:00
-Last Date: 2024-01-06T21:44:46+08:00
+Last Date: 2024-01-29T13:25:40+08:00
 References: 
 ---
 ## Abstract
 ---
-![[url.png|500]]
+![[url.png|400]]
 
-- Stands for *Uniform Resource Locator*
+- Stands for **Uniform Resource Locator**
 
-## URL Path
----
+### URL Path
 - The exact place to find the resource 
 - Given `blog.yxy.ninja/resume.pdf`, the URL Path is `resume.pdf`
 
-## URL Query
----
+### URL Query
 - A way for [[Host#Client]] to customise the resources it is trying to obtain from a particular [[#URL Path]]. Thus URL Query should be placed after all [[#URL Path]]
 - Key-value pair
 	- Single URL Query:  `?KEY=VALUE`

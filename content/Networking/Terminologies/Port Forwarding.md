@@ -7,7 +7,7 @@ tags:
   - networking
   - aws
 Creation Date: 2024-01-16, 20:50
-Last Date: 2024-01-27T00:53:32+08:00
+Last Date: 2024-01-29T13:20:59+08:00
 References: 
 draft: 
 ---
@@ -15,7 +15,8 @@ draft:
 ---
 - Allows a machine to access another machine that is within a private network via a [[Network Port]]
 
-### Port Forwarding into EC2 Bastion
+## Port Forwarding into EC2 Bastion
+---
 >[!caution] EC2 Configuration
 >Make sure you are using an **Amazon Linux Image**, or you have [setup system manager on EC2](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html)
 
