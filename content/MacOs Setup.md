@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-23T14:58:55+08:00
+Last Date: 2024-01-30T13:45:13+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -100,7 +100,7 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir
 
 brew install watch
 ```
-
+- [[Atuin]]
 - Custom bash commands (to be added to `.zshrc`)
 ```bash
 # cht.sh shortcut
