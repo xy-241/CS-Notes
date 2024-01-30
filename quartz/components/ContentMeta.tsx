@@ -1,6 +1,7 @@
 import { formatDate, getDate } from "./Date"
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import readingTime from "reading-time"
+import { classNames } from "../util/lang"
 
 interface ContentMetaOptions {
   /**
@@ -49,7 +50,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
       }
 
       return (
-        <p class={`content-meta ${displayClass ?? ""}`}>
+        <p class={classNames(displayClass, "content-meta")}>
           Created: &nbsp;{createdSegment} <br /> Modified: {modifiedSegment} <br /> {readingTimeStr}
         </p>
       )
