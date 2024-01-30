@@ -6,26 +6,34 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-01-29T19:23:01+08:00
+Last Date: 2024-01-30T08:27:10+08:00
 References: 
-sr-due: 2024-01-30
+sr-due: 2024-01-31
 sr-interval: 1
-sr-ease: 210
+sr-ease: 190
+description: A latch that stores a single bit of computer data and allows for resetting the stored bit.
 ---
 ## Abstract
 ---
-- [[Latch]] that stores a single [[Computer Data Representation#Bit]] and provides a way to **reset the stored bit**
+- [[Latch]] that has one **set input** to store a **single** [[Computer Data Representation#Bit]], and another **reset input** to **reset the stored bit**
+</br>
+
+- **Active Set:** turn on the output
+- **Inactive Reset:** **locking** the **state of the set input** when **set** goes **inactive**
+- **Active Reset:** turn off the output
+- **Inactive Set:** **locking** the **state of the reset input** when the **reset** goes **inactive**
+
 
 ### Circuit 1
 ![[sr_latch_basic_form.png|700]]
 - As shown in the diagram above, we can build it with one [[OR]], one [[NOT]] and one [[AND]]
-- Refer to footnote for a nice visualisation of how it works[^1]
+- Refer to footnote for a nice visualisation on how it works[^1]
 
 
 ### Circuit 2
 ![[S-R_Latch_nor.png|700]]
 - Can be built with two [[NOR]]
-- Refer to footnote for a nice visualisation of how it works[^2]
+- Refer to footnote for a nice visualisation on how it works[^2]
 </br>
 
 >[!question] What is the output when latch first turned on without any inputs?
@@ -50,7 +58,7 @@ sr-ease: 210
 ## Gated S-R Latch
 ---
 ![[gated_sr_latch.png|500]]
-- [[S-R Latch]] with [[Latch#Steering Gate]]
+- [[Set Reset Latch]] with [[Latch#Steering Gate]]
 - Only active when `EN` is high
 
 [^1]: [[#Circuit 1]] (From `1:15` to `2:36`)

@@ -18,7 +18,7 @@ References:
 
 
 >[!example]
->- [[S-R Latch]]
+>- [[Set Reset Latch]]
 
 ## Terminologies
 ---

@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-01-29T21:41:51+08:00
+Last Date: 2024-01-30T07:31:01+08:00
 References: 
 draft: 
 description: 
-sr-due: 2024-01-30
+sr-due: 2024-01-31
 sr-interval: 1
-sr-ease: 210
+sr-ease: 190
 ---
 ## Abstract
 ---
@@ -159,6 +159,36 @@ $$
 >Try change the $n$ from $20$ to $21$ in the editor above, you should an overflow error. Because $21!$ is out of the range the `long` can cover
 >
 >We can handle this with [Scientific notation - Wikipedia](https://en.wikipedia.org/wiki/Scientific_notation), but this introduces extra logic 
+
+## Binomial Coefficient Properties 
+---
+### Symmetry Property
+$$
+\binom{n}{k} = \binom{n}{n-k}
+$$
+#### Proof
+For $\binom{n}{k}$:
+$$
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+$$
+
+For $\binom{n}{n-k}$:
+$$
+\binom{n}{n-k} = \frac{n!}{(n-k)![n-(n-k)]!}
+$$
+$$
+\frac{n!}{(n-k)![n-(n-k)]!} = \frac{n!}{(n-k)!(n-n+k)!}
+$$
+$$
+\frac{n!}{(n-k)!(n-n+k)!} = \frac{n!}{(n-k)!(0+k)!}
+$$
+$$
+\frac{n!}{(n-k)!(0+k)!} = \frac{n!}{(n-k)!k!}
+$$
+$\binom{n}{k} = \binom{n}{n-k}$, since:
+$$
+\frac{n!}{k!(n-k)!} = \frac{n!}{(n-k)!k!}
+$$
 ## References
 ---
 - [Competitive Programmer’s Handbook](https://cses.fi/book/book.pdf)
