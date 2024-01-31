@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-01-30T13:45:13+08:00
+Last Date: 2024-01-31T12:46:41+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -86,7 +86,7 @@ brew install fzf
 
 brew install pipx && pipx ensurepath
 
-brew install bat && echo "alias cat='bat'" >>~/.zshrc
+brew install bat && echo "alias cat='bat -A'" >>~/.zshrc
 
 brew install exa
 echo "alias ls='exa --icons'" >>~/.zshrc

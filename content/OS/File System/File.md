@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-01-25T18:14:38+08:00
+Last Date: 2024-01-31T13:04:31+08:00
 References: 
 ---
 
@@ -25,6 +25,7 @@ References:
 - A small [[Integer (整数)]] associated with [[File]]
 ### File Permission
 - In [[POSIX]], file permissions are handled by **rwx bits**
+
 
 ### File Compression
 - Process of **reducing the size** of one or more files to save storage space
@@ -74,6 +75,14 @@ References:
 xxd <BINARY_NAME.bin>
 ```
 
+### Line Break
+- [[POSIX]] systems uses a single character called **Line Feed** `\n`
+- While Windows uses **carriage return** and Line Feed, so 2 characters `\r\n`. This is because during typewriter times, you needed to mov the carriage to restart typing on the beginning of a line first, then turn the wheel to move the paper to change the line
+
+>[!info] Hands-On!
+>You can install `dos2unix` and `unix2dos` using [brew](https://docs.brew.sh/Installation) to play with line break
+>
+> You can view the hidden line break character by downloading and configuring `bat`, refer to [[MacOs Setup#Terminal Productivity Tools]] for more details
 
 
 ## Terminologies
