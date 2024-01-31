@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-25T16:38:58+08:00
+Last Date: 2024-01-31T10:14:46+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -61,8 +61,10 @@ description: Stack (automatic memory management for function variables), Heap (d
 </br>
 
 - [[Stack]] structure
-- Grows downwards
 - Has a **default fixed size**, too many stack frame will lead to Stack Overflow
+>[!question] Grows Downwards
+>Stack Segment starts at a higher [[Memory Address]], then memory address decreases as we add in **Stack Frame**, thus **growing downwards**, so to remove stack frame, we need to increment the [[Register#Stack Pointer]]
+
 </br>
 
 - When assigning one variable to another variable, data is **duplicated**
