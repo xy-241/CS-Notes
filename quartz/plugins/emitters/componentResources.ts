@@ -102,7 +102,7 @@ function addGlobalPageResources(
         });
       });`)
 
-      // Add in another 1 - umami
+      // Add in another 1 - umami cloud
       componentResources.afterDOMLoaded.push(`
       const umamiScript = document.createElement("script")
       umamiScript.src = "https://analytics.umami.is/script.js"
@@ -111,6 +111,15 @@ function addGlobalPageResources(
   
       document.head.appendChild(umamiScript)
     `)
+    // Add in another 1 - umami self host
+    componentResources.afterDOMLoaded.push(`
+    const umamiScript = document.createElement("script")
+    umamiScript.src = "https://notess.yxy.ninja/pxsd83yn"
+    umamiScript.setAttribute("data-website-id", "339ec462-99c5-450f-a994-9b452857c5d7")
+    umamiScript.async = true
+
+    document.head.appendChild(umamiScript)
+  `)
   } else if (cfg.analytics?.provider === "plausible") {
     const plausibleHost = cfg.analytics.host ?? "https://plausible.io"
     componentResources.afterDOMLoaded.push(`
