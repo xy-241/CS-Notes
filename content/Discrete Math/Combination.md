@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-01-31T08:54:20+08:00
+Last Date: 2024-02-01T07:48:50+08:00
 References: 
 draft: 
 description: 
-sr-due: 2024-02-01
+sr-due: 2024-02-02
 sr-interval: 1
-sr-ease: 170
+sr-ease: 150
 ---
 ## Abstract
 ---
@@ -28,17 +28,25 @@ sr-ease: 170
 - Also known as the number of **k-element** [[Set#Subset]] (or **k-combinations**) of a **n-element** [[Set]] 
 - $\binom{2}{1} = 2$, because given a set of 2 elements $\{1,2\}$ for example, there are 2 subsets of 1 elements: $\{1\}$ and $\{2\}$ 
 
+
+>[!info] Binomial
+> - **Bi** means two
+> - A mathematical expression or algebraic equation that consists of **two terms** connected by a **plus** or **minus** sign, general form is $(a+b)$ or $(a-b)$
+
+>[!info] Coefficient
+> - Constant [[Factor]] that multiplies a variable
+> - For example,  $5$ is the coefficient of $5x$
+
 >[!question] So why is it called Binomial Coefficient?
->- $\binom{n}{k}$ gives the [[#Coefficient]] of one of the **term** of the **expansion** [[#Binomial]] $(a+b)^n$ 
+> $$
+> (a+b)^{n}= \binom{n}{0}a^{n}b^{0}+ \binom{n}{1}a^{n-1}b^{1} + \ldots + \binom{n}{n-1}a^{1}b^{n-1} + \binom{n}{n}a^{0}b^{n}
+> $$
+> - Binomial Coefficient means it calculates the **Coefficient** of a **binomial expression**
+>- As you can see from the equation above, $\binom{n}{k}$ calculates the **Coefficient** of the **terms** of the **expanded Binomial** $(a+b)^n$ 
 >- The term is expressed as $a^{n-k} \times b^{k}$
+>  
 
 
-### Binomial
-- **Bi** means two
-- A mathematical expression or algebraic equation that consists of **two terms** connected by a **plus** or **minus** sign, general form is $(a+b)$ or $(a-b)$
-### Coefficient
-- Constant [[Factor]] that multiplies a variable
-- For example,  $5$ is the coefficient of $5x$
 
 
 
@@ -49,7 +57,7 @@ $$
 \binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
 $$
 - Formula 1 uses [[Recursion]]
-- The idea is to fix an element `x` in the set. If `x` is included in the subset, we have to choose `k − 1` elements from `n − 1` elements, or if `x` is not included in the subset, we have to choose `k` elements from `n − 1` elements
+- The idea is to fix an element `x` in the set. If `x` is included in the subset, we have to choose `k − 1` elements from `n − 1` elements, **or** if `x` is not included in the subset, we have to choose `k` elements from `n − 1` elements
 - There are two independent paths here, so we perform [[Counting#Rule of Sum]]
 - Since there is recursion involved, there is base case to terminate the recursion too. The base cases are $\binom{n}{0} = \binom{n}{n} = 1$. Because there is always **exactly one way** to construct an **empty subset** and a subset that contains **all the elements**
 </br>
@@ -98,7 +106,7 @@ $$
 $$
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
 $$
-- $n!$ includes counting that have the same set of elements but different order but combination doesn't consider the order, so we introduce the [[Factor|Divisor]] $k!$ and $(n-k)!$ avoid overcounting
+- $n!$ calculates the [[Permutation]] of n-element where the **order matters**, so we will have more than one counting which has the same set of elements but different order. However [[Combination]] doesn't care about the order, and $n!$ will overcount. Thus, we introduce the [[Factor|Divisor]] $k!$ and $(n-k)!$ to avoid overcounting
 - $\frac{n!}{(n-k)!}$ means how many ways to choose $k$ elements from $n$ element where the **order matters** 
 - $\frac{n!}{k!(n-k)!}$ removes the counting that has the same set of elements
 </br>
@@ -164,35 +172,40 @@ $$
 $$
 \binom{n}{k} = \binom{n}{n-k}
 $$
-#### Proof
-For $\binom{n}{k}$:
-$$
-\binom{n}{k} = \frac{n!}{k!(n-k)!}
-$$
-
-For $\binom{n}{n-k}$:
-$$
-\binom{n}{n-k} = \frac{n!}{(n-k)![n-(n-k)]!}
-$$
-$$
-\frac{n!}{(n-k)![n-(n-k)]!} = \frac{n!}{(n-k)!(n-n+k)!}
-$$
-$$
-\frac{n!}{(n-k)!(n-n+k)!} = \frac{n!}{(n-k)!(0+k)!}
-$$
-$$
-\frac{n!}{(n-k)!(0+k)!} = \frac{n!}{(n-k)!k!}
-$$
-Therefore $\binom{n}{k} = \binom{n}{n-k}$, because:
-$$
-\frac{n!}{k!(n-k)!} = \frac{n!}{(n-k)!k!}
-$$
+>[!tip]- Proof
+> For $\binom{n}{k}$:
+> $$
+> \binom{n}{k} = \frac{n!}{k!(n-k)!}
+> $$
+> 
+> For $\binom{n}{n-k}$:
+> $$
+> \binom{n}{n-k} = \frac{n!}{(n-k)![n-(n-k)]!}
+> $$
+> $$
+> \frac{n!}{(n-k)![n-(n-k)]!} = \frac{n!}{(n-k)!(n-n+k)!}
+> $$
+> $$
+> \frac{n!}{(n-k)!(n-n+k)!} = \frac{n!}{(n-k)!(0+k)!}
+> $$
+> $$
+> \frac{n!}{(n-k)!(0+k)!} = \frac{n!}{(n-k)!k!}
+> $$
+> Therefore $\binom{n}{k} = \binom{n}{n-k}$, because:
+> $$
+> \frac{n!}{k!(n-k)!} = \frac{n!}{(n-k)!k!}
+> $$
 
 ### Sum of Coefficient
 $$
 (a+b)^{n}= \sum_{k=0}^{n} \binom{n}{k}a^{n-k}b^{k}
 $$
+- If both $a$ and $b$ are 1, the $(1+1)^{n}=2^{n}$ which is the **Sum of Binomial Coefficient**
 
+### Pascal's Triangle
+![[pascals_triangle.png]]
+- In Pascal's Triangle, each value equals to the sum of two above values
+- And values at each row can be calculated using the [[#Binomial Coefficient]]
 
 ## References
 ---
