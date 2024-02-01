@@ -6,10 +6,10 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-02-01T07:48:50+08:00
+Last Date: 2024-02-01T08:19:46+08:00
 References: 
 draft: 
-description: 
+description: Exploring the binomial coefficient, delving into two formulas for its calculation. Formula 1 utilizes recursion, while Formula 2 involves factorials. We also touch upon properties like symmetry and its representation in Pascal's Triangle.
 sr-due: 2024-02-02
 sr-interval: 1
 sr-ease: 150
