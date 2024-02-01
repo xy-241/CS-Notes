@@ -6,30 +6,20 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-04T19:50:49+08:00
-Last Date: 2024-01-28T18:35:47+08:00
+Last Date: 2024-02-02T01:02:10+07:00
 References: 
 ---
 ## Abstract
 --- 
 ![[asynchronous sequential_circuit.png|400]]
-
-- [[Asynchronous Sequential Circuit#Level Sensitive]]
+- [[Sequential Circuit]] that is [[Sequential Circuit#Level Sensitive]], thus the changes are not **syn·chro·nized** to a particular timing aka **asynchronous**
 
 
 
 >[!example]
 >- [[Set Reset Latch]]
+>- [[Data Latch]]
 
 ## Terminologies
 ---
-### Level Sensitive
 
-![[level_sensititve.png|400]]
-
-![[level_trigger.png|400]]
-
-
-- Also known as **Pulse-triggered**
-- Output changes immediately with any change in the input as long as the control signal ([[Clock Oscillator#Clock Signal]], high in the diagram) is active
-- **Active High** when level sensitive is high
-- **Active Low** when level sensitive is low

@@ -6,10 +6,10 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-01-30T08:27:10+08:00
+Last Date: 2024-02-01T10:25:03+08:00
 References: 
-sr-due: 2024-01-31
-sr-interval: 1
+sr-due: 2024-02-04
+sr-interval: 3
 sr-ease: 190
 description: A latch that stores a single bit of computer data and allows for resetting the stored bit.
 ---
@@ -20,9 +20,13 @@ description: A latch that stores a single bit of computer data and allows for re
 
 - **Active Set:** turn on the output
 - **Inactive Reset:** **locking** the **state of the set input** when **set** goes **inactive**
+</br>
+
 - **Active Reset:** turn off the output
 - **Inactive Set:** **locking** the **state of the reset input** when the **reset** goes **inactive**
 
+>[!caution] Invalid condition exists!
+> When both S & R are 1, the output will be 0 which is invalid
 
 ### Circuit 1
 ![[sr_latch_basic_form.png|700]]
@@ -48,12 +52,7 @@ description: A latch that stores a single bit of computer data and allows for re
 ### Circuit Diagram & Truth Table
 ![[S-R Latch.png|500]]
 - `Q` is the 1 bit storage
-
->[!caution] Invalid condition exists and must be avoided
->- When both S & R are 1, both `Q` & `Q'` will be 0
-
-
-#### The Abstracted Diagram
+- The Abstracted Diagram
 ![[S-R_Latch_diagram.png|200]]
 ## Gated S-R Latch
 ---
