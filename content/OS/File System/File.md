@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-01-31T13:04:31+08:00
+Last Date: 2024-02-02T01:55:04+07:00
 References: 
 ---
 
@@ -30,7 +30,7 @@ References:
 ### File Compression
 - Process of **reducing the size** of one or more files to save storage space
 
->[!hint]- Custom bash script to compress files in different folders without  including the parent directories of the path
+>[!code]- Compress files in different folders without  including the parent directories of the path
 >```bash
 >#!/bin/bash
 >set -eu

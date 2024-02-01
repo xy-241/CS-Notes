@@ -58,7 +58,7 @@ const calloutMapping = {
   check: "success",
   done: "success",
   question: "question",
-  help: "question",
+  // help: "question",
   faq: "question",
   warning: "warning",
   attention: "warning",

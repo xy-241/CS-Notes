@@ -8,7 +8,7 @@ tags:
   - java
   - cpp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2024-01-27T20:38:53+08:00
+Last Date: 2024-02-02T01:52:43+07:00
 References: 
 draft: 
 ---
@@ -29,7 +29,7 @@ A collection of code templates to kickstart the journey of solving interesting p
 java Solution.java < input.txt
 ```
 
->[!note]- `Solution.java` when there are multiple inputs in a single test case
+>[!code]- `Solution.java` when there are multiple inputs in a single test case
 >```java title="Solution.java"
 >import java.util.*;
 >
@@ -52,7 +52,7 @@ java Solution.java < input.txt
 >}
 >```
 
->[!note]- `Solution.java` when there is only a single input in a given test case
+>[!code]- `Solution.java` when there is only a single input in a given test case
 >```java title="Solution.java"
 >import java.util.*;
 > 
@@ -81,7 +81,7 @@ java Solution.java < input.txt
 g++ -o Solution Solution.cpp && ./Solution < input.txt
 ```
 
->[!note]- `Solution.cpp` when there are multiple inputs in a single test case
+>[!code]- `Solution.cpp` when there are multiple inputs in a single test case
 >```cpp title="Solution.cpp"
 >#include <iostream>
 >#include <vector>
@@ -124,7 +124,7 @@ g++ -o Solution Solution.cpp && ./Solution < input.txt
 
 
 
->[!note]- `Solution.cpp` when there is only a single input in a given test case
+>[!code]- `Solution.cpp` when there is only a single input in a given test case
 >```cpp title="Solution.cpp"
 >#include <iostream>
 >#include <vector>
