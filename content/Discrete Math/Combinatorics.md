@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-20, 15:49
-Last Date: 2024-01-28T15:32:00+08:00
+Last Date: 2024-02-02T10:09:48+07:00
 References: 
 draft: 
 description: 
@@ -15,3 +15,4 @@ description:
 ---
 - Deals with [[Counting]], [[Permutation]] and [[Combination]] of objects etc
 - "How many ways can a certain event occur?" or "How many arrangements are possible with a given set of elements?"
+- Usually, the goal is to find a way to **count the combinations** efficiently without **generating each combination** separately

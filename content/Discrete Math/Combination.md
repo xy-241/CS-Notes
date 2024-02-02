@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-02-01T08:19:46+08:00
+Last Date: 2024-02-02T09:58:13+07:00
 References: 
 draft: 
 description: Exploring the binomial coefficient, delving into two formulas for its calculation. Formula 1 utilizes recursion, while Formula 2 involves factorials. We also touch upon properties like symmetry and its representation in Pascal's Triangle.
-sr-due: 2024-02-02
-sr-interval: 1
+sr-due: 2024-02-04
+sr-interval: 2
 sr-ease: 150
 ---
 ## Abstract
@@ -99,6 +99,8 @@ $$
 
 >[!caution] Exponential Time Complexity
 >For $\binom{20}{10}$, formula 1 takes a **few ms**, while [[#Formula 2]] only takes **0ms**
+>
+>Likely to have **timeout error**
 
 >[!success] No Overflow Issue
 >As long as the given $n$ is within the range of `long`, we will not face any overflow issue
@@ -106,7 +108,7 @@ $$
 $$
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
 $$
-- $n!$ calculates the [[Permutation]] of n-element where the **order matters**, so we will have more than one counting which has the same set of elements but different order. However [[Combination]] doesn't care about the order, and $n!$ will overcount. Thus, we introduce the [[Factor|Divisor]] $k!$ and $(n-k)!$ to avoid overcounting
+- $n!$ calculates the [[Permutation]] of n-element where the **order matters**, so we will have more than one counting which has the same set of elements but different order. However [[Combination]] doesn't care about the order, and $n!$ will overcount. Thus, we introduce the [[Factor|Divisor]] $k!$ and $(n-k)!$ to avoid overcounting and count the combination we want
 - $\frac{n!}{(n-k)!}$ means how many ways to choose $k$ elements from $n$ element where the **order matters** 
 - $\frac{n!}{k!(n-k)!}$ removes the counting that has the same set of elements
 </br>
