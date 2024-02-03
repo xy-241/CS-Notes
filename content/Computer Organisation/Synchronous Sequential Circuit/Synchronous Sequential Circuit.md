@@ -6,28 +6,17 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-02T21:49:03+08:00
-Last Date: 2024-01-13T15:42:44+08:00
+Last Date: 2024-02-04T00:24:35+08:00
 References: 
 ---
 ## Abstract
 ---
-![[sychronous_sequential_circuit.png|500]]
+- [[Sequential Circuit]] that is [[Sequential Circuit#Edge-triggered]], aka the state only changes at specific moment synchronised with [[Clock Oscillator#Clock Signal]], not a continuous period of time
 
-- [[#Edge-triggered]] with `CLK` which is the [[Clock Oscillator#Clock Signal]]
-
-
-
+>[!success] Benefit of Synchronisation
+> Ability to coordinate and manage the flow of information within the circuit, making it easier to **design** and **analyze**
 
 
 
 
-## Terminologies 
----
-### Edge-triggered
 
-![[positive_edge_triggered.png|400]]
-
-- Output only changes at a specific time, usually when [[Clock Oscillator#Clock Signal]] change from one edge to another
-- 2 types
-	- **Positive edge triggering:** Transition from a low voltage (0) to a high voltage (1) on the [[Clock Oscillator#Clock Signal]]
-	- **Negative edge triggering:** Transition from a high voltage (1) to a low voltage (0) on the [[Clock Oscillator#Clock Signal]]

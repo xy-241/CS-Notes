@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-04T19:50:49+08:00
-Last Date: 2024-02-02T01:02:10+07:00
+Last Date: 2024-02-04T00:25:58+08:00
 References: 
 ---
 ## Abstract
 --- 
-![[asynchronous sequential_circuit.png|400]]
-- [[Sequential Circuit]] that is [[Sequential Circuit#Level Sensitive]], thus the changes are not **syn·chro·nized** to a particular timing aka **asynchronous**
+- [[Sequential Circuit]] that is [[Sequential Circuit#Level Sensitive]], thus the changes to state are not **syn·chro·nized** to a particular timing
+- Usually operate based on **events** or **conditions**
 
 
 
@@ -20,6 +20,4 @@ References:
 >- [[Set Reset Latch]]
 >- [[Data Latch]]
 
-## Terminologies
----
 

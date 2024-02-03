@@ -6,13 +6,16 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-01-30, 07:59
-Last Date: 2024-02-02T01:04:42+07:00
+Last Date: 2024-02-03T21:54:43+08:00
 References: 
 draft: 
 description: Builds on Set-Reset Latch, using a single multifunctional Set input controlled by a Data Input. This simplifies data handling by avoiding invalid states. The Data Input can both set and erase the stored state when Store input is active, offering flexibility but increasing gate count.
 sr-due: 2024-02-03
 sr-interval: 1
 sr-ease: "270"
+sr-due: 2024-02-06
+sr-interval: 3
+sr-ease: 270
 ---
 ## Abstract
 ---
@@ -23,7 +26,7 @@ sr-ease: "270"
 - Refer to footnote for a nice visualisation on how it works [^1]
 
 >[!success] Eliminate the Invalid State of Set-Reset Latch
->When **both** Data Input and Store Input it **active**, we are simply setting the **Set Input active** and **Reset Input inactive**
+>When **both** Data Input and Store Input are **active**, we are simply setting the **Set Input active** and **Reset Input inactive**
 >
 >There **isn't a way** to **set both** Set Input and Reset Input to **active** at the **same time**
 
