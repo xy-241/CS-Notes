@@ -150,9 +150,11 @@ function addGlobalPageResources(
     componentResources.afterDOMLoaded.push(spaRouterScript)
   } else {
     componentResources.afterDOMLoaded.push(`
-        window.spaNavigate = (url, _) => window.location.assign(url)
-        const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug } })
-        document.dispatchEvent(event)`)
+      window.spaNavigate = (url, _) => window.location.assign(url)
+      window.addCleanup = () => {}
+      const event = new CustomEvent("nav", { detail: { url: document.body.dataset.slug } })
+      document.dispatchEvent(event)
+    `)
   }
 
   let wsUrl = `ws://localhost:${ctx.argv.wsPort}`
@@ -166,9 +168,9 @@ function addGlobalPageResources(
       loadTime: "afterDOMReady",
       contentType: "inline",
       script: `
-          const socket = new WebSocket('${wsUrl}')
-          socket.addEventListener('message', () => document.location.reload())
-        `,
+        const socket = new WebSocket('${wsUrl}')
+        socket.addEventListener('message', () => document.location.reload())
+      `,
     })
   }
 }
