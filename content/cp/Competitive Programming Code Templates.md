@@ -8,7 +8,7 @@ tags:
   - java
   - cpp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2024-02-02T01:52:43+07:00
+Last Date: 2024-02-03T20:54:34+08:00
 References: 
 draft: 
 ---
@@ -30,45 +30,45 @@ java Solution.java < input.txt
 ```
 
 >[!code]- `Solution.java` when there are multiple inputs in a single test case
->```java title="Solution.java"
->import java.util.*;
->
->public class Solution {
->  static Scanner scanner = new Scanner(System.in);
->  
+> ```java title="Solution.java"
+> import java.util.*;
+> 
+> public class Solution {
+>   static Scanner scanner = new Scanner(System.in);
+> 
 >  // Write your solution here
->  public static void solve() {
->    System.out.println("Write your solution inside the solve() method");
->  }
->  
->  public static void main(String[] args) {
->    int t = scanner.nextInt();
->    scanner.nextLine();
->    
->    while(t-- > 0) {
->      solve();
->    }
->  }
->}
->```
+>   public static void solve() {
+>     System.out.println("Write your solution inside the solve() method");
+>   }
+> 
+>   public static void main(String[] args) {
+>     int t = scanner.nextInt();
+>     scanner.nextLine();
+>     
+>     while(t-- > 0) {
+>       solve();
+>     }
+>   }
+> }
+> ```
 
 >[!code]- `Solution.java` when there is only a single input in a given test case
->```java title="Solution.java"
->import java.util.*;
-> 
->public class Solution {
->  static Scanner scanner = new Scanner(System.in);
+> ```java title="Solution.java"
+> import java.util.*;
+>  
+> public class Solution {
+>   static Scanner scanner = new Scanner(System.in);
 >  
 >  // Write your solution here
->  public static void solve() {
->    System.out.println("Write your solution inside the solve() method");
->  }
+>   public static void solve() {
+>     System.out.println("Write your solution inside the solve() method");
+>   }
 >  
->  public static void main(String[] args) {
->    solve();
->  }
->}
->```
+>   public static void main(String[] args) {
+>     solve();
+>   }
+> }
+> ```
 
 >[!tip] Basic Data Structure Operation Cheatsheet
 >[Java List](https://chat.openai.com/share/81de8ffd-081b-4f69-8503-cc7d08be3b9f)

@@ -6,11 +6,12 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-11-02T21:07:00
-Last Date: 2023-12-15T23:50:19+08:00
+Last Date: 2024-02-03T21:14:36+08:00
 References: 
 ---
 ## Abstract
 ---
+### Array
 ```java
 // Sort an array which has elements that are array of size 2
 // Sort from the highest first element of sub-array, if same then sort from the lowest second element of sub-array
@@ -28,4 +29,9 @@ Arrays.sort(longArray, (a, b) -> {
 
 // Use the built-in comparator will not lead to overflow issue
 Arrays.sort(points, (a, b) -> Integer.compare(a[0], b[0]));
+```
+
+### Dyanmic List
+```java
+Collections.sort(inputList, Comparator.comparingInt(a -> a[0] + a[1]));
 ```
