@@ -60,8 +60,7 @@
 </br>
 
 - [Combination Circuit](https://notes.yxy.ninja/Computer-Organisation/Combination-Circuit/)
-- [Synchronous Sequential Circuit](https://notes.yxy.ninja/Computer-Organisation/Synchronous-Sequential-Circuit/)
-- [Asynchronous Sequential Circuits](https://notes.yxy.ninja/Computer-Organisation/Asynchronous-Sequential-Circuits/)
+- [Sequential Circuit](https://notes.yxy.ninja/Computer-Organisation/Sequential-Circuit/)
 - [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
 </br>
 

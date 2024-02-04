@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-10-07T16:38:29+08:00
-Last Date: 2024-01-03T15:15:45+08:00
+Last Date: 2024-02-04T18:23:14+08:00
 References: 
 ---
 ## Abstract
@@ -21,7 +21,7 @@ References:
 - A device which can remember value *indefinitely*
 - Change value on command from its inputs
 - A basic unit of storage element, able to store 1 [[Computer Data Representation#Bit]]
-- 2 Types - [[Latch]] & [[Flip-flops]]
+- 2 Types - [[Sequential Circuit#Latch]] & [[Sequential Circuit#Flip-flops]]
 
 ### Physical Address
 - The address that points to a collection of [[#Memory Element]], usually 8 to form 1 [[Computer Data Representation#Byte]]

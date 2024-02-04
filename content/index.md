@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-01-27T20:01:09+08:00
+Last Date: 2024-02-04T18:30:21+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---
@@ -66,8 +66,7 @@ I am still reconstructing some of the notes and sorting out the taggings. Some n
 </br>
 
 - [Combination Circuit](https://notes.yxy.ninja/Computer-Organisation/Combination-Circuit/)
-- [Synchronous Sequential Circuit](https://notes.yxy.ninja/Computer-Organisation/Synchronous-Sequential-Circuit/)
-- [Asynchronous Sequential Circuits](https://notes.yxy.ninja/Computer-Organisation/Asynchronous-Sequential-Circuits/)
+- [Sequential Circuit](https://notes.yxy.ninja/Computer-Organisation/Sequential-Circuit/)
 - [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
 </br>
 

@@ -7,12 +7,12 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2023-12-26T19:41:41+08:00
+Last Date: 2024-02-04T18:20:49+08:00
 References: 
 ---
 ## Abstract
 ---
-- A group of [[Latch]]
+- A group of [[Sequential Circuit#Flip-flops]]
 - Accessible from [[Instruction]]
 
 ## 2 main purposes
