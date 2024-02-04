@@ -15,7 +15,8 @@
     "underThisFolder": "dans ce dossier"
   },
   "footer": {
-    "createdWith": "Créé avec"
+    "createdWith": "Créé avec",
+    "createdBy": "Créé par"
   },
   "graph": {
     "graphView": "Vue Graphique"
