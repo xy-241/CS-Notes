@@ -13,6 +13,7 @@ const config: QuartzConfig = {
     baseUrl: "notes.yxy.ninja",
     ignorePatterns: ["private", "Templates", ".obsidian", "Personal", "Archive", "Omnivore", "**/*.excalidraw.md"],
     defaultDateType: "modified",
+    locale: "en-US",
     theme: {
       typography: {
         header: "Geist",
@@ -58,6 +59,7 @@ const config: QuartzConfig = {
       Plugin.SyntaxHighlighting(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false, enableYouTubeEmbed: true}),
       Plugin.GitHubFlavoredMarkdown(),
+      Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
     ],

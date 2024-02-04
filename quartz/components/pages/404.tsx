@@ -1,6 +1,7 @@
-import { QuartzComponentConstructor } from "../types"
+import { i18n } from "../../i18n/i18next"
+import { QuartzComponentConstructor, QuartzComponentProps } from "../types"
 
-function NotFound() {
+function NotFound({ cfg }: QuartzComponentProps) {
   return (
     <article class="popover-hint">
       <h1>Oops</h1>
@@ -8,6 +9,7 @@ function NotFound() {
 
       <p>Meanwhile, here is a cute cat to express my apologies 🥺👉🏻👈🏻</p>
       <img src={"https://cataas.com/cat/cute/says/Github Star Pls?fontColor=white&fontSize=50"} alt={"cuteCat"} />
+      {/* <p>{i18n(cfg.locale, "404")}</p> */}
     </article>
   )
 }
