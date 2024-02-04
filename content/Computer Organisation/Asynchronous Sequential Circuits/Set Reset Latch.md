@@ -6,10 +6,10 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-02-01T10:25:03+08:00
+Last Date: 2024-02-04T17:33:41+08:00
 References: 
-sr-due: 2024-02-04
-sr-interval: 3
+sr-due: 2024-02-10
+sr-interval: 6
 sr-ease: 190
 description: A latch that stores a single bit of computer data and allows for resetting the stored bit.
 ---
@@ -41,7 +41,7 @@ description: A latch that stores a single bit of computer data and allows for re
 </br>
 
 >[!question] What is the output when latch first turned on without any inputs?
-> In an ideal case, the output will be switching from **on** to **off** in **super short interval**
+> In an ideal case, the output will be switching from **on** to **off** in **super short interval**. To human eyes, it is always on
 > 
 > However, in the real world, even the same two gates with the same wire will have a slightly different [[Logic Gates#Gate Delay]]. Sometimes, one gate may have a shorter gate delay than another
 > 

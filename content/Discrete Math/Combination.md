@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-02-02T09:58:13+07:00
+Last Date: 2024-02-04T15:51:06+08:00
 References: 
 draft: 
 description: Exploring the binomial coefficient, delving into two formulas for its calculation. Formula 1 utilizes recursion, while Formula 2 involves factorials. We also touch upon properties like symmetry and its representation in Pascal's Triangle.
-sr-due: 2024-02-04
-sr-interval: 2
+sr-due: 2024-02-07
+sr-interval: 3
 sr-ease: 150
 ---
 ## Abstract
@@ -202,7 +202,7 @@ $$
 $$
 (a+b)^{n}= \sum_{k=0}^{n} \binom{n}{k}a^{n-k}b^{k}
 $$
-- If both $a$ and $b$ are 1, the $(1+1)^{n}=2^{n}$ which is the **Sum of Binomial Coefficient**
+- If both $a$ and $b$ are 1, then $(1+1)^{n}=2^{n}$ which is the **Sum of Binomial Coefficient**
 
 ### Pascal's Triangle
 ![[pascals_triangle.png]]

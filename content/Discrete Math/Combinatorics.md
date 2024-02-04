@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-20, 15:49
-Last Date: 2024-02-02T10:09:48+07:00
+Last Date: 2024-02-04T16:42:11+08:00
 References: 
 draft: 
 description: 
@@ -15,4 +15,7 @@ description:
 ---
 - Deals with [[Counting]], [[Permutation]] and [[Combination]] of objects etc
 - "How many ways can a certain event occur?" or "How many arrangements are possible with a given set of elements?"
-- Usually, the goal is to find a way to **count the combinations** efficiently without **generating each combination** separately
+- Usually, the goal is to find a clever way to **count the combinations** efficiently without **generating each combination** separately
+
+>[!tip] Common Problem Solving Approach
+> A combinatorial problem can often be solved using a [[Recursion#Recursion Function]]
