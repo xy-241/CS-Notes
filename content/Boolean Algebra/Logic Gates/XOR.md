@@ -6,45 +6,64 @@ Author Profile:
 tags:
   - boolean_algebra
   - computer_organisation
+  - cp
 Creation Date: 2023-09-21T10:01:00
-Last Date: 2023-12-24T17:08:01+08:00
+Last Date: 2024-02-05T18:47:21+08:00
 References: 
+sr-due: 2024-02-06
+sr-interval: 1
+sr-ease: 230
 ---
 ## Abstract
 ---
-- *Exclusive OR*, *difference*
 $$
 B - A = \{x \in U: x \in B \land x \notin A\}
 $$
+- **Exclusive OR**, **difference**
 - Returns true only when 2 inputs aren't the same
 
-![[XOR.png]]
 
-## Properties
----
+
 ### Self-Inverse
-- `a ^ a = 0`
-- `a` [[XOR]] `a` is always 0
+- $a\oplus a=0$
+
+>[!info] XOR summation
+>Given a list of [[Integer (整数)]] $[a_1,a_2,\ldots,a_{n-1},a_n]$, let $x$  be the XOR summation of the list of integers $x= a_{1}\oplus a_{2}\ldots\oplus a_{n-1}\oplus a_{n}$ , and then we put $x$ into the list. Shuffle the list randomly
+>
+>**Now when we pick the first element or a random element from the list, we are sure it is the XOR summation of the rest of the integers**
+>
+> **Proof** using [[Mathematical Proof#Proof by Exhaustion/Brute-force/Cases]] and **Self-inverse**, [[#Own-Inverse]] and [[Algebra Properties#Commutativity (交换律)]]. There are 2 possible outcomes of picking a random integer from the list
+>1. $x$, $x$ is the XOR summation by definition
+>2. $a_1$ an integer that is in the given list
+>	- For $a_1$ to be the XOR Summation of the rest of the elements, it must fulfil the following $a_{1}= a_{2}\ldots\oplus a_{n-1}\oplus a_{n}\oplus x$ 
+>	- We can expand the $x$  at the RHS, and we get $(a_{2}\oplus \ldots\oplus a_{n-1}\oplus a_{n})\oplus (a_{1}\oplus a_{2}\ldots\oplus a_{n-1}\oplus a_{n})$ 
+>	- We can re-arrange the RHS with commutativity, and we get $a_{1}\oplus a_{2}\oplus a_{2} \ldots\oplus a_{n-1}\oplus a_{n-1} \oplus a_{n}\oplus a_{n}$ 
+>	- With Self-Inverse and [[#Own-Inverse]], we can reduce the RHS to $a_{1}$
+>	- Since RHS is equal to LHS, $a_{1}= a_{2}\ldots\oplus a_{n-1}\oplus a_{n}\oplus x$  is valid. Thus $a_{1}$ is the XOR summation of the rest of the elements
+>	  
+>Practice problem: [Codeforces - XOR Mixup](https://codeforces.com/contest/1698/problem/A)
+
 ### Own-Inverse
-- `a ^ b ^ b = a`
-- W always get back the another half by [[XOR]] the another half one more time. Because [[#Self-Inverse]], `b ^ b = 0`
+- $a\oplus 0 = a$
 
-## Tricks
----
-### Swapping values 
-```java
-public class MyClass {
-    public static void main(String args[]) {
-      int x=10;
-      int y=25;
-      
-      x = x ^ y; // x ^ x = y, x ^ y = x
-      y = x ^ y; // x
-      x = x ^ y; // y
+>[!bigbrain] Chemistry with Self-Inverse
+>Given $a\oplus b$, we can get back $a$ by $a\oplus b \oplus b$ . Because $b\oplus b = 0$ based on [[#Self-Inverse]], and $a\oplus 0 =a$ based on Own-Inverse
+>```java title="Swapping values"
+> public class MyClass {
+>     public static void main(String args[]) {
+>       int x=10;
+>       int y=25;
+>       
+>       x = x ^ y; // x ^ x = y, x ^ y = x
+>       y = x ^ y; // x
+>       x = x ^ y; // y
+> 
+>       System.out.println("x: " + x);
+>       System.out.println("y: " + y);
+>     }
+> }
+> ```
+> 
 
-      System.out.println("x: " + x);
-      System.out.println("y: " + y);
-    }
-}
-```
-
+### Logic Gate Implementation
+![[XOR.png|500]]
