@@ -1,7 +1,7 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import style from "./styles/footer.scss"
 import { version } from "../../package.json"
-import { i18n } from "../i18n/i18next"
+import { i18n } from "../i18n"
 
 interface Options {
   links: Record<string, string>
@@ -18,7 +18,7 @@ export default ((opts?: Options) => {
         <div class="giscus" style={{ marginTop: "5rem" }}></div>
         <hr />
         <p>
-          {i18n(cfg.locale, "footer.createdBy")}{" "}
+          {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://www.linkedin.com/in/xinyang-yu/">Xinyang YU</a>, © {startYear} - {currYear}
         </p>
         <ul>

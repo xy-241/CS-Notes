@@ -1,4 +1,4 @@
-import { i18n } from "../../i18n/i18next"
+import { i18n } from "../../i18n"
 import { QuartzComponentConstructor, QuartzComponentProps } from "../types"
 
 function NotFound({ cfg }: QuartzComponentProps) {
@@ -9,7 +9,8 @@ function NotFound({ cfg }: QuartzComponentProps) {
 
       <p>Meanwhile, here is a cute cat to express my apologies 🥺👉🏻👈🏻</p>
       <img src={"https://cataas.com/cat/cute/says/Github Star Pls?fontColor=white&fontSize=50"} alt={"cuteCat"} />
-      {/* <p>{i18n(cfg.locale, "404")}</p> */}
+
+    {/* <p>{i18n(cfg.locale).pages.error.notFound}</p> */}
     </article>
   )
 }
