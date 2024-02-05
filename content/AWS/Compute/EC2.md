@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-10T13:12:02+08:00
-Last Date: 2024-01-27T00:53:48+08:00
+Last Date: 2024-02-05T13:30:41+08:00
 References: 
 ---
 ## Abstract
@@ -19,7 +19,7 @@ References:
 - **Obtain** the **tags** and **id** of all EC2
 ```bash
 aws ec2 describe-instances \
-| jq '.Reservations[].Instances[] | {Tags: .Tags, InstanceId: .InstanceId}'
+| jq '.Reservations[].Instances[] | {Tags: .Tags, InstanceId: .InstanceId, State: .State}'
 ```
 
 - **Start** a particular **EC2 instance**
