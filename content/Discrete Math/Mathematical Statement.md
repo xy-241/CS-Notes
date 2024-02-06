@@ -6,18 +6,19 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-02T22:09:00
-Last Date: 2023-12-31T19:17:23+08:00
+Last Date: 2024-02-06T08:06:44+08:00
 References: 
 ---
 ## Abstract
 ---
-- Also known as *Proposition* 
+- Also known as **Proposition** 
 - 3 important types are [[#Universal]], [[#Conditional]] & [[#Existential]]
-- We can form *statements* that are [[#Universal]] & [[#Conditional]], or more to form *complex statements*
-- Either `True` or `False`
->[!caution] 
->- Doesn't depend on any *Variable*, unless it is [[Propositional Logic#Logical Equivalence]] equation
->- Not in a question form
+- We can form **statements** that are [[#Universal]] & [[#Conditional]], or more to form **complex statements**
+
+>[!caution]
+>1. Doesn't depend on any **Variable**, unless it is [[Propositional Logic#Logical Equivalence]] equation
+>2. Not in a question form
+>3. Either `True` or `False`
 ## Different Types of Statements
 ---
 ### Universal
@@ -52,14 +53,11 @@ $$
 - Make use of [[#Negation of Universal]] & [[Conditional Statement#Implication Law]]
 
 ### Universal Conditional
+$$
+\forall x (if~P(x) \rightarrow Q(x))
+$$
 - Made of [[Predicate#Symbol]], [[Predicate#Variable]] & [[Predicate#Quantifiers]] & [[Conditional Statement]]
-$$
-\forall x (if \: P(x) \rightarrow Q(x))
-$$
-- Can be simplified to [[#Universal]]
-$$
-\forall x \in P, Q(x)
-$$
+- Can be simplified to [[#Universal]] $\forall x \in P, Q(x)$
 ### Conditional
 - [[Conditional Statement]]
 - If..., then...
@@ -81,7 +79,8 @@ $$
 - Make up with [[#Statement]] variables & [[#Logical Connectives]]
 ### Compound Statement
 - Make up with [[#Statement]] variables & [[#Logical Connectives]]
->[!tip] When the statement has [[Conditional Statement]], convert it using [[Conditional Statement#Implication Law]] to make it much less confusing
+>[!tip] Simplification
+>When the statement has [[Conditional Statement]], convert it using [[Conditional Statement#Implication Law]] to make it much less confusing
 
 
 ### Tautology `t`
