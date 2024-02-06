@@ -6,9 +6,12 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-15T19:39:44
-Last Date: 2024-02-05T19:31:59+08:00
+Last Date: 2024-02-06T14:10:07+08:00
 References: 
 description: Discusses the concept of asynchronous and synchronous sequential circuits, touching on level-sensitive and edge-triggered circuits, latches and flip-flops, Emphasising the benefits of synchronization in the design and analysis of circuits.
+sr-due: 2024-02-08
+sr-interval: 2
+sr-ease: 236
 ---
 ## Abstract
 ---
@@ -37,8 +40,8 @@ description: Discusses the concept of asynchronous and synchronous sequential ci
 - Output is affected immediately with by the input as long as the control signal ([[Clock Oscillator#Clock Signal]], high in the diagram) is active
 </br>
 
-- **Active High** when level sensitive is high
-- **Active Low** when level sensitive is low
+- **Active High** when it is considered to be active when level is high
+- **Active Low** when it is considered to be active when level is low
 ### Latch
 - [[#Asynchronous Sequential Circuit]] that is able to remember a [[Computer Data Representation#Bit]] when the **input power turns to inactive**
 
@@ -53,7 +56,7 @@ description: Discusses the concept of asynchronous and synchronous sequential ci
 
 ## Synchronous Sequential Circuit
 ---
-- [[Sequential Circuit]] that is [[#Edge-triggered]], aka the state only changes at **controlled time interval** achieved with [[Clock Oscillator]], not a continuous period of time
+- [[Sequential Circuit]] that is [[#Edge-triggered]], aka the state only changes at **controlled time interval** achieved with [[Clock Oscillator]], not changing as many times as possible within a continuous period of time
 
 >[!success] Benefit of Synchronisation
 >![[sync_sequential_circuit.gif|500]]
