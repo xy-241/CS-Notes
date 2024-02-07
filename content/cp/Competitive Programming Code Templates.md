@@ -8,7 +8,7 @@ tags:
   - java
   - cpp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2024-02-03T20:54:34+08:00
+Last Date: 2024-02-07T13:37:45+08:00
 References: 
 draft: 
 ---
@@ -32,18 +32,20 @@ java Solution.java < input.txt
 >[!code]- `Solution.java` when there are multiple inputs in a single test case
 > ```java title="Solution.java"
 > import java.util.*;
+> import java.io.*;
 > 
 > public class Solution {
->   static Scanner scanner = new Scanner(System.in);
+>   static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 > 
 >  // Write your solution here
->   public static void solve() {
+>   public static void solve() throws IOException {
 >     System.out.println("Write your solution inside the solve() method");
+>     // StringTokenizer st = new StringTokenizer(br.readLine());
+>     // Integer.parseInt(st.nextToken());
 >   }
 > 
->   public static void main(String[] args) {
->     int t = scanner.nextInt();
->     scanner.nextLine();
+>   public static void main(String[] args) throws IOException {
+>     int t = Integer.parseInt(br.readLine());
 >     
 >     while(t-- > 0) {
 >       solve();
@@ -55,16 +57,19 @@ java Solution.java < input.txt
 >[!code]- `Solution.java` when there is only a single input in a given test case
 > ```java title="Solution.java"
 > import java.util.*;
+> import java.io.*;
 >  
 > public class Solution {
->   static Scanner scanner = new Scanner(System.in);
+>   static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 >  
 >  // Write your solution here
->   public static void solve() {
+>   public static void solve() throws IOException {
 >     System.out.println("Write your solution inside the solve() method");
+>     // StringTokenizer st = new StringTokenizer(br.readLine());
+>     // Integer.parseInt(st.nextToken());
 >   }
 >  
->   public static void main(String[] args) {
+>   public static void main(String[] args) throws IOException  {
 >     solve();
 >   }
 > }
@@ -73,6 +78,9 @@ java Solution.java < input.txt
 >[!tip] Basic Data Structure Operation Cheatsheet
 >[Java List](https://chat.openai.com/share/81de8ffd-081b-4f69-8503-cc7d08be3b9f)
 
+>[!tip] Avoid Potential TLE
+>1. If there are many small segments that need to be printed out one by one. Consolidate them into one string with `StringBuilder`. Example: [without StringBuilder Buffer](https://codeforces.com/contest/1918/submission/245011751), [with StringBuilder Buffer](https://codeforces.com/contest/1918/submission/245279617)
+>2. Use `BufferedReader`, `InputStreamReader` and `StringTokenizer` to read in the input, instead of using `Scanner`
 
 ## CPP Code Template
 ---
