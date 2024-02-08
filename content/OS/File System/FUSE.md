@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-02-07, 16:20
-Last Date: 2024-02-07T17:52:11+08:00
+Last Date: 2024-02-08T13:41:51+08:00
 References: 
 draft: 
 description: FUSE (Filesystem in Userspace) lets programs manage filesystems without kernel privileges, enabling custom cloud storage mounts and powering tools like Rclone. It achieves this by acting as a bridge between user-space filesystem implementations and the kernel, forwarding requests and returning results.
@@ -19,11 +19,19 @@ description: FUSE (Filesystem in Userspace) lets programs manage filesystems wit
   </br>
   
 - Traditionally, filesystem operations like reading and writing files, creating directories, and managing file metadata are handled by the [[Kernel]]. However, FUSE allows these operations to be implemented in user space by user programs, outside the kernel
+</br>
+
+- The content of these file systems can come from anywhere: from the local disk, from across the network, from memory, or any other combination of sources
+
+
 
 >[!success] Flexibility 
 > Developer can create their own filesystem with customisations without the need to modify the Kernel
 > 
 > This is commonly used for mounted Cloud Storage. The files dropped into the mounted Cloud Storage is stored by making network calls instead of IO. We need to have a set of logic for this. FUSE allows us to introduce this new set of logic without modifying the kernel
+
+>[!success] Developer Friendly
+> Writing a file system using FUSE is orders of magnitude easier and quicker than the traditional approach of writing in-kernel file systems. Since FUSE file systems are regular applications (as opposed to [[Kernel#Kernel Module]]), you have just as much flexibility and choice in programming tools, debuggers, and libraries as you have if you were developing standard applications
 
 >[!example] Powers Popular Tools
 >- [Rclone](https://rclone.org/) - mount Cloud Storages as a local file system 

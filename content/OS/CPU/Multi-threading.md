@@ -6,39 +6,41 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-11T19:28:00
-Last Date: 2023-12-12T22:56:21+08:00
+Last Date: 2024-02-08T13:02:13+08:00
 References: 
 ---
 ## Abstract
 ---
-- Also known as *Hyper-threading*
-- A mechanism achieved with wither [[#Multi-threaded Chip]](true [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]]) or quick [[Context Switch]]([[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]) or *both*
-- Doesn't offer true [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]] on Single-Core [[CPU]] which only supports one [[Process (进程)]] running at a time
-- Thread-switching time is reduced to [[Latency Number |nanosecond]]
-- To users, [[CPU]] Speed is divided by the total number of [[Thread]] executing at the same time when multiple [[Thread]] sharing the same [[CPU#Core]]
-- Performance is a *fine balance* between performance gains from each [[Thread]] and [[#Overhead of Creating Thread]]
+- Also known as **Hyper-threading**
+- A mechanism achieved with [[#Multi-threaded Chip]](true [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]]) or quick [[Context Switch]]([[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]) or **both**
+</br>
+
+- Doesn't offer true Parallelism (并行性) on Single-Core [[CPU]] which only supports one [[Process (进程)]] running at a time
+- Thread-switching time is reduced to [[Latency Number |nanosecond]] compared to process-switching
+- To users, CPU Speed is divided by the total number of [[Thread]] executing at the same time when multiple [[Thread]] sharing the same [[CPU#Core]]
+</br>
+
+- Performance is a **fine balance** between performance gains from each [[Thread]] and Overhead of Creating Thread
+
+>[!caution]
+> 1. When there is a shared resource, we are likely to [[Race Condition (竞态条件)]] and [[Deadlock (死锁)]]
+> 2. Overhead of creating [[Thread]] can be significant when we are having a lot, more threads means more [[Context Switch]]
+
+>[!success] Improved Responsiveness
+> Can continue to run other [[Thread]] while waiting for I/O operations to complete
+> 
+> Run other Thread while one Thread is **waiting**
+
+>[!success] Improved Performance
+> Huge amount of performance gain is guaranteed when tasks are **stateless**, **independent** of each other & **long waiting time** incurs in the task
 
 
-## Benefits
----
-### Improved Responsiveness
-- Can continue to run other [[Thread]] while waiting for I/O operations to complete
-- Run other [[Thread]] while one [[Thread]] is waiting
-### Improved Performance
-- When tasks are stateless, independent of each other & long waiting time incurs in the task
-
-## Cons
----
-### More likely to get [[Race Condition (竞态条件)]]
-- Where there is a *shared resource*
-### More likely to get [[Deadlock (死锁)]]
-- Where there is a *shared resource*
-### Overhead of Creating [[Thread]]
 
 ## Terminologies
 ---
 ### Thread Safety (线程安全)
-- A piece of code that functions correctly during *simultaneous execution* by *multiple [[Thread]]* accessing the a *shared resource* without [[Race Condition (竞态条件)]] and [[Deadlock (死锁)]] etc
+- A piece of code that functions correctly when there is **simultaneous execution** of **multiple [[Thread]]**, adn all of them accessing the **same shared resource** 
+- Free of [[Race Condition (竞态条件)]] and [[Deadlock (死锁)]] etc
 
 ### Multi-threaded Chip
 - [[Control Unit]], [[Register]] & [[Pipeline]] are replicated

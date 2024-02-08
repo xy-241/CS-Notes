@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-01-27T20:03:51+08:00
+Last Date: 2024-02-08T13:41:34+08:00
 References: 
 description: Dive into the heart of your operating system and discover how kernels manage hardware, allocate resources, and keep your system running smoothly. Explore the trade-offs between microkernels and monolithic kernels, and learn about preemptive kernels that ensure a responsive user experience.
 ---
@@ -17,6 +17,11 @@ description: Dive into the heart of your operating system and discover how kerne
 
 - [[MacOS]]'s kernel is **XNU**
 - [[Windows]]'s kernel is **NT Kernel**
+
+
+### Kernel Module
+- Known as Kernel Extension in the context of MacOS and IOS
+- Extend the functionality of the [[Kernel]]
 
 ## Kernel Booting
 ---
