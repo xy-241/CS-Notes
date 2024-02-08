@@ -6,14 +6,17 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-21T11:25:00
-Last Date: 2024-02-08T09:36:57+08:00
+Last Date: 2024-02-08T10:29:22+08:00
 References: 
+sr-due: 2024-02-11
+sr-interval: 3
+sr-ease: 250
 ---
 ## Abstract
 ---
 - Also known as **Propositional Functions** & **Open Sentences**
 - Made of [[#Symbol|Predicate Symbol]] & finite number of [[#Predicate Variable]]
-- Example: let $P()$ stands for `is a student at NUS`, then  $P(x)$ stands for $x$` is a student at NUS`, where $x$ is the [[#Predicate Variable]], $P$ is the [[#Symbol]]
+- Example: let $P()$ stands for `is a student at NUS`, then  $P(x)$ stands for $x$ `is a student at NUS`, where $x$ is the Predicate Variable, $P$ is the [[#Symbol]]
 
 
 >[!caution] Dynamic Truth Value

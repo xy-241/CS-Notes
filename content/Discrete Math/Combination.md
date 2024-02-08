@@ -6,17 +6,17 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-02-04T15:51:06+08:00
+Last Date: 2024-02-08T10:40:25+08:00
 References: 
 draft: 
 description: Exploring the binomial coefficient, delving into two formulas for its calculation. Formula 1 utilizes recursion, while Formula 2 involves factorials. We also touch upon properties like symmetry and its representation in Pascal's Triangle.
-sr-due: 2024-02-07
-sr-interval: 3
-sr-ease: 150
+sr-due: 2024-02-17
+sr-interval: 9
+sr-ease: 170
 ---
 ## Abstract
 ---
-- The **selection of items** from a larger set **without considering the order** of selection
+- The **selection of items** from a larger set **without considering the order** of selection. That means each combination has an **unique set of items**
 - The number of combinations can be calculated using the [[#Binomial Coefficient]]
 
 ## Binomial Coefficient
@@ -31,9 +31,11 @@ sr-ease: 150
 
 >[!info] Binomial
 > - **Bi** means two
+> - Chinese name is 二项式
 > - A mathematical expression or algebraic equation that consists of **two terms** connected by a **plus** or **minus** sign, general form is $(a+b)$ or $(a-b)$
 
 >[!info] Coefficient
+> - Chinese name is 系数
 > - Constant [[Factor]] that multiplies a variable
 > - For example,  $5$ is the coefficient of $5x$
 
@@ -103,12 +105,12 @@ $$
 >Likely to have **timeout error**
 
 >[!success] No Overflow Issue
->As long as the given $n$ is within the range of `long`, we will not face any overflow issue
+>As long as the given $n$ and the result are within the range of `long`, we will not face any overflow issue
 ### Formula 2
 $$
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
 $$
-- $n!$ calculates the [[Permutation]] of n-element where the **order matters**, so we will have more than one counting which has the same set of elements but different order. However [[Combination]] doesn't care about the order, and $n!$ will overcount. Thus, we introduce the [[Factor|Divisor]] $k!$ and $(n-k)!$ to avoid overcounting and count the combination we want
+- $n!$ calculates the [[Permutation]] of n-element where the **order matters**, so we will have more than one counting which has the same set of elements but different order. However [[Combination]] doesn't care about the order. Thus, $n!$ will overcount. To counter this, we introduce the [[Factor|Divisor]] $k!$ and $(n-k)!$ to avoid overcounting and only count the combination we want
 - $\frac{n!}{(n-k)!}$ means how many ways to choose $k$ elements from $n$ element where the **order matters** 
 - $\frac{n!}{k!(n-k)!}$ removes the counting that has the same set of elements
 </br>
