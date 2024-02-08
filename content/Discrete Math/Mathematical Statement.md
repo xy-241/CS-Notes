@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-02T22:09:00
-Last Date: 2024-02-06T08:06:44+08:00
+Last Date: 2024-02-08T09:35:06+08:00
 References: 
 ---
 ## Abstract
@@ -16,13 +16,13 @@ References:
 - We can form **statements** that are [[#Universal]] & [[#Conditional]], or more to form **complex statements**
 
 >[!caution]
->1. Doesn't depend on any **Variable**, unless it is [[Propositional Logic#Logical Equivalence]] equation
+>1. Doesn't depend on any **variable** like how [[Predicate]] depends on [[Predicate#Predicate Variable]], unless it is [[Propositional Logic#Logical Equivalence]] equation
 >2. Not in a question form
 >3. Either `True` or `False`
 ## Different Types of Statements
 ---
 ### Universal
-- Made of [[Predicate#Symbol]], [[Predicate#Variable]] & [[Predicate#Quantifiers]]
+- Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
 $$
 \forall x \in D, Q(x)
 $$
@@ -30,7 +30,7 @@ $$
 - `false` iff `Q(x)` is `false for at least one x` in `D` 
 - For simple ones, usually universal comes with [[Conditional Statement]]
 ### Existential
-- Made of [[Predicate#Symbol]], [[Predicate#Variable]] & [[Predicate#Quantifiers]]
+- Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
 $$
 \exists x \in D, Q(x)
 $$
@@ -56,7 +56,7 @@ $$
 $$
 \forall x (if~P(x) \rightarrow Q(x))
 $$
-- Made of [[Predicate#Symbol]], [[Predicate#Variable]] & [[Predicate#Quantifiers]] & [[Conditional Statement]]
+- Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]] & [[Conditional Statement]]
 - Can be simplified to [[#Universal]] $\forall x \in P, Q(x)$
 ### Conditional
 - [[Conditional Statement]]
