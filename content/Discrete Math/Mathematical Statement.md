@@ -6,22 +6,27 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-02T22:09:00
-Last Date: 2024-02-08T09:35:06+08:00
+Last Date: 2024-02-09T08:54:14+08:00
 References: 
 ---
 ## Abstract
 ---
 - Also known as **Proposition** 
-- 3 important types are [[#Universal]], [[#Conditional]] & [[#Existential]]
-- We can form **statements** that are [[#Universal]] & [[#Conditional]], or more to form **complex statements**
+- Can be presented with variables like `p`, `q`, `r` & `s` which return either `True` or `False` etc
+- 3 important types are [[#Universal]], [[Conditional Statement]] & [[#Existential]]
+- We can form **statements** that are [[#Universal]] & Conditional Statement, or more to form **complex statements**
+
+>[!tip] Keep It Atomic
+>This makes the cognitive load low, easier to build on top of the statement, especially for [[Mathematical Proof]] that is complicated
 
 >[!caution]
->1. Doesn't depend on any **variable** like how [[Predicate]] depends on [[Predicate#Predicate Variable]], unless it is [[Propositional Logic#Logical Equivalence]] equation
+>1. Doesn't depend on any **variable** like how [[Predicate]] depends on [[Predicate#Predicate Variable]], unless it is [[Propositional Logic#Logical Equivalence]] equation. For example $\neg(\forall x, P(x)) \equiv \exists x, \neg P(x)$
 >2. Not in a question form
->3. Either `True` or `False`
-## Different Types of Statements
+>3. Either `True` or `False`, but not both at the same time
+
+
+## Universal
 ---
-### Universal
 - Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
 $$
 \forall x \in D, Q(x)
@@ -29,28 +34,13 @@ $$
 - `true` iff `Q(x)` is `true for every x` in `D`
 - `false` iff `Q(x)` is `false for at least one x` in `D` 
 - For simple ones, usually universal comes with [[Conditional Statement]]
-### Existential
-- Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
-$$
-\exists x \in D, Q(x)
-$$
-- `true` iff `Q(x)` is `true for at least one x` in `D`
-- `false` iff `Q(x)` is `false for all x` in `D` 
-- For simple ones, usually existential comes with [[Mathematical Statement#Logical Connectives|Conjunction]]
+
 ### Negation of Universal
 - [[Propositional Logic#Logical Equivalence]] to [[#Existential]]
 - `There is AT LEAST ONE that IS NOT`
 $$
 \neg(\forall x \in D, Q(x)) \equiv \exists x \in D, \neg  Q(x)
 $$
-### Negation of Existential
-- [[Propositional Logic#Logical Equivalence]] to [[#Universal]]
-- `ALL ARE NOT`
-$$
-\neg(\exists x \in D, Q(x)) \equiv \forall x \in D, \neg  Q(x)
-$$
-### Negation of Universal Conditional
-- Make use of [[#Negation of Universal]] & [[Conditional Statement#Implication Law]]
 
 ### Universal Conditional
 $$
@@ -58,18 +48,31 @@ $$
 $$
 - Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]] & [[Conditional Statement]]
 - Can be simplified to [[#Universal]] $\forall x \in P, Q(x)$
-### Conditional
-- [[Conditional Statement]]
-- If..., then...
+
+### Negation of Universal Conditional
+- Make use of [[#Negation of Universal]] & [[Conditional Statement#Implication Law]]
+## Existential
+---
+- Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
+$$
+\exists x \in D, Q(x)
+$$
+- `true` iff `Q(x)` is `true for at least one x` in `D`
+- `false` iff `Q(x)` is `false for all x` in `D` 
+- For simple ones, usually existential comes with [[Mathematical Statement#Logical Connectives|Conjunction]]
+
+### Negation of Existential
+- [[Propositional Logic#Logical Equivalence]] to [[#Universal]]
+- `ALL ARE NOT`
+$$
+\neg(\exists x \in D, Q(x)) \equiv \forall x \in D, \neg  Q(x)
+$$
+
 
 
 
 ## Terminologies
 ---
-### Statement
-- A sentence that is `True` or `False`, but not both
-- Can be presented with variables like `p`, `q`, `r` & `s` etc
-- The tip here is to keep it atomic, especially in [[Mathematical Proof]] that is complicated
 ### Logical Connectives 
 - Negation: `NOT` performed first
 - Disjunction: `OR` ,Conjunction: `AND` coequal, make sure proper parentheses is used to avoid [[Propositional Logic#Ambiguous]]
@@ -88,8 +91,7 @@ $$
 ### Contradiction `c`
 - [[#Statement/Propositional Form]] that is *always false*
 
-### Implicitly Quantified
-- The [[Predicate#Quantifiers]] are assumed without specified explicitly
+
 
 ### Vacuous Truth of Universal
 - Given the statement: `All balls in the bowl are blue`, however `no balls in the bowl`. The statement is vacuously true, because the [[#Negation of Universal]] is `One of the balls in the bowl isn't blue` which is obviously false
@@ -100,6 +102,3 @@ $$
 $$
 - It is *Vacuously True* if and only if `P(x)` is false `for every x in D`
 - [[#Vacuous Truth of Universal]] also applies here
-
-### Multiply-Quantified
-- *Statement* with more than one [[Predicate#Quantifiers]]

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-21T11:25:00
-Last Date: 2024-02-08T10:29:22+08:00
+Last Date: 2024-02-09T08:51:19+08:00
 References: 
 sr-due: 2024-02-11
 sr-interval: 3
@@ -51,8 +51,11 @@ sr-ease: 250
 > - The first one means for everyone (you, me, he), there is someone we love
 > - The second one means there is someone who is loved by everyone (you, me, he)
 
+#### Multiply-Quantified
+- [[Predicate]] with more than one [[Predicate#Quantifiers]]
 
-
+#### Implicitly Quantified
+- The [[#Quantifiers]] are assumed without specified explicitly
  
 ### Domain of Predicate Variable
 - The set of all values that may be substituted in place of the [[#Predicate Variable]]
