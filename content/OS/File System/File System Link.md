@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-20T14:13:00
-Last Date: 2024-01-17T19:05:12+08:00
+Last Date: 2024-02-09T16:57:24+08:00
 References: 
 description: Hard links save space by directly referencing data, while soft links navigate paths across different file territories.
 ---
@@ -47,6 +47,9 @@ ln -s <source-location> <symlink-location>
 # To symlink, while overwriting existing destination files
 ln -sf <source-location> <symlink-location>
 ```
+
+>[!bigbrain]- Can be used to manage dotfiles
+> Tools like [GNU Stow](https://www.gnu.org/software/stow/) helps to manage dotfiles in one place in an organised manner, and we can version control it with [[Git]]. Refer to [Stow has forever changed the way I manage my dotfiles](https://youtu.be/y6XCebnB9gs?si=j4oYPrbRk5bWfq2b) for more details
 
 ## Dangling File System Link
 ---

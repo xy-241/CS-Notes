@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-07T14:35:04+08:00
+Last Date: 2024-02-09T16:11:53+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -29,7 +29,7 @@ title:  My Macos Setup
 
 ## Basic Terminal - Must Have
 ---
--  [Brew - Package Manager](https://brew.sh/) 
+- [Brew - Package Manager](https://brew.sh/) 
 - [Install ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-on-many-platforms)
 </br>
 
@@ -67,7 +67,10 @@ echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.
 zsh # Refresh shell to confiure powerlevel10k
 p10k configure # Run this to reconfigure
 ```
-
+- `stow`
+```bash
+brew install stow
+```
 ## Terminal Productivity Tools
 ---
 - `zoxide`, `fzf`
