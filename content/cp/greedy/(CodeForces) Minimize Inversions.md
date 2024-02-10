@@ -21,10 +21,10 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2024-02-08, 10:52
-Last Date: 2024-02-09T15:29:20+08:00
+Last Date: 2024-02-10T16:14:26+08:00
 tags:
   - cp
-draft: "false"
+draft: 
 description: CP Solution
 ---
 [Original Problem](https://codeforces.com/contest/1918/problem/B)
@@ -45,7 +45,7 @@ description: CP Solution
 ### Conclusion
 - Basically think of the given 2 permutations as one, sort them based on the sum of elements on the same index
 - The sorting performs the swapping
-- The group of elements swapped to front means we sure have at least one reduction in permutation reversion, and the cost of the potential increment in permutation reversion is **relatively small**
+- The group of elements swapped to front means we sure have at least one reduction in permutation reversion, and the cost of the **potential increment** in permutation reversion is **relatively small**
 
 
 ## Space & Time Analysis
@@ -108,9 +108,9 @@ public class Solution {
 
 ## Personal Reflection
 ---
-- **Why it takes so long to solve:** *NIL*
-- **What you could have done better:** *NIL*
-- **What you missed:** *NIL*
-- **Ideas you've seen before:** *NIL*
-- **Ideas you found here that could help you later:** *NIL*
-- **Ideas that didn't work and why:** *NIL*
+- **Why it takes so long to solve:** Unable to see that we are able to group the 2 permutations into one, and apply [[Greedy Algorithm]] on it to find the solution
+- **What you could have done better:** hmm, probably practice more and try to abstract problems into math formula
+- **What you missed:** Group the element at the same index of the given two permutations into one
+- **Ideas you've seen before:** Greedy algorithm
+- **Ideas you found here that could help you later:** Abstract problems into math formula, and grouping the pairs
+- **Ideas that didn't work and why:** Didn't really have any ideas lol
