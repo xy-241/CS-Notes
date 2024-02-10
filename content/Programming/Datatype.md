@@ -8,15 +8,26 @@ tags:
   - rust
   - java
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-01-27T20:17:18+08:00
+Last Date: 2024-02-10T18:30:29+08:00
 References: 
 ---
 ## Abstract
 ---
 - Each type has a set of [[Operation]] associated with it
 
+>[!tip] Benefits of Explicit Datatype
+> 1. Save [[Main Memory]]
+> 2. **Generally speeds up** program, refer to this [video](https://www.youtube.com/watch?v=hwyRnHA54lI) for more details. However, use it with caution, refer to the block below for more information 
+> 
+
+>[!bigbrain]- Premature optimisation is the root of all evil
+> Something to note is that the size of your data can affect performance as well as memory usage. CPUs are specifically designed to handle 32 bit and 64 bit values very fast, and sometimes, counterintuitively, an 8 bit value may take longer to process. So, as with everything, **premature optimisation** is the **root of all evil**. 
+> 
+> Keep the integer as a 32 bit integer for now, if you have 10 million of them and have identified it as a problem that it uses too much memory then go down to a u8 or use *bit-packing methods*.
+>
+ > It's actually even more nuanced than that, because of [[CPU Cache#Cache Locality]], so actually smaller data can be faster and slower depending on the circumstance. But that's very complex and should be left to experimentation **if the need arises**.
 ### Primitive Datatype
-- Also known as *Built-in Datatype*
+- Also known as **Built-in Datatype**
 * Great performance since there isn't much abstraction like [[#Custom Datatype]]
 </br>
 
@@ -46,5 +57,8 @@ References:
 ---
 ### Statically Typed
 - The [[Datatype]] must be known during [[Compilation]]
+
+>[!success] Much More Readable Codes
+>Refer to this [video](https://youtu.be/hwyRnHA54lI?si=lrDIYGWl04qfdXdj&t=324) for more more details and example
 
  

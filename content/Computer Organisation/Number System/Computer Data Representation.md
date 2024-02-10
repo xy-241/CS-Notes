@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-17, 19:58
-Last Date: 2024-01-15T12:39:01+08:00
+Last Date: 2024-02-10T17:29:21+08:00
 References: 
 ---
 ## Abstract
@@ -43,6 +43,7 @@ $$
 ## Byte
 ---
 - A group of 8 [[#Bit]]
+- The smallest unit a programming language uses to store the data and instruction
 
 ## Word
 ---

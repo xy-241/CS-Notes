@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-01-31T10:14:46+08:00
+Last Date: 2024-02-10T18:11:53+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -62,8 +62,13 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 - [[Stack]] structure
 - Has a **default fixed size**, too many stack frame will lead to Stack Overflow
->[!question] Grows Downwards
->Stack Segment starts at a higher [[Memory Address]], then memory address decreases as we add in **Stack Frame**, thus **growing downwards**, so to remove stack frame, we need to increment the [[Register#Stack Pointer]]
+>[!question]- Grows Downwards
+>Stack Segment starts at a higher [[Memory Address]], then memory address decreases as we add in **Stack Frame**, thus **growing downwards** in terms of Memory Address, so to remove stack frame, we need to increment the [[Register#Stack Pointer]]
+
+>[!info]- Fun Fact Regarding Grow Downwards
+> Growing downwards is a convention from when computers had small memories and the stack was placed at the end of the [[#Data Segment]]. Nowadays the stack can be anywhere, but the convention stuck on, at the end of the day it makes no difference
+
+
 
 </br>
 
@@ -77,6 +82,8 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 >[!caution] Stack Overflow
 >Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment
+
+>[!caution] Variable Size Defined before Compilation
 
 >[!example]- XV6-RISCV Kernel Stack
 >```c {13}
@@ -145,3 +152,4 @@ description: Stack (automatic memory management for function variables), Heap (d
 ---
 - [Dive Into Systems - Virtual Memory](https://diveintosystems.org/book/C13-OS/vm.html)
 - [What is Ownership? - The Rust Programming Language](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html)
+- [WHY IS THE STACK SO FAST? - YouTube](https://www.youtube.com/watch?v=N3o5yHYLviQ)

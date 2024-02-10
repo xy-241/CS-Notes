@@ -7,7 +7,7 @@ tags:
   - OS
   - rust
 Creation Date: 2024-01-08, 09:48
-Last Date: 2024-01-23T17:41:03+08:00
+Last Date: 2024-02-10T17:46:06+08:00
 References: 
 draft: 
 ---
@@ -15,7 +15,7 @@ draft:
 ---
 - Also known as *Segmentation Violation*
 - Represented with `SIGSEGV`
-- A common [[Runtime Error]] that occurs when a [[Process (进程)]] wants access [[Virtual Memory]] that it isn't permitted to 
+- A common [[Runtime Error]] that occurs when a [[Process (进程)]] wants access [[Virtual Memory]] that it isn't permitted to. So the [[Kernel]] will terminate the process due to safety reasons 
 - Can be handled with [[Null Safety]]
 
 
