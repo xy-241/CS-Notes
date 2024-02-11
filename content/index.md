@@ -1,12 +1,12 @@
 ---
-title: Second Brain for CS
+title: Home Page
 Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-02-10T18:58:20+08:00
+Last Date: 2024-02-11T03:06:06+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---

@@ -6,14 +6,16 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-01-16T13:20:49+08:00
+Last Date: 2024-02-11T22:09:17+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
 - Basically a [[Set#Subset]] of [[Set#Cartesian Product]] filtered by some conditions which define the relation among the elements from the given [[Set]]
-- Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation. Each row is a actual [[Set#Order n-tuples]] inside the relation
+
+>[!example] Real-world Implication 
+> Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation aka all the rows that can be stored inside the database. Each row is a actual [[Set#Order n-tuples]] inside the relation
 
 
 ### Binary Relation
@@ -32,9 +34,9 @@ $$
 $$
 \forall x \in A, \forall z \in C (x S \circ R z \leftrightarrow (\exists y \in B (xRy \cap ySz)))
 $$
-- $x \in A$ and $z \in C$ are $S\circ R$ related
-	1. If there is a 'path' from `x` to `z`, there must have a path from ($x$ to $y$ and $y$ to $z$ )
-	2. If there is a path from ($x$ to $y$  and $y$ to $z$), there must a path from $x$ to $z$
+- For all $a$ in $A$ and all $z$ in $C$,  the below 2 conditions must be fulfilled in order to have composition of relation $S\circ R$
+	1. If there is a 'path' from $x$ to $z$, there must have a path from $x$ to $y$ AND $y$ to $z$ , the $S\circ R \rightarrow (\exists y \in B (xRy \cap ySz))$ part
+	2. If there is a 'path' from $x$ to $y$  and $y$ to $z$, there must has a path from $x$ to $z$, the $S\circ R \leftarrow (\exists y \in B (xRy \cap ySz))$ part
 
 ### Composition is Associative
 - Let $A, B, C, D$ be [[Set]]

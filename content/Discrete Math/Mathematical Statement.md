@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-02T22:09:00
-Last Date: 2024-02-10T15:28:42+08:00
+Last Date: 2024-02-11T21:49:47+08:00
 References: 
 sr-due: 2024-02-13
 sr-interval: 3
@@ -31,7 +31,7 @@ sr-ease: 250
 $$
 \forall x \in D, Q(x)
 $$
-- Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
+- Made of [[Predicate#Predicate Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
 - `true` iff `Q(x)` is `true for every x` in `D`
 - `false` iff `Q(x)` is `false for at least one x` in `D` 
 - For simple ones, usually universal comes with [[Conditional Statement]]
@@ -65,7 +65,7 @@ $$
 
 ## Existential
 ---
-- Made of [[Predicate#Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
+- Made of [[Predicate#Predicate Symbol]], [[Predicate#Predicate Variable]] & [[Predicate#Quantifiers]]
 $$
 \exists x \in D, Q(x)
 $$
