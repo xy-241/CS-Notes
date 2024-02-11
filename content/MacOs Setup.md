@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-09T16:11:53+08:00
+Last Date: 2024-02-12T01:08:54+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -261,7 +261,7 @@ brew install telnet
 
 brew install parallel
 ```
-
+- [balenaEtcher - Flash OS images to SD cards & USB drives](https://etcher.balena.io/?dmg=true#download-etcher)
 
 
 ## Cheatsheet

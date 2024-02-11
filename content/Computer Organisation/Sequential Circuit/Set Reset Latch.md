@@ -8,8 +8,8 @@ tags:
 Creation Date: 2023-10-07T16:38:28+08:00
 Last Date: 2024-02-04T18:21:26+08:00
 References: 
-sr-due: 2024-02-10
-sr-interval: 6
+sr-due: 2024-02-25
+sr-interval: 13
 sr-ease: 190
 description: A latch that stores a single bit of computer data and allows for resetting the stored bit.
 ---

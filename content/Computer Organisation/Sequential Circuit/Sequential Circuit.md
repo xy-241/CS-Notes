@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-15T19:39:44
-Last Date: 2024-02-06T14:10:07+08:00
+Last Date: 2024-02-12T00:16:14+08:00
 References: 
 description: Discusses the concept of asynchronous and synchronous sequential circuits, touching on level-sensitive and edge-triggered circuits, latches and flip-flops, Emphasising the benefits of synchronization in the design and analysis of circuits.
-sr-due: 2024-02-08
-sr-interval: 2
+sr-due: 2024-02-21
+sr-interval: 9
 sr-ease: 236
 ---
 ## Abstract
@@ -27,7 +27,7 @@ sr-ease: 236
 > ![[async_sequential_circuit_state_change_limitation.gif|500]]
 > The above 4-bit [[Register]] is made of 4 [[Data Latch]]. When the **Store Input** is active, the above asynchronous circuit will keep updating the state. If we want a particular state, we need to turn the Store Input to inactive which is hard to achieve in a reliable way. Because everything happens in a fraction of a second.
 > 
-> If we want to have precise control over state changes in a reliable manner, we can use a [[Sequential Circuit#Synchronous Sequential Circuit]] that is synchronised with a [[Clock Oscillator]].
+> If we want to have precise control over state changes in a reliable & predicable manner, we can use a [[Sequential Circuit#Synchronous Sequential Circuit]] which is synchronised with a [[Clock Oscillator]].
 
 ### Level Sensitive
 
@@ -37,11 +37,11 @@ sr-ease: 236
 
 
 - Also known as **Pulse-triggered**
-- Output is affected immediately with by the input as long as the control signal ([[Clock Oscillator#Clock Signal]], high in the diagram) is active
+- Output is affected immediately by the input as long as the control signal is active
 </br>
 
-- **Active High** when it is considered to be active when level is high
-- **Active Low** when it is considered to be active when level is low
+- **Active High** when it is considered to be **active** when **level is high**
+- **Active Low** when it is considered to be **active** when **level is low**
 ### Latch
 - [[#Asynchronous Sequential Circuit]] that is able to remember a [[Computer Data Representation#Bit]] when the **input power turns to inactive**
 
@@ -60,9 +60,9 @@ sr-ease: 236
 
 >[!success] Benefit of Synchronisation
 >![[sync_sequential_circuit.gif|500]]
-> Ability to coordinate and manage the flow of information within the circuit in a reliable way. 
+> Ability to coordinate and manage the flow of information within the circuit in a reliable & predicable way. 
 > 
-> The flat parts are the breathing room to set things up like turning off the store signal if we want it to stop storing data, making it easier to **design** and **analyze**.
+> The flat parts are the **breathing room** to set things up like turning off the store signal if we want it to stop storing data, making it easier to **design** and **analyze**.
 ### Edge-triggered
 
 ![[positive_edge_triggered.png|400]]

@@ -8,10 +8,10 @@ tags:
   - computer_organisation
   - cp
 Creation Date: 2023-09-21T10:01:00
-Last Date: 2024-02-06T13:55:40+08:00
+Last Date: 2024-02-12T00:24:24+08:00
 References: 
-sr-due: 2024-02-08
-sr-interval: 2
+sr-due: 2024-02-20
+sr-interval: 8
 sr-ease: 230
 ---
 ## Abstract
@@ -48,7 +48,7 @@ $$
 
 >[!bigbrain] Chemistry with Self-Inverse
 >Given $a\oplus b$, we can get back $a$ by $a\oplus b \oplus b$ . Because $b\oplus b = 0$ based on [[#Self-Inverse]], and $a\oplus 0 =a$ based on Own-Inverse
->```java title="Swapping values"
+>```java title="Swapping values without introducing a new variable"
 > public class MyClass {
 >     public static void main(String args[]) {
 >       int x=10;
@@ -67,7 +67,7 @@ $$
 
 ### Logic Gate Implementation
 ![[XOR.png|300]]
-The [[Mathematical Statement]] is $(A \lor B) \land (\not A \lor \not B)$
+The [[Mathematical Statement]] is $(A \lor B) \land (\neg A \lor \not B)$
 1. [[OR]]: $A$ **or** $B$ must be true
 2. [[AND]], [[NOT]] (De Morgan's laws): Either $A$ or $B$ are `false`
 3. [[AND]]: The above 2 must be true in order to let the statement to be true

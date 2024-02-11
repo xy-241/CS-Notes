@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-01-27, 19:55
-Last Date: 2024-02-02T00:47:53+07:00
+Last Date: 2024-02-12T00:45:32+08:00
 References: 
 draft: 
 description: 
-sr-due: 2024-02-12
-sr-interval: 9
+sr-due: 2024-03-04
+sr-interval: 21
 sr-ease: 230
 ---
 ## Abstract
@@ -29,7 +29,7 @@ sr-ease: 230
 - The **first program** that starts when booting up a computer
 	1. Checks [[Main Memory]] capacity
 	2. Check [[IO Device]]
-	3. Scanning [[IO Bus#PCI Bus]] etc to detect all devices attached
+	3. Scanning [[IO Bus]] to detect all devices attached
 	4. Determine the [[#Boot Device]] by trying out a list of devices stored in the **CMOS**
 	5. The [[#Boot loader]] inside the boot device will carry out the next step
 
