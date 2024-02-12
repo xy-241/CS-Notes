@@ -6,18 +6,24 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-02-12T19:13:13+08:00
+Last Date: 2024-02-12T19:36:10+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---
 ![[ninja.jpg|800]]
+
+>[!quote]
+> 循序渐进, 负重前行. 砥砺前进, 天道酬勤.
+> 
+> Step by step, embrace great challenges. Advance with determination, diligence brings rewards.
 
 Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
 
 ## 🎓 NUS Computer Science
 ---
 - [[CS1231S Discrete Structures]]
-- [[CS2100 Discrete Structures]]
+- [[CS2100 Computer Organisation]]
+- [[CS2106 Introduction to Operating Systems]]
 
 ## 🏭 System Design
 ---
