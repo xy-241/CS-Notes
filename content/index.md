@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-02-12T16:49:21+08:00
+Last Date: 2024-02-12T19:13:13+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---
@@ -17,6 +17,7 @@ Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues
 ## 🎓 NUS Computer Science
 ---
 - [[CS1231S Discrete Structures]]
+- [[CS2100 Discrete Structures]]
 
 ## 🏭 System Design
 ---
@@ -70,12 +71,13 @@ Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues
 - [Pipeline Hazard](https://notes.yxy.ninja/Computer-Organisation/Pipeline-Hazard/)
 </br>
 
+- [Logic Gates](https://notes.yxy.ninja/Boolean-Algebra/Logic-Gates/)
 - [Combination Circuit](https://notes.yxy.ninja/Computer-Organisation/Combination-Circuit/)
 - [Sequential Circuit](https://notes.yxy.ninja/Computer-Organisation/Sequential-Circuit/)
 - [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
 </br>
 
-- [MISC](https://notes.yxy.ninja/Computer-Organisation/Terminologies/)
+
 
 ## 🧠 Data Structure & Algorithm
 ---

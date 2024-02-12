@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Perform [[Instruction-Level Parallelism]] based on the prediction of if [[Branching]] is going out of the loop or going back to the start of the loop
+- Perform [[Instruction-Level Parallelism]] based on the prediction of if [[Pipeline Branching]] is going out of the loop or going back to the start of the loop
 - There are many different [[Branch Prediction Strategies (Heuristics)]]
 - [[CPU]] use multiple of the [[Branch Prediction Strategies (Heuristics)]]
 

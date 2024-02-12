@@ -21,7 +21,7 @@ References:
 ### Static 
 - [[Rule-based Approaches]] that may only consider one [[Instruction]] at a time
 ### Random
-- Pick randomly between whether a [[Branching]] is taken or not
+- Pick randomly between whether a [[Pipeline Branching]] is taken or not
 - Aim for the perfect middle ground of 50%
 ### Dynamic 
 - Typically has some learning or storage capability to detect patterns

@@ -59,12 +59,11 @@
 - [Pipeline Hazard](https://notes.yxy.ninja/Computer-Organisation/Pipeline-Hazard/)
 </br>
 
+- [Logic Gates](https://notes.yxy.ninja/Boolean-Algebra/Logic-Gates/)
 - [Combination Circuit](https://notes.yxy.ninja/Computer-Organisation/Combination-Circuit/)
 - [Sequential Circuit](https://notes.yxy.ninja/Computer-Organisation/Sequential-Circuit/)
 - [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
 </br>
-
-- [MISC](https://notes.yxy.ninja/Computer-Organisation/Terminologies/)
 
 ## 🧠 Data Structure & Algorithm
 - [Problem Solving Tricks](https://notes.yxy.ninja/tags/problem_solving)

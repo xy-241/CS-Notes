@@ -17,7 +17,7 @@ References:
 
 ## Benefits
 ---
-- Optimised for computation that requires sequential execution(One [[Instruction]] after another [[Instruction]]), [[Branching]] and logic
+- Optimised for computation that requires sequential execution(One [[Instruction]] after another [[Instruction]]), [[Pipeline Branching]] and logic
 
 
 ## Terminologies

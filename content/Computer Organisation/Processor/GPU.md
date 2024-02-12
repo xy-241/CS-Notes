@@ -32,7 +32,7 @@ References:
 ---
 ![[cpu vs gpu comparison.png|700]]
 
-- [[CPU]] one core is way more power, and able to handle complication logics like [[Branching]]
+- [[CPU]] one core is way more power, and able to handle complication logics like [[Pipeline Branching]]
 - However, a lot of the real world application needs to run [[Instruction]] in a sequential manner
 - GPU shines when we need [[High-performance Computing#Parallelism (并行性)]]
 

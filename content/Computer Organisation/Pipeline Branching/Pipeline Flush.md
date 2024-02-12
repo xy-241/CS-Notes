@@ -11,13 +11,13 @@ References:
 ---
 ## Abstract
 ---
-- We have to remove all the [[Instruction]] we loaded in (In this case, statement 1-4), because we need to execute statement A-D after the [[Branching]]
+- We have to remove all the [[Instruction]] we loaded in (In this case, statement 1-4), because we need to execute statement A-D after the [[Pipeline Branching]]
 
 ![[pipeline_flush.png]]
 
 ## Cons
 ---
 ### [[Instruction-Level Parallelism]] Wasted!
-- In this case, when there is a [[Branching]] happening, we need to discard all [[Instruction]] running in [[Instruction-Level Parallelism]]
+- In this case, when there is a [[Pipeline Branching]] happening, we need to discard all [[Instruction]] running in [[Instruction-Level Parallelism]]
 - This can be optimised by using [[Branch Prediction]]
 ![[parallism wasted.png]]
