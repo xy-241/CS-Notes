@@ -6,13 +6,17 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-02-11T22:51:17+08:00
+Last Date: 2024-02-12T16:49:21+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---
 ![[ninja.jpg|800]]
 
 Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
+
+## 🎓 NUS Computer Science
+---
+- [[CS1231S Discrete Structures]]
 
 ## 🏭 System Design
 ---
