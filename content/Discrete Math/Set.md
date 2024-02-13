@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2024-01-16T13:18:46+08:00
+Last Date: 2024-02-13T13:51:37+08:00
 References: 
 ---
 ## Abstract
@@ -110,7 +110,7 @@ $$
 $$
 \emptyset \subseteq A
 $$
-- Proved using [[Mathematical Statement#Vacuous Truth of Universal]]
+- Proved using [[Universal Statement#Vacuous Truth of Universal]]
 ### Singleton
 - A [[Discrete Math/Set|Set]] with exactly one [[#Object]]
 

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-04T19:10:00
-Last Date: 2023-12-17T17:57:03+08:00
+Last Date: 2024-02-13T13:46:42+08:00
 References: 
 ---
 ## Abstract
@@ -37,7 +37,7 @@ References:
 - When [[#Direct Proof]] is hard to derive, we can try indirect proof
 
 ### Proof by Counterexample (反例法)
-- An example that shows that a [[Mathematical Statement]] isn't always true. Useful for [[Mathematical Statement#Universal]]
+- An example that shows that a [[Mathematical Statement]] isn't always true. Useful for [[Universal Statement]]
 
 ### Proof by Contradiction (矛盾证明法)
 - [[#Indirect Proof]]
