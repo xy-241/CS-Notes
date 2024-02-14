@@ -18,13 +18,13 @@ References:
 ## Minimum Granularity
 ---
 - [[Context Switch]] is [[Context Switch#An expensive operation]]
-- So we have a *Minimum Granularity*,  a lower bound to the [[Timeslice]], guaranteeing a minimum amount of *CPU time* for each process. In [[Linux]], it is 0.75ms
+- So we have a *Minimum Granularity*,  a lower bound to the [[Timeslice]], guaranteeing a minimum amount of *CPU time* for each process. In [[Linux Kernel]], it is 0.75ms
 - This minimises context switching overhead and improving overall system efficiency
 
 ## Target Latency 
 ---
 - The desired maximum amount of time that a [[Process (进程)]] should wait before being given a chance to run again. So the process doesn't seem laggy on the user side
-- In [[Linux]], it is 6ms
+- In [[Linux Kernel]], it is 6ms
 - [[#Target Latency]] is exceeded when there is enough [[Process (进程)]] for [[#Minimum Granularity]] to take effect - Process will seem laggy on user side, so rebooting to clear some Process will make computer seems faster
 
 

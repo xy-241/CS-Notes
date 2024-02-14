@@ -23,7 +23,7 @@ title: cs2106 nus notes
 
 >[!seealso]- Interesting Topics (Optional)
 > - [[Computer Booting]]
-> - [[Linux]]
+> - [[Linux Kernel]]
 > - [[Unix]]
 > - [[POSIX]]
 

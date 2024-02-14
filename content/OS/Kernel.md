@@ -5,23 +5,38 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - linux
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-02-08T13:41:34+08:00
+Last Date: 2024-02-14T15:46:07+08:00
 References: 
 description: Dive into the heart of your operating system and discover how kernels manage hardware, allocate resources, and keep your system running smoothly. Explore the trade-offs between microkernels and monolithic kernels, and learn about preemptive kernels that ensure a responsive user experience.
 ---
 ## Abstract
 ---
-- Decides on hardware allocation and management with regard to software
-</br>
+- An [[Abstraction (抽象)#Abstraction Barrier]] between software and hardware 
 
-- [[MacOS]]'s kernel is **XNU**
-- [[Windows]]'s kernel is **NT Kernel**
+>[!success] Loose Coupling
+> Software doesn't need to know the complexity of hardware. It can use the hardware thought a standard interface called [[System Call (系统调用)]]
 
+>[!info]- Common Modern Kernels
+> - [[MacOS]]'s kernel is **XNU**
+> - [[Windows]]'s kernel is **NT Kernel**
+> - [[Linux Kernel]]
+### Preemptive Kernel
+- [[Kernel]] that can be [[Interrupts (中断) |interrupted]] and scheduled just like [[Process (进程)]] in the [[User Space]] 
+
+>[!success] Avoid Kernel Hogging
+> Prevent kernel from hogging the [[CPU]], and slow down user space process
 
 ### Kernel Module
 - Known as Kernel Extension in the context of MacOS and IOS
 - Extend the functionality of the [[Kernel]]
+- [[FUSE#FUSE Mechanism|FUSE]] is a kernel Module for example
+
+>[!tip]- Application of Kernel Module in Linux 
+> The functionalities of the [[Linux Kernel]] is group into different Kernel Modules which can be either disabled, enabled or rendered toggle-able at compile-time
+> 
+> We also able to add/remove/disable Kernel Modules during runtime using the `modprobe` command
 
 ## Kernel Booting
 ---
@@ -35,30 +50,30 @@ description: Dive into the heart of your operating system and discover how kerne
 ## Kernel Architecture
 ---
 ### Micro Kernel Architecture 
+![[microkernel.png|500]]
 - [[Kernel]] only handles critical part of the system. The rest runs in [[User Space]]
 - Different kernel components communicate with each other via  [[Inter-Process Communication (IPC)]]
 - Used by [[MINIX]]
-![[microkernel.png]]
 
->[!success] So if one of in the kernel [[Process (进程)]] crashes, it doesn't crash the entire system 
+>[!success] Fault-tolerant
+> If one of the kernel [[Process (进程)]] crashes, this doesn't crash the entire system 
 
->[!caution] Lower performance due to the overhead of communication between different modules
+>[!caution] Less Performant
+> Due to the overhead of communication between different modules
+
 
 
 ### Monolithic Kernel Architecture
-- By far, the most common [[Kernel]] architecture, used by [[Linux]]
+- By far, the most common [[Kernel]] architecture, used by [[Linux Kernel]]
 - The entire kernel runs as a single program in [[Privilege Level#Kernel Mode]]
 - Consist of a collection of [[Procedures]], linked together into a single large executable binary program. Each Procedures in the system is free to call any other one
 
->[!success] Very efficient to have the ability to call any of the procedures
+>[!success] Performant
+> No much overhead to call any of the kernel procedures
 
->[!caution]  But having thousands of Procedures that can call each other without restriction may also lead to a system that is unwieldy and difficult to understand
+>[!caution] Harder to Maintain
+>  Thousands of procedures that can call each other without restriction may also lead to a system that is difficult to understand
 
->[!caution] A crash in any of these Procedures will take down the entire Kernel
+>[!caution] Not So Fault-tolerant
+> A crash in any of these Procedures will take down the entire Kernel
 
-## Terminologies 
----
-### Preemptive Kernel
-- [[Kernel]] that can be [[Interrupts (中断) |interrupted]] and scheduled just like [[Process (进程)]] in the [[User Space]] 
-
->[!success] This prevents the Kernel from hogging the [[CPU]], and slow down user space process

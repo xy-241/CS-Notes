@@ -20,7 +20,7 @@ References:
 - A value that determines which [[Process (进程)]] should get executed first
 ### Process Scheduler
 - A program that perform [[Context Switch]] of [[Process (进程)]] based on the [[#Process Priority]]
-- [[Linux]] uses [CFS](https://docs.kernel.org/scheduler/sched-design-CFS.html)
+- [[Linux Kernel]] uses [CFS](https://docs.kernel.org/scheduler/sched-design-CFS.html)
 
 
 ## Terminologies
@@ -28,7 +28,7 @@ References:
 ### Niceness
 - An parameter that can be used to adjust the [[#Process Priority]] for the [[#Process Scheduler]]
 
->[!example] In [[Linux]]
+>[!example] In [[Linux Kernel]]
 >- ``-20`` is most not nice
 >- ``19`` is most nice
 >- Command to adjust niceness - `renice`

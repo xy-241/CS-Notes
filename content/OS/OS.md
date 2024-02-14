@@ -24,7 +24,7 @@ description: The giant that powers the software application we use on a daily ba
 ### Embedded OS
 - Run on devices like ovens, no un-trusted software will ever run on it
 - All software in **ROM**
-- One example is embedded [[Linux]]
+- One example is embedded [[Linux Kernel]]
 
 ### Smart Card OS
 - Smallest [[OS]] run on smart cards
@@ -33,7 +33,7 @@ description: The giant that powers the software application we use on a daily ba
 
 ### Server OS
 - Provides file service or Web services etc
-- Examples are [[FreeBSD]], [[Linux]] and [[Windows Server]]
+- Examples are [[FreeBSD]], [[Linux Kernel]] and [[Windows Server]]
 
 ### Sensor-Node OS
 - Running on sensor node that has very limited [[CPU]], [[Main Memory]] & [[ROM]]
@@ -47,7 +47,7 @@ description: The giant that powers the software application we use on a daily ba
 - Support [[Multi-programming]] - dozens of programs started up at boot time
 - Provide good support to a single user
 - Widely used for word processing, spreadsheets & gaming etc
-- Example are [[Linux]] and [[Windows]]
+- Example are [[Linux Kernel]] and [[Windows]]
 
 ### Handheld Computer OS
 - Examples are [[Android]] and [[iOS]]
@@ -55,12 +55,12 @@ description: The giant that powers the software application we use on a daily ba
 ### Mainframe OS
 - Act as [[#Batch System]], [[Multi-tasking]], [[#Transaction-processing System]]
 - IO intense, for enterprise
-- Gradually replaced by UNIX variants like [[Linux]]
+- Gradually replaced by UNIX variants like [[Linux Kernel]]
 - Examples are like OS/390 and OS/360
 
 ### Multi-processor OS
 - Make use of multiple [[CPU]] and [[Multi-core Chip]] in a single system
-- Examples are [[Linux]] and [[Windows]]
+- Examples are [[Linux Kernel]] and [[Windows]]
 
 
 ## Terminologies
