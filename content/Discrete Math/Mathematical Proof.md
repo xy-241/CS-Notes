@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-04T19:10:00
-Last Date: 2024-02-13T13:46:42+08:00
+Last Date: 2024-02-14T10:24:36+08:00
 References: 
 ---
 ## Abstract
@@ -31,7 +31,7 @@ References:
 
 ### Proof by Construction/Example
 - A form of [[#Direct Proof]]
-- For [[Mathematical Statement#Existential]], we can proof by providing an example that fulfil the conditions
+- For [[Existential Statement]], we can proof by providing an example that fulfil the conditions
 ## Indirect Proof (反证法)
 ---
 - When [[#Direct Proof]] is hard to derive, we can try indirect proof

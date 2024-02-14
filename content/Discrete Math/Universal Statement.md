@@ -5,12 +5,12 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-02-13, 13:45
-Last Date: 2024-02-13T13:53:44+08:00
+Last Date: 2024-02-14T10:24:05+08:00
 References: 
 draft: 
 description: 
 ---
-## Abstract
+## Universal Statement
 ---
 $$
 \forall x \in D, Q(x)
@@ -24,7 +24,7 @@ $$
 $$
 \neg(\forall x \in D, Q(x)) \equiv \exists x \in D, \neg  Q(x)
 $$
-- Negation of Universal is [[Propositional Logic#Logical Equivalence]] to [[#Existential]]
+- Negation of Universal is [[Propositional Logic#Logical Equivalence]] to [[Existential Statement]]
 - The above [[Predicate]] means `There is AT LEAST ONE that IS NOT`
 
 ### Universal Conditional

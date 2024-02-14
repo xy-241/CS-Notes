@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-21T11:25:00
-Last Date: 2024-02-11T21:49:25+08:00
+Last Date: 2024-02-14T10:13:34+08:00
 References: 
 sr-due: 2024-02-19
 sr-interval: 8
@@ -15,7 +15,7 @@ sr-ease: 250
 ## Abstract
 ---
 - Also known as **Propositional Functions** & **Open Sentences**
-- Made of [[#Predicate Symbol]] & finite number of [[#Predicate Variable]]
+- A function([[#Predicate Symbol]]) that assigns to each valid input([[#Predicate Variable]]) a **true/false value**
 - Example: let $P()$ stands for `is a student at NUS`, then  $P(x)$ stands for $x$ `is a student at NUS`, where $x$ is the Predicate Variable, $P()$ is the Predicate Symbol
 
 

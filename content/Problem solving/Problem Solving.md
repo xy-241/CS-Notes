@@ -43,10 +43,10 @@ References:
 ### 5. Draw a picture
 - This helps with [[Visualisation]]
 - One way to visualise numbers is to associate they with coordinates, then we can present the numbers & their relationship in graph format
->[!example] See [[Probability Problem]]
+>[!example] See [[Problem Solving Sample Problem]]
 ### 6. Ask a simpler version of the problem
 - Find a problem that has the similar setup, but easier to solve or more approachable to **get more sense/clue** of the original problem
->[!example] See [[Probability Problem]]
+>[!example] See [[Problem Solving Sample Problem]]
 ### 7. Read a lot, and think about problems a lot
 - Insights & ingenuity is basically **pattern recognition**
 - Using obsidian to connect the ideas, structure messy knowledge nodes, let nodes interconnect with each other, form a **network of pattern recognition**, so **each node** has a lot of **contact points** via **directly and indirectly connected nodes**
@@ -56,7 +56,7 @@ References:
 ### 9. Learn at least a little bit of programming
 - Helps to provide a different perspective to math which is very abstracted
 - We can also take advantage of its ability to generate a massive set of numbers to get a rough estimation trend or pattern
->[!example] [[Probability Problem#Take advantage of Python codes to obtain an answer]]
+>[!example] [[Problem Solving Sample Problem#Take advantage of Python codes to obtain an answer]]
 
 
 ## Reference

@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-02-13T13:52:30+08:00
+Last Date: 2024-02-14T10:29:27+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -46,6 +46,7 @@ title: cs1231s nus notes
 ---
 - [[Predicate]]
 - [[Universal Statement]]
+- [[Existential Statement]]
 
 ## Methods of Proofs
 ---
