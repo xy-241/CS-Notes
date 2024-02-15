@@ -7,13 +7,14 @@ tags:
   - OS
   - linux
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-02-14T15:46:07+08:00
+Last Date: 2024-02-15T23:41:10+08:00
 References: 
 description: Dive into the heart of your operating system and discover how kernels manage hardware, allocate resources, and keep your system running smoothly. Explore the trade-offs between microkernels and monolithic kernels, and learn about preemptive kernels that ensure a responsive user experience.
 ---
 ## Abstract
 ---
 - An [[Abstraction (抽象)#Abstraction Barrier]] between software and hardware 
+- Resides inside the [[Kernel Space]]
 
 >[!success] Loose Coupling
 > Software doesn't need to know the complexity of hardware. It can use the hardware thought a standard interface called [[System Call (系统调用)]]

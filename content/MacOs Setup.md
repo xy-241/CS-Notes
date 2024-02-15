@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-12T01:08:54+08:00
+Last Date: 2024-02-15T19:12:59+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -126,6 +126,10 @@ npm i -g typescript
 ```
 
 - [Java JDK](https://www.oracle.com/java/technologies/downloads/)
+- elixir
+```bash
+brew install elixir
+```
 
 ## System Tools 🌟
 ---

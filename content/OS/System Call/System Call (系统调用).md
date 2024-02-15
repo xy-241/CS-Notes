@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-01-31T10:24:25+08:00
+Last Date: 2024-02-16T00:20:35+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
 ## Abstract
 ---
-- A way for program to request **privileged services** like hardware access from the [[Kernel]] via [[Signal (Software Interrupt)]]
+- A way for program in [[User Space]] to request **privileged services** like hardware access from the [[Kernel]] in the form of [[Signal (Software Interrupt)]]
 - Can be traced by [``strace``](https://stackoverflow.com/questions/65510246/can-a-system-call-happen-in-a-c-program)
 
 
@@ -69,5 +69,4 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 ### Windows System Calls
 ![[windows_system_calls.png|500]]
-- [[System Call (系统调用)]] is decoupled from [[Library Call]]
-- We can change the underlying System Call (系统调用), without worrying changing the behaviour of Library Call
+- The list above shows the [[Library Call]] which is powered by Windows' [[System Call (系统调用)]]
