@@ -6,22 +6,25 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-04T19:10:00
-Last Date: 2024-02-14T10:24:36+08:00
+Last Date: 2024-02-15T17:02:35+08:00
 References: 
 ---
 ## Abstract
 ---
-- [[#Concise]], [[#Polished]] [[Mathematical Argument]] explaining the *validity* of [[Mathematical Statement]] to skeptic
-- There are many [[#Proof Methods]]
+- [[#Concise]], [[#Polished]] [[Mathematical Argument]] explaining the **validity** of [[Mathematical Statement]] 
+- There are 2 types of proofs - [[#Direct Proof]] and [[#Indirect Proof (反证法)]]
 
 ## Direct Proof
 ---
-- Is difficult when the thing we want to proof has an absence of a form like *Irrationality of a number*, which is number that does 
+- A method of proving a [[Mathematical Statement]] by starting with known facts ([[Discrete Math#Axioms (公理)]], definitions, or previously proven theorems) and using logical steps to directly show that the statement you want to prove is true
+
+>[!caution] Only Applicable when there is a starting point
+> Is difficult when the thing we want to proof has an **absence of a form** like **Irrationality of a number**, which is number that is hard to be expressed mathematically. In such cases, we can make use of [[#Indirect Proof (反证法)]] to obtain a starting point
 ### Proof by Deduction (演绎推理)
 - [[#Direct Proof]]
-- Used when the number of cases is *infinite*
+- Used when the number of cases is **infinite**
 - Use [[Discrete Math#Theorem (定理)|Theorem]] & [[Discrete Math#Axioms (公理)|Axioms]] to proof something
-- Usually takes the form of - *To show that every element of a set satisfies a certain property, suppose x is a particular but arbitrarily chosen element of the set, and show that x satisfies the property*
+- Usually takes the form of - `To show that every element of a set satisfies a certain property, suppose x is a particular but arbitrarily chosen element of the set, and show that x satisfies the property`
 >[!example]
 >- Prove that the sum of any two even integers is even
 >- Prove the sum of any two rational numbers is rational
@@ -52,7 +55,6 @@ References:
 
 ## Terminologies
 ---
-
 ### Concise
 - There is no irrelevant details
 ### Polished
