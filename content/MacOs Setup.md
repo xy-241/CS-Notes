@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-15T19:12:59+08:00
+Last Date: 2024-02-17T02:38:46+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -13,6 +13,7 @@ title:  My Macos Setup
 ---
 - [Floorp Browser](https://floorp.app/en/)
 	- [Install Bypass Paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome)
+- [Arc Browser](https://www.youtube.com/watch?v=8PhdfcX9tG0)
 - [Google Drive Client](https://www.google.com/intl/en_sg/drive/download/)
 - [Obsidian - Note Taking App](https://obsidian.md/)
 - [StrongBox - Password Manager](https://apps.apple.com/us/app/strongbox-password-manager/id897283731)

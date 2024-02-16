@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2024-01-12, 00:12
-Last Date: 2024-01-25T22:58:12+08:00
+Last Date: 2024-02-17T02:38:27+08:00
 References: 
 draft: 
 sr-due: 2024-01-30
@@ -59,7 +59,30 @@ set shiftwidth=2
 - [Visual Studio Code](https://code.visualstudio.com/)
 	- [Add `code` into cli](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
 
+## Zed Code Editor
+---
+- [Install Zed](https://zed.dev/)
 
+## Neovim
+---
+- Install iterm2 
+```bash
+brew install --cask iterm2
+```
+- Install neovim
+```bash
+brew install neovim
+
+# Add the following to .zshrc
+alias vim="nvim"
+export EDITOR="nvim"
+```
+- Install nvchad (Yes for default settings)
+```bash
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+```
+- Set the theme to catppuccin
+- You can install syntax heightening using `:TSInstall <Language>` 
 ## IntelliJ Community Code Editor
 ---
 - [IntelliJ Community Code Editor](https://www.jetbrains.com/idea/download/?fromIDE=&section=mac)
