@@ -10,9 +10,9 @@ Last Date: 2024-02-06T13:43:14+08:00
 References: 
 draft: 
 description: Builds on Set-Reset Latch, using a single multifunctional Set input controlled by a Data Input. This simplifies data handling by avoiding invalid states. The Data Input can both set and erase the stored state when Store input is active, offering flexibility but increasing gate count.
-sr-due: 2024-02-14
-sr-interval: 8
-sr-ease: 270
+sr-due: 2024-03-25
+sr-interval: 38
+sr-ease: 290
 ---
 ## Abstract
 ---

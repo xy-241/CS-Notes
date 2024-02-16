@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-02-16T00:20:35+08:00
+Last Date: 2024-02-16T15:40:13+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
@@ -21,7 +21,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 
 >[!success] Better Security
->- Allow [[User Space]] program to use **computer hardware** to complete its job with **kernel's security implementation** to prevent programs from doing malicious stuff
+> Allow [[User Space]] program to use **computer hardware** to complete its job with **kernel's security implementation** to prevent programs from doing malicious stuff
 
 ## How is a system call triggered?
 ---
@@ -46,12 +46,14 @@ description: "Unlock the power of your computer's hardware while staying secure!
 ![[syscall_architecture_differences.png|500]]
 - System call is implemented with [[Assembly language]] which  is differently across different [[Instruction Set Architecture (ISA)]]
 
-### Parameters of system call
-- Some [[Instruction Set Architecture (ISA)]] may expect the parameters be stored in [[Address Space#Stack Segment]] of the [[Kernel]]
-- Some Instruction Set Architecture (ISA) may expect the parameters be stored in [[Register]]
+>[!caution] Parameters of System Call
+> For example, some ISA may expect the parameters be stored in [[Address Space#Stack Segment]] of the [[Kernel]]
+> 
+> Some ISA may expect the parameters be stored in [[Register]]
+
 
 >[!success] Abstraction comes to rescue
->- Kernel provides an [[Abstraction (抽象)#Abstraction Barrier]] on top of these [[Interrupts (中断)]] and [[Interrupt Handler]]. The abstraction barrier is [[Library Call]] that wraps the [[Assembly language | Assembly Instruction]] of different Instruction Set Architecture (ISA) 
+>- Kernel provides an [[Abstraction (抽象)#Abstraction Barrier]] on top of these [[Interrupts (中断)]] and [[Interrupt Handler]]. The abstraction barrier has a standardised [[Library Call]] interface like [[POSIX]] that wraps the [[Assembly language | Assembly Instruction]] of different Instruction Set Architecture (ISA) 
 >- Specific [[Instruction]] of Instruction Set Architecture (ISA) is generated automatically during [[Compilation]]
 >- Unix-like systems use [libc](https://www.gnu.org/software/libc/) and Windows uses [ntdll.dll](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/libraries-and-headers)
 
