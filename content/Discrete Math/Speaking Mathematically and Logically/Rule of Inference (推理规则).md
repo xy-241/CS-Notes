@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T08:54:00
-Last Date: 2023-12-30T20:26:03+08:00
+Last Date: 2024-02-16T10:47:15+08:00
 References: 
 ---
 ## Abstract
@@ -15,37 +15,31 @@ References:
 - Tools that enable [[Deductive Reasoning (演繹推理)]]
 
 
-## Basics
----
 ### Modus Ponens
 ### Modus Tollens
 - Denying the consequent
-### Generalization
-**Case 1**
-- [[Mathematical Argument#Premise|Premise]]: `p`
-- [[Mathematical Argument#Conclusion|Conclusion]]: `p v q`
+### Generalisation
 
-**Case 2**
-- [[Mathematical Argument#Premise|Premise]]: `q`
-- [[Mathematical Argument#Conclusion|Conclusion]]: `p v q`
-### Specilisation 
+|  | Case 1 | Case 2 |
+| ---- | ---- | ---- |
+| Premise | $p$ | $q$ |
+| Conclusion | $p \lor q$ | $p \lor q$ |
+
+### Specialisation 
 - Allow us to discard some information to focus on things that we are interested
 
-**Case 1**
-- [[Mathematical Argument#Premise|Premise]]: `p AND q` 
-- [[Mathematical Argument#Conclusion|Conclusion]]: `p`
+|  | Case 1 | Case 2 |
+| ---- | ---- | ---- |
+| Premise | $p \cap q$ | $p \cap q$ |
+| Conclusion | $p$ | $q$ |
 
-**Case 2**
-- [[Mathematical Argument#Premise|Premise]]: `p AND q`
-- [[Mathematical Argument#Conclusion|Conclusion]]: `q`
 ### Elimination
-**Case 1**
-- [[Mathematical Argument#Premise|Premise]]: `p v q`, `~q`
-- [[Mathematical Argument#Conclusion|Conclusion]]: `p`
 
-**Case 2**
-- [[Mathematical Argument#Premise|Premise]]: `p v q`, `~p`
-- [[Mathematical Argument#Conclusion|Conclusion]]: `q`
+|  | Case 1 | Case 2 |
+| ---- | ---- | ---- |
+| Premise | $p \cup q$, $\neg q$ | $p\cup q$, $\neg p$ |
+| Conclusion | $p$ | $q$ |
+
 ### Transitivity
 - [[Mathematical Argument#Premise|Premise]]: `p -> q`, `q -> r`
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p -> r`
@@ -58,14 +52,3 @@ References:
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p`
 - The core of [[Mathematical Proof#Proof by Contradiction (反证法)]]
 - If a *assumption* leads to a *contradiction*, then that *assumption* must be false
-
-## With Predicate Quantifier
----
-### Universal Modus Ponens
-- [[Mathematical Argument#Premise|Premise]]: For all x, if x makes P(x) true, then x makes Q(x) true
-- [[Mathematical Argument#Premise|Premise]]: a is an element of x, a makes P(x) true
-- [[Mathematical Argument#Conclusion|Conclusion]]: a makes Q(x) true
-### Universal Modus Tollens
-- [[Mathematical Argument#Premise|Premise]]: If x makes P(x) true, then x makes Q(x) true
-- [[Mathematical Argument#Premise|Premise]]: a doesn't make Q(x) true
-### Universal Transitivity

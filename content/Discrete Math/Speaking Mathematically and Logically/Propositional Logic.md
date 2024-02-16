@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T00:19:00
-Last Date: 2024-02-15T15:42:14+08:00
+Last Date: 2024-02-16T10:15:40+08:00
 References: 
 ---
 ## Abstract
@@ -25,11 +25,11 @@ References:
 ---
 ![[logical_equivalences.png|500]]
 - We have a logical equivalence when 2 [[Mathematical Statement]] have **identical truth values**
-- There above diagram shows **Logical Equivalence Laws** that can used to simplify [[Mathematical Statement#Statement/Propositional Form]]
+- The above diagram shows **Logical Equivalence Laws** that can used to simplify mathematical statement
 
 >[!caution] Usage of Laws
 > We can only perform the *laws* when the exact form is matched
   
 **2 ways to check for logical equivalence**
 1. **Truth table** - Find a row where truth values are different
-2. **Find a counter example** - Substitute a concrete [[Mathematical Statement]] into the [[Mathematical Statement#Statement/Propositional Form]], then compare
+2. **Find a counter example** - Substitute a concrete [[Mathematical Statement]], then compare
