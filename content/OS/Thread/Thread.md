@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-12T18:59:00
-Last Date: 2024-01-16T15:45:20+08:00
+Last Date: 2024-02-17T19:18:34+08:00
 References: 
 ---
 
@@ -59,7 +59,7 @@ References:
 - Should we copy over all the threads or just a single one?
 
 ### Interrupt Handling
-- For [[Signal (Software Interrupt)]] handling - which thread should handle it?
+- For [[Interrupts (中断)#Software Interrupt]] handling - which thread should handle it?
 
 
 

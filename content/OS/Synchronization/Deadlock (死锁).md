@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-18T19:12:00
-Last Date: 2023-12-14T19:06:05+08:00
+Last Date: 2024-02-17T18:42:42+08:00
 References: 
 ---
 ## Abstract
@@ -31,7 +31,7 @@ References:
 - A process must be holding at least one resource and waiting to acquire additional resources that are currently being held by other processes
 
 ### No Preemption
-- Resources cannot be [[Preemption]] from a process. They can only be released by the process holding them, typically after the process has finished its task.
+- Resources cannot be preempted from a process. They can only be released by the process holding them, typically after the process has finished its task.
 
 ### Circular Wait
 - There exists a set of waiting processes such that P0 is waiting for a resource held by P1, P1 is waiting for a resource held by P2, and so on, with Pn waiting for a resource held by P0

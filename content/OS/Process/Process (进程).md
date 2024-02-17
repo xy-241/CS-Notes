@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2024-01-18T18:44:13+08:00
+Last Date: 2024-02-17T19:14:47+08:00
 References: 
 description: Dive into the world of processes in operating systems!
 ---
@@ -42,6 +42,6 @@ description: Dive into the world of processes in operating systems!
 	- [[Address Space]]
 	- [[Register]] (Include [[Control Unit#Program Counter]] and [[Register#Stack Pointer]])
 	- A list of open [[File]]
-	- Outstanding [[Signal (Software Interrupt)#Alarm Signal]]]
+	- Outstanding [[Interrupts (中断)#Software Interrupt]]
 	- List of related processes
 	- [[Process Management]] information etc

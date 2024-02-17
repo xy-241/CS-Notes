@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-02-16T15:40:13+08:00
+Last Date: 2024-02-17T19:16:37+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
 ## Abstract
 ---
-- A way for program in [[User Space]] to request **privileged services** like hardware access from the [[Kernel]] in the form of [[Signal (Software Interrupt)]]
+- A way for program in [[User Space]] to request **privileged services** like hardware access from the [[Kernel]]
 - Can be traced by [``strace``](https://stackoverflow.com/questions/65510246/can-a-system-call-happen-in-a-c-program)
 
 
@@ -53,7 +53,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 
 >[!success] Abstraction comes to rescue
->- Kernel provides an [[Abstraction (抽象)#Abstraction Barrier]] on top of these [[Interrupts (中断)]] and [[Interrupt Handler]]. The abstraction barrier has a standardised [[Library Call]] interface like [[POSIX]] that wraps the [[Assembly language | Assembly Instruction]] of different Instruction Set Architecture (ISA) 
+>- Kernel provides an [[Abstraction (抽象)#Abstraction Barrier]] on top of these [[Interrupts (中断)]] and [[Interrupt Handler]]. The abstraction barrier has a standardised [[Library Call]] interface like [[POSIX]] that wraps the [[Assembly language | Assembly Instruction]] of different Instruction Set Architecture (ISA) for applications inside [[User Space]] to call
 >- Specific [[Instruction]] of Instruction Set Architecture (ISA) is generated automatically during [[Compilation]]
 >- Unix-like systems use [libc](https://www.gnu.org/software/libc/) and Windows uses [ntdll.dll](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/libraries-and-headers)
 
@@ -64,7 +64,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 ---
 ### Linux System Calls
 ![[system_calls.png|500]]
-- [[System Call (系统调用)]] is tightly-coupled with [[Library Call]], almost **1-to-1**
+- Above is some [[POSIX]] system calls, basically a standardised set of [[Library Call]] that wraps [[System Call (系统调用)]], almost **1-to-1**
 - [Full List](https://man7.org/linux/man-pages/man2/syscalls.2.html)
 
 
