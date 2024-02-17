@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-17T02:38:46+08:00
+Last Date: 2024-02-17T21:40:50+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -78,7 +78,7 @@ brew install stow
 - `pipx`
 - `bat`
 - `exa`
-- `ranger-fm`
+- `joshuto`, [Config Instructions](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration), [Image Preview](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration)
 - `watch`
 ```bash
 #!/bin/bash
@@ -97,10 +97,9 @@ echo "alias ls='exa --icons'" >>~/.zshrc
 echo "alias ll='ls -lhig --git --icons'" >>~/.zshrc
 echo "alias tree='exa --tree --icons'" >>~/.zshrc
 
-# Using pipx
-pipx install ranger-fm
-# Alias to have Ranger to exit in the current directory it is in
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`bat $HOME/.rangerdir`; cd "$LASTDIR"'
+brew install joshuto
+# Alias to have joshuto to exit in the current directory it is in
+alias joshuto='joshuto --change-directory --output-file $HOME/.joshutoExit; LASTDIR=`bat $HOME/.joshutoExit`; cd "$LASTDIR"'
 
 brew install watch
 ```
@@ -134,11 +133,12 @@ brew install elixir
 
 ## System Tools 🌟
 ---
-- `neofetch`
+- `fastfetch`
 - `bpytop`, `htop`
 ```bash
-brew install neofetch
-echo neofetch >> ~/.zshrc
+brew install fastfetch
+# Add the following to the start of .zshrc
+fastfetch --logo <ABSOLUTE_PATH_TO_LOGO_FILE> --logo-width 70 --logo-height 30 --logo-type iterm
 
 brew install bpytop
 brew install htop
