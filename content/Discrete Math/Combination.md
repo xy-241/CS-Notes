@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-02-08T10:40:25+08:00
+Last Date: 2024-02-17T15:56:01+08:00
 References: 
 draft: 
 description: Exploring the binomial coefficient, delving into two formulas for its calculation. Formula 1 utilizes recursion, while Formula 2 involves factorials. We also touch upon properties like symmetry and its representation in Pascal's Triangle.
-sr-due: 2024-02-17
-sr-interval: 9
-sr-ease: 170
+sr-due: 2024-03-10
+sr-interval: 22
+sr-ease: 190
 ---
 ## Abstract
 ---
@@ -115,7 +115,7 @@ $$
 - $\frac{n!}{k!(n-k)!}$ removes the counting that has the same set of elements
 </br>
 
-- Below is an implementation of formula 1 in Java
+- Below is an implementation of formula 2 in Java
 <div class="onecompilerCode-wrapper">
 <iframe
  class="onecompilerCode"

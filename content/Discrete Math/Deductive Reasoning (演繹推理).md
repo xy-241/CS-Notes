@@ -6,30 +6,12 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-06, 01:25
-Last Date: 2023-12-30T20:26:02+08:00
+Last Date: 2024-02-17T16:21:57+08:00
 References: 
 ---
 ## Abstract
 ---
+- Deductive reasoning **begins** with a **general rule** or principle and applies it to specific cases to reach a **logically certain conclusion**. It moves from the general to the specific
+- [[Rule of Inference (推理规则)]] and [[Quantified Rule of Inference]] are the building blocks of Deductive Reasoning
 
 
-
-## Terminologies
----
-### Universal Instantiation
-- If some property is true of *everything in the set*, then it is true of *any particular thing in the set*
-- Core tool for *deductive reasoning*
-$$
-\forall x \in D, P(x)
-$$
-$$
-\therefore a \in D \rightarrow P(a) 
-$$
-
-### Existential Instantiation
-$$
-\exists x \in D, P(x)
-$$
-$$
-\therefore P(a) \space for \space some \space a \in D
-$$

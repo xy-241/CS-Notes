@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T08:54:00
-Last Date: 2024-02-16T10:47:15+08:00
+Last Date: 2024-02-17T16:21:34+08:00
 References: 
 ---
 ## Abstract
 ---
-- A form of [[Mathematical Argument]] that is guaranteed to be [[Mathematical Argument#Valid|Valid]] if all its [[Mathematical Argument#Premise]] are true
+- A form of [[Mathematical Argument]] that is guaranteed to be [[Mathematical Argument#Valid|Valid]]
 - Tools that enable [[Deductive Reasoning (演繹推理)]]
 
 
@@ -52,3 +52,6 @@ References:
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p`
 - The core of [[Mathematical Proof#Proof by Contradiction (反证法)]]
 - If a *assumption* leads to a *contradiction*, then that *assumption* must be false
+
+
+
