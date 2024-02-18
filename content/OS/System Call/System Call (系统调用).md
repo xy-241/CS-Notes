@@ -6,13 +6,14 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-02-17T19:16:37+08:00
+Last Date: 2024-02-18T16:41:00+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
 ## Abstract
 ---
 - A way for program in [[User Space]] to request **privileged services** like hardware access from the [[Kernel]]
+- A form of [[Interrupts (中断)#Software Interrupt]]
 - Can be traced by [``strace``](https://stackoverflow.com/questions/65510246/can-a-system-call-happen-in-a-c-program)
 
 
