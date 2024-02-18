@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-23T00:19:00
-Last Date: 2024-02-16T10:15:40+08:00
+Last Date: 2024-02-18T13:11:40+08:00
 References: 
 ---
 ## Abstract
@@ -17,9 +17,11 @@ References:
 - Happen without the proper use of parentheses to indicate the intended order of operations
 - We need to use proper parentheses to ensure there's **only one way** to interpret and evaluate each expression
 
-### Theorem 2.1.1
-- [[#Logical Equivalence]]
-- Refer to the lectures notes for more details
+### Logical Connectives 
+- Negation: `NOT` performed first
+- Disjunction: `OR` ,Conjunction: `AND` coequal, make sure proper parentheses is used to avoid [[#Ambiguous]]
+- If-then/implies: performed last, coequal with `iff`
+
 
 ## Logical Equivalence
 ---
@@ -33,3 +35,7 @@ References:
 **2 ways to check for logical equivalence**
 1. **Truth table** - Find a row where truth values are different
 2. **Find a counter example** - Substitute a concrete [[Mathematical Statement]], then compare
+
+### Theorem 2.1.1
+- [[#Logical Equivalence]]
+- Refer to the lectures notes for more details

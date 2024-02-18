@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-02T22:09:00
-Last Date: 2024-02-16T10:21:39+08:00
+Last Date: 2024-02-18T13:24:39+08:00
 References: 
 sr-due: 2024-02-27
 sr-interval: 11
@@ -27,13 +27,9 @@ sr-ease: 250
 >3. Either `True` or `False`, but not both at the same time
 
 
-### Logical Connectives 
-- Negation: `NOT` performed first
-- Disjunction: `OR` ,Conjunction: `AND` coequal, make sure proper parentheses is used to avoid [[Propositional Logic#Ambiguous]]
-- If-then/implies: performed last, coequal with `iff`
 
 ### Compound Statement
-- Make up of multiple [[Mathematical Statement]], connected with [[#Logical Connectives]]
+- Make up of multiple [[Mathematical Statement]], connected with [[Propositional Logic#Logical Connectives]]
 
 >[!tip] Simplification
 >When the statement has [[Conditional Statement]], convert it using [[Conditional Statement#Implication Law]] to make it much less confusing
@@ -42,7 +38,7 @@ sr-ease: 250
 
 ## Terminologies
 ---
-### Tautology `t`
+### Tautology
 - [[Mathematical Statement]] that is **always true** 
 ### Contradiction `c`
 - [[Mathematical Statement]] that is **always false**

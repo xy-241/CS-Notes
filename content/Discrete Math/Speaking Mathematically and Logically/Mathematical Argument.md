@@ -6,15 +6,15 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-04T19:24:00
-Last Date: 2024-02-17T16:18:36+08:00
+Last Date: 2024-02-18T13:24:23+08:00
 References: 
 ---
 ## Abstract
 ---
 - A sequence of [[#Premise]] ending in a [[#Conclusion]]
 - Every step should **follow logically** from all previous steps
-- `IF (p AND ... p) THEN Conclusion` is a [[Mathematical Statement#Tautology `t`]]
-- An **argument** can be [[#Valid]], but if the [[#Premise]] is not true, the [[#Conclusion]] is going to be false
+- `IF (p AND ... p) THEN Conclusion` is a [[Mathematical Statement#Tautology]]
+- An **argument** can be [[#Valid]], but if the Premise is not true, the Conclusion is going to be false
 
 ### Premise
 - Also known as **Assumption** or **Hypothesis**
