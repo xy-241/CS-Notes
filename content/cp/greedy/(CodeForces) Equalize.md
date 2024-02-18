@@ -22,7 +22,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2024-02-16, 11:30
-Last Date: 2024-02-17T17:14:52+08:00
+Last Date: 2024-02-18T13:40:32+08:00
 tags:
   - cp
 draft: 
@@ -50,7 +50,7 @@ description: Equalize Codeforces
 </br>
 
 - So what is next? With the above information, how do we obtain the the answer? The next step is to sort the $a$ from smallest to biggest to obtain the [[Dynamic Programming#Optimal Substructure (最优子结构)]], values that can be the same are arranged in a **continuous manner**. It makes implementation much easier
-- So now, we just need to find the longest subarray in the maximum **value - minimum value** $\le (n-1)$. And since we sorted $a$, the maximum value is the element at the most right side of the subarray and the minimum value is the element at the most left side of the subarray
+- So now, we just need to find the longest subarray in the **maximum value - minimum value** $\le (n-1)$. And since we sorted $a$, the maximum value is the element at the most right side of the subarray and the minimum value is the element at the most left side of the subarray
 </br>
 
 - Now imagine we explore the next element in $a$, and realise the most right element - the most left element $\gt (n-1)$. What should we do? Should we call it a day? The answer is no, we should throw away elements from left hand side until the difference of the maximum value and minimum value of the subarray meet $\le (n-1)$ again, because we may have a a lot of elements on the right hand side that can fulfil $\le (n-1)$ 
@@ -119,9 +119,9 @@ public class Solution {
 
 ## Personal Reflection
 ---
-- **Why it takes so long to solve:** *NIL*
-- **What you could have done better:** *NIL*
-- **What you missed:** *NIL*
-- **Ideas you've seen before:** *NIL*
-- **Ideas you found here that could help you later:** *NIL*
-- **Ideas that didn't work and why:** *NIL*
+- **Why it takes so long to solve:** Unable to figure out what requirements the elements in the $a$ need to fulfil to become the same after adding elements from $p$
+- **What you could have done better:** Abstract the problem and constraints into math model
+- **What you missed:** How the final same values can be derived logically
+- **Ideas you've seen before:** Make use of sliding window to find the longest subarray and greedy approach
+- **Ideas you found here that could help you later:** Abstract problems and constraints into math model
+- **Ideas that didn't work and why:** Sort the $a$ and see how to create elements that are the same with $p$, but unable to proceed, because didn't have clues to proceed, making a math model will make it much easier 
