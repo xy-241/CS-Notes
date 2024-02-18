@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - networking
   - aws
+  - fly_io
 Creation Date: 2024-01-16, 20:50
-Last Date: 2024-01-29T13:20:59+08:00
+Last Date: 2024-02-18T18:13:11+08:00
 References: 
 draft: 
 ---
@@ -15,6 +16,11 @@ draft:
 ---
 - Allows a machine to access another machine that is within a private network via a [[Network Port]]
 
+## Port Forwarding into Fly.io App
+---
+```bash
+flyctl proxy <local:remote> -a <APP_NAME>
+```
 ## Port Forwarding into EC2 Bastion
 ---
 >[!caution] EC2 Configuration
