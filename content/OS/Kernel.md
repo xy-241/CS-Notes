@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-02-15T23:41:10+08:00
+Last Date: 2024-02-19T12:56:54+08:00
 References: 
 description: Dive into the heart of your operating system and discover how kernels manage hardware, allocate resources, and keep your system running smoothly. Explore the trade-offs between microkernels and monolithic kernels, and learn about preemptive kernels that ensure a responsive user experience.
 ---
@@ -61,6 +61,13 @@ description: Dive into the heart of your operating system and discover how kerne
 
 >[!caution] Less Performant
 > Due to the overhead of communication between different modules
+
+>[!info] Components of Traditional Microkernel
+> 1. [[Process Management]]
+> 2. [[Main Memory]] Management 
+> 3. [[Inter-Process Communication (IPC)]]
+>    
+> There are no [[Device Controller#Device Driver]] and [[File System]] etc
 
 
 
