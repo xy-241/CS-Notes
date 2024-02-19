@@ -6,76 +6,100 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-20T15:42:00
-Last Date: 2023-12-31T19:22:19+08:00
+Last Date: 2024-02-19T10:04:18+08:00
 References: 
+sr-due: 2024-02-23
+sr-interval: 4
+sr-ease: 270
 ---
 ## Abstract
 ---
-- Given `P`: it rains, `Q`: the floor is wet
-- Compound Statement `P -> Q`: If it rains, then the floor is wet
->[!caution]
->- If it doesn't rain, then the floor can be either wet or no wet
-- ***The floor MUST be wet if it rains***
-- *Logically Equivalent* to `~P OR Q`
-- `true -> false` is `false`, `false -> true/false` is `true`
+$$
+P \rightarrow Q
+$$
 
-| P   | Q   | P -> Q | ~P OR Q |
+| $P$   | $Q$   | $P \rightarrow Q$ | $\neg P \lor Q$ |
 | --- | --- | ------ | ------- |
 | 0   | 0   | 1      |     1    |
 | 0   | 1   | 1      |      1   |
 | 1   | 0   | 0      |       0  |
 | 1   | 1   | 1      |      1   |
+- [[Mathematical Statement#Compound Statement]]
+- [[#Vacuously True]] when [[#Hypothesis]] ($P$) is $0$(false)
+- [[Propositional Logic#Logical Equivalence]] to [[#Contrapositive (逆否命题)]]
+### Hypothesis
+- Also known as **Antecedent**
+- The part after `if`
+### Conclusion
+- Also known as **Consequent**
+- The part after `then`
 
+### Bi-conditional
+- Represented with $\leftrightarrow$
+- $P \leftrightarrow Q$ means $P$ is true `if AND only if` $Q$
 
-## Terminologies 
----
-### Hypothesis/Antecedent
-- After `if`
-### Conclusion/Consequent
-- After `then`
+### Sufficient Condition
+- Given $P \rightarrow Q$
+- $P$ is a a **sufficient condition** for $Q$
+- If $P$ is true, $Q$ is definitely true
+### Necessary Condition
+- Given $P \rightarrow Q$
+- $Q$ is a **necessary condition** for $P$
+- $Q$ **must be true** in order for $P$ to be claimed true
+
 ### Vacuously True
-- True by default 
+- **True by default** 
 - When the "if" part of an if-then statement is false, then statement as a whole is said to be true regardless of whether the conclusion is true of false
+
 ### Implication Law
-- Convert `->` to `OR` 
-- Useful when we need to perform [[Mathematical Proof#Proof by Contradiction (反证法)]] on *Conditional Statement*
+$$
+P \rightarrow Q \equiv \neg P \lor Q
+$$
+- Convert $\rightarrow$ to $\cup$
+
+>[!tip] Mathematical Proof
+> Useful when we need to perform [[Mathematical Proof#Proof by Contradiction (反证法)]] on [[Conditional Statement]]
+
+
+
+
+## 3 Variants
+---
 ### Converse (相反)
-- Compound Statement `Q -> P`: If the floor is wet, then it rains
-- When the floor isn't wet, it can still rain or doesn't rain
-- ***It must rain IF the floor is wet***
+$$
+Q \rightarrow P
+$$
 
-| Q   | P   | Q -> P |
-| --- | --- | ------ |
-| 0   | 0   | 1      |
-| 1   | 0   | 0      |
-| 0   | 1   | 1      |
-| 1   | 1   | 1      |
+| $P$ | $Q$ | $Q \rightarrow P$ |
+| ---- | ---- | ---- |
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+- [[Propositional Logic#Logical Equivalence]] to [[#Inverse (对立)]]
 ### Inverse (对立)
-- Compound Statement `~P -> ~Q`: if it doesn't rain, then the floor isn't wet
-- When it does rain, the floor can be wet or cant be wet
-- ***The floor must NOT BE WET IF it isn't raining***
-- *Logically Equivalent* to [[#Converse]]
+$$
+\neg P \rightarrow \neg Q
+$$
 
-| P   | Q   | ~P  | ~Q  | ~P -> ~Q |
+
+| $P$   | $Q$   | $\neg P$  | $\neg Q$  | $\neg P \rightarrow \neg Q$ |
 | --- | --- | --- | --- | -------- |
 | 0   | 0   | 1   | 1    |        1  |
 | 0   | 1   | 1    | 0    |        0  |
 | 1   | 0   |  0   |  1   |     1     |
 | 1   | 1   |   0  |   0  |      1    |
+- [[Propositional Logic#Logical Equivalence]] to [[#Converse (相反)]]
 ### Contrapositive (逆否命题)
-- Compound Statement `~Q -> ~P`: If the floor isn't wet, then it doesn't rain 
-- It must not rain if the floor isn't wet
-- *Logically Equivalent* to *Standard Conditional Statement*
+$$
+\neg Q \rightarrow \neg P
+$$
 
-| Q   | P   | ~Q  | ~P  | ~Q -> ~P |
+
+| $Q$   | $P$   | $\neg Q$  | $\neg P$  | $\neg Q \rightarrow \neg P$ |
 | --- | --- | --- | --- | -------- |
 | 0   |  0   |  1   |   1  |   1       |
 | 1   |   0  |   0  |    1 |    1      |
 | 0   |    1 |    1 |    0 |      0    |
 | 1    |    1 |    0 |    0 |    1      |
-### Bi-conditional
-- `p <-> q`, `if AND only if`, `iff`
-### Sufficient Condition
-- `r` is a sufficient condition for `s`, `r -> s`
-### Necessary Condition
-- `r` is a necessary condition for `s`, `s -> r`
+- [[Propositional Logic#Logical Equivalence]] to **Standard Conditional Statement**
