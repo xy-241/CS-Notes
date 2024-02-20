@@ -6,11 +6,12 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-28T13:12:00
-Last Date: 2024-01-17T23:40:08+08:00
+Last Date: 2024-02-20T11:09:26+08:00
 References: 
 ---
 ## Abstract
 ---
+![[hash_map.png|500]]
 - Make use of [[Hash Function]] to convert a key into an index which points to a [[#Bucket]]. To avoid [[Hash Collision]], we want the hash function to evenly distribute the outputs
 - Decide if a key is inside the collection quickly
 - We are using space in exchange for better performance 
@@ -19,7 +20,7 @@ References:
 
 
 
-![[hash_map.png]]
+
 
 
 >[!caution] Since input space is much bigger than the output space, it is very likely we will have [[Hash Collision]]
