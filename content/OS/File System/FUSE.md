@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-02-07, 16:20
-Last Date: 2024-02-08T13:41:51+08:00
+Last Date: 2024-02-20T14:14:23+08:00
 References: 
 draft: 
 description: FUSE (Filesystem in Userspace) lets programs manage filesystems without kernel privileges, enabling custom cloud storage mounts and powering tools like Rclone. It achieves this by acting as a bridge between user-space filesystem implementations and the kernel, forwarding requests and returning results.
@@ -33,8 +33,11 @@ description: FUSE (Filesystem in Userspace) lets programs manage filesystems wit
 >[!success] Developer Friendly
 > Writing a file system using FUSE is orders of magnitude easier and quicker than the traditional approach of writing in-kernel file systems. Since FUSE file systems are regular applications (as opposed to [[Kernel#Kernel Module]]), you have just as much flexibility and choice in programming tools, debuggers, and libraries as you have if you were developing standard applications
 
->[!example] Powers Popular Tools
->- [Rclone](https://rclone.org/) - mount Cloud Storages as a local file system 
+>[!example] Popular FUSE File Systems (FUSE Driver)
+>- [Rclone](https://rclone.org/) - mount Cloud Storages as a local file system
+
+>[!info] FUSE on MacOS
+> macOS doesn't come with a FUSE kernel module built directly into the core operating system, but it does support installing and using FUSE via 3rd-party FUSE Kernel Module. [macFUSE](https://formulae.brew.sh/cask/macfuse#default) is a popular choice
 ### FUSE Mechanism
 ![[fuse_architecture.png|400]]
 
@@ -43,6 +46,7 @@ description: FUSE (Filesystem in Userspace) lets programs manage filesystems wit
   </br>
   
 - When an application makes a filesystem request, the request is forwarded to the FUSE kernel module, which then passes it to the user-space filesystem implementation. Once the operation is completed in user space, the result is sent back to the kernel module, which returns the result to the application
+
 
 
 ## References

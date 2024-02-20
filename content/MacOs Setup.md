@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-17T21:40:50+08:00
+Last Date: 2024-02-20T18:39:04+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -77,9 +77,11 @@ brew install stow
 - `zoxide`, `fzf`
 - `pipx`
 - `bat`
-- `exa`
+- `eza`
 - `joshuto`, [Config Instructions](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration), [Image Preview](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration)
 - `watch`
+- `xcp`
+- `q`
 ```bash
 #!/bin/bash
 brew install zoxide
@@ -92,16 +94,23 @@ brew install pipx && pipx ensurepath
 
 brew install bat && echo "alias cat='bat -A'" >>~/.zshrc
 
-brew install exa
-echo "alias ls='exa --icons'" >>~/.zshrc
-echo "alias ll='ls -lhig --git --icons'" >>~/.zshrc
-echo "alias tree='exa --tree --icons'" >>~/.zshrc
+brew install eza
+echo "alias ls='eza --icons'" >>~/.zshrc
+echo "alias ll='eza -lhig --git --icons -a'" >>~/.zshrc
+echo "alias tree='eza --tree --icons'" >>~/.zshrc
 
 brew install joshuto
 # Alias to have joshuto to exit in the current directory it is in
 alias joshuto='joshuto --change-directory --output-file $HOME/.joshutoExit; LASTDIR=`bat $HOME/.joshutoExit`; cd "$LASTDIR"'
 
 brew install watch
+
+cargo install xcp
+# Alias to cp
+alias cp="xcp"
+
+brew tap natesales/repo https://github.com/natesales/repo
+brew install q
 ```
 - [[Atuin]]
 - Custom bash commands (to be added to `.zshrc`)
@@ -134,13 +143,13 @@ brew install elixir
 ## System Tools 🌟
 ---
 - `fastfetch`
-- `bpytop`, `htop`
+- `btop`, `htop`
 ```bash
 brew install fastfetch
 # Add the following to the start of .zshrc
 fastfetch --logo <ABSOLUTE_PATH_TO_LOGO_FILE> --logo-width 70 --logo-height 30 --logo-type iterm
 
-brew install bpytop
+brew install btop
 brew install htop
 ```
 

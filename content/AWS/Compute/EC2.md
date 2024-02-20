@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-10T13:12:02+08:00
-Last Date: 2024-02-05T13:30:41+08:00
+Last Date: 2024-02-20T13:55:29+08:00
 References: 
 ---
 ## Abstract
@@ -28,7 +28,7 @@ aws ec2 start-instances --instance-ids <YOUR_INTANCE_ID>
 ```
 
 - **SSH** into Private EC2 on **Local Machine**
->[!caution] EC2 Configuration
+>[!caution] EC2 SSM Configuration
 >Make sure you are using an **Amazon Linux Image**, or you have [setup system manager on EC2](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html)
 ```bash
 aws ssm start-session --target <INTANCE_ID>
