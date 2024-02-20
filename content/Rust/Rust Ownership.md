@@ -7,7 +7,7 @@ tags:
   - rust
   - OS
 Creation Date: 2024-01-13, 20:38
-Last Date: 2024-01-24T17:32:51+08:00
+Last Date: 2024-02-20T13:05:51+08:00
 References: 
 draft: 
 description: The way Rust manages heap memory efficiently and safely
@@ -41,7 +41,7 @@ site_name: CS Notes by xy241
 - Refer to [Box's Owner Manages Deallocation](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#a-boxs-owner-manages-deallocation)
 
 >[!note]
->The key idea is that when a rust box is passed to function aka a new stack frame, its memory is deallocated after function ends.
+>The key idea is that when a rust box is passed to function aka a new [[Address Space#Stack Frame]], its memory is deallocated after function ends.
 >
 >Therefore the data is still available in heap segment after the ownership is transferred 
 

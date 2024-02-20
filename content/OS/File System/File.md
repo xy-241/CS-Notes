@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-02-02T01:55:04+07:00
+Last Date: 2024-02-20T12:53:40+08:00
 References: 
 ---
 

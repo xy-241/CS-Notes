@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-02-10T18:11:53+08:00
+Last Date: 2024-02-20T13:04:13+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -29,7 +29,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 - Grow upwards
 - Region of [[Virtual Memory]] where data can live indefinitely even when function returns
-- Expansion is done explicitly during **program runtime** using [[System Call (系统调用)]] like `brk()` in [[OS]] that follow [[POSIX]] or higher level [[Library Call]] 
+- Expansion is done explicitly during **program runtime** using [[System Call (系统调用)]] like `brk()` in [[Kernel]] that follow [[POSIX]] or higher level [[Library Call]] 
 </br>
 
 - Require manual memory management from the process - process of allocating memory and deallocating memory. See language examples below
@@ -56,21 +56,15 @@ description: Stack (automatic memory management for function variables), Heap (d
 >This can eventually lead to the exhaustion of available [[Main Memory]], resulting in **degraded performance** or even **program crashes**
 ### Stack Segment
 - **Dynamically allocated region** used to store **function calls**, local variables, and temporary data etc
-- Made up of **Stack Frames** which are associated with a specific function
+- Made up of [[#Stack Frame]], follow a [[Stack]] structure
 - **Grows** as functions are called and **shrinks** as they return
-</br>
 
-- [[Stack]] structure
-- Has a **default fixed size**, too many stack frame will lead to Stack Overflow
 >[!question]- Grows Downwards
 >Stack Segment starts at a higher [[Memory Address]], then memory address decreases as we add in **Stack Frame**, thus **growing downwards** in terms of Memory Address, so to remove stack frame, we need to increment the [[Register#Stack Pointer]]
 
 >[!info]- Fun Fact Regarding Grow Downwards
 > Growing downwards is a convention from when computers had small memories and the stack was placed at the end of the [[#Data Segment]]. Nowadays the stack can be anywhere, but the convention stuck on, at the end of the day it makes no difference
 
-
-
-</br>
 
 - When assigning one variable to another variable, data is **duplicated**
 - For example, `a=1` `b=a`, the value `1` is duplicated and assigned to `b`
@@ -139,6 +133,9 @@ description: Stack (automatic memory management for function variables), Heap (d
 >
 >- We load the base address of the **stack segment**
 >- Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because **stack segment grows downwards** when we are adding values to the stack
+
+#### Stack Frame
+- A section of the [[#Stack Segment]] dedicated to a **specific function call**
 
 ### Data Segment
 - This region stores **global** and **static variables** and **constants** used by the program, pre-defined before the execution of the program
