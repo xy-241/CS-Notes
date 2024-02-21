@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2023-12-21T13:43:12+08:00
+Last Date: 2024-02-21T16:54:44+08:00
 References: 
 ---
 ## Abstract
@@ -23,6 +23,8 @@ The example below is based on [next.js](https://nextjs.org/). The setup process 
 - [ ] [[#Changes for Frontend Source Codes]]
 - [ ] [[#Integration with Datadog APM]]
 
+>[!tip]- Track at User-level
+> If the users to your website need to login. You can pass the information of the users who login to your website to Datadog. This allows you to filter tracking data on a user level. For more details view [Advanced Configuration - Identify-user-session](https://docs.datadoghq.com/real_user_monitoring/browser/advanced_configuration/?tab=npm#identify-user-session)
 ### Datadog Dashboard
 1. Go to the appropriate [Datadog Site](https://docs.datadoghq.com/getting_started/site/#access-the-datadog-site). In this case, our site is `https://app.datadoghq.eu`, the endpoint is `https://app.datadoghq.eu/rum/list`
 2. Create a **New Application**,  **Application Type** is `JS`, **Instrumentation Type** is `NPM`, and we will get the following codes
