@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-29T19:10:00
-Last Date: 2024-02-19T12:17:23+08:00
+Last Date: 2024-02-21T14:29:39+08:00
 References: 
 sr-due: 2024-02-22
 sr-interval: 3
@@ -24,7 +24,7 @@ sr-ease: 267
 4. When Interrupt Handler is done, the running [[Process (进程)]] is restarted in the state is restored from the PCB
 
 >[!success] Free the CPU
-> We don't need to get [[CPU]] to keep **Polling** for response which may take a long time to produce. Instead get interrupted to get notified. Thus wasted computation
+> We don't need to get [[CPU]] to keep **Polling** for response which may take a long time to produce. Instead get interrupted to get notified. Thus, CPU is able to do other stuff while waiting for a response 
 
 
 >[!caution] Generally can't be interrupted

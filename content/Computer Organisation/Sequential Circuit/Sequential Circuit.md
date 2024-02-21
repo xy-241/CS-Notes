@@ -9,8 +9,8 @@ Creation Date: 2023-10-15T19:39:44
 Last Date: 2024-02-12T00:16:14+08:00
 References: 
 description: Discusses the concept of asynchronous and synchronous sequential circuits, touching on level-sensitive and edge-triggered circuits, latches and flip-flops, Emphasising the benefits of synchronization in the design and analysis of circuits.
-sr-due: 2024-02-21
-sr-interval: 9
+sr-due: 2024-03-13
+sr-interval: 21
 sr-ease: 236
 ---
 ## Abstract

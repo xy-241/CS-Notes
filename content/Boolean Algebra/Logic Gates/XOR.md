@@ -8,11 +8,11 @@ tags:
   - computer_organisation
   - cp
 Creation Date: 2023-09-21T10:01:00
-Last Date: 2024-02-12T00:24:24+08:00
+Last Date: 2024-02-21T14:18:32+08:00
 References: 
-sr-due: 2024-02-20
-sr-interval: 8
-sr-ease: 230
+sr-due: 2024-03-21
+sr-interval: 29
+sr-ease: 250
 ---
 ## Abstract
 ---
@@ -67,7 +67,7 @@ $$
 
 ### Logic Gate Implementation
 ![[XOR.png|300]]
-The [[Mathematical Statement]] is $(A \lor B) \land (\neg A \lor \not B)$
+The [[Mathematical Statement]] is $(A \lor B) \land (\neg A \lor \neg B)$
 1. [[OR]]: $A$ **or** $B$ must be true
 2. [[AND]], [[NOT]] (De Morgan's laws): Either $A$ or $B$ are `false`
 3. [[AND]]: The above 2 must be true in order to let the statement to be true
