@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-02-20T12:53:40+08:00
+Last Date: 2024-02-21T15:24:48+08:00
 References: 
 ---
 
@@ -70,10 +70,11 @@ References:
 >```
 
 ### Useful File Commands
-- Generate a hexdump from a binary file and display the output
-```bash
+```bash title="Generate a hexdump from a binary file and display the output"
 xxd <BINARY_NAME.bin>
 ```
+
+
 
 ### Line Break
 - [[POSIX]] systems uses a single character called **Line Feed** `\n`
@@ -84,6 +85,12 @@ xxd <BINARY_NAME.bin>
 >
 > You can view the hidden line break character by downloading and configuring `bat`, refer to [[MacOs Setup#Terminal Productivity Tools]] for more details
 
+## Useful CLi Tools
+### bat
+- A cat(1) clone with wings.
+```bash
+brew install bat && echo "alias cat='bat'" >>~/.zshrc
+```
 
 ## Terminologies
 

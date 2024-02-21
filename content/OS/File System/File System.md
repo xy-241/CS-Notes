@@ -8,7 +8,7 @@ tags:
   - linux
   - bash
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2024-01-21T16:10:53+08:00
+Last Date: 2024-02-21T15:10:39+08:00
 References: 
 ---
 ## Abstract
@@ -30,13 +30,51 @@ References:
 >[!caution] Perform ``mount`` on empty [[File System#File Directory]]
 >Otherwise, the [[File]] in the mounted Directory of the original File System can’t be accessed
 
+## Command Line Tools
+### eza
+- A modern, maintained replacement for ls
+```bash
+brew install eza
+echo "alias ls='eza --icons'" >>~/.zshrc
+echo "alias ll='eza -lhig --git --icons -a'" >>~/.zshrc
+echo "alias tree='eza --tree --icons'" >>~/.zshrc
+```
+### zoxide
+- A smarter cd command. Supports all major shells.
+```bash
+brew install zoxide
+brew install fzf
+# Append to .zshrc
+# eval "$(zoxide init zsh --hook prompt)" 
+# alias cd='z'
+```
+### joshuto
+- ranger-like terminal file manager written in Rust
+- [Config Instructions](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration), [Image Preview](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration)
+```bash
+brew install joshuto
+# Alias to have joshuto to exit in the current directory it is in
+alias joshuto='joshuto --change-directory --output-file $HOME/.joshutoExit; LASTDIR=`bat $HOME/.joshutoExit`; cd "$LASTDIR"'
+```
+### dua
+```bash title="Manage files fast, powered by rust!"
+brew install dua-cli
+
+dua interactive
+```
+### xcp
+```bash title="cp on tren!"
+cargo install xcp
+# Alias to cp
+alias cp="xcp"
+```
 ## Useful Commands
 ----
-#### `mkdir -p`
+**`mkdir -p`**
 - Tells the `mkdir` command to create parent directories as needed 
 - If you omit this option and the parent directory doesn't exist, you'll get an error
 
-#### `mkdir -m`
+**`mkdir -m`**
 - Used to set the mode (permissions) for the newly created directory
 - `mkdir -pm 0755 /etc/vault.d`
 ## Linux File System

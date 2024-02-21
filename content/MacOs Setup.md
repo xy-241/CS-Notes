@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-20T18:39:04+08:00
+Last Date: 2024-02-21T15:25:20+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -18,7 +18,6 @@ title:  My Macos Setup
 - [Obsidian - Note Taking App](https://obsidian.md/)
 - [StrongBox - Password Manager](https://apps.apple.com/us/app/strongbox-password-manager/id897283731)
 - [Tutanota - Email Client](https://tutanota.com/#download)
-- [Notion - Note Taking App](https://www.notion.so/desktop)
 - [List of Wonderful Apps Waiting to Be Explored!](https://sindresorhus.com/apps)
 
 **Optional:**
@@ -74,43 +73,21 @@ brew install stow
 ```
 ## Terminal Productivity Tools
 ---
-- `zoxide`, `fzf`
+- [ ] [[File System#joshuto]] (Terminal File Manager)
+- [ ] [[File System#eza]] (ls on Tren!)
+- [ ] [[File System#xcp]] (cp on Tren!)
+- [ ] [[File System#zoxide]] (cd on Tren!)
+- [ ] [[File System#dua]] (Disk Usage Analyser)
+- [ ] [[File#bat]] (cat on Tren!)
+- [ ] [[DNS#q]] (DNS Client)
+
 - `pipx`
-- `bat`
-- `eza`
-- `joshuto`, [Config Instructions](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration), [Image Preview](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration)
 - `watch`
-- `xcp`
-- `q`
 ```bash
 #!/bin/bash
-brew install zoxide
-brew install fzf
-# Append to .zshrc
-# eval "$(zoxide init zsh --hook prompt)" 
-# alias cd='z'
-
 brew install pipx && pipx ensurepath
 
-brew install bat && echo "alias cat='bat -A'" >>~/.zshrc
-
-brew install eza
-echo "alias ls='eza --icons'" >>~/.zshrc
-echo "alias ll='eza -lhig --git --icons -a'" >>~/.zshrc
-echo "alias tree='eza --tree --icons'" >>~/.zshrc
-
-brew install joshuto
-# Alias to have joshuto to exit in the current directory it is in
-alias joshuto='joshuto --change-directory --output-file $HOME/.joshutoExit; LASTDIR=`bat $HOME/.joshutoExit`; cd "$LASTDIR"'
-
 brew install watch
-
-cargo install xcp
-# Alias to cp
-alias cp="xcp"
-
-brew tap natesales/repo https://github.com/natesales/repo
-brew install q
 ```
 - [[Atuin]]
 - Custom bash commands (to be added to `.zshrc`)
@@ -120,7 +97,6 @@ h() {
 	curl cht.sh/$1
 }
 ```
-
 
 ## Programming Language Setup
 ---
@@ -155,6 +131,7 @@ brew install htop
 
 ## Software Engineering Tools
 ---
+- [[Code Editor Setup#Neovim]]
 - [[Code Editor Setup]]
 - [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
 - [Postman - API Testing Tool](https://www.postman.com/downloads/)
