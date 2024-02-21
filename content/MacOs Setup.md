@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-21T15:25:20+08:00
+Last Date: 2024-02-21T22:43:23+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -73,14 +73,16 @@ brew install stow
 ```
 ## Terminal Productivity Tools
 ---
-- [ ] [[File System#joshuto]] (Terminal File Manager)
-- [ ] [[File System#eza]] (ls on Tren!)
-- [ ] [[File System#xcp]] (cp on Tren!)
-- [ ] [[File System#zoxide]] (cd on Tren!)
-- [ ] [[File System#dua]] (Disk Usage Analyser)
-- [ ] [[File#bat]] (cat on Tren!)
-- [ ] [[DNS#q]] (DNS Client)
+- [ ] [[File System#eza]] - `ls` replacement
+- [ ] [[File System#xcp]] - `cp` replacement
+- [ ] [[File System#zoxide]] - `cd` replacement
+- [ ] [[File#bat]] - `cat` replacement
+- [ ] [[DNS#q]] - `dig` replacement
+- [ ] [[Atuin]] - `history` replacement
+- [ ] [[File System#joshuto]] - Terminal File Manager
+- [ ] [[File System#dua]] - Disk Usage Analyser
 
+**Others**
 - `pipx`
 - `watch`
 ```bash
@@ -89,7 +91,6 @@ brew install pipx && pipx ensurepath
 
 brew install watch
 ```
-- [[Atuin]]
 - Custom bash commands (to be added to `.zshrc`)
 ```bash
 # cht.sh shortcut
