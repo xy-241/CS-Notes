@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2024-02-13T13:51:37+08:00
+Last Date: 2024-02-21T12:56:10+08:00
 References: 
 ---
 ## Abstract
@@ -192,10 +192,10 @@ $$
 (A \subseteq B) \land (B \subseteq C) \rightarrow A \subseteq C
 $$
 
-### Theorem 6.2.2
-- *Set Identities*
-- Very similar to [[Propositional Logic#Theorem 2.1.1]]
-- Refer to lecture 5.2.2 for more details
+### Set Identities
+![[set_identities_Theorem 6.2.2.png|500]]
+- Very similar to [[Propositional Logic#Logical Equivalence]]
+
 
 
 

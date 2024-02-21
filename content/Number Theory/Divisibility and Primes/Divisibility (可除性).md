@@ -7,17 +7,25 @@ tags:
   - number_theory
   - discrete_math
 Creation Date: 2023-12-14, 10:01
-Last Date: 2024-02-20T09:59:35+08:00
+Last Date: 2024-02-21T13:22:27+08:00
 References: 
 ---
 ## Abstract
 ---
-- $d|n$ means that there is an [[Integer (整数)]] $k$ such as $n=dk$
-- $d$ is a [[Factor]] of $n$
+- $d|n$ means that there is an [[Integer (整数)]] $k$ such as $n=dk$. Thus, $d$ is a [[Factor]] of $n$
 - Used frequently under the topic of [[Relation]]
+
 
 >[!caution] $d|n$  doesn't return a numerical value
 >  It is not an actual division. It is a [[Mathematical Statement]] that is either `True` or `False`
+
+### Divisibility Mathematical Model
+----
+- Let $a, b \in  \mathbb{Z}$  with $b \gt 0$. There exist unique $q,r \in \mathbb{Z}$ with $0 \le r \lt b$ such that $a = qb + r$ 
+</br>
+
+- We call $q$ and $r$ the **quotient** and **remainder** of $a$ when divided by $b$ respectively
+- When $r=0$, we can say $b$ is a [[Factor]] of $a$
 
 ## Theorems
 ---
