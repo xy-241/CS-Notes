@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-29T14:24:00
-Last Date: 2024-01-06T21:06:28+08:00
+Last Date: 2024-02-22T18:02:39+08:00
 References: 
 ---
 ## Abstract
@@ -34,5 +34,5 @@ References:
 
 - [[CPU]] one core is way more power, and able to handle complication logics like [[Pipeline Branching]]
 - However, a lot of the real world application needs to run [[Instruction]] in a sequential manner
-- GPU shines when we need [[High-performance Computing#Parallelism (并行性)]]
+- GPU shines when we need [[Concurrency (并发)#Parallelism (并行性)]]
 

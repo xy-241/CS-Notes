@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-30, 01:04
-Last Date: 2024-01-03T13:47:31+08:00
+Last Date: 2024-02-22T18:09:12+08:00
 References: 
 draft: 
 ---
@@ -43,7 +43,7 @@ draft:
 - Powerful servers are much more expensive
 
 ### Horizontal Scaling
-- Basically adding more [[Host#Server]], handle the traffic in [[High-performance Computing#Parallelism (并行性)]]
+- Basically adding more [[Host#Server]], handle the traffic in [[Concurrency (并发)#Parallelism (并行性)]]
 - More desirable for large scale applications due to [[#Vertical Scaling Limitations]]
 - Usually has a [[Load Balancer]] sits between the client and server, to distribute the traffic evenly to the servers
 

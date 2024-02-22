@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-11T19:28:00
-Last Date: 2024-02-08T13:02:13+08:00
+Last Date: 2024-02-22T18:08:20+08:00
 References: 
 ---
 ## Abstract
 ---
 - Also known as **Hyper-threading**
-- A mechanism achieved with [[#Multi-threaded Chip]](true [[High-performance Computing#Parallelism (并行性)|Parallelism (并行性)]]) or quick [[Context Switch]]([[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]) or **both**
+- A mechanism achieved with [[#Multi-threaded Chip]]([[Concurrency (并发)#Parallelism (并行性)]]) or quick [[Context Switch]]([[Concurrency (并发)]]) or **both**
 </br>
 
 - Doesn't offer true Parallelism (并行性) on Single-Core [[CPU]] which only supports one [[Process (进程)]] running at a time

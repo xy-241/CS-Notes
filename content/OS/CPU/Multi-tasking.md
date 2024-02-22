@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-24T12:23:00
-Last Date: 2024-02-18T17:16:19+08:00
+Last Date: 2024-02-22T18:07:42+08:00
 description: "Unlock the Power of Multitasking in Computer Science: Explore the intricacies of Corporative and Preemptive Multitasking, extending the capabilities of traditional multi-programming."
 ---
 ## Multi-tasking
@@ -18,7 +18,7 @@ description: "Unlock the Power of Multitasking in Computer Science: Explore the 
 - Focus on improving user experience 
 
 ### Time-Sharing
-- A Implementation of [[High-performance Computing#Concurrency (并发)|Concurrency (并发)]]
+- A Implementation of [[Concurrency (并发)]]
 - A specific implementation of [[Multi-tasking]] when resources are shared by multiple users at the **same time**, achieved with quick [[Context Switch]]
 - All Time-sharing systems are [[Multi-programming]] systems
 - Allow multiple remote users to run jobs on the same computer at the same time 

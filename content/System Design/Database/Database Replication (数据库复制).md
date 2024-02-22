@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-30, 21:53
-Last Date: 2023-12-30T23:30:37+08:00
+Last Date: 2024-02-22T18:02:24+08:00
 References: 
 draft: 
 ---
@@ -30,7 +30,7 @@ draft:
 ---
 ### Better Performance
 - Read operations are distributed across [[#Slave Database]]
-- This model improves performance because it allows more queries to be processed in [[High-performance Computing#Parallelism (并行性)]]
+- This model improves performance because it allows more queries to be processed in [[Concurrency (并发)#Parallelism (并行性)]]
 - And we are able to perform [[System Design#Horizontal Scaling]] on the slave database to handle more read requests
 
 ### High Fault Tolerance 

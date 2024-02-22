@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-11T19:03:44
-Last Date: 2023-12-24T15:40:39+08:00
+Last Date: 2024-02-22T18:03:50+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,6 @@ References:
 - With more than 1 [[CPU#Core]]
 - Need a [[os#Multi-processor OS]] to advantage of such chips
 
-## Benefits
----
-1. Allow true [[High-performance Computing#Parallelism (并行性)|Parallelism(并行性)]]
-2. To counter [[Power Wall]]
+>[!success] Performance Gainz
+> 1. Enables [[Concurrency (并发)#Parallelism (并行性)]]
+> 2. Counter [[Power Wall]]
