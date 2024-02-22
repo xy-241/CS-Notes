@@ -6,26 +6,22 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-29T20:32:00
-Last Date: 2023-12-14T18:16:44+08:00
-References:
+Last Date: 2024-02-22T13:38:13+08:00
+References: 
 ---
 ## Abstract
 ---
 - [[Mathematical Proof]] in [[Mathematical Argument]]
-- Loosely a collection of interesting applied math topics outside of *Calculus*
+- Loosely a collection of interesting applied math topics outside of **Calculus**
 
 
 
 ## Terminologies 
 ---
-### Sets
-- N - All Natural number (0,1,2,3,4...)
-- Z - All integers (315, -9045)
-- Q - All rational numbers (0.5, -23, 8.5)
+### Number Representation Symbols
 - R - All real number (-1, pi, 4.5)
 - C - All complex number (9.1i)
->[!sidenote]
->- Z is Q, and Q is R
+
 
 ### Axioms (公理)
 - Universally recognized truth or principle

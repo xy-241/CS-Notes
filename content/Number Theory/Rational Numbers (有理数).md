@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-14, 10:23
-Last Date: 2023-12-14T10:29:59+08:00
-References:
+Last Date: 2024-02-22T13:35:23+08:00
+References: 
 ---
 ## Abstract
 ---
-- `r` is rational `<->` there are integers `a` and `b` such that `r=a/b` and `b!=0`
-- Represented with the symbol `Q`
+- `r` is rational $\leftrightarrow$ there are integers `a` and `b` such that `r=a/b` and `b!=0`
+- Represented with the symbol $\mathbb{Q}$ (0.5, -23, 8.5)
 
 ## Theorem
 ---
