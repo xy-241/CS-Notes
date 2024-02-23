@@ -6,27 +6,25 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-20T15:42:00
-Last Date: 2024-02-19T10:04:18+08:00
+Last Date: 2024-02-23T10:56:39+08:00
 References: 
-sr-due: 2024-02-23
-sr-interval: 4
-sr-ease: 270
+sr-due: 2024-03-09
+sr-interval: 15
+sr-ease: 290
 ---
 ## Abstract
 ---
-$$
-P \rightarrow Q
-$$
-
+- [[Mathematical Statement#Compound Statement]] in the form $P \rightarrow Q$
+- [[#Vacuously True]] when the [[#Hypothesis]] $P$ is $0$ aka false
+- [[Propositional Logic#Logical Equivalence]] to [[#Contrapositive (逆否命题)]] and $\neg P \lor Q$ 
+	
 | $P$   | $Q$   | $P \rightarrow Q$ | $\neg P \lor Q$ |
 | --- | --- | ------ | ------- |
 | 0   | 0   | 1      |     1    |
 | 0   | 1   | 1      |      1   |
 | 1   | 0   | 0      |       0  |
 | 1   | 1   | 1      |      1   |
-- [[Mathematical Statement#Compound Statement]]
-- [[#Vacuously True]] when [[#Hypothesis]] ($P$) is $0$(false)
-- [[Propositional Logic#Logical Equivalence]] to [[#Contrapositive (逆否命题)]]
+
 ### Hypothesis
 - Also known as **Antecedent**
 - The part after `if`
@@ -49,7 +47,7 @@ $$
 
 ### Vacuously True
 - **True by default** 
-- When the "if" part of an if-then statement is false, then statement as a whole is said to be true regardless of whether the conclusion is true of false
+- When the [[#Hypothesis]] is false, then statement as a whole is said to be true regardless of whether the [[#Conclusion]] is true of false
 
 ### Implication Law
 $$

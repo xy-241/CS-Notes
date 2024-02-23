@@ -6,10 +6,12 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-20, 15:49
-Last Date: 2024-02-04T16:42:11+08:00
+Last Date: 2024-02-23T11:22:59+08:00
 References: 
 draft: 
 description: 
+aliases:
+  - ../../Discrete-Math/Combinatorics
 ---
 ## Abstract
 ---

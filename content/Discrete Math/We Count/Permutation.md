@@ -6,10 +6,12 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-02-08, 10:07
-Last Date: 2024-02-08T10:51:04+08:00
+Last Date: 2024-02-23T11:24:10+08:00
 References: 
 draft: 
 description: 
+aliases:
+  - ../../Discrete-Math/Permutation
 ---
 ## Abstract
 ---

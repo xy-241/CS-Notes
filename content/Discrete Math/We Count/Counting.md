@@ -6,10 +6,12 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-19, 17:10
-Last Date: 2024-01-19T17:20:25+08:00
+Last Date: 2024-02-23T11:24:00+08:00
 References: 
 draft: 
 description: 
+aliases:
+  - ../../Discrete-Math/Counting
 ---
 ## Abstract
 ---
