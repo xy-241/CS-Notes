@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-21T22:43:23+08:00
+Last Date: 2024-02-23T23:52:18+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -137,8 +137,8 @@ brew install htop
 - [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
 - [Postman - API Testing Tool](https://www.postman.com/downloads/)
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
-- [[jq]]
-- `ngrok`
+</br>
+
 - `gh`
 - `qemu` (for [[RISCV Kernel Deep Dive]])
 - `socat`
@@ -146,9 +146,6 @@ brew install htop
 - `dbeaver-community` 
 ```bash
 #!/bin/bash
-
-brew install ngrok/ngrok/ngrok
-
 brew install gh
 gh auth login # Painless Github CLi Auth
 
@@ -161,8 +158,8 @@ brew install hyperfine # A command-line benchmarking tool
 brew install --cask dbeaver-community # DB Viewer
 ```
 
-
-
+- [ ] [[Networking/Terminologies/Secure Tunneling#Ngrok]]
+- [ ] [[jq]]
 ## OS Config
 ---
 - [Add Geist Font](https://github.com/vercel/geist-font)
