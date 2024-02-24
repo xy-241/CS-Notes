@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-02-11T22:09:17+08:00
+Last Date: 2024-02-24T15:34:55+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
-- Basically a [[Set#Subset]] of [[Set#Cartesian Product]] filtered by some conditions which define the relation among the elements from the given [[Set]]
+- Basically a [[Common Sets#Subset]] of [[Set#Cartesian Product]] filtered by some conditions which define the relation among the elements from the given [[Set]]
 
 >[!example] Real-world Implication 
 > Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation aka all the rows that can be stored inside the database. Each row is a actual [[Set#Order n-tuples]] inside the relation

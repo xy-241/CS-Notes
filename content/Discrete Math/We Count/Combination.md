@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-02-23T11:23:45+08:00
+Last Date: 2024-02-24T15:34:25+08:00
 References: 
 draft: 
 description: Exploring the binomial coefficient, delving into two formulas for its calculation. Formula 1 utilizes recursion, while Formula 2 involves factorials. We also touch upon properties like symmetry and its representation in Pascal's Triangle.
@@ -27,7 +27,7 @@ aliases:
 </br>
 
 
-- Also known as the number of **k-element** [[Set#Subset]] (or **k-combinations**) of a **n-element** [[Set]] 
+- Also known as the number of **k-element** [[Common Sets#Subset]] (or **k-combinations**) of a **n-element** [[Set]] 
 - $\binom{2}{1} = 2$, because given a set of 2 elements $\{1,2\}$ for example, there are 2 subsets of 1 elements: $\{1\}$ and $\{2\}$ 
 
 
