@@ -3,15 +3,27 @@ Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
-tags: 
+tags:
+  - computer_organisation
+  - arduino
 Creation Date: 2024-01-11, 21:59
-Last Date: 2024-01-29T19:29:55+08:00
+Last Date: 2024-02-24T18:33:27+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
 - A hardware component inside [[CPU]] that generates [[#Clock Signal]] to control the speed of CPU processing [[Instruction]]
+
+
+>[!success] Synchronisation
+> Clock signal is generated at constant interval, this helps to calculate time and synchronize the internal operations
+
+>[!example]- Arduino Uno
+> **External Clock Oscillator**
+> ![[arduino_uno_clock_oscillator.png|300]]
+> - **16MHz**, named indicating 16.000H9H
+> 
 
 
 ## Clock Signal
