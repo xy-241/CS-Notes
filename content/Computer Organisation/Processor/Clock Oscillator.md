@@ -7,7 +7,7 @@ tags:
   - computer_organisation
   - arduino
 Creation Date: 2024-01-11, 21:59
-Last Date: 2024-02-24T18:33:27+08:00
+Last Date: 2024-02-25T17:08:13+08:00
 References: 
 draft: 
 ---
@@ -19,11 +19,36 @@ draft:
 >[!success] Synchronisation
 > Clock signal is generated at constant interval, this helps to calculate time and synchronize the internal operations
 
->[!example]- Arduino Uno
-> **External Clock Oscillator**
-> ![[arduino_uno_clock_oscillator.png|300]]
-> - **16MHz**, named indicating 16.000H9H
+>[!bigbrain] Play a key role in timing-dependent tasks
+> Functions like `delay()` and `millis()` are dependent on the clock
+
+>[!example]- Clock Oscillator for Arduino Uno ATmega328p
+> ![[Arduino_Uno_brains.png|300]]
+> - True heart of the Arduino Uno. It's where your Arduino sketches (code) run, and it handles the primary input/output tasks
 > 
+> **External Clock Source**
+> ![[Arduino_Uno_ATmega328p_external_clock.png|300]]
+> - ATmega328p supports an external clock source of **16MHz-20MHz** via Pin 9 and Pin 10
+> - The Ceramic Resonator is the built-in external clock source that runs at **16MHz**
+> 
+> **Internal Clock Source**
+>  - Calibrated Internal RC Oscillator running at **8MHz**
+>  - 128kHz Internal Oscillator running at **128kHz**
+>  - [More details](https://linuxhint.com/arduino-internal-clock/#Calibrated-Internal-RC-Oscillator)
+
+>[!example]- Clock Oscillator for Arduino Uno ATmega16u2
+> ![[Arduino_Uno_brains.png|300]]
+> - Facilitates [[Serial Communication]] between Arduino and computer, converts signals between USB (Universal Serial Bus) and TTL (Transistor-Transistor Logic) serial communication protocols
+>   
+> **External Clock Source**
+> ![[arduino_uno_crystal_oscillator.png|300]]
+> - The Crystal oscillator is the built-in external clock source that runs at 16MHZ, named indicating 16.000H9H
+> - Crystal oscillator is more expensive and accurate, serial communication needs such accuracy to work
+> 
+> **Internal Clock Source**
+> - Calibrated Internal RC Oscillator running at **8MHz**
+> - PLL running at **48MHz**
+> - [More details](https://linuxhint.com/arduino-internal-clock/#Calibrated-Internal-RC-Oscillator)
 
 
 ## Clock Signal
@@ -50,3 +75,4 @@ draft:
 ---
 - What is an oscillator? Oscillator tutorial in HD! - YouTube
 ![What is an oscillator? Oscillator tutorial in HD! - YouTube](https://youtu.be/aJAZHPqEUKU?si=Pt-hOeXTN6z8j6Po&t=157)
+- [Does Arduino Have Internal Hardware Clock](https://linuxhint.com/arduino-internal-clock/)
