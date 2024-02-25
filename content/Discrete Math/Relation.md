@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-02-24T15:34:55+08:00
+Last Date: 2024-02-25T14:26:39+08:00
 References: 
 draft: 
 ---
@@ -87,7 +87,7 @@ $$
 - $R$ is equivalence relation iff $R$ is [[#Reflexive]], [[#Symmetric]] and [[#Transitive]]
 
 ### Equivalence Class
-- Basically same as the *component* of a [[Set#Partition]] or elements of [[#Equivalence Relation]]
+- Basically same as the **component** of a [[Common Sets#Partition]] or elements of [[#Equivalence Relation]]
 - Can be represented with $[a]_{relation}$, it means the Equivalence Class contains element $a$
 - $[a]_{relation}$ and $[b]_{relation}$ are the same iff $b$ is in the same equivalence class as $a$
 
@@ -101,7 +101,7 @@ $$
 	3. $[x] \cap [y] \ne \emptyset$
 
 ### Theorem 8.3.4
-- The [[Set#Partition]] induced by [[#Equivalence Relation]]
+- The [[Common Sets#Partition]] induced by [[#Equivalence Relation]]
 - If $R$ is equivalence relation on [[Set]] $A$, then the distinct [[#Equivalence Class]] form a partition of $A$
 ## Terminologies
 ---
