@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - docker
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2023-11-13T19:06:12+08:00
-References:
+Last Date: 2024-02-26T21:20:15+08:00
+References: 
 ---
 >[!note] ``-d``
 >Run in detached mode aka run in background
@@ -27,18 +27,13 @@ References:
 >[!note] ``--name``
 >- Provide a custom name for a container when you start it
 
-### ``--network``
-- Select which [[Docker Network]] to start the [[Docker Container]]
-```bash
-docker run -d --network host hashicorp/vault server
-```
+### --cap-add
+- Used to add specific [[Linux Kernel]] capabilities to a [[Docker Container]]
 
->[!note] `--cap-add`
->- Used to add specific [[Linux Kernel]] capabilities to a [[Docker Container]]
->  >[!example] `--cap-add=IPC_LOCK`
->  >- Granting that container the ability to lock [[Shared Memory]] segments in the host's [[IPC Namespace]]
->  >- Allows the container to lock shared memory in a way that prevents it from being paged out to [[Disk]], potentially improving performance for applications that rely heavily on shared memory operations.
->  
+>[!example] `--cap-add=IPC_LOCK`
+> - Granting that container the ability to lock [[Shared Memory]] segments in the host's [[IPC Namespace]]
+> - Allows the container to lock shared memory in a way that prevents it from being paged out to [[Disk]], potentially improving performance for applications that rely heavily on shared memory operations.
+
 
 
 ## [[Docker Volume]]
