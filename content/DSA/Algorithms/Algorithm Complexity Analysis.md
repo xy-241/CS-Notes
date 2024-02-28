@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T15:13:00
-Last Date: 2024-02-20T10:05:17+08:00
+Last Date: 2024-02-28T17:54:33+08:00
 References: 
 ---
 ## Abstract
@@ -19,6 +19,8 @@ References:
 >- We are only thinking what is the complexity when the input size is approaching Infinity (∞)
 >- So when the actual input size in real world is small, the algorithms with worst time complexity may run fast! 
 
+>[!tip] Use codes to find algorithm complexity analysis
+> We can write out the given program, then place a counter at the core part of the program. Then we can obtain the relationship by observing the value we substituted to the input and the value of the counter
 
 
 
