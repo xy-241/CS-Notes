@@ -8,13 +8,13 @@ tags:
   - linux
   - bash
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2024-02-21T15:10:39+08:00
+Last Date: 2024-02-28T19:48:57+08:00
 References: 
 ---
 ## Abstract
 ---
-- Also known as *Directory Hierarchy*
-- A method and [[Data Structure]] that the [[OS]] uses to control how data is stored and retrieved on a storage device 
+- Also known as **Directory Hierarchy**
+- A method and [[Data Structure]] that the [[Kernel]] uses to control how data is stored and retrieved on a storage device 
 - Provides a way to organise [[#File Directory]] into folders, and to keep track of which [[File]] are stored where on the device
 - A File Directory where entries can be File or other File Directory
 
@@ -23,14 +23,48 @@ References:
 >- May exist for years
 >- Entries can be accessed by a wider group than just the owner
 
+>[!info]- Linux File System Hierarchy
+> <img src="https://raw.githubusercontent.com/ByteByteGoHq/system-design-101/main/images/linux-file-systems.jpg" width="450">
+> 
+> - [Linux File System Hierarchy Explained - Bytebytego](https://youtu.be/bbmWOjuFmgA?si=zm32Pmn2I4Yum2hM)
+>   
+> **`/etc/profile.d`**
+> -  Used for storing shell script files that are automatically sourced when a [[User|User]] logs into the system
+> - These scripts are used to set environment variables, customize the shell's behavior, and configure user-specific settings globally for all users
+>   
+> **`/src`**
+> - The name "srv" stands for "service" 
+> - Typically used to store data that is served by the system
+> - Often used to store data related to various services running on the system, such as websites, FTP servers, and other network services
 
 ### Mounted File System
 - With ``mount`` [[System Call (系统调用)]], we are able to mount an isolated [[File System]] to another isolated File System
 
->[!caution] Perform ``mount`` on empty [[File System#File Directory]]
+>[!caution] Always perform ``mount`` on empty file directory
 >Otherwise, the [[File]] in the mounted Directory of the original File System can’t be accessed
 
+## Common File Systems
+---
+### APFS (Apple File System)
+- Created by Apple, used for macOS, iOS, iPadOS, tvOS, and watchOS
+- We need to use [[FUSE]] to mount APFS on [[Linux Kernel]] 
+
+### Ext4 (Extended Filesystem 4)
+- The default choice on many Linux distributions. Mature, stable, and offers good all-around performance
+- Commonly used in [[Linux Kernel]]
+
+### ZFS (Zettabyte File System)
+- Originally from Solaris, known for extreme scalability, data integrity protection, and comprehensive features (snapshots, compression, volumes). Can be resource-intensive
+- Commonly used in [[Linux Kernel]]
+
+### exFAT (Extended File Allocation Table) 
+- Windows standard filesystem
+- Designed as a successor to FAT32, specifically for flash drives and other external storage. Handles large files and better cross-compatibility than FAT32.
+
+
+
 ## Command Line Tools
+---
 ### eza
 - A modern, maintained replacement for ls
 ```bash
@@ -77,21 +111,8 @@ alias cp="xcp"
 **`mkdir -m`**
 - Used to set the mode (permissions) for the newly created directory
 - `mkdir -pm 0755 /etc/vault.d`
-## Linux File System
----
-<img src="https://raw.githubusercontent.com/ByteByteGoHq/system-design-101/main/images/linux-file-systems.jpg" width="450">
 
-- Linux File System Explained - Bytebytego
-![Linux File System Explained - Bytebytego](https://youtu.be/bbmWOjuFmgA?si=zm32Pmn2I4Yum2hM)
 
-#### `/etc/profile.d`
--  Used for storing shell script files that are automatically sourced when a [[User|User]] logs into the system
-- These scripts are used to set environment variables, customize the shell's behavior, and configure user-specific settings globally for all users
-
-#### `/src`
-- Typically used to store data that is served by the system
-- The name "srv" stands for "service" 
-- Often used to store data related to various services running on the system, such as websites, FTP servers, and other network services
 
 
 ## Terminologies 
