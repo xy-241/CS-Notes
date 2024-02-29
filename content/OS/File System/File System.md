@@ -8,7 +8,7 @@ tags:
   - linux
   - bash
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2024-02-28T19:48:57+08:00
+Last Date: 2024-02-29T15:25:08+08:00
 References: 
 ---
 ## Abstract
@@ -18,10 +18,27 @@ References:
 - Provides a way to organise [[#File Directory]] into folders, and to keep track of which [[File]] are stored where on the device
 - A File Directory where entries can be File or other File Directory
 
+
+
+
 >[!info] Difference from [[Process Hierarchy]]
 >- Can be very deep
 >- May exist for years
 >- Entries can be accessed by a wider group than just the owner
+
+>[!tip]- List the filesystem of attached block device
+> **[[Linux Kernel]]**
+> ```bash
+> lsblk --fs
+> ```
+> 
+> **MacOS**
+> ```bash
+> diskutil list
+> ```
+
+
+
 
 >[!info]- Linux File System Hierarchy
 > <img src="https://raw.githubusercontent.com/ByteByteGoHq/system-design-101/main/images/linux-file-systems.jpg" width="450">
@@ -42,6 +59,12 @@ References:
 
 >[!caution] Always perform ``mount`` on empty file directory
 >Otherwise, the [[File]] in the mounted Directory of the original File System can’t be accessed
+
+>[!tip]- List mounted file system 
+> **Linux**
+> ```
+> df -Th
+> ```
 
 ## Common File Systems
 ---
@@ -91,26 +114,19 @@ brew install joshuto
 alias joshuto='joshuto --change-directory --output-file $HOME/.joshutoExit; LASTDIR=`bat $HOME/.joshutoExit`; cd "$LASTDIR"'
 ```
 ### dua
-```bash title="Manage files fast, powered by rust!"
+- Manage files fast, powered by rust!
+```bash
 brew install dua-cli
 
 dua interactive
 ```
 ### xcp
-```bash title="cp on tren!"
+- cp on tren!
+```bash
 cargo install xcp
 # Alias to cp
 alias cp="xcp"
 ```
-## Useful Commands
-----
-**`mkdir -p`**
-- Tells the `mkdir` command to create parent directories as needed 
-- If you omit this option and the parent directory doesn't exist, you'll get an error
-
-**`mkdir -m`**
-- Used to set the mode (permissions) for the newly created directory
-- `mkdir -pm 0755 /etc/vault.d`
 
 
 
@@ -123,3 +139,12 @@ alias cp="xcp"
 - The top of the [[File System]]
 ### File Directory
 - A way of grouping [[File]] together
+
+>[!tip]- Handy tips to create File Directory
+> **`mkdir -p`**
+> - Tells the `mkdir` command to create parent directories as needed 
+> - If you omit this option and the parent directory doesn't exist, you'll get an error
+> 
+> **`mkdir -m`**
+> - Used to set the mode (permissions) for the newly created directory
+> - `mkdir -pm 0755 /etc/vault.d`

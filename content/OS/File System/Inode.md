@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-20T14:47:00
-Last Date: 2024-02-28T20:03:21+08:00
+Last Date: 2024-02-29T15:02:13+08:00
 References: 
 ---
 ## Abstract
@@ -36,5 +36,5 @@ ls -i
 
 ```bash
 # Check the total number inode available & used
-df -h
+df -i
 ```
