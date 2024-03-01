@@ -7,14 +7,14 @@ tags:
   - cloudflare
   - security
 Creation Date: 2024-02-29, 22:22
-Last Date: 2024-03-01T00:17:54+08:00
+Last Date: 2024-03-01T19:33:15+08:00
 References: 
 draft: 
 description: 
 ---
 ## Abstract
 ---
-- A Cloudflare security service that allows you to set up [policies and rules](https://developers.cloudflare.com/cloudflare-one/policies/access/) that let you define who can or cannot access your applications based on **user Identity**, **network attributes**, and **device posture**
+- A Cloudflare security service that allows you to set up [policies and rules](https://developers.cloudflare.com/cloudflare-one/policies/access/) that let you define who can or cannot access your applications based on [user Identity](https://developers.cloudflare.com/cloudflare-one/identity/), **network attributes**, and **device posture**
 - You can access the dashboard at [Cloudflare Access](https://one.dash.cloudflare.com/:account/l)
 
 ## Cloudflare Access Temporary Authentication
@@ -24,7 +24,9 @@ description:
 - Refer to [Cloudflare Access - Temporary authentication](https://developers.cloudflare.com/cloudflare-one/policies/access/temporary-auth/#set-up-temporary-authentication) for setup guide
 
 >[!caution] Email addresses of the approvers
-> Make you set the email addresses of the approvers to your **Cloudflare email**, or there is no way for you to approve the temporary authentication request
+> Make sure you setup [App Launcher · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/applications/app-launcher/) and create a policy that authenticate the emails of the approvers, or there is no way for you to approve the temporary authentication request
+> 
+> And you need a different approver email to approve temporary authentication for another approver email!
 
 >[!example]- Allow Temporary Authentication Policy Example
 > ![[cloudflare_access_temp_access_example.png]]

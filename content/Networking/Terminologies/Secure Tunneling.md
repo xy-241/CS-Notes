@@ -78,7 +78,7 @@ brew install cloudflared
 	2. **Docker:** Run the connector as a docker container without the need to grant root access but we have to manually manage the lifecycle of the connector
 
 >[!error] Connector Installation Issue with Docker
-> For some reasons, when I close the terminal, the connector container will auto exit. Event thought I used both `-d` and `--restart unless-stopped`. I am running Docker on my Raspberry Pi. If you know why, please comment down below to tell me why. Thanks :)
+> For some reasons, when I close the terminal, the connector container will auto exit. Even thought I used both `-d` and `--restart unless-stopped`. I am running Docker on my Raspberry Pi. If you know why, please comment down below to tell me why. Thanks :)
 
 >[!info]- Cloudflare Tunnel Init System Service on Mac
 > When you run `sudo cloudflared service install <TOKEN>`, a service file should be created at the following path `/Library/LaunchDaemons/com.cloudflare.cloudflared.plist`
