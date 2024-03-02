@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-02-27T16:00:20+08:00
+Last Date: 2024-03-02T20:44:04+08:00
 References: 
 description: The giant that powers the software application we use on a daily basis!
 ---
@@ -37,7 +37,7 @@ description: The giant that powers the software application we use on a daily ba
 
 ### Sensor-Node OS
 - Running on sensor node that has very limited [[CPU]], [[Main Memory]] & [[ROM]]
-- Example is [[TinyOS]]
+- Example is [TinyOS](https://en.wikipedia.org/wiki/TinyOS)
 
 ### Real-Time OS
 - 2 Types - [[Hard Real-Time System]] & [[Soft Real-Time System]]
