@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Add a random value to the text before [[Hash]]
+- Add a random value to the text before [[Hash Digest]]
 
 
 

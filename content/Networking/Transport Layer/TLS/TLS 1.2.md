@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-31T15:18:35+08:00
-Last Date: 2024-01-13T22:15:10+08:00
+Last Date: 2024-03-02T18:16:13+08:00
 References: 
 ---
 ## Abstract
 ---
-- Using [[Certificate Authority (CA)]] & [[Asymmetric Cryptography]] to perform [[#Symmetric Key Exchange]]. 
+- Using [[X.509 Certificate#Certificate Authority (CA)]] & [[Asymmetric Cryptography]] to perform [[#Symmetric Key Exchange]]. 
 - Takes 2 [[Network Round-trip]] - [[#Certificate Check]]& [[#Symmetric Key Exchange]]
 
 ## Certificate Check

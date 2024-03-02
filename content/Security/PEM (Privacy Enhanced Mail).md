@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-23T21:37:58+08:00
-Last Date: 2023-09-23T21:37:58+08:00
-References:
+Last Date: 2024-03-02T18:16:55+08:00
+References: 
 ---
 ## Abstract
 ---
@@ -24,7 +24,7 @@ References:
 
 
 >[!example] Common types of cryptographic objects that can be stored in PEM format include
->1. [[X.509 Certificates]]
+>1. [[X.509 Certificate]]
 >2. [[Private Key]] & [[Public Key]]
 >4. [[Certificate Signing Requests (CSRs)]]
 >5. [[Certificate Revocation Lists (CRLs)]]

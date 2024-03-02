@@ -8,27 +8,18 @@ tags:
   - js
   - bash
 Creation Date: 2023-09-09T18:10:00
-Last Date: 2024-03-02T17:47:20+08:00
+Last Date: 2024-03-02T18:03:04+08:00
 References: 
 ---
 ## Abstract
 ---
-- Hash means Chop & Mix
-- It is **infeasible to reverse** from the [[#Digest]] to the original text
+- The output value produced by a [[Hash Function]], commonly formatted as hex or [[Base 64 Encoding]]
+- It is **infeasible to reverse** back the original text with the hash digest only
 
 >[!caution] Vulnerable to Brute-force attacks
 > Can by hacked by [Rainbow table - Wikipedia](https://en.wikipedia.org/wiki/Rainbow_table). You can try to  [[#Nodejs |hash of common text]] and hack using this [website](https://crackstation.net/)
 > 
 > One way to counter it is to use [[Salting]]
-
->[!example]- Example use case
-> Store secrete data in plaintext in the hash form (e.g Password)
-
-
-
-### Digest
-- A hash value that is commonly formatted as hex or [[Base 64 Encoding]]
-- Should fulfil both [[#Avalanche effect (雪崩效应)]] and 
 
 >[!code]- Generate Hash Digest using Nodejs
 >
@@ -42,11 +33,14 @@ References:
 > let password = 'password123'
 > console.log(hash(password));
 > ```
-#### Avalanche effect (雪崩效应)
-- If an **input is changed slightly**, the **output changes significantly**
 
-#### Collision resistance (抗碰撞性)
-- It is hard to find two inputs that hash to the same output
+>[!example]- Example use case
+> Store secrete data in plaintext in the hash form (e.g Password)
+
+
+
+
+
 
 
 

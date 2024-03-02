@@ -6,16 +6,18 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-12-12T11:49:00+08:00
-Last Date: 2024-01-13T22:05:53+08:00
+Last Date: 2024-03-02T19:02:51+08:00
 References: 
 ---
 ## Abstract
 ---
+- We need to a TCP connection before 2 [[Host]] can communicate over the [[Network]]
 - Established after [[TCP Handshake]]
-</br>
-
-- Usually browser will keep multiple TCP Connection to the same [[Host#Server]] to have a balance between good performance & resource usage([[Chrome]] & [[Firefox]] default 6)
-
->[!caution] Resource intensive on both [[Host]] & [[Host]] side because [[TCP#^228bd9 | TCP is Stateful]]
 
 
+>[!caution] Resource intense
+> More resource is required on both [[Host#Client]] and [[Host#Server]] because TCP is a [[Network Protocol#Stateful Network Protocol]]
+
+
+>[!info] TCP connection in browser
+> Browser usually keep multiple TCP Connection to the same [[Host#Server]]. [[Chrome]] & [[Firefox]] default have 6 to have a balance between performance & resource usage

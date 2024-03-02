@@ -6,16 +6,16 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-07-14T13:30:00
-Last Date: 2024-02-18T18:09:46+08:00
+Last Date: 2024-03-02T18:41:11+08:00
 References: 
 ---
 ## Abstract
 ---
-- Defines the format and the order of *messages* exchanged between 2 or more [[Host]]
+- Defines the format and the order of **messages** exchanged between 2 or more [[Host]] over the [[Network]]
 
 
 ### Stateless Network Protocol
-- [[Host#Server]] does't maintain information about the [[Host#Client]], vice versa
+- [[Network Protocol]] in which [[Host#Server]] does't maintain information about the [[Host#Client]], vice versa
 
 ### Stateful Network Protocol
-- [[Host#Server]] maintains information about the [[Host#Client]], vice versa
+- [[Network Protocol]] [[Host#Server]] maintains information about the [[Host#Client]], vice versa

@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-07T16:41:00
-Last Date: 2024-03-02T17:46:48+08:00
+Last Date: 2024-03-02T18:03:37+08:00
 References: 
 ---
 ## Abstract
 ---
-- Take in a **variable-length** text and give a **fixed-length** [[Hash]]
+- Take in a **variable-length** text and give a **fixed-length** [[Hash Digest]]
 - We want a hash function that calculates Hash to be **certain** - always gives the same output given the same input, and **efficient** - takes as little computation as possible
 
 
@@ -27,3 +27,10 @@ References:
 >[!info]- Hash function in programming languages
 > Refer to [hello-algo](https://www.hello-algo.com/chapter_hashing/hash_algorithm/#634)
 
+## Desired Properties 
+---
+### Avalanche effect (雪崩效应)
+- If an **input is changed slightly**, the **output changes significantly**
+
+### Collision resistance (抗碰撞性)
+- It is hard to find two inputs that hash to the same output
