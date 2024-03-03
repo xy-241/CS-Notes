@@ -6,13 +6,12 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-18T12:15:00
-Last Date: 2023-11-07T09:05:05+08:00
+Last Date: 2024-03-03T15:32:47+08:00
 ---
 ## Abstract
 ---
 - Basically a brute-force method that explores all possible paths
-- [[Backtracking]] is an *Algorithm Strategy*, while [[Recursion]] is more like a *Algorithm Tool*
-- The application of [[Recursion]] in searching problem 
+- Backtracking is an **Algorithm Strategy,** while [[Recursion]] is more like a **Algorithm Tool.** Recursion powers searching problems
 - 回溯算法通常并不显式地对问题进行拆解，而是将问题看作一系列决策步骤，通过试探和[[#Pruning (剪枝)]]，搜索所有可能的[[#Solution (解)]]
 - We can perform [[#Pruning]] to improve the performance, but this will not change the overall worst case
 - [[Iterative Recursion]] doesn't work well to implement this algorithm, stick to [[Recursion]] - backtracking allows us to implicitly create multiple nested for-loops until we find the desired answer

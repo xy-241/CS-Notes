@@ -6,16 +6,12 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-07-30T16:14:00
-Last Date: 2023-12-10T17:15:08+08:00
+Last Date: 2024-03-03T15:51:36+08:00
 ---
 ## Abstract
 ---
-- Set of [[Instruction]]
+- Finite set of [[Instruction]] to solve a problem
 
-
-
-## Terminologies 
----
-### Analysis
-- Make **Algorithms** more **Memory-efficient** & **Space-efficient**
+### Algorithm Analysis
+- Helps to make **Algorithms** more **Memory-efficient** & **Space-efficient**
 - There is [[Algorithm Complexity Analysis]]

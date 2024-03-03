@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-03-02, 16:16
-Last Date: 2024-03-02T17:19:05+08:00
+Last Date: 2024-03-03T15:45:53+08:00
 References: 
 draft: "true"
 description: 
@@ -22,10 +22,10 @@ description:
 
 >[!abstract] 2 main operations 
 > `find(x)`
-> - Determines the **representative element** of the disjoin set that contains element $x$. The representative acts as the **unique identifier** for the whole disjoin set
+> - Determines the **representative element** of the disjoin set that contains element $x$. The representative acts as the **unique identifier** for the **whole disjoin set**
 > 
 > `union(x, y)`
-> - Combines the disjoint sets containing elements $x$ and $y$ into a **single disjoin set**
+> - Combines the two disjoint sets containing elements $x$ and $y$ respectively into a **single disjoin set**
 
 >[!question] What does it mean 'efficiently'?
 > `find(x)`
@@ -43,5 +43,5 @@ description:
 ## Optimisation Techniques
 ---
 ### Path Compression
-- reduce the time complexity of Find operation to $O(1)$
-- During a **Find** operation, directly link each node on the path to the root node. This flattens the trees, making subsequent **Find** operations much faster.
+- Reduce the time complexity of Find operation to $O(1)$
+- **Mechanism:** During `find(x)`, directly link each node on the path to the root node. This flattens the trees, making subsequent `find(x)` much faster

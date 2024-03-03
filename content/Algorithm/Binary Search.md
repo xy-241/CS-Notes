@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-[[Algorithms]] used to find the index of a value in a given [[Array]] or [[Dynamic Array (List)]] that is *sorted* in `O(logn)`
+[[Algorithm]] used to find the index of a value in a given [[Array]] or [[Dynamic Array (List)]] that is *sorted* in `O(logn)`
 
 ## Handling the Left Right Boundaries
 ---

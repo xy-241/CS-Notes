@@ -18,5 +18,5 @@ References:
 
 ## Distributed Consensus Algorithms
 ---
-- Typical types of these [[Algorithms]] make progress when majority of their [[Host]] is available
+- Typical types of these [[Algorithm]] make progress when majority of their [[Host]] is available
 - Given 5 servers, if more than 2 is down, stop making progress & never return incorrect result

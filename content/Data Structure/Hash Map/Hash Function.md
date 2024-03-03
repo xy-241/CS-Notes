@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - dsa
+  - security
 Creation Date: 2023-09-07T16:41:00
-Last Date: 2024-03-02T18:03:37+08:00
+Last Date: 2024-03-03T15:04:01+08:00
 References: 
 ---
 ## Abstract
@@ -21,13 +22,13 @@ References:
 > Objects created on [[Address Space#Heap Segment]] can be key even if we can manipulate the elements inside the object. This is because we use its [[Memory Address]] to generate the Hash, instead of the elements inside the object
 
 > [!note]- Uses modular arithmetic to calculate bucket index
-> We should use [[Prime Number (质数)]] to calculate bucket index, this can greatly reduce [[Hash Collision]] when there is some kind pattern in the give input like the input is a multiple of 3
+> We should use [[Prime Number (质数)]] to calculate bucket index, this can greatly reduce [[Hash Collision]] when there is some kind of pattern in the give input like the input is a multiple of 3
 
 
 >[!info]- Hash function in programming languages
 > Refer to [hello-algo](https://www.hello-algo.com/chapter_hashing/hash_algorithm/#634)
 
-## Desired Properties 
+## Desired Properties for Security 
 ---
 ### Avalanche effect (雪崩效应)
 - If an **input is changed slightly**, the **output changes significantly**

@@ -7,7 +7,7 @@ tags:
   - networking
   - bash
 Creation Date: 2023-08-18T13:05:00
-Last Date: 2024-03-02T19:37:13+08:00
+Last Date: 2024-03-03T01:22:21+08:00
 ---
 ## Abstract
 ---
@@ -43,7 +43,7 @@ Last Date: 2024-03-02T19:37:13+08:00
 > ![[tcp_connection_socat_demo.png|500]]
 >   
 > **Create a TCP Client**
-> - `telnet 127.0.0.1 8080`
+> - `telnet 127.0.0.1 8080` (intall on mac `brew install telnet`)
 > - Connect to `localhost:8080` over TCP
 > 
 > **Create TCP Server in NodeJS**
