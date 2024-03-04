@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-03-02T20:44:04+08:00
+Last Date: 2024-03-03T16:43:08+08:00
 References: 
 description: The giant that powers the software application we use on a daily basis!
 ---
@@ -40,8 +40,9 @@ description: The giant that powers the software application we use on a daily ba
 - Example is [TinyOS](https://en.wikipedia.org/wiki/TinyOS)
 
 ### Real-Time OS
+- Allow **multiple tasks** to run at the **same time**
 - 2 Types - [[Hard Real-Time System]] & [[Soft Real-Time System]]
-- Example is [[FreeRTOS]], used by [[ESP32]]
+- Example is [FreeRTOS](https://www.freertos.org/index.html), used by [ESP32](https://en.wikipedia.org/wiki/ESP32)
 
 ### Personal Computer OS
 - Support [[Multi-programming]] - dozens of programs started up at boot time
