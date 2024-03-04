@@ -7,7 +7,7 @@ tags:
   - cloudflare
   - security
 Creation Date: 2024-02-29, 22:22
-Last Date: 2024-03-01T19:33:15+08:00
+Last Date: 2024-03-05T01:25:39+08:00
 References: 
 draft: 
 description: 
@@ -16,6 +16,9 @@ description:
 ---
 - A Cloudflare security service that allows you to set up [policies and rules](https://developers.cloudflare.com/cloudflare-one/policies/access/) that let you define who can or cannot access your applications based on [user Identity](https://developers.cloudflare.com/cloudflare-one/identity/), **network attributes**, and **device posture**
 - You can access the dashboard at [Cloudflare Access](https://one.dash.cloudflare.com/:account/l)
+
+>[!tip]- Access protected website via CLi
+> We obtain a [[JWT]] for the CLi to authenticate itself with the Cloudflare Access to access the protected website. Refer to [Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/tutorials/cli/) for more details
 
 ## Cloudflare Access Temporary Authentication
 ---

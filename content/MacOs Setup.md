@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-02-23T23:52:18+08:00
+Last Date: 2024-03-04T23:55:11+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -117,6 +117,7 @@ npm i -g typescript
 brew install elixir
 ```
 
+- [ ] [[Go]]
 ## System Tools 🌟
 ---
 - `fastfetch`
@@ -219,6 +220,9 @@ brew install terraform-docs
 ```
 - [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
 - [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
+
+- [ ] [[Cloudflare]]
+- [ ] [[Secure Tunneling#Cloudflare Tunnel|cloudflared]]
 ### Install using pipx
 - ``checkov``
 - `ddtrace`
@@ -229,6 +233,10 @@ pipx install checkov
 pipx install ddtrace
 ```
 
+## Hareware Tools
+---
+- [ ] [rpi-imager](https://github.com/raspberrypi/rpi-imager
+- [ ] [arduino ide](https://github.com/arduino/arduino-ide)
 ## MISC
 ---
 - `wireguard` 
