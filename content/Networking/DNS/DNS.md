@@ -7,7 +7,7 @@ tags:
   - networking
   - bash
 Creation Date: 2023-08-14T11:18:00
-Last Date: 2024-02-21T15:01:18+08:00
+Last Date: 2024-03-03T22:18:59+08:00
 References: 
 description: Explore the Domain Name System (DNS), the internet's GPS that translates human-readable website names into machine-friendly IP addresses.
 ---
@@ -17,10 +17,12 @@ description: Explore the Domain Name System (DNS), the internet's GPS that trans
 - Runs over [[UDP]] & port 53
 - Used by Other **application-level** [[Network Protocol]] like [[HTTP]] and [[SMTP]], to translate user-supplied [[Hostname#Domain Name]] to IP Address
 
->[!tip] Check Whois info from CLi
+>[!tip]- Check Whois info from CLi
 > ```bash
 > whois <DOMAIN_NAME/IP_ADDRESS>
 > ```
+
+
 
 
 ## DNS Features

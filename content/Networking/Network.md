@@ -5,13 +5,19 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - networking
+  - cloudflare
+  - security
 Creation Date: 2023-07-20T19:16:00
-Last Date: 2023-12-12T11:39:22+08:00
+Last Date: 2024-03-03T22:42:16+08:00
 References: 
 ---
 ## Abstract
 ---
 - A bunch of [[Host]] that connected together
+
+>[!tip] Some tools to see the beauty of network
+> - [Cloudflare Radar](https://radar.cloudflare.com/)
+> - [All-in-one Website OSINT Scanner](https://web-check.xyz)
 
 ## 4 MainTypes of Networks 
 ---
@@ -58,6 +64,7 @@ References:
 
 ### Storage Area Network (SAN)
 - Similar to [[#Local Area Network (LAN)]]
-[!note] Key Distinguishing Features
-- A [[Network]] of storage devices separated from the actual [[Local Area Network (LAN)]]
-- Appears as a connected connected computers as a local device/drive
+
+>[!note] Key Distinguishing Features
+> - A [[Network]] of storage devices separated from the actual [[#Local Area Network (LAN)]]
+> - Appears as a connected connected computers as a local device/drive

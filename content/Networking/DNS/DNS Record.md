@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-01-17, 00:10
-Last Date: 2024-02-28T20:11:29+08:00
+Last Date: 2024-03-03T22:25:17+08:00
 References: 
 draft: 
 description: Dive into DNS records, the powerful mappings that connect hostnames to IP addresses, email servers, and more. ️ Explore A, CNAME, MX, and NS records, and learn how they keep your online experience seamless.
@@ -16,6 +16,16 @@ description: Dive into DNS records, the powerful mappings that connect hostnames
 ---
 - A mapping between a [[Hostname]] to another [[IP Address]] or Hostname
 - Each record comes with a [[TTL]]
+
+
+>[!tip]- Check the status DNS propagation
+> You can check it on [DNS Checker - DNS Check Propagation Tool](https://dnschecker.org/#A/www.hello-algo.com). This is useful to see if a particular DNS record is taking effect already or not.
+
+>[!tip]- Obtain the DNS records of a given domain name
+> You can obtain the list of current and past DNS records of a given domain name at [securitytrails](https://securitytrails.com)
+> 
+> Or [DNSdumpster.com](https://dnsdumpster.com/), but the information obtained is much more limited
+
 ### A Record
 - Symbol is ``A``
 - Standard [[Hostname#Domain Name]] to [[IP Address]] mapping

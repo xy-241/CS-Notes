@@ -7,7 +7,7 @@ tags:
   - docker
   - networking
 Creation Date: 2023-08-22T12:09:04+08:00
-Last Date: 2024-02-26T23:49:54+08:00
+Last Date: 2024-03-03T22:26:36+08:00
 References: 
 aliases:
   - ../../Tools/Docker/Docker-Network/Docker-Network
@@ -41,7 +41,7 @@ aliases:
 >[!caution]- Accessing application running on host machine port
 > If we have an application running on host on port `80`, we can't access the application via `localhost:80`, because the network interface of the container is isolated from the network interface of the host. This only works on [[#Docker Host Network]] in which the network interface of host is shared with the container
 > 
-> If we want to access the application running on host machine port, we need to use `host.docker.internal:80`, `host.docker.internal` will be converted to the [[IP Address]] of the host machine by docker automatically
+> If we want to access the application running on host machine port, we need to use `host.docker.internal:80`, `host.docker.internal` will be converted to the [[IP Address]] of the host machine by docker automatically.  However, this is **a feature of Docker Desktop** for Mac and Windows specifically!!!
 
 </br>
 

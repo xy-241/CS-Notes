@@ -8,7 +8,7 @@ tags:
   - cloudflare
   - curl
 Creation Date: 2023-08-14T11:54:59+08:00
-Last Date: 2024-02-29T16:12:32+08:00
+Last Date: 2024-03-03T22:28:45+08:00
 References: 
 ---
 ## Abstract
@@ -17,7 +17,7 @@ References:
 
 
 
->[!tip]- Access & Manipulate HTTP Headers
+>[!tip]- Access & Manipulate HTTP Headers with curl
 > **Inspect the HTTP Headers with [[curl]]**
 > ```bash
 > curl -v <\ENDPOINT\>
