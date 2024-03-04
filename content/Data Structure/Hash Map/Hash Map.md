@@ -7,8 +7,9 @@ tags:
   - dsa
   - java
 Creation Date: 2023-09-28T13:12:00
-Last Date: 2024-03-03T15:00:53+08:00
+Last Date: 2024-03-04T12:39:58+08:00
 References: 
+description: Hash maps use a hash function to quickly locate data within a structure.  However, there's a risk of collisions when multiple keys map to the same index, and this should be addressed for optimal efficiency.
 ---
 ## Abstract
 ---

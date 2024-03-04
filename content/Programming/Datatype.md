@@ -8,7 +8,7 @@ tags:
   - rust
   - java
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-02-10T18:30:29+08:00
+Last Date: 2024-03-04T12:21:08+08:00
 References: 
 ---
 ## Abstract
@@ -36,6 +36,9 @@ References:
 ### Custom Datatype
 - In [[Java]], custom datatypes **aren't** [[Immutable]]
 - Examples are [[OOP Class]] and [[Structure]]
+
+>[!caution] Java Value Comparsion
+> We can't use `==` to compare [[OOP#OOP Object]], because `==` compares the value holding by the variable. However, variables are only holding the [[Memory Address]] to the OOP Object. So if we want to compare the value of OOP Object, we need to use the `equals()` method
 
 
 ## Rust

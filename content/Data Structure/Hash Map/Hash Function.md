@@ -7,8 +7,9 @@ tags:
   - dsa
   - security
 Creation Date: 2023-09-07T16:41:00
-Last Date: 2024-03-03T15:04:01+08:00
+Last Date: 2024-03-04T12:41:45+08:00
 References: 
+description: A hash function is a mathematical tool that converts variable-length text inputs into fixed-length outputs (hashes). For efficiency and security, an ideal hash function should be deterministic (consistent), computationally quick, exhibit the avalanche effect (small input changes cause large output changes), and offer strong collision resistance (minimize outputs that are the same).
 ---
 ## Abstract
 ---
