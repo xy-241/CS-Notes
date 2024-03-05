@@ -5,38 +5,40 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - dsa
+  - OS
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2023-12-27T11:40:36+08:00
+Last Date: 2024-03-05T10:46:36+08:00
 References: 
 ---
 ## Abstract
 ---
+![[stack.png|500]]
+
 - [[Data Structure#Linear]]
 - Basically [[Array]]/[[Linked List]] with limitations
-- Elements are *First In Last Out (FILO)* and *Last In First Out (LIFO)*
+- Elements are **First In Last Out (FILO)** and **Last In First Out (LIFO)**
 
-![[stack.png]]
 
-## Complexity
----
-### Time
+
+
+>[!example]- Use Cases
+> **Data Structure and Algorithm**
+> - Convert [[Recursion]] to be interactive
+> - Commonly used in parentheses questions
+>
+> **Operating System**
+> - [[Address Space#Stack Segment]]
+> - Navigation in the [[File System]] - the parent File System is at the top of the stack
+> 
+> **User Application**
+> - Browser backward button, forward button needs another stack
+
+
+### Time Complexity
 - O(1) to Insert `push()`
 - O(1) to Delete `pop()`
 - O(1) to See the value on top of the stack  `peek()`
 - O(n) to search for a value
-
-## Use Cases
----
-### Data Structure and Algorithm
-1. Convert [[Recursion]] to be interactive
-2. Commonly used in parentheses questions
-
-### Operating System
-1. [[Address Space#Stack Segment]]
-2. Navigation in the [[File System]] - the parent File System is at the top of the stack
-
-### User Application
-1. Browser backward button, forward button needs another stack
 
 
 

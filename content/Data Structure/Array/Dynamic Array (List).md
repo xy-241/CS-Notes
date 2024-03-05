@@ -6,20 +6,15 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-10T16:10:00
-Last Date: 2023-12-11T20:59:23+08:00
+Last Date: 2024-03-05T10:30:35+08:00
 References: 
 ---
 ## Abstract
 ---
-- Resizable [[Array]], achieved by building an [[Abstraction (抽象)]] above the [[Array]]
+- Resizable [[Array]], achieved by building an [[Abstraction (抽象)]] above the Array
 
-## Benefits
----
-### Convenience 
-- Developers don't need to re-write the logic of re-sizeing [[Array]] etc
-- Built with best practices & battle-tested
+>[!tip] Convenient
+> Developers don't need to re-write battle-tested logic of re-sizeing Array etc, battery-packed with best practices.
 
-## Cons
----
-### More Resource Intense
-- We can't fine tune every [[Array]] operations because don't have direct access
+>[!attention] More Resource Intense
+> We can't fine tune every Array operations because the implementation details are abstracted away. We only have interfaces to interact with it.

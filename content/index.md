@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-02-12T19:36:10+08:00
+Last Date: 2024-03-05T12:26:03+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---
@@ -88,13 +88,13 @@ Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues
 ## 🧠 Data Structure & Algorithm
 ---
 - [Problem Solving Tricks](https://notes.yxy.ninja/tags/problem_solving)
-- [Array](https://notes.yxy.ninja/DSA/Data-Structure/Array/)
-- [Binary Tree (二叉树)](https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(二叉树)/)
-- [Hash Map](https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/)
-- [Linked List](https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/)
-- [Other Common Data Structures](https://notes.yxy.ninja/DSA/Data-Structure/)
-- [Common Algorithms](https://notes.yxy.ninja/DSA/Algorithms/)
-- [MISC](https://notes.yxy.ninja/DSA/terminologies/)
+- [Array](https://notes.yxy.ninja/Data-Structure/Array/)
+- [Binary Tree (二叉树)](https://notes.yxy.ninja/Data-Structure/Binary-Tree-(二叉树)/)
+- [Hash Map](https://notes.yxy.ninja/Data-Structure/Hash-Map/)
+- [Linked List](https://notes.yxy.ninja/Data-Structure/Linked-List/)
+- [Other Common Data Structures](https://notes.yxy.ninja/Data-Structure/)
+- [Common Algorithms](https://notes.yxy.ninja/Algorithms/)
+- [MISC](https://notes.yxy.ninja/Algorithms/terminologies/)
 
 
 ## 👩‍💻 Competitive Programming

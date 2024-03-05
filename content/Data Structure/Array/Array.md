@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-08T20:10:00
-Last Date: 2023-12-20T16:19:21+08:00
+Last Date: 2024-03-05T10:40:09+08:00
 References: 
 ---
 ## Abstract
@@ -17,7 +17,8 @@ References:
 - We can't delete elements in arrays, we can only overwrite
 - [Leetcode questions](https://github.com/youngyangyang04/leetcode-master#%E6%95%B0%E7%BB%84)
 
-
+>[!bigbrain] Fixed Size
+> If we want to expand, we have to create another bigger array & **copy all the elements** to the new array which is very time consuming 
 
 
 ## Complexity 
@@ -38,10 +39,6 @@ References:
 >- Array faster with CPU Cache is because it is stored in a [[Data Structure#Continuous Memory]] manner, and can take advantage of [[CPU Cache#Cache Locality]]
 
 
-## Properties
----
-### Fixed size
-- If we want to expand, we have to create another bigger array & *copy all the elements* to the new array which is very time consuming 
 
 
 

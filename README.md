@@ -67,14 +67,13 @@
 
 ## 🧠 Data Structure & Algorithm
 - [Problem Solving Tricks](https://notes.yxy.ninja/tags/problem_solving)
-- [Array](https://notes.yxy.ninja/DSA/Data-Structure/Array/)
-- [Binary Tree (二叉树)](https://notes.yxy.ninja/DSA/Data-Structure/Binary-Tree-(二叉树)/)
-- [Hash Map](https://notes.yxy.ninja/DSA/Data-Structure/Hash-Map/)
-- [Linked List](https://notes.yxy.ninja/DSA/Data-Structure/Linked-List/)
-- [Other Common Data Structures](https://notes.yxy.ninja/DSA/Data-Structure/)
-- [Common Algorithms](https://notes.yxy.ninja/DSA/Algorithms/)
-- [MISC](https://notes.yxy.ninja/DSA/terminologies/)
-
+- [Array](https://notes.yxy.ninja/Data-Structure/Array/)
+- [Binary Tree (二叉树)](https://notes.yxy.ninja/Data-Structure/Binary-Tree-(二叉树)/)
+- [Hash Map](https://notes.yxy.ninja/Data-Structure/Hash-Map/)
+- [Linked List](https://notes.yxy.ninja/Data-Structure/Linked-List/)
+- [Other Common Data Structures](https://notes.yxy.ninja/Data-Structure/)
+- [Common Algorithms](https://notes.yxy.ninja/Algorithms/)
+- [MISC](https://notes.yxy.ninja/Algorithms/terminologies/)
 
 ## 👩‍💻 Competitive Programming
 - [Code Template](https://notes.yxy.ninja/cp/Competitive-Programming-Code-Templates)

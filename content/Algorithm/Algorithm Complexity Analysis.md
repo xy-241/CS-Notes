@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T15:13:00
-Last Date: 2024-02-28T17:54:33+08:00
+Last Date: 2024-03-05T12:23:14+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,7 @@ References:
 - Analysis **space** & **time** used, related with the input size and observing the trend when input size gets bigger
 - The analysis isn't limited to particular machine. It applies to all the machines
 
->[!caution] It is all about [[Infinity (∞)]]
+>[!caution]- It is all about Infinity (∞)
 > ![[time_analysis_worstIsBetter.png|500]]
 >- We are only thinking what is the complexity when the input size is approaching Infinity (∞)
 >- So when the actual input size in real world is small, the algorithms with worst time complexity may run fast! 
@@ -22,6 +22,12 @@ References:
 >[!tip] Use codes to find algorithm complexity analysis
 > We can write out the given program, then place a counter at the core part of the program. Then we can obtain the relationship by observing the value we substituted to the input and the value of the counter
 
+## Big-O Notation
+---
+- Big-O Notation doesn't represent some good approximations of the time the program takes to run. We mean the time taken by the program bounded by **some constant** $\times$ **a function** when the **input size is bigger** than a **certain constant**
+- $O()$ represents the upper bound
+- $\Theta()$ represents the space in between upper bound and lower bound
+- $\Omega()$ represents the lower bound 
 
 
 ## Terminologies
