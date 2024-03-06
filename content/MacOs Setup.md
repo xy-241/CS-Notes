@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-06T14:41:18+08:00
+Last Date: 2024-03-06T16:41:07+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -21,10 +21,8 @@ title:  My Macos Setup
 - [List of Wonderful Apps Waiting to Be Explored!](https://sindresorhus.com/apps)
 
 **Optional:**
-- [Dropbox](https://www.dropbox.com/install)
 - [Brave](https://brave.com/download/)
 - [SurfShark VPN](https://surfshark.com/download/macos)
-- [WeChat](https://www.wechat.com/)
 
 
 ## Basic Terminal - Must Have
@@ -73,6 +71,9 @@ brew install stow
 ```
 ## Terminal Productivity Tools
 ---
+>[!caution] Display of Icons
+> Make sure you install one of the [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) to have icons display correctly inside your terminal
+
 - [ ] [[File System#eza]] - `ls` replacement
 - [ ] [[File System#xcp]] - `cp` replacement
 - [ ] [[File System#zoxide]] - `cd` replacement
@@ -81,6 +82,13 @@ brew install stow
 - [ ] [[Atuin]] - `history` replacement
 - [ ] [[File System#joshuto]] - Terminal File Manager
 - [ ] [[File System#dua]] - Disk Usage Analyser
+- [ ] `brew install btop` - `htop`/`top` replacement
+- [ ] `fastfetch`
+```bash
+brew install fastfetch
+# Add the following to the start of .zshrc
+fastfetch --logo <ABSOLUTE_PATH_TO_LOGO_FILE> --logo-width 70 --logo-height 30 --logo-type iterm
+```
 
 **Others**
 - `pipx`
@@ -101,65 +109,99 @@ h() {
 
 ## Programming Language Setup
 ---
-- [[Python Toolset]]
-- [[JS Toolset]]
-- [[Rust Toolset]]
-
-- `typescript`, make sure you have [[JS Toolset#Install NVM]]
-```bash
-#!/bin/bash
-npm i -g typescript
-```
-
-- [Java JDK](https://www.oracle.com/java/technologies/downloads/)
-- elixir
-```bash
-brew install elixir
-```
-
+- [ ] [[Python Toolset]]
+- [ ] [[JS Toolset]]
+- [ ] [[Rust Toolset]]
 - [ ] [[Go]]
-## System Tools 🌟
----
-- `fastfetch`
-- `btop`, `htop`
-```bash
-brew install fastfetch
-# Add the following to the start of .zshrc
-fastfetch --logo <ABSOLUTE_PATH_TO_LOGO_FILE> --logo-width 70 --logo-height 30 --logo-type iterm
+- [ ] `typescript` - `npm i -g typescript` (make sure you have [[JS Toolset#Install NVM]] first)
+- [ ] elixir - `brew install elixir`
+- [ ] [Java JDK](https://www.oracle.com/java/technologies/downloads/)
 
-brew install btop
-brew install htop
-```
 
 ## Software Engineering Tools
 ---
-- [[Code Editor Setup#Neovim]]
-- [[Code Editor Setup]]
-- [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
-- [Postman - API Testing Tool](https://www.postman.com/downloads/)
-- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
-</br>
-
-- `gh`
-- `socat`
-- `hyperfine`
-- `dbeaver-community` 
+- [ ] [[Code Editor Setup#Neovim]]
+- [ ] [[Code Editor Setup]]
+- [ ] [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
+- [ ] [Postman - API Testing Tool](https://www.postman.com/downloads/)
+- [ ] [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+- [ ] [[jq]]
+- [ ] `brew install socat`
+- [ ] `brew install hyperfine` - A command-line benchmarking tool
+- [ ] `brew install --cask dbeaver-community`  - Open-source DB viewer
+- [ ] `gh`
 ```bash
 #!/bin/bash
 brew install gh
 gh auth login # Painless Github CLi Auth
 
-
-
-brew install socat
-
-brew install hyperfine # A command-line benchmarking tool
-
-brew install --cask dbeaver-community # DB Viewer
 ```
 
+
+
+## Virtualisation Tools
+---
+- [ ] [[Docker#Docker Installation]]
+- [ ] [[Virtualisation#Vagrant]]
+- [ ] [[Virtualisation#QEMU]]
+
+
+
+## DevOps Tools
+---
+- [ ] [[Cloudflare CLI]]
+- [ ] [[Secure Tunneling#Cloudflare Tunnel|cloudflared]] 
 - [ ] [[Networking/Terminologies/Secure Tunneling#Ngrok]]
-- [ ] [[jq]]
+- [ ] [`brew install terraform`](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [ ] [`brew install azure-cli`](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos)
+- [ ] `brew install infracost`
+- [ ] `brew install terraform-docs`
+- [ ] [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
+- [ ] [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
+- [ ] [[AWS Nuke]]
+- [ ] [`aws`](https://formulae.brew.sh/formula/awscli)
+```shell
+#!/bin/bash
+brew install awscli
+echo >> ~/.zshrc
+echo "# AWS Cli Env Variables" >> ~/.zshrc
+echo "export AWS_PROFILE=<DEFAULT_PROFILE_NAME>" >> ~/.zshrc
+echo "export AWS_REGION=ap-southeast-1" >> ~/.zshrc
+echo >> ~/.zshrc
+aws configure # Auth CLi
+```
+
+
+
+### Install using pipx
+- [ ] `pipx install checkov`
+- [ ] `pipx install ddtrace`
+
+
+
+## Hardware Tools
+---
+- [ ] [rpi-imager](https://github.com/raspberrypi/rpi-imager)
+- [ ] [arduino ide](https://github.com/arduino/arduino-ide)
+
+## MISC
+---
+- `wireguard` 
+- `ipython`
+- `brew install --cask logisim-evolution` - circuit design software
+- `telnet`
+- `brew install parallel`
+```bash
+#!/bin/bash
+brew install wireguard-tools# Place conf in /usr/local/etc/wireguard/ 
+sudo wg-quick up wg0 # Connect Wireguard
+
+brew install ipython
+
+
+brew install telnet
+```
+
 ## OS Config
 ---
 - [Add Geist Font](https://github.com/vercel/geist-font)
@@ -172,83 +214,6 @@ sudo scutil --set HostName mac
 sudo scutil --set LocalHostName mac
 ```
 - Change the VSC Terminal font size to ``16`` in the setting page
-
-## Virtualisation Tools
----
-- [ ] [[Docker#Docker Installation]]
-- [ ] [[Virtualisation#Vagrant]]
-- [ ] [[Virtualisation#QEMU]]
-
-
-
-## DevOps Tools
----
-- [`aws`](https://formulae.brew.sh/formula/awscli)
-- [`terraform`](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-- [`az`](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos)
-- `infracost`
-- `terraform-docs`
-```shell
-#!/bin/bash
-brew install awscli
-echo >> ~/.zshrc
-echo "# AWS Cli Env Variables" >> ~/.zshrc
-echo "export AWS_PROFILE=<DEFAULT_PROFILE_NAME>" >> ~/.zshrc
-echo "export AWS_REGION=ap-southeast-1" >> ~/.zshrc
-echo >> ~/.zshrc
-aws configure # Auth CLi
-
-brew install terraform
-
-brew install azure-cli
-
-brew install infracost
-
-brew install terraform-docs
-```
-- [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
-- [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
-- [[AWS Nuke]]
-
-- [ ] [[Cloudflare]]
-- [ ] [[Secure Tunneling#Cloudflare Tunnel|cloudflared]]
-### Install using pipx
-- ``checkov``
-- `ddtrace`
-```bash
-#!/bin/bash
-pipx install checkov
-
-pipx install ddtrace
-```
-
-## Hardware Tools
----
-- [ ] [rpi-imager](https://github.com/raspberrypi/rpi-imager)
-- [ ] [arduino ide](https://github.com/arduino/arduino-ide)
-## MISC
----
-- `wireguard` 
-- `ipython`
-- `logisim-evolution`
-- `telnet`
-- `parallel`
-```bash
-#!/bin/bash
-brew install wireguard-tools# Place conf in /usr/local/etc/wireguard/ 
-sudo wg-quick up wg0 # Connect Wireguard
-
-brew install ipython
-
-# Open logisim, get denined, open Privacy, enable
-brew install --cask logisim-evolution
-
-brew install telnet
-
-brew install parallel
-```
-- [balenaEtcher - Flash OS images to SD cards & USB drives](https://etcher.balena.io/?dmg=true#download-etcher)
-
 
 ## Cheatsheet
 ---
