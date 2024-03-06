@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T15:13:00
-Last Date: 2024-03-05T12:23:14+08:00
+Last Date: 2024-03-06T12:22:15+08:00
 References: 
 ---
 ## Abstract
@@ -29,14 +29,22 @@ References:
 - $\Theta()$ represents the space in between upper bound and lower bound
 - $\Omega()$ represents the lower bound 
 
+>[!caution]- Tricky ones to evaluate tightest upper bound!
+> $4n^2log(n)$
+> - $O(n^2)$ is wrong because $logn(n)$ isn't a constant, $O(n^2)$ is going to be a lower bound
+> - $O(n^2logn)$ is the valid tightest upper bound. The next tightest upper bound is $O(n^3)$
+> 
+> $2^{2n}$
+> - $O(2^n)$ is wrong, because $2^{2n} = (2^n)^2$, the $2$ raises the complexity one magnitude. It isn't same as $O(2 \times 2^n)$ in which we can ignore the constant $2$
+> 
+> $log(n!)$
+> - The answer is $O(nlogn)$, don't have the math knowledge yet to further explain :(
 
-## Terminologies
----
 ### Worst Space Complexity
 - The [[Main Memory]] used **relative to the input size**
 ### Worst Time Complexity
 - The time it takes **relative to the input size**
-- [[Algorithm Complexity Analysis]]
+
 
 
 
