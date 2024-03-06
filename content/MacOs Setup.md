@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-04T23:55:11+08:00
+Last Date: 2024-03-06T14:41:18+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -141,7 +141,6 @@ brew install htop
 </br>
 
 - `gh`
-- `qemu` (for [[RISCV Kernel Deep Dive]])
 - `socat`
 - `hyperfine`
 - `dbeaver-community` 
@@ -150,7 +149,7 @@ brew install htop
 brew install gh
 gh auth login # Painless Github CLi Auth
 
-brew install qemu
+
 
 brew install socat
 
@@ -176,22 +175,11 @@ sudo scutil --set LocalHostName mac
 
 ## Virtualisation Tools
 ---
-### Docker
-```bash
-brew install orbstack
-```
+- [ ] [[Docker#Docker Installation]]
+- [ ] [[Virtualisation#Vagrant]]
+- [ ] [[Virtualisation#QEMU]]
 
-**App that can be ran in Docker:**
-- [[AWS Nuke]]
 
-### VM with Vagrant
-- [Install VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- Install Vagrant - a tool to manage VMs with ease
-```bash
-brew tap hashicorp/tap
-brew install hashicorp/tap/hashicorp-vagrant
-vagrant plugin install vagrant-share
-```
 
 ## DevOps Tools
 ---
@@ -220,6 +208,7 @@ brew install terraform-docs
 ```
 - [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
 - [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
+- [[AWS Nuke]]
 
 - [ ] [[Cloudflare]]
 - [ ] [[Secure Tunneling#Cloudflare Tunnel|cloudflared]]
@@ -233,9 +222,9 @@ pipx install checkov
 pipx install ddtrace
 ```
 
-## Hareware Tools
+## Hardware Tools
 ---
-- [ ] [rpi-imager](https://github.com/raspberrypi/rpi-imager
+- [ ] [rpi-imager](https://github.com/raspberrypi/rpi-imager)
 - [ ] [arduino ide](https://github.com/arduino/arduino-ide)
 ## MISC
 ---

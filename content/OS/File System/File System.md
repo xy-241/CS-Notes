@@ -7,8 +7,9 @@ tags:
   - OS
   - linux
   - bash
+  - macos
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2024-02-29T15:25:08+08:00
+Last Date: 2024-03-06T14:20:16+08:00
 References: 
 ---
 ## Abstract
@@ -20,13 +21,7 @@ References:
 
 
 
-
->[!info] Difference from [[Process Hierarchy]]
->- Can be very deep
->- May exist for years
->- Entries can be accessed by a wider group than just the owner
-
->[!tip]- List the filesystem of attached block device
+>[!code]- List the filesystem of attached block device
 > **[[Linux Kernel]]**
 > ```bash
 > lsblk --fs
@@ -37,7 +32,12 @@ References:
 > diskutil list
 > ```
 
-
+>[!code]- Check the storage size of current directory recursively
+> ```bash
+> du -sh .
+> ```
+> - `-s` means summary
+> - `-h` means human-readable
 
 
 >[!info]- Linux File System Hierarchy
@@ -68,22 +68,26 @@ References:
 
 ## Common File Systems
 ---
-### APFS (Apple File System)
+### APFS 
+- **Apple File System**
 - Created by Apple, used for macOS, iOS, iPadOS, tvOS, and watchOS
 - We need to use [[FUSE]] to mount APFS on [[Linux Kernel]] 
 
-### Ext4 (Extended Filesystem 4)
+### Ext4 
+- **Extended Filesystem 4**
 - The default choice on many Linux distributions. Mature, stable, and offers good all-around performance
 - Commonly used in [[Linux Kernel]]
 
-### ZFS (Zettabyte File System)
+
+### exFAT 
+- **EXtended File Allocation Table**
+- Windows standard filesystem, both macOS and [[Linux Kernel]] support
+- Designed as a successor to FAT32, specifically for flash drives and other external storage. Handles large files and better cross-compatibility than FAT32
+
+### ZFS 
+- **Zettabyte File System**
 - Originally from Solaris, known for extreme scalability, data integrity protection, and comprehensive features (snapshots, compression, volumes). Can be resource-intensive
 - Commonly used in [[Linux Kernel]]
-
-### exFAT (Extended File Allocation Table) 
-- Windows standard filesystem
-- Designed as a successor to FAT32, specifically for flash drives and other external storage. Handles large files and better cross-compatibility than FAT32.
-
 
 
 ## Command Line Tools
