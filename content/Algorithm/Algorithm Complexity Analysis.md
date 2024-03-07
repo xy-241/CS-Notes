@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T15:13:00
-Last Date: 2024-03-06T12:22:15+08:00
+Last Date: 2024-03-07T10:36:02+08:00
 References: 
 ---
 ## Abstract
@@ -40,6 +40,12 @@ References:
 > $log(n!)$
 > - The answer is $O(nlogn)$, don't have the math knowledge yet to further explain :(
 
+>[!bigbrain]- Evaluate time complexity of if/else 
+> Lets $f$ be the cost of first, and $s$ be the cost of second
+> 
+> $$
+> Cost = max(f, s) \le f + s
+> $$
 ### Worst Space Complexity
 - The [[Main Memory]] used **relative to the input size**
 ### Worst Time Complexity
