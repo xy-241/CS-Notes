@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-29T20:13:44
-Last Date: 2024-01-04T15:23:42+08:00
+Last Date: 2024-03-07T15:04:29+08:00
 References: 
 ---
 ## Abstract
 * A small embedded computers that are programmed to tell [[IO Device]] what to do
-* Communicates with [[OS]] over [[#Device Driver]]
+* Communicates with [[Kernel]] over [[#Device Driver]]
 
 ## Terminologies
 ---
