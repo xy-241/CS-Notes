@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-09-25T00:07:00
-Last Date: 2023-12-15T21:29:33+08:00
+Last Date: 2024-03-08T19:30:33+08:00
 ---
 ## Abstract
 ---
-- Stands for *Carrier Sense Multiple Access*
+- Stands for **Carrier Sense Multiple Access**
 - Basically multiple [[Host]] share the same [[#Carrier]] to communicate
 
 ## Challenges

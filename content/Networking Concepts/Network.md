@@ -8,7 +8,7 @@ tags:
   - cloudflare
   - security
 Creation Date: 2023-07-20T19:16:00
-Last Date: 2024-03-03T22:42:16+08:00
+Last Date: 2024-03-08T19:18:03+08:00
 References: 
 ---
 ## Abstract
@@ -18,6 +18,11 @@ References:
 >[!tip] Some tools to see the beauty of network
 > - [Cloudflare Radar](https://radar.cloudflare.com/)
 > - [All-in-one Website OSINT Scanner](https://web-check.xyz)
+
+### Network Route
+- The sequence of [[Communication Links]] and [[Packet Switches]] traversed by a [[Packet]] between [[Host#Client]] and [[Host#Server]]
+
+
 
 ## 4 MainTypes of Networks 
 ---

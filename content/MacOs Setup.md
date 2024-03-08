@@ -151,7 +151,7 @@ gh auth login # Painless Github CLi Auth
 ---
 - [ ] [[Cloudflare CLI]]
 - [ ] [[Secure Tunneling#Cloudflare Tunnel|cloudflared]] 
-- [ ] [[Networking/Terminologies/Secure Tunneling#Ngrok]]
+- [ ] [[Secure Tunneling#Ngrok]]
 - [ ] [`brew install terraform`](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - [ ] [`brew install azure-cli`](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos)
 - [ ] `brew install infracost`
