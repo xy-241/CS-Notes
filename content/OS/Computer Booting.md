@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2024-01-27, 19:55
-Last Date: 2024-03-07T15:49:12+08:00
+Last Date: 2024-03-08T18:45:48+08:00
 References: 
 draft: 
 description: 
@@ -54,6 +54,7 @@ sr-ease: 230
 > - 100MB - 500MB is usually enough
 > - **Formatted as FAT32** for compatibility across different architectures
 > - Needs "boot" or "esp" flag
+> - `/boot` becomes optional to unified the partition for kernel and boot loaders. However, non-encrypted `/boot` is required whatever the UEFI choice if the rest of the system is encrypted!
 > 
 > **`/`  partition (root partition)**
 > - Core of your Linux installation. It contains all your system files, user files, program data, etc
