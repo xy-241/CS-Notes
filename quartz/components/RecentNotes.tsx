@@ -65,7 +65,7 @@ export default ((userOpts?: Partial<Options>) => {
                       
                           href={resolveRelative(fileDaAta.slug!, `tags/${tag}` as FullSlug)}
                         >
-                          #{tag}
+                          {tag}
                         </a>
                       </li>
                     ))}
