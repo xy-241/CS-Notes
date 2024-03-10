@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - rust
 Creation Date: 2024-01-13, 16:52
-Last Date: 2024-01-13T17:00:46+08:00
+Last Date: 2024-03-10T18:15:15+08:00
 References: 
 draft: 
 ---
@@ -16,7 +16,7 @@ draft:
 
 ## Obtain Rust
 ---
-- Script below includes the Rust [[Language Processors#Compiler]] `rustc`, `rustup` the Rust tool chain installer and `cargo` the Rust package manager similar to [[JS Toolset#NPM]]
+- Script below includes the Rust [[Language Processors#Compiler]] `rustc`, `rustup` the Rust tool chain installer and [[Package Manager#Cargo]]
 ```bash
 # Starts the installation of the `rustup` tool - managing the version of Rust, which installs the latest stable version of Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

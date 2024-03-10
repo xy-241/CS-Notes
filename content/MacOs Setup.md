@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-06T16:41:07+08:00
+Last Date: 2024-03-10T18:25:21+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -20,55 +20,25 @@ title:  My Macos Setup
 - [Tutanota - Email Client](https://tutanota.com/#download)
 - [List of Wonderful Apps Waiting to Be Explored!](https://sindresorhus.com/apps)
 
-**Optional:**
-- [Brave](https://brave.com/download/)
-- [SurfShark VPN](https://surfshark.com/download/macos)
-
-
-## Basic Terminal - Must Have
+## Pre-requisites
 ---
-- [Brew - Package Manager](https://brew.sh/) 
-- [Install ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-on-many-platforms)
-</br>
+### Package Manager
+- [ ] [[Package Manager#Brew]] 
+- [ ] [[Package Manager#NPM]]
+- [ ] [[Package Manager#Pipx]]
 
-- [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts)
-- [Termius - Terminal GUI](https://www.termius.com/download/macos)
+## Terminal & Shell Setup
+---
+- [ ] [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+- [ ] [[Terminal#ZSH]] - [[Terminal#Shell]]
+- [ ] [[Terminal#ohmyzsh]] - [[Terminal#Shell Enhancement]]
+- [ ] [Termius - Terminal GUI](https://www.termius.com/download/macos)
 	- [Modify Default Shell](https://support.termius.com/hc/en-us/articles/8414917685145-How-to-change-the-default-shell-in-local-terminal-)
 	- Your Termius configuration page should look something like the following picture
 ![[termius_config.png|700]]
-</br>
 
 
-- [Install ohmyzsh](https://ohmyz.sh/#install) 
-- Install zsh plugins, all plugins are install under the path that is stored in `$ZSH_CUSTOM`
-```bash
-# Install zsh-autosuggestions plugin
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# Install zsh-syntax-highlighting plugin
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-
-# Replace the .zshrc plugins config
-plugins = (
-	git
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-)
-```
-</br>
-
-- [Powerlevel10k theme for ohmyzsh](https://github.com/romkatv/powerlevel10k)
-```shell
-brew install romkatv/powerlevel10k/powerlevel10k
-echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc  
-
-zsh # Refresh shell to confiure powerlevel10k
-p10k configure # Run this to reconfigure
-```
-- `stow`
-```bash
-brew install stow
-```
 ## Terminal Productivity Tools
 ---
 >[!caution] Display of Icons
@@ -89,16 +59,13 @@ brew install fastfetch
 # Add the following to the start of .zshrc
 fastfetch --logo <ABSOLUTE_PATH_TO_LOGO_FILE> --logo-width 70 --logo-height 30 --logo-type iterm
 ```
+- [ ] `stow`
+```bash
+brew install stow
+```
 
 **Others**
-- `pipx`
-- `watch`
-```bash
-#!/bin/bash
-brew install pipx && pipx ensurepath
-
-brew install watch
-```
+- `brew install watch`
 - Custom bash commands (to be added to `.zshrc`)
 ```bash
 # cht.sh shortcut
@@ -113,8 +80,8 @@ h() {
 - [ ] [[JS Toolset]]
 - [ ] [[Rust Toolset]]
 - [ ] [[Go]]
-- [ ] `typescript` - `npm i -g typescript` (make sure you have [[JS Toolset#Install NVM]] first)
-- [ ] elixir - `brew install elixir`
+- [ ] `npm i -g typescript`
+- [ ] `brew install elixir` - Install `elixir` with [[Package Manager#Brew]]
 - [ ] [Java JDK](https://www.oracle.com/java/technologies/downloads/)
 
 
@@ -152,14 +119,14 @@ gh auth login # Painless Github CLi Auth
 - [ ] [[Cloudflare CLI]]
 - [ ] [[Secure Tunneling#Cloudflare Tunnel|cloudflared]] 
 - [ ] [[Secure Tunneling#Ngrok]]
-- [ ] [`brew install terraform`](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-- [ ] [`brew install azure-cli`](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos)
+- [ ] `brew install terraform`
+- [ ] `brew install azure-cli`
 - [ ] `brew install infracost`
 - [ ] `brew install terraform-docs`
 - [ ] [[ECS Exec|Obtain a ssh shell into ECS on local machine]]
 - [ ] [[AWS Parameter Store#Update Programmatically|Update parameters in AWS Parameter Store in a semi automated way]]
 - [ ] [[AWS Nuke]]
-- [ ] [`aws`](https://formulae.brew.sh/formula/awscli)
+- [ ] `aws`
 ```shell
 #!/bin/bash
 brew install awscli
@@ -170,10 +137,6 @@ echo "export AWS_REGION=ap-southeast-1" >> ~/.zshrc
 echo >> ~/.zshrc
 aws configure # Auth CLi
 ```
-
-
-
-### Install using pipx
 - [ ] `pipx install checkov`
 - [ ] `pipx install ddtrace`
 

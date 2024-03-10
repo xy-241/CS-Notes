@@ -6,45 +6,27 @@ Author Profile:
 tags:
   - js
 Creation Date: 2023-12-15, 20:01
-Last Date: 2024-01-11T00:06:13+08:00
+Last Date: 2024-03-10T18:19:32+08:00
 References: 
-title: Confused About Setting Up a JavaScript Project? This Guide Has Your Back!
+title: 
 ---
 ## Abstract
 ---
 - This is how a 10X developer starts his/her JS project
 
 **Setup Steps:**
-- [ ] [[#Install NVM]]
+- [ ] [[#NVM]]
 - [ ] [[#Install Code Quality Assurance Tools]]
 - [ ] [[#Install Git related Tools]]
 - [ ] [[#Integrate Code Quality Assurance Tools with Git]]
 
 
-## Install NVM
+## NVM
 ---
-- Stands for *Node Version Manager*
+- Stands for **Node Version Manager**
 - You can install [here](https://github.com/nvm-sh/nvm#install--update-script)
-- Includes [[Node.js]], [[#NPM]] and [[#NPX]]
-### NPM
-- Tool to install the *JS Modules*, refer to [[MacOs Setup]] for set up details
-- Obtain the absolute path to global node modules 
-```bash
-npm root -g
+- Includes [[Node.js]], [[Package Manager#NPM]] and [[#NPX]]
 
-# We can take advantage of this to copy certain runtime dep to the production build
-cp -R $(npm root -g)/dd-trace ./traced-deps/node_modules
-```
-
-- Manage `package.json` using [npm pkg](https://docs.npmjs.com/cli/v7/commands/npm-pkg)
-```shell
-npm pkg get [<field> [.<subfield> ...]] 
-npm pkg set <field>=<value> [.<subfield>=<value> ...] 
-npm pkg delete <field> [.<subfield> ...]
-
-# Example, set a cript called 'pre-commit'
-npm pkg set scripts.pre-commit="npx prettier . --write && npx oxlint"
-```
 ### NPX
 - Stands for Node Package eXecute
 - A *package runner tool* that comes bundled with [[#NPM]]

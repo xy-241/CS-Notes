@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2024-02-21T16:54:44+08:00
+Last Date: 2024-03-10T18:13:12+08:00
 References: 
 ---
 ## Abstract
@@ -49,7 +49,7 @@ datadogRum.init({
 ```
 
 ### Changes for Frontend Source Codes
-1. Install the [[JS Toolset#NPM]] package - `npm i @datadog/browser-rum`
+1. Install the datadog package with [[Package Manager#NPM]] - `npm i @datadog/browser-rum`
 2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the Datadog can monitor every page of the frontend
 
 ### Integration with Datadog APM

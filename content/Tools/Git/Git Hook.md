@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - git
 Creation Date: 2024-01-08, 22:10
-Last Date: 2024-01-09T21:54:15+08:00
+Last Date: 2024-03-10T18:13:31+08:00
 References: 
 draft: 
 ---
@@ -24,6 +24,6 @@ draft:
 
 ## Husky
 ---
-- A tool that makes working with [[Git Hook]] easier, requires the [[JS Toolset#NPM]]
+- A tool that makes working with [[Git Hook]] easier, requires the [[Package Manager#NPM]]
 - `npx husky-init && npm install` to have husky that is managing a script that runs `npm test` before every commit. Detailed can be found [here](https://typicode.github.io/husky/getting-started.html#automatic-recommended)
 - More configurations can be found [here](https://typicode.github.io/husky/guide.html)

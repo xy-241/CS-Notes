@@ -7,12 +7,12 @@ tags:
   - OS
   - linux
 Creation Date: 2023-08-10T00:30:35+08:00
-Last Date: 2024-03-10T00:09:11+08:00
+Last Date: 2024-03-10T22:26:13+08:00
 References: 
 ---
 ## Abstract
 ---
-- Person authorized to use the system
+- Person authorised to use the system
 
 
 ## Linux User
@@ -20,7 +20,7 @@ References:
 - Based on [[Unix]] & [[POSIX]]
 </br>
 
-- Obtain Current [[User]] Info
+- Obtain information of all [[User]] session in the [[OS]]
 ```bash
 who
 ```
@@ -35,7 +35,17 @@ id <USER_NAME>
 cut -d: -f1 /etc/passwd
 ```
 
+- Create user with **administrative privileges**
+```bash
+sudo useradd -m -G wheel <USERNAME>
+sudo passwd johndoe # Set the password for new user
 
+sudo usermod -aG <GROUPNAME> <USERNAME> # Add new user to other groups
+```
+- Delete user
+```bash
+sudo userdel <USERNAME>
+```
 
 ## Terminologies 
 ---
