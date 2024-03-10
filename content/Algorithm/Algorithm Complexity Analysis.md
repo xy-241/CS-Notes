@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T15:13:00
-Last Date: 2024-03-07T10:36:02+08:00
+Last Date: 2024-03-10T16:05:55+08:00
 References: 
 ---
 ## Abstract
@@ -48,6 +48,13 @@ References:
 > $$
 ### Worst Space Complexity
 - The [[Main Memory]] used **relative to the input size**
+
+>[!bigbrain] 2 ways to count
+> **Maximum space every allocated at one time**
+> - The amount of space the algorithm needs to run
+>   
+> **Total space ever allocated**
+> - The total amount of space algorithm uses to run the algorithm. We need to consider this because **memory allocation** is an expensive operation
 ### Worst Time Complexity
 - The time it takes **relative to the input size**
 

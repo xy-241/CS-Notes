@@ -6,16 +6,21 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-23T19:38:22+08:00
-Last Date: 2024-03-07T11:21:28+08:00
+Last Date: 2024-03-10T16:53:00+08:00
 References: 
 ---
 ## Abstract
 ---
-- 3 components
-	1. **Starting point**: break down the big problem, and sum up the answers of sub-problems, and return it as final answer
-	2. **Progression**: obtaining the answers of sub-problems
-	3. **Base case**: the terminating point of recursion
-- 递归解题思路主要还是聚焦在一个节点，想想在这一个节点上要做点啥，递归就像‘水波纹’把这‘做点啥’传递到其它节点上
+- **Starting point**: break down the big problem, and sum up the answers of sub-problems, and return it as final answer
+- **Progression**: obtaining the answers of sub-problems
+- **Base case**: the terminating point of recursion
+
+
+>[!tip] Wishful Thinking!
+> When thinking about recursion, don't "unroll" the recursion. Treat the [[#Recursion Function]] as a magic black box. Don't forget the base case!
+> 
+> 递归解题思路主要还是聚焦在一个节点， 想想在这一个节点上要做点啥， 递归就像‘水波纹’把这‘做点啥’传递到其它节点上
+
 
 ### Recursion Function
 - A function that calls itself during its execution
