@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-02-21T15:24:48+08:00
+Last Date: 2024-03-11T21:38:29+08:00
 References: 
 ---
 
@@ -20,12 +20,11 @@ References:
 - Examples are Printers & Modems etc
 </br>
 
-- 2 parts - _Filename_ & [[Inode#Inode Number]], doesn't have any _metadata_ associated
+- 2 parts - **Filename** & [[Inode#Inode Number]], doesn't have any _metadata_ associated
 ### File Descriptor
 - A small [[Integer (整数)]] associated with [[File]]
 ### File Permission
 - In [[POSIX]], file permissions are handled by **rwx bits**
-
 
 ### File Compression
 - Process of **reducing the size** of one or more files to save storage space
@@ -69,40 +68,60 @@ References:
 >rm -rf myTempZip
 >```
 
-### Useful File Commands
-```bash title="Generate a hexdump from a binary file and display the output"
+## Special File
+---
+
+- An [[Linux Kernel]] concept - make [[IO Device]] look like [[File]], so we can reuse the same set of file [[System Call (系统调用)]] on IO Devices
+- By convention, kept in the `/dev`
+
+### Block Special Files
+- Model [[IO Device]] that has a collection of **randomly addressable blocks** like like [[Flash Memory]]
+
+### Character Special Files
+- Model IO Device that accept or output a **character stream** like keyboard
+
+## Line Break in File
+---
+- [[POSIX]] systems uses a single character called **Line Feed** `\n`
+- While Windows uses **carriage return** and Line Feed, so 2 characters `\r\n`. This is because during typewriter times, you needed to mov the carriage to restart typing on the beginning of a line first, then turn the wheel to move the paper to change the line
+
+>[!info] Hands-On!
+>You can install `dos2unix` and `unix2dos` using [[Package Manager#Brew]] to play with line break.
+>
+> You can view the hidden line break character by downloading and configuring [[#bat]].
+
+## Useful CLi Tools
+---
+### bat
+- A cat clone with wings.
+```bash
+brew install bat && echo "alias cat='bat'" >>~/.zshrc
+```
+
+### dua
+- Manage files fast, powered by rust!
+```bash
+brew install dua-cli
+
+dua interactive
+```
+
+### xcp
+- cp on tren!
+```bash
+cargo install xcp
+# Alias to cp
+alias cp="xcp"
+```
+
+### xxd
+- Generate a hexdump from a binary file and display the output
+```bash 
 xxd <BINARY_NAME.bin>
 ```
 
 
 
-### Line Break
-- [[POSIX]] systems uses a single character called **Line Feed** `\n`
-- While Windows uses **carriage return** and Line Feed, so 2 characters `\r\n`. This is because during typewriter times, you needed to mov the carriage to restart typing on the beginning of a line first, then turn the wheel to move the paper to change the line
 
->[!info] Hands-On!
->You can install `dos2unix` and `unix2dos` using [brew](https://docs.brew.sh/Installation) to play with line break
->
-> You can view the hidden line break character by downloading and configuring `bat`, refer to [[MacOs Setup#Terminal Productivity Tools]] for more details
 
-## Useful CLi Tools
-### bat
-- A cat(1) clone with wings.
-```bash
-brew install bat && echo "alias cat='bat'" >>~/.zshrc
-```
-
-## Terminologies
-
----
-### Special File
-
-- Make [[IO Device]] look like [[File]], so we can reuse the same set of file [[System Call (系统调用)]] on IO Devices
-- By convention, kept in the `/dev` [[File System#Linux File System]]
-
-**Block Special Files**
-- Model [[IO Device]] that has a collection of *randomly addressable blocks* like like disk
-
-**Character Special Files**
-- Model [[IO Device]] that accept or output a *character stream* like keyboard
 

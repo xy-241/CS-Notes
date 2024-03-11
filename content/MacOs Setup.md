@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-10T18:25:21+08:00
+Last Date: 2024-03-11T21:36:56+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -44,14 +44,14 @@ title:  My Macos Setup
 >[!caution] Display of Icons
 > Make sure you install one of the [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) to have icons display correctly inside your terminal
 
-- [ ] [[File System#eza]] - `ls` replacement
-- [ ] [[File System#xcp]] - `cp` replacement
-- [ ] [[File System#zoxide]] - `cd` replacement
+- [ ] [[File System Hierarchy#eza]] - `ls` replacement
+- [ ] [[File#xcp]] - `cp` replacement
+- [ ] [[File System Hierarchy#zoxide]] - `cd` replacement
 - [ ] [[File#bat]] - `cat` replacement
 - [ ] [[DNS#q]] - `dig` replacement
 - [ ] [[Atuin]] - `history` replacement
-- [ ] [[File System#joshuto]] - Terminal File Manager
-- [ ] [[File System#dua]] - Disk Usage Analyser
+- [ ] [[File System Hierarchy#joshuto]] - Terminal File Manager
+- [ ] [[File#dua]] - Disk Usage Analyser
 - [ ] `brew install btop` - `htop`/`top` replacement
 - [ ] `fastfetch`
 ```bash
