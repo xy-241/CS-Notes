@@ -7,7 +7,7 @@ tags:
   - dsa
   - OS
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-03-05T10:46:36+08:00
+Last Date: 2024-03-12T12:21:28+08:00
 References: 
 ---
 ## Abstract
@@ -47,7 +47,7 @@ References:
 ### Implementation with Array
 - [Visual](https://www.hello-algo.com/chapter_stack_and_queue/stack/#2)
 - push(), pop() & peek() from the back
-- Can use [[Dynamic Array (List)]], then the expansion is handled automatically
+- Can use [[Array#Dynamic Array]], then the expansion is handled automatically
 
 ### Implementation with Linked List
 - Implementation with [[Single Linked List]]

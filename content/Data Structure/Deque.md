@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-12-11T20:43:00+08:00
-Last Date: 2023-12-11T20:43:00+08:00
-References:
+Last Date: 2024-03-12T12:18:59+08:00
+References: 
 ---
 ## Basics
 ---
@@ -17,7 +17,7 @@ References:
 >- Aka [[Array]]/[[Linked List]] with limitations
 
 
->[!caution] 
+
 
 
 %%>[!example] Use as
@@ -29,7 +29,7 @@ References:
 ## Implementation
 ---
 
-%%>[!note] Implementation wit[](Circular%20Array.md)]]
+%%>[!note] Implementation wit[](Array.md#Circular%20Array)]]
 >
 >- [Visual](https://www.hello-algo.com/chapter_stack_and_queue/queue/#2)
 >- push() at the rear index

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-30T12:54:00
-Last Date: 2024-03-05T12:39:43+08:00
+Last Date: 2024-03-12T12:17:39+08:00
 References: 
 ---
 ## Abstract
@@ -25,11 +25,11 @@ References:
 ## Implementation
 ---
 
->[!note] Implementation with [[Circular Array]]
->
->- [Visual](https://www.hello-algo.com/chapter_stack_and_queue/queue/#2)
->- push() at the rear index
->- pop() & peek() at the head index
+>[!note] Implementation with Circular Array
+> - [[Array#Circular Array]]
+> - [Visual](https://www.hello-algo.com/chapter_stack_and_queue/queue/#2)
+> - push() at the rear index
+> - pop() & peek() at the head index
 
 >[!note] Implementation with [[Single Linked List]]
 >- [Visual](https://www.hello-algo.com/chapter_stack_and_queue/queue/#1)

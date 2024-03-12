@@ -8,7 +8,7 @@ tags:
   - java
   - cpp
 Creation Date: 2023-12-29, 16:16
-Last Date: 2024-03-04T11:47:07+08:00
+Last Date: 2024-03-12T12:21:14+08:00
 References: 
 draft: 
 ---
@@ -19,7 +19,7 @@ A collection of code templates to kickstart the journey of solving interesting p
 >[!tip]
 >1. Make sure all inputs are read in in sequence 
 >2. Use at least 64[[Computer Data Representation#Bit]] to prevent integer overflow issue, `long` in [[Java]], `long long` in [[CPP]]
->3. [[Dynamic Array (List)]] over [[Array]]
+>3. [[Array#Dynamic Array]] over [[Array]]
 
 
 ## Java Code Template

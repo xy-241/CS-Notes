@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-03-11T20:07:26+08:00
+Last Date: 2024-03-12T12:29:02+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -42,14 +42,14 @@ description: Trying to sort my life out.
 
 >[!example]- Sorting algorithms that are unstable
 > **Bogo Sort**
-> - Random [[Permutation]] may sway elements with the same value 
+> - Random [[Permutation]] may swap elements with the same value 
 > 
 > **[[#Selection Sort]]**
 > - Imagine in iteration $j$, the element at position $j$ is $8$ and element at position $j+1$ is $8$ too. Then the smallest element in the range $[j, k]$ is $7$. We swap $7$ with the $8$ at position $j$. As you can see, the order of the 2 same value is changed. Thus, unstable
 
 ### Divide-and-Conquer Sorting
 - **Divide**: split array into two halves
-- **[[Recursion]] up**: sort the two halves
+- **[[Recursion]] up**: hit the base case, kickstart sorting the two halves
 - **Combine**: merge the sorted halves
 
 ## Bubble Sort
@@ -83,7 +83,7 @@ description: Trying to sort my life out.
 
 >[!note]- Time Complexity
 > **Best-case**
-> - $O(n^2)$, because at each iteration, we can only find the current smallest element. Even if we are given a fully sorted array, we need to perform$n$ iterations, in order to have the confidence to say that the array is sorted 
+> - $O(n^2)$, because at each iteration, we can only find the current smallest element. Even if we are given a fully sorted array, we need to perform $n$ iterations, in order to have the confidence to say that the array is sorted 
 >   
 > **Average-case**
 > - $O(n^2)$, assume inputs are chosen at random
@@ -96,7 +96,7 @@ description: Trying to sort my life out.
 - The idea here is that at each iteration $j$, we are are going to **insert** the element at the $j$ position to the prefix [[Array]] that is $j-1$ long, such that the new prefix array which is $j$ long remains sorted
 
 >[!important] Loop Invariant
-> At the end of iteration $j$, the first $j$ items in the array are **sorted order**.
+> At the end of iteration $j$, the first $j$ items in the array are in **sorted order**.
 
 >[!note]- Time Complexity
 > **Best-case**
@@ -136,9 +136,11 @@ description: Trying to sort my life out.
 > Guess the time complexity and verify it with the reoccurrence we obtained. 
 
 >[!caution] Slow on small arrays!
-> Merge sort has a space complexity of $O(n)$, we know allocation of different arrays are scattered in the [[Main Memory]]. When we need to work multiple arrays we sacrifice the performance gain from [[CPU Cache#Cache Locality]]. And the [[Recursion]] nature of the algorithm comes with extra overhead. Recursion is also less predicable, thus negative impact on [[Branch Prediction]].
+> The allocation of different arrays are scattered in the [[Main Memory]]. Merge sort has a space complexity of $O(n)$ with different temporary arrays at each merge layer. Working on multiple arrays means we sacrifice the performance gain from [[CPU Cache#Cache Locality]]. 
 > 
-> When the array is small, such hardware level impact outweighs the performance gain from the better time complexity.
+> The [[Recursion]] nature of the algorithm comes with extra overhead too. Recursion is also less predicable, thus negative impact on [[Branch Prediction]].
+> 
+> When the array is small, such hardware level negative impact outweighs the performance gains from the better time complexity.
 
 >[!caution] Slow on almost sorted array!
-> Merge sort's performance is $O(nlogn)$ when the array is almost sorted, because it needs to perform the full divide-and-conquer process regardless how chaotic the given array is. While [[#Bubble Sort]] and [[#Insertion Sort]] have a time complexity of $O(n)$ only.
+> Merge sort's performance is still $O(nlogn)$ when the array is almost sorted, because it needs to perform the full divide-and-conquer process regardless how chaotic the given array is. While [[#Bubble Sort]] and [[#Insertion Sort]] have a time complexity of $O(n)$.

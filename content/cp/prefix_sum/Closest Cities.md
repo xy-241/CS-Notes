@@ -21,7 +21,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2024-01-24, 12:48
-Last Date: 2024-01-24T13:23:47+08:00
+Last Date: 2024-03-12T12:20:59+08:00
 tags:
   - cp
 draft: 
@@ -56,7 +56,7 @@ description: Explore a Greedy Algorithm paired with a clever use of Prefix Sum t
 The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### Space - O(n)
 - *Ignore input size & language dependent space*
-- We are creating 2 [[Dynamic Array (List)]] to implement prefix sum
+- We are creating 2 [[Array#Dynamic Array]] to implement prefix sum
 ### Time - O(n + m)
 - O(n) to populate the prefix sum, O(m) to handle all the pairs of starting location to ending location
  
