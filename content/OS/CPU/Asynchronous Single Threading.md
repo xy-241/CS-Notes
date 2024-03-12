@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-11T19:17:00
-Last Date: 2024-02-22T18:01:25+08:00
+Last Date: 2024-03-12T17:00:52+08:00
 References: 
 ---
 ## Abstract
 ---
-- Basically takes the benefits of [[Multi-threading]] without the [[Multi-threading#Cons]] with [[Thread#Non-blocking|Non-blocking Thread]] 
+- Basically takes the benefits of [[Multi-threading]] without the [[Multi-threading#Cons]] with [[Thread#Non-blocking Thread]] 
 
 
 ## Cons
