@@ -10,7 +10,7 @@ tags:
   - macos
   - ngrok
 Creation Date: 2024-02-23, 23:49
-Last Date: 2024-03-05T01:23:24+08:00
+Last Date: 2024-03-12T11:06:01+08:00
 References: 
 draft: 
 description: 
@@ -55,43 +55,11 @@ description:
 
 ## Cloudflare Tunnel
 ---
->[!tip] Protect Cloudflare Tunnel with Cloudflare Access
-> By default, Cloudflare Tunnel is accesible by anyone from the Internet via the public [[Hostname#Domain Name]]. We can make use of [[Cloudflare Access]] to ensure only authenticated users can access the Cloudflare Tunnel
-
 - Cloudflare's Secure Tunneling offering. The notes here focuses on setting it up. For more details refer to [Cloudflare Tunnel · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)
 - You need the `cloudflared` cli to managed the [[#Secure Tunneling Client]]
 ```bash
 brew install cloudflared
 ```
-
-
-
-### Approach 1: Create a locally-managed Cloudflare Tunnel (CLi)
-- Refer to [Create a locally-managed tunnel (CLI)](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-local-tunnel/) for more details
-
-### Approach 2: Create a remotely-managed tunnel (dashboard)
-- Refer to [Create a remotely-managed tunnel (dashboard)](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/) for more details
-</br>
-
-- There are 2 ways to perform the **[[#Secure Tunneling Client]] ([connector](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/tunnel-useful-terms/#connector)) Installation**
-	1. **System Service:** Use `sudo cloudflared service install <TOKEN>` to register the connector as a service managed by [[Init System]]. You can only have **one Cloudflare Tunnel Service on one machine** at any time!
-	2. **Docker:** Run the connector as a docker container without the need to grant root access but we have to manually manage the lifecycle of the connector
-
->[!bug] Connector Installation Issue with Docker
-> For some reasons, when I close the terminal, the connector container will auto exit. Even thought I used both `-d` and `--restart unless-stopped`. I am running Docker on my Raspberry Pi. If you know why, please comment down below to tell me why. Thanks :)
-
->[!info]- Cloudflare Tunnel Init System Service on Mac
-> When you run `sudo cloudflared service install <TOKEN>`, a service file should be created at the following path `/Library/LaunchDaemons/com.cloudflare.cloudflared.plist`
-> 
-> You can remove the Cloudflare Tunnel Service by running `sudo cloudflared service uninstall <TOKEN>`
-> 
-> The Cloudflare Tunnel Service's parent is `launchd`
-> 
-> ![[cloudflared_tunnel_service_btop.png|500]]
-
->[!info]- Cloudflare Tunnel Init System Service on Linux
-> You can check the status of service the using `sudo systemctl status cloudflared`
-
 
 >[!tip]- Create Cloudflare Tunnel without an account
 > This is for quick testing without a Cloudflare account, but it comes with minimal control. No custom domain, no authentication, limited bandwidth and unstable etc. Refer to [Cloudflare Quick Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/do-more-with-tunnels/trycloudflare/) for more details
@@ -99,6 +67,48 @@ brew install cloudflared
 > ```bash title="Secure Tunneling of a local port"
 > cloudflared tunnel --url 127.0.0.1:<PORT_NUMBER>
 > ```
+
+>[!tip]- Restrict access to Cloudflare Tunnel endpoint with Cloudflare Access
+> By default, Cloudflare Tunnel is accesible by anyone from the Internet via the public [[Hostname#Domain Name]]. We can make use of [[Cloudflare Access]] to ensure only authenticated users can access the Cloudflare Tunnel
+
+
+### Create a remotely-managed tunnel
+- This requires us to have a Cloudflare account and the creation of the Cloudflare Tunnel is done inside the Cloudflare website. Refer to [Create a remotely-managed tunnel (dashboard)](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/) for more details
+
+>[!info]- Create a locally-managed Cloudflare Tunnel with cloudflared CLI
+> This approach requires you to have a config yaml file on your machine. This comes higher overhead in managing the config files in your [[File System Hierarchy]]. Refer to [Create a locally-managed tunnel (CLI)](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-local-tunnel/) for more details.
+
+</br>
+
+>[!abstract] Client-side Setup
+> There are 2 ways to perform the **[[#Secure Tunneling Client]] ([Cloudflare Tunnel Connector](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/tunnel-useful-terms/#connector)) Installation** via **System Service** or **Docker**
+
+**System Service** 
+- Use `sudo cloudflared service install <TOKEN>` to register the connector as a service managed by [[Init System]]. You can only have **one Cloudflare Tunnel Service on one machine** at any time!
+
+
+>[!info]- Cloudflare Tunnel Init System Service on Mac
+> When you run `sudo cloudflared service install <TOKEN>`, a service file should be created at the following path `/Library/LaunchDaemons/com.cloudflare.cloudflared.plist`.
+> 
+> You can remove the Cloudflare Tunnel Service by running `sudo cloudflared service uninstall <TOKEN>`.
+> 
+> The Cloudflare Tunnel Service's parent is `launchd`.
+> 
+> ![[cloudflared_tunnel_service_btop.png|500]]
+
+>[!info]- Cloudflare Tunnel Init System Service on Linux
+> You can check the status of service the using `sudo systemctl status cloudflared`.
+
+
+**Docker** 
+- Run the connector as a docker container without the need to grant root access but we have to manually manage the lifecycle of the connector
+
+>[!bug] Connector Installation Issue with Docker
+> For some reasons, when I close the terminal, the connector container will auto exit. Even thought I used both `-d` and `--restart unless-stopped`. I am running Docker on my Raspberry Pi. If you know why, please comment down below to tell me why. Thanks :)
+
+
+
+
 
 
 
