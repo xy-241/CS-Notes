@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-12T18:59:00
-Last Date: 2024-03-12T17:14:57+08:00
+Last Date: 2024-03-13T12:35:54+08:00
 References: 
 ---
 
@@ -50,3 +50,12 @@ References:
 - To keep track of the [[Thread]] in a [[Process (进程)]]
 - Similar to [[Kernel]]'s [[Process Control Block (PCB)#Process Table]], except it only keeps track of the [per-thread items](thread_resources.png)
 - Managed by the [[User Thread#Runtime System]] for [User Thread](thread_implementation_in_user_space.png) & Kernel for [Kernel Thread](thread_implementation_in_kernel_space.png)
+
+
+## PThread
+---
+- A [[POSIX]] [[Thread]] package
+![[pthread_example.png|500]]
+
+>[!note]- ``pthread_yield()``
+> In [[Process (进程)]], we don't have this. Because [[Thread]] is in the same program, written by the same programmer, so they collaborate to get fulfil a particular feature
