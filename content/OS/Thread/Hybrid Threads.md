@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-28T16:43:00
-Last Date: 2024-03-13T12:31:08+08:00
+Last Date: 2024-03-13T13:58:04+08:00
 References: 
 ---
 ## Abstract
@@ -18,5 +18,3 @@ References:
 
 >[!success] Ultimate in flexibility
 > Used by modern [[Kernel]]
-
-ystem maps. 

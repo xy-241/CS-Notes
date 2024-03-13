@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2024-03-10T18:13:12+08:00
+Last Date: 2024-03-13T15:16:13+08:00
 References: 
 ---
 ## Abstract
@@ -16,7 +16,7 @@ Datadog RUM provides [[Real User Monitoring]]
 
 ## Setup
 ---
-The example below is based on [next.js](https://nextjs.org/). The setup process is very similar for other Javascript framework
+The example below is based on [next.js](https://nextjs.org/). The setup process is very similar for other Javascript framework.
 
 **Checklist:**
 - [ ] [[#Datadog Dashboard]]
@@ -53,8 +53,12 @@ datadogRum.init({
 2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the Datadog can monitor every page of the frontend
 
 ### Integration with Datadog APM
-We simply add in `allowedTracingUrls` with your backend base url
 
+>[!attention]
+>We need to have [[Datadog APM]] enabled for the backend before we can integrate it with Datadog RUM!
+
+
+- We simply add in `allowedTracingUrls` with your backend base url
 ```typescript {9-11}
 import { datadogRum } from '@datadog/browser-rum';
 
@@ -78,5 +82,4 @@ datadogRum.init({
 });
 ```
 
->[!attention] For application that has both frontend and backend
->We need to have [[Datadog APM]] enabled for the backend before we can integrate it with Datadog RUM!
+
