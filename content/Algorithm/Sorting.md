@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-03-12T12:29:02+08:00
+Last Date: 2024-03-14T12:44:39+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -55,6 +55,81 @@ description: Trying to sort my life out.
 ## Bubble Sort
 ---
 - The idea here is that at each iteration $j$, we are are going to **'bubble up'** the biggest element in the range $[1, n+1-j]$ to the $n+1-j$ position. If no **'bubbling'** happens in that particular iteration, it means the array is fully sorted and it is safe to terminate the sorting early
+- Bubble sort implementation in Java
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/4277qh6js?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
+ ></iframe>
+ </div>
+
+>[!help]- Is the code editor above not showing the correct source code?
+> Here is a backup, please report the issue [here](https://github.com/xy-241/CS-Notes/issues) or comment down below, so I can look into the issue. Thanks :)
+> ```java
+> import java.util.*;
+> 
+> public class BubbleSort {
+>   public static void main(String[] args) {
+>     int[] arr = genetateRandomArr(10);
+>     
+>     System.out.print("Original Array: ");
+>     System.out.println(Arrays.toString(arr));
+>     System.out.println();
+>     
+>     bubbleSort(arr.clone(), false); // Inefficient bubble osrt
+>     bubbleSort(arr.clone(), true); // Efficient bubble sort
+>   }
+>   
+>   public static void bubbleSort(int[] arr, boolean terminateEarly) {
+>     long startTime = System.currentTimeMillis();
+>     
+>     int n = arr.length;
+>     boolean swap = false;
+>     int counter = 0;
+>     
+>     for (int i=0; i<n-1; i++) {
+>       swap = false;
+>       
+>       for (int j=0; j<n-1-i; j++) {
+>         counter++;
+>         try { Thread.sleep(1); } catch (InterruptedException e) {}
+>         if (arr[j]>arr[j+1]) {
+>           int temp = arr[j];
+>           arr[j] = arr[j+1];
+>           arr[j+1] = temp;
+>           
+>           swap = true;
+>         }
+>       }
+>       
+>       if (!swap && terminateEarly) {
+>         break;
+>       }  
+>     }
+>     
+>     long endTime = System.currentTimeMillis();
+>     long elapsedTime = endTime - startTime;
+>     
+>     System.out.print("Array after bubble sort:");
+>     System.out.println(Arrays.toString(arr));
+>     System.out.println("Elements processed " + counter);
+>     System.out.println("Time taken: " + elapsedTime + " ms");
+>     System.out.println();
+>   }
+>   
+>   public static int[] genetateRandomArr(int size) {
+>     Random random = new Random();
+>     int[] arr = new int[size];
+>     
+>     for (int i=0; i<arr.length; i++) {
+>       arr[i] = random.nextInt(size);
+>     }
+>     
+>     return arr;
+>   }
+> }
+> ```
 
 
 >[!important] Loop Invariant
