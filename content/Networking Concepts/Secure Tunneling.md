@@ -10,7 +10,7 @@ tags:
   - macos
   - ngrok
 Creation Date: 2024-02-23, 23:49
-Last Date: 2024-03-12T11:06:01+08:00
+Last Date: 2024-03-14T21:40:31+08:00
 References: 
 draft: 
 description: 
@@ -106,7 +106,19 @@ brew install cloudflared
 >[!bug] Connector Installation Issue with Docker
 > For some reasons, when I close the terminal, the connector container will auto exit. Even thought I used both `-d` and `--restart unless-stopped`. I am running Docker on my Raspberry Pi. If you know why, please comment down below to tell me why. Thanks :)
 
-
+>[!tip]- Terraforming Cloudflare Tunnel
+> When you use the [Cloudflare tunnel Terraform resource block](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/tunnel) to create a Cloudflare Tunnel, it creates a locally-managed tunnel. The way to terraform a remotely-managed tunnel is to first create the tunnel and `terraform import` the terraform.
+> 
+> First specify the terraform resource block:
+> ```hcl
+> resource "cloudflare_tunnel" "home_lab" {
+>   account_id = var.account_id
+>   name = "homeLab"
+>   secret= ""
+> }
+> ```
+> 
+> Then you can import the remotely-managed tunnel with `terraform import cloudflare_tunnel.home_lab <account_id>/<tunnel_id>`
 
 
 

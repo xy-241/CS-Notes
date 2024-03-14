@@ -9,13 +9,13 @@ tags:
   - bash
   - macos
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2024-03-11T21:36:15+08:00
+Last Date: 2024-03-15T00:33:34+08:00
 References: 
 ---
 ## Abstract
 ---
 - A [[Data Structure]] with features that the [[Kernel]] uses to control how data is stored and retrieved on a storage device 
-- Provides a way to organise [[#File Directory]] into folders, and to keep track of which [[File]] are stored where on the device
+- Provides a way to organise [[File System Hierarchy#File Directory]] into folders, and to keep track of which [[File]] are stored where on the device
 
 
 
@@ -29,6 +29,9 @@ References:
 > ```bash
 > diskutil list
 > ```
+
+>[!code]- Manipulate Filesystem with `mkfs`
+> Format a storage device to specific filesystem with `sudo mkfs -t <FILESYSTEM_TYPE> -f /dev/<STORAGE_NAME>`. 
 
 >[!code]- Check the storage size of current directory recursively
 > ```bash
@@ -50,12 +53,14 @@ References:
 > df -Th
 > ```
 
+>[!code]- Mounting automatically during boot time
+> You can achieve this by editing the `/etc/fstab`. You can verify the configuration with `sudo mount -a`.
 ## Common File Systems
 ---
 ### APFS 
 - **Apple File System**
 - Created by Apple, used for macOS, iOS, iPadOS, tvOS, and watchOS
-- We need to use [[FUSE]] to mount APFS on [[Linux Kernel]] 
+- We need to use [[FUSE]] to mount APFS on [[Linux Kernel]]. One common option is [sgan81/apfs-fuse](https://github.com/sgan81/apfs-fuse)
 
 ### Ext4 
 - **Extended Filesystem 4**

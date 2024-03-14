@@ -10,7 +10,7 @@ tags:
   - js
   - rust
 Creation Date: 2024-03-10, 17:29
-Last Date: 2024-03-10T22:37:20+08:00
+Last Date: 2024-03-14T21:36:29+08:00
 References: 
 draft: 
 description: 
@@ -29,6 +29,27 @@ description:
 - Install with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - [Interesting analytics data](https://formulae.brew.sh/analytics/)
 
+>[!code]- Package Management
+> `brew list` - list all the installed packages
+> 
+> `brew upgrade` - update all the packages
+> 
+> `brew doctor` - check for deprecated packages
+
+>[!info]- Brew Formula
+> Simple Ruby scripts, we can easily revert our modifications and merge upstream updates with `brew edit <PACKAGE_NAME>`.
+
+>[!info]- Brew Tap
+> Add additional repositories that extend the core Homebrew installation, so we can install a wider range of command-line tools and utilities. You can list all the repositories brew taps on with `brew tap`.
+
+>[!info]- Brew Cask
+> Extension to Homebrew that allow you to install full-fledged macOS GUI applications. You can list all the apps installed with brew cash with `brew list --cask`.
+
+>[!info]- Brew Bottles
+> These are pre-compiled binary packages created by Homebrew maintainers or the community. They save you the time and effort of compiling a formula from source code.
+
+>[!info]- Poured from Bottle
+> When you see a message like "Pouring <package_name>", it means Homebrew is installing the package using a pre-compiled bottle instead of building it from source.
 ## Pipx
 ---
 - [[Package Manager]] for Python Applications
@@ -38,6 +59,13 @@ description:
 ---
 - [[Package Manager]] for [[Node.js]] Applications
 - Come with [[JS Toolset#NVM]]
+
+>[!code]- Package Management
+> `npm list -g` - list all the installed packages
+> 
+> `npm update -g` - update all the packages
+> 
+> `npm outdated -g` - check for outdated packages
 
 >[!code]- Obtain the absolute path to global node modules 
 > ```bash
@@ -58,6 +86,11 @@ description:
 ---
 - [[Package Manager]] for [[Rust]]
 
+>[!code]- Package Management
+> `ls ~/.cargo/bin` - list all the installed packages
+> 
+> Updating packages - Cargo doesn't come with a command to upgrade installed packages. We need to re-install the packages to update the packages.
+
 
 ## Pacman
 ---
@@ -67,7 +100,7 @@ description:
 > [Paru](https://github.com/Morganamilo/paru?tab=readme-ov-file#installation) is a wrapper around Pacman written in [[Rust]]. Very similar syntax, zero learning curve.
 
 >[!tip] Basic Syntax
-> Install `pacman -S` , delete `pacman -R`, search `pacman -Ss`
+> Install `pacman -S` , delete `pacman -R`, search `pacman -Ss`, upgrade `pacman -Syu`
 
 >[!code]- Install package from `package-name.pkg.tar.xz`
 > ```bash
