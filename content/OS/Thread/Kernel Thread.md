@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-03T16:14:00
-Last Date: 2024-03-12T17:16:59+08:00
+Last Date: 2024-03-15T22:23:24+08:00
 References: 
 ---
 ## Abstract
@@ -24,7 +24,7 @@ References:
 >[!caution]- Resource Intense
 > All calls that might block a [[Thread]] are implemented as [[System Call (系统调用)]], at considerably greater cost than a call to a [[User Thread#Runtime System]] procedure.
 > 
-> Relatively greater cost of creating and destroying Thread in the [[Kernel]]
+> Relatively greater cost of creating and destroying Thread in the [[Kernel]] too.
 
 >[!tip]- Recycling threads to reduce resource usage
 > When a thread is destroyed, it is marked as not runnable, but its **kernel data structures** are not otherwise affected. When a new thread must be created, an old thread is reactivated, saving some overhead of creating a new one.

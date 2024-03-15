@@ -8,7 +8,7 @@ tags:
   - macos
   - linux
 Creation Date: 2024-02-07, 16:20
-Last Date: 2024-03-10T01:01:44+08:00
+Last Date: 2024-03-15T22:18:33+08:00
 References: 
 draft: 
 description: FUSE (Filesystem in Userspace) lets programs manage filesystems without kernel privileges, enabling custom cloud storage mounts and powering tools like Rclone. It achieves this by acting as a bridge between user-space filesystem implementations and the kernel, forwarding requests and returning results.
@@ -55,6 +55,9 @@ description: FUSE (Filesystem in Userspace) lets programs manage filesystems wit
 
 ## RCLONE
 - [Rclone](https://rclone.org/) allows us to mount cloud storages to the local [[File System]], supports both read and write
+
+>[!code]- Mounting
+> Mount with `rclone mount --vfs-cache-mode writes <REMOTE>: <LOCAL_FOLDER>`, so we are able to use CLI to manipulate files without issues. Without `--vfs-cache-mode writes`, we may get weird errors when using `cp` to transfer files for some reasons. If you know why, please comment down below :)
 
 
 

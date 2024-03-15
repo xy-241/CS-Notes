@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-05T17:45:00
-Last Date: 2024-03-13T12:47:41+08:00
+Last Date: 2024-03-15T22:20:19+08:00
 References: 
 ---
 ## Abstract
@@ -31,5 +31,5 @@ References:
 >[!attention]- Thread Safety
 > Make sure the Task Queue is manipulated by one Thread at a time. Otherwise, we may we may have more than 1 thread processing the same task - [[Race Condition (竞态条件)]] happens. Thus, we need to have [[Mutex (互斥体)]] on the [[#Task Queue]].
 
->[!attention]- Efficient assignment of task
+>[!tip]- Efficient assignment of task
 > Make sure idle Threads don't keep checking Task Queue for tasks. This will result in purely wasted computation.
