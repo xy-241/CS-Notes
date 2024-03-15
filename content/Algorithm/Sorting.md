@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-03-14T12:44:39+08:00
+Last Date: 2024-03-15T20:30:47+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -15,7 +15,7 @@ description: Trying to sort my life out.
 ---
 - Basically re-arranging a collection of items or data elements in an ascending or descending order
 
->[!attention] Not all the $O(n^2)$ sorting algorithms are the same
+>[!attention]- Not all the $O(n^2)$ sorting algorithms are the same
 > Different algorithms have different inputs that they are good or bad on.
 > 
 > For example, [[#Bubble Sort]], [[#Selection Sort]] and [[#Insertion Sort]] have the $O(n^2)$ time complexity. But on sorted or almost sorted array, bubble sort and insertion sort have the $O(n)$ time complexity while selection sort has $O(n^2)$ time complexity.
@@ -132,7 +132,7 @@ description: Trying to sort my life out.
 > ```
 
 
->[!important] Loop Invariant
+>[!important]- Loop Invariant
 > At the end of iteration $j$, the **biggest** $j$ items are correctly sorted in the final $j$ positions of the array.
 > 
 > So for example, at the end of iteration 2, the biggest 2 items are correctly sorted in the final 2 positions of the array. 
@@ -152,8 +152,78 @@ description: Trying to sort my life out.
 ## Selection Sort
 ---
 - The idea here is that at each iteration $j$, we are are going to **select** the smallest element in the range $[j, n]$ of the [[Array]]. Then swap it with element at the $j$ position
+- Selection sort implementation in java
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/427bvxd2r?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
+ ></iframe>
+ </div>
 
->[!important] Loop Invariant
+>[!help]- Is the code editor above not showing the correct source code?
+> Here is a backup, please report the issue [here](https://github.com/xy-241/CS-Notes/issues) or comment down below, so I can look into the issue. Thanks :)
+import java.util.*;
+> ```java
+> public class BubbleSort {
+>   public static void main(String[] args) {
+>     int[] arr = genetateRandomArr(10);
+>     
+>     System.out.println("Original Array");
+>     System.out.println(Arrays.toString(arr));
+>     System.out.println();
+>     
+>     selectionSort(arr);
+>   }
+>   
+>   public static void selectionSort(int[] arr) {
+>     long startTime = System.currentTimeMillis();
+>     
+>     int n = arr.length;
+>     int counter = 0;
+>     
+>     for (int i=0; i<n-1; i++) {
+>       int minSelected = i;
+>       
+>       for (int j=i+1; j<n; j++) {
+>         counter++;
+>         try { Thread.sleep(1); } catch (InterruptedException e) {}
+>         
+>         if (arr[j] < arr[minSelected]) minSelected = j;
+>       }
+>       
+>       if (minSelected != i) {
+>         int temp = arr[i];
+>         arr[i] = arr[minSelected];
+>         arr[minSelected] = temp;
+>       }
+>     }
+>     
+>     long endTime = System.currentTimeMillis();
+>     long elapsedTime = endTime - startTime;
+>     
+>     System.out.println(Arrays.toString(arr));
+>     System.out.println("Elements processed: " + counter);
+>     System.out.println("Time taken: " + elapsedTime + " ms");
+>     System.out.println();
+>   }
+>   
+>   public static int[] genetateRandomArr(int size) {
+>     Random random = new Random();
+>     int[] arr = new int[size];
+>     
+>     for (int i=0; i<arr.length; i++) {
+>       arr[i] = random.nextInt(size);
+>     }
+>     
+>     return arr;
+>   }
+> }
+> ```
+
+
+
+>[!important]- Loop Invariant
 > At the end of iteration $j$, the **smallest** $j$ items are correctly sorted in the first $j$ positions of the array.
 
 >[!note]- Time Complexity
@@ -170,7 +240,73 @@ description: Trying to sort my life out.
 ---
 - The idea here is that at each iteration $j$, we are are going to **insert** the element at the $j$ position to the prefix [[Array]] that is $j-1$ long, such that the new prefix array which is $j$ long remains sorted
 
->[!important] Loop Invariant
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/427bx8c58?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
+ ></iframe>
+ </div>
+
+>[!help]- Is the code editor above not showing the correct source code?
+> Here is a backup, please report the issue [here](https://github.com/xy-241/CS-Notes/issues) or comment down below, so I can look into the issue. Thanks :)
+> ```bash
+> import java.util.*;
+> 
+> public class InsertionSort {
+>   public static void main(String[] args) {
+>     int[] arr = genetateRandomArr(10);
+>     
+>     System.out.println("Original Array");
+>     System.out.println(Arrays.toString(arr));
+>     System.out.println();
+>     
+>     insertionSort(arr);
+>   }
+>   
+>   public static void insertionSort(int[] arr) {
+>     long startTime = System.currentTimeMillis();
+>     
+>     int n = arr.length;
+>     int counter = 0;
+>     
+>     for (int i=1; i<n; i++) {
+>       int insertionPt = i;
+>       while (insertionPt > 0 && arr[insertionPt] < arr[insertionPt-1]) {
+>         counter++;
+>         try { Thread.sleep(1); } catch (InterruptedException e) {}
+>         
+>         int temp = arr[insertionPt];
+>         arr[insertionPt] = arr[insertionPt-1];
+>         arr[insertionPt-1] = temp;
+>         insertionPt--;
+>       }
+>     }
+>     
+>     long endTime = System.currentTimeMillis();
+>     long elapsedTime = endTime - startTime;
+>     
+>     System.out.println(Arrays.toString(arr));
+>     System.out.println("Elements processed: " + counter);
+>     System.out.println("Time taken: " + elapsedTime + " ms");
+>     System.out.println();
+>   }
+>   
+>   public static int[] genetateRandomArr(int size) {
+>     Random random = new Random();
+>     int[] arr = new int[size];
+>     
+>     for (int i=0; i<arr.length; i++) {
+>       arr[i] = random.nextInt(size);
+>     }
+>     
+>     return arr;
+>   }
+> }
+> ```
+
+
+>[!important]- Loop Invariant
 > At the end of iteration $j$, the first $j$ items in the array are in **sorted order**.
 
 >[!note]- Time Complexity
@@ -213,7 +349,7 @@ description: Trying to sort my life out.
 >[!caution] Slow on small arrays!
 > The allocation of different arrays are scattered in the [[Main Memory]]. Merge sort has a space complexity of $O(n)$ with different temporary arrays at each merge layer. Working on multiple arrays means we sacrifice the performance gain from [[CPU Cache#Cache Locality]]. 
 > 
-> The [[Recursion]] nature of the algorithm comes with extra overhead too. Recursion is also less predicable, thus negative impact on [[Branch Prediction]].
+> The [[Recursion]] nature of the algorithm comes with extra overhead too. Recursion is also less predicable, thus impact the [[Branch Prediction]] negatively.
 > 
 > When the array is small, such hardware level negative impact outweighs the performance gains from the better time complexity.
 
