@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-03-15T20:30:47+08:00
+Last Date: 2024-03-16T19:06:08+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -325,6 +325,106 @@ import java.util.*;
 ![[merge_sort.png|500]]
 - A [[#Divide-and-Conquer Sorting]]
 
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/427c29ucp?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
+ ></iframe>
+ </div>
+
+>[!help]- Is the code editor above not showing the correct source code?
+> Here is a backup, please report the issue [here](https://github.com/xy-241/CS-Notes/issues) or comment down below, so I can look into the issue. Thanks :)
+> ```java
+> import java.util.*;
+> 
+> public class MergeSort {
+>   static int counter = 0;
+>   public static void main(String[] args) {
+>     int[] arr = genetateRandomArr(32);
+>     
+>     System.out.println("Original Array");
+>     System.out.println(Arrays.toString(arr));
+>     System.out.println();
+>     
+>     long startTime = System.currentTimeMillis();
+>     int[] res = mergeSort(arr, 0, arr.length-1);
+>     long endTime = System.currentTimeMillis();
+>     long elapsedTime = endTime - startTime;
+>     
+>     System.out.println(Arrays.toString(res));
+>     System.out.println("Elements processed: " + counter);
+>     System.out.println("Time taken: " + elapsedTime + " ms");
+>     System.out.println();
+>   }
+>   
+>   public static int[] mergeSort(int[] arr, int start, int end) {
+>     if (start == end) return new int[]{arr[start]};
+>     
+>     int mid = (int)((end-start) * 0.5) + start;
+>     int[] leftSubSorted = mergeSort(arr, start, mid);
+>     int[] rightSubSorted = mergeSort(arr, mid+1, end);
+>     
+>     return merge(leftSubSorted, rightSubSorted);
+>   }
+>   
+>   public static int[] merge(int[] leftArr, int[] rightArr) {
+>     int[] merged = new int[leftArr.length + rightArr.length];
+> 
+>     int leftArrPt = 0;
+>     int rightArrPt = 0;
+>     int mergedPt = 0;
+>     
+>     // System.out.print("Before merge: ");
+>     // System.out.println(Arrays.toString(merged));
+>     while (leftArrPt < leftArr.length && rightArrPt < rightArr.length) {
+>       try { Thread.sleep(1); } catch (InterruptedException e) {}
+>       counter++;
+>       int leftElement = leftArr[leftArrPt];
+>       int rightElement = rightArr[rightArrPt];
+>       
+>       if (leftElement == rightElement) {
+>         merged[mergedPt++] = leftElement;
+>         leftArrPt++;
+>       } else if (leftElement < rightElement) {
+>         merged[mergedPt++] = leftElement;
+>         leftArrPt++;
+>       }else {
+>         merged[mergedPt++] = rightElement;
+>         rightArrPt++;
+>       }
+>     }
+>     
+>     for (int i=leftArrPt; i<leftArr.length; i++) {
+>       try { Thread.sleep(1); } catch (InterruptedException e) {}
+>       counter++;
+>       merged[mergedPt++] = leftArr[i];
+>     } 
+>     for (int i=rightArrPt; i<rightArr.length; i++) {
+>       try { Thread.sleep(1); } catch (InterruptedException e) {}
+>       counter++;
+>       merged[mergedPt++] = rightArr[i];
+>     }
+>     
+>     // System.out.print("After merge: ");
+>     // System.out.println(Arrays.toString(merged));
+>     return merged;
+>   }
+>   
+>   public static int[] genetateRandomArr(int size) {
+>     Random random = new Random();
+>     int[] arr = new int[size];
+>     
+>     for (int i=0; i<arr.length; i++) {
+>       arr[i] = random.nextInt(size);
+>     }
+>     
+>     return arr;
+>   }
+> }
+> ```
+
+
 >[!note]- Time Complexity
 > **Best-case**
 > - $O(nlogn)$, already sorted, a full divide-and-conquer process is needed to have the confidence to claim the array is sorted
@@ -346,12 +446,12 @@ import java.util.*;
 > 
 > Guess the time complexity and verify it with the reoccurrence we obtained. 
 
->[!caution] Slow on small arrays!
-> The allocation of different arrays are scattered in the [[Main Memory]]. Merge sort has a space complexity of $O(n)$ with different temporary arrays at each merge layer. Working on multiple arrays means we sacrifice the performance gain from [[CPU Cache#Cache Locality]]. 
+>[!caution]- Slow on small arrays!
+> The allocation of different arrays are scattered in the [[Main Memory]]. Merge sort has a **space complexity of $O(n)$** with different temporary arrays at each merge layer. Working on multiple arrays means we sacrifice the performance gain from [[CPU Cache#Cache Locality]]. 
 > 
 > The [[Recursion]] nature of the algorithm comes with extra overhead too. Recursion is also less predicable, thus impact the [[Branch Prediction]] negatively.
 > 
 > When the array is small, such hardware level negative impact outweighs the performance gains from the better time complexity.
 
->[!caution] Slow on almost sorted array!
+>[!caution]- Slow on almost sorted array!
 > Merge sort's performance is still $O(nlogn)$ when the array is almost sorted, because it needs to perform the full divide-and-conquer process regardless how chaotic the given array is. While [[#Bubble Sort]] and [[#Insertion Sort]] have a time complexity of $O(n)$.

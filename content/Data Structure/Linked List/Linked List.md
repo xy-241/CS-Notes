@@ -5,54 +5,49 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - dsa
+  - java
 Creation Date: 2023-08-05T14:45:43+08:00
-Last Date: 2024-01-01T21:02:53+08:00
+Last Date: 2024-03-16T19:17:53+08:00
 References: 
 ---
 ## Abstract
 ---
-- A collection of elements of the same [[Datatype]]
-- [[Data Structure#Linear]] and elements stored [[Data Structure#Discrete Memory]] because each node contains a [[Memory Address]] to the next node
-- Node Definition
-```java
-public class Node {
-    int val;
-    Node next;
-    
-    Node(){}
-    Node(int val) {
-        this.val = val;
-    }
-}
-```
+- A [[Data Structure#Linear]] collection of elements of the same [[Datatype]] that stored in [[Data Structure#Discrete Memory]] because each node contains a [[Memory Address]] to the next node
+
+>[!code]- Linked list node implemented with Java
+> ```java
+> public class Node {
+> 	int val;
+>     Node next;
+>     
+>     Node(){}
+>     Node(int val) this.val = val;
+> }
+> ```
 
 >[!note] 3 types
 >1. [[Single Linked List]]
 >2. [[Double Linked List]]
 >3. [[Circular Linked List]]
 
-## Tips
----
-### Virtual Node
-- Make handling edge cases & reverting linked list easier 
-- O(1) to access either the head node or the tail node
+>[!tip] Virtual Node
+> O(1) to access either the head node or the tail node, make handling edge cases & reverting linked list easier 
 
-### Print Out Linked List
-```java
-public void printLinkedList(ListNode node) {
-	ListNode a = node;
-	while (node!=null) {
-		System.out.printf("%d ", node.val);
-		node = node.next;
-	}
-	System.out.println();
-}
-```
+>[!code] Print Out Linked List
+> ```java
+> public void printLinkedList(ListNode node) {
+> 	ListNode a = node;
+> 	while (node!=null) {
+> 		System.out.printf("%d ", node.val);
+> 		node = node.next;
+> 	}
+> 	System.out.println();
+> }
+> ```
 
 
-### Draw It Out
-- When unsure about the relationship, drawing it out the nodes & pointers!
-- It really makes the visualization of the manipulation easy
+>[!tip] Draw It Out
+> When unsure about the relationship, drawing it out the nodes & pointers! It really makes the visualization of the manipulation easy
 
 
 
