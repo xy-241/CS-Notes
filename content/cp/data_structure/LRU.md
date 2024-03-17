@@ -23,14 +23,14 @@ Creation Date: 2023-02-02T13:56:00
 Last Date: 2024-01-01T21:29:41+08:00
 tags:
   - cp
-draft:
+draft: 
 ---
 [Original Problem](https://leetcode.cn/problems/lru-cache/)
 
 [Past Solutions](https://www.notion.so/xy241-dsa/LRU-Cache-7cef86ef560f4e768a24b9043256ae96?pvs=4)
 ## Idea
 ---
-- The idea here is to use a [[Hash Map]] to keep a mapping between the key and the value. And we use a [[Double Linked List]] to keep track the least recently used key-value pair and most recently used key-value pair in constant time
+- The idea here is to use a [[Hash Map]] to keep a mapping between the key and the value. And we use a [[Linked List#Double Linked List]] to keep track the least recently used key-value pair and most recently used key-value pair in constant time
 - The value in the hash map is mapped to a node inside the double linked list, so we are able to locate the least recently used key-value pair in linear time
 - We also make use of [[Linked List#Virtual Node]] to make the linked list operations easy to manage. Refer to [[Linked List#Tips|Linked List Tips]] to help with the solution implementation
 
@@ -143,7 +143,7 @@ class LRUCache {
 
 ## Personal Reflection
 ---
-- **Why it takes so long to solve:** Rusty with [[Double Linked List]] implementation in [[Java]]
+- **Why it takes so long to solve:** Rusty with [[Linked List#Double Linked List]] implementation in [[Java]]
 - **What you could have done better:** Sketch out the things to note. For example, the place to update the [[Hash Map]] and the double linked list
 - **What you missed:** *NIL*
 - **Ideas you've seen before:** hashmap, double linked list

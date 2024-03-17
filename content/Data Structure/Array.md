@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-08T20:10:00
-Last Date: 2024-03-12T12:20:26+08:00
+Last Date: 2024-03-17T15:13:20+08:00
 References: 
 ---
 ## Abstract
@@ -14,6 +14,9 @@ References:
 - A [[Data Structure#Linear]] collection of elements of the same [[Datatype]] that are stored in [[Data Structure#Continuous Memory]]. The next node is obtained by adding a **constant value** to the [[Memory Address]] of current node
 - Can be used to implement [[Hash Map]] when keys are fixed
 - [Leetcode questions](https://github.com/youngyangyang04/leetcode-master#%E6%95%B0%E7%BB%84)
+
+>[!success] Cache Hit
+> Elements of array are stored in [[Main Memory]] in a compact manner, thus making great use of [[CPU Cache#Cache Locality]]
 
 >[!caution] Fixed Size
 > If we want to expand, we have to create another bigger array & **copy all the elements** to the new array which is very time consuming 
@@ -23,7 +26,7 @@ References:
 
 ### Time Complexity 
 >[!note]- Search
-> $O(1)$ to search for a value.
+> $O(n)$ to search for a value.
 
 >[!note]- Indexing
 > It is $O(1)$  to index any elements in an array. The indexing formula is `elementAddr = firtstElementAddr + elementLength * elementIndex`, `elementIndex` is $0$ when we try to access the first element
@@ -36,7 +39,7 @@ References:
 > - For delete, we have move all element next to the deleted element one step to left
 
 >[!info]- Performance comparison with Linked List when going through all elements
-> Array is much faster if there is [[CPU Cache]], otherwise it will be slightly slower. Because Array has to calculate the address of the next element, while [[Linked List]] is already calculated.
+> Array is much faster if there is [[CPU Cache]], otherwise it may be slightly slower. Because Array has to calculate the address of the next element, while [[Linked List]] is already calculated.
 > 
 > The reason why array is faster with CPU Cache is because array is stored in a [[Data Structure#Continuous Memory]] manner. Thus array is able to take advantage of [[CPU Cache#Cache Locality]]
 
@@ -46,11 +49,12 @@ References:
 
 ## Dynamic Array
 ---
+![[dyanmic_array_memory_allocation.png|500]]
 - Also known as **List**
 - Resizable [[Array]], achieved by building an [[Abstraction (抽象)]] above the Array
 
 
->[!tip] Convenient
+>[!success] Convenient
 > Developers don't need to re-write battle-tested logic of re-sizeing Array etc, battery-packed with best practices.
 
 >[!attention] More Resource Intense
@@ -67,3 +71,7 @@ References:
 
 >[!info] Rear Index
 > A variable to keep track the index of the slot after the last element of the circular array, Can be obtained with `frontIndex + arraySize`.
+
+## References
+---
+- [HOW ARE DYNAMIC SIZE LISTS STORED IN MEMORY? - YouTube](https://youtu.be/xFMXIgvlgcY?si=0DE9NobYKB97fFnc)

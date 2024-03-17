@@ -50,7 +50,7 @@ References:
 - Can use [[Array#Dynamic Array]], then the expansion is handled automatically
 
 ### Implementation with Linked List
-- Implementation with [[Single Linked List]]
+- Implementation with [[Linked List#Single Linked List]]
 - [Visual](https://www.hello-algo.com/chapter_stack_and_queue/stack/#1)
 - push(), pop() & peek() from the head node
 

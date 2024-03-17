@@ -31,7 +31,7 @@ References:
 > - push() at the rear index
 > - pop() & peek() at the head index
 
->[!note] Implementation with [[Single Linked List]]
+>[!note] Implementation with [[Linked List#Single Linked List]]
 >- [Visual](https://www.hello-algo.com/chapter_stack_and_queue/queue/#1)
 >- push() from tail node
 >- pop() & peek() from the head node

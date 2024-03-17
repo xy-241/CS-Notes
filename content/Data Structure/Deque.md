@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-12-11T20:43:00+08:00
-Last Date: 2024-03-12T12:18:59+08:00
+Last Date: 2024-03-17T14:26:05+08:00
 References: 
 ---
 ## Basics
@@ -35,9 +35,9 @@ References:
 >- push() at the rear index
 >- pop() & peek() at the head index%%
 
->[!note] Implementation with [[Double Linked List]]
+>[!note] Implementation with Double Linked List
 >- [Visual](https://www.hello-algo.com/chapter_stack_and_queue/deque/#1)
->- We need [[Double Linked List]] in order to have the ability to pollLast() - delete from the rear. With [[Single Linked List]], we are unable to get the previous node, which means we cant update rear when we delete from the backl
+>- We need [[Linked List#Double Linked List]] in order to have the ability to pollLast() - delete from the rear. With [[Linked List#Single Linked List]], we are unable to get the previous node, which means we cant update rear when we delete from the backl
 
 ### 2 implementation comparison
 - Similar to [[Stack#2 implementation comparison| Stack implementation comparison]]
