@@ -7,7 +7,7 @@ tags:
   - OS
   - go
 Creation Date: 2023-08-16T23:11:00
-Last Date: 2024-03-13T12:38:23+08:00
+Last Date: 2024-03-16T20:33:41+08:00
 References: 
 ---
 ## Abstract
@@ -52,7 +52,7 @@ References:
 ## User Thread Library
 ---
 ### Golang Goroutines
-- [[User Thread]] managed by the Go runtime rather than directly to [[Kernel Thread]]. This design decision allows goroutines to be **lightweight** and **efficiently multiplexed** onto a smaller number of kernel threads
+- [[User Thread]] managed by the Go runtime. This design decision allows goroutines to be **[lightweight(2kb)](https://github.com/golang/go/blob/f296b7a6f045325a230f77e9bda1470b1270f817/src/runtime/stack.go#L72)** and **efficiently multiplexed** onto a smaller number of [[Kernel Thread]]
 - The Go runtime scheduler handles the mapping of goroutines to kernel threads, utilizing techniques like **multiplexing** and **asynchronous I/O** to optimize performance
 - Refer to [here](https://granulate.io/blog/deep-dive-into-golang-performance/) for more information
 

@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-02-20T13:04:13+08:00
+Last Date: 2024-03-17T13:59:16+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -50,10 +50,9 @@ description: Stack (automatic memory management for function variables), Heap (d
 >
 >Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details
 
->[!caution] Memory leak
->Happens when we **forget to release** data in heap memory using `free()` in the example of C
->
->This can eventually lead to the exhaustion of available [[Main Memory]], resulting in **degraded performance** or even **program crashes**
+#### Memory leak
+- Happens when we **forget to release** data in heap memory using `free()` in the example of C
+- This can eventually lead to the exhaustion of available [[Main Memory]], resulting in **degraded performance** or even **program crashes**
 ### Stack Segment
 - **Dynamically allocated region** used to store **function calls**, local variables, and temporary data etc
 - Made up of [[#Stack Frame]], follow a [[Stack]] structure

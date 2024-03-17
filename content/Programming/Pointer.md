@@ -9,7 +9,7 @@ tags:
   - c
   - java
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-01-24T17:33:25+08:00
+Last Date: 2024-03-17T18:36:02+08:00
 References: 
 draft: 
 ---
@@ -18,7 +18,7 @@ draft:
 - A variable whose value is [[Memory Address]]
 
 ### Pointee
-- The actual data that a pointer points-to inside the [[Address Space#Heap Segment]]
+- The **actual data** that a pointer points-to inside the [[Address Space#Heap Segment]]
 
 ### Pointer Dereference
 - The process of accessing [[#Pointee]] of a [[Pointer]]
@@ -32,9 +32,9 @@ draft:
 
 ## Void Pointer
 ---
-- A [[Pointer]] without type aka a pre-defined size
+- A [[Pointer]] without [[Datatype]] aka a pre-defined size
 - Used when we aren't sure what the exact size of a variable like the return type of [[malloc]]
-- We should always try to cast it to a *type* whenever it is possible
+- We should always try to cast it to a specific type whenever it is possible
 
 ## Rust
 ---
