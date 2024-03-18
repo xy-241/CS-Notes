@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-08T20:10:00
-Last Date: 2024-03-17T15:13:20+08:00
+Last Date: 2024-03-18T18:47:10+08:00
 References: 
 ---
 ## Abstract
@@ -29,7 +29,9 @@ References:
 > $O(n)$ to search for a value.
 
 >[!note]- Indexing
-> It is $O(1)$  to index any elements in an array. The indexing formula is `elementAddr = firtstElementAddr + elementLength * elementIndex`, `elementIndex` is $0$ when we try to access the first element
+> It is $O(1)$  to index any elements in an array. The indexing formula is `elementAddr = firtstElementAddr + elementLength * elementIndex`, `elementIndex` is $0$ when we try to access the first element.
+> 
+> ![[array_indexing.png]]
 
 >[!note]- Insert, Delete
 > $O(1)$ at the 2 ends of the array
@@ -37,6 +39,8 @@ References:
 > $O(n)$ in the middle of the array
 > - For insert, we have to move all the elements next to the new element one step to right
 > - For delete, we have move all element next to the deleted element one step to left
+> 
+> ![[array_delete.gif]]
 
 >[!info]- Performance comparison with Linked List when going through all elements
 > Array is much faster if there is [[CPU Cache]], otherwise it may be slightly slower. Because Array has to calculate the address of the next element, while [[Linked List]] is already calculated.
@@ -51,15 +55,24 @@ References:
 ---
 ![[dyanmic_array_memory_allocation.png|500]]
 - Also known as **List**
-- Resizable [[Array]], achieved by building an [[Abstraction (抽象)]] above the Array
+- A [[Datatype]] that contains a [[Pointer]] to the underlying [[Array]] and other metadata like the capacity of the array and the current size of the array. As shown above, the purple blocks contain the metadata of the dynamic array. The yellow blocks are the actually array that hold the elements
+
+
+>[!bigbrain] Dynamic array mechanism visualisation
+> ![[dyanamic_array_visual.gif]]
 
 
 >[!success] Convenient
 > Developers don't need to re-write battle-tested logic of re-sizeing Array etc, battery-packed with best practices.
 
->[!attention] More Resource Intense
-> We can't fine tune every Array operations because the implementation details are abstracted away. We only have a limited interface to interact with it.
+>[!success] Secure
+> With the built-in expansion mechanism and `length` metadata, we are sure new elements aren't added into [[Memory Address]] that belong to other parts of the [[Process (进程)]]. Thus, ensuring [[Memory Safety]].
 
+>[!attention] More Resource Intense
+> We can't fine tune every Array operations because the implementation details are abstracted away. We only have a limited interface to interact with it. And Dynamic array comes with metadata to support the different functionalities it offers.
+
+>[!tip] Minimise re-sizing
+> If you know how big an array you want, it is usually recommended to set it as the capacity of your dynamic array. This reduce the need of frequent **re-sizing operations** which mean fewer allocation on [[Address Space#Heap Segment]]. Thus, better performance.
 ## Circular Array
 ---
 - Connect the start and end of the [[Array]] to form a loop
