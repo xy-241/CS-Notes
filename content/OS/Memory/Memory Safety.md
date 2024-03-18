@@ -9,7 +9,7 @@ tags:
   - java
   - cpp
 Creation Date: 2024-01-13, 21:20
-Last Date: 2024-01-22T15:45:33+08:00
+Last Date: 2024-03-18T11:47:06+08:00
 References: 
 draft: 
 ---
@@ -24,10 +24,9 @@ draft:
 </br>
 
 ### Poor Memory Safety
-- [[Segmentation Fault]]
-- Malicious input to trick the program from doing unwanted things. [70% of reported security vulnerabilities](https://msrc.microsoft.com/blog/2019/07/a-proactive-approach-to-more-secure-code/) in low-level systems are caused by memory corruption. [Memory Safe Languages in Android 13 reduces vulnerabilities](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html)
-- Backdoor that some hackers are taking advantages of 
-- And many other [memory errors](https://en.wikipedia.org/wiki/Memory_safety#Types_of_memory_errors)
+- [[Segmentation Fault]] that leads to a crash in the [[Process (进程)]] or **write into other parts of the process**
+- When hackers can write into other parts of the process, they can use malicious input to trick the program from doing unwanted things. [70% of reported security vulnerabilities](https://msrc.microsoft.com/blog/2019/07/a-proactive-approach-to-more-secure-code/) in low-level systems are caused by memory corruption. [Memory Safe Languages in Android 13 reduces vulnerabilities](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html)
+- Backdoor that some hackers are taking advantages of, and many other [memory errors](https://en.wikipedia.org/wiki/Memory_safety#Types_of_memory_errors)
 
 ### Achieve Memory Safety
 **Rust**

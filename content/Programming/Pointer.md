@@ -8,17 +8,24 @@ tags:
   - rust
   - c
   - java
+  - go
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-03-17T18:36:02+08:00
+Last Date: 2024-03-18T19:30:12+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
-- A variable whose value is [[Memory Address]]
+- A [[Datatype]] whose value is [[Memory Address]], and itself is located at a memory address too
+- In the diagram below shows some [[Go]] codes, we create a pointer `var p *int32` and perform [[#Pointer Dereference]] with `*p`
+![[pointer_example.png|600]]
 
+>[!bigbrain] Pass data by pointer
+> Pass data to functions by pointer is **memory-efficient**. The data we pass into a function is basically a [[Memory Address]] to access that block of data. If we pass data into functions without pointer. We need to create an entire duplicate of data and pass it to the functions. 
+> 
+> In [[Java]], data is passed to functions by pointer by default. However in [[Go]], we need to explicity specify the pointer datatype for the function input, then we can pass data by point!
 ### Pointee
-- The **actual data** that a pointer points-to inside the [[Address Space#Heap Segment]]
+- The **actual data** that a [[Pointer]] points-to inside the [[Address Space#Heap Segment]]
 
 ### Pointer Dereference
 - The process of accessing [[#Pointee]] of a [[Pointer]]
@@ -29,6 +36,7 @@ draft:
 - [[Pointer]] that doesn't point to any memory location, basically contains a invalid [[Memory Address]]
 - In [[C]], it is represented by `0` or `nullptr`
 - In [[Java]], it is represented by `null`, [[Datatype#Custom Datatype]] can be `null`
+- In [[Go]], it is represented with `nil`
 
 ## Void Pointer
 ---
