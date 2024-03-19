@@ -8,7 +8,7 @@ tags:
   - security
   - terraform
 Creation Date: 2023-09-12T15:34:55+08:00
-Last Date: 2024-03-17T23:10:42+08:00
+Last Date: 2024-03-19T14:25:18+08:00
 References: 
 ---
 ## Abstract
@@ -30,6 +30,8 @@ References:
 
 >[!code]- Use Terraform to create a self-signed cert with a self-signed CA
 > Refer to [[#Certificate Authority (CA)]] to setup the self-signed CA first!
+> >[!attention] Not scalable
+> > We need to ensure each client trusts the self-signed root CA cert, in order to trust the certs signed by the self-signed root CA Cert. This isn't a scalable solution when the number of clients grow! A way to go round this is to use [LetsEncrypt Certificates for the LAN - YouTube](https://youtu.be/Z81jegMCrfk?si=5ndXpSYtXRJZi4Gi).
 > 
 > ```hcl
 > # Generate another private key. This one will be used
@@ -87,7 +89,8 @@ References:
 - Server will always to send the digital signature with its X.509 Certificate to client, so client can valid the digital signature with the public key of the Certificate Authority(CA) it trusts. The validation will fail if the X.509 Certificate is manipulated by hackers
 
 
->[!code]- Use Terraform to create a CA Cert
+>[!code]- Use Terraform to create a self-signed root CA Cert
+>
 > ```hcl
 > # Generate a private key so you can create a CA cert with it.
 > resource "tls_private_key" "ca" {
@@ -121,3 +124,24 @@ References:
 
 >[!code]- Show certificate info for a certificate signing request
 > `openssl req -text -noout -in <YOUR_CERTIFICATE_SIGNING_REQUEST_FILE_NAME>`
+
+### Trust Self-signed CA
+**MacOS**
+- Drag and drop the CA cert into **Keychain Access** under **System Keychain**
+- Set the trust setting of the cert to **Always Trust**
+
+**IPhone**
+- Upload the CA cert to **Files**
+- Open the CA cert to install the CA cert
+- Verify the CA cert under **VPN & Device Management**
+- Enable full trust for the CA cert under **Certificate Trust Settings**
+
+
+**Android**
+- Double click to install and trust the CA Cert
+
+
+## References
+---
+- [Certificates from Scratch - X.509 Certificates explained - YouTube](https://youtu.be/kAaIYRJoJkc?si=wAQ-Ddb1k1W811Fa)
+- [Server Certificates - Self Signed and LetsEncrypt Certificates for the LAN - YouTube](https://youtu.be/Z81jegMCrfk?si=s98O_Vv9oFQha_4h)

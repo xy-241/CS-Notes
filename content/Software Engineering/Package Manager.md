@@ -10,7 +10,7 @@ tags:
   - js
   - rust
 Creation Date: 2024-03-10, 17:29
-Last Date: 2024-03-14T21:36:29+08:00
+Last Date: 2024-03-18T20:37:56+08:00
 References: 
 draft: 
 description: 
@@ -81,6 +81,9 @@ description:
 > # Example, set a script called 'pre-commit'
 > npm pkg set scripts.pre-commit="npx prettier . --write && npx oxlint"
 > ```
+
+>[!info]- `package-lock.json`
+> When we install a package, it is recorded as `package@^1.11.10`, `1.11.10` is using [Semantic Versioning](https://semver.org/). This means if that package releases a new version, and we run `npm install`, it will grab the newer version without our notice! `package-lock.json` ensures it doesn't grab the latest version unless we explicitly ask it to do so. This ensures the dependencies we install across different collaborators are the same.
 
 ## Cargo
 ---

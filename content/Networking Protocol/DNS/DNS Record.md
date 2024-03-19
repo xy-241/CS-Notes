@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-01-17, 00:10
-Last Date: 2024-03-03T22:25:17+08:00
+Last Date: 2024-03-19T14:22:14+08:00
 References: 
 draft: 
 description: Dive into DNS records, the powerful mappings that connect hostnames to IP addresses, email servers, and more. ️ Explore A, CNAME, MX, and NS records, and learn how they keep your online experience seamless.
@@ -17,6 +17,8 @@ description: Dive into DNS records, the powerful mappings that connect hostnames
 - A mapping between a [[Hostname]] to another [[IP Address]] or Hostname
 - Each record comes with a [[TTL]]
 
+>[!bigbrain] Local DNS Record vs Public DNS Record
+> If we have the DNS Record with the same name on both a [Local DNS server](https://docs.pi-hole.net/guides/dns/unbound/) and a Public DNS server like `1.1.1.1`. The DNS record inside the local DNS server **will always be used** if your local DNS server has a record.
 
 >[!tip]- Check the status DNS propagation
 > You can check it on [DNS Checker - DNS Check Propagation Tool](https://dnschecker.org/#A/www.hello-algo.com). This is useful to see if a particular DNS record is taking effect already or not.
@@ -25,6 +27,7 @@ description: Dive into DNS records, the powerful mappings that connect hostnames
 > You can obtain the list of current and past DNS records of a given domain name at [securitytrails](https://securitytrails.com)
 > 
 > Or [DNSdumpster.com](https://dnsdumpster.com/), but the information obtained is much more limited
+
 
 ### A Record
 - Symbol is ``A``

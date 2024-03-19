@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - js
 Creation Date: 2023-11-12T18:42:00
-Last Date: 2023-12-15T20:05:05+08:00
+Last Date: 2024-03-18T20:46:54+08:00
 References: 
 ---
 ## Abstract
@@ -31,4 +31,4 @@ References:
 - Loads the entire [[#Module]]
 ### ES modules
 - Use the keyword `import {...} from ...`
-- Loads only the parts of a [[#Module]] that are needed with the help of [[Tree Shaking (摇树)]]
+- Loads only the parts of a [[#Module]] that are needed with the help of [[Code Bundling#Tree Shaking (摇树)]]

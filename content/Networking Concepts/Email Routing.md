@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-03-07, 16:38
-Last Date: 2024-03-07T17:40:13+08:00
+Last Date: 2024-03-18T20:08:42+08:00
 References: 
 draft: 
 description: 
@@ -28,6 +28,8 @@ description:
 >[!success]- Flexibility
 > We have the freedom to switch the destination email providers and use our custom domain name to receive emails without paying a fee
 
+>[!help]- Whitelist sender emails in Gmail
+> If you are routing emails to Gmail inbox, some senders may be blocked. You can refer to [here](https://support.google.com/mail/answer/6579?sjid=5108625996672587407-AP&visit_id=638462741859475398-3604221602&rd=1) to whitelist those emails.
 ### Email Routing Mechanism 
 - We set the [[DNS Record#MX Record]] of [[Hostname#Domain Name]] to point to the **Email Routing server**. So when a sender sends an email to the domain name, the email routing server is able to receive and apply the routing rules and forward to the destination email inbox if all rules are met
 
