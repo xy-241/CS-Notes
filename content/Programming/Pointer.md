@@ -10,14 +10,14 @@ tags:
   - java
   - go
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-03-18T19:30:12+08:00
+Last Date: 2024-03-18T19:36:41+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
 - A [[Datatype]] whose value is [[Memory Address]], and itself is located at a memory address too
-- In the diagram below shows some [[Go]] codes, we create a pointer `var p *int32` and perform [[#Pointer Dereference]] with `*p`
+- In the diagram below shows some [[Go]] codes, we create a pointer `var p *int32 = new(int32)` and perform [[#Pointer Dereference]] with `*p`
 ![[pointer_example.png|600]]
 
 >[!bigbrain] Pass data by pointer

@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - dsa
+  - js
 Creation Date: 2023-10-08T20:10:00
-Last Date: 2024-03-18T18:47:10+08:00
+Last Date: 2024-03-19T11:49:55+08:00
 References: 
 ---
 ## Abstract
@@ -85,6 +86,18 @@ References:
 >[!info] Rear Index
 > A variable to keep track the index of the slot after the last element of the circular array, Can be obtained with `frontIndex + arraySize`.
 
+
+## JavaScript Array
+---
+- [[Array]] in Javascript is actually a [[Hash Map]]
+![[js_array_is_hashmap.gif]]
+
+
+>[!bigbrain] Inserting a big index without the memory sacrifice
+> When inserting at a big index. We don't need allocate an array in the [[Virtual Memory]] that large. It is just another key-value pair in the hash map!
+> 
+> ![[js_array_insertion.gif]]
 ## References
 ---
+- [4.1   数组 - Hello 算法](https://www.hello-algo.com/chapter_array_and_linkedlist/array/)
 - [HOW ARE DYNAMIC SIZE LISTS STORED IN MEMORY? - YouTube](https://youtu.be/xFMXIgvlgcY?si=0DE9NobYKB97fFnc)
