@@ -6,8 +6,10 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-10-15T21:32:00
-Last Date: 2024-03-13T15:27:41+08:00
+Last Date: 2024-03-20T16:22:17+08:00
 References: 
+aliases:
+  - ../../Tools/Datadog/Datadog-ddtrace
 ---
 ## Abstract
 ---
