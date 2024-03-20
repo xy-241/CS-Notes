@@ -7,14 +7,14 @@ tags:
   - OS
   - go
 Creation Date: 2023-08-16T23:11:00
-Last Date: 2024-03-16T20:33:41+08:00
+Last Date: 2024-03-20T13:12:05+08:00
 References: 
 ---
 ## Abstract
 ---
 ![[thread_implementation_in_user_space.png|300]]
 
-- [[Thread]] is managed in the [[User Space]] entirely. The thread is running on top of a [[#Runtime System]]. An [[#User Thread Library]] is used to implement the thread
+- [[Thread]] is managed in the [[User Space]] entirely. The thread is running on top of a [[#Runtime System]]. An User Thread Library like [[Goroutines]] is used to implement the thread
 - Each process needs its own private [[Thread#Thread Table]], unlike [thread table managed by kernel for kernel thread](thread_implementation_in_kernel_space.png)
 - The [[Kernel]] knows nothing about them. As far as the kernel is concerned, it is managing single-threaded [[Process (进程)]]
 
@@ -49,11 +49,6 @@ References:
 - Instead of relying on the [[Kernel]] for every thread management decision, the [[#Runtime System]]  is responsible for scheduling [[Thread]]
 - Mitigates inefficiency from Kernel
 
-## User Thread Library
----
-### Golang Goroutines
-- [[User Thread]] managed by the Go runtime. This design decision allows goroutines to be **[lightweight(2kb)](https://github.com/golang/go/blob/f296b7a6f045325a230f77e9bda1470b1270f817/src/runtime/stack.go#L72)** and **efficiently multiplexed** onto a smaller number of [[Kernel Thread]]
-- The Go runtime scheduler handles the mapping of goroutines to kernel threads, utilizing techniques like **multiplexing** and **asynchronous I/O** to optimize performance
-- Refer to [here](https://granulate.io/blog/deep-dive-into-golang-performance/) for more information
+
 
 
