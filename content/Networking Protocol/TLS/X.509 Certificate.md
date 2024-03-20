@@ -8,7 +8,7 @@ tags:
   - security
   - terraform
 Creation Date: 2023-09-12T15:34:55+08:00
-Last Date: 2024-03-19T14:25:18+08:00
+Last Date: 2024-03-19T20:11:23+08:00
 References: 
 ---
 ## Abstract
@@ -31,6 +31,7 @@ References:
 >[!code]- Use Terraform to create a self-signed cert with a self-signed CA
 > Refer to [[#Certificate Authority (CA)]] to setup the self-signed CA first!
 > >[!attention] Not scalable
+> >
 > > We need to ensure each client trusts the self-signed root CA cert, in order to trust the certs signed by the self-signed root CA Cert. This isn't a scalable solution when the number of clients grow! A way to go round this is to use [LetsEncrypt Certificates for the LAN - YouTube](https://youtu.be/Z81jegMCrfk?si=5ndXpSYtXRJZi4Gi).
 > 
 > ```hcl

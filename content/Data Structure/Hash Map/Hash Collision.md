@@ -8,7 +8,7 @@ tags:
   - java
   - python
 Creation Date: 2023-11-15T17:26:00
-Last Date: 2024-03-03T15:24:34+08:00
+Last Date: 2024-03-20T10:12:10+08:00
 References: 
 description: Strategies for handling hash collisions, including hash map expansion, load factor, and resolution methods like separate chaining and open addressing
 ---
@@ -61,9 +61,9 @@ description: Strategies for handling hash collisions, including hash map expansi
 > Each key-value pair node needs space to **store** a **pointer** to point to the next node
 
 >[!caution] Linear Efficient
-> Operations like searching, insertion, and deletion takes $O(n)$ time on [[Linked List]]
+> Operation like searching, insertion, and deletion takes $O(n)$ time on [[Linked List]].
 > 
-> We can converted the long Linked List to [[AVL Tree]] or [[Red Black Tree]] to optimise the search efficiency from $O(n)$ to $O(logn)$
+> We can converted the long Linked List to [[AVL Tree]] or [[Red Black Tree]] to optimise the search efficiency from $O(n)$ to $O(logn)$.
 
 >[!example]- Implementation in Programming Languages
 > **Java**

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-03-16T19:06:08+08:00
+Last Date: 2024-03-20T09:58:50+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -323,7 +323,7 @@ import java.util.*;
 ## Merge Sort
 ----
 ![[merge_sort.png|500]]
-- A [[#Divide-and-Conquer Sorting]]
+- A [[#Divide-and-Conquer Sorting]] that **NOT [[#In-Place]]**
 
 <div class="onecompilerCode-wrapper">
 <iframe
@@ -425,6 +425,7 @@ import java.util.*;
 > ```
 
 
+
 >[!note]- Time Complexity
 > **Best-case**
 > - $O(nlogn)$, already sorted, a full divide-and-conquer process is needed to have the confidence to claim the array is sorted
@@ -445,6 +446,11 @@ import java.util.*;
 > ![[mergeSort_time_complexity_with_induction.png|500]]
 > 
 > Guess the time complexity and verify it with the reoccurrence we obtained. 
+
+>[!success] Handle large dataset well
+> The performance gains on large dataset with $O(nlogn)$ time complexity is huge.
+> 
+> And we can perform sorting on subset of the dataset at a time. For example, if our dataset is 10GB, and we need to load the data into the RAM to perform the sorting, but there is only 2GB RAM. With merge sort, we are able to load in 2GB at a time to perform sorting, and eventually sort the dataset.
 
 >[!caution]- Slow on small arrays!
 > The allocation of different arrays are scattered in the [[Main Memory]]. Merge sort has a **space complexity of $O(n)$** with different temporary arrays at each merge layer. Working on multiple arrays means we sacrifice the performance gain from [[CPU Cache#Cache Locality]]. 

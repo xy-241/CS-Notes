@@ -10,7 +10,7 @@ tags:
   - js
   - rust
 Creation Date: 2024-03-10, 17:29
-Last Date: 2024-03-18T20:37:56+08:00
+Last Date: 2024-03-19T20:45:52+08:00
 References: 
 draft: 
 description: 
@@ -110,3 +110,11 @@ description:
 > sudo pacman -U package-name.pkg.tar.xz
 > ```
 
+## Download from Github
+---
+- Github has many useful tools, but some of them aren't part of [[Package Manager]] we can use on our system. We can still install the executables without compiling ourselves if they offer [releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+
+>[!code] Install executables from Github releases page
+> Install the executable using `wget -qO package.tbz <GITHUB_PROJECT_URL>/releases/latest/download/<ASSET_FILENAME>`.
+> 
+> Then we can decompress the file with `tar xf <ASSET_FILENAME>`, go into the decompressed folder and move the executable to `/usr/local/bin`. And now we should be able to call the executable from the [[Terminal]]!

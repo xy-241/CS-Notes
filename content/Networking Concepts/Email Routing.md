@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-03-07, 16:38
-Last Date: 2024-03-18T20:08:42+08:00
+Last Date: 2024-03-20T12:58:56+08:00
 References: 
 draft: 
 description: 
@@ -36,6 +36,7 @@ description:
 
 ## Cloudflare Email Routing
 ---
+![[cloudflare_emal_routing.png|300]]
 - Cloudflare's offering for [[Email Routing]]. Refer to [Cloudflare Email Routing docs](https://developers.cloudflare.com/email-routing/get-started/enable-email-routing/) for setup guide
 
 >[!success] Free!!!
