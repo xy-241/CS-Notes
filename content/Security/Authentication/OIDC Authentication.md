@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - security
 Creation Date: 2023-09-07T10:40:04+08:00
-Last Date: 2024-03-14T13:17:24+08:00
+Last Date: 2024-03-21T16:58:17+08:00
 References: 
 ---
 ## Abstract
@@ -23,7 +23,7 @@ References:
 ### ID Token
 - A [[JWT]]
 - Used for [[Authentication]], NOT [[Authorisation]]
-- Contains [[JWT#Claims]] like ``aud`` (Audience Property) which defines which [[OAuth 2.0#Client]] is meant to be the final recipient of the ID Token
+- Contains [[JWT#JWT Claims]] like ``aud`` (Audience Property) which defines which [[OAuth 2.0#Client]] is meant to be the final recipient of the ID Token
 - Contain [[OAuth 2.0#Resource Owner (Identity)]] info like email and username which can be used by Client to populate the application UI
 
 ### Identity Provider

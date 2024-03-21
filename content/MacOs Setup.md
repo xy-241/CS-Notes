@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-11T21:36:56+08:00
+Last Date: 2024-03-20T17:04:52+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -103,7 +103,7 @@ brew install gh
 gh auth login # Painless Github CLi Auth
 
 ```
-
+- [ ] [[Bandwidth#Bandwhich]]
 
 
 ## Virtualisation Tools
