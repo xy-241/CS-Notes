@@ -29,6 +29,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
     if (text) {
       var modifiedSegment: string = ""
       var createdSegment: string = ""
+      const fileRelativePath = fileData.filePath
       //const segments: (string | JSX.Element)[] = []
 
       if (fileData.dates) {
@@ -47,6 +48,7 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         cfg.defaultDateType = cfgDefaultDataType
       }
 
+
       // Display reading time if enabled
       var readingTimeStr: string = ""
       if (options.showReadingTime) {
@@ -60,14 +62,20 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
       return (
         <p class={classNames(displayClass, "content-meta")}>
-          Created: &nbsp;{createdSegment} <br /> Modified: {modifiedSegment} <br /> {readingTimeStr}
+          Created: &nbsp;{createdSegment} <br /> Modified: {modifiedSegment} <br /> {readingTimeStr} <br /> 
+          🌟 <a href={`https://github.com/xy-241/CS-Notes/blame/v4/${fileRelativePath}`} class={classNames(displayClass, "external")} target={"_blank"} style={"font-weight:600"}>
+            Edit This Page!<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg>
+          </a> &nbsp;
+          🗓️ <a href={`https://github.com/xy-241/CS-Notes/commits/v4/${fileRelativePath}`} class={classNames(displayClass, "external")} target={"_blank"} style={"font-weight:600"}>
+            History<svg class="external-icon" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg>
+          </a>
         </p>
       )
 
       /*const segmentsElements = segments.map((segment) => <span>{segment}</span>)
       return (
         <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
-          {segmentsElements}
+          {segmentsElements}
         </p>
       )*/
     } else {
