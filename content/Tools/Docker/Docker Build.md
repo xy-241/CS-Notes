@@ -8,6 +8,8 @@ tags:
 Creation Date: 2023-12-07, 16:09
 Last Date: 2024-03-06T15:02:23+08:00
 References: 
+aliases:
+  - ../../Tools/Docker/Docker-Build-Cache
 ---
 ## Abstract
 ---
