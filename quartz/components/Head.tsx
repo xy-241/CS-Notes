@@ -46,6 +46,17 @@ export default (() => {
           `,
         }}
         />
+
+        <script async src="https://rum.cronitor.io/script.js"></script>
+        <script
+        dangerouslySetInnerHTML={{
+            __html: `
+              window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+              cronitor('config', { clientKey: 'fe62c9349bb06b60dd67e689bebb2838' });`
+          }}
+        >
+        </script>
+
         <title>{title}</title>
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
