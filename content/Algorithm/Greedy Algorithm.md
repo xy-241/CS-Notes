@@ -6,16 +6,11 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-09T09:10:00
-Last Date: 2024-01-07T17:14:12+08:00
+Last Date: 2024-03-22T17:00:22+08:00
 References: 
 ---
 ## Abstract
 ---
-- Used to solve [[Optimisation Problem]]
-- Usually better performance than [[Backtracking]] & [[Dynamic Programming]]
-- Think about what is the [[#Local Optimal Solution]]. If it feels with the current stage optimal solution can form the global optimal solution, can give a try of the greedy approach 
-- Follow pre-defined procedures for each stage
-
 >[!quote]
 >- 向日葵朝着太阳转动， 时刻都在寻求当前汲取最大养分的可能。 
 >- 最优子结构就是追随太阳最高效的移动轨迹。
@@ -23,23 +18,30 @@ References:
 >- 贪心策略在一轮轮的简单选择中，逐步导向最佳的答案。
 
 
-## When to use Greedy
----
-### Guaranteed to get the Global Optimal Solution
-- When we can't find an *counter-example* with the greedy approach 
-### Sub-optimal solution is good enough 
-- When finding [[#Global Optimal Solution]] takes too much effort & a Sub-optimal solution gets the job done
+- Solves [[Optimisation Problem]]
+- Usually better performance than [[Backtracking]] & [[Dynamic Programming]]
+- Think about what is the [[#Local Optimal Solution]]. If it feels with the current stage optimal solution can form the global optimal solution, can give a try of the greedy approach 
+- Follow pre-defined procedures for each stage
 
-## Comparison with Dynamic Programming
----
-- Both rely on [[Dynamic Programming#Optimal Substructure (最优子结构)]]
-- However, greedy
-	- Find a locally optimal solution at each step without the need to consider decisions made previously
-	- [[Dynamic Programming]] is determined to find *global optimal*
-	- May or may not find the optimal solution
-	- Often simple and efficient
 
-## Leetcode Tips
+>[!bigbrain] When greedy shines
+> **Guaranteed to get the Global Optimal Solution**
+> - When we can't find an **counter-example** with the greedy approach 
+> 
+> **Sub-optimal solution is good enough**
+> - When finding [[#Global Optimal Solution]] takes too much effort & a Sub-optimal solution gets the job done
+
+>[!bigbrain] Comparison with Dynamic Programming
+> Both rely on [[Dynamic Programming#Optimal Substructure (最优子结构)]]. However greedy
+> 
+> - Find a locally optimal solution at each step without the need to consider decisions made previously
+> - [[Dynamic Programming]] is determined to find **global optimal**
+> - May or may not find the optimal solution
+> - Often simple and efficient
+
+
+
+## Tips to Solve Greedy Problems
 ---
 ### Greedy at different stages
 - We can use [[#Greedy Loop]] more than once in a problem

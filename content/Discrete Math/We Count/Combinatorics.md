@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-20, 15:49
-Last Date: 2024-02-23T11:22:59+08:00
+Last Date: 2024-03-22T16:08:51+08:00
 References: 
 draft: 
 description: 
@@ -20,4 +20,4 @@ aliases:
 - Usually, the goal is to find a clever way to **count the combinations** efficiently without **generating each combination** separately
 
 >[!tip] Common Problem Solving Approach
-> A combinatorial problem can often be solved using a [[Recursion#Recursion Function]]
+> A combinatorial problem can often be solved using a [[Recursion#Recurrence Function]].
