@@ -7,7 +7,7 @@ tags:
   - dsa
   - java
 Creation Date: 2023-08-05T14:45:43+08:00
-Last Date: 2024-03-18T18:52:31+08:00
+Last Date: 2024-03-23T21:30:31+08:00
 References: 
 ---
 ## Abstract
@@ -77,7 +77,7 @@ References:
 > 
 >>[!attention]
 >> 
->> We need to index the node before we can perform insertion and deletion. And it takes $O(n)$ for indexing. So generally, insertion and deletion in linked list results in $O(n)$. Unless the operation is performed at the head node or tail node of the linked list.
+>> We need to index the node before we can perform insertion and deletion. And it takes $O(n)$ for indexing. So generally, insertion and deletion in linked list results in $O(n)$. Unless the operation is performed at the head node or tail node of the linked list. It is recommended to use [[Array]] by default unless there are reasons and measurements that show using [[Linked List]] is better, refer to [Are lists evil? -- Bjarne Stroustrup : Standard C++](https://isocpp.org/blog/2014/06/stroustrup-lists) for more details.
 
 
 ### Space Complexity 
