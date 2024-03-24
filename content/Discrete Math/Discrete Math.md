@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-29T20:32:00
-Last Date: 2024-02-23T11:10:48+08:00
+Last Date: 2024-03-24T15:42:28+08:00
 References: 
 ---
 ## Abstract
@@ -20,11 +20,5 @@ References:
 - [[Combinatorics]]
 
 
-
-## Terminologies 
----
-### Number Representation Symbols
-- $\mathbb{R}$ - All real number (-1, pi, 4.5)
-- $\mathbb{C}$ - All complex number (9.1i)
 
 
