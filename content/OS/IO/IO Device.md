@@ -9,7 +9,7 @@ tags:
   - java
   - cpp
 Creation Date: 2023-07-14T20:53:45+08:00
-Last Date: 2024-02-08T13:08:17+08:00
+Last Date: 2024-03-25T20:39:47+08:00
 References: 
 ---
 ## Abstract
@@ -37,9 +37,13 @@ read -p "Enter your input here: " variable
 ```
 
 
- ## Terminologies
+## Terminologies
 ---
 ### Plug and Play
-- [[OS]] automatically collect information about the [[IO Device]]
+- [[Kernel]] automatically collect information about the [[IO Device]]
 - Centrally assign **interrupt level** & **IO Addresses**
 - Tell each IO device what its numbers are
+
+### IO Operation
+![[io_operation.png|500]]
+- The process of [[CPU]] communicating with the outside world. This can include interactions with **humans**, other **computers**, or **peripheral devices** as shown above. CPU is **only involved** in **initiating** the operation and **processing** the **results of the operation**!!!
