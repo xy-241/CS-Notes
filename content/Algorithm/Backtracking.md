@@ -59,7 +59,7 @@ if (i>0 && nums[i-1]==nums[i] && visited[i-1]==false) continue;
 ## Leetcode Questions
 ---
 >[!important]
->- For [[#Combination]] & [[#Partition (分割)]], [[#Solution (解)]] is obtained by collecting the [[#State (状态)]] at the [[Binary Tree (二叉树)#Leaf Node | Leaf Node]]
+>- For [[#Combination]] & [[#Partition (分割)]], [[#Solution (解)]] is obtained by collecting the [[#State (状态)]] at the [[Tree#Leaf Node| Leaf Node]]
 >- For [[#Subset (子集)]], [[#Solution (解)]] is obtained by collecting the [[#State (状态)]] at all nodes
 ### [[Combination]]
 #### Single Set

@@ -26,13 +26,13 @@ References:
 - **Pros:** Easy to manipulate using programming language
 
 ### Adjacency Set
-- A collection of all [[Binary Tree (二叉树)#Edge]] 
+- A collection of all [[Tree#Edge]] 
 
 
 ## Terminologies
 ---
 ### Weighted Graph (加权图)
-- [[Binary Tree (二叉树)#Edge |Edge]] has a value
+- [[Tree#Edge|Edge]] has a value
 ### Directed Graph
 - Can be used to represent [[Relation]] which only involves one [[Set]]  
 

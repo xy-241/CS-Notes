@@ -6,15 +6,16 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-03T17:41:00
-Last Date: 2023-12-14T20:07:51+08:00
+Last Date: 2024-03-26T11:33:05+08:00
 ---
 ## Abstract
 ---
-- Nodes have value attached to it
-- If the left sub-tree isn't empty, all nodes on that sub-tree is smaller than the node value
-- If the right sub-tree isn't empty, all nodes on that sub-tree is bigger than the node value
-- Its left sub-tree and right sub-tree are also binary search tree (二叉搜索树)
-![[binary_search_tree.png]]
+![[binary_search_tree.png|500]]
+- Nodes have **value attached** to it
+- If the **left sub-tree** isn't empty, all nodes on that sub-tree is **smaller** than the [[Tree#Root Node]] value
+- If the **right sub-tree** isn't empty, all nodes on that sub-tree is **bigger** than the [[Tree#Root Node]] value
+- Its **left sub-tree** and **right sub-tree** are also **binary search tree**
+
 
 
 ## Tips in solving Leetcode Question
@@ -29,9 +30,9 @@ Last Date: 2023-12-14T20:07:51+08:00
 ### Locate a node in log(n) time
 - Select the ``node.left`` when target value is smaller than the current node
 - Select the ``node.right`` when target value is bigger than the current node
-- This allows us to choose only one side of the [[Binary Search Tree (二叉搜索树)]] at each [[Binary Tree (二叉树)#Level]]
+- This allows us to choose only one side of the [[Binary Search Tree (二叉搜索树)]] at each [[Tree#Level]]
 ### Insert a new node in log(n) time
-- The idea is to insert the new node at a ``null`` slot to minimise modification of the [[Binary Tree (二叉树)#Edge]]
+- The idea is to insert the new node at a ``null`` slot to minimise modification of the [[Tree#Edge]]
 - The suitable ``null`` slot can be found in ``log(n)`` by go down the [[Binary Search Tree (二叉搜索树)]] using the method in [[#Locate a node in log(n) time]]
 
 

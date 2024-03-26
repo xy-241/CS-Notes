@@ -22,7 +22,7 @@ References:
 - Use [[Dynamic Programming]] to obtain the shortest distance from the given node to all other nodes -> [[Optimisation Problem]] via [[Dynamic Programming#DP Table|DP Table]]
 
 >[!caution] Negative Edge
-> May not work if there are negative [[Binary Tree (二叉树)#Edge |Edge]] 
+> May not work if there are negative [[Tree#Edge|Edge]] 
 
 
 ## Java Code Templates
