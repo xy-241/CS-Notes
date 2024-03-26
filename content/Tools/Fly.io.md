@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2024-02-18T19:17:16+08:00
+Last Date: 2024-03-22T20:59:46+08:00
 References: 
 draft: 
 description: Fly.io Starter Guide
@@ -28,6 +28,8 @@ fly auth login
 fly apps list
 
 fly ssh console -a <APP_NAME>
+
+fly image update -a <APP_NAME> # Updates the app's image to the latest available version.
 ```
 
 ```bash title="App Secrets Management"

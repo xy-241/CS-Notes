@@ -10,7 +10,7 @@ tags:
   - linux
   - macos
 Creation Date: 2024-03-08, 21:34
-Last Date: 2024-03-08T22:26:18+08:00
+Last Date: 2024-03-22T21:50:31+08:00
 References: 
 draft: 
 description: 
@@ -27,7 +27,7 @@ description:
 >[!code] Setup Public-key Cryptography Authentication
 > 1. Generate [[Asymmetric Cryptography#Public Key]] and [[Asymmetric Cryptography#Private Key]] that are 4096 [[Computer Data Representation#Bit]] using [[Asymmetric Cryptography#RSA]] (A good balance of security & performance)
 > ```bash
-> ssh-keygen -t rsa -b 4096
+> ssh-keygen -t ed25519 -C "YOUR_COMMENT" # ed25519 keys are a lot shorter than rsa keys without sacrificing security
 > ```
 > 
 > 2. Copy the public key(the key ends with `.pub`) to the remote [[Host]] (Should be stored inside `~/.ssh/authorized_keys` by default)

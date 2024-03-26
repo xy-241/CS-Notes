@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-20T17:04:52+08:00
+Last Date: 2024-03-26T14:53:14+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -26,6 +26,7 @@ title:  My Macos Setup
 - [ ] [[Package Manager#Brew]] 
 - [ ] [[Package Manager#NPM]]
 - [ ] [[Package Manager#Pipx]]
+- [ ] [[Package Manager#Cargo]]
 
 ## Terminal & Shell Setup
 ---
