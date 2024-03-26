@@ -7,7 +7,7 @@ tags:
   - OS
   - go
 Creation Date: 2023-08-16T23:11:00
-Last Date: 2024-03-24T18:52:26+08:00
+Last Date: 2024-03-26T13:56:02+08:00
 References: 
 ---
 ## Abstract
@@ -83,7 +83,7 @@ References:
 >[!attention]+ Regarding the performance gainz
 > The above example shows a significant performance gainz - 5 iterations that take `500ms` each finish in `500ms`! If you increase the number of iterations, it should still complete in about `500ms`. Give it a try! This thanks to [[Concurrency (并发)]] and the lightweight nature of User Thread.
 > 
-> However, this performance gainz are only for **not CPU-bounded tasks**. The performance gainz declines gradually as the tasks require more CPU power to complete. For non CPU-bounded tasks, they can run in concurrently without needing attention from the CPU. In the code editor below, change the value of `i` in the `main()` from `100` to `1000`, you should observe the time taken 10X!
+> However, this performance gainz are only for **not CPU-bounded tasks** like [[Async IO]]. The performance gainz declines gradually as the tasks require more CPU power to complete. For non CPU-bounded tasks, they can run in concurrently without needing attention from the CPU. In the code editor below, change the value of `i` in the `main()` from `100` to `1000`, you should observe the time taken 10X!
 > <div class="onecompilerCode-wrapper"><iframe class="onecompilerCode" frameBorder="0"  src="https://onecompiler.com/embed/java/4287wrd8f?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" ></iframe></div>
 
 
