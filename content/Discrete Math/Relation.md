@@ -5,14 +5,15 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - discrete_math
+  - calculus
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-02-25T14:26:39+08:00
+Last Date: 2024-03-26T10:24:29+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
-- Basically a [[Common Sets#Subset]] of [[Set#Cartesian Product]] filtered by some conditions which define the relation among the elements from the given [[Set]]
+- Basically a [[Common Sets#Subset]] of [[Set#Cartesian Product]] or [[Set#Order n-tuples]] filtered by some conditions which define the relation among the elements from the given [[Set]]
 
 >[!example] Real-world Implication 
 > Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation aka all the rows that can be stored inside the database. Each row is a actual [[Set#Order n-tuples]] inside the relation
@@ -103,6 +104,15 @@ $$
 ### Theorem 8.3.4
 - The [[Common Sets#Partition]] induced by [[#Equivalence Relation]]
 - If $R$ is equivalence relation on [[Set]] $A$, then the distinct [[#Equivalence Class]] form a partition of $A$
+
+
+## Function
+---
+- A special type of [[Relation]] where **each input value** maps to **exactly one output value**. In relation, we can have one element is a **parent of one or more other elements**. But in function, we have one element is a **square of another element**
+
+### Real-value function
+- A [[Function]] that assigns [[Real Number]] as outputs for real numbers as inputs. In other words, it's a function where both the [[#Domain]] and the [[#Domain]] are [[Common Sets#Subset]] of the real numbers
+
 ## Terminologies
 ---
 ### Arrow Diagram 
@@ -110,13 +120,13 @@ $$
 - Usually used when there is more than one [[Set]] involve in the relation
 
 
-### Relation Domain
+### Domain
 - Basically the [[Set]] of elements of the left hand Set that is involved in the [[Relation]]
 $$
 \{a \in A : aRb \space for \space some \space b \in B\}
 $$
 
-### Relation Co-domain
+### Co-domain
 - The whole [[Set]] at the right hand side
 
 ### Range
