@@ -7,7 +7,7 @@ tags:
   - networking
   - bash
 Creation Date: 2023-08-14T11:18:00
-Last Date: 2024-03-03T22:18:59+08:00
+Last Date: 2024-03-28T00:02:47+08:00
 References: 
 description: Explore the Domain Name System (DNS), the internet's GPS that translates human-readable website names into machine-friendly IP addresses.
 ---
@@ -31,12 +31,12 @@ description: Explore the Domain Name System (DNS), the internet's GPS that trans
 - A [[DNS]] service that allows [[Hostname#Domain Name]] to be resolved to [[IP Address]] based on the location of a user
 
 ### Load Distribution 
-1. A set of  [[IP Address]] is associated with one [[Hostname]] 
-2. When [[Host#Client]] make [[DNS Query]] to that domain name
-3. [[DNS Server]] responds the entire set of IP Address with the use of [[#DNS Rotation]]
+1. A set of  [[IP Address]] is associated with one [[Hostname#Domain Name]] 
+2. When [[Host#Client]] make dns query to that domain name
+3. [[DNS Server#Authoritative DNS Server]] responds the entire set of IP Address with the use of [[#DNS Rotation]]
 4. Client typically sends its [[HTTP]] request message to the IP Address that is listed first in the set. Thus, distributing load among replicated server
 
-- DNS Rotation is also used on [[E-mail Server]], so multiple of the servers can share the same [[Hostname]]
+- DNS Rotation is also used on [[E-mail Server]], so multiple of the servers can share the same domain name
 
 ### DNS Caching
 - Cache [[DNS Record]] in [[Main Memory]]
