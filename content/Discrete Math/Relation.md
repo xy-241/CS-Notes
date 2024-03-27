@@ -7,7 +7,7 @@ tags:
   - discrete_math
   - calculus
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-03-26T10:24:29+08:00
+Last Date: 2024-03-27T10:10:05+08:00
 References: 
 draft: 
 ---
@@ -106,12 +106,6 @@ $$
 - If $R$ is equivalence relation on [[Set]] $A$, then the distinct [[#Equivalence Class]] form a partition of $A$
 
 
-## Function
----
-- A special type of [[Relation]] where **each input value** maps to **exactly one output value**. In relation, we can have one element is a **parent of one or more other elements**. But in function, we have one element is a **square of another element**
-
-### Real-value function
-- A [[Function]] that assigns [[Real Number]] as outputs for real numbers as inputs. In other words, it's a function where both the [[#Domain]] and the [[#Domain]] are [[Common Sets#Subset]] of the real numbers
 
 ## Terminologies
 ---
