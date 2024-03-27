@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-29T19:10:00
-Last Date: 2024-03-26T13:51:46+08:00
+Last Date: 2024-03-27T20:58:22+08:00
 References: 
 sr-due: 2024-03-01
 sr-interval: 8
@@ -59,9 +59,9 @@ sr-ease: 267
 ## Upcall
 ---
 ![[software_interrupt.png|300]]
-- Known as **Signal** in [[Unix]], or **Asynchronous Events** in **Windows**
+- Known as **Signal** in [[Unix#Unix-like]], or **Asynchronous Events** in **Windows**
 - Follow the [[Sequential Circuit#Asynchronous Sequential Circuit]] behaviour, can occur at any time
-- [[Process (进程)]] can be told by [[Kernel]] when some event that **deserves immediate attention** has occurred, to virtualise some part of the Kernel, so that applications can behave more like kernel like how kernel handles [[#Hardware interrupts (外中断)]]
+- [[Process (进程)]] can be told by [[Kernel]] when some event that **deserves immediate attention** has occurred. This helps to virtualise some part of the Kernel, so that applications can behave more like kernel - handling [[#Hardware interrupts (外中断)]]
 - Primarily focused on [[Inter-Process Communication (IPC)]] and **event handling** within a process
 
 >[!example]
@@ -74,7 +74,7 @@ sr-ease: 267
 > - Termination signal – `SIGKILL`
 
 >[!success] Asynchronous I/O notification
-> A separate notification sent via an upcall to the application when the I/O completes. Instead waiting (idle) for the IO [[System Call (系统调用)]] to complete. Keep polling the kernel for I/O completion - inefficient!
+> A separate notification sent via an upcall to the application when the I/O completes. This eliminates waiting (idle) process that waits for IO [[System Call (系统调用)]] to complete!
 ## Hardware interrupts (外中断)
 ---
 - Raised by hardware devices. Follow the [[Sequential Circuit#Asynchronous Sequential Circuit]] behaviour, can occur at any time

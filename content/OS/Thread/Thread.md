@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-12T18:59:00
-Last Date: 2024-03-13T12:35:54+08:00
+Last Date: 2024-03-27T21:07:55+08:00
 References: 
 ---
 
@@ -21,7 +21,7 @@ References:
 - There are 3 types - [[User Thread]], [[Kernel Thread]] & [[Hybrid Threads]]
 
 >[!success]- More Performant
-> Since thread doesn't have the need to perform [[Context Switch#An expensive operation|Expensive Context Switching]]. It is 10-100 times faster than Process.
+> Since thread doesn't have the need to perform [[Context Switch#An expensive operation|Expensive Context Switching]]. It is **10-100 times faster** than Process.
 > 
 > Faster to create and destroy compared to Process, because it can be created without making [[System Call (系统调用)]] to the underlying [[Kernel]].
 
@@ -38,11 +38,11 @@ References:
 > For [[Interrupts (中断)#Software Interrupt]] handling - which thread should handle it?
 
 ### Blocking Thread
+- Known as **Synchronised Thread**
 - [[Thread]] doesn't do anything while waiting for **IO Operations** or **Network Operations** etc
-### Non-blocking Thread
-- Thread carries out other tasks if the current tasks require it to wait for **IO Operations** or **Network Operations** etc
-- Goes back to the current task when the waiting ends - **Call back**
-- However, it still blocks when the task is **CPU Bounded**
+- Super-simple to use and understand!
+
+
 
 
 ## Thread Table
