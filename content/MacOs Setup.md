@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-26T14:53:14+08:00
+Last Date: 2024-03-27T16:30:42+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -63,6 +63,18 @@ fastfetch --logo <ABSOLUTE_PATH_TO_LOGO_FILE> --logo-width 70 --logo-height 30 -
 - [ ] `stow`
 ```bash
 brew install stow
+```
+- [ ] `navi` - `man` replacement
+```bash
+brew install navi # Installation 
+# Add eval "$(navi widget zsh)" into .zshrc
+
+navi fn welcome # Config Page
+
+# Ctrl-G to run the program
+
+# Add my cheatsheets, remember to run this command regularly for updates!
+navi repo add https://github.com/xy-241/cli-cheat
 ```
 
 **Others**

@@ -7,7 +7,7 @@ tags:
   - software_engineering
   - bash
 Creation Date: 2024-03-10, 17:36
-Last Date: 2024-03-10T17:55:21+08:00
+Last Date: 2024-03-27T16:49:03+08:00
 References: 
 draft: 
 description: 
@@ -21,7 +21,7 @@ description:
 - The program that lets you control your [[OS]] using text commands
 
 ### ZSH
-- A [[Unix]] [[#Shell]] that is very extensive and powerful
+- A [[Unix#Unix-like]] [[#Shell]] that is very extensive and powerful
 - [Install ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-on-many-platforms)
 
 
