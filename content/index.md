@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-03-26T10:52:30+08:00
+Last Date: 2024-03-27T10:50:08+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
 ---
@@ -89,9 +89,7 @@ Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues
 ---
 - [Problem Solving Tricks](https://notes.yxy.ninja/tags/problem_solving)
 - [[Data Structure Content Page]]
-- [Common Algorithms](https://notes.yxy.ninja/Algorithms/)
-- [MISC](https://notes.yxy.ninja/Algorithms/terminologies/)
-
+- [[Algorithm Content Page]]
 
 
 
