@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-27T16:30:42+08:00
+Last Date: 2024-03-29T01:45:10+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -31,6 +31,7 @@ title:  My Macos Setup
 ## Terminal & Shell Setup
 ---
 - [ ] [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+- [ ] [Install iterm2 terminal](https://iterm2.com/downloads.html)
 - [ ] [[Terminal#ZSH]] - [[Terminal#Shell]]
 - [ ] [[Terminal#ohmyzsh]] - [[Terminal#Shell Enhancement]]
 - [ ] [Termius - Terminal GUI](https://www.termius.com/download/macos)
@@ -54,16 +55,6 @@ title:  My Macos Setup
 - [ ] [[File System Hierarchy#joshuto]] - Terminal File Manager
 - [ ] [[File#dua]] - Disk Usage Analyser
 - [ ] `brew install btop` - `htop`/`top` replacement
-- [ ] `fastfetch`
-```bash
-brew install fastfetch
-# Add the following to the start of .zshrc
-fastfetch --logo <ABSOLUTE_PATH_TO_LOGO_FILE> --logo-width 70 --logo-height 30 --logo-type iterm
-```
-- [ ] `stow`
-```bash
-brew install stow
-```
 - [ ] `navi` - `man` replacement
 ```bash
 brew install navi # Installation 
@@ -75,6 +66,41 @@ navi fn welcome # Config Page
 
 # Add my cheatsheets, remember to run this command regularly for updates!
 navi repo add https://github.com/xy-241/cli-cheat
+```
+- [ ] `fzf` - `grep` replacement
+```bash
+brew install fzf # Installation 
+
+cat <file_name> | fzf -m # multi-line select
+
+# Fuzzy search files with file preview
+brew install chafa # To have image rendered in terminal
+fzf --preview '<path_to_preview.sh> {}' # Refer to https://github.com/junegunn/fzf?tab=readme-ov-file#previewing-an-image for more information
+```
+- [ ] `fastfetch`
+```bash
+brew install fastfetch
+# Add the following to the start of .zshrc
+fastfetch --logo <ABSOLUTE_PATH_TO_LOGO_FILE> --logo-width 70 --logo-height 30 --logo-type iterm
+```
+- [ ] `stow` - dotfile manager
+```bash
+brew install stow
+```
+- [ ] `asciinema` & `agg` - terminal recording & convert `.cast` to gif
+```bash
+# asciinema Installation 
+brew install asciinema 
+
+asciinema rec demo.cast # Record
+asciinema play demo.cast # Play a recorded session
+
+
+# agg Installation
+cargo install --git https://github.com/asciinema/agg 
+
+# Convert .cast to gif, --font-family should be the same font as the terminal font
+agg --font-family "FiraMono Nerd Font" demo.cast a.gif
 ```
 
 **Others**
