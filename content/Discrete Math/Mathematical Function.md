@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-03-27, 10:09
-Last Date: 2024-03-27T10:24:11+08:00
+Last Date: 2024-03-28T14:45:03+08:00
 References: 
 draft: 
 description: 
@@ -52,3 +52,25 @@ description:
 ## Real-value function
 ---
 - A [[Mathematical Function]] that assigns [[Real Number]] as outputs for real numbers as inputs. In other words, it's a function where both the [[Relation#Domain]] and the [[Relation#Co-domain]] are [[Common Sets#Subset]] of the real numbers
+
+
+
+## Polynomial Function
+---
+$$
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0
+$$
+- $a$ is constant, and the polynomial function above is called **polynomial** of degree $n$
+
+>[!attention]
+> A polynomial of degree $n$ can be factored as a **product** of **linear and quadratic [[Factor]]**.
+> 
+> For example, $x^{4} -1 = (x^{2}+1)(x+1)(x-1)$, where $(x+1)$ and $(x-1)$ are linear factors and $(x^{2}+1)$ is quadratic factor.
+
+
+### Rational Function
+$$
+\frac{p(x)}{q(x)}
+$$
+- Both $p(x)$ and $q(x)$ are [[#Polynomial Function]]
+- The [[Relation#Domain]] of $\frac{p(x)}{q(x)}$ consists of all [[Real Number]] except the root of $q(x)$ - the value of $x$ that will make $q(x)=0$

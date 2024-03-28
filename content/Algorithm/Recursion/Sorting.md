@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-03-20T09:58:50+08:00
+Last Date: 2024-03-28T15:40:31+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -461,3 +461,9 @@ import java.util.*;
 
 >[!caution]- Slow on almost sorted array!
 > Merge sort's performance is still $O(nlogn)$ when the array is almost sorted, because it needs to perform the full divide-and-conquer process regardless how chaotic the given array is. While [[#Bubble Sort]] and [[#Insertion Sort]] have a time complexity of $O(n)$.
+
+
+
+## References
+---
+- [Sorting Algorithms Animations | Toptal®](https://www.toptal.com/developers/sorting-algorithms)
