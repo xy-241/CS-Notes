@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- The language used to obtain data from [[DBMS (Database Management System)]] from [[Database]]
+- The language used to obtain data from [[Database#DBMS]] from [[Database]]
 </br>
 
 - SQL query execution order, more details can be found [here](https://www.youtube.com/channel/UCZgt6AzoyjslHTC9dz0UoTw/community?lb=UgkxxRdC2UPk8w8gaLjR9epBdDZNuKHwrfO7)

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - postgres
 Creation Date: 2024-02-18, 18:28
-Last Date: 2024-02-18T18:57:48+08:00
+Last Date: 2024-03-28T22:58:58+08:00
 References: 
 draft: 
 description: Postgres Starter Guide
@@ -19,6 +19,8 @@ description: Postgres Starter Guide
 
 ## Postgres Migration
 ---
+- For more information, refer to this [guide](https://www.enterprisedb.com/postgres-tutorials/how-use-pgdump-and-pgrestore-multi-host-enviorment)
+
 >[!tip] Connection String Format
 > `postgres://[user]:[password]@[db_hostname]/[dbname]`
 
@@ -33,4 +35,3 @@ pg_restore -v -d <destination_database_connection_string> <dump_file_name>
 ```bash title="Export data out in sql format"
 pg_dump -O -v -d <source_database_connection_string> > export.sql
 ```
-
