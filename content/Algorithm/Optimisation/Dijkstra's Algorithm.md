@@ -19,7 +19,7 @@ References:
 </br>
 
 - Use [[Greedy Algorithm]] to improve the computation performance via [[Priority Queue]]
-- Use [[Dynamic Programming]] to obtain the shortest distance from the given node to all other nodes -> [[Optimisation Problem]] via [[Dynamic Programming#DP Table|DP Table]]
+- Use [[Dynamic Programming]] to obtain the shortest distance from the given node to all other nodes -> [[Combinatorial Optimisation]] via [[Dynamic Programming#DP Table|DP Table]]
 
 >[!caution] Negative Edge
 > May not work if there are negative [[Tree#Edge|Edge]] 

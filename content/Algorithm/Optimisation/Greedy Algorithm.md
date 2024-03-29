@@ -18,7 +18,7 @@ References:
 >- 贪心策略在一轮轮的简单选择中，逐步导向最佳的答案。
 
 
-- Solves [[Optimisation Problem]]
+- Solves [[Combinatorial Optimisation]]
 - Usually better performance than [[Backtracking]] & [[Dynamic Programming]]
 - Think about what is the [[#Local Optimal Solution]]. If it feels with the current stage optimal solution can form the global optimal solution, can give a try of the greedy approach 
 - Follow pre-defined procedures for each stage
@@ -110,7 +110,7 @@ References:
 - *45. Jump Game II* has 2 range/reach to keep track of, one is the maximum reach/range of current step, another one is the maximum reach/range of next step
 
 
-- *452,435, 56*, we rely on sorting to make each entity next to each other, to form the [[Optimisation Problem#Optimal Sub-structure]] to perform greedy algorithms
+- *452,435, 56*, we rely on sorting to make each entity next to each other, to form the [[Combinatorial Optimisation#Optimal Sub-structure]] to perform greedy algorithms
 
 >[!example] Leetcode
 >- [55. Jump Game](https://leetcode.cn/problems/jump-game/)

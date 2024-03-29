@@ -39,7 +39,7 @@ description:
 ---
 5 items
 
-- [ ] [[Optimisation Problem]]
+- [ ] [[Combinatorial Optimisation]]
 - [ ] [[Memoization]]
 - [ ] [[Dynamic Programming]]
 - [ ] [[Greedy Algorithm]]
