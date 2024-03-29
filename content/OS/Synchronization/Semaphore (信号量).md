@@ -5,16 +5,22 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - c
 Creation Date: 2023-10-16T10:11:00
-Last Date: 2023-11-04T17:39:09+08:00
+Last Date: 2024-03-28T20:17:42+08:00
 References:
   - "C Intro Example: https://youtu.be/YSn8_XdGH7c?si=9rgRNBUgseCMOiTl"
 ---
 ## Abstract
 ---
-- Used to limit the number of [[Process (进程)]]/[[Thread]] running on a particular resource at any time with a *non-negative integer*
-- Used in environments with [[Inter-Process Communication (IPC)]] and can also be useful in managing *synchronisation* across different systems, such as in [[Distributed Systems]]
+- Limit the number of [[Process (进程)]]/[[Thread]] running on a particular resource at any time with a **non-negative integer**
 
+### Simultaneous Multi-Locking
+- Semaphore can be used to **lock a resource** at more than one [[Process (进程)]]/[[Thread]] at the **same time**
+- For example, maximum 5 database connections & online game queueing system 
+### Decoupled Locking & Releasing 
+- The locking & releasing can be decoupled into 2 different [[Process (进程)]]/[[Thread]]
+- We can use this property to control how many times a [[Process (进程)]]/[[Thread]] runs (locking) based on the number of [[Interrupts (中断)]] (releasing)
 
 ## Code Snippets
 ---
@@ -36,11 +42,4 @@ int main() {
   return 0;
 }
 ```
-## Differences compared to [[Mutex (互斥体)]]
----
-### Simultaneous Multi-Locking
-- Semaphore can be used to *lock a resource* at more than one [[Process (进程)]]/[[Thread]] at the *same time*
-- For example, maximum 5 database connections & online game queueing system 
-### Decoupled Locking & Releasing 
-- The locking & releasing can be decoupled into 2 different [[Process (进程)]]/[[Thread]]
-- We can use this property to control how many times a [[Process (进程)]]/[[Thread]] runs (locking) based on the number of [[Interrupts (中断)]] (releasing )
+

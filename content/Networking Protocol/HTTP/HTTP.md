@@ -24,7 +24,7 @@ References:
 
 ### HTTP Mechanism
 1. [[Host#Client]] initiates a [[TCP Connection]] with the [[Host#Server]]
-2. Client and server access TCP through their [[Socket Inteface]]
+2. Client and server access TCP through their [[Network Domain Socket]]
 3. Both client and server send/receive [[HTTP Request]]/[[HTTP Response]] from the socket interface 
 
 ### Python HTTP Server
