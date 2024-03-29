@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-29T01:45:10+08:00
+Last Date: 2024-03-29T19:36:00+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -18,6 +18,7 @@ title:  My Macos Setup
 - [Obsidian - Note Taking App](https://obsidian.md/)
 - [StrongBox - Password Manager](https://apps.apple.com/us/app/strongbox-password-manager/id897283731)
 - [Tutanota - Email Client](https://tutanota.com/#download)
+- [[File Sharing]]
 - [List of Wonderful Apps Waiting to Be Explored!](https://sindresorhus.com/apps)
 
 ## Pre-requisites
@@ -30,21 +31,17 @@ title:  My Macos Setup
 
 ## Terminal & Shell Setup
 ---
-- [ ] [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts)
-- [ ] [Install iterm2 terminal](https://iterm2.com/downloads.html)
+- [ ] [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts) - Terminal Font
 - [ ] [[Terminal#ZSH]] - [[Terminal#Shell]]
+- [ ] [[Terminal#iterm2]] - [[Terminal]]
+- [ ] [[Terminal#Termius]] - Terminal
 - [ ] [[Terminal#ohmyzsh]] - [[Terminal#Shell Enhancement]]
-- [ ] [Termius - Terminal GUI](https://www.termius.com/download/macos)
-	- [Modify Default Shell](https://support.termius.com/hc/en-us/articles/8414917685145-How-to-change-the-default-shell-in-local-terminal-)
-	- Your Termius configuration page should look something like the following picture
-![[termius_config.png|700]]
-
 
 
 ## Terminal Productivity Tools
 ---
 >[!caution] Display of Icons
-> Make sure you install one of the [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) to have icons display correctly inside your terminal
+> Make sure you install one of the [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) to have icons display correctly inside your terminal. It is strongly recommended to complete [[#Terminal & Shell Setup]] first!
 
 - [ ] [[File System Hierarchy#eza]] - `ls` replacement
 - [ ] [[File#xcp]] - `cp` replacement
@@ -77,6 +74,7 @@ cat <file_name> | fzf -m # multi-line select
 brew install chafa # To have image rendered in terminal
 fzf --preview '<path_to_preview.sh> {}' # Refer to https://github.com/junegunn/fzf?tab=readme-ov-file#previewing-an-image for more information
 ```
+- [ ] [[Process (进程)#procs]] - `ps` replacement
 - [ ] `fastfetch`
 ```bash
 brew install fastfetch
@@ -120,7 +118,7 @@ h() {
 - [ ] [[Rust Toolset]]
 - [ ] [[Go]]
 - [ ] `npm i -g typescript`
-- [ ] `brew install elixir` - Install `elixir` with [[Package Manager#Brew]]
+- [ ] `brew install elixir`
 - [ ] [Java JDK](https://www.oracle.com/java/technologies/downloads/)
 
 
@@ -206,16 +204,14 @@ brew install telnet
 
 ## OS Config
 ---
-- [Add Geist Font](https://github.com/vercel/geist-font)
-	- Drag and drop the installed font to built-in app `Font Book`
-- [Add Chinese Input](https://support.apple.com/en-sg/guide/mac-help/mchlp1406/mac) 
-- Change Hostname
+- [ ] [Add Geist Font](https://github.com/vercel/geist-font), drag and drop the installed font to built-in app `Font Book`
+- [ ] [Add Chinese Input](https://support.apple.com/en-sg/guide/mac-help/mchlp1406/mac) 
+- [ ] Change Hostname
 ```bash
 #!/bin/bash
 sudo scutil --set HostName mac
 sudo scutil --set LocalHostName mac
 ```
-- Change the VSC Terminal font size to ``16`` in the setting page
 
 ## Cheatsheet
 ---

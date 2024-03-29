@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2024-01-12, 00:12
-Last Date: 2024-02-17T02:38:27+08:00
+Last Date: 2024-03-29T19:35:35+08:00
 References: 
 draft: 
 sr-due: 2024-01-30
@@ -58,6 +58,7 @@ set shiftwidth=2
 ---
 - [Visual Studio Code](https://code.visualstudio.com/)
 	- [Add `code` into cli](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+- Change the VSC Terminal font size to ``16`` in the setting page
 
 ## Zed Code Editor
 ---

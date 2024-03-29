@@ -7,7 +7,7 @@ tags:
   - software_engineering
   - bash
 Creation Date: 2024-03-10, 17:36
-Last Date: 2024-03-27T16:49:03+08:00
+Last Date: 2024-03-29T19:29:22+08:00
 References: 
 draft: 
 description: 
@@ -15,6 +15,21 @@ description:
 ## Terminal
 ---
 - A program that provides a **text-based window** where you use the [[#Shell]] to interact with [[OS]]
+
+### iterm2
+- My daily drive, [Install iterm2 terminal](https://iterm2.com/downloads.html)
+
+### Termius
+- User friendly [[Terminal]], currently I only use it for [[SSH]]
+- [Termius - Terminal GUI](https://www.termius.com/download/macos)
+
+>[!tip]- Termius Config
+> [Modify Default Shell to zsh](https://support.termius.com/hc/en-us/articles/8414917685145-How-to-change-the-default-shell-in-local-terminal-)
+> 
+> Your Termius configuration page should look something like the following picture
+> 
+> ![[termius_config.png|700]]
+
 
 ## Shell
 ---

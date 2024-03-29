@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2024-02-17T19:14:47+08:00
+Last Date: 2024-03-29T19:24:20+08:00
 References: 
 description: Dive into the world of processes in operating systems!
 ---
@@ -22,6 +22,17 @@ description: Dive into the world of processes in operating systems!
 
 - Process **usually** don't share [[Main Memory]] among themselves for isolation purposes. We need [[Inter-Process Communication (IPC)]] for **inter-process communication** 
 
+## Useful CLI tool
+---
+## procs
+- A `ps` replacement written in [[Rust]]
+
+```bash
+brew install procs # Installation 
+
+# Alias to ps, and add in config file, add the following line to .zshrc
+alias ps='sudo procs --load-config <path_to_your_config.toml>' # Refer to https://github.com/dalance/procs?tab=readme-ov-file#configuration for more info on the config.toml
+```
 
 ## Terminologies
 ---
