@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-16T10:11:53+08:00
-Last Date: 2024-03-29T18:13:25+08:00
+Last Date: 2024-03-30T18:51:00+08:00
 References: 
 ---
 ## Abstract
@@ -15,7 +15,8 @@ References:
 - The communication is essential to coordinate the activities among Processes/Threads that are cooperating to get some job done
 </br>
 
-- There are many ways to implement IPC, some are [[Pipe (管道)]], [[Message Queue (消息队列)]], [[Interrupts (中断)#Upcall]], [[#Socket]], [[Semaphore (信号量)]] and [[Shared Memory]]
+- There are many ways to implement IPC, but there are 2 categories. Message Passing - [[Pipe (管道)]], [[Message Queue (消息队列)]], [[Interrupts (中断)#Upcall]], [[#Socket]] and [[Shared Memory]]
+- We also [[Synchronization (同步)]] methods utilised like [[Mutex (互斥体)]] and [[Semaphore (信号量)]] to ensure no [[Race Condition (竞态条件)]] from happening
 
 
 ## Socket

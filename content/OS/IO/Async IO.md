@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - js
 Creation Date: 2024-03-25, 19:56
-Last Date: 2024-03-27T21:33:07+08:00
+Last Date: 2024-03-30T18:39:29+08:00
 References: 
 draft: 
 description: 
@@ -23,7 +24,8 @@ description:
 > 
 > Syntactic features, such as **promises** and **async/await patterns**, have been introduced to streamline code syntax and ease the experience of reading it for programmers. Still, these features add a layer of complexity to the code.
 
-
+>[!bigbrain] Async IO in JS (Promise Execution)
+> Refer to [JavaScript Visualized - Promise Execution - YouTube](https://youtu.be/Xs1EMmBLpn4?si=FrPtzcFJ3KTWVsb6)
 
 
 ## References
