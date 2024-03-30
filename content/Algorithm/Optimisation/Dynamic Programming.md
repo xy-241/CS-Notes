@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-03-22T16:49:01+08:00
+Last Date: 2024-03-30T17:35:08+08:00
 References: 
 ---
 ## Abstract
@@ -55,6 +55,32 @@ References:
 ### DP Table
 - Trade space for time
 - Use extra space to hold intermediate results to avoid duplicated computation
-- A mapping between the [[Backtracking#State (状态)|State]] and the correspnding solution to each sub-problems at that particular [[Backtracking#State (状态)|State]]
+- A mapping between the [[Backtracking#State (状态)|State]] and the correspnding solution to each sub-problems at that particular state
 - Can take the form of [[Array]] or simply a variable
 ### State Transition Equation (状态转移方程)
+- What is the **mathematical operation** we need to perform to transit from one state (smaller scope) to the next state (bigger scope), eventually we reach the global state which returns the final answer
+
+>[!example] 0-1 knapsack problem
+> In [[Combinatorial Optimisation#0-1 knapsack problem]], the scope is basically the number of the items we can select. The less the items available to be selected the smaller the scope.
+> 
+> The **smallest scope** is $0$  item, in this case, the maximum value we can obtain is always $0$ regardless the size of the knapsack bag.
+> 
+> Then we expand the scope from $0$ item to $1$ item. What is the mathematical operation we need to perform to obtain the new state of the new scope? 
+> 
+> The answer is to loop through the knapsack size from $1$ to the maximum size. At each size, if the weight of the new item exceeds the knapsack size, we get a bigger knapsack size until we get one that is big enough for the new item. The new state in this case is just the state of the previous smaller scope.
+> 
+> When the knapsack size is big enough, there are **2 choices** for us, it is either we put the new item into the bag or we don't. So how? Remember we want to maximise the value we can have inside the knapsack bag, so we should always make the decision that increments the value in the new state.
+> 
+> Lets abstract the problem:
+> - Let $s$ be the current knapsack bag size
+> - Let $p$ be the previous state with $s$, basically the best value we can have with $s$
+> - Let $w$ be the weight of the new item
+> - Let $v$ be the value of new item
+> 
+> So now we want to perform **state transition** which is to obtain the **best value** with **bigger scope** at $s$. How should we do that?
+> 
+> The answer is simple, we only put the new item into the knapsack bag **if it can generate a bigger value** at $s$.
+> 
+> We know the **previous state** is the **best state** at that **smaller scope**. So we can build on top of it! If I put in the new item, the best value it can generate is basically the best value at $s-w$ at the previous state(let this best value be $q$) + $v$. If we don't put the new item, the best value is basically $p$.
+> 
+> Thus, we obtain our **State Transition Equation**. The new state at $p$ is  `Math.max(q + v, p)`. We put the new item into the bag if $q+v \gt p$, else we don't.
