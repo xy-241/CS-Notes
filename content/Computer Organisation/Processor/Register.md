@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-02-20T13:21:32+08:00
+Last Date: 2024-04-01T19:23:27+08:00
 References: 
 ---
 ## Abstract
@@ -30,8 +30,7 @@ References:
 - CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
 
 ### Stack Pointer
-- A [[Register]]
-- Holds the address of the top of the [[Address Space#Stack Segment]] in the current **execution context**
+- A [[Register]] that holds the [[Memory Address]] of the top of the [[Address Space#Stack Segment]] in the current **execution context**. Here is the [[stack_segment.png|Diagram]] 
 
 >[!info] `offset($sp)`
 > Used to **access a memory location** **relative** to the **current top** of the stack

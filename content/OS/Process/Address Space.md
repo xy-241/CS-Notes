@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-03-17T13:59:16+08:00
+Last Date: 2024-04-01T19:53:43+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -23,7 +23,8 @@ description: Stack (automatic memory management for function variables), Heap (d
 	- Data in [[#Text Segment]] (the **orange** block shown above) and [[#Data Segment]] (the **red** block shown above) are shipped with the program
 	- Data in [[#Heap Segment]] (the **blue** block shown above) and [[#Stack Segment]] (the **green** block shown above) are allocated dynamically when the program is running
 
-### Heap Segment
+## Heap Segment
+---
 - **Dynamically allocated region** where the [[Process (进程)]] can create new data structures as needed
 - **Grows** and **shrinks** as the **process** allocates and deallocates memory
 
@@ -50,33 +51,37 @@ description: Stack (automatic memory management for function variables), Heap (d
 >
 >Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details
 
-#### Memory leak
+### Memory leak
 - Happens when we **forget to release** data in heap memory using `free()` in the example of C
 - This can eventually lead to the exhaustion of available [[Main Memory]], resulting in **degraded performance** or even **program crashes**
-### Stack Segment
+## Stack Segment
+---
+![[stack_segment.png|300]]
 - **Dynamically allocated region** used to store **function calls**, local variables, and temporary data etc
-- Made up of [[#Stack Frame]], follow a [[Stack]] structure
-- **Grows** as functions are called and **shrinks** as they return
+- Made up of [[#Stack Frame]], following a [[Stack]] structure
+- **Expands** as functions are called and **shrinks** as they return
+- We can obtain the default stack size assigned by the system using `ulimit -s`
 
 >[!question]- Grows Downwards
->Stack Segment starts at a higher [[Memory Address]], then memory address decreases as we add in **Stack Frame**, thus **growing downwards** in terms of Memory Address, so to remove stack frame, we need to increment the [[Register#Stack Pointer]]
+>Stack Segment starts at a higher [[Memory Address]], then **memory address decreases** as we add in **Stack Frame**, thus **growing downwards** in terms of Memory Address, so to remove stack frame, we need to increment the [[Register#Stack Pointer]].
 
 >[!info]- Fun Fact Regarding Grow Downwards
-> Growing downwards is a convention from when computers had small memories and the stack was placed at the end of the [[#Data Segment]]. Nowadays the stack can be anywhere, but the convention stuck on, at the end of the day it makes no difference
+> Growing downwards is a convention from when computers had small memories and the stack was placed at the end of the [[#Data Segment]]. Nowadays the stack can be anywhere, but the convention stuck on, at the end of the day it makes no difference.
+
+>[!bigbrain] Variables live in the stack
+> When assigning one variable to another variable, data is **duplicated**.
+> 
+> For example, `a=1` and `b=a`, the value `1` is duplicated and assigned to `b`. A nice visualisation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#variables-live-in-the-stack) 
 
 
-- When assigning one variable to another variable, data is **duplicated**
-- For example, `a=1` `b=a`, the value `1` is duplicated and assigned to `b`
-- A nice visualisation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#variables-live-in-the-stack) 
 
 >[!success] Data management in Stack Segment is more efficient than Heap Segment
 >1. Stack memory is allocated and deallocated in a **Last In, First Out (LIFO) manner**, making it faster than heap memory. This is because all it needs to do is move the [[Register#Stack Pointer]] up or down, while heap memory requires more complex memory management
->2. No overhead of complex [[Synchronization (同步)]], unlike data inside heap segment, data inside the stack segment is usually dedicated to that particular [[Process (进程)]] or [[Thread]]. Thus, manipulation of data inside the stack segment doesn't require the complex synchronisation 
+>2. No overhead of complex [[Synchronization (同步)]], unlike data inside heap segment, data inside the stack segment is dedicated to that particular [[Thread]]. Thus, manipulation of data inside the stack segment doesn't require the complex synchronisation 
 
->[!caution] Stack Overflow
->Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment
 
->[!caution] Variable Size Defined before Compilation
+>[!caution] Attention
+> The size of variable on the stack is defined before Compilation
 
 >[!example]- XV6-RISCV Kernel Stack
 >```c {13}
@@ -133,14 +138,18 @@ description: Stack (automatic memory management for function variables), Heap (d
 >- We load the base address of the **stack segment**
 >- Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because **stack segment grows downwards** when we are adding values to the stack
 
-#### Stack Frame
+### Stack Frame
 - A section of the [[#Stack Segment]] dedicated to a **specific function call**
 
-### Data Segment
+### Stack Overflow
+- Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment
+## Data Segment
+---
 - This region stores **global** and **static variables** and **constants** used by the program, pre-defined before the execution of the program
 - Can be both read and write, allowing the [[Process (进程)]] to manipulate the data as needed
 
-### Text Segment
+## Text Segment
+---
 - Stores program codes, **unchangeable**, **read-only**
 
 
