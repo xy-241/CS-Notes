@@ -7,7 +7,9 @@ tags:
   - networking
   - bash
 Creation Date: 2023-08-18T13:05:00
-Last Date: 2024-03-03T01:22:21+08:00
+Last Date: 2024-04-01T20:23:43+08:00
+aliases:
+  - ../../Networking/Transport-Layer/TCP/TCP
 ---
 ## Abstract
 ---
