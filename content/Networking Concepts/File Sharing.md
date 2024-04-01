@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2024-03-26, 16:13
-Last Date: 2024-03-26T22:44:08+08:00
+Last Date: 2024-04-01T20:40:21+08:00
 References: 
 draft: 
 description: 
@@ -14,17 +14,19 @@ description:
 ## Abstract
 ---
 - The sharing of data among [[Host]] over [[Network]]
-- For file sharing in [[Network#Local Area Network (LAN)]], we can use [[#Airdrop]] and [[#LocalSend]]
-- To file sharing with [[Host#Server]], we can use [[#SFTP]]
-- For file sharing with **a nice web UI**, we can use [[#Filebrowser]]
 
-
+| File Sharing Services                     | Use Case                                                                                       |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [[File Sharing#Airdrop\|Airdrop]]         | File sharing in [[Network#Local Area Network (LAN)\|LAN]] among **Apple devices only**.        |
+| [[File Sharing#LocalSend\|LocalSend]]     | File sharing in LAN among different devices like from Android to iPhone.                       |
+| [[File Sharing#SFTP\|SFTP]]               | File sharing with [[Host#Server\|Server]], since SFTP is pre-installed in all modern machines. |
+| [[File Sharing#Filebrowser\|Filebrowser]] | File sharing with **a nice web UI**.                                                           |
 
 ## Airdrop
 ---
 - Apple's proprietary file-sharing feature for Apple devices
 - **Bluetooth:** AirDrop initially uses Bluetooth to discover nearby compatible devices
-- **Peer-to-Peer Wi-Fi:** Once devices are discovered, AirDrop creates a peer-to-peer Wi-Fi connection between them, even without an internet connection. The data is transferred over the `awdl0` [[Network Interface]] 
+- **Peer-to-Peer Wi-Fi:** Once devices are discovered, AirDrop creates a peer-to-peer Wi-Fi connection between them, even without an internet connection, thanks to [Zero-configuration networking - Wikipedia](https://en.wikipedia.org/wiki/Zero-configuration_networking). The data is transferred over the `awdl0` [[Network Interface]] 
 
 >[!success] Extremely Fast
 > It is the fastest wireless local file sharing tool I have tried so far!

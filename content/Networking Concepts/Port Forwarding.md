@@ -8,7 +8,7 @@ tags:
   - aws
   - fly_io
 Creation Date: 2024-01-16, 20:50
-Last Date: 2024-02-18T18:13:11+08:00
+Last Date: 2024-03-27T15:31:54+08:00
 References: 
 draft: 
 ---
@@ -31,5 +31,5 @@ flyctl proxy <local:remote> -a <APP_NAME>
 - With the help of [[AWS SSM]], we are able to port forwarding a port of the bastion host to a localhost port
 - So we are able to access the service running on a particular bastion host port by accessing a localhost port
 ```bash
-aws ssm start-session --target <bastion instance id> --region ap-southeast-1 --document-name AWS-StartPortForwardingSession --parameters portNumber="5432",localPortNumber="5432"
+aws ssm start-session --target <bastion_instance_id> --region <aws_region> --document-name AWS-StartPortForwardingSession --parameters portNumber=<ec2_port>,localPortNumber=<local_port>
 ```
