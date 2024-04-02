@@ -9,7 +9,7 @@ tags:
   - bash
   - macos
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2024-03-15T00:33:34+08:00
+Last Date: 2024-04-02T15:15:08+08:00
 References: 
 ---
 ## Abstract
@@ -47,11 +47,16 @@ References:
 >[!caution] Always perform ``mount`` on empty file directory
 >Otherwise, the [[File]] in the mounted Directory of the original File System can’t be accessed
 
->[!tip]- List mounted file system 
+>[!code]- List mounted file system 
 > **Linux**
-> ```
+> ```bash
 > df -Th
 > ```
+
+>[!code]- Mount a device to a directory
+>```bash
+>mount -t <filesystem_type> <path/to/device_file> <path/to/target_directory>
+>```
 
 >[!code]- Mounting automatically during boot time
 > You can achieve this by editing the `/etc/fstab`. You can verify the configuration with `sudo mount -a`.
