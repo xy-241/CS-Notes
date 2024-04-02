@@ -7,7 +7,7 @@ tags:
   - networking
   - bash
 Creation Date: 2023-08-18T13:05:00
-Last Date: 2024-04-01T20:23:43+08:00
+Last Date: 2024-04-02T15:11:44+08:00
 aliases:
   - ../../Networking/Transport-Layer/TCP/TCP
 ---
@@ -39,14 +39,12 @@ aliases:
 
 >[!code] Get your hands dirty
 > **Create a TCP Server on port 8080**
-> - `socat - TCP-LISTEN:8080,fork`
-> - a new [[Process (进程)]] for each new [[TCP Connection]]
+> - `socat - TCP-LISTEN:8080,fork` spins up a TCP server that creates a new [[Process (进程)]] for each new [[TCP Connection]]
 >   
 > ![[tcp_connection_socat_demo.png|500]]
 >   
 > **Create a TCP Client**
-> - `telnet 127.0.0.1 8080` (intall on mac `brew install telnet`)
-> - Connect to `localhost:8080` over TCP
+> - `telnet 127.0.0.1 8080` (intall on mac `brew install telnet`) connects to `localhost:8080` over TCP. A new `socat` process should be created
 > 
 > **Create TCP Server in NodeJS**
 > - Refer to [TCP Server written in NodeJS](https://github.com/hnasr/javascript_playground/blob/master/tcp/tcp.js)
