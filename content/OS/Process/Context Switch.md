@@ -6,25 +6,32 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-10T23:12:00
-Last Date: 2024-04-03T21:34:05+08:00
+Last Date: 2024-04-04T15:33:25+08:00
 References: 
 ---
 ## Abstract
 ---
-- Switching from one [[Process (进程)]]/[[Thread]] to another by making use of [[Process Control Block (PCB)]] to store/retrieve process/thread's state
+- The ability to instruct the [[CPU]] to switch the task it is working on, so that each task can take turns to run - this is what powers [[Multi-tasking]]
+- Context switching relies on the [[Process Control Block (PCB)]] to store the **task state**, so when we resume the task, we don't have to start from scratch; we can continue the task as if it never stopped
 
 
+|                                                     | Switching Speed | Memory Overhead | Isolation |
+| --------------------------------------------------- | --------------- | --------------- | --------- |
+| [[#Process Context Switch\|Process Context Switch]] | Slow            | High            | ✅         |
+| [[#Thread Context Switch\|Thread Context Switch]]   | Fast            | Low             | ❌         |
 
-## Process Context Switching
+
+## Process Context Switch
 ---
 ![[process_context_switching.png|500]]
 ### An expensive operation
-- Compare to [[Latency Number#other computation operations]], there are 3 factors that make process context switching an expensive operation
-	1. Saving & loading of [[Register]]
-	2. Switching out [[Memory Page]] (More Expensive) - Not needed for [[#Thread Context Switching]], since all [[Thread]] of a [[Process (进程)]] share the same [[Process Control Block (PCB)]]
-	3. Updating various [[Kernel]] [[Data Structure]]
+- We not only need to save & load [[Register]], we also need to use an entirely different [[Process Control Block (PCB)]] which may require us to switch out [[Memory Page]] which is an expensive operation
 
-## Thread Context Switching
+
+## Thread Context Switch
 ---
+![[thread_context_switching.png|500]]
 
 
+>[!success] Low overhead
+> The [[Address Space]] and [[thread_resources.png|per-process items]] are remain unchanged when [[Thread|threads]] are switched within the same [[Process (进程)]]. This avoids switching out the [[Memory Page]] which is an expensive operation.
