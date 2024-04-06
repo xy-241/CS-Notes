@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T20:17:38+08:00
-Last Date: 2024-04-05T18:21:28+08:00
+Last Date: 2024-04-06T20:01:02+08:00
 References: 
 ---
 ## Abstract
 ---
 ![[page_table.png|400]]
 
-- Maintains mappings between [[Virtual Memory#Virtual Address]] and the [[Main Memory#Physical Address]]
+- Maintains mappings between [[Virtual Memory#Virtual Address]] and the [[Main Memory#Physical Address]]. The mappings are stored inside the [[Main Memory]], we can use [[Memory Management Unit (MMU)#Translation Lookaside Buffer]] to reduce the number of memory access since memory access is an [[Latency Number|expensive operation]]
 
 
 ## Page Table Mapping

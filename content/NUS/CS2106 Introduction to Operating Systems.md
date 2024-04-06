@@ -69,7 +69,7 @@ title: cs2106 nus notes
 - [[Swap Space]]
 - [[Page Table]]
 - [[Memory Page]]
-- [[Page Faults]]
+- [[Page Fault]]
 - [[Segmentation Fault]]
 - [[Memory Safety]]
 - [[Null Safety]]

@@ -31,7 +31,7 @@ References:
 > [[Kernel Thread]] require some table space and [[Address Space#Stack Segment]] in the Kernel, which can be a problem if there is a very large number of threads.
 
 >[!caution]- Declined Performance
-> Since Kernel sees a Process with multiple user threads as **one single thread**, when the running user thread has a [[Page Faults]], other user threads can't be scheduled to run.
+> Since Kernel sees a Process with multiple user threads as **one single thread**, when the running user thread has a [[Page Fault]], other user threads can't be scheduled to run.
 
 >[!caution]- Risk of Thread Hogging
 > If an user thread starts running, no other User Thread in that Process will ever run unless the first thread voluntarily gives up the [[CPU]]. Within a single process, there are no [[Interrupts (中断)]], making it impossible to schedule processes round-robin fashion.

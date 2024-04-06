@@ -6,22 +6,18 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-24T12:23:00
-Last Date: 2024-02-22T18:07:42+08:00
+Last Date: 2024-04-06T21:34:22+08:00
 description: "Unlock the Power of Multitasking in Computer Science: Explore the intricacies of Corporative and Preemptive Multitasking, extending the capabilities of traditional multi-programming."
 ---
 ## Multi-tasking
 ---
 - A logical extension of [[Multi-programming]]
-- Ability of computer executing multiple tasks at the same time by giving each [[Process (进程)]] a very small slice of [[CPU]] time
+- Ability of [[Kernel]] executing multiple tasks at the same time by giving each [[Process (进程)]] a very small [[Timeslice]]
 </br>
 
 - Focus on improving user experience 
 
-### Time-Sharing
-- A Implementation of [[Concurrency (并发)]]
-- A specific implementation of [[Multi-tasking]] when resources are shared by multiple users at the **same time**, achieved with quick [[Context Switch]]
-- All Time-sharing systems are [[Multi-programming]] systems
-- Allow multiple remote users to run jobs on the same computer at the same time 
+
 ## Corporative Multitasking
 ---
 - Rather than [[OS]] decides when to preempt [[Process (进程)]]. Process gives up [[CPU]] and let other Process to run

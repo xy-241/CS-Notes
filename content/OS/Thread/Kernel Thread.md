@@ -19,7 +19,7 @@ References:
 
 
 >[!success]- Keep all threads busy
-> If one [[Thread]] in a [[Process (进程)]] causes a [[Page Faults]], the [[Kernel]] can easily check to see if the process has any other runnable threads, and if so, run one of them while waiting for the required page to be brought in from the disk. Or Kernel can run thread from other process
+> If one [[Thread]] in a [[Process (进程)]] causes a [[Page Fault]], the [[Kernel]] can easily check to see if the process has any other runnable threads, and if so, run one of them while waiting for the required page to be brought in from the disk. Or Kernel can run thread from other process
 
 >[!caution]- Resource Intense
 > All calls that might block a [[Thread]] are implemented as [[System Call (系统调用)]], at considerably greater cost than a call to a [[User Thread#Runtime System]] procedure.
