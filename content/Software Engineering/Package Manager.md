@@ -10,7 +10,7 @@ tags:
   - js
   - rust
 Creation Date: 2024-03-10, 17:29
-Last Date: 2024-03-19T20:45:52+08:00
+Last Date: 2024-04-05T01:27:28+08:00
 References: 
 draft: 
 description: 
@@ -87,7 +87,7 @@ description:
 
 ## Cargo
 ---
-- [[Package Manager]] for [[Rust]]
+- [[Package Manager]] for [[Rust]], installed along with the [[Rust Toolset]]
 
 >[!code]- Package Management
 > `ls ~/.cargo/bin` - list all the installed packages

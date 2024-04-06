@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-10T13:12:02+08:00
-Last Date: 2024-02-20T13:55:29+08:00
+Last Date: 2024-04-05T21:09:44+08:00
 References: 
 ---
 ## Abstract
@@ -34,7 +34,7 @@ aws ec2 start-instances --instance-ids <YOUR_INTANCE_ID>
 aws ssm start-session --target <INTANCE_ID>
 ```
 
-- [[Port Forwarding#Port Forwarding into EC2 Bastion]]
+- [[Port Forwarding#EC2 Port Forwarding]]
 
 ## Debugging inside EC2
 ---

@@ -12,8 +12,8 @@ draft:
 ---
 ## Abstract
 ---
-![[data_replication.svg|500px]]
-- Database replication can be used in many [[DBMS (Database Management System)]]
+![[data_replication.svg|400]]
+- Database replication can be used in many [[Database#DBMS]]
 - Usually with a master/slave relationship between the original ([[#Master Database]]) and the copies ([[#Slave Database]])
 - Data-modifying commands like insert, delete, or update must be sent to the master database
 - Most applications require a *much higher ratio of reads to writes*; thus, the number of slave databases in a system is usually larger than the number of master databases

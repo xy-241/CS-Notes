@@ -8,7 +8,7 @@ tags:
   - aws
   - fly_io
 Creation Date: 2024-01-16, 20:50
-Last Date: 2024-04-02T15:41:59+08:00
+Last Date: 2024-04-05T21:20:04+08:00
 References: 
 draft: 
 ---
@@ -16,24 +16,24 @@ draft:
 ---
 - Allows user to access a remote machine that they don't have access to via a [[Network Port]] on their local machine or [[Routers]]. Port forwarding creates a bi-directional connection between the port on the local machine/router and the port on the remote machine 
 
-## Port Forwarding into Fly.io App
+## Fly.io App Port Forwarding
 ---
+- Port forward a local mahcine network port to a fly.io app container port
+
 ```bash
-flyctl proxy <local:remote> -a <APP_NAME>
+flyctl proxy <local_port>:<remote_port> -a <app_name>
 ```
-## Port Forwarding into EC2 Bastion
+## EC2 Port Forwarding
 ---
 >[!caution] EC2 Configuration
 >Make sure you are using an **Amazon Linux Image**, or you have [setup system manager on EC2](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html)
 
 ```bash
-aws ssm start-session --target <bastion_instance_id> --region <aws_region> --document-name AWS-StartPortForwardingSession --parameters portNumber=<ec2_port>,localPortNumber=<local_port>
+aws ssm start-session --target <ec2_instance_id> --region <aws_region> --document-name AWS-StartPortForwardingSession --parameters portNumber=<ec2_port>,localPortNumber=<local_port>
 ```
 
-- The EC2 Bastion is inside an AWS private subset, blocking all incoming traffic from the internet
-- With the help of [[AWS SSM]], we are able to port forwarding a port of the bastion host to a localhost port
-- So we are able to access the service running on a particular bastion host port by accessing a localhost port
-
+>[!example] Use case
+> The EC2 Bastion is inside an AWS private subset, blocking all incoming traffic from the internet. With the help of [[AWS SSM]], we are able to port forwarding a port of the bastion host to a localhost port, so we are able to access the service running on a particular bastion host port by accessing a localhost port.
 
 
 ## Socat Port Forwarding

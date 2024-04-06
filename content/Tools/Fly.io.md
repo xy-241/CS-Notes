@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2024-03-22T20:59:46+08:00
+Last Date: 2024-04-05T20:36:22+08:00
 References: 
 draft: 
 description: Fly.io Starter Guide
@@ -30,6 +30,7 @@ fly apps list
 fly ssh console -a <APP_NAME>
 
 fly image update -a <APP_NAME> # Updates the app's image to the latest available version.
+fly image update -a umami-self-host --image <IMAGE_ENDPOINT> # Full flexibility in the image we want to use
 ```
 
 ```bash title="App Secrets Management"
@@ -44,7 +45,7 @@ fly ips list
 fly certs add <CUSTOM_DOMAIN_ENDPOINT>
 fly certs show <CUSTOM_DOMAIN_ENDPOINT>
 ```
-- [[Port Forwarding#Port Forwarding into Fly.io App]]
+- [[Port Forwarding#Fly.io App Port Forwarding]]
 
 ```bash title="Postgres Management"
 fly postgres list

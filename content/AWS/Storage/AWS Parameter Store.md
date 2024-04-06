@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-12-07, 11:17
-Last Date: 2024-01-23T14:18:36+08:00
+Last Date: 2024-04-05T20:26:25+08:00
 References: 
 ---
 ## Abstract
@@ -16,8 +16,8 @@ References:
 ```bash title="Cheatsheet"
 # Update a particular parameter store item
 aws ssm put-parameter \
-	--name "<ITEM_KEY>"\
-	--value "<ITEM_Value>" \
+	--name "<parameter_name>"\
+	--value "<parameter_value>" \
 	--type SecureString \
 	--overwrite
 ```
@@ -53,8 +53,8 @@ aws ssm get-parameters-by-path \
 	--path / \
 	--recursive \
 	--with-decryption \
-| jq '.Parameters[] | select(.Name | test("<PARAMETER_NAME>"))'
+| jq '.Parameters[] | select(.Name | test("<parameter_name>"))'
 ```
 
 >[!tip]
->`test("<PARAMETER_NAME_1>|<PARAMETER_NAME_2>")` shows 2 parameters. With this syntax, you can select more than 2 parameters
+>`test("<parameter_name_1>|<parameter_name_2>")` shows 2 parameters. With this syntax, you can select more than 2 parameters
