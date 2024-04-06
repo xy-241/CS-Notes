@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-03-30T17:35:08+08:00
+Last Date: 2024-04-05T10:58:48+08:00
 References: 
 ---
 ## Abstract
@@ -67,7 +67,7 @@ References:
 > 
 > Then we expand the scope from $0$ item to $1$ item. What is the mathematical operation we need to perform to obtain the new state of the new scope? 
 > 
-> The answer is to loop through the knapsack size from $1$ to the maximum size. At each size, if the weight of the new item exceeds the knapsack size, we get a bigger knapsack size until we get one that is big enough for the new item. The new state in this case is just the state of the previous smaller scope.
+> The answer is to loop through the knapsack size from $1$ to the maximum size. At each size, if the weight of the new item exceeds the knapsack size, we get a bigger knapsack size until we get one that is big enough for the new item. **The new state in this case is just the state of the previous smaller scope**.
 > 
 > When the knapsack size is big enough, there are **2 choices** for us, it is either we put the new item into the bag or we don't. So how? Remember we want to maximise the value we can have inside the knapsack bag, so we should always make the decision that increments the value in the new state.
 > 

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-14T21:51:00
-Last Date: 2024-03-30T16:58:14+08:00
+Last Date: 2024-04-05T12:03:57+08:00
 References: 
 ---
 ## Abstract
@@ -50,8 +50,11 @@ References:
 ### 0-1 knapsack problem
 - Each item can only be chosen **once**
 - The **Objective Functions** is maximizing $\sum\limits_{i=1}^{n}{v_{i}x_{i}}$, and the **Constraint** is $\sum\limits_{i=1}^{n}{w_{i}x_{i}} \le W$, where $x_{i} \in \{0, 1\}$ 
+
 >[!example] Question Bank
-> - [ ] [Partition Equal Subset Sum - LeetCode](https://leetcode.com/problems/partition-equal-subset-sum/), $w_{i} = v_{i}$
+> $w_{i} = v_{i}$
+> - [ ] [Partition Equal Subset Sum - LeetCode](https://leetcode.com/problems/partition-equal-subset-sum/)
+> - [ ] [Last Stone Weight II - LeetCode](https://leetcode.com/problems/last-stone-weight-ii/)
 
 ### Bounded knapsack problem
 - Each item can be chosen up to a **certain number of times**
