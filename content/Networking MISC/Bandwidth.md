@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-09-25T17:16:00
-Last Date: 2024-04-02T17:14:07+08:00
+Last Date: 2024-04-07T00:37:02+08:00
 ---
 ## Abstract
 ---
@@ -17,7 +17,10 @@ Last Date: 2024-04-02T17:14:07+08:00
 ---
 - **Actual rate** of successful data transfer over a network. It represents the real-world performance of the connection and takes into account factors such as [[Network Congestion]], packet loss, and other forms of interference that can affect data transmission. Throughput is often lower than the theoretical [[Bandwidth]] due to these factors
 
->[!code] Test the localhost bandwidth
+>[!code] Test the Internet Throughput 
+> Run `curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -`.
+
+>[!code] Test the localhost Throughput
 > Run the benchmarking server on `localhost` on [[Network Port]] `3000` with `iperf3-darwin -s -p 3000`.
 > 
 > Run the benchmarking client to test for the bandwidth of `localhost` with `iperf3 -c localhost -p 3000 -f M`.

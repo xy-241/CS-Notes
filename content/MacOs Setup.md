@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-03-29T19:36:00+08:00
+Last Date: 2024-04-03T22:29:54+08:00
 References: 
 title:  My Macos Setup
 ---
@@ -55,6 +55,8 @@ title:  My Macos Setup
 - [ ] `navi` - `man` replacement
 ```bash
 brew install navi # Installation 
+# Add alias navi="navi --fzf-overrides-var '--no-select-1'" into .zshrc
+echo "alias navi='bat'" >>~/.zshrc
 # Add eval "$(navi widget zsh)" into .zshrc
 
 navi fn welcome # Config Page

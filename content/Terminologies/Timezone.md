@@ -9,7 +9,7 @@ tags:
   - linux
   - docker
 Creation Date: 2024-03-11, 12:55
-Last Date: 2024-03-11T13:47:37+08:00
+Last Date: 2024-04-06T22:39:03+08:00
 References: 
 draft: 
 description: 
@@ -17,7 +17,7 @@ description:
 ## Abstract
 ---
 - A standard to the current date and time at different parts of the world
-- [List of timezone codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+
 
 
 
@@ -36,8 +36,11 @@ description:
 
 ## Change Timezone
 ---
+>[!info] Timezone Code
+> Refer to this [List of timezone codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
 **System-level**
-- `sudo timedatectl set-timezone America/<TIMEZONE_CODE>` on [[POSIX]]
+- `sudo timedatectl set-timezone <TIMEZONE_CODE>` on [[POSIX]]
 
 **Process-level**
 - Install `tzdata`(a time zone database) into the system with a [[Package Manager]] and set the timezone with `export TZ=<TIMEZONE_CODE>`
