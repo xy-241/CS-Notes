@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OS
+  - linux
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2024-03-29T19:24:20+08:00
+Last Date: 2024-04-07T17:11:44+08:00
 References: 
 description: Dive into the world of processes in operating systems!
 ---
@@ -18,9 +19,18 @@ description: Dive into the world of processes in operating systems!
 </br>
 
 - 2 Components - [[Address Space]], [[Process Control Block (PCB)]]
+- Process also has a [[Page Table]] that provides the [[Memory Address]] of [[Main Memory#Memory Frames]] that stores the actual data 
 </br>
 
 - Process **usually** don't share [[Main Memory]] among themselves for isolation purposes. We need [[Inter-Process Communication (IPC)]] for **inter-process communication** 
+
+>[!code] Process memory usage
+> You can check the detailed breakdown of process memory usage but `cat /proc/<pid>/statm` on [[Linux Kernel]]. You refer to [ChatGPT](https://chat.openai.com/share/d12cb616-b835-42fd-a3f1-e585869ccde2) to make sense what the value represent.
+
+>[!info]
+> `VmSize` represents the size of [[Virtual Memory]] assigned to a process.
+> 
+> `VmRSS` represents the size of [[Main Memory#Memory Frames]] a process is currently using.
 
 ## Useful CLI tool
 ---

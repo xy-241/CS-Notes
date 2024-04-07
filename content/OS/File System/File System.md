@@ -9,7 +9,7 @@ tags:
   - bash
   - macos
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2024-04-02T15:15:08+08:00
+Last Date: 2024-04-07T00:28:45+08:00
 References: 
 ---
 ## Abstract
@@ -40,6 +40,8 @@ References:
 > - `-s` means summary
 > - `-h` means human-readable
 
+>[!tip] Disk re-sizing
+> You can refer to [Increase the size of a persistent disk | Google Cloud](https://cloud.google.com/compute/docs/disks/resize-persistent-disk?authuser=2) to play with re-sizing a file system.
 
 ### Mounted File System
 - With ``mount`` [[System Call (系统调用)]], we are able to mount an isolated [[File System]] to another isolated File System
@@ -60,6 +62,8 @@ References:
 
 >[!code]- Mounting automatically during boot time
 > You can achieve this by editing the `/etc/fstab`. You can verify the configuration with `sudo mount -a`.
+
+
 ## Common File Systems
 ---
 ### APFS 

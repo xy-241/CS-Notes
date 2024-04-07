@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:16:23+08:00
-Last Date: 2024-04-06T01:20:55+08:00
+Last Date: 2024-04-07T16:53:15+08:00
 References: 
 ---
 ## Abstract
@@ -26,13 +26,13 @@ References:
 >[!code] C & Memory
 > - [How to make memory read-only](https://youtu.be/AYSISa95oJE?si=3FJPQoTuLC5MHei8)
 
-
-## Terminologies
----
 ### Virtual Address
+- Also known as **Logical Address**
 - The addressing system for [[Virtual Memory]], not bounded to physical [[Main Memory]]
-### Logical Address
-- The address that the [[Process (进程)]] "thinks" it is using.
+- The address that the [[Process (进程)]] "thinks" it is using
+
+
+
 
 
 ## References
