@@ -10,7 +10,7 @@ tags:
   - js
   - rust
 Creation Date: 2024-03-10, 17:29
-Last Date: 2024-04-05T01:27:28+08:00
+Last Date: 2024-04-07T23:16:32+08:00
 References: 
 draft: 
 description: 
@@ -29,12 +29,17 @@ description:
 - Install with `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - [Interesting analytics data](https://formulae.brew.sh/analytics/)
 
->[!code]- Package Management
-> `brew list` - list all the installed packages
+>[!code] Package Management
+> List all the installed packages: `brew list` 
 > 
-> `brew upgrade` - update all the packages
+> Check for outdated package: `brew outdated`
 > 
-> `brew doctor` - check for deprecated packages
+> Upgrade all packages: `brew upgrade`
+> 
+> Check for deprecated packages: `brew doctor`
+
+
+
 
 >[!info]- Brew Formula
 > Simple Ruby scripts, we can easily revert our modifications and merge upstream updates with `brew edit <PACKAGE_NAME>`.
@@ -55,12 +60,20 @@ description:
 - [[Package Manager]] for Python Applications
 - Install with [[#Brew]] - `brew install pipx && pipx ensurepath`
 
+>[!code] Package Management
+> List all the installed packages: `pipx list` 
+> 
+> Upgrade all packages: `pipx upgrade-all`
+
+>[!caution]
+> Currently, there isn't a way to check for outdated packaged. Refer to this [issue](https://github.com/pypa/pipx/issues/149) for more updates on this matter.
+
 ## NPM
 ---
 - [[Package Manager]] for [[Node.js]] Applications
 - Come with [[JS Toolset#NVM]]
 
->[!code]- Package Management
+>[!code] Package Management
 > `npm list -g` - list all the installed packages
 > 
 > `npm update -g` - update all the packages
@@ -89,7 +102,7 @@ description:
 ---
 - [[Package Manager]] for [[Rust]], installed along with the [[Rust Toolset]]
 
->[!code]- Package Management
+>[!code] Package Management
 > `ls ~/.cargo/bin` - list all the installed packages
 > 
 > Updating packages - Cargo doesn't come with a command to upgrade installed packages. We need to re-install the packages to update the packages.
@@ -102,13 +115,35 @@ description:
 >[!tip] Pacman on Tren!
 > [Paru](https://github.com/Morganamilo/paru?tab=readme-ov-file#installation) is a wrapper around Pacman written in [[Rust]]. Very similar syntax, zero learning curve.
 
->[!tip] Basic Syntax
-> Install `pacman -S` , delete `pacman -R`, search `pacman -Ss`, upgrade `pacman -Syu`
+>[!code] Package Management
+> Install packages: `pacman -S` 
+> 
+> Search for a package: `pacman -Ss`
+> 
+> Upgrade all packages: `pacman -Syu`
+> 
+> Remove a package: `pacman -R`
 
->[!code]- Install package from `package-name.pkg.tar.xz`
+
+>[!code] Install package from `package-name.pkg.tar.xz`
 > ```bash
 > sudo pacman -U package-name.pkg.tar.xz
 > ```
+
+
+## Basher
+---
+- A [[Package Manager]] for shell scripts. You can install it with `curl -s https://raw.githubusercontent.com/basherpm/basher/master/install.sh | bash`. Refer to its [Github Page](https://github.com/basherpm/basher) for more information
+
+>[!code] Basic usage
+> Install package: `basher install <github_username>/<project_name>` or the full [[URL]] to the git repo that isn't hosted on Github.
+> 
+> Uninstall package: `basher install <github_username>/<project_name>`
+> 
+> Check for outdated package: `basher outdated`
+> 
+> Upgrade all packages: `basher upgrade --all`
+
 
 ## Download from Github
 ---
@@ -118,3 +153,6 @@ description:
 > Install the executable using `wget -qO package.tbz <GITHUB_PROJECT_URL>/releases/latest/download/<ASSET_FILENAME>`.
 > 
 > Then we can decompress the file with `tar xf <ASSET_FILENAME>`, go into the decompressed folder and move the executable to `/usr/local/bin`. And now we should be able to call the executable from the [[Terminal]]!
+
+>[!caution]
+> We need to manually update the packages installed. 

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - git
 Creation Date: 2023-12-14T18:16:44+08:00
-Last Date: 2024-01-19T22:21:20+08:00
+Last Date: 2024-04-08T00:11:09+08:00
 References: 
 ---
 ## Abstract
@@ -35,6 +35,18 @@ git merge <FEATURE_BRANCH>
 ### Move local commits from branch A to branch B
 - Merge commits into branch B
 - Delete local branch A, or [[Git Rebase]] for more refine control
+
+## Git Add-ons
+---
+- A list of small tools that extend on [[Git]]
+
+### git-open
+- Type git open to open the repo website (GitHub, GitLab, Bitbucket) in your browser
+- Install with [[Package Manager#Basher]] - `basher install paulirish/git-open`
+
+### git-quick-stats
+- Access various useful statistics in a git repository
+- Install with [[Package Manager#Basher]] - `basher install arzzen/git-quick-stats`
 
 ## Github
 ---
