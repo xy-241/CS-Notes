@@ -7,7 +7,7 @@ tags:
   - cloudflare
   - security
 Creation Date: 2024-02-29, 22:22
-Last Date: 2024-03-21T16:35:39+08:00
+Last Date: 2024-04-08T17:51:25+08:00
 References: 
 draft: 
 description: 
@@ -17,8 +17,10 @@ description:
 - A Cloudflare security service that allows you to set up [policies and rules](https://developers.cloudflare.com/cloudflare-one/policies/access/) that let you define who can or cannot access your applications based on [user Identity](https://developers.cloudflare.com/cloudflare-one/identity/), **network attributes**, and **device posture**
 - You can access the dashboard at [Cloudflare Access](https://one.dash.cloudflare.com/:account/l)
 
->[!tip] Access protected website via a token 
-> We can obtain a [[JWT]] token which authenticates [[HTTP Request]] sent to the websites that are protected by Cloudflare Access. Refer to [Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/tutorials/cli/) for more details.
+>[!tip] Access protected website via a temporary token 
+> We can obtain a [[JWT]] token which authenticates [[HTTP Request]] sent to the websites that are protected by Cloudflare Access. Use `cloudflared access login <your_website_endpoint>` to generate a `temporary_token`. Then you can access the website using `curl -H "cf-access-token: <temporary_token>" <your_website_resources>`, the flag `-O` flag downloads the resource as a file to your local machine.
+> 
+> Refer to [Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/tutorials/cli/) for more details.
 
 ## Cloudflare Access Temporary Authentication
 ---

@@ -14,7 +14,7 @@ draft:
 ---
 ## Abstract
 ---
-- Allows user to access a remote machine that they don't have access to via a [[Network Port]] on their local machine or [[Routers]]. Port forwarding creates a bi-directional connection between the port on the local machine/router and the port on the remote machine 
+- Allows user to access a remote machine that they don't have access to via a [[Network Port]] on their local machine or [[Network Router]]. Port forwarding creates a bi-directional connection between the port on the local machine/router and the port on the remote machine 
 
 ## Fly.io App Port Forwarding
 ---

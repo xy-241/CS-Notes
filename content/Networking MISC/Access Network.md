@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- [[Network]] that physically connects an [[Host]] to its first [[Routers]] on a [[Network#Network Route]] to other distant end system
+- [[Computer Network]] that physically connects an [[Host]] to its first [[Network Router]] on a [[Computer Network#Network Route]] to other distant end system
 
 
 ## Home Access

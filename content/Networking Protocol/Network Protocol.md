@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Defines the format and the order of **messages** exchanged between 2 or more [[Host]] over the [[Network]]
+- Defines the format and the order of **messages** exchanged between 2 or more [[Host]] over the [[Computer Network]]
 
 
 ### Stateless Network Protocol

@@ -13,7 +13,7 @@ description:
 ---
 ## Abstract
 ---
-- Logical division of a [[Network]] into smaller isolated network for better efficiency, security, and manageability
+- Logical division of a [[Computer Network]] into smaller isolated network for better efficiency, security, and manageability
 - You can use the visual subnet calculator to plan out the logical division for [[IP Address#Private IP Address]] that are [[IP Address#IPv4]]
 
 <div class="onecompilerCode-wrapper"><iframe

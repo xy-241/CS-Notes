@@ -11,4 +11,4 @@ References:
 ## Abstract
 ---
 - Resolves [[IP Address]] to [[MAC Address]]
-- IP Address is used to route data on the [[Internet]]. But network like [[Network#Local Area Network (LAN)]] uses [[Switch]] which uses MAC Address to route data over [[Network#Network Route]]
+- IP Address is used to route data on the [[Internet]]. But network like [[Computer Network#Local Area Network (LAN)]] uses [[Switch]] which uses MAC Address to route data over [[Computer Network#Network Route]]

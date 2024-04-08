@@ -11,7 +11,7 @@ Last Date: 2024-03-02T18:40:18+08:00
 ---
 ## Abstract
 ---
-- The [[Network Protocol#Stateless Network Protocol]] used transfer data from one [[Network]] to another
+- The [[Network Protocol#Stateless Network Protocol]] used transfer data from one [[Computer Network]] to another
 - You can have a [UDP Server written in NodeJS](https://github.com/hnasr/javascript_playground/blob/master/tcp/udp.js) to play with
 
 >[!success] Less bandwidth usage

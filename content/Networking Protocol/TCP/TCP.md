@@ -13,7 +13,7 @@ aliases:
 ---
 ## Abstract
 ---
-- The [[Network Protocol#Stateful Network Protocol]] used transfer data from one [[Network]] to another
+- The [[Network Protocol#Stateful Network Protocol]] used transfer data from one [[Computer Network]] to another
 - Implemented inside the [[Kernel]]
 
 

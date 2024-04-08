@@ -10,7 +10,7 @@ Last Date: 2024-04-07T00:37:02+08:00
 ---
 ## Abstract
 ---
-- The **theoretical maximum rate** of data transfer across a [[Network]], typically measured in bits per second (bps) or its multiples such as kilobits per second (kbps), megabits per second (Mbps), or gigabits per second (Gbps).
+- The **theoretical maximum rate** of data transfer across a [[Computer Network]], typically measured in bits per second (bps) or its multiples such as kilobits per second (kbps), megabits per second (Mbps), or gigabits per second (Gbps).
 
 
 ## Network Throughput

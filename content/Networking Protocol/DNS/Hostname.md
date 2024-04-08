@@ -17,7 +17,7 @@ References:
 
 >[!caution] Limitation
 >- Doesn't contain enough information to locate the [[Host]] on the [[Internet]]
->- Difficult to be processed by [[Routers]]
+>- Difficult to be processed by [[Network Router]]
 
 
 >[!success] Solution

@@ -26,7 +26,7 @@ description:
 ![[ssh_packet.webp|400]]
 
 >[!attention] Encryption in transit
-> The diagram at the left hand side shows all the components of a SSH packet. The diagram at the right hand side shows only **Packet Length** and **Message Authentication Code** are **unencrypted** when the SSH packet is transmitted over the [[Network]].
+> The diagram at the left hand side shows all the components of a SSH packet. The diagram at the right hand side shows only **Packet Length** and **Message Authentication Code** are **unencrypted** when the SSH packet is transmitted over the [[Computer Network]].
 
 | Packet Component                | Purpose                                                                                                                                                                                                                                                                                                           |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

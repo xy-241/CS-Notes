@@ -46,7 +46,7 @@ Last Date: 2023-12-30T00:55:50+08:00
 - [[Application Load Balancer]]  that is NOT accessible from [[Internet]]
 - Inside [[Private Subnet]] & Doesn't have a [[Public IP]]
 
-- Routing internal [[micro-services]] traffic within the [[Network]] like [[VPC]]
+- Routing internal [[micro-services]] traffic within the [[Computer Network]] like [[VPC]]
 - For backend services that shouldn't be exposed to the Internet
 
 ## References

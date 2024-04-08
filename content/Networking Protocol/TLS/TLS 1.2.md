@@ -17,7 +17,7 @@ References:
 ## Certificate Check
 ---
 ![[TLS_certificate_check.png|500]]
-- [[X.509 Certificate]] is exchanged over the [[Network]]
+- [[X.509 Certificate]] is exchanged over the [[Computer Network]]
 
 
 ## Symmetric Key Exchange

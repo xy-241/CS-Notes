@@ -8,7 +8,7 @@ tags:
   - cloudflare
   - security
 Creation Date: 2023-07-20T19:16:00
-Last Date: 2024-03-08T19:18:03+08:00
+Last Date: 2024-04-08T20:29:09+08:00
 References: 
 ---
 ## Abstract
@@ -62,7 +62,7 @@ References:
 - Similar to [[#Personal Area Network (PAN)]]
 
 >[!note] Key Distinguishing Feature
->The [[Network]] not controlled by a [[Host]]
+>The [[Computer Network]] not controlled by a [[Host]]
 
 >[!example]
 >- A system of sensors in car
@@ -71,5 +71,5 @@ References:
 - Similar to [[#Local Area Network (LAN)]]
 
 >[!note] Key Distinguishing Features
-> - A [[Network]] of storage devices separated from the actual [[#Local Area Network (LAN)]]
+> - A [[Computer Network]] of storage devices separated from the actual [[#Local Area Network (LAN)]]
 > - Appears as a connected connected computers as a local device/drive

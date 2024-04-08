@@ -11,4 +11,4 @@ References:
 ---
 ## Abstract
 ---
-- The [[Inter-Process Communication (IPC)#Socket]] [[Host#Client]] & [[Host#Server]] use to communicate over the [[Network]]
+- The [[Inter-Process Communication (IPC)#Socket]] [[Host#Client]] & [[Host#Server]] use to communicate over the [[Computer Network]]

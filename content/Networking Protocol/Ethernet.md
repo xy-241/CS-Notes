@@ -11,4 +11,4 @@ Last Date: 2023-12-14T18:16:44+08:00
 ## Abstract
 ---
 - A [[CSMA]]
-- A [[Network]] created with a single physical cable that connects multiple computers to enable intercommunication
+- A [[Computer Network]] created with a single physical cable that connects multiple computers to enable intercommunication

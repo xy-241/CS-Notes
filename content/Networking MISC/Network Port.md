@@ -7,12 +7,11 @@ tags:
   - networking
   - bash
 Creation Date: 2023-10-04T10:32:00
-Last Date: 2024-02-25T14:46:40+08:00
+Last Date: 2024-04-08T20:06:09+08:00
 ---
 ## Abstract
 ---
-- Allow entities to form connection when there is more than one application running on both sides
-- [[IP Address]] only give 1-1 connection between 2 entities, **Network Port** allows Many-Many connection between 2 entities 
+- [[IP Address]] only give 1-1 connection between 2 entities, **Network Port** allows Many-Many connection between 2 entities. So we can have many different services running under the same IP Address, we just need to assign a different network port for each service to make the services distinguishable 
 
 
 ## Useful CLi Commands

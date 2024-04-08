@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- We need to a TCP connection before 2 [[Host]] can communicate over the [[Network]]
+- We need to a TCP connection before 2 [[Host]] can communicate over the [[Computer Network]]
 - Established after [[TCP Handshake]]
 
 

@@ -13,11 +13,11 @@ description:
 ---
 ## Abstract
 ---
-- The sharing of data among [[Host]] over [[Network]]
+- The sharing of data among [[Host]] over [[Computer Network]]
 
 | File Sharing Services                     | Use Case                                                                                       |
 | ----------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [[File Sharing#Airdrop\|Airdrop]]         | File sharing in [[Network#Local Area Network (LAN)\|LAN]] among **Apple devices only**.        |
+| [[File Sharing#Airdrop\|Airdrop]]         | File sharing in [[Computer Network#Local Area Network (LAN)|LAN]] among **Apple devices only**.        |
 | [[File Sharing#LocalSend\|LocalSend]]     | File sharing in LAN among different devices like from Android to iPhone.                       |
 | [[File Sharing#SFTP\|SFTP]]               | File sharing with [[Host#Server\|Server]], since SFTP is pre-installed in all modern machines. |
 | [[File Sharing#Filebrowser\|Filebrowser]] | File sharing with **a nice web UI**.                                                           |
@@ -34,13 +34,13 @@ description:
 ## LocalSend
 ---
 - Open-source application that lets you easily and securely share files and text between devices on your local network
-- Download [LocalSend Client](https://github.com/localsend/localsend?tab=readme-ov-file#download), it basically includes a web server that is able to send and receive files over the [[Network]]. So no 3rd-party [[Host#Server]] is needed 
+- Download [LocalSend Client](https://github.com/localsend/localsend?tab=readme-ov-file#download), it basically includes a web server that is able to send and receive files over the [[Computer Network]]. So no 3rd-party [[Host#Server]] is needed 
 
 >[!success] Cross-platform
 > Supports Windows, macOS, Linux, Android & iOS.
 
 >[!attention] 
-> The [[Host]] need to be connected to the same [[Network]]!
+> The [[Host]] need to be connected to the same [[Computer Network]]!
 > 
 > Slower than [[#Airdrop]].
 
