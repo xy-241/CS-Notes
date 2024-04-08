@@ -6,19 +6,18 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-09T22:56:00
-Last Date: 2023-12-11T23:15:17+08:00
+Last Date: 2024-04-08T16:05:37+08:00
 References: 
 ---
 ## Abstract
 ---
-- Contains [[Metadata]] of the [[Process Resources]], so that [[Process (进程)]] can be restarted later as if it had never been stopped
-![[PCB.png]]
+![[PCB.png|400]]
+
+- Contains [[Metadata]] of the [[Process (进程)#Process Resources]], so that [[Process (进程)]] can be stopped and then restarted later as if it had never been stopped
 
 
-
-## Terminologies
+## Process Table
 ---
-### Process Table
-- A collection of [[Process Control Block (PCB)]]
-- An array of structure 
-![[process_table.png]]
+![[process_table.png|500]]
+
+- A [[Array]] of [[Process Control Block (PCB)]]

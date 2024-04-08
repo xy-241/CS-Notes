@@ -7,22 +7,23 @@ tags:
   - OS
   - linux
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2024-04-07T17:11:44+08:00
+Last Date: 2024-04-08T16:23:09+08:00
 References: 
 description: Dive into the world of processes in operating systems!
 ---
 
 ## Abstract
 ---
-
 - Container that holds all the information needed to run a program, [[Abstraction (抽象)]] over running program
 </br>
 
 - 2 Components - [[Address Space]], [[Process Control Block (PCB)]]
-- Process also has a [[Page Table]] that provides the [[Memory Address]] of [[Main Memory#Memory Frames]] that stores the actual data 
-</br>
+- Process also has a [[Page Table]] that translates a given [[Memory Page]] to the [[Memory Address]] of [[Main Memory#Memory Frames]] that stores the actual data 
 
-- Process **usually** don't share [[Main Memory]] among themselves for isolation purposes. We need [[Inter-Process Communication (IPC)]] for **inter-process communication** 
+
+>[!notes] Communication among processes
+> Process **usually** don't share [[Main Memory#Memory Frames]] among themselves for isolation purposes. We need [[Inter-Process Communication (IPC)]] for communication among processes.
+
 
 >[!code] Process memory usage
 > You can check the detailed breakdown of process memory usage but `cat /proc/<pid>/statm` on [[Linux Kernel]]. You refer to [ChatGPT](https://chat.openai.com/share/d12cb616-b835-42fd-a3f1-e585869ccde2) to make sense what the value represent.
@@ -49,7 +50,7 @@ alias ps='sudo procs --load-config <path_to_your_config.toml>' # Refer to https:
 
 ### Core Image
 
-- A _suspended_ [[Process (进程)]] consists of its [[Address Space]]
+- A  **suspended** [[Process (进程)]] consists of its [[Address Space]]
 
 ### Child Process
 
@@ -59,10 +60,9 @@ alias ps='sudo procs --load-config <path_to_your_config.toml>' # Refer to https:
 2. Ready to Run - Could be running but [[CPU]] gave processing power to some other [[Process (进程)]]
 3. Block - Process is waiting for some other things like **I/O** to finish working (eg. waiting for file to be read)
 ### Process Resources
-- The followings are examples of process resources
-	- [[Address Space]]
-	- [[Register]] (Include [[Control Unit#Program Counter]] and [[Register#Stack Pointer]])
-	- A list of open [[File]]
-	- Outstanding [[Interrupts (中断)#Software Interrupt]]
-	- List of related processes
-	- [[Process Management]] information etc
+- [[Address Space]]
+- [[Register]] (Include [[Control Unit#Program Counter]] and [[Register#Stack Pointer]])
+- A list of open [[File]]
+- Outstanding [[Interrupts (中断)#Software Interrupt]]
+- List of related processes
+- [[Process Management]] information etc

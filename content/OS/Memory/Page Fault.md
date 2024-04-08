@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-04-07T16:37:51+08:00
+Last Date: 2024-04-08T15:38:01+08:00
 References: 
 ---
 ## Abstract
@@ -22,10 +22,7 @@ References:
 - The [[Memory Page]] is not in [[Virtual Memory]] at all. The [[Kernel]] must find a free space in [[Main Memory]], allocate the [[Main Memory#Memory Frames]] and update [[Page Table]], usually caused by [[#Lazy Allocation]]. This is slower
 
 
-
-
-## Lazy Allocation
----
+### Lazy Allocation
 - Not allocating [[Main Memory#Memory Frames]] until it is actually needed
 - By delaying the actual allocation, we speed up startup time & eliminate allocation entirely if it isn't used 
 - But this means slower execution speed because memory frame is only allocated when needed & we are also risked to run-time allocation errors aka more likely to crash when running the app halfway 
