@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2024-01-27, 19:55
-Last Date: 2024-03-08T18:45:48+08:00
+Last Date: 2024-04-09T16:23:47+08:00
 References: 
 draft: 
 description: 
@@ -31,9 +31,11 @@ sr-ease: 230
 	1. Checks [[Main Memory]] capacity
 	2. Check [[IO Device]]
 	3. Scanning [[IO Bus]] to detect all devices attached
-	4. Determine the [[#Boot Device]] by trying out a list of devices stored in the **CMOS**. (Users can press **keyword shortcut - F12, F11, Esc, F8, F9** to enter a **Boot Menu** and choose the boot device manually)
+	4. Determine the [[#Boot Device]] by trying out a list of devices stored in the **CMOS**. (Users can press **keyboard shortcut - F12, F11, Esc, F8, F9** to enter a **Boot Menu** and choose the boot device manually)
 	5. The [[#Boot loader]] inside the boot device will carry out the next step
 
+>[!tip]- Keyboard shortcut to enter BIOS
+> ![[bios_hotkey.jpeg]]
 
 ### Boot Device
 ![[boot_device.png|500]]

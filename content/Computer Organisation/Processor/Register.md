@@ -7,33 +7,35 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-04-01T19:23:27+08:00
+Last Date: 2024-04-09T17:21:48+08:00
 References: 
 ---
 ## Abstract
 ---
 - A group of [[Sequential Circuit#Flip-flops]]
-- Accessible from [[Instruction]]
+- Accessible via [[Instruction]]
 - 2 main purposes
 	1. Storing values during computations (like [[Memory Address]] & value)
 	2. Configuring [[CPU]]
 
 
-## Famous Registers
+## Common Registers
 ---
 ### Instruction Register
-- Contains [[Instruction]] retrieved from [[Main Memory]]
+- Holds the actual [[Instruction]] that is **currently being executed** by the [[CPU]]
+
+### Program Counter
+- For modern computers, it is the [[Register]] that indicates the [[Virtual Memory#Virtual Address]] of the next [[Instruction]] to be executed for the current [[Process (进程)]]
 
 ### Control & Status Registers (CSRs)
-- There are multiple such register
-- Stores information about the current state of the processor or device
+- There are multiple such registers in the [[CPU]], the main purpose is storing information about the current state of the processor or device
 - CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
 
 ### Stack Pointer
 - A [[Register]] that holds the [[Memory Address]] of the top of the [[Address Space#Stack Segment]] in the current **execution context**. Here is the [[stack_segment.png|Diagram]] 
 
 >[!info] `offset($sp)`
-> Used to **access a memory location** **relative** to the **current top** of the stack
+> Used to **access a memory location** **relative** to the **current top** of the stack.
 > 
 > ```asm
 > ; Decrement the stack pointer by 8 (allocate 8 bytes on the stack)

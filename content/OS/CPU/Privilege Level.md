@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-20T11:15:17+08:00
-Last Date: 2023-12-15T11:33:49+08:00
+Last Date: 2024-04-09T17:15:08+08:00
 References: 
 ---
 ## Abstract
@@ -24,6 +24,7 @@ References:
 ### User Mode
 - Only a subset of [[Instruction]] is allowed, I/O and [[Main Memory]] access are limited, and many [[CPU]] settings are locked
 - Applications run in this mode
+- If application trying to access resources they don't have access to like [[Main Memory]] they don't have access to, [[Segmentation Fault]] will occur
 
 
 ## Example

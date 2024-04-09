@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-04-03T21:06:02+08:00
+Last Date: 2024-04-09T17:27:12+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -57,6 +57,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 ## Stack Segment
 ---
 ![[stack_segment.png|300]]
+- Also known as **Call Stack**
 - **Dynamically allocated region** used to store **function calls**, local variables, and temporary data etc
 - Made up of [[#Stack Frame]], following a [[Stack]] structure
 - **Expands** as functions are called and **shrinks** as they return
@@ -140,6 +141,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 ### Stack Frame
 - A section of the [[#Stack Segment]] dedicated to a **specific function call**
+- Except for the first frame, all frames contains the [[Memory Address]] of the previous stack frame, and the size of current stack frame which is used to adjust the [[Register#Stack Pointer]] to exclude the current stack frame from the stack segment when the function call of the current frame ends. The current stack frame will be overwritten when a new frame is added to the stack segment 
 
 ### Stack Overflow
 - Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment
@@ -150,7 +152,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 ## Text Segment
 ---
-- Stores program codes, **unchangeable**, **read-only**
+- Stores program codes, **unchangeable**, **read-only**. Unless for the purpose of [dynamic linking with shared libraries](https://en.wikipedia.org/wiki/Dynamic-link_library#:~:text=With%20dynamic%20linking%2C%20shared%20code,extension)
 
 
 ## References

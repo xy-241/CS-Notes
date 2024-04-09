@@ -7,7 +7,7 @@ tags:
   - OS
   - c
 Creation Date: 2023-11-20T20:40:44
-Last Date: 2024-02-22T18:33:15+08:00
+Last Date: 2024-04-09T17:12:37+08:00
 References: 
 ---
 ## Abstract
@@ -24,4 +24,4 @@ References:
 
 
 ### Interrupt Handler Pointer
-- Contains the [[Memory Address]] to the start of the [[Instruction]]of the [[Interrupts (中断)]]
+- Contains the [[Memory Address]] to the start of the [[Instruction]] of the [[Interrupts (中断)]]
