@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-04-09T17:27:12+08:00
+Last Date: 2024-04-10T21:08:16+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -25,35 +25,41 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 ## Heap Segment
 ---
-- **Dynamically allocated region** where the [[Process (进程)]] can create new data structures as needed
-- **Grows** and **shrinks** as the **process** allocates and deallocates memory
+![[address_space_heap.png]]
 
-- Grow upwards
-- Region of [[Virtual Memory]] where data can live indefinitely even when function returns
-- Expansion is done explicitly during **program runtime** using [[System Call (系统调用)]] like `brk()` in [[Kernel]] that follow [[POSIX]] or higher level [[Library Call]] 
-</br>
+- Data is added into heap segment **explicitly** by [[Process (进程)]] during **runtime** using [[System Call (系统调用)]] like `brk()` for [[Kernel]] that follow [[POSIX]]. The data in heap can live indefinitely even when function returns, the data is only removed when the process make the related System Call (系统调用) **explicitly**
+- **Grows** and **shrinks** as the process allocates and deallocates memory. The heap segment grows upwards, because the [[Memory Address]] is increasing as we have more data is allocated inside the heap segment
 
-- Require manual memory management from the process - process of allocating memory and deallocating memory. See language examples below
-- When assigning one variable to another variable, data is **not duplicated**, instead the [[Pointer]] to the data is duplicated and assigned
-- A nice visualisation on memory allocation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#boxes-live-in-the-heap)
+>[!bigbrain]
+> When assigning one variable to another variable, data is **not duplicated**, instead the [[Pointer]] to the data inside the heap segment is duplicated and assigned. A nice visualisation on heap memory allocation can be found [here](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#boxes-live-in-the-heap).
 
-**Java**
-- Memory allocation with `new` keyword, and memory deallocation is done by [[Garbage Collector]] automatically
-
-**Rust**
-- Memory allocation with `Box::new()` function, and memory deallocation is done automatically using [[Rust Ownership#Box Deallocation Principle]]
-
-**C**
-- Memory allocation with `malloc()` function, and manual memory deallocation is done with `free()` function
+>[!important] Manual memory management from the process needed!
+> Process is responsible of allocating memory and deallocating in the heap segment. See language examples below.
+>
+> **Java**
+> - Memory allocation with `new` keyword, and memory deallocation is done by [[Garbage Collector]] automatically
+> 
+> **Rust**
+> - Memory allocation with `Box::new()` function, and memory deallocation is done automatically using [[Rust Ownership#Box Deallocation Principle]]
+> 
+> **C**
+> - Memory allocation with `malloc()` function, and manual memory deallocation is done with `free()` function
 
 >[!caution] Manual Memory Deallocation is Dangerous!
->After we manually deallocated the heap memory associated with a [[Pointer]], then try to read data from the same pointer, it will lead to undefined behaviours. Thus, resulting in [[Memory Safety#Poor memory safety]]
+>After we manually deallocated the heap memory associated with a [[Pointer]], then try to read data from the same pointer, it will lead to undefined behaviours. Thus, resulting in [[Memory Safety#Poor memory safety]].
 >
->Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details
+>Refer to this [section of article](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html#rust-does-not-permit-manual-memory-management) for more details.
+
+### Heap fragmentation
+![[heap_fragmentation.png|250]]
+- As we allocate and deallocate chunks of data in the form of [[Memory Page]], the [[#Heap Segment]] can become more and more fragmented, effectively shrinking the size of the Heap segment, because [[Kernel]] assigns the space in heap segment in the form of memory pages
+- We should always to deallocate the chucks of data when we don't it anymore to avoid [[#Memory leak]]
 
 ### Memory leak
 - Happens when we **forget to release** data in [[Address Space#Heap Segment]] using `free()` in the example of C
 - This can eventually lead to the exhaustion of available [[Main Memory]], resulting in **degraded performance** or even **program crashes**
+
+
 ## Stack Segment
 ---
 ![[stack_segment.png|300]]
@@ -144,7 +150,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 - Except for the first frame, all frames contains the [[Memory Address]] of the previous stack frame, and the size of current stack frame which is used to adjust the [[Register#Stack Pointer]] to exclude the current stack frame from the stack segment when the function call of the current frame ends. The current stack frame will be overwritten when a new frame is added to the stack segment 
 
 ### Stack Overflow
-- Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment
+- Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment. Usually can be triggered easily without a proper implementation of [[Recursion#Recurrence Function]]
 ## Data Segment
 ---
 - This region stores **global** and **static variables** and **constants** used by the program, pre-defined before the execution of the program
