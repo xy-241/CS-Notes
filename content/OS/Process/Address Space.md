@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-04-10T21:08:16+08:00
+Last Date: 2024-04-11T16:45:41+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -52,12 +52,27 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 ### Heap fragmentation
 ![[heap_fragmentation.png|250]]
-- As we allocate and deallocate chunks of data in the form of [[Memory Page]], the [[#Heap Segment]] can become more and more fragmented, effectively shrinking the size of the Heap segment, because [[Kernel]] assigns the space in heap segment in the form of memory pages
-- We should always to deallocate the chucks of data when we don't it anymore to avoid [[#Memory leak]]
+
+- There are 2 types of heap fragmentation - **Internal Fragmentation** & **External Fragmentation**(show in the diagram above)
+
+|            | Internal Fragmentation                                                                                                                                                                                                                                                                                                                                            | External Fragmentation                                                                                                                                                                                                                                                |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Definition | When allocated [[Main Memory#Memory Frames\|Memory frames]] have **unused memory space**, since each memory frame comes with a **fixed size**.                                                                                                                                                                                                                    | When free **memory frames** in the heap are **scattered** throughout the memory space after a series of allocations and deallocations of memory blocks of **varying sizes**.                                                                                          |
+| Risk       | Increased memory consumption than actual demand.<br><br>For example, the memory frame size is `10MB`, and my program needs `10.00001MB`. We will get 2 memory frames that are `10MB` each, this means `9.99999MB` is wasted. Imagine I have a lot of programs with `10.00001MB` in my computer, that means we waste almost half of the available [[Main Memory]]! | Difficulty to allocate contiguous blocks of memory -> reduced performance.<br><br>Small gaps between allocated blocks can also become unusable if [[Virtual Memory]] isn't used, even though the total amount of free memory might be sufficient to fulfil a request. |
+
+
+>[!tip] Ways to handle memory fragmentation
+> **Compaction** - rearranging memory blocks to eliminate gaps. 
+> 
+> And many other techniques like [Dyanmic memory allocation - Wikipedia](https://en.wikipedia.org/wiki/Dynamic_memory_allocation) and [Memory pool - Wikipedia](https://en.wikipedia.org/wiki/Memory_pool).
+
 
 ### Memory leak
 - Happens when we **forget to release** data in [[Address Space#Heap Segment]] using `free()` in the example of C
 - This can eventually lead to the exhaustion of available [[Main Memory]], resulting in **degraded performance** or even **program crashes**
+
+>[!attention]
+> We should always deallocate the chucks of data when we don't need it anymore to avoid memory leak!
 
 
 ## Stack Segment
@@ -166,3 +181,4 @@ description: Stack (automatic memory management for function variables), Heap (d
 - [Dive Into Systems - Virtual Memory](https://diveintosystems.org/book/C13-OS/vm.html)
 - [What is Ownership? - The Rust Programming Language](https://rust-book.cs.brown.edu/ch04-01-what-is-ownership.html)
 - [WHY IS THE STACK SO FAST? - YouTube](https://www.youtube.com/watch?v=N3o5yHYLviQ)
+- [Fragmentation (computing) - Wikipedia](https://en.wikipedia.org/wiki/Fragmentation_(computing))

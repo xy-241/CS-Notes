@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-03-31T21:59:15+08:00
+Last Date: 2024-04-10T21:39:28+08:00
 References: 
 ---
 
@@ -30,47 +30,6 @@ References:
 ### File Permission
 - In [[POSIX]], file permissions are handled by **rwx bits**
 
-### File Compression
-- Process of **reducing the size** of one or more files to save storage space
-
->[!code]- Compress files in different folders without  including the parent directories of the path
->```bash
->#!/bin/bash
->set -eu
->set -o pipefail
->
-># Check if a filename argument is provided
->if [ "$#" -eq 0 ]; then
->  echo "Usage: xyz <filename> <path1> [<path2> ...]"
->  exit 1
->fi
->
->filename=$1
->
-># Create a temporary directory
->mkdir myTempZip
->
-># Copy required files to the temporary directory
->for arg in "${@:2}"; do
->  cp -R "$arg" ./myTempZip
->  echo "$arg"
->done
->
-># Navigate to the temporary directory
->cd myTempZip
->
-># Zip the contents of the directory
->zip -r "$filename" *
->
-># Move the zip file to the parent directory
->mv "$filename" ../
->
-># Navigate back to the original directory
->cd ..
->
-># Remove the temporary directory
->rm -rf myTempZip
->```
 
 ## Special File
 ---
