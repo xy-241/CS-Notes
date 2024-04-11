@@ -57,7 +57,7 @@ const calloutMapping = {
   todo: "todo",
   tip: "tip",
   hint: "tip",
-  important: "tip",
+  // important: "tip",
   success: "success",
   check: "success",
   done: "success",
