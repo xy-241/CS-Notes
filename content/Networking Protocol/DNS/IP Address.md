@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - networking
+  - bash
 Creation Date: 2023-10-03T11:14:44
-Last Date: 2024-04-08T20:27:49+08:00
+Last Date: 2024-04-09T16:12:52+08:00
 ---
 ## Abstract
 ---
@@ -50,3 +51,19 @@ Last Date: 2024-04-08T20:27:49+08:00
 - **Limited Broadcast Address**
 - This address sends a broadcast packet to all devices on the [[Computer Network#Local Area Network (LAN)]]. It's restricted to the LAN and won't be forwarded by [[Network Router]]
 - Useful for tasks such as [[DHCP]] where a device needs to obtain an [[IP Address]] from a **DHCP server**, and the DHCP server needs to broadcast its availability to all devices on the network
+
+
+## Useful CLI Tool
+---
+### ipinfo/cli
+- IP geolocation and other types of IP data
+- Install with `brew install ipinfo-cli`
+
+
+### asn
+- A more advanced [[#ipinfo/cli]] without paying any money 
+- Install with `brew install asn`
+- Refer to the [Github Page](https://github.com/nitefood/asn?tab=readme-ov-file#screenshots) for a list of features 
+
+>[!caution]
+> It seems like it isn't working well for [[#IPv6]], use [[#ipinfo/cli]] for IPv6 instead.

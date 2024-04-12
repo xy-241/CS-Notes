@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-04-08T00:47:25+08:00
+Last Date: 2024-04-09T15:45:51+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -188,7 +188,8 @@ ssid="`$airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`"
 # Add in the following
 ssid=`networksetup -getairportnetwork en0 | awk -F": " '{print $2}'`
 ``` 
-
+- [ ] [[IP Address#ipinfo/cli]]
+- [ ] [[IP Address#asn]]
 ## Hardware Tools
 ---
 - [ ] [rpi-imager](https://github.com/raspberrypi/rpi-imager)
