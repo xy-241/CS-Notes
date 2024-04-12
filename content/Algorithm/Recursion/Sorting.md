@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-03-28T15:40:31+08:00
+Last Date: 2024-04-12T13:34:22+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -250,7 +250,7 @@ import java.util.*;
 
 >[!help]- Is the code editor above not showing the correct source code?
 > Here is a backup, please report the issue [here](https://github.com/xy-241/CS-Notes/issues) or comment down below, so I can look into the issue. Thanks :)
-> ```bash
+> ```java
 > import java.util.*;
 > 
 > public class InsertionSort {
@@ -271,15 +271,19 @@ import java.util.*;
 >     int counter = 0;
 >     
 >     for (int i=1; i<n; i++) {
->       int insertionPt = i;
->       while (insertionPt > 0 && arr[insertionPt] < arr[insertionPt-1]) {
->         counter++;
->         try { Thread.sleep(1); } catch (InterruptedException e) {}
->         
->         int temp = arr[insertionPt];
->         arr[insertionPt] = arr[insertionPt-1];
->         arr[insertionPt-1] = temp;
+>       int insertionPt = i-1;
+>       int curr = arr[i];
+>       
+>       counter++;
+>       
+>       while (insertionPt >= 0 && arr[insertionPt] > curr) {
+>         arr[insertionPt+1] = arr[insertionPt];
+>         arr[insertionPt] = curr;
 >         insertionPt--;
+>         
+>         
+>         counter++;
+>         try { Thread.sleep(1); } catch (InterruptedException e) {} // Work Simulation
 >       }
 >     }
 >     
@@ -304,6 +308,7 @@ import java.util.*;
 >   }
 > }
 > ```
+
 
 
 >[!important]- Loop Invariant
