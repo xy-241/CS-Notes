@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-04-09T15:45:51+08:00
+Last Date: 2024-04-13T22:54:18+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -51,6 +51,7 @@ title: Macos setup for software engineer
 - [ ] [[File System Hierarchy#joshuto]] - Terminal File Manager
 - [ ] [[File#dua]] - Disk Usage Analyser
 - [ ] `brew install btop` - `htop`/`top` replacement
+- [ ] `brew install xh` - partial [[curl]] replacement
 - [ ] `navi` - `man` replacement
 ```bash
 brew install navi # Installation 
@@ -134,6 +135,7 @@ h() {
 - [ ] `brew install --cask dbeaver-community`  - Open-source DB viewer
 - [ ] `brew install gh`, `gh auth login` for painless Github CLi Auth
 - [ ] [[Git#Git Add-ons]]
+- [ ] `brew install lnav` - Logfile Navigator
 
 
 

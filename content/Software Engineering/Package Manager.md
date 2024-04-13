@@ -10,7 +10,7 @@ tags:
   - js
   - rust
 Creation Date: 2024-03-10, 17:29
-Last Date: 2024-04-07T23:16:32+08:00
+Last Date: 2024-04-12T00:55:48+08:00
 References: 
 draft: 
 description: 
@@ -21,6 +21,14 @@ description:
 
 >[!success] Effortless Management
 > Without a package manager, you'd have to hunt down software, figure out all its dependencies, install everything in the right order – a tedious and error-prone process. Some may even require you to compile from source which requires a compiling tool chain.
+
+- The list below shows the comparison of commands of package managers lik [[#Brew]], apt & [[#Pacman]] etc
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" src="https://en.wikipedia.org/wiki/Package_manager#Comparison_of_commands" 
+ ></iframe>
+ </div>
 
 
 ## Brew
@@ -156,3 +164,8 @@ description:
 
 >[!caution]
 > We need to manually update the packages installed. 
+
+
+## References
+---
+- [Package manager - Wikipedia](https://en.wikipedia.org/wiki/Package_manager#Comparison_of_commands)
