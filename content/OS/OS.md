@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-03-03T16:43:08+08:00
+Last Date: 2024-04-14T11:51:05+08:00
 References: 
 description: The giant that powers the software application we use on a daily basis!
 ---
@@ -24,7 +24,7 @@ description: The giant that powers the software application we use on a daily ba
 ### Embedded OS
 - Run on devices like ovens, no un-trusted software will ever run on it
 - All software in [[ROM]]
-- One example is embedded [[Linux Kernel]]
+- One example is [[OpenWRT]]
 
 ### Smart Card OS
 - Smallest [[OS]] run on smart cards
