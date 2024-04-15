@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-03-26, 10:42
-Last Date: 2024-03-26T10:46:15+08:00
+Last Date: 2024-04-15T16:34:56+08:00
 References: 
 draft: 
 description: 
@@ -14,7 +14,7 @@ description:
 ## Abstract
 ---
 - Each node has $0$ to $2$ [[#Edge]]
-- The maximum number of nodes at `n th` [[#Level]] is `2^(n-1)`
+- The maximum number of nodes at `n`th [[Tree#Level]] is `2^(n-1)`
 
 >[!bigbrain]- Implementation with Linked List
 > Refer to [[Linked List]] to understand its properties.
@@ -24,6 +24,14 @@ description:
 > Given the index of parent node is `i`, the index of its left child is `i*2+1`, right child is `i*2+2`. Refer to [[Array]] to understand its properties.
 > ![[binary_tree_array.png|500]]
 
+## Degenerate Binary Tree
+---
+![[bst_to_skewed_tree.png|400]]
+
+- A [[Binary Tree]] in which each parent node has only one child node associated with it. Such a tree behaves like a [[Linked List]], resulting in $O(n)$ complexity for search, insertion and deletion
+
+>[!attention] Poor performance!
+> Binary tree should deliver $O(logn)$ in the ideal situation.
 
 ## Leetcode Questions
 ---

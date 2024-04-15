@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-03T17:41:00
-Last Date: 2024-04-14T16:54:58+08:00
+Last Date: 2024-04-15T16:35:53+08:00
 ---
 ## Abstract
 ---
@@ -30,7 +30,7 @@ Last Date: 2024-04-14T16:54:58+08:00
 > - Useful in converting the BST to [[#Greater Tree]]
 
 >[!tip] Locate and insert a node in $log(n)$ time
-> ❗ We can only achieve $log(n)$ if the BST is [[Tree#Height-Balanced]]. A not height-balanced BST can be degraded into a linear [[bst_to_skewed_tree.png|skewed BST]]. 
+> ❗ We can only achieve $log(n)$ if the BST is [[Tree#Height-Balanced]]. A not height-balanced BST can be degraded into a [[Binary Tree#Degenerate Binary Tree]].
 > 
 > **Node Location**
 > - If the current node isn't the node we are finding, select the `node.left` when target value is smaller than the current node, otherwise select `node.right`

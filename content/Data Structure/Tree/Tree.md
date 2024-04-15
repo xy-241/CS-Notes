@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-03T17:32:00
-Last Date: 2024-04-14T19:14:18+08:00
+Last Date: 2024-04-15T16:28:17+08:00
 ---
 ## Abstract
 ---
@@ -19,9 +19,12 @@ Last Date: 2024-04-14T19:14:18+08:00
 ---
 ### Root Node
 - Node without parent node
+
+### Null Node
+- A node that `null`, acts a termination point for a branch of the [[Tree]]
 ### Leaf Node
 - Node without any child nodes
-- Its 2 pointers point to `null`
+- Its 2 pointers point to [[#Null Node]]
 ### Edge
 - The link created by [[Pointer]] that links up 2 nodes
 
@@ -53,9 +56,9 @@ Last Date: 2024-04-14T19:14:18+08:00
 - The **difference** in [[#Tree Height]] between the left and right subtrees of **a node**
 - A measure of how unbalanced the tree is at that node
 ### Height-Balanced
-- For **all nodes**, [[#Balance Factor]] should be no greater than 1 or smaller than -1
-- This means that the tree is relatively evenly distributed, and no one subtree is significantly taller than the others
-- More efficient for search, insertion, and deletion operations
+- [[Tree#Tree Height]] of the **two child subtrees** of **any node** differ by at most $1$; no greater than $1$ and not smaller than $-1$. This means that the tree is **relatively evenly distributed**, and no one subtree is significantly taller than the others
 
+>[!success] Key benefit
+> This [[#Balance Factor]] ensures that the time complexity of operations like insertion, deletion, and search remains $O(log n)$, where $n$ is the number of nodes in the tree.
 
 
