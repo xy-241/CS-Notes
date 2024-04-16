@@ -6,12 +6,13 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-26T00:14:31+08:00
-Last Date: 2024-04-15T17:38:27+08:00
+Last Date: 2024-04-16T12:24:29+08:00
 References: 
 ---
-## Abstract
+## Abstract 
 ---
-![[avl_tree.png|500]]
+
+![[avl_tree.png|400]]
 
 - A type of **Self-Balancing Binary Search Tree (平衡二叉搜索树)**. Basiclly, an optimised [[Binary Search Tree (二叉搜索树)]] that is either empty OR with all nodes that are [[Tree#Height-Balanced]]
 
@@ -76,25 +77,79 @@ void updateHeight(TreeNode node) {
 - These rotations are performed to **restore the balance** whenever the [[Tree#Balance Factor]] of a node becomes **greater than $1$** or **less than $-1$**
 
 ### AVL Tree Right Rotation
-![[avl_tree_right_rotation_1.png|500]]
 
-- When the [[Tree#Balance Factor]] of a node(parent node) is smaller than $-1$ or bigger than $1$. We **right rotate** the parent node to its left child node. So the left child node becomes the parent node and the parent node becomes the child node
+![[avl_tree_right_rotation_1.png.png]]
+
+- When the [[Tree#Balance Factor]] of a node(parent node) is bigger than $1$ - **skewed to the left**. We **right rotate** the parent node to its **left child node**. So the **left child node** becomes the parent node and the parent node becomes the child node
 
 >[!question] What if the left child node has a node as its right node?
 > In this case, the right node of the left child node is a **grandchild node** to the parent node. We simply place the grandchild node as the left child of the parent node, as shown in the diagram below.
 > 
 > ![[avl_right_rotation_2.png]]
 
+>[!code]
+> ```java
+> /* 右旋操作 */
+> TreeNode rightRotate(TreeNode node) {
+>   TreeNode child = node.left;
+>   TreeNode grandChild = child.right;
+>   // 以 child 为原点，将 node 向右旋转
+>   child.right = node;
+>   node.left = grandChild;
+>   // 更新节点高度
+>   updateHeight(node);
+>   updateHeight(child);
+>   // 返回旋转后子树的根节点
+>   return child;
+> }
+> ```
+
+
 ### AVL Tree Left Rotation
 
+![[avl_tree_left_rotation_1.png]]
+
+
+- When the [[Tree#Balance Factor]] of a node(parent node) is smaller than $-1$ - **skewed to the right**. We **left rotate** the parent node to its **right child node**. So the **right child node** becomes the parent node and the parent node becomes the child node
+
+>[!question] What if the right child node has a node as its left node?
+> In this case, the **left node** of the **right child node** is a **grandchild node** to the parent node. We simply place the grandchild node as the **right child** of the parent node, as shown in the diagram below.
+> 
+> ![[avl_tree_right_rotation_2.png]]
+
+>[!code]
+> ```java
+> /* 左旋操作 */
+> TreeNode leftRotate(TreeNode node) {
+>   TreeNode child = node.right;
+>   TreeNode grandChild = child.left;
+>   // 以 child 为原点，将 node 向左旋转
+>   child.left = node;
+>   node.right = grandChild;
+>   // 更新节点高度
+>   updateHeight(node);
+>   updateHeight(child);
+>   // 返回旋转后子树的根节点
+>   return child;
+> }
+> ```
 
 ### AVL Tree Left-Right Rotation
+![[avl_tree_left_right_rotation.png]]
 
-
+>[!code]
+> ```java
+> node.left = leftRotate(node.left);
+> return rightRotate(node);
+> ```
 ### AVL Tree Right-left Rotation
+![[avl_tree_right_left_rotation.png]]
 
-
-
+>[!code]
+> ```java
+> node.right = rightRotate(node.right);
+> return leftRotate(node);
+> ```
 
 ## Leetcode Problems
 ---
