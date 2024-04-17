@@ -10,7 +10,7 @@ tags:
   - linux
   - macos
 Creation Date: 2024-03-08, 21:34
-Last Date: 2024-04-02T23:14:14+08:00
+Last Date: 2024-04-18T02:13:06+08:00
 References: 
 draft: 
 description: 
@@ -40,11 +40,32 @@ description:
 
 ## SSH Channel
 ---
-- WIP 🚧
+
+![[ssh_tunnel_multiplexing.png|400]]
+
+- A **single SSH connection** can be **multiplexed** into **multiple SSH channels simultaneously**, each **transferring various types of data bidirectionally**
+
+>[!example]
+> **Session Channel**
+> - Channel used for running commands on remote [[Host]]
+> 
+> **Port Forwarding Channel**
+> - For [[Port Forwarding]]
+> 
+> **X11 Channel**
+> - Forwarding X11 (graphical user interface) traffic, allowing remote X11 applications to be displayed on the local machine
+
+
+
 
 ## Public-key Cryptography Authentication
 ---
 - We can use username and password, but [[SSH]] supports [[Asymmetric Cryptography]] which is more secure
+
+>[!question] Why not just use the good old username and password?
+> First, password is **vulnerable to brute-force attacks**, you know users tend to set **weak passwords** :)
+> 
+> Second, we may have multiple users accessing the same remote server account. Using password means **all users share the same password**, on the other hand, with public-key, each user has his **own private key** to access the remote server. When we want to **remove a user's access**, we just need to **remove his public key** from the remote server.
 
 >[!code] Setup Public-key Cryptography Authentication
 > 1. Generate [[Asymmetric Cryptography#Public Key]] and [[Asymmetric Cryptography#Private Key]] using [[Asymmetric Cryptography#EdDSA, ED25519]] (Much shorter key than [[Asymmetric Cryptography#RSA]] with the same level of encryption)
@@ -82,3 +103,4 @@ description:
 ## References
 ---
 - [How Secure Shell Works (SSH) - Computerphile - YouTube](https://youtu.be/ORcvSkgdA58?si=i5F1Jc2ecK1bXJJJ)
+- [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell#:~:text=A%20single%20SSH%20connection%20can,of%20a%20server%2Dside%20process.)
