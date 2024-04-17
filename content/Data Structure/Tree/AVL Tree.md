@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-26T00:14:31+08:00
-Last Date: 2024-04-16T12:24:29+08:00
+Last Date: 2024-04-17T15:35:07+08:00
 References: 
 ---
 ## Abstract 
@@ -24,53 +24,55 @@ References:
 > The self-balancing property guarantees that the [[Tree#Tree Height]] of an AVL tree with $n$ nodes is always around $O(log n)$. This means operations like searching, insertion, and deletion take a maximum of $O(log n)$ time, making them very efficient.
 
 
-### AVL Tree Balance Factor
-- Maintaining the [[Tree#Balance Factor]] of each node prevents [[Binary Tree#Degenerate Binary Tree]]. The codes to calculate the balance factor is given below
-
-```java
-/* 获取平衡因子 */
-int balanceFactor(TreeNode node) {
-  // 空节点平衡因子为 0
-  if (node == null)
-    return 0;
-  // 节点平衡因子 = 左子树高度 - 右子树高度
-  return height(node.left) - height(node.right);
-}
-```
 
 
-### AVL Tree Node
+
+## AVL Tree Node
+---
 - The node should have a piece of information that describes its **current [[Tree#Node Height]]**, so its parent node is able to calculate the [[#AVL Tree Balance Factor]] to see if re-balancing is needed, **saving the computation** to re-calculate the node height when parent node needs the information
 - [[Tree#Null Node]] has a node height of $-1$ and [[Tree#Leaf Node]] has a node height of $0$
 - Below shows the codes for **AVL tree node definition** and functions to retrieve and update the **height information** of a node
 
 ```java
-/* AVL 树节点类 */
+/* AVL Tree Node Definition */
 class TreeNode {
-  public int val; // 节点值
-  public int height; // 节点高度
-  public TreeNode left; // 左子节点
-  public TreeNode right; // 右子节点
+  public int val; // Node value
+  public int height; // Node height, default 0
+  public TreeNode left; // left child node, default null node
+  public TreeNode right; // right child node, default null node
   public TreeNode(int x) {
     val = x;
   }
 }
 
-/* 获取节点高度 */
+/* Obtain Node's Height */
 int height(TreeNode node) {
-  // 空节点高度为 -1 ，叶节点高度为 0
+  // Null node's height is -1, leaf node's height is 0 
   return node == null ? -1 : node.height;
 }
 
-/* 更新节点高度 */
+/* Update Node Height */
 void updateHeight(TreeNode node) {
-  // 节点高度等于最高子树高度 + 1
+  // Node's height is the height of its higher subtree + 1
   node.height = Math.max(height(node.left), height(node.right)) + 1;
 }
 ```
- 
+### AVL Tree Balance Factor
+- Maintaining the [[Tree#Balance Factor]] of each node prevents [[Binary Tree#Degenerate Binary Tree]]. The codes to calculate the balance factor is given below
 
+```java
+/* Obtain Balance Factor */
+int balanceFactor(TreeNode node) {
+  // Null node has a balance factor of 0
+  if (node == null)
+    return 0;
+  // Node's balance factor = left subtree's height - right subtree's height
+  return height(node.left) - height(node.right);
+}
+```
 
+>[!example] Practice questions
+> - [ ] [110. Balanced Binary Tree](https://leetcode.cn/problems/balanced-binary-tree/)
 
 ## AVL Tree Rotation
 ---
@@ -89,17 +91,17 @@ void updateHeight(TreeNode node) {
 
 >[!code]
 > ```java
-> /* 右旋操作 */
+> /* Right Rotation */
 > TreeNode rightRotate(TreeNode node) {
 >   TreeNode child = node.left;
 >   TreeNode grandChild = child.right;
->   // 以 child 为原点，将 node 向右旋转
+>   // Right rotate the node to its right child node
 >   child.right = node;
 >   node.left = grandChild;
->   // 更新节点高度
+>   // Update the height of the node and the child node(the parent node after right rotation)
 >   updateHeight(node);
 >   updateHeight(child);
->   // 返回旋转后子树的根节点
+>   // Return the child node 
 >   return child;
 > }
 > ```
@@ -119,23 +121,27 @@ void updateHeight(TreeNode node) {
 
 >[!code]
 > ```java
-> /* 左旋操作 */
+> /* Left Rotation */
 > TreeNode leftRotate(TreeNode node) {
 >   TreeNode child = node.right;
 >   TreeNode grandChild = child.left;
->   // 以 child 为原点，将 node 向左旋转
+>   // Left rotate the node to its left child node
 >   child.left = node;
 >   node.right = grandChild;
->   // 更新节点高度
+>   // Update the height of the node and the child node(the parent node after left rotation)
 >   updateHeight(node);
 >   updateHeight(child);
->   // 返回旋转后子树的根节点
+>   // Return the child node 
 >   return child;
 > }
 > ```
 
 ### AVL Tree Left-Right Rotation
+
 ![[avl_tree_left_right_rotation.png]]
+
+- The [[AVL Tree]] is skewed to the **left side**, so we should perform [[#AVL Tree Right Rotation]] on the parent node. However, the child node has a [[Tree#Balance Factor]] that is $< 0$. This means the child node's **right side** is one level deeper(there is no way to be deeper because in that case, we will perform self-balancing on the child node already). If we perform a **right rotation**, the parent node will be added to the child node as the **right node**, the $-1$ to the **parent's left hand side** is offset by addition of parent node to the child node. Thus, the AVL Tree remains **NOT** [[Tree#Height-Balanced]]
+- The way to handle this is to perform [[#AVL Tree Left Rotation]] on the child node first, so the **left hand side of the child node** is one level deeper than the **right side**. Now if we perform **right rotation** on the parent node, the child node will become the new parent node, and its **left hand side** $-1$ and **right side** $+1$, so from $left-right=2$ to $(left-1) - (right+1) = left -right - 1 -1 = 2-2 = 0$
 
 >[!code]
 > ```java
@@ -145,17 +151,50 @@ void updateHeight(TreeNode node) {
 ### AVL Tree Right-left Rotation
 ![[avl_tree_right_left_rotation.png]]
 
+- The [[AVL Tree]] is skewed to the **right side**, so we should perform [[#AVL Tree Left Rotation]] on the parent node. However, the child node has a [[Tree#Balance Factor]] that is $> 0$. This means the child node's **left side** is one level deeper(there is no way to be deeper because in that case, we will perform self-balancing on the child node already). If we perform a **left rotation**, the parent node will be added to the child node as the **left node**, the $-1$ to the **parent's right hand side** is offset by addition of parent node to the child node. Thus, the AVL Tree remains **NOT** [[Tree#Height-Balanced]]
+- The way to handle this is to perform [[#AVL Tree Right Rotation]] on the child node first, so the **right hand side of the child node** is one level deeper than the **left side**. Now if we perform **left rotation** on the parent node, the child node will become the new parent node, and its **right hand side** $-1$ and **left side** $+1$, so from $left-right=-2$ to $(left+1) - (right-1) = left -right + 1 + 1 = -2+2 = 0$
+
+
 >[!code]
 > ```java
 > node.right = rightRotate(node.right);
 > return leftRotate(node);
 > ```
 
-## Leetcode Problems
+## AVL Tree Insertion
 ---
-### Properties
-- [110. Balanced Binary Tree](https://leetcode.cn/problems/balanced-binary-tree/)
-- [108. Convert Sorted Array to Binary Search Tree](https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/)
+- Node insertion for [[AVL Tree]] is similar to [[Binary Search Tree (二叉搜索树)#BST Node Insertion]]. The only difference is that after the node insertion, we need to update the [[Tree#Node Height]] when recurse back to the [[Tree#Root Node]], and perform [[#AVL Tree Rotation]] to ensure the AVL Tree remains [[Tree#Height-Balanced]]
+
+```java
+/* Node Insertion */
+void insert(int val) {
+  root = insertHelper(root, val);
+}
+
+/* Node Insertion using recursion（dfs helper） */
+TreeNode insertHelper(TreeNode node, int val) {
+  if (node == null)
+    return new TreeNode(val);
+  /* 1. Find the insertion point - a null node, and replace it with the new Node to perform node insertion */
+  if (val < node.val)
+    node.left = insertHelper(node.left, val);
+  else if (val > node.val)
+    node.right = insertHelper(node.right, val);
+  else
+    return node; // Abort the node insertion if it is a duplicated node
+  updateHeight(node); // Update the height of node all the way back to the root node
+  /* 2. AVL Tree rotation for self-balancing */
+  node = rotate(node);
+  // Return the root node of the subtree
+  return node;
+}
+```
+
+## AVL Tree Deletion
+---
+
+
+
 
 
 ## References
