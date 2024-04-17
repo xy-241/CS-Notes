@@ -6,16 +6,23 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-18T20:46:00
-Last Date: 2023-12-05T17:45:51+08:00
+Last Date: 2024-04-17T20:42:58+08:00
 References: 
 ---
 ## Abstract
 ---
-- Used with [[Operand Forwarding]] to handle [[Pipeline Stall]]
-- Without *Out-of-Order Execution*
-![[out-of-order_before.png]]
-- The third [[Instruction]] has to stop because the second [[Instruction]] stops
-- With *Out-of-Order Execution*
-![[out-of-order_after.png]]
-- By shifting the starting point of [[Instruction]], we can minimize *idle time*
-- The idea is to execute independent [[Instruction]] in between [[Instruction]] that are dependent on each other
+- Usually used with [[Operand Forwarding]] to handle **negative performance impact** caused by [[Pipeline Stall]]
+- The idea is to execute **independent** [[Instruction]] in between instruction that are dependent on each other by **shifting the order of execution** defined in a given program. So those independent instructions can avoid pipeline stall. Thus, minimize **idle time**
+
+>[!example]
+> **Without Out-of-Order Execution**
+> 
+> ![[out-of-order_before.png|500]]
+> - The **third instruction** has to stop because the **second instruction** stops
+>   
+> **With Out-of-Order Execution**
+> 
+> ![[out-of-order_after.png|500]]
+> - 2 pipeline stalls are removed
+
+

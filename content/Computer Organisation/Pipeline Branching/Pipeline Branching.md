@@ -6,20 +6,16 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-05, 17:15
-Last Date: 2024-02-12T19:06:01+08:00
+Last Date: 2024-04-17T20:53:56+08:00
 References: 
 ---
 ## Abstract
 ---
-- Instead executing [[Instruction]] one by one in sequence. With loops like **for-loop & while-loop**. We will jump from one [[Instruction]] back to previous [[Instruction]] that is many [[Instruction]] away
-- Example
- ![[step_in.png]]
+ ![[step_in.png|500]]
+ 
+- Instead of executing [[Instruction]] one by one in sequence. The execution jump around the program instructions. Very common with loops like **for-loop & while-loop**. The execution jumps back to previous instruction (start of the loop)
 
 
-## Cons
----
-### Potential hit on performance
-- When we need to branch back to the destination, this will lead to [[Pipeline Flush]]
+>[!caution] Potential performance hit
+> When the execution jumps aorund without going down the instructions one by one, [[Pipeline Flush]] is likely to happen.
 
-## Terminologies 
----
