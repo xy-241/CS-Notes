@@ -45,7 +45,7 @@ fly ips list
 fly certs add <CUSTOM_DOMAIN_ENDPOINT>
 fly certs show <CUSTOM_DOMAIN_ENDPOINT>
 ```
-- [[Port Forwarding#Fly.io App Port Forwarding]]
+- [[Local Port Forwarding#Fly.io App Port Forwarding]]
 
 ```bash title="Postgres Management"
 fly postgres list

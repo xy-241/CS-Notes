@@ -34,7 +34,7 @@ aws ec2 start-instances --instance-ids <YOUR_INTANCE_ID>
 aws ssm start-session --target <INTANCE_ID>
 ```
 
-- [[Port Forwarding#EC2 Port Forwarding]]
+- [[Local Port Forwarding#EC2 Port Forwarding]]
 
 ## Debugging inside EC2
 ---
