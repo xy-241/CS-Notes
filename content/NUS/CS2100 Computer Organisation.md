@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-03-02T19:53:06+08:00
+Last Date: 2024-04-17T21:11:13+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -95,14 +95,14 @@ title: cs2100 nus notes
 - [[Pipeline Stages]]
 - [[Instruction-Level Parallelism]]
 
-### Pipeline Branching
-- [[Pipeline Branching]]
-- [[Pipeline Flush]]
-- [[Branch Prediction]]
-- [[Branch Prediction Strategies (Heuristics)]]
-
 ### Pipeline Hazards
 - [[Read-After-Write(RAW) Hazard]]
 - [[Pipeline Stall]]
 - [[Operand Forwarding]]
 - [[Out-of-Order Execution]]
+
+### Pipeline Branching
+- [[Pipeline Branching]]
+- [[Pipeline Flush]]
+- [[Branch Prediction]]
+- [[Branch Prediction Strategies (Heuristics)]]
