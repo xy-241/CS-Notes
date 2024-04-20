@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-26T00:14:31+08:00
-Last Date: 2024-04-17T15:35:07+08:00
+Last Date: 2024-04-20T20:10:58+08:00
 References: 
 ---
 ## Abstract 
@@ -23,15 +23,26 @@ References:
 >[!success] Always efficient searching, deletion and insertion operations
 > The self-balancing property guarantees that the [[Tree#Tree Height]] of an AVL tree with $n$ nodes is always around $O(log n)$. This means operations like searching, insertion, and deletion take a maximum of $O(log n)$ time, making them very efficient.
 
+- Below is an implementation of AVL tree using Java, read [[#AVL Tree Node]], [[#AVL Tree Rotation]], [[#AVL Tree Insertion]] and [[#AVL Tree Deletion]] for a code breakdown and explanation
 
+
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/42auj4tj9?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true" 
+ ></iframe>
+ </div>
+ 
 
 
 
 ## AVL Tree Node
 ---
 - The node should have a piece of information that describes its **current [[Tree#Node Height]]**, so its parent node is able to calculate the [[#AVL Tree Balance Factor]] to see if re-balancing is needed, **saving the computation** to re-calculate the node height when parent node needs the information
-- [[Tree#Null Node]] has a node height of $-1$ and [[Tree#Leaf Node]] has a node height of $0$
-- Below shows the codes for **AVL tree node definition** and functions to retrieve and update the **height information** of a node
+- Below shows the codes for **AVL tree node definition** 
+
+
 
 ```java
 /* AVL Tree Node Definition */
@@ -44,7 +55,13 @@ class TreeNode {
     val = x;
   }
 }
+```
 
+### AVL Tree Node Height
+- [[Tree#Null Node]] has a node height of $-1$ and [[Tree#Leaf Node]] has a node height of $0$
+- Below shows functions to retrieve and update the **height information** of a node
+
+```java
 /* Obtain Node's Height */
 int height(TreeNode node) {
   // Null node's height is -1, leaf node's height is 0 
@@ -57,6 +74,7 @@ void updateHeight(TreeNode node) {
   node.height = Math.max(height(node.left), height(node.right)) + 1;
 }
 ```
+
 ### AVL Tree Balance Factor
 - Maintaining the [[Tree#Balance Factor]] of each node prevents [[Binary Tree#Degenerate Binary Tree]]. The codes to calculate the balance factor is given below
 
@@ -161,6 +179,40 @@ int balanceFactor(TreeNode node) {
 > return leftRotate(node);
 > ```
 
+### AVL Tree Rotation Function
+- We can encapsulate the logic of [[#AVL Tree Left Rotation]], [[#AVL Tree Right Rotation]], [[#AVL Tree Left-Right Rotation]] and [[#AVL Tree Right-left Rotation]] into a single function `rotate(TreeNode node)` as shown below
+
+```java
+/* Perform Self-balancing */
+TreeNode rotate(TreeNode node) {
+  // obtain the balance factor of current node
+  int balanceFactor = balanceFactor(node);
+  // Skewed to left
+  if (balanceFactor > 1) {
+    if (balanceFactor(node.left) >= 0) {
+      // right rotation
+      return rightRotate(node);
+    } else {
+      // left-right rotation
+      node.left = leftRotate(node.left);
+      return rightRotate(node);
+    }
+  }
+  // Skewed to right
+  if (balanceFactor < -1) {
+    if (balanceFactor(node.right) <= 0) {
+      // left rotation
+      return leftRotate(node);
+    } else {
+      // right-left rotation
+      node.right = rightRotate(node.right);
+      return leftRotate(node);
+    }
+  }
+  // already balanced, no changes needed 
+  return node;
+}
+```
 ## AVL Tree Insertion
 ---
 - Node insertion for [[AVL Tree]] is similar to [[Binary Search Tree (二叉搜索树)#BST Node Insertion]]. The only difference is that after the node insertion, we need to update the [[Tree#Node Height]] when recurse back to the [[Tree#Root Node]], and perform [[#AVL Tree Rotation]] to ensure the AVL Tree remains [[Tree#Height-Balanced]]
@@ -175,7 +227,7 @@ void insert(int val) {
 TreeNode insertHelper(TreeNode node, int val) {
   if (node == null)
     return new TreeNode(val);
-  /* 1. Find the insertion point - a null node, and replace it with the new Node to perform node insertion */
+  /* Find the insertion point - a null node, and replace it with the new Node to perform node insertion */
   if (val < node.val)
     node.left = insertHelper(node.left, val);
   else if (val > node.val)
@@ -183,7 +235,7 @@ TreeNode insertHelper(TreeNode node, int val) {
   else
     return node; // Abort the node insertion if it is a duplicated node
   updateHeight(node); // Update the height of node all the way back to the root node
-  /* 2. AVL Tree rotation for self-balancing */
+  /* AVL Tree rotation for self-balancing */
   node = rotate(node);
   // Return the root node of the subtree
   return node;
@@ -192,7 +244,50 @@ TreeNode insertHelper(TreeNode node, int val) {
 
 ## AVL Tree Deletion
 ---
+- Similar to [[Binary Search Tree (二叉搜索树)#BST Node Deletion]], but we need to perform self-balancing after the deletion which can be conveniently performed using [[Recursion]]. We are using recursion to find the deleted node, so we don't need to keep track of the previous node manually
 
+```java
+/* Node Deletion */
+void remove(int val) {
+  root = removeHelper(root, val);
+}
+
+/* Node Deletion using recursion（dfs helper） */
+TreeNode removeHelper(TreeNode node, int val) {
+  if (node == null) return null;
+
+  /* 1. Find node that is the desired node */
+  if (val < node.val)
+	// Since the value of deleted node is smaller, go to left subtree to find the deleted node
+    node.left = removeHelper(node.left, val);
+  else if (val > node.val)
+	// Since the value of deleted node is bigger, go to right subtree to find the deleted node
+    node.right = removeHelper(node.right, val);
+  else { // deleted node found!
+	// The degree of deleted node is 0 or 1
+    if (node.left == null || node.right == null) {
+      TreeNode child = node.left != null ? node.left : node.right;
+      // when degree is 0 ，delete current node and return null node
+      if (child == null)
+        return null;
+      // when degree is 1, replace current node with its child node
+      else node = child;
+    } else { // The degree of deleted node is 2
+      TreeNode temp = node.right;
+      while (temp.left != null) {
+        temp = temp.left;
+      }
+      // replace the current node with the smallest node from its right subtree
+      node.right = removeHelper(node.right, temp.val);
+      node.val = temp.val;
+    }
+  }
+  updateHeight(node); // update the node height recursively 
+  /* AVL Tree rotation for self-balancing */
+  node = rotate(node); 
+  return node; // return the root node of the subtree
+}
+```
 
 
 
