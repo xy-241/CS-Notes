@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-29T19:10:00
-Last Date: 2024-04-15T18:44:42+08:00
+Last Date: 2024-04-20T22:25:15+08:00
 References: 
 sr-due: 2024-03-01
 sr-interval: 8
@@ -88,7 +88,7 @@ sr-ease: 267
 ## Hardware interrupts (外中断)
 ---
 - Raised by hardware devices. Follow the [[Sequential Circuit#Asynchronous Sequential Circuit]] behaviour, can occur at any time
-- One example is [[Timer Chip]] used for [[Multi-tasking#Preemptive Multitasking]]
+- One example is [[Timer Chip]] used for [[Concurrency (并发)#Preemptive Scheduling]]
 - We have a [[Interrupt Controller]] like the [[RISCV CLINT]] in RISCV to handle interrupt sources that share the same **interrupt pin**
 
 >[!example]- Alarm Signal

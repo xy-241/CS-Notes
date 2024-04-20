@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-04-10T21:39:28+08:00
+Last Date: 2024-04-20T00:05:43+08:00
 References: 
 ---
 
@@ -25,6 +25,22 @@ References:
 </br>
 
 - 2 parts - **Filename** & [[Inode#Inode Number]], doesn't have any _metadata_ associated
+
+>[!code] Create a dummy file with a specified size
+> This could be useful for testing the [[Bandwidth#Network Throughput]].
+> 
+> ```python
+> def generate_dummy_file(file_path, size_gb):
+>     with open(file_path, 'wb') as f:
+>         f.write(b'\0' * (1024 * 1024 * 1024 * size_gb))
+> 
+> file_path = input("Enter the name for the dummy file: ") + '.bin'
+> size_gb = int(input("Enter the size in GB: "))
+> 
+> generate_dummy_file(file_path, size_gb)
+> print(f"Dummy file of size {size_gb}GB generated at '{file_path}'")
+> ```
+
 ### File Descriptor
 - A small [[Integer (整数)]] associated with [[File]]
 ### File Permission

@@ -6,13 +6,16 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-04-18, 15:17
-Last Date: 2024-04-19T15:51:09+08:00
+Last Date: 2024-04-20T21:55:10+08:00
 References: 
 draft: 
 description: 
 ---
 ## Abstract
 ---
+
+![[fpga.gif]]
+
 - Stands for **Field Programmable Gate Array**
 - The 'do anything' hardware that is made up a large number of [[#CLB]]
 - FPGA can be programmed to do almost anything, we can use [[#Hardware Description Language]] to perform [[Circuit Design]], then upload to FPGA, and it will have the ability of that particular hardware circuit design. Commonly used for tasks that require parallel processing, real-time processing, or specialized hardware acceleration
@@ -51,3 +54,4 @@ description:
 - [The "Do Anything" Chip: FPGA - YouTube](https://www.youtube.com/watch?v=ePwo3P1iZO4)
 - [FPGA in trading | Ultra low latency trading | HFT System Design - YouTube](https://www.youtube.com/watch?v=uJT33dnTlqY)
 - [What's an FPGA? - YouTube](https://youtu.be/iHg0mmIg0UU?si=aqlvfXdkPlzbajlQ)
+- [CPU vs FPGA - YouTube](https://www.youtube.com/watch?v=BML1YHZpx2o)

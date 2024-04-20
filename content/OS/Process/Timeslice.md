@@ -6,13 +6,13 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-05T12:16:44+08:00
-Last Date: 2023-12-26T22:44:16+08:00
+Last Date: 2024-04-20T22:25:30+08:00
 References: 
 ---
 ## Abstract
 ---
-- Also known as *Quantums*
-- The period of time for which a [[Process (进程)]] is allowed to run in a [[Multi-tasking#Preemptive Multitasking]] system
+- Also known as **Quantums**
+- The period of time for which a [[Process (进程)]] is allowed to run in a [[Concurrency (并发)#Preemptive Scheduling]] system
 
 
 ## Minimum Granularity
