@@ -7,7 +7,7 @@ tags:
   - networking
   - bash
 Creation Date: 2023-10-03T11:14:44
-Last Date: 2024-04-09T16:12:52+08:00
+Last Date: 2024-04-20T23:49:14+08:00
 ---
 ## Abstract
 ---
@@ -15,9 +15,15 @@ Last Date: 2024-04-09T16:12:52+08:00
 
 
 ### IPv4
+
+![[ipv4.png|400]]
+
 - [[IP Address]] that consists of 4 [[Computer Data Representation#Byte]]
 
 ### IPv6
+
+![[ipv6.png|400]]
+
 - [[IP Address]] that consists of 16 [[Computer Data Representation#Byte]]
 
 
@@ -67,3 +73,5 @@ Last Date: 2024-04-09T16:12:52+08:00
 
 >[!caution]
 > It seems like it isn't working well for [[#IPv6]], use [[#ipinfo/cli]] for IPv6 instead.
+
+
