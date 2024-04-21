@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-04-09T17:21:48+08:00
+Last Date: 2024-04-21T14:34:07+08:00
 References: 
 ---
 ## Abstract
@@ -24,12 +24,12 @@ References:
 ### Instruction Register
 - Holds the actual [[Instruction]] that is **currently being executed** by the [[CPU]]
 
+### Memory Address Register
+- [[Register]] that points to [[Memory Address]] that contains the data required by the current [[Instruction]] that is being executed 
+
 ### Program Counter
 - For modern computers, it is the [[Register]] that indicates the [[Virtual Memory#Virtual Address]] of the next [[Instruction]] to be executed for the current [[Process (进程)]]
 
-### Control & Status Registers (CSRs)
-- There are multiple such registers in the [[CPU]], the main purpose is storing information about the current state of the processor or device
-- CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
 
 ### Stack Pointer
 - A [[Register]] that holds the [[Memory Address]] of the top of the [[Address Space#Stack Segment]] in the current **execution context**. Here is the [[stack_segment.png|Diagram]] 
@@ -49,6 +49,10 @@ References:
 - Maintains a reference point within the current [[Address Space#Stack Frame]]
 - **At the beginning of a function (prologue)**, the Frame Pointer is typically set to the current value of the [[#Stack Pointer]], establishing the base of the current stack frame
 - **Throughout the function:** The FP remains relatively unchanged, offering a stable reference point
+
+### Control & Status Registers (CSRs)
+- There are multiple such registers in the [[CPU]], the main purpose is storing information about the current state of the processor or device
+- CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
 
 ## MIPS Registers
 ---
@@ -95,3 +99,8 @@ References:
 > #define UART0 0x10000000L
 > #define UART0_IRQ 10
 > ```
+
+
+## References 
+---
+- [microcontroller - difference between memory address register(MAR) and program counter(PC)? - Stack Overflow](https://stackoverflow.com/questions/10876372/difference-between-memory-address-registermar-and-program-counterpc)

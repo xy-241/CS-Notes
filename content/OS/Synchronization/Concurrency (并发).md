@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-02-22, 17:53
-Last Date: 2024-04-20T22:27:51+08:00
+Last Date: 2024-04-21T13:43:25+08:00
 References: 
 draft: 
 description: 
@@ -25,10 +25,14 @@ description:
 
 ## Time-Sharing
 ---
-- A Implementation of [[Concurrency (并发)]]
-- A specific implementation of [[Multi-tasking]] when resources are shared by **multiple users** at the **same time**, achieved with quick [[Context Switch]]
+
+![[time-sharing.gif|500]]
+
+- A Implementation of [[Concurrency (并发)]] and a specific implementation of [[Multi-tasking]] when resources are shared by **multiple users** at the **same time**, achieved with quick [[Context Switch]] of [[Process (进程)]]. This allow **multiple users** to **run jobs** on the **same computer** at the **same time** 
 - All Time-sharing systems are [[Multi-programming]] systems
-- Allow multiple remote users to run jobs on the same computer at the same time 
+
+>[!info]
+> [Multics - Wikipedia](https://en.wikipedia.org/wiki/Multics) was the first time-sharing [[OS]] which inspires the creation of [[Unix]].
 
 ## Parallelism (并行性)
 ---
@@ -54,3 +58,8 @@ description:
 
 >[!success] No CPU Hogging
 > Ensure no [[Process (进程)]] can hog the [[CPU]] forever.
+
+
+## References
+---
+- [CONCURRENCY IS AN ILLUSION - YouTube](https://youtu.be/3X93PnKRNUo?si=PsdliiPMP8fv3NoO)
