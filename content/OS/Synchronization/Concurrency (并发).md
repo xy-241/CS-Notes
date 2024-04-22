@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-02-22, 17:53
-Last Date: 2024-04-21T13:43:25+08:00
+Last Date: 2024-04-22T20:12:59+08:00
 References: 
 draft: 
 description: 
@@ -32,7 +32,7 @@ description:
 - All Time-sharing systems are [[Multi-programming]] systems
 
 >[!info]
-> [Multics - Wikipedia](https://en.wikipedia.org/wiki/Multics) was the first time-sharing [[OS]] which inspires the creation of [[Unix]].
+> [Multics - Wikipedia](https://en.wikipedia.org/wiki/Multics) was one of the first time-sharing [[OS]] which inspires the creation of [[Unix]].
 
 ## Parallelism (并行性)
 ---

@@ -6,13 +6,21 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:57:00
-Last Date: 2024-04-17T21:04:20+08:00
+Last Date: 2024-04-22T21:03:20+08:00
 ---
 #computer_organisation 
 ## Abstract
 ---
-- 5 stages - [[#Fetch]], [[#Decode]], [[#Read]], [[#Execute]] & [[#Write Back]]
-- When one stage is running, the other stages will be idle. This can be optimised with [[Instruction-Level Parallelism]]
+
+![[pipeline_stages.gif|600]]
+
+- 3 main stages, [[#Fetch]], [[#Decode]] & [[#Execute]] ([[#Read]] & [[#Write Back]])
+- Thew 2 main [[Register]] involved are the [[Register#Instruction Register]] and the **address register** ([[Register#Program Counter]])
+
+>[!caution] Wasted computation
+> When one stage is running, the other stages will be idle. You can see from the animation above, when the [[Instruction]] is decoded, the instruction register is actually ready to take in the next instruction. 
+> 
+> This can be optimised with [[Instruction-Level Parallelism]].
 
 
 ## Fetch

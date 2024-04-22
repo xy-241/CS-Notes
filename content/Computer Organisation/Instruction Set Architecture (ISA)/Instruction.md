@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-28T09:59:05+08:00
-Last Date: 2024-04-21T13:31:04+08:00
+Last Date: 2024-04-22T21:01:19+08:00
 References: 
 ---
 ## Abstract
@@ -39,7 +39,9 @@ References:
 
 ## Branch Instruction
 ---
-- An [[Instruction]] that causes [[Process (进程)]] to jump to a different location in the codes
+![[branch_instruction.gif|500]]
+
+- An [[Instruction]] that causes [[CPU]] to jump to a different location in the codes of  [[Process (进程)]], instead of executing instruction sequentially 
 
 
 ## Terminologies

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-03-31T21:39:11+08:00
+Last Date: 2024-04-22T21:10:18+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
@@ -15,6 +15,11 @@ description: "Unlock the power of your computer's hardware while staying secure!
 - A way for program in [[User Space]] to request **privileged services** like hardware access from the [[Kernel]]
 - A form of [[Interrupts (中断)#Software Interrupt]]
 - Can be traced by [``strace``](https://stackoverflow.com/questions/65510246/can-a-system-call-happen-in-a-c-program)
+
+>[!important]
+> Control is passed back to the [[Kernel]] when a system call is made by the [[Process (进程)]]. So kernel uses this opportunity to perform its [[Process Management]].
+> 
+> If the process hogs to the [[CPU]] and doesn't make any system call, we have [[Concurrency (并发)#Preemptive Scheduling]] to handle this.
 
 >[!attention] User program isn't communicating with syscall directly!
 > The System call is placed behind an [[Abstraction (抽象)#Abstraction Barrier]] created with the [The GNU C Library](https://sourceware.org/glibc/started.html). So user programs like [[OS System Program]] is triggering system call that requests privileged services from the kernel via the GNU C Library.
