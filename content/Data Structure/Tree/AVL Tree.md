@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-26T00:14:31+08:00
-Last Date: 2024-04-20T20:10:58+08:00
+Last Date: 2024-04-22T11:40:48+08:00
 References: 
 ---
 ## Abstract 
@@ -289,6 +289,9 @@ TreeNode removeHelper(TreeNode node, int val) {
 }
 ```
 
+## Red-black Tree
+---
+- Like [[AVL Tree]], red-black tree is a type of self-balancing binary tree, but with **more relaxing balancing requirement**, this means less [[#AVL Tree Rotation]] needed, thus better efficiency for node insertion and deletion
 
 
 
