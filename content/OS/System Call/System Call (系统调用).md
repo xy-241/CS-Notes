@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-04-22T21:10:18+08:00
+Last Date: 2024-04-25T02:23:56+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
@@ -17,7 +17,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 - Can be traced by [``strace``](https://stackoverflow.com/questions/65510246/can-a-system-call-happen-in-a-c-program)
 
 >[!important]
-> Control is passed back to the [[Kernel]] when a system call is made by the [[Process (进程)]]. So kernel uses this opportunity to perform its [[Process Management]].
+> Control is passed back to the [[Kernel]] when a system call is made by the [[Process (进程)]]. Kernel uses this opportunity to perform its [[Process Management]].
 > 
 > If the process hogs to the [[CPU]] and doesn't make any system call, we have [[Concurrency (并发)#Preemptive Scheduling]] to handle this.
 
@@ -61,9 +61,9 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 
 >[!success] Abstraction comes to rescue
->- Kernel provides an [[Abstraction (抽象)#Abstraction Barrier]] on top of these [[Interrupts (中断)]] and [[Interrupt Handler]]. The abstraction barrier has a standardised [[Library Call]] interface like [[POSIX]] that wraps the [[Assembly language | Assembly Instruction]] of different Instruction Set Architecture (ISA) for applications inside [[User Space]] to call
->- Specific [[Instruction]] of Instruction Set Architecture (ISA) is generated automatically during [[Compilation]]
->- Unix-like systems use [libc](https://www.gnu.org/software/libc/) and Windows uses [ntdll.dll](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/libraries-and-headers)
+> We have [[Abstraction (抽象)#Abstraction Barrier]] on top of these [[Interrupts (中断)]] and [[Interrupt Handler]] in the form of [[Library Call]] that follows a standardised interface like [[POSIX]] by wrapping the [[Assembly language | Assembly Instruction]] of different Instruction Set Architecture (ISA) for applications inside [[User Space]]. Specific [[Instruction]] of Instruction Set Architecture (ISA) is generated automatically during [[Compilation]]
+> 
+> [[Unix#Unix-like]] systems use [[Library Call#libc]] and Windows uses [ntdll.dll](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/libraries-and-headers).
 
 
 
