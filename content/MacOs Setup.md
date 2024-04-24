@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-04-19T00:31:07+08:00
+Last Date: 2024-04-24T23:47:42+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -52,7 +52,7 @@ title: Macos setup for software engineer
 - [ ] [[File#dua]] - Disk Usage Analyser
 - [ ] `brew install btop` - `htop`/`top` replacement
 - [ ] `brew install xh` - partial [[curl]] replacement
-- [ ] `navi` - `man` replacement
+- [ ] `navi` & `brew install tealdeer` - `man` replacement
 ```bash
 brew install navi # Installation 
 # Add alias navi="navi --fzf-overrides-var '--no-select-1'" into .zshrc
@@ -77,6 +77,7 @@ brew install chafa # To have image rendered in terminal
 fzf --preview '<path_to_preview.sh> {}' # Refer to https://github.com/junegunn/fzf?tab=readme-ov-file#previewing-an-image for more information
 ```
 - [ ] [[Process (进程)#procs]] - `ps` replacement
+- [ ] `brew install pueue` & `pueued -d` to start - cli process manager
 - [ ] `fastfetch`
 ```bash
 brew install fastfetch
