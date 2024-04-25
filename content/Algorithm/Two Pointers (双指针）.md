@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-02T19:48:00
-Last Date: 2024-01-03T14:57:09+08:00
+Last Date: 2024-04-25T12:55:10+08:00
 References: 
 ---
 ## Abstract
@@ -54,17 +54,17 @@ public void twoPointerSort(int left, int right, int[] arr) {
 ## Sliding Window
 ---
 - [[Two Pointers (双指针）]] move in the same direction at the same or different speed
-- Can be used to find [Minimum Size Subarray](https://leetcode.cn/problems/minimum-size-subarray-sum/) that the sum of the elements is equal or greater than the given target value
-- 3 points to consider
-	1. What should be inside the [[#Window]]?
-	2. When should we increment the left pointer?
-	3. When should we increment the right pointer?
+- Can be used to find [Minimum Size Subarray](https://leetcode.cn/problems/minimum-size-subarray-sum/) that the sum of the elements is equal or greater than the given target value, can also be used to [find longest substring without repeating characters](https://xy241-dsa.notion.site/Longest-Substring-Without-Repeating-Characters-1d16b9fc5bac4918a82d59a3a72b667c)
 
->[!example] Leetcode Questions
->- [209. Minimum Size Subarray Sum](https://leetcode.cn/problems/minimum-size-subarray-sum/)
+>[!question] 3 questions to ask
+> 1. What should be inside the [[#Two Pointers Window]]?
+> 2. When should we increment the left pointer?
+> 3. When should we increment the right pointer?
 
+>[!help] Need to keep track of the element frequency?
+> We can use [[Hash Map]] to keep track the element frequency.
 ## Terminologies 
 ---
-### Window
+### Two Pointers  Window
 - The elements within the left and right pointers when we are performing [[#Sliding Window]]
 - The operation of expanding and shrinking the window is usually the same
