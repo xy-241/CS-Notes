@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-11T21:10:44
-Last Date: 2024-04-25T02:25:07+08:00
+Last Date: 2024-04-25T17:29:27+08:00
 References: 
 ---
 ## Abstract
@@ -39,11 +39,18 @@ References:
 >[!tip]
 > If you run a C binary and get an error like `-bash: ./<c binary>: No such file or directory`. It probably means you are missing the required libc, it can be [[#glibc]] or [[#musl libc]] etc. In Ubuntu, if the system is missing musl libc, we can install it using `sudo apt-get install musl`.
 ### glibc
+
+![[glibc.png|500]]
+
 - glibc (**GNU libc**) provides more than just [[#libc]], it also provides the `libm`, and other core libraries like `libpthread` in **separate files**
+- For ubuntu, you can find all the glibc files under `/lib/x86_64-linux-gnu` and `/usr/lib/x86_64-linux-gnu`
 
 ### musl libc
 
+![[musl_libc.png|500]]
+
 - A lightweight implementation of [[#libc]] with `libpthread`, `libm`, `librt`, etc united into **one single file** `libc.so`
+- For ubuntu, you can find all the musl libc files under `/lib/x86_64-linux-musl` and `/usr/lib/x86_64-linux-musl`
 
 >[!quote]
 > musl's efficiency is unparalleled in Linux libc implementations. Designed from the ground up for static linking, musl carefully avoids pulling in large amounts of code or data that the application will not use. Dynamic linking is also efficient; by integrating the entire standard library implementation, including threads, math, and even the dynamic linker itself into a single shared object, most of the startup time and memory overhead of dynamic linking have been eliminated.
@@ -59,3 +66,5 @@ References:
 ---
 - [musl libc - Design Concepts](https://wiki.musl-libc.org/design-concepts#:~:text=Design%20Concepts-,Unified%20libc%2Flibpthread%2Fldso,is%20unified%20with%20libc.so.)
 - [musl - Introduction](https://www.musl-libc.org/intro.html)
+- [C standard library - Wikipedia](https://en.wikipedia.org/wiki/C_standard_library)
+- [c - What is the role of libc(glibc) in our linux app? - Stack Overflow](https://stackoverflow.com/questions/11372872/what-is-the-role-of-libcglibc-in-our-linux-app)
