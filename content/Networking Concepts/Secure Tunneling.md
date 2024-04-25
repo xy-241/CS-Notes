@@ -10,7 +10,7 @@ tags:
   - macos
   - ngrok
 Creation Date: 2024-02-23, 23:49
-Last Date: 2024-03-14T21:40:31+08:00
+Last Date: 2024-04-24T01:53:03+08:00
 References: 
 draft: 
 description: 
@@ -18,6 +18,11 @@ description:
 ## Abstract
 ---
 - Secure Tunneling introduces 2 pieces of software - [[#Secure Tunneling Server]]  and [[#Secure Tunneling Client]] to achieve **secure** yet **convenient** access to a **service running on a local machine**
+
+>[!bigbrain]
+> This is a very handy if we want to expose a [[Host]] running in [[Computer Network#Local Area Network (LAN)]] that doesn't have a [[IP Address#Public IP Address]] without [[Port Forwarding]].
+> 
+> This is also very handling when the LAN **doesn't have** a public IP address which is required for port forwarding.
 ### Secure Tunneling Server
 - Sits in between the **user from the public network** and [[#Secure Tunneling Client]]. A Level-7 [[Reverse Proxy (反向代理)]]
 - The secure tunneling server ensures
@@ -45,7 +50,9 @@ description:
 
 
 ### Secure Tunneling Architecture
-![[secure_tunneling_cloudflare_example.png|600]]
+
+![[secure_tunneling_cloudflare_archi.png|600]]
+
 - The above diagram is showing [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/), but the architecture is the pretty much the same for other Secure Tunnel implementations
 </br>
 

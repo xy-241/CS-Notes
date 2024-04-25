@@ -8,7 +8,7 @@ tags:
   - bash
   - cloudflare
 Creation Date: 2023-08-14T11:18:00
-Last Date: 2024-04-21T02:11:25+08:00
+Last Date: 2024-04-22T21:42:29+08:00
 References: 
 description: Explore the Domain Name System (DNS), the internet's GPS that translates human-readable website names into machine-friendly IP addresses.
 ---
@@ -30,7 +30,7 @@ description: Explore the Domain Name System (DNS), the internet's GPS that trans
 - Basically a technique used to modify the [[DNS Record]] automatically if the value of the DNS Record is changed. DDNS can help ensure that **DNS queries** work even if the web service being sought has recently switched IP addresses
 
 >[!question] How does it work?
-> Users uses software which runs on their computer or [[Network Router]], one common software is [jeessy2/ddns-go](https://github.com/jeessy2/ddns-go), usually used with [[OpenWRT]]. This software communicates with the dynamic DNS service provider (like [[Cloudflare]]) anytime the [[IP Address]] provided by the ISP is updated, and the dynamic DNS provider in turn updates the DNS with those changes, providing almost instant updates.
+> Users uses software which runs on their computer or [[Network Router]], one common software is [jeessy2/ddns-go](https://github.com/jeessy2/ddns-go) which is usually used with [[OpenWRT]]. This software communicates with the dynamic DNS service provider (like [[Cloudflare]]) anytime the [[IP Address]] provided by the ISP is updated, and the dynamic DNS provider in turn updates the DNS with those changes, providing almost instant updates.
 
 >[!example] Home lab use case
 > The [[IP Address#Public IP Address]] assigned to our house network changes regularly unless we pay extra for a static IP 💸. If we have a [[DNS Record#A Record]] that points to service running in our home lab, we have to manually update the A record when the public IP address of our house network is changed, this **incurs downtime** and it is **tedious**. 
