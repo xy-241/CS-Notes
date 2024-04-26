@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-02T19:48:00
-Last Date: 2024-04-25T12:55:10+08:00
+Last Date: 2024-04-26T14:55:47+08:00
 References: 
 ---
 ## Abstract
@@ -29,7 +29,7 @@ References:
 ## Left-Right Pointers
 ---
 - [[Two Pointers (双指针）]] move in an opposite direction at the same or different speed
-- Can be used to reverse a sorted array [[Sorting#In-Place]] like [Reverse String](https://leetcode.cn/problems/reverse-string/description/)
+- Can be used to reverse a sorted array [[Sorting#In-Place]] like [Reverse String](https://leetcode.cn/problems/reverse-string/description/) and implementing [[Binary Search]]
 
 ```java
 // Java
