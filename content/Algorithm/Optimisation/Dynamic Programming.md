@@ -6,18 +6,26 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-04-18T16:44:38+08:00
+Last Date: 2024-04-27T19:04:36+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
 ---
 ## Abstract
 ---
-- Divide a given problems into smaller problems, answers to those smaller problems generate the answer to the given problem. We remember the answers to those smaller problems, so we don't re-solve those smaller problems
-- 3 key components - [[#Overlapping Subproblems (重复子问题)]], [[#Optimal Substructure ( 最优子结构)]] & [[#Statelessness (无后效性)]]
+- Also known as **Dynamic Optimisation**
+- Divide a given problems into smaller problems, answers to those smaller problems generate the answer to the given problem. We make use of [[Memoization]] to remember the answers to those smaller problems, so we don't re-solve those smaller problems
 
->[!tip] Debugging
-> Print out [[#DP Table]] to check any errors
+>[!quote] Dynamic
+> *I wanted to get across the idea that this was dynamic, this was **multistage**, this was **time-varying**.* - **Bellman**
+> 
+> So Dynamic programming is also known as **Multistage Optimisation**. The multstage here refers to the stages of solving subproblems which deliver the **final optimal answer** to a given problem.
+
+- There are two main approaches to DP algorithms - [[Algorithm Design#Top-down Approach]] and [[Algorithm Design#Bottom-up Approach]]
+
+
+>[!tip] DP Debugging
+> Print out [[#DP Table]] to check any errors.
 
 
 >[!note]- Question Bank
@@ -52,7 +60,7 @@ aliases:
 - 许多[[Backtracking]] problems 都不具有**无后效性**， 无法使用 [[Dynamic Programming]] 快速求解
 
 
-## DP Tools
+## DP Components
 ---
 ### DP Table
 - Trade space for time
