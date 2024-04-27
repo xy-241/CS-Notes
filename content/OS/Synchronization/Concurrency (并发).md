@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-02-22, 17:53
-Last Date: 2024-04-26T20:53:22+08:00
+Last Date: 2024-04-27T21:24:09+08:00
 References: 
 draft: 
 description: 
@@ -16,11 +16,12 @@ description:
 >[!quote]
 > Concurrency is about **dealing with lots of things at once**, but parallelism is about **doing lots of things at once**.
 
-- A way to run multiple [[Thread]] at the same time, instead of running one thread after another thread is done . Thus, improving the overall performance
-- Can be achieved with multiple [[CPU#Core]]([[#Parallelism (并行性)]])  or [[Context Switch]] when there is only one core
+- A way to run multiple [[Thread]] or [[Process (进程)]] at the same time, instead of running one thread or process after another thread or process is done
+- We can achieve concurrency with multiple [[CPU#Core]], this is also known as [[#Parallelism (并行性)]]. We can also achieve concurrency with a single CPU core by performing [[Context Switch]]
 
->[!success] Resource utilisation
-> Maximise the use of resources on hand and handle multiple requests or events.
+
+>[!success] Maximise CPU utilisation
+> [[CPU]] is idle when the process and thread are performing non CPU-bounded tasks like reading and writing to [[OS/IO/IO Device|IO Device]] and waiting a result from a remote [[Host#Server]] etc. By performing context switch, we can let another process or thread to use CPU to complete its computation. Parallelism allows us to run multiple threads of processes at the same, if we have 4 CPU cores, it means we can have 4 processes/threads consuming the CPU at the same time.
 
 
 ## Time-Sharing
@@ -28,7 +29,7 @@ description:
 
 ![[time-sharing.gif|500]]
 
-- A Implementation of [[Concurrency (并发)]] and a specific implementation of [[Multi-tasking]] when resources are shared by **multiple users** at the **same time**, achieved with quick [[Context Switch]] of [[Process (进程)]]. This allow **multiple users** to **run jobs** on the **same computer** at the **same time** 
+- A implementation of [[Concurrency (并发)]] and a specific implementation of [[Multi-tasking]] when [[CPU]] is shared by **multiple users** at the **same time**, achieved with quick [[Context Switch]]. This allow **multiple users** to **run jobs** on the **same computer** at the **same time** 
 - All Time-sharing systems are [[Multi-programming]] systems
 
 >[!info]
@@ -39,32 +40,33 @@ description:
 
 ![[parallelism.gif|500]]
 
-- A subset of [[Concurrency (并发)]], [[Thread]] run on its own [[CPU#Core]], so it is concurrency running on multiple resources (multple [[CPU#Core]])
+- A subset of [[Concurrency (并发)]], [[Process (进程)]] and [[Thread]] run on their own [[CPU#Core]]. This is the true processing of multiple tasks at the same time, not an illusion created by quick [[Context Switch]]
 
 
 ## Corporative Scheduling
 ---
-- Rather than [[Kernel]] decides when to preempt [[Process (进程)]]. Process gives up [[CPU]] and let other Process to run
+- Rather than the [[Kernel]] decides when to preempt a [[Process (进程)]] and pass the [[CPU]] to another process. Process passes control back to kernel for it to perform [[Process Management]]
 
 >[!caution] CPU Hogging
 > ![[corporative_scheduling_cpu_hogging.gif]]
 > 
->Process can hog to CPU forever, modern OS adapts [[#Preemptive Scheduling]] instead.
+>Process can hog to CPU forever, modern OS adapts to [[#Preemptive Scheduling]] instead.
 
 ## Preemptive Scheduling
 ---
 
 ![[preemptive_scheduling.gif|500]]
 
-1. Before jumping to program code, the [[Kernel]] sets the [[Timer Chip]] to trigger an [[Interrupts (中断)#Hardware interrupts (外中断)]] after some period of time
-2. The kernel switches to [[Privilege Level#User Mode]] and jumps to the [[Instruction]] of the program
-3. When the Timer Chips elapses, it triggers a Hardware interrupts. The [[CPU]] receives the interrupt.
+1. Before [[Kernel]] set the [[Register#Program Counter]] to the [[Instruction]] of a selected [[Process (进程)]], the kernel sets the [[Timer Chip]] to trigger an [[Interrupts (中断)#Hardware interrupts (外中断)]] after some period of time
+2. The kernel switches the [[Privilege Level]] to [[Privilege Level#User Mode]] and set the program counter to the instruction of a selected process, so the process can start executing
+3. When the timer chip elapses, it triggers a Hardware interrupts
 4. The hardware interrupt invokes [[Trap Interrupt (陷入)]] which triggers the  corresponding [[Interrupt Handler]]
-5. Interrupt handler passes control to [[Process Management#Process Scheduler]] selects a process to run by restoring the state of the CPU for that process from the process's PCB
-6. Repeat step 1 to step 5
+5. Interrupt handler passes control to [[Process Management#Process Scheduler]] when it completes
+6. [[Process Management#Process Scheduler]] selects a process to run by restoring the state of the [[CPU]] for that process from the process's [[Process Control Block (PCB)]]
+7. Repeat step 1 to step 6
 
 >[!success] No CPU Hogging
-> Ensure no [[Process (进程)]] can hog the [[CPU]] forever which may happen in the case of [[#Corporative Scheduling]].
+> The hardware interrupt generated by timer chip ensures the kernel obtain control to perform [[Process Management]] on a configured interval. The eliminates any process from hogging the CPU forever which may happen in the case of [[#Corporative Scheduling]].
 
 
 ## References

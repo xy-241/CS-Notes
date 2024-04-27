@@ -6,27 +6,29 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-11T21:10:44
-Last Date: 2024-04-25T17:29:27+08:00
+Last Date: 2024-04-27T21:52:23+08:00
 References: 
 ---
 ## Abstract
 ---
-- We cant directly make [[System Call (系统调用)]] in the same way that we call functions in a program, different [[Instruction Set Architecture (ISA)]] will have a different set of System Calls. So we have Library call that is built on top of system calls to abstract this complexity away from the application programmers.
+- We can't directly make [[System Call (系统调用)]] in the same way that we call functions in a program, different [[Instruction Set Architecture (ISA)]] has a different implementation of System Calls. So we have Library call that is built on top of system calls to abstract this complexity away from the application programmers
 
 >[!success] Abstraction
 > Make it possible to make **System Call (系统调用)** from user program written in languages like Java and C via an **unified interface** like [[POSIX]] without considering the underlying ISA.
+> 
+> For example, when the C program makes a `malloc()` library call, the `malloc()` library call uses corresponding [[Assembly language]] to complete the memory allocation on the [[Address Space#Heap Segment]].
 
 >[!tip]
 > Library calls can be traced with `lstrace`.
 
 
->[!attention] Privilege Mode
->Doesn't switch to [[Privilege Level#Kernel Mode]], always runs in [[Privilege Level#User Mode]]
+>[!attention]
+>Library call always runs in [[Privilege Level#User Mode]], unless it needs the involvement of [[Kernel]] to complete its task.
 
 
 
 ### Library Procedure
-- The underlying codes that carry out [[Library Call]]
+- The underlying codes that carry out [[Library Call]], usually written in [[Assembly language]]
 
 ## libc
 ---

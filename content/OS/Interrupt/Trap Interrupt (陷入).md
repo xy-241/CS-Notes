@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-19T17:28:44
-Last Date: 2024-04-25T17:42:31+08:00
+Last Date: 2024-04-27T21:33:33+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,7 @@ References:
 
 ![[trap_interrupt.gif|500]]
 
-- [[Instruction]] that starts a transition from [[Privilege Level#User Mode]] to [[Privilege Level#Kernel Mode]], saves the state of [[CPU]] like **Return Address** onto the [[Address Space#Stack Segment]] of the [[Kernel]] for use later, and then executes a particular [[Interrupt Handler]] to fulfil the need of programs in the [[User Space]] and perform [[Process Management]]
+- [[Instruction]] that changes [[Privilege Level]] from [[Privilege Level#User Mode]] to [[Privilege Level#Kernel Mode]], saves the state of [[CPU]] like **Return Address** onto the [[Address Space#Stack Segment]] of the [[Kernel]] for use later, and then it triggers a particular [[Interrupt Handler]] to fulfil the need of programs in the [[User Space]] and perform [[Process Management]]
 
 >[!question] When is trap instruction triggered?
 > Trap instruction is usually triggered to handle an exceptional events like an error or an [[Interrupts (中断)]]. Basically events than need privileged access from the kernel.

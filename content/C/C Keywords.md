@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-11-26T17:42:00
-Last Date: 2024-02-22T18:32:59+08:00
+Last Date: 2024-04-27T21:31:49+08:00
 References: 
 ---
 ## Abstract
@@ -16,11 +16,11 @@ References:
 
 ### volatile
 - Used to indicate to the [[Language Processors#Compiler]] that a variable's value may change unexpectedly
-- Often the case when a variable is being accessed by multiple [[Thread]] or when it represents *hardware* that is external to the computer
-- Compiler will not optimize the code that accesses the variable. This means that the compiler *will not reorder instructions or eliminate redundant reads or writes to the variable*
+- Often the case when a variable is being accessed by multiple [[Thread]] or when it represents **hardware** that is external to the computer
+- Compiler will not optimize the code that accesses the variable. This means that the compiler **will not reorder instructions or eliminate redundant reads or writes to the variable**
 - This can be important for ensuring that the variable's value is always read and written correctly
-- Example: In the below example, we have 2 exact same [[Instruction]], for performance sake, Compiler will remove the second one since it doesn't cause *side effect* inside the `uartinit()` function. However, this will cause us unable to set the baud rate!
-- Used a lot in *memory mapped io*
+- Example: In the below example, we have 2 exact same [[Instruction]], for performance sake, Compiler will remove the second one since it doesn't cause **side effect** inside the `uartinit()` function. However, this will cause us unable to set the [[Serial Communication#Baud Rate]]!
+- Used a lot in **memory mapped io**
 ```c
 // xv6-riscv kernel source codes, uart.c
 uartinit(void)

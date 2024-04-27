@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-09-03T16:14:54+08:00
-Last Date: 2024-04-25T17:09:54+08:00
+Last Date: 2024-04-27T21:44:19+08:00
 References: 
 description: "Exploring POSIX: A Standard Interface for Operating Systems"
 ---
@@ -22,7 +22,7 @@ description: "Exploring POSIX: A Standard Interface for Operating Systems"
 >[!important]
 > For Linux, it is the combination of [[Linux Kernel]] and [[Library Call#libc]] that provides the POSIX API. `libc` adds a decent amount of value - not every POSIX function is necessarily a system call, and for the ones that are, the kernel behaviour isn't always POSIX conforming.
 > 
-> So decoupling out some of the POSIX implementations into `libc`, we achieve a **faster** and **more POSIX-compliant** system.
+> So decoupling out some of the POSIX implementations into `libc`, we achieve a **faster** and **more POSIX-compliant** system. It is faster because we reduce the involvement of kernel, involving kernel is expensive! Great overhead introduced by [[Trap Interrupt (陷入)]] and [[Interrupt Handler]] etc.
 
 >[!success] Write Once, Run (Mostly) Anywhere
 > POSIX ensures **compatibility** and **portability** of applications across different [[Unix#Unix-like]] operating systems.

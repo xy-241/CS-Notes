@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-07-20T21:30:29+08:00
-Last Date: 2024-04-25T16:54:24+08:00
+Last Date: 2024-04-27T21:35:42+08:00
 References: 
 ---
 ## Abstract
@@ -21,7 +21,7 @@ References:
 - A **Similar standards** to [[POSIX]]
 - Significant license fee associated with getting this branding, but certified means compatible with other [[Unix]] based system
 
->[!example]
+>[!example] OS that is SUS compliant 
 >- macOS (after 2015)
 >- Solaris (Oracle)
 
