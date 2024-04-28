@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-11T21:10:44
-Last Date: 2024-04-27T21:52:23+08:00
+Last Date: 2024-04-29T00:32:01+08:00
 References: 
 ---
 ## Abstract
@@ -44,7 +44,7 @@ References:
 
 ![[glibc.png|500]]
 
-- glibc (**GNU libc**) provides more than just [[#libc]], it also provides the `libm`, and other core libraries like `libpthread` in **separate files**
+- [glibc](https://sourceware.org/glibc/started.html) (**GNU libc**) provides more than just [[#libc]], it also provides the `libm`, and other core libraries like `libpthread` in **separate files**
 - For ubuntu, you can find all the glibc files under `/lib/x86_64-linux-gnu` and `/usr/lib/x86_64-linux-gnu`
 
 ### musl libc
