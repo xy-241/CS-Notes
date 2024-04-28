@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-09T09:10:00
-Last Date: 2024-03-22T17:00:22+08:00
+Last Date: 2024-04-28T21:11:43+08:00
 References: 
 ---
 ## Abstract
@@ -18,27 +18,28 @@ References:
 >- 贪心策略在一轮轮的简单选择中，逐步导向最佳的答案。
 
 
-- Solves [[Combinatorial Optimisation]]
+- Solves problems around [[Combinatorial Optimisation]]
 - Usually better performance than [[Backtracking]] & [[Dynamic Programming]]
 - Think about what is the [[#Local Optimal Solution]]. If it feels with the current stage optimal solution can form the global optimal solution, can give a try of the greedy approach 
 - Follow pre-defined procedures for each stage
 
 
->[!bigbrain] When greedy shines
-> **Guaranteed to get the Global Optimal Solution**
-> - When we can't find an **counter-example** with the greedy approach 
-> 
-> **Sub-optimal solution is good enough**
-> - When finding [[#Global Optimal Solution]] takes too much effort & a Sub-optimal solution gets the job done
 
 >[!bigbrain] Comparison with Dynamic Programming
-> Both rely on [[Dynamic Programming#Optimal Substructure (最优子结构)]]. However greedy
+> Both rely on [[Dynamic Programming#Optimal Substructure (最优子结构)]].
 > 
-> - Find a locally optimal solution at each step without the need to consider decisions made previously
-> - [[Dynamic Programming]] is determined to find **global optimal**
-> - May or may not find the optimal solution
-> - Often simple and efficient
+> Differences
+> - Greedy algorithms find a locally optimal solution at each step and **never goes back** to reconsider its choice. This means greedy algorithm may find a solution that is actually **not the most optimal choice**! [[Dynamic Programming]] is determined to find **global optimal** by **exhaustively search** through **all of the possible subproblems**, and then **choose the best** solution based on that.
+> - Greedy algorithms often simpler and more efficient than dynamic programming.
 
+>[!question] When greedy shines?
+> **Guaranteed to get the Global Optimal Solution**
+> 
+> When we can't find an **counter-example** with the greedy approach.
+> 
+> **Sub-optimal solution is good enough**
+> 
+> When finding [[#Global Optimal Solution]] takes too much effort & a Sub-optimal solution gets the job done.
 
 
 ## Tips to Solve Greedy Problems

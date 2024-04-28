@@ -7,7 +7,7 @@ tags:
   - dsa
   - java
 Creation Date: 2023-10-09T08:54:00
-Last Date: 2024-03-05T12:35:09+08:00
+Last Date: 2024-04-28T20:49:45+08:00
 References:
   - "Mike: https://youtu.be/GazC3A4OQTE?si=NZgAiSYMoewpywwF"
   - "Abdul: https://youtu.be/XB4MIexjvY0?si=v5wN_1UZopp7E76u"
@@ -19,7 +19,7 @@ References:
 </br>
 
 - Use [[Greedy Algorithm]] to improve the computation performance via [[Priority Queue]]
-- Use [[Dynamic Programming]] to obtain the shortest distance from the given node to all other nodes -> [[Combinatorial Optimisation]] via [[Dynamic Programming#DP Table|DP Table]]
+- Use  [[Combinatorial Optimisation]] to obtain the shortest distance from the given node to all other nodes
 
 >[!caution] Negative Edge
 > May not work if there are negative [[Tree#Edge|Edge]] 

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-04-27T19:04:36+08:00
+Last Date: 2024-04-28T21:39:57+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
@@ -14,18 +14,18 @@ aliases:
 ## Abstract
 ---
 - Also known as **Dynamic Optimisation**
-- Divide a given problems into smaller problems, answers to those smaller problems generate the answer to the given problem. We make use of [[Memoization]] to remember the answers to those smaller problems, so we don't re-solve those smaller problems
+- Divide a given problems into smaller problems, answers to those smaller problems generate the answer to the given problem. We make use of [[Memoization]] to remember the answers to those smaller problems, so we **don't re-solve** those smaller problems
 
 >[!quote] Dynamic
 > *I wanted to get across the idea that this was dynamic, this was **multistage**, this was **time-varying**.* - **Bellman**
 > 
 > So Dynamic programming is also known as **Multistage Optimisation**. The multstage here refers to the stages of solving subproblems which deliver the **final optimal answer** to a given problem.
 
-- There are two main approaches to DP algorithms - [[Algorithm Design#Top-down Approach]] and [[Algorithm Design#Bottom-up Approach]]
+- There are two main approaches to DP algorithms - [[#Top-down DP Approach]] and [[Algorithm Design#Bottom-up Approach]]
 
 
 >[!tip] DP Debugging
-> Print out [[#DP Table]] to check any errors.
+> Print out [[Memoization#DP Table]] to check any errors.
 
 
 >[!note]- Question Bank
@@ -41,34 +41,58 @@ aliases:
 > **Simulation**
 > - [1766C - Hamiltonian Wall](https://xy241-dsa.notion.site/1766C-Hamiltonian-Wall-4908ce5950ef4e9cbb0800225e20f65a?pvs=4)
 
+## Top-down DP Approach
+---
+
+![[top_down_approach_fib.png]]
+
+- Start with the **large, complex problem**, and understand how to break it down into **smaller subproblems**, perform [[Memoization]] by recording down the answer of subproblems to **avoid duplicated computation** on **overlapping subproblems**. Above shows how can we make use of top-down approach to find [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence) in $O(n)$
+
+>[!attention]
+> The space complexity of Top-down approach is $O(n)$, we need to record down the answer for all the subproblems.
+> 
+> When we break down the larger problem into smaller subproblems, some subproblems may already be solved but some aren't. The **size of subproblems** can **vary**, so we have to record down the answer to each solved subproblems, so we can solve that subproblem in$0(1)$ if we see that subproblem again.
+
+### Divide and Conquer 
+- [[#Top-down DP Approach]] without [[Memoization]], because overlapping subproblems aren't a requirement for the Divide and Conquer approach
+- Make use of [[Recursion]] to divide a given problem into smaller subproblems until its **smallest form** whose **answer is known**. We combine the answers of smaller subproblems into the answer of a bigger subproblem when the function calls on the smaller subproblems return
+
+>[!example]
+> [[Sorting#Merge Sort]]
+
+
+## Bottom-up DP Approach
+---
+
+![[bottom_up_approach_fib.png]]
+
+- Start with the **smallest possible subproblems**, figures out the solution to them, and then slowly **builds itself up** to solve the **larger, more complicated subproblem**
+
+>[!success] Space efficient
+> The space complexity of Bottom-up approach is $O(1)$, we just need to save the solutions of adjacent subproblems to obtain the answer to the bigger problem.
+> 
+> It is like finding the solution to $(5+5+5+5)+5$, we already know $(5+5+5+5)$ is $20$, then the answer to $(5+5+5+5)+5$ is simply $(20) + 5$ which is $25$. You see we don't need to remember what is the answer to $5+5$ or $5+5+5$, because the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**.
 
 ## DP Problem Properties 
 ---
 ### Overlapping Subproblems (重复子问题)
-- Occur when a problem can be broken down into **smaller subproblems** that are **solved repeatedly**
-- We can store the solutions to the subproblems as we solve them. This allows us to avoid re-solving the subproblems when we encounter them again
+- Occur when a problem can be broken down into **smaller subproblems** that are **exactly the same**
+
+>[!tip]
+> Overlapping subproblems can be handled efficiently with [[Memoization]].
 ### Optimal Substructure (最优子结构)
-- Answer to a given problem has to be a [[Combination]] of the optimal solution of its smaller problems - solve the smaller problems in the best way possible, we solve the given problem (如果原问题的最优解可以从子问题的最优解构建得来，则它就具有最优子结构)
-- When a problem has optimal substructure, we can use the solutions to the subproblems to construct the solution to the original problem
+- When a problem has optimal substructure, we can use the **optimal solutions of the subproblems** to construct the **optional solution of the given problem**
 
 >[!example] Knapsack Problem
-> The solution can be found by combining the optimal solutions to the knapsack problem with smaller weights and values.
+> The solution can be found by building on the optimal solutions to the knapsack problem with smaller weights and values.
 ### Statelessness (无后效性)
-- Solutions to smaller problems are **deterministic**  
-- 给定一个**确定的状态**， 其**未来发展**只与**该状态有关**， 与该状态所经历的过去的所有**状态无关**
-- 如果未来发展与该状态和该状态的前一个状态相关，我们可以靠矩阵来解。但如果回溯的状态过多，就难了
+- Solutions to smaller problems are **deterministic**. 给定一个**确定的状态**， 其**未来发展**只与**该状态有关**， 与该状态所经历的过去的所有**状态无关**. 如果未来发展与该状态和该状态的前一个状态相关，我们可以靠矩阵来解。但如果回溯的状态过多，就难了
 - 许多[[Backtracking]] problems 都不具有**无后效性**， 无法使用 [[Dynamic Programming]] 快速求解
 
 
-## DP Components
+## State Transition Equation (状态转移方程)
 ---
-### DP Table
-- Trade space for time
-- Use extra space to hold intermediate results to avoid duplicated computation
-- A mapping between the [[Backtracking#State (状态)|State]] and the correspnding solution to each sub-problems at that particular state
-- Can take the form of [[Array]] or simply a variable
-### State Transition Equation (状态转移方程)
-- What is the **mathematical operation** we need to perform to transit from one state (smaller scope) to the next state (bigger scope), eventually we reach the global state which returns the final answer
+- The **mathematical operation** we need to perform to transit from one state (**smaller subproblems**) to the next state (**bigger subproblems**), obtain the **optimal solution** of the problem eventually 
 
 >[!example] 0-1 knapsack problem
 > In [[Combinatorial Optimisation#0-1 knapsack problem]], the scope is basically the number of the items we can select. The less the items available to be selected the smaller the scope.
