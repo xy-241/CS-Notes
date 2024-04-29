@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-04-28T21:39:57+08:00
+Last Date: 2024-04-29T13:32:32+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
@@ -92,7 +92,18 @@ aliases:
 
 ## State Transition Equation (状态转移方程)
 ---
-- The **mathematical operation** we need to perform to transit from one state (**smaller subproblems**) to the next state (**bigger subproblems**), obtain the **optimal solution** of the problem eventually 
+- The [[Recursion#Recurrence Function]] we need to perform to transit from one state (**smaller subproblems**) to the next state (**bigger subproblems**), obtain the **optimal solution** of the problem eventually 
+
+>[!example] Fibonacci sequence
+> $$
+F(n) = 
+\begin{cases}
+1 & n\le 1\\
+F(n-1) + F(n-2) & n>1  \\
+\end{cases}
+$$
+
+
 
 >[!example] 0-1 knapsack problem
 > In [[Combinatorial Optimisation#0-1 knapsack problem]], the scope is basically the number of the items we can select. The less the items available to be selected the smaller the scope.
