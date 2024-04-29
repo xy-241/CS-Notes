@@ -54,7 +54,7 @@ description: The giant that powers the software application we use on a daily ba
 - Examples are [[Android]] and [[iOS]]
 
 ### Mainframe OS
-- Act as [[#Batch System]], [[Multi-tasking]], [[#Transaction-processing System]]
+- Act as [[#Batch System]], [[Concurrency (并发)#Multi-tasking]], [[#Transaction-processing System]]
 - IO intense, for enterprise
 - Gradually replaced by UNIX variants like [[Linux Kernel]]
 - Examples are like OS/390 and OS/360

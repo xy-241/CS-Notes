@@ -20,7 +20,7 @@ description: Unlock the power of multi-programming and supercharge your computer
 - Allow a user to run multiple programs at the same time with a single [[CPU]]
 </br>
 
-- **Not all Multi-Programming** systems are [[Multi-tasking]]
+- **Not all Multi-Programming** systems are [[Concurrency (并发)#Multi-tasking]]
 - More suitable for **CPU Bounded** tasks
 
 ## Benefits

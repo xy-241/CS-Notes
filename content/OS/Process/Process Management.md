@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Process management is a way for [[Kernel]] to manage multiple [[Process (进程)]] that want to run at the same time ([[Concurrency (并发)]]) **actively**, like in the [[Multi-programming]] or [[Multi-tasking]] systems
+- Process management is a way for [[Kernel]] to manage multiple [[Process (进程)]] that want to run at the same time ([[Concurrency (并发)]]) **actively**, like in the [[Multi-programming]] or [[Concurrency (并发)#Multi-tasking]] systems
 - Kernel needs to manage processes actively because process can hog the [[CPU]] forever
 
 ## Process Scheduler

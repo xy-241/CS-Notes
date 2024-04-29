@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- The ability to instruct the [[CPU]] to switch the task it is working on, so that each task can take turns to run - this is what powers [[Multi-tasking]]
+- The ability to instruct the [[CPU]] to switch the task it is working on, so that each task can take turns to run - this is what powers [[Concurrency (并发)#Multi-tasking]]
 - Context switching relies on the [[Process Control Block (PCB)]] to store the **task state**, so when we resume the task, we don't have to start from scratch; we can continue the task as if it never stopped
 
 
