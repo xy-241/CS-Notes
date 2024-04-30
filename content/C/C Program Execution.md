@@ -6,11 +6,14 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-10-02T18:04:26+08:00
-Last Date: 2023-12-21T11:35:02+08:00
+Last Date: 2024-04-30T15:41:05+08:00
 References: 
 ---
 ## Abstract
 ---
+
+![[c_compilation.png|500]]
+
 - Convert from C program to [[Instruction]], then execute it as a [[Process (进程)]]
 
 ## 5 Steps
@@ -52,3 +55,4 @@ gcc -c hello_world.c
 ## References
 ---
 - [C Language Source Code to EXE](https://youtu.be/gSackZtqlUI?si=FXfUYg19cdPkvyRr)
+- [Modern OS - 1.8.3 Large Programming Projects](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf#Large Programming Projects)

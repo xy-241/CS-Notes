@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-04-29T21:11:46+08:00
+Last Date: 2024-04-30T15:41:19+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
@@ -16,14 +16,14 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 
 >[!success] Better Security
-> [[Process (进程)]] in [[User Space]] can **only** use **computer hardware** to complete its job with **kernel's security implementation**. This prevents programs from doing malicious stuff.
+> Since **privileged services** are carried out by the kernel, kernel can enforce **security implementation**. This prevents programs from doing malicious stuff.
 
 >[!question] How is System Call triggered?
 > ![[system_call_triggering_process.png|500]]
 > 
 > **Step 1-3:** Calling [[Process (进程)]] pushes the arguments for the parameters of the system call to its [[Address Space#Stack Segment]].
 > 
-> **Step 4**(where the actual [[Library Call]] is happening): An [[Instruction]] is triggered to trigger the corresponding Library Call, the same instruction is used to trigger other library calls.
+> **Step 4**(the start of [[Library Call]]): An [[Instruction]] is triggered to trigger the corresponding Library Call, the same instruction is used to trigger other library calls.
 > 
 > **Step 5** Library Call puts **Syscall Interrupt Number** in a place where [[Kernel]] expects it, such as a [[Register]].
 > 
@@ -33,11 +33,11 @@ description: "Unlock the power of your computer's hardware while staying secure!
 > 
 > **Step 8:** The desired Interrupt Handler starts running.
 > 
-> **Step 9:** After Interrupt Handler finishes, control **maybe** returned to the [[User Space]] at the Instruction following the Trap Interrupt (陷入).
+> **Step 9:** After the interrupt handler finishes, control is returned to the library call at the Instruction following the Trap Interrupt (陷入).
 > 
 > **Step 10:** Then, library call returns, and we are back to the user program. 
 > 
-> **Step 11:** To finish the job, the process needs remove the system call related data like the arguments we pushed to the stack segment from its stack segment by **incrementing** the [[Register#Stack Pointer]].
+> **Step 11:** To finish the job, the process needs remove the library call related data like the arguments we pushed to the stack segment from its stack segment by **incrementing** the [[Register#Stack Pointer]].
 
 
 >[!important] System call & process management
@@ -51,13 +51,13 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 ![[syscall_architecture_differences.png|500]]
 
-- System call is implemented with [[Assembly language]] which is different across different [[Instruction Set Architecture (ISA)]]. For example, some ISA may expect the parameters be stored in [[Address Space#Stack Segment]] of the [[Kernel]], some ISA may expect the parameters be stored in [[Register]]
+- The actual mechanics of issuing a system call are highly [[Instruction Set Architecture (ISA)]] **dependent** and often must be expressed in [[Assembly language]]. For example, some ISA may expect the parameters be stored in [[Address Space#Stack Segment]] of the [[Kernel]], some ISA may expect the parameters be stored in [[Register]]
 
 
 >[!success] Solution: abstraction!
-> We have [[Abstraction (抽象)#Abstraction Barrier]] on top of these [[System Call (系统调用)]] in the form of [[Library Call]] that follows a standardised interface like [[POSIX]] by wrapping the [[Assembly language |Assembly Instruction]] of different Instruction Set Architecture (ISA). Specific [[Instruction]] of Instruction Set Architecture (ISA) is generated automatically during [[Compilation]].
+> We have [[Abstraction (抽象)#Abstraction Barrier]] built on top of these [[System Call (系统调用)]] in the form of [[Library Call]] that follows a standardised interface like [[POSIX]] by wrapping the [[Assembly language |Assembly Instruction]] of different ISAs. Specific ISA [[Instruction]] is generated during [[Compilation]] automatically.
 > 
-> So user programs like [[OS System Program]] is triggering system call that requests privileged services from the kernel via the library call - user program **isn't communicating** with system call **directly**!
+> This makes it possible for user programs like [[OS System Program]] to make system call that requests privileged services from the kernel - user program **isn't communicating** with system call **directly**!
 > 
 > [[Unix#Unix-like]] systems use [[Library Call#libc]] and Windows uses [ntdll.dll](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/libraries-and-headers).
 
@@ -79,3 +79,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 ![[windows_system_calls.png|500]]
 
 - The list above shows the [[Library Call]] which is powered by Windows' [[System Call (系统调用)]]
+
+## References
+---
+- [Modern OS - 1.6 System Calls](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf#Large Programming Projects)
