@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-04-29T13:32:32+08:00
+Last Date: 2024-05-01T02:00:17+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
@@ -73,6 +73,10 @@ aliases:
 > 
 > It is like finding the solution to $(5+5+5+5)+5$, we already know $(5+5+5+5)$ is $20$, then the answer to $(5+5+5+5)+5$ is simply $(20) + 5$ which is $25$. You see we don't need to remember what is the answer to $5+5$ or $5+5+5$, because the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**.
 
+>[!important] Dependency order of subproblems
+> ![[dp_topological_sort_order.png|500]]
+> 
+> In order to be solved with dynamic programming, the **dependency order of subproblems** of a given problem **MUST** follow a **topological sort order**, as shown above. Think about the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**. If $(5+5+5+5)$ depends on $(5+5+5+5)+5$, there is no way for us to **build up** the solution from smaller subproblems! 
 ## DP Problem Properties 
 ---
 ### Overlapping Subproblems (重复子问题)
@@ -92,18 +96,39 @@ aliases:
 
 ## State Transition Equation (状态转移方程)
 ---
-- The [[Recursion#Recurrence Function]] we need to perform to transit from one state (**smaller subproblems**) to the next state (**bigger subproblems**), obtain the **optimal solution** of the problem eventually 
+- The [[Recursion#Recurrence Function]] we need to perform to transit from one state(**bigger subproblems**) to a smaller state(**smaller subproblems**), comes with a **base case** for the **smallest form of the problem**
 
->[!example] Fibonacci sequence
-> $$
+- Fibonacci sequence
+$$
 F(n) = 
 \begin{cases}
 1 & n\le 1\\
-F(n-1) + F(n-2) & n>1  \\
+F(n-1) + F(n-2) & n>1
 \end{cases}
 $$
 
+- [Unique Path - LeetCode](https://leetcode.com/problems/unique-paths/description/)
+$$
+F(n, m) = 
+\begin{cases}
+0 & n<1 \text{ or } m<1 \\
+1 & n = 1 \text{ or } m = 1 \\
+F(n-1, m) + F(n, m-1) & \text{otherwise}
+\end{cases}
+$$
 
+- [Coin Change - LeetCode](https://leetcode.com/problems/coin-change/description/)
+$$
+\begin{equation*}
+    F(n) = \begin{cases} 
+        -1 & n < 0 \\
+        0 & n = 0 \\
+        \min\{F(n-c) + 1 \mid n - c \geq 0, F(n-c) \neq -1, c \in \text{coins}\} & n \geq 1
+    \end{cases}
+\end{equation*}
+
+
+$$
 
 >[!example] 0-1 knapsack problem
 > In [[Combinatorial Optimisation#0-1 knapsack problem]], the scope is basically the number of the items we can select. The less the items available to be selected the smaller the scope.
