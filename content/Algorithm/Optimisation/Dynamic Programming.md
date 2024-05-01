@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-05-01T02:00:17+08:00
+Last Date: 2024-05-01T11:30:38+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
@@ -113,7 +113,7 @@ F(n, m) =
 \begin{cases}
 0 & n<1 \text{ or } m<1 \\
 1 & n = 1 \text{ or } m = 1 \\
-F(n-1, m) + F(n, m-1) & \text{otherwise}
+F(n-1, m) + F(n, m-1) & n>1 \text{ and } m>1
 \end{cases}
 $$
 
