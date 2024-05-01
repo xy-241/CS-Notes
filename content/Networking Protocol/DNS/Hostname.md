@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2023-07-24T18:28:00
-Last Date: 2024-03-03T22:26:49+08:00
+Last Date: 2024-04-30T23:08:54+08:00
 References: 
 ---
 ## Abstract
@@ -36,7 +36,7 @@ References:
 ---
 - Examples are `notes.yxy.ninja` and  `google.com` etc
 
->[!tip]- Domain Name Transfer
+>[!tip]+ Domain Name Transfer
 >Transferring from one [[#Domain Registrar]] to another. The general steps:
 >	1. [Disable DNSSEC](https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/#disable-dnssec)
 >	2. [Unlock Domain](https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/#2-unlock-the-domain)
@@ -46,6 +46,8 @@ References:
 >	   
 >Refer to [Cloudflare Docs](https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/#disable-dnssec) for more details
 
+>[!caution]
+> For [[DNS Record]] for Domain ownership verification, we can't proxy it, the [[X.509 Certificate#Certificate Authority (CA)]] wants to the see the verification text in the DNS record!
 ### Domain Registrar
 - The platform between the domain owner and [[DNS Server#Top-Level Domain DNS Server]], for example [Cloudflare Registrar](https://developers.cloudflare.com/registrar/)
 
