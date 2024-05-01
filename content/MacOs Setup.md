@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-04-24T23:47:42+08:00
+Last Date: 2024-04-25T22:00:08+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -193,7 +193,7 @@ ssid=`networksetup -getairportnetwork en0 | awk -F": " '{print $2}'`
 ``` 
 - [ ] [[IP Address#ipinfo/cli]]
 - [ ] [[IP Address#asn]]
-- [ ] [[Dynamic Port Forwarding#sshuttle]] - VPN over [[SSH]]
+- [ ] [[Dynamic Port Forwarding#sshuttle]] - VPN powered by [[SSH]]
 ## Hardware Tools
 ---
 - [ ] [rpi-imager](https://github.com/raspberrypi/rpi-imager)

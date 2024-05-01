@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2024-04-05T20:36:22+08:00
+Last Date: 2024-04-30T23:22:08+08:00
 References: 
 draft: 
 description: Fly.io Starter Guide
@@ -44,6 +44,7 @@ fly ips list
 
 fly certs add <CUSTOM_DOMAIN_ENDPOINT>
 fly certs show <CUSTOM_DOMAIN_ENDPOINT>
+fly certs delete <CUSTOM_DOMAIN_ENDPOINT>
 ```
 - [[Local Port Forwarding#Fly.io App Port Forwarding]]
 
@@ -52,3 +53,11 @@ fly postgres list
 
 fly postgres connect -a <APP_NAME>
 ```
+
+
+## Fly.io SSL
+---
+
+![[flyio_ssl.png|500]]
+
+- I am using a custom [[Hostname#Domain Name]] with my fly.io app. For some reason, the [[X.509 Certificate]] didn't get auto-renew. This leads to the inaccessibility to the fly.io app. I suspect it is because by the [Cloudflare DNS Proxy](https://developers.cloudflare.com/dns/manage-dns-records/reference/proxied-dns-records/) which causes the custom domain verification to fail. I had to stop the proxy, run `fly certs delete <custom_domain_name>` and `fly certs create <custom_domain_name>` to get a valid X.509 certificate again

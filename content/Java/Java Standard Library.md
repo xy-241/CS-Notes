@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-11-15T17:13:00
-Last Date: 2024-04-22T11:55:50+08:00
+Last Date: 2024-04-26T13:58:39+08:00
 References: 
 ---
 ## Abstract
@@ -17,7 +17,7 @@ References:
 ---
 - Package in Java that provides a collection of [[Data Structure]] and [[Algorithm]], **not automatically imported**
 ### java.util.TreeSet
-- [[Hash Map]] but with elements sorted, the time complexity is $O(logn)$ for insertion, deletion, search and [[Sorting]]
+- [[Hash Map]] but with elements sorted, the time complexity is $O(logn)$ for insertion, deletion, search. $O(n)$ to list all elements in a sorted manner
 
 ### java.util.Arrays
 - For `Arrays.sort()`, the elements inside the [[Array]] must be a type of Object. `int[]` can't, because `int` is a [[Datatype#Primitive Datatype]]

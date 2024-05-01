@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2024-03-13T15:16:13+08:00
+Last Date: 2024-04-30T15:06:24+08:00
 References: 
 ---
 ## Abstract
 ---
-Datadog RUM provides [[Real User Monitoring]]
+- Datadog RUM provides [[Real User Monitoring]]
 
 
 ## Setup
@@ -23,8 +23,7 @@ The example below is based on [next.js](https://nextjs.org/). The setup process 
 - [ ] [[#Changes for Frontend Source Codes]]
 - [ ] [[#Integration with Datadog APM]]
 
->[!tip]- Track at User-level
-> If the users to your website need to login. You can pass the information of the users who login to your website to Datadog. This allows you to filter tracking data on a user level. For more details view [Advanced Configuration - Identify-user-session](https://docs.datadoghq.com/real_user_monitoring/browser/advanced_configuration/?tab=npm#identify-user-session)
+
 ### Datadog Dashboard
 1. Go to the appropriate [Datadog Site](https://docs.datadoghq.com/getting_started/site/#access-the-datadog-site). In this case, our site is `https://app.datadoghq.eu`, the endpoint is `https://app.datadoghq.eu/rum/list`
 2. Create a **New Application**,  **Application Type** is `JS`, **Instrumentation Type** is `NPM`, and we will get the following codes
@@ -48,6 +47,8 @@ datadogRum.init({
 });
 ```
 
+>[!tip] Tracking at an user level
+> If the users of your website need to log in. You can pass the information of the users who login to your website to Datadog. This allows you to filter tracking data on a user level. For more details view [identifying user session with Datadog RUM](https://docs.datadoghq.com/real_user_monitoring/browser/advanced_configuration/?tab=npm#identify-user-session).
 ### Changes for Frontend Source Codes
 1. Install the datadog package with [[Package Manager#NPM]] - `npm i @datadog/browser-rum`
 2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the Datadog can monitor every page of the frontend
