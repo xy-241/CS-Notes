@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-04-26T19:25:08+08:00
+Last Date: 2024-05-01T14:29:23+08:00
 References: 
 description: The giant that powers the software application we use on a daily basis!
 ---
@@ -14,7 +14,7 @@ description: The giant that powers the software application we use on a daily ba
 ---
 - Consists of [[Kernel]] and [[OS System Program]]
 - 2 main functionalities
-	1. Provide user like you and me features to interact with the hardware like browsing the web
+	1. Provide user like you and me features to interact with the hardware
 	2. Resource Manager for resources like [[IO Device]] & [[Main Memory]] etc
 
 

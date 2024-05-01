@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-04-30T15:41:19+08:00
+Last Date: 2024-05-01T13:59:59+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
@@ -25,11 +25,11 @@ description: "Unlock the power of your computer's hardware while staying secure!
 > 
 > **Step 4**(the start of [[Library Call]]): An [[Instruction]] is triggered to trigger the corresponding Library Call, the same instruction is used to trigger other library calls.
 > 
-> **Step 5** Library Call puts **Syscall Interrupt Number** in a place where [[Kernel]] expects it, such as a [[Register]].
+> **Step 5** Library Call puts **system call interrupt number** in a place where [[Kernel]] expects it, such as a [[Register]].
 > 
 > **Step 6:** Execute [[Trap Interrupt (陷入)]] to enter the [[Privilege Level#Kernel Mode]].
 > 
-> **Step 7:** The trap interrupt examines **Syscall Interrupt Number**, dispatch the correct [[Interrupt Handler]] via [[Interrupt Vector Table]].
+> **Step 7:** The **kernel codes** following the trap interrupt examines **system call interrupt number**, dispatch the correct [[Interrupt Handler]] via [[Interrupt Vector Table]].
 > 
 > **Step 8:** The desired Interrupt Handler starts running.
 > 
@@ -82,4 +82,4 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 ## References
 ---
-- [Modern OS - 1.6 System Calls](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf#Large Programming Projects)
+- [Modern OS - 1.6 System Calls](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
