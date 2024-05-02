@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-09-14T14:01:42+08:00
-Last Date: 2024-05-01T21:24:15+08:00
+Last Date: 2024-05-02T20:08:52+08:00
 References: 
 ---
 ## Abstract
@@ -23,7 +23,10 @@ References:
 - An [[#OOP Class]] inside an OOP Class
 
 ### Anonymous Inner Class
-- A [[#OOP Class]] without a name
+- A [[#Inner Class]] without a name
+
+>[!important]
+> Anonymous classes are useful when you **need to create a class** that implements an [[#OOP Interface]] or **extends a class**, but you **don't need to reuse the class** elsewhere in your code.
 
 
 ### OOP Object
@@ -35,9 +38,12 @@ References:
 
 ## OOP Interface
 ---
-- Defines a **set of methods** that a [[#OOP Class]] must implement if it chooses to implement that interface. It doesn't provide any concrete implementations for these methods
+- Defines a **set of [[#OOP Abstract Method]]** that a [[#OOP Class]] must implement if it chooses to implement that interface. It doesn't provide any concrete implementations for these methods
 - Focus on **what a class should do** rather than **how it should do it**
 
+### Functional Interface
+- Also known as **Single Abstract Method(SAM)**
+- [[OOP#OOP Interface]] that contains **only one** [[OOP#OOP Abstract Method]]
 
 ## OOP Method
 ---
