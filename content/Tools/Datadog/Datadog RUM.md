@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2024-04-30T15:06:24+08:00
+Last Date: 2024-05-02T16:51:18+08:00
 References: 
 ---
 ## Abstract
@@ -51,7 +51,7 @@ datadogRum.init({
 > If the users of your website need to log in. You can pass the information of the users who login to your website to Datadog. This allows you to filter tracking data on a user level. For more details view [identifying user session with Datadog RUM](https://docs.datadoghq.com/real_user_monitoring/browser/advanced_configuration/?tab=npm#identify-user-session).
 ### Changes for Frontend Source Codes
 1. Install the datadog package with [[Package Manager#NPM]] - `npm i @datadog/browser-rum`
-2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the Datadog can monitor every page of the frontend
+2. Append the codes we obtained from [[#Datadog Dashboard]] inside the root `.tsc` file, usually it is named as `App.tsx`, so the Datadog RUM scripts are **inserted** into **all the frontend pages**
 
 ### Integration with Datadog APM
 
