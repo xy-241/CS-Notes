@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-05-01T11:30:38+08:00
+Last Date: 2024-05-02T11:42:55+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
@@ -14,7 +14,7 @@ aliases:
 ## Abstract
 ---
 - Also known as **Dynamic Optimisation**
-- Divide a given problems into smaller problems, answers to those smaller problems generate the answer to the given problem. We make use of [[Memoization]] to remember the answers to those smaller problems, so we **don't re-solve** those smaller problems
+- A **technique** utilised to **divide** a **given problems** into **smaller problems**, **optimal answers** to those **smaller problems** generate the **optimal answer to the given problem**, and the **efficiency** of the process is **improved** by making use of [[Memoization]] to remember the answers to those smaller problems, so we **avoid duplicated computation**
 
 >[!quote] Dynamic
 > *I wanted to get across the idea that this was dynamic, this was **multistage**, this was **time-varying**.* - **Bellman**
@@ -51,14 +51,14 @@ aliases:
 >[!attention]
 > The space complexity of Top-down approach is $O(n)$, we need to record down the answer for all the subproblems.
 > 
-> When we break down the larger problem into smaller subproblems, some subproblems may already be solved but some aren't. The **size of subproblems** can **vary**, so we have to record down the answer to each solved subproblems, so we can solve that subproblem in$0(1)$ if we see that subproblem again.
+> When we break down the larger problem into smaller subproblems, some subproblems may already be solved but some aren't. The **size of subproblems** can **vary**, so we have to record down the answer to each solved subproblems, so we can solve that subproblem in $O(1)$ if we see that subproblem again.
 
 ### Divide and Conquer 
 - [[#Top-down DP Approach]] without [[Memoization]], because overlapping subproblems aren't a requirement for the Divide and Conquer approach
 - Make use of [[Recursion]] to divide a given problem into smaller subproblems until its **smallest form** whose **answer is known**. We combine the answers of smaller subproblems into the answer of a bigger subproblem when the function calls on the smaller subproblems return
+- For example, [[Sorting#Merge Sort]] uses Divide and conquer
 
->[!example]
-> [[Sorting#Merge Sort]]
+
 
 
 ## Bottom-up DP Approach
@@ -90,9 +90,8 @@ aliases:
 >[!example] Knapsack Problem
 > The solution can be found by building on the optimal solutions to the knapsack problem with smaller weights and values.
 ### Statelessness (无后效性)
-- Solutions to smaller problems are **deterministic**. 给定一个**确定的状态**， 其**未来发展**只与**该状态有关**， 与该状态所经历的过去的所有**状态无关**. 如果未来发展与该状态和该状态的前一个状态相关，我们可以靠矩阵来解。但如果回溯的状态过多，就难了
-- 许多[[Backtracking]] problems 都不具有**无后效性**， 无法使用 [[Dynamic Programming]] 快速求解
-
+- Solutions to smaller problems are **deterministic**. For example, the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**
+- We can expand the definition of [[Memoization#DP Table]] to keep track the state of more complex problems, aka building up from the optimal solution of smaller subproblems. However, problems like [Travelling salesman problem - Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem#:~:text=The%20travelling%20salesman%20problem%2C%20also,returns%20to%20the%20origin%20city%3F%22) is too complex to have the solutions of its subproblems modelled into a dp table. Thus, can't be solved with the help of [[Dynamic Programming]]
 
 ## State Transition Equation (状态转移方程)
 ---
@@ -130,6 +129,9 @@ $$
 
 $$
 
+>[!important]
+> Theoretically, if a problem fulfils the [[#Overlapping Subproblems (重复子问题)]] and [[#Optimal Substructure (最优子结构)]] properties, we are able to come up with the state transition equation.
+
 >[!example] 0-1 knapsack problem
 > In [[Combinatorial Optimisation#0-1 knapsack problem]], the scope is basically the number of the items we can select. The less the items available to be selected the smaller the scope.
 > 
@@ -154,3 +156,8 @@ $$
 > We know the **previous state** is the **best state** at that **smaller scope**. So we can build on top of it! If I put in the new item, the best value it can generate is basically the best value at $s-w$ at the previous state(let this best value be $q$) + $v$. If we don't put the new item, the best value is basically $p$.
 > 
 > Thus, we obtain our **State Transition Equation**. The new state at $p$ is  `Math.max(q + v, p)`. We put the new item into the bag if $q+v \gt p$, else we don't.
+
+
+## References
+---
+- [第 14 章   动态规划 - Hello 算法](https://www.hello-algo.com/chapter_dynamic_programming/#_1)
