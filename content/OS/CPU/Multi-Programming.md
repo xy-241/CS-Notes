@@ -6,24 +6,17 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-11T19:15:28+08:00
-Last Date: 2024-01-18T18:09:12+08:00
+Last Date: 2024-05-02T17:15:06+08:00
 References: 
 description: Unlock the power of multi-programming and supercharge your computer's performance!
 ---
 ## Abstract
 ---
-- Ability of computer to store multiple program in [[Main Memory]] at the same time & switch between them quickly 
-- Focus on improving the [[CPU]] utilisation since [[Process (进程)]] will be idle for a relative long time when interacting with [[OS/IO/IO Device|IO Device]]
-</br>
+- Ability of computer to store multiple program in [[Main Memory]] at the same time & switch between them quickly with [[Context Switch]]
 
-- [[CPU]] switches rapidly from one Process to another
-- Allow a user to run multiple programs at the same time with a single [[CPU]]
-</br>
 
-- **Not all Multi-Programming** systems are [[Concurrency (并发)#Multi-tasking]]
-- More suitable for **CPU Bounded** tasks
+>[!important]
+> **Not all Multi-Programming** systems are [[Concurrency (并发)#Multi-tasking]]. The focus is [[CPU]] utilisation. 
 
-## Benefits
----
-### Full utilisation of Multi-core Chip
-- Since there are multiple [[Process (进程)]] ready to run at the same time, we can distribute each process to each [[CPU#Core]] on the [[Multi-core Chip]]
+>[!success] Maximised resource usage
+>When there are multiple [[Process (进程)]] ready to run at the same time, we can distribute each process to each [[CPU#Core]] on the [[Multi-core Chip]]. When one process is blocked due to [[io_operation.png|IO operation]], the CPU can work another ready process.

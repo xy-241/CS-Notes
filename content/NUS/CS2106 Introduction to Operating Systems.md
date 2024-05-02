@@ -36,7 +36,7 @@ title: cs2106 nus notes
 - [[Process Control Block (PCB)]]
 - [[Address Space]]
 - [[Context Switch]]
-- [[Timeslice]]
+- [[Time Slice]]
 - [[Inter-Process Communication (IPC)]]
 
 ## Process Alternatives - Threads
