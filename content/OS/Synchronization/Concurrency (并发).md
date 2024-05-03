@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-24T12:23:00
-Last Date: 2024-05-02T17:13:30+08:00
+Last Date: 2024-05-03T21:19:02+08:00
 References: 
 draft: 
 description: 
@@ -103,9 +103,12 @@ description:
 - All Time-sharing systems are [[Multi-programming]] systems
 
 >[!info]
+> The first time-sharing machine is invented at MIT in the early 1960s, machines before it are all [[OS#Batch System]].
+>
 > [Multics - Wikipedia](https://en.wikipedia.org/wiki/Multics) was one of the first time-sharing [[OS]] which inspires the creation of [[Unix]].
 
 ## References
 ---
 - [Slice Dat Time | Putting the "You" in CPU](https://cpu.land/slice-dat-time)
 - [CONCURRENCY IS AN ILLUSION - YouTube](https://youtu.be/3X93PnKRNUo?si=PsdliiPMP8fv3NoO)
+- [Modern OS - 1.9 Research on Operating Systems](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)

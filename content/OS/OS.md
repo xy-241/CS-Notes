@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-05-01T14:29:23+08:00
+Last Date: 2024-05-03T21:36:02+08:00
 References: 
 description: The giant that powers the software application we use on a daily basis!
 ---
@@ -14,7 +14,7 @@ description: The giant that powers the software application we use on a daily ba
 ---
 - Consists of [[Kernel]] and [[OS System Program]]
 - 2 main functionalities
-	1. Provide user like you and me features to interact with the hardware
+	1. Provide user features in the form of [[Abstraction (抽象)#Abstraction Barrier]] to interact with the hardware. Some key abstractions are [[Process (进程)]], [[Thread]], [[Address Space]] and [[File]]
 	2. Resource Manager for resources like [[IO Device]] & [[Main Memory]] etc
 
 
@@ -70,3 +70,8 @@ description: The giant that powers the software application we use on a daily ba
 - Process jobs without any interactive user present
 ### Transaction-processing System
 - Handle large number of of small requests, hundreds/thousands per second
+
+
+## References
+---
+- [Modern OS - 1.10 Outline of the rest of this book](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Modern%20Operating%20Systems.pdf)
