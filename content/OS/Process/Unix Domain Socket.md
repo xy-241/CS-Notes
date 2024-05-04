@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-03-29, 17:48
-Last Date: 2024-03-30T18:10:30+08:00
+Last Date: 2024-05-04T20:30:54+08:00
 References: 
 draft: 
 description: 
@@ -14,6 +14,16 @@ description:
 ## Abstract
 ---
 - An [[Unix#Unix-like]] [[Inter-Process Communication (IPC)#Socket]] that provides [[Inter-Process Communication (IPC)]] using [[File#File Descriptor]], where the [[Kernel]] handles the [[System Call (系统调用)]] and put the mechanism behind a [[Abstraction (抽象)#Abstraction Barrier]]
+
+>[!important]
+> ![[unix_domain_socket_performance.png|400]]
+> 
+> Runs entirely in [[Main Memory]], so it is **extremely fast** to perform **read** and **write** to the **unix domain socket file**.
+
+>[!info]
+> ![[docker_http_over_uds.png|400]]
+> 
+> [[Docker]] uses [[HTTP]] over unix domain socket instead of [[TCP]] for better performance. Refer to this [article](https://dev.to/rajasegar/http-over-unix-sockets-in-common-lisp-4l72) for more information.
 
 
 ## Unix Domain Socket Lifecycle
@@ -44,10 +54,14 @@ description:
 >[!note]
 > Server socket can accept **many client connections** at the same time.
 
->[!code] Code Example
-> You can refer to this [Medium Article](https://medium.com/swlh/getting-started-with-unix-domain-sockets-4472c0db4eb1) that implements UNIX Domain Socket on both the client and server using [[C]].
+>[!code] C Code Example
+> You can refer to this [Medium Article](https://medium.com/swlh/getting-started-with-unix-domain-sockets-4472c0db4eb1) to implement UNIX Domain Socket on both the client and server using [[C]].
 
+>[!code]
+> You can use `find / -type s` to list down all the unix domain socket files on the system.
 ## References 
 ---
 - [Getting Started With Unix Domain Sockets | by Matt Lim | The Startup | Medium](https://medium.com/swlh/getting-started-with-unix-domain-sockets-4472c0db4eb1)
 - [Are FIFO, pipe & Unix domain socket the same thing in Linux kernel? - Unix & Linux Stack Exchange](https://unix.stackexchange.com/questions/75904/are-fifo-pipe-unix-domain-socket-the-same-thing-in-linux-kernel)
+- [Unix Domain Socket in 100 seconds - YouTube](https://youtu.be/1UHaR54i3ak?si=M3ALYsHKrBrs4jsd)
+- [HTTP over unix sockets in Common Lisp - DEV Community](https://dev.to/rajasegar/http-over-unix-sockets-in-common-lisp-4l72)
