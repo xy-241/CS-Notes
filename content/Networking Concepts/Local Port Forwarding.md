@@ -8,7 +8,7 @@ tags:
   - aws
   - fly_io
 Creation Date: 2024-01-16, 20:50
-Last Date: 2024-05-02T00:13:35+08:00
+Last Date: 2024-05-04T23:15:23+08:00
 References: 
 draft: 
 description: Accessing private services as if they are running on your local machine!
@@ -59,18 +59,42 @@ flyctl proxy <local_port>:<remote_port> -a <app_name>
 >[!caution] EC2 Configuration
 >Make sure you are using an **Amazon Linux Image**, or you have [setup system manager on EC2](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up.html)
 
-- [[Local Port Forwarding]] a local machine [[Network Port]] to a EC2 instance port
+
+>[!important] Use case
+> The **EC2 Bastion** is **inside an AWS private subset**, blocking all incoming traffic from the internet. With the help of [[AWS SSM]], we are able to carry out [[Local Port Forwarding]], so we are able to **access the private service** running on the **bastion host** or private services the **bastion host has access to** by **accessing a localhost port**.
+
+
+
+
+- Port forward a local machine [[Network Port]] to a EC2 instance port
+
+![[ec2_local_port_forwarding.png|600]]
+
 ```bash
-aws ssm start-session --target <ec2_instance_id> --region <aws_region> --document-name AWS-StartPortForwardingSession --parameters portNumber=<ec2_port>,localPortNumber=<local_port>
+aws ssm start-session \
+--target <ssm-managed-instance-id> \
+--region <aws_region> \
+--document-name AWS-StartPortForwardingSession \
+--parameters portNumber=<ec2_port>,localPortNumber=<local_port>
 ```
 
->[!example] Use case
-> The EC2 Bastion is inside an AWS private subset, blocking all incoming traffic from the internet. With the help of [[AWS SSM]], we are able to port forwarding a port of the bastion host to a localhost port, so we are able to access the service running on a particular bastion host port by accessing a localhost port.
+- Port forward a local machine [[Network Port]] to a **private service** the EC2 instance has access to
 
+![[ec2_local_port_forwarding_2.png|600]]
 
+```bash
+aws ssm start-session \
+--target <ssm-managed-instance-id> \
+--region <aws_region> \
+--document-name AWS-StartPortForwardingSessionToRemoteHost \
+--parameters '{"portNumber":["<3306>"],"localPortNumber":["<1053>"],"host":["<remote-database-host-name>"]}'
+```
 
 
 ## References
 ---
 - [SSH Tunneling - Local & Remote Port Forwarding (by Example) - YouTube](https://www.youtube.com/watch?v=N8f5zv9UUMI)
 - [A Visual Guide to SSH Tunnels: Local and Remote Port Forwarding](https://iximiuz.com/en/posts/ssh-tunnels/)
+- [New – Port Forwarding Using AWS System Manager Session Manager | AWS News Blog](https://aws.amazon.com/blogs/aws/new-port-forwarding-using-aws-system-manager-sessions-manager/)
+- [Use port forwarding in AWS Systems Manager Session Manager to connect to remote hosts | AWS Cloud Operations & Migrations Blog](https://aws.amazon.com/blogs/mt/use-port-forwarding-in-aws-systems-manager-session-manager-to-connect-to-remote-hosts/)
+- [Start a session - AWS Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-sessions-start.html)
