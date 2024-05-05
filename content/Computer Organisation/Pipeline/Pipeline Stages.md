@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:57:00
-Last Date: 2024-04-22T21:03:20+08:00
+Last Date: 2024-05-05T18:03:46+08:00
 ---
 #computer_organisation 
 ## Abstract
@@ -29,7 +29,7 @@ Last Date: 2024-04-22T21:03:20+08:00
 - Handled by [[Control Unit#Program Counter]] & [[Register#Instruction Register]]
 ## Decode
 ---
-- Handled by [[Control Unit]]
+- [[Control Unit]] configure **different parts** of the [[CPU]] like [[ALU]] with the given [[Instruction]] based on the [[Instruction#Opcode]] with referencing to its [[Instruction Set Architecture (ISA)]]
 ## Execute
 ---
 - Where the execution of [[Instruction]] is performed, can be further beak down to [[#Read]] & [[#Write Back]]

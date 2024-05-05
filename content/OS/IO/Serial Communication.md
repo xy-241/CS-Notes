@@ -7,7 +7,7 @@ tags:
   - OS
   - arduino
 Creation Date: 2024-02-26, 16:08
-Last Date: 2024-04-26T20:16:28+08:00
+Last Date: 2024-05-05T17:44:16+08:00
 References: 
 draft: 
 description: 
@@ -36,7 +36,7 @@ description:
 > We have RS232 that supports communication distance that is up to `30m` or **RS485** that supports communication distance that is up to `1000m`. RS485 also supports one-to-many communication.
 
 >[!attention] Slow communication speed
-> UART has a maxium $11520$ Baud Rate, that means `11.25KB/s`. This can be handled with **SPI** which has a speed up to `10MB/s`.
+> UART has a maximum $11520$ Baud Rate for standard applications, that means `11.25KB/s`. This can be handled with **SPI** which has a speed up to `10MB/s`.
 
 >[!attention] No one-to-many communication
 > The [[CPU]] needs to have a dedicated pair of UART wires for each peripheral. Unable to have one pair of wires for many peripherals. This can be handled with **I2C**.

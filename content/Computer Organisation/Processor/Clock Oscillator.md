@@ -7,7 +7,7 @@ tags:
   - computer_organisation
   - arduino
 Creation Date: 2024-01-11, 21:59
-Last Date: 2024-02-25T17:08:13+08:00
+Last Date: 2024-05-05T18:09:27+08:00
 References: 
 draft: 
 ---
@@ -43,7 +43,7 @@ draft:
 > **External Clock Source**
 > ![[arduino_uno_crystal_oscillator.png|300]]
 > - The Crystal oscillator is the built-in external clock source that runs at 16MHZ, named indicating 16.000H9H
-> - Crystal oscillator is more expensive and accurate, serial communication needs such accuracy to work
+> - Crystal oscillator is more expensive and accurate, [[Serial Communication]] needs such accuracy to work, the data will be corrupted if there is a slight mismatch from the agreed [[Serial Communication#Baud Rate]]
 > 
 > **Internal Clock Source**
 > - Calibrated Internal RC Oscillator running at **8MHz**
@@ -61,7 +61,13 @@ draft:
 
 ### Clock Cycle
 ![[clock_cycle.png|300]]
-- Refers to the time interval between two successive rising (or falling) edges of the [[Clock Signal]]
+- Refers to the **time interval** between **two successive rising (or falling) edges** of the [[Clock Signal]]. The **smallest time unit** for [[CPU]]
+
+### Machine Cycle
+- The **amount of time** the [[CPU]] takes to perform a [[Main Memory]] or [[OS/IO/IO Device|IO Device]] **access**. One machine cycle consists of **several** [[#Clock Cycle]]
+
+### Instruction Cycle
+- The **amount of time** the [[CPU]] takes to [[Pipeline Stages#Fetch]], [[Pipeline Stages#Decode]] and [[Pipeline Stages#Execute]] **one** [[Instruction]]. One Instruction cycle consists of **several** [[#Machine Cycle]]
 
 ### Clock Frequency
 - The total number of [[#Clock Cycle]] in one second
@@ -73,6 +79,6 @@ draft:
 
 ## References
 ---
-- What is an oscillator? Oscillator tutorial in HD! - YouTube
-![What is an oscillator? Oscillator tutorial in HD! - YouTube](https://youtu.be/aJAZHPqEUKU?si=Pt-hOeXTN6z8j6Po&t=157)
+- [What is an oscillator? Oscillator tutorial in HD! - YouTube](https://youtu.be/aJAZHPqEUKU?si=Pt-hOeXTN6z8j6Po&t=157)
 - [Does Arduino Have Internal Hardware Clock](https://linuxhint.com/arduino-internal-clock/)
+- [时钟周期/指令周期/机器周期 - 知乎](https://zhuanlan.zhihu.com/p/447927306?utm_id=0)
