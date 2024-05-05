@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-05-02T11:42:55+08:00
+Last Date: 2024-05-05T13:43:59+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
@@ -21,7 +21,10 @@ aliases:
 > 
 > So Dynamic programming is also known as **Multistage Optimisation**. The multstage here refers to the stages of solving subproblems which deliver the **final optimal answer** to a given problem.
 
-- There are two main approaches to DP algorithms - [[#Top-down DP Approach]] and [[Algorithm Design#Bottom-up Approach]]
+- There are **two main approaches** to DP algorithms - [[#Top-down DP Approach]] and [[Algorithm Design#Bottom-up Approach]]
+- There are **two main use-cases**
+	1. [[Combinatorial Optimisation]] (finding an **optimal solution**)
+	2. [[Counting]] the total number of solutions for a given problem
 
 
 >[!tip] DP Debugging
