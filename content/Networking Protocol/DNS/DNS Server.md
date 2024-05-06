@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2023-12-12T11:49:00+08:00
-Last Date: 2024-03-27T23:58:34+08:00
+Last Date: 2024-05-06T12:39:48+08:00
 References: 
 ---
 ## Abstract
@@ -18,7 +18,9 @@ References:
 ---
 ![[dns_resolver.png|500]]
 - Acts as a middleman between a [[Host#Client]] and a [[#Authoritative DNS Server]]
-- We can either create one using [unbound](https://docs.pi-hole.net/guides/dns/unbound/) or a 3rd-party services like [1.1.1.1](https://www.cloudflare.com/learning/dns/what-is-1.1.1.1/). By default, we are using the DNS Resolver provider by our [[ISP]]
+- We can either create one using [unbound](https://docs.pi-hole.net/guides/dns/unbound/) or a 3rd-party service like [1.1.1.1](https://www.cloudflare.com/learning/dns/what-is-1.1.1.1/) or [quad9](https://quad9.net/). By default, we are using the DNS Resolver provider by our [[ISP]]
+
+
 
 **Mechanism**
 - After receiving a DNS query from a client, resolver will either respond with **cached data**, or send a request to [[#Root DNS Server]], followed by another request to a [[#Top-Level Domain DNS Server]], and then one last request to an [[#Authoritative DNS Server]]. After receiving a response from the authoritative server containing the requested IP address, the resolver then sends a response to the client
@@ -28,6 +30,18 @@ References:
 > 
 > When a client requests the IP address of a domain name that was recently requested by another client, the resolver can just deliver the client the requested record from its cache, avoid the **expensive recursive query**!
 
+### DNS Leak
+- Occurs when your DNS queries are routed through your ISP [[DNS Server]] instead of the DNS servers you intended to use. So your **ISP can watch** which **site you are visiting** and the **websites you are visiting** know **which ISP you are using**
+
+>[!attention]
+> If you are using a **device in your house network** as a [[#DNS Resolver]], the ISP is **still able to see** which website you are visiting! Because the DNS query initialised by the local DNS Resolver to the [[#Authoritative DNS Server]] **needs to pass through ISP** and it reveals which site you are visiting!
+> 
+> The websites you are visiting also know your **actual** [[IP Address]], because the DNS resolver makes the DNS query from your house network!
+> 
+> **One common solution** is to use a **3rd-party DNS Resolver** like [1.1.1.1](https://www.cloudflare.com/learning/dns/what-is-1.1.1.1/) or [quad9](https://quad9.net/) that support [DNS Encryption](https://blog.cloudflare.com/dns-encryption-explained), so the ISP only sees we are communicating with 3rd-party DNS service providers and DNS communication with the websites is handled by the 3rd-party DNS resolvers. However, you gotta trust those 3rd-party DNS service.
+
+>[!tool]
+> You use [mullvad checker](https://mullvad.net/en/check) or [surfshark checker](https://surfshark.com/dns-leak-test) to check for DNS Leak.
 
 
 ## Root DNS Server

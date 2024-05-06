@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-09-28T10:59:00
-Last Date: 2023-12-30T00:36:17+08:00
+Last Date: 2024-05-05T18:57:23+08:00
 ---
 ## Abstract
 ---
-- [[Load Balancer]]  at [[OSI#Layer 4 (Transport Layer)]]
+- [[Load Balancer]]  at [[OSI Model#OSI Transport Layer]]
 
 
 ## Benefits

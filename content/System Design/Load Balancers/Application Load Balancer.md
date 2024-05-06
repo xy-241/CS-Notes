@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-14T18:16:44+08:00
-Last Date: 2023-12-30T00:55:50+08:00
+Last Date: 2024-05-05T18:56:09+08:00
 ---
 ## Abstract
 ---
-- [[Load Balancer]] at [[OSI#Layer 7 (Application Layer)]]
+- [[Load Balancer]] at [[OSI Model#OSI Application Layer]]
 
 
 
@@ -29,7 +29,7 @@ Last Date: 2023-12-30T00:55:50+08:00
 ## Cons
 ---
 ### Slower
-- It needs to unpack the data all the way to [[OSI#Layer 7 (Application Layer)]] to view at the [[Data]]
+- It needs to unpack the data all the way to [[OSI Model#OSI Application Layer]] to view at the [[Data]]
 
 ### More Network Resource Intense
 - We need to establish 2 [[TCP Connection]] instead of [[Network Load Balancer#Efficiency|Network Load Balancer's single TCP Connection]]

@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-09-25T00:01:00
-Last Date: 2024-04-19T23:19:55+08:00
+Last Date: 2024-05-05T18:56:35+08:00
 ---
 ## Abstract
 ---
-- Live at [[OSI#Layer 2 (Data Link)]]
+- Live at [[OSI Model#OSI Data Link Layer]]
 - To uniquely identify the device when we are using [[CSMA]] approach
 
 >[!info] MAC Randomization
