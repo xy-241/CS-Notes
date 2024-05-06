@@ -15,7 +15,7 @@ References:
 ---
 ## Abstract
 ---
-- Used to find the shortest path from **any starting node** to all other nodes in a [[Graph]] - **Single Source Shortest Path** on a [[Graph#Weighted | Weighted Graph]] that is either [[Graph#Directed Graph]] or [[Graph#Non-Directed Graph]]
+- Used to find the shortest path from **any starting node** to all other nodes in a [[Graph]] - **Single Source Shortest Path** on a [[Graph#Weighted | Weighted Graph]] that is either [[Graph#Directed Graph]] or [[Graph#Undirected Graph]]
 </br>
 
 - Use [[Greedy Algorithm]] to improve the computation performance via [[Priority Queue]]
