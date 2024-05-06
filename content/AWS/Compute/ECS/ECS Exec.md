@@ -8,6 +8,8 @@ tags:
 Creation Date: 2023-09-04T11:16:00
 Last Date: 2024-03-26T14:51:19+08:00
 References: 
+aliases:
+  - ../../../Tools/AWS/Compute/ECS/ECS-Exec
 ---
 ## Abstract
 ---
