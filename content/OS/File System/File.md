@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-04-20T00:05:43+08:00
+Last Date: 2024-05-07T00:39:17+08:00
 References: 
 ---
 
@@ -15,9 +15,9 @@ References:
 
 ---
 >[!quote]
-> [[Linux Kernel]] is a **file based** but Windows is an **API based**.
+> [[Linux Kernel]] is **file based** but Windows is **API based**.
 > 
-> This just means that in Linux, we can use the **same file [[System Call (系统调用)]]** on [[OS/IO/IO Device|IO Device]] like [[#Special File]] & [[Unix Domain Socket]] besides the regular files, where Windows has an **separate [Windowa API](https://youtu.be/AJVtFae1kWk?si=IA2sWrmKoNjIzBnO)** for those IO Devices.
+> This just means that in Linux which follows [[POSIX]], we can use the **same file [[Library Call]]** on [[#Block Special Files]], [[#Character Special Files]], [[Inter-Process Communication (IPC)#Socket]], [[Pipe (管道)]], [[File System Link]] & [[File System Hierarchy#File Directory]] besides the **regular files**, where Windows has an **separate [Windowa API](https://youtu.be/AJVtFae1kWk?si=IA2sWrmKoNjIzBnO)** for each of them.
 
 - Hide the **nitty gritty** of IO Device, so users can focus on manipulating the content inside the IO Device
 - Present programmer a clean [[Abstraction (抽象)]] of **device-independent** file

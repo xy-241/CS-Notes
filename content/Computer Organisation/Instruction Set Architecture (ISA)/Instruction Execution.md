@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-19T19:20:29+08:00
-Last Date: 2023-12-21T16:01:49+08:00
+Last Date: 2024-05-07T00:42:30+08:00
 References: 
 ---
 ## Abstract
@@ -16,12 +16,12 @@ References:
 
 ## Single Cycle Execution
 ---
-- All [[Pipeline Stages]] performed within a [[Clock Cycle]]
-- Time taken for one Clock Cycle depends on the slowest [[Instruction]]
+- [[Instruction]] executes in one cycle. The time given to one cycle is the time taken by the slowest instruction
 
->[!caution] All [[Instruction]] will take the same time as the slowest instruction
+>[!caution]
+> All instruction will take the same time as the **slowest instruction**.
 
 
 ## Multi Cycle Execution
 ---
-- Breaks down [[Pipeline Stages]] into multiple [[Clock Cycle]]
+- Breaks down [[Pipeline Stages]] into multiple cycles, each stage takes one cycle to complete. The time given to one cycle is the time taken by the **slowest pipeline stage**
