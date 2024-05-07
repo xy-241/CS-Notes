@@ -21,7 +21,7 @@ export default (() => {
     return (
       <head>
         <script
-          src="https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js"
+          src="https://notesss.yxy.ninja/script.js"
           type="text/javascript">
         </script>
         <script
@@ -30,6 +30,7 @@ export default (() => {
             window.DD_RUM && window.DD_RUM.init({
               clientToken: 'pubf8e87c77bc40109caafef497cae669d9',
               applicationId: '1790642d-89c4-45b7-8ba8-b2d58a5212b2',
+              proxy: 'https://notesss.yxy.ninja',
               site: 'datadoghq.com',
               service: 'notes.yxy.ninja',
               env: 'prod',
