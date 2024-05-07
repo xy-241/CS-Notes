@@ -7,7 +7,7 @@ tags:
   - dsa
   - discrete_math
 Creation Date: 2023-10-09T09:08:00
-Last Date: 2024-05-06T18:18:15+08:00
+Last Date: 2024-05-07T14:54:42+08:00
 References: 
 description: Detailed introduction to graph from a computer science perspective
 title: 
@@ -50,7 +50,7 @@ title:
 ![[graph_connectivity.png|500]]
 
 - **Two vertices** are **connected** if a [[#Path]] exists between them
-- A [[Graph]] is **connected** when **all vertices are connected**, that means for **any two vertices** of a graph, these two vertices are **connected by a path**
+- A [[Graph]] is **connected** when there is a [[#Path]] between **every pair of vertices**, ensuring **all vertices** are **reachable** from **every other vertex**
 
 ### Connected Component
 
@@ -59,6 +59,48 @@ title:
 - A connected component is **a subset of vertices** $V_{i} \subseteq V$ that form a [[#Graph Connectivity|connected graph]]   
 
 
+
+
+
+
+
+
+## Directed Graph
+---
+
+![[directed_graph.png|250]]
+
+- **If** edge $(u, v)$ exists, **then** edge $(v, u)$ **must NOT exist**
+- Can be used to represent [[Relation]] which only involves one [[Set]] 
+
+### Directed Cyclic Graph
+
+![[directed_cyclic_graph.png|250]]
+
+- [[#Directed Graph]] that has [[#Cycle]]
+
+### Directed Acyclic Graph
+
+![[directed_acyclic_graph(DAG).png|250]]
+
+- Known as **DAG**
+- [[#Directed Graph]] that **doesn't have** [[#Cycle]]
+
+
+### Undirected Graph
+
+![[undirected_graph.png|500]]
+
+- **If** edge $(u, v)$ exists, **then** edge $(v, u)$ **must also exist**
+- Since **all edges** are **double arrowed**, we usually **don't draw out the arrows** as shown above
+
+## Weighted Graph (加权图)
+---
+
+![[weighted_graph.png|500]]
+
+
+- Each [[Tree#Edge]] has **a value** which can be used to **model** things like **distances between two cities**
 
 ## Graph Representation
 ---
@@ -74,19 +116,10 @@ title:
 ### Adjacency Set
 - A collection of all [[Tree#Edge]] 
 
-## Directions in Graph
----
-### Undirected Graph
-- If there is an edge $(u, v)$, then there is also an edge $(v, u)$
-
-### Directed Graph
-- Can be used to represent [[Relation]] which only involves one [[Set]] 
-
 
 ## Terminologies
 ---
-### Weighted Graph (加权图)
-- [[Tree#Edge|Edge]] has a value
+
 
  
 
