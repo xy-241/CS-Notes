@@ -7,7 +7,7 @@ tags:
   - dsa
   - discrete_math
 Creation Date: 2023-10-09T09:08:00
-Last Date: 2024-05-07T14:54:42+08:00
+Last Date: 2024-05-08T08:54:04+08:00
 References: 
 description: Detailed introduction to graph from a computer science perspective
 title: 
@@ -106,15 +106,22 @@ title:
 ---
 ### Adjacency Matrix
 - A 2d [[Array]], the row and column index indicates the `id of a node`
-- **Pros:** Check the relationship of any 2 nodes in `O(1)`
-- **Cons:** Space wastage for [[#Sparse Graph]]
+
+>[!success] Pro
+> Check the relationship of any 2 nodes in `O(1)`.
+
+>[!caution]
+> Space wastage for [[#Sparse Graph]].
 
 ### Adjacency List
-- A [[Hash Map]] of [[Data Structure]]
+- Each vertex is mapped to a list of its [[#Neighbours]]
 - **Pros:** Easy to manipulate using programming language
 
 ### Adjacency Set
 - A collection of all [[Tree#Edge]] 
+
+>[!caution]
+> Not a common graph representation, it is hard to extract information about vertices and [[Graph]].
 
 
 ## Terminologies

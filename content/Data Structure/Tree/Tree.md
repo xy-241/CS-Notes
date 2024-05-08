@@ -6,13 +6,21 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-03T17:32:00
-Last Date: 2024-04-15T16:28:17+08:00
+Last Date: 2024-05-08T08:44:41+08:00
 ---
 ## Abstract
 ---
 ![[tree.png|500]]
 
+
 - Represent **hierarchical structures** such as [[File System Hierarchy]], organisational charts, XML/HTML documents, and decision trees etc, consisting of **nodes** connected by [[#Edge]]
+
+>[!important]
+> A [[Graph#Directed Acyclic Graph]] that is [[Graph#Graph Connectivity|connected]].
+> 
+> Adding an edge creates a [[Graph#Cycle]], turning the graph into a [[Graph#Directed Cyclic Graph]].
+> 
+> Removing an [[#Edge]] [[Graph#Graph Connectivity|disconnects]] the graph. 
 
 
 ## Tree Components
