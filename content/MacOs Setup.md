@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-04-25T22:00:08+08:00
+Last Date: 2024-05-09T12:33:42+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -52,20 +52,22 @@ title: Macos setup for software engineer
 - [ ] [[File#dua]] - Disk Usage Analyser
 - [ ] `brew install btop` - `htop`/`top` replacement
 - [ ] `brew install xh` - partial [[curl]] replacement
-- [ ] `navi` & `brew install tealdeer` - `man` replacement
+- [ ] `navi` - interactive command cheatsheet, `man` replacement
 ```bash
-brew install navi # Installation 
-# Add alias navi="navi --fzf-overrides-var '--no-select-1'" into .zshrc
-echo "alias navi='bat'" >>~/.zshrc
-# Add eval "$(navi widget zsh)" into .zshrc
+brew install navi # Installation
+
+echo "# === navi configuration by Xinyang ===" >> ~/.zshrc
+# To have the ability to override default parameter values 
+echo 'navi="navi --fzf-overrides-var '\''--no-select-1'\''"' >> ~/.zshrc 
+# Shell integration, so can we use Ctrl-G to run the program
+echo -e 'eval "$(navi widget zsh)" \n' >> ~/.zshrc
+
+# Add my cheatsheets, re-run this command for updates!
+navi repo add https://github.com/xy-241/cli-cheat
 
 navi fn welcome # Config Page
-
-# Ctrl-G to run the program
-
-# Add my cheatsheets, remember to run this command regularly for updates!
-navi repo add https://github.com/xy-241/cli-cheat
 ```
+- [ ] `brew install tealdeer` - `man` replacement
 - [ ] `fzf` - `grep` replacement
 ```bash
 brew install fzf # Installation 
@@ -162,7 +164,7 @@ h() {
 #!/bin/bash
 brew install awscli
 echo >> ~/.zshrc
-echo "# AWS Cli Env Variables" >> ~/.zshrc
+echo "# === AWS Cli configuration by Xinyang" >> ~/.zshrc
 echo "export AWS_PROFILE=<DEFAULT_PROFILE_NAME>" >> ~/.zshrc
 echo "export AWS_REGION=ap-southeast-1" >> ~/.zshrc
 echo >> ~/.zshrc
