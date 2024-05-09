@@ -7,7 +7,7 @@ tags:
   - dsa
   - discrete_math
 Creation Date: 2023-10-09T09:08:00
-Last Date: 2024-05-08T08:54:04+08:00
+Last Date: 2024-05-09T15:46:11+08:00
 References: 
 description: Detailed introduction to graph from a computer science perspective
 title: 
@@ -105,20 +105,33 @@ title:
 ## Graph Representation
 ---
 ### Adjacency Matrix
-- A 2d [[Array]], the row and column index indicates the `id of a node`
 
->[!success] Pro
-> Check the relationship of any 2 nodes in `O(1)`.
+![[adjacency_matrix.png|500]]
+
+- A matrix made of [[Array]], the **row index** $i$ and **column index** $j$ indicate the **id of a vertex**
+- $A_{ij}$ refers to a value at a particular cell of the matrix, the value is determined by $A_{ij} = \begin{cases}1 & edge(i,j)\\ 0 &otherwise\end{cases}$, $1$ if  an edge exists from node $i$ to node $j$, otherwise $0$
+- For [[#Weighted Graph (加权图)]], the the value in the matrix cell represents the **weight**
+
+>[!success] Efficient relationship checker
+> Check if an edge exists between 2 nodes in $O(1)$.
 
 >[!caution]
-> Space wastage for [[#Sparse Graph]].
+> The cost of space is $O(n^2)$, a big space wastage for [[#Sparse Graph]].
 
 ### Adjacency List
 - Each vertex is mapped to a list of its [[#Neighbours]]
-- **Pros:** Easy to manipulate using programming language
+
+>[!success] Pro
+> Easy to manipulate using programming language.
 
 ### Adjacency Set
-- A collection of all [[Tree#Edge]] 
+
+![[edge_Set.png|300]]
+
+- A collection of all [[Tree#Edge]]
+
+>[!important]
+> The edge definitions inside the adjacency set aren't [[Set#Ordered Pair]], that means if we have 2 edges $(0,1)$ and $(1,0)$, **both** are **considered as one single edge definition** in adjacency set!
 
 >[!caution]
 > Not a common graph representation, it is hard to extract information about vertices and [[Graph]].
