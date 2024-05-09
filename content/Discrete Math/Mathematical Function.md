@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-03-27, 10:09
-Last Date: 2024-03-28T14:45:03+08:00
+Last Date: 2024-05-09T20:13:17+08:00
 References: 
 draft: 
 description: 
 ---
 ## Abstract
 ---
-- A special type of [[Relation]] where **each input value** maps to **exactly one output value**. In relation, we can have one element is a **parent of one or more other elements**. But in function, we have one element is a **square of another element**
+- A special type of [[Relation]] where **each input value** maps to **exactly one output value**. In relation, we can have an element that is a **parent of one or more other elements**
 
 
 >[!note]+ Injective
@@ -31,11 +31,9 @@ description:
 > 
 > ![[bijective_function.png|200]]
 
->[!note]+ Purity
-> The same input **always** produces the same output.
 
->[!note]+ Referential Transparency
-> The output **depends only** on the input.
+
+
 ## Inverse Function
 ---
 - A [[Mathematical Function]] that essentially **undoes** the action of the original function

@@ -7,12 +7,28 @@ tags:
   - programming
   - rust
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-01-13T18:52:48+08:00
+Last Date: 2024-05-09T20:42:03+08:00
 References: 
 ---
 ## Abstract
 ---
-- [[Single Point of Responsibility]]
+- **A set** of [[Instruction]] that can be triggered to **accomplish a particular task**
+
+### Function Signature 
+- Refers to the declaration of a function
+- Including its name, return [[Datatype]], and parameter datatype
+
+## First-class Citizen Function
+---
+- [[Function]] that can be manipulated and used in flexible ways **like a variable**
+
+>[!important] Behave and treated like a variable
+> 1. Assigned to variables
+> 2. Passed as arguments to other functions
+> 3. A function can be the return value of another function
+> 4. Can store functions in data structures like [[Array]], [[List]], or [[Hash Map]] etc
+>    
+> This enables powerful programming techniques like [[Higher-Order Function]] and [[Closure]] etc.
 
 
 ## Rust Function
@@ -24,8 +40,3 @@ References:
 - Return the last [[Expression]] implicitly
 
 
-## Terminologies
----
-### Function Signature 
-- Refers to the declaration of a function
-- Including its name, return [[Datatype]], and parameter datatype
