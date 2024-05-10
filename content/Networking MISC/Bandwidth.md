@@ -6,12 +6,14 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-09-25T17:16:00
-Last Date: 2024-04-07T00:37:02+08:00
+Last Date: 2024-05-10T19:45:48+08:00
 ---
 ## Abstract
 ---
-- The **theoretical maximum rate** of data transfer across a [[Computer Network]], typically measured in bits per second (bps) or its multiples such as kilobits per second (kbps), megabits per second (Mbps), or gigabits per second (Gbps).
+- The **theoretical maximum rate** of data transfer across a [[Computer Network]]
 
+>[!important] Speed measurement unit
+> Measured in `Kbps`, `Mbps` and `Gbps` etc, which refer to $1,000$, $1,000,000$ and $1,000,000,000$ [[Computer Data Representation#Bit]] **per second** correspondingly. 
 
 ## Network Throughput
 ---
