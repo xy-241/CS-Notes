@@ -6,12 +6,15 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-09-14T14:01:42+08:00
-Last Date: 2024-05-02T20:08:52+08:00
+Last Date: 2024-05-05T01:18:48+08:00
 References: 
 ---
 ## Abstract
 ---
-- There are 4 core principles in OOP - [[Abstraction (抽象)]], [[Inheritance]], [[Polymorphism]] and [[Encapsulation]]
+
+![[oop_4_pillars.png|500]]
+
+- There are 4 core pillars  in OOP - [[Abstraction (抽象)]], [[Inheritance]], [[Polymorphism]] and [[Encapsulation]]
 
 
 

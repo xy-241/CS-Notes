@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-05-01, 20:35
-Last Date: 2024-05-03T23:31:31+08:00
+Last Date: 2024-05-10T22:08:44+08:00
 References: 
 draft: 
 description: 
@@ -20,6 +20,8 @@ description:
 >[!attention]
 > Can only be used in the context of **Functional Interface**, because Java lambda **can only define** the **implementation** of **one** [[OOP#OOP Abstract Method]].
 
+>[!important]
+> Creating an **illusion** of [[Function#First-class Citizen Function]].
 
 ## Java Lambda Showcase
 ---
