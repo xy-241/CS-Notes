@@ -6,11 +6,14 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-11T21:10:44
-Last Date: 2024-04-29T00:32:01+08:00
+Last Date: 2024-05-11T17:39:27+08:00
 References: 
 ---
 ## Abstract
 ---
+
+
+
 - We can't directly make [[System Call (系统调用)]] in the same way that we call functions in a program, different [[Instruction Set Architecture (ISA)]] has a different implementation of System Calls. So we have Library call that is built on top of system calls to abstract this complexity away from the application programmers
 
 >[!success] Abstraction
@@ -32,6 +35,9 @@ References:
 
 ## libc
 ---
+
+![[libc_posix_linux_kernel.png|500]]
+
 - Short for **C standard library**
 - [[Library Call]] that is implemented in the form of standard C functions like `strcpy()` and [[POSIX]] functions (which may be [[System Call (系统调用)]]) like `getpid()`
 

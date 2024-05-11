@@ -24,7 +24,8 @@ aliases: []
 
 
 >[!info] Systemd Unit vs Systemd Service 
-> A Systemd Service is a specific type of unit that represents a **system service** or **daemon**. Systemd Unit covers a bigger scope that includes [[Inter-Process Communication (IPC)#Socket]], [[File System#Mounted File System]] and [[OS/IO/IO Device|IO Device]] etc.
+> A Systemd Service is a specific type of unit that represents a **system service** or **daemon**. Systemd Unit covers a bigger scope that includes [[Socket]], [[File System#Mounted File System]] and [[OS/IO/IO Device|IO Device]] etc.
+
 
 >[!tip] Systemd Unit management cheatsheet
 > Refer to this [How To Use Systemctl to Manage Systemd Services and Units | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units) to list, edit and inspect [[#Systemd Unit]] which is used to manage the Systemd.
