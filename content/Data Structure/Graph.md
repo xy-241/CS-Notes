@@ -7,22 +7,53 @@ tags:
   - dsa
   - discrete_math
 Creation Date: 2023-10-09T09:08:00
-Last Date: 2024-05-10T13:47:54+08:00
+Last Date: 2024-05-11T16:58:24+08:00
 References: 
 description: Detailed introduction to graph from a computer science perspective
 title: 
 ---
 ## Abstract
 ---
+>[!cite]
+> A graph $G = (V,E)$ is a [[Set]] of **vertices $V$** and **edges $E$** where each **edge** $(u, v)$ is a **connection between vertices**. $u,v \in V$.
 
-![[graph_definition.gif|500]]
+![[graph.svg|300]]
 
-- A [[Data Structure]] that offers a **network structure** that helps **define** and **visualize** **relationships**(known as **edge**) between **various components**(known as **vertex/node**) 
+- In layman term, graph is a [[Data Structure]] that offers a **network structure** that helps **define** and **visualize** **relationships**(known as **edge**) between **various components**(known as **vertex/node**) 
+
+
 
 ### Graph Theory 
 - The **study of the properties** of these [[Graph]], and **how** they can be used to **model and solve problems**
 
+## Graph Basics
+---
+### Neighbours
 
+![[graph_neighbours .svg|250]]
+
+- **Two nodes $u$, $v$** are neighbours if there is an **edge $(u, v)$** **connecting both nodes**
+- In the diagram above, **node $0$** has **$3$ neighbours** which are $6$, $8$ and $4$
+
+### Degree
+
+![[graph_edge.svg|250]]
+
+- The degree of a node $u$ is the **total number of edges connected to it**
+- In the diagram above, **node $0$** has a **degree of $3$**, since there are **$3$ edges connected to it**
+
+### Path
+
+![[graph_path.svg|500]]
+
+- A **sequence of nodes** that is **connected by edges**
+- In the diagram above, there are 2 paths, the path at the right side is a **special path** know as [[#Cycle]]
+### Cycle
+
+![[graph_cycle.svg|250]]
+
+- [[#Path]] that **starts** and **ends** at the **same node**
+- In the diagram above, we **start the path from node $0$** and **ends at node $0$**
 
 
 
@@ -57,7 +88,7 @@ title:
 
 ### Directed Cyclic Graph
 
-![[directed_cyclic_graph.png|250]]
+![[directed_cyclic_graph.svg|250]]
 
 - [[#Directed Graph]] that has [[#Cycle]]
 
@@ -116,7 +147,7 @@ title:
 
 ### Adjacency Set
 
-![[edge_set.png|300]]
+![[graph_edge_set_.svg|300]]
 
 - A collection of all [[Tree#Edge]]
 
@@ -129,23 +160,7 @@ title:
 
 ## Terminologies
 ---
-### Neighbours
 
-![[graph_neighbours.gif|500]]
-
-### Degree
-
-![[graph_degree.gif|500]]
-
-### Path
-
-![[graph_path.gif|500]]
-
-### Cycle
-
-![[graph_cycle.gif|500]]
-
-- A specific type of [[#Path]]
 
  
 ### Sparse Graph
