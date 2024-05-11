@@ -7,8 +7,9 @@ tags:
   - programming
   - rust
   - java
+  - functional
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-05-10T22:43:20+08:00
+Last Date: 2024-05-11T20:14:54+08:00
 References: 
 ---
 ## Abstract
@@ -39,7 +40,7 @@ References:
 - A [[Function]] that takes in **another one or more functions** as **inputs** or **return a function** as its **output**
 
 >[!important]
-> Higher-order function builds on top of [[#First-class Citizen Function]], we need it, so we can **pass function into another function** or **return function from another function** as if function is like a **variable**.
+> Higher-order function builds on top of [[#First-class Citizen Function]], so we can **pass function into another function** or **return function from another function** as if function is a **variable**.
 
 ## Rust Function
 ---
