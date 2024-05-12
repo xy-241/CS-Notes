@@ -6,13 +6,12 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-11T19:28:00
-Last Date: 2024-02-22T18:08:20+08:00
+Last Date: 2024-05-12T18:00:40+08:00
 References: 
 ---
 ## Abstract
 ---
-- Also known as **Hyper-threading**
-- A mechanism achieved with [[#Multi-threaded Chip]]([[Concurrency (并发)#Parallelism (并行性)]]) or quick [[Context Switch]]([[Concurrency (并发)]]) or **both**
+- A mechanism achieved with **multiple [[CPU#Core]]** or [[CPU#Multi-threaded CPU]]([[Concurrency (并发)#Parallelism (并行性)]]) or quick [[Context Switch]]([[Concurrency (并发)]]) or **both**
 </br>
 
 - Doesn't offer true Parallelism (并行性) on Single-Core [[CPU]] which only supports one [[Process (进程)]] running at a time
@@ -36,11 +35,8 @@ References:
 
 
 
-## Terminologies
+## Thread Safety (线程安全)
 ---
-### Thread Safety (线程安全)
 - A piece of code that functions correctly when there is **simultaneous execution** of **multiple [[Thread]]**, adn all of them accessing the **same shared resource** 
 - Free of [[Race Condition (竞态条件)]] and [[Deadlock (死锁)]] etc
 
-### Multi-threaded Chip
-- [[Control Unit]], [[Register]] & [[Pipeline]] are replicated

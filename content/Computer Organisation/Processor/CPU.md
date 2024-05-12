@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-19T16:36:00
-Last Date: 2023-12-17T20:30:13+08:00
+Last Date: 2024-05-12T17:43:46+08:00
 References: 
 ---
 ## Abstract
@@ -15,9 +15,13 @@ References:
 - Fire the necessary components based on the given [[Instruction]]
 - Start in [[Privilege Level#Kernel Mode |Kernel Mode]]. Before executing a program, the kernel initiates the switch to [[Privilege Level#User Mode |User Mode]]
 
-## Benefits
+>[!success] 
+> Optimised for computation that requires **sequential execution**(One [[Instruction]] after another [[Instruction]]), [[Pipeline Branching]] and logic.
+
+## Multi-threaded CPU
 ---
-- Optimised for computation that requires sequential execution(One [[Instruction]] after another [[Instruction]]), [[Pipeline Branching]] and logic
+- [[CPU]] that makes uses the **Hyperthreading technology** which enables a single CPU to **handle multiple tasks simultaneously**
+- This is achieved by duplicating the [[ALU]], [[Register#Program Counter]] and some [[Pipeline Stages]] etc. The rest like [[Branch Prediction]], [[CPU Cache]] and other pipeline stages are shared
 
 
 ## Terminologies

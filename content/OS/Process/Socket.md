@@ -7,7 +7,7 @@ tags:
   - OS
   - js
 Creation Date: 2024-03-29, 17:48
-Last Date: 2024-05-11T18:23:59+08:00
+Last Date: 2024-05-12T17:22:53+08:00
 References: 
 draft: 
 description: 
@@ -30,7 +30,7 @@ description:
 
 ## Unix Domain Socket
 ---
-- An [[Unix#Unix-like]] [[Socket]] that provides [[Inter-Process Communication (IPC)]] using [[File#File Descriptor]], where the [[Kernel]] handles the [[System Call (系统调用)]] and put the mechanism behind a [[Abstraction (抽象)#Abstraction Barrier]]
+- [[Socket]] in [[Unix#Unix-like]] system that provides [[Inter-Process Communication (IPC)]] using [[File#File Descriptor]], where the [[Kernel]] handles the [[System Call (系统调用)]] and put the mechanism behind a [[Abstraction (抽象)#Abstraction Barrier]]
 
 >[!important]
 > ![[unix_domain_socket_performance.png|400]]
