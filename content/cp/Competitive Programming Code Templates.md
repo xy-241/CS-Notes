@@ -79,7 +79,7 @@ java Solution.java < input.txt
 >[Java List](https://chat.openai.com/share/81de8ffd-081b-4f69-8503-cc7d08be3b9f)
 
 >[!tip] Avoid Potential TLE
->1. If there are many small segments that need to be printed out one by one, or we need to consolidate many small input string pieces into one string. Consolidate them into one string with `StringBuilder`. Because string in java is [[Immutable]], concatenating 2 strings require us to create a new string. Example: [without StringBuilder Buffer](https://codeforces.com/contest/1918/submission/245011751), [with StringBuilder Buffer](https://codeforces.com/contest/1918/submission/245279617)
+>1. If there are many small segments that need to be printed out one by one, or we need to consolidate many small input string pieces into one string. Consolidate them into one string with `StringBuilder`. Because string in java is [[Immutability]], concatenating 2 strings require us to create a new string. Example: [without StringBuilder Buffer](https://codeforces.com/contest/1918/submission/245011751), [with StringBuilder Buffer](https://codeforces.com/contest/1918/submission/245279617)
 >2. Use `BufferedReader`, `InputStreamReader` and `StringTokenizer` to read in the input, instead of using `Scanner`
 
 ## CPP Code Template

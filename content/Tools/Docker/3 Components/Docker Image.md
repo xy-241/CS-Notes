@@ -10,6 +10,6 @@ References:
 ---
 ## Abstract
 ----
-- [[Immutable]] snapshot  
+- [[Immutability]] snapshot  
 - `docker push` and `docker pull` to push and pull Docker Images from a Docker Registry 
 

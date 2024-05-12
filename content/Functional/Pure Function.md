@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - functional
 Creation Date: 2023-07-23T18:04:05+08:00
-Last Date: 2024-05-11T19:28:45+08:00
+Last Date: 2024-05-12T18:39:42+08:00
 References: 
 ---
 ## Abstract
 ---
-- Function in programming **with constraints** to fit into the [[Mathematical Function]], builds on top of [Lambda calculus - Wikipedia](https://en.wikipedia.org/wiki/Lambda_calculus#:~:text=Lambda%20calculus%20(also%20written%20as,to%20simulate%20any%20Turing%20machine.)
+- Function in programming **with constraints** to fit into the [[Mathematical Function]], builds on top of [Lambda calculus - Wikipedia](https://en.wikipedia.org/wiki/Lambda_calculus)
 
 
 >[!info]+ Purity
@@ -25,7 +25,8 @@ References:
 
 ## Side Effect
 ---
-
+- Can be heavily avoided with the help of [[Immutability]]
+- 
 >[!example]
 > Some side effects are listed below:
 > 

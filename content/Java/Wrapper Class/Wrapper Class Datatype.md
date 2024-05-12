@@ -10,7 +10,7 @@ Last Date: 2024-03-04T12:23:34+08:00
 References: 
 ---
 ## Abstract
-- [[Datatype#Custom Datatype]] that is [[Immutable]] (a new object is created when a new value is assigned)
+- [[Datatype#Custom Datatype]] that is [[Immutability]] (a new object is created when a new value is assigned)
 - Make [[Datatype#Primitive Datatype]] to fit into the [[OOP]] concept
 - Has built-in method to convert current value to other Primitive Datatype or custom datatypes
 

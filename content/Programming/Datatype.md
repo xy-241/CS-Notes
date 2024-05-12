@@ -31,10 +31,10 @@ References:
 * Great performance since there isn't much abstraction like [[#Custom Datatype]]
 </br>
 
-- In [[Java]], primitive datatypes are [[Immutable]]
+- In [[Java]], primitive datatypes are [[Immutability]]
 
 ### Custom Datatype
-- In [[Java]], custom datatypes **aren't** [[Immutable]]
+- In [[Java]], custom datatypes **aren't** [[Immutability]]
 - Examples are [[OOP Class]] and [[#Struct]]
 
 >[!caution] Java Value Comparsion
