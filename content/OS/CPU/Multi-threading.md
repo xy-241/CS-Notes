@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- A mechanism achieved with **multiple [[CPU#Core]]** or [[CPU#Multi-threaded CPU]]([[Concurrency (并发)#Parallelism (并行性)]]) or quick [[Context Switch]]([[Concurrency (并发)]]) or **both**
+- A mechanism achieved with **multiple [[CPU#Core]]** or [[CPU#Hyperthreading]]([[Concurrency (并发)#Parallelism (并行性)]]) or quick [[Context Switch]]([[Concurrency (并发)]]) or **both**
 </br>
 
 - Doesn't offer true Parallelism (并行性) on Single-Core [[CPU]] which only supports one [[Process (进程)]] running at a time

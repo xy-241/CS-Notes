@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-19T16:36:00
-Last Date: 2024-05-12T17:43:46+08:00
+Last Date: 2024-05-13T19:27:52+08:00
 References: 
 ---
 ## Abstract
@@ -18,10 +18,20 @@ References:
 >[!success] 
 > Optimised for computation that requires **sequential execution**(One [[Instruction]] after another [[Instruction]]), [[Pipeline Branching]] and logic.
 
-## Multi-threaded CPU
+## Hyperthreading
 ---
-- [[CPU]] that makes uses the **Hyperthreading technology** which enables a single CPU to **handle multiple tasks simultaneously**
-- This is achieved by duplicating the [[ALU]], [[Register#Program Counter]] and some [[Pipeline Stages]] etc. The rest like [[Branch Prediction]], [[CPU Cache]] and other pipeline stages are shared
+
+![[hyperthreading.png|400]]
+
+- **Hyperthreading technology** enables a single [[CPU]] to **handle multiple [[Thread]] simultaneously**. Thus, achieving [[Concurrency (并发)#Parallelism (并行)]] 
+- This is achieved by duplicating the [[Register#Register File]] like [[Register#Program Counter]]. [[Pipeline Stages#Fetch]] and [[Pipeline Stages#Decode]] are also duplicated to allow for **simultaneous processing** of [[Instruction]] from multiple [[Thread]]. The rest like [[ALU]] is shared
+
+>[!important]
+> The performance gain from Hyperthreading is **minimal** when **one set of the fetch and decode** is smooth and **able to keep the ALU busy**. 
+> 
+> However, if one set of the fetch and decode is **not smooth** in the cases like [[Pipeline Flush]], the another set of fetch and decode and **keep the ALU busy**, thus **improving performance**.
+> 
+> The rule of thumb is that every CPU [[CPU#Core]] that supports hyperthreading has roughly an **additional $0.25$ CPU core performance**.
 
 
 ## Terminologies
@@ -39,3 +49,8 @@ References:
 - Typically located on the *CPU* die itself
 ### Core
 - One single unit of *CPU* that executes [[Instruction]] independently from other *cores*
+
+
+## References
+---
+- [What is Hyperthreading? - YouTube](https://www.youtube.com/watch?v=mSZpDF-zUoI)
