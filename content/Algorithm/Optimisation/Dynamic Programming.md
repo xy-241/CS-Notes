@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-05-05T13:43:59+08:00
+Last Date: 2024-05-14T10:18:23+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
@@ -76,14 +76,17 @@ aliases:
 > 
 > It is like finding the solution to $(5+5+5+5)+5$, we already know $(5+5+5+5)$ is $20$, then the answer to $(5+5+5+5)+5$ is simply $(20) + 5$ which is $25$. You see we don't need to remember what is the answer to $5+5$ or $5+5+5$, because the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**.
 
->[!important] Dependency order of subproblems
-> ![[dp_topological_sort_order.png|500]]
-> 
-> In order to be solved with dynamic programming, the **dependency order of subproblems** of a given problem **MUST** follow a **topological sort order**, as shown above. Think about the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**. If $(5+5+5+5)$ depends on $(5+5+5+5)+5$, there is no way for us to **build up** the solution from smaller subproblems! 
+
 ## DP Problem Properties 
 ---
 ### Overlapping Subproblems (重复子问题)
 - Occur when a problem can be broken down into **smaller subproblems** that are **exactly the same**
+
+
+>[!important] Dependency order of subproblems
+> ![[topological_sort.svg|500]]
+> 
+> In order to be solved with dynamic programming, the **dependency order of subproblems** of a given problem **MUST** follow [[Graph#Topological Sort|topological sort order]], as shown above. Think about the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**. If $(5+5+5+5)$ depends on $(5+5+5+5)+5$, there is no way for us to **build up** the solution from smaller subproblems! 
 
 >[!tip]
 > Overlapping subproblems can be handled efficiently with [[Memoization]].

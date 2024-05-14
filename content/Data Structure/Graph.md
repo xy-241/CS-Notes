@@ -7,10 +7,10 @@ tags:
   - dsa
   - discrete_math
 Creation Date: 2023-10-09T09:08:00
-Last Date: 2024-05-12T16:10:51+08:00
+Last Date: 2024-05-14T10:50:25+08:00
 References: 
 description: Detailed introduction to graph from a computer science perspective
-title: 
+title: Graph Data Structure
 ---
 ## Abstract
 ---
@@ -51,7 +51,7 @@ title:
 - In the diagram above, there are 2 paths, the path at the right side is a **special path** know as [[#Cycle]]
 ### Cycle
 
-![[graph_cycle.svg|250]]
+![[graph_cycle.svg|500]]
 
 - [[#Path]] that **starts** and **ends** at the **same node**
 - In the diagram above, we **start the path from node $0$** and **ends at node $0$**
@@ -80,7 +80,7 @@ title:
 
 ![[directed_graph.svg|250]]
 
-- **If** edge $(u, v)$ exists, **then** edge $(v, u)$ **must NOT exist**
+- Edges are directed, and **NOT** [[Set#Ordered Pair]] which means $(u, v)$ and $(v, u)$ are **two different pairs**
 - Can be used to represent [[Relation]] which only involves one [[Set]] 
 
 ### Directed Cyclic Graph
@@ -94,8 +94,19 @@ title:
 ![[directed_acyclic_graph.svg|250]]
 
 - Known as **DAG**
-- [[#Directed Graph]] that **doesn't have** [[#Cycle]]
+- [[#Directed Graph]] that **doesn't have** [[#Cycle]] 
 
+>[!important]
+> A directed graph is a DAG **if and only if** it can be [[#Topological Sort|topologically ordered]].
+
+#### Topological Sort
+
+![[topological_sort.svg|500]]
+
+- A **linear ordering** of vertices in a [[#Directed Acyclic Graph]]. The **direction** of **all edges** are **same**
+
+>[!important]
+> This ordering is useful in various applications, such as **task scheduling** and **dependency resolution** etc.
 
 ### Undirected Graph
 
@@ -146,14 +157,13 @@ title:
 
 >[!caution]
 > It isn't as efficient as [[#Adjacency Matrix]] when it comes to check if an edge exist between 2 nodes. We need to go through the neighbours of a node to check. We can use data structures like [[AVL Tree]] and [[Hash Map]] to hold the neighbours if a node has too many neighbours. This reduces the time complexity from $O(n)$ down to $log(n)$.
-### Adjacency Set
+### Edge Set
 
-![[graph_edge_set_.svg|300]]
-
+![[edge_set.svg|300]]
 - A collection of all [[Tree#Edge]]
 
 >[!important]
-> The edge definitions inside the adjacency set **ARE NOT** [[Set#Ordered Pair]], that means if we have 2 edges $(0,1)$ and $(1,0)$, **both** are **considered as one single edge definition** in adjacency set!
+> For **undirected graph**, the **edge definitions** inside the adjacency set **ARE NOT** [[Set#Ordered Pair]], that means if we have 2 edges $(0,1)$ and $(1,0)$, **both** are **considered as one single edge definition** in edge set!
 
 >[!caution]
 > Not a common graph representation, it is **hard to extract information** about **vertice**s and [[Graph]].
@@ -161,9 +171,6 @@ title:
 
 ## Terminologies
 ---
-
-
- 
 ### Sparse Graph
 - A graph in which the number of edges is much less than the possible number of edges
 
@@ -171,3 +178,4 @@ title:
 ## References
 ---
 - [Introduction to Graph Theory: A Computer Science Perspective - YouTube](https://www.youtube.com/watch?v=LFKZLXVO-Dg)
+- [Directed acyclic graph - Wikipedia](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
