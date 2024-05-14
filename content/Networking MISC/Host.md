@@ -13,7 +13,7 @@ References:
 ---
 * Also known as **End System**
 * Computers & other devices connected to [[Internet]], thus has a [[Socket Interface]] 
-* Connected together by a network of [[Communication Links]] & [[Packet Switches]]
+* Connected together by a network of [[Communication Links]] & [[Packet Switch]]
 - Can be identified by [[Hostname]] or [[IP Address]]
 
 ## 2 types 

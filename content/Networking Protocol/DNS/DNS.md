@@ -8,7 +8,7 @@ tags:
   - bash
   - cloudflare
 Creation Date: 2023-08-14T11:18:00
-Last Date: 2024-04-22T21:42:29+08:00
+Last Date: 2024-05-14T07:27:35+08:00
 References: 
 description: Explore the Domain Name System (DNS), the internet's GPS that translates human-readable website names into machine-friendly IP addresses.
 ---
@@ -22,6 +22,18 @@ description: Explore the Domain Name System (DNS), the internet's GPS that trans
 > ```bash
 > whois <DOMAIN_NAME/IP_ADDRESS>
 > ```
+
+
+## Secure DNS
+---
+- Basically [[DNS]] with encryption, so 3rd-party that is **monitoring the DNS traffic** is **unable to see which site you are visiting**. There are two standards on secure DNS - **DNS over [[TLS]](DoT)** & **DNS over HTTPS(DoH)**
+
+
+|                   | DoT                                              | DoH                                                            |
+| ----------------- | ------------------------------------------------ | -------------------------------------------------------------- |
+| Encryption method | TLS                                              | HTTPS                                                          |
+| [[Network Port]]  | 853                                              | 443                                                            |
+| Privacy           | **Lower**, since it uses a dedicated port number | **Higher**, DNS queries are hidden inside normal HTTPS traffic |
 
 
 ## DDNS

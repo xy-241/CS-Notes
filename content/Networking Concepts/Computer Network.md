@@ -20,7 +20,7 @@ References:
 > - [All-in-one Website OSINT Scanner](https://web-check.xyz)
 
 ### Network Route
-- The sequence of [[Communication Links]] and [[Packet Switches]] traversed by a [[Packet]] between [[Host#Client]] and [[Host#Server]]
+- The sequence of [[Communication Links]] and [[Packet Switch]] traversed by a [[Packet]] between [[Host#Client]] and [[Host#Server]]
 
 
 
