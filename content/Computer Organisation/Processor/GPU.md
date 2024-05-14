@@ -17,7 +17,7 @@ References:
 ## Benefits
 ---
 ### Optimised for Parallel Computing
-- Look at the [[CPU#Core]] it has!
+- Look at the [[CPU#CPU Core]] it has!
 ### Allows games to perform a ton of Linear Algebra in parallel
 - We can calculate pixels in batches or parallel 
 ### Great for AI related work

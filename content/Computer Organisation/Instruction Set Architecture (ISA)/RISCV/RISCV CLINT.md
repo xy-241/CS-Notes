@@ -26,7 +26,7 @@ References:
 - Start at [[Memory Address]] `0x02004000`
 - Stands for **Machine Time Compare**
 - [[Register|Register]] used to generate **machine-level** timer interrupts
-- Each [[CPU#Core]] has one
+- Each [[CPU#CPU Core]] has one
 - Implement both periodic timers and **one-shot** timers
 ### MTIME
 - At [[Memory Address]] `0x02000000 + 0xBFF8 = 0x0200BFF8`

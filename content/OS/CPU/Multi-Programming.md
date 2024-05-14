@@ -19,4 +19,4 @@ description: Unlock the power of multi-programming and supercharge your computer
 > **Not all Multi-Programming** systems are [[Concurrency (并发)#Multi-tasking]]. The focus is [[CPU]] utilisation. 
 
 >[!success] Maximised resource usage
->When there are multiple [[Process (进程)]] ready to run at the same time, we can distribute each process to each [[CPU#Core]] on the [[Multi-core Chip]]. When one process is blocked due to [[io_operation.png|IO operation]], the CPU can work another ready process.
+>When there are multiple [[Process (进程)]] ready to run at the same time, we can distribute each process to each [[CPU#CPU Core]] on the [[Multi-core Chip]]. When one process is blocked due to [[io_operation.png|IO operation]], the CPU can work another ready process.

@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-19T16:36:00
-Last Date: 2024-05-13T19:27:52+08:00
-References: 
+Last Date: 2024-05-14T22:37:26
+References:
 ---
 ## Abstract
 ---
@@ -17,6 +17,23 @@ References:
 
 >[!success] 
 > Optimised for computation that requires **sequential execution**(One [[Instruction]] after another [[Instruction]]), [[Pipeline Branching]] and logic.
+
+
+## CPU Core
+---
+- One single unit of [[CPU]] that executes [[Instruction]] independently from other **CPU cores**
+
+## 32-bit CPU
+---
+- [[Register#Register Width]] that are **32** [[Computer Data Representation#Bit]] each
+- Because 32bits, so maximum addressable [[Main Memory]] is 4GB. The [[Register]] can't hold a [[Memory Address]] that is greater than 4GB
+- The [[Computer Data Representation#Word]] size is usually **4** [[Computer Data Representation#Byte]]
+
+## 64-bit CPU
+---
+- [[Register#Register Width]] that are **64** [[Computer Data Representation#Bit]] each
+- Doesn't have the [[Main Memory]] 4GB limitation in [[#32-bit CPU]]
+- The [[Computer Data Representation#Word]] size is usually **8** [[Computer Data Representation#Byte]]
 
 ## Hyperthreading
 ---
@@ -29,26 +46,17 @@ References:
 >[!important]
 > The performance gain from Hyperthreading is **minimal** when **one set of the fetch and decode** is smooth and **able to keep the ALU busy**. 
 > 
-> However, if one set of the fetch and decode is **not smooth** in the cases like [[Pipeline Flush]], the another set of fetch and decode and **keep the ALU busy**, thus **improving performance**.
+> However, if one set of the fetch and decode is **not smooth** in the cases like [[Pipeline Flush]], the another set of fetch and decode can **keep the ALU busy**, thus **improving performance**.
 > 
-> The rule of thumb is that every CPU [[CPU#Core]] that supports hyperthreading has roughly an **additional $0.25$ CPU core performance**.
+> The rule of thumb is that every CPU [[CPU#CPU Core]] that supports hyperthreading has roughly an **additional $0.25$ CPU core performance**.
 
 
-## Terminologies
+
+
+## CPU Scratch Area
 ---
-### 32-bit
-- [[Register#Register Width]] that are 32 [[Computer Data Representation#Bit]] each
-- Because 32bits, so maximum addressable [[Main Memory]] is 4GB. The [[Register]] can't hold a [[Memory Address]] that is greater than 4GB
-- The [[Computer Data Representation#Word]] size is usually 4 [[Computer Data Representation#Byte]]
-### 64-bit
-- [[Register#Register Width]] that are 64 [[Computer Data Representation#Bit]] each
-- Doesn't have the [[Main Memory]] 4GB limitation in [[#32-bit]]
-- The [[Computer Data Representation#Word]] size is usually 8 [[Computer Data Representation#Byte]]
-### Scratch Area
 - A small amount of high-speed memory that is used to store temporary data
-- Typically located on the *CPU* die itself
-### Core
-- One single unit of *CPU* that executes [[Instruction]] independently from other *cores*
+
 
 
 ## References

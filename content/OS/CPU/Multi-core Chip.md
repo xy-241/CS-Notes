@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- With more than 1 [[CPU#Core]]
+- With more than 1 [[CPU#CPU Core]]
 - Need a [[os#Multi-processor OS]] to advantage of such chips
 
 >[!success] Performance Gainz

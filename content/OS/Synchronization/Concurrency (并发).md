@@ -17,7 +17,7 @@ description:
 > Concurrency is about **dealing with lots of things at once**, but parallelism is about **doing lots of things at once**.
 
 - A way to run multiple [[Thread]] or [[Process (进程)]] at the same time, instead of running one thread or process after another thread or process is done
-- We can achieve concurrency with multiple [[CPU#Core]], this is also known as [[#Parallelism (并行性)]]. We can also achieve concurrency with a single CPU core by performing [[Context Switch]]
+- We can achieve concurrency with multiple [[CPU#CPU Core]], this is also known as [[#Parallelism (并行性)]]. We can also achieve concurrency with a single CPU core by performing [[Context Switch]]
 
 
 >[!success] Maximise CPU utilisation + better user experience
@@ -30,7 +30,7 @@ description:
 
 ![[parallelism.gif|500]]
 
-- A subset of [[Concurrency (并发)]], [[Process (进程)]] and [[Thread]] run on their own [[CPU#Core]]. This is the true processing of multiple tasks at the same time, not an illusion created by quick [[Context Switch]]
+- A subset of [[Concurrency (并发)]], [[Process (进程)]] and [[Thread]] run on their own [[CPU#CPU Core]]. This is the true processing of multiple tasks at the same time, not an illusion created by quick [[Context Switch]]
 
 
 
@@ -90,7 +90,7 @@ description:
 ![[multi_tasking.gif|500]]
 
 - An extension of [[Multi-programming]]. The ability for [[Kernel]] to execute multiple tasks **at the same time** by giving each [[Process (进程)]] a very small [[Time Slice]], achieving [[Concurrency (并发)]]. Focusing on improving user experience
-- The above animation shows only one [[CPU]], but multi-tasking can also be implemented on multiple [[CPU#Core]] to achieve [[#Parallelism (并行性)]]
+- The above animation shows only one [[CPU]], but multi-tasking can also be implemented on multiple [[CPU#CPU Core]] to achieve [[#Parallelism (并行性)]]
 
 >[!question] VS Time-sharing?
 > In [[#Time-Sharing]], we have multi-users instead of multi-tasks. Multi-tasking focuses on the tasks, and the tasks can be from different users. So in that sense, multi-tasking is a superset of time-sharing.
