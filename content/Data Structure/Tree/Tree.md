@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-03T17:32:00
-Last Date: 2024-05-09T13:01:27+08:00
+Last Date: 2024-05-15T11:50:34+08:00
 ---
 ## Abstract
 ---
@@ -70,3 +70,10 @@ Last Date: 2024-05-09T13:01:27+08:00
 > This [[#Balance Factor]] ensures that the time complexity of operations like insertion, deletion, and search remains $O(log n)$, where $n$ is the number of nodes in the tree.
 
 
+
+## Minimum Spanning Tree
+---
+- Set of [[#Edge]] that [[Graph#Graph Connectivity|connects]] **all vertices** with **minimum [[Graph#Weighted Graph (加权图)|weight]]** and **no [[Graph#Cycle]]** 
+
+>[!important]
+> One very famous algorithm used to find Minimum Spanning Tree is [Prim's algorithm - Wikipedia](https://en.wikipedia.org/wiki/Prim%27s_algorithm).

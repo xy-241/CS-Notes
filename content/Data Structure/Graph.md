@@ -7,7 +7,7 @@ tags:
   - dsa
   - discrete_math
 Creation Date: 2023-10-09T09:08:00
-Last Date: 2024-05-14T10:50:25+08:00
+Last Date: 2024-05-15T11:58:50+08:00
 References: 
 description: Detailed introduction to graph from a computer science perspective
 title: Graph Data Structure
@@ -172,7 +172,10 @@ title: Graph Data Structure
 ## Terminologies
 ---
 ### Sparse Graph
-- A graph in which the number of edges is much less than the possible number of edges
+- A [[Graph]] in which the number of edges is much less than the possible number of edges
+
+### Complete Graph
+- A [[Graph]] that has a **direct edge** between **every pair of vertices** 
 
 
 ## References
