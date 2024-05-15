@@ -7,18 +7,15 @@ tags:
   - computer_organisation
   - bash
 Creation Date: 2023-10-04T17:30:24+08:00
-Last Date: 2024-03-01T14:05:36+08:00
+Last Date: 2024-05-15T17:42:30+08:00
 References: 
 ---
 ## Abstract
 ---
-- A set of [[Computer Organisation/Instruction Set Architecture (ISA)/Instruction| instructions]] which contains [[Instruction#Opcode]] & parameters
-- Aka the language the [[CPU]] speaks, you can check the ISA of a machine using `uname -mp`
+- A set of [[Instruction]] which contains [[Instruction#Opcode]] & **parameters** that tells [[CPU]] what to do. You can check the ISA of a machine using `uname -mp`
 
 >[!success] Portability
-> Physical implementation of CPU is decoupled. The same Instruction Set Architecture (ISA) can be used on different CPU
-> 
-> App written in X86 can be run on all the CPU that implements the X86 
+> The **exact hardware implementation** of **different CPU** can **vary** but app written for X86 ISA can be run on all the CPU that implements the X86. The ISA functions like a **standard** that different hardware implementations need to follow, so software has a **common interface** to work with different CPUs.
 
 
 
@@ -30,15 +27,15 @@ References:
 - Doesn't perform any [[Operation]] directly on [[Main Memory]]
 
 >[!success] Easier to Decode
->Each [[Instruction]] is fixed-sized
+>Each [[Instruction]] is fixed-sized.
 
 >[!success] Power-Efficient
-> Needs fewer [[Transistors (晶体管)]] to perform simple [[Operation]]
+> Needs fewer [[Transistors (晶体管)]] to perform simple [[Operation]].
 
 >[!attention] Tedious
->Complex [[Operation#Computation]] requires more Instruction to achieve 
+>Complex [[Operation#Computation]] requires more Instructions to achieve.
 
->[!example]- Common RISC
+>[!example] Common RISC
 > **aarch64 / arm64** 
 > - Modern, 64-bit ARM processors
 >   
@@ -58,22 +55,21 @@ References:
 
 ## CISC
 ---
-- Stands for **Complex instruction set computer**
+- Stands for **Complex Instruction Set Computer**
 - Very Complex set of [[Instruction]]
-- Can take multiple cycles to execute
+- Can take multiple [[Clock Oscillator#Clock Cycle]] to execute
 
 >[!success] Simpler to use
->Has many Instruction, to a point complex [[Operation#Computation]] can be performed with just one Instruction
+>Has many Instruction, **complex [[Operation#Computation]]** can be performed with just **one Instruction**.
 
 >[!attention] Requires more transistors
->- [[CPU]] design needs to be complex to achieve complex Computation with fewer Instruction, so less [[Transistors (晶体管)]] can be used improve overall computing performance 
->- Thus, more *power-hungry*, and more wasted power when performing simple instruction
+> The **design** of [[CPU]] needs to be **complex** to achieve complex computation with fewer Instruction, so less [[Transistors (晶体管)]] can be used improve overall computing performance. Thus, more **power-hungry**, and **more wasted power** when **performing simple instruction**.
 
 >[!attention] Harder to decode
->- Each [[Instruction]] is [[Instruction#Variable-length]]
+> Each [[Instruction]] is [[Instruction#Variable-length]].
 
 
->[!example]- Common CISC
+>[!example] Common CISC
 > **X86** 
 > - Developed by Intel
 >   
@@ -90,30 +86,34 @@ References:
 > - Intel's 6th generation x86 processor introduced in 1995. It designates a baseline of features present in most modern x86 processors (both Intel and AMD)
 
 
-## 4 Types
+
+## Accumulator ISA
 ---
-### Accumulator ISA
 ![[accumulator isa.png|150]]
 1. ``load A``: Load value from [[Main Memory]] into accumulator
 2. ``add B``: Add value from Main Memory and value in the accumulator. The sum is stored back to the accumulator
 3. ``store C``: Store value in accumulator into Main Memory
 
-### Load-Store ISA
+## Load-Store ISA
+---
 ![[register-register,load-store isa.png|150]]
 - Also known as **Register-Register ISA**
 - The data is decoupled from the [[Register]] to [[Main Memory]]
 
 >[!caution] Data Loading
 > ![[word_alignment.png|500]]
-> - Can only load data at [[Computer Data Representation#Word]] boundaries
+> 
+> Can only load data at [[Computer Data Representation#Word]] boundaries.
 
 
 
 
-### Memory-Memory ISA
+## Memory-Memory ISA
+---
 ![[memory-memory isa.png|150]]
 
-### Stack ISA
+## Stack ISA
+---
 ![[stack isa.png|150]]
 1. ``push A``, ``push B``: We load values from [[Main Memory]] onto the [[Stack]]
 2. ``add``: Remove the top 2 values in the Stack, add them, and load the sum onto top of Stack
