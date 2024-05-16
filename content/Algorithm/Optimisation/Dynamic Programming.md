@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-11-30T21:28:00
-Last Date: 2024-05-14T10:18:23+08:00
+Last Date: 2024-05-16T14:06:11+08:00
 References: 
 aliases:
   - ../../Algorithm/Dynamic-Programming
@@ -77,16 +77,13 @@ aliases:
 > It is like finding the solution to $(5+5+5+5)+5$, we already know $(5+5+5+5)$ is $20$, then the answer to $(5+5+5+5)+5$ is simply $(20) + 5$ which is $25$. You see we don't need to remember what is the answer to $5+5$ or $5+5+5$, because the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**.
 
 
+
+
+
 ## DP Problem Properties 
 ---
 ### Overlapping Subproblems (重复子问题)
 - Occur when a problem can be broken down into **smaller subproblems** that are **exactly the same**
-
-
->[!important] Dependency order of subproblems
-> ![[topological_sort.svg|500]]
-> 
-> In order to be solved with dynamic programming, the **dependency order of subproblems** of a given problem **MUST** follow [[Graph#Topological Sort|topological sort order]], as shown above. Think about the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**. If $(5+5+5+5)$ depends on $(5+5+5+5)+5$, there is no way for us to **build up** the solution from smaller subproblems! 
 
 >[!tip]
 > Overlapping subproblems can be handled efficiently with [[Memoization]].
@@ -95,9 +92,20 @@ aliases:
 
 >[!example] Knapsack Problem
 > The solution can be found by building on the optimal solutions to the knapsack problem with smaller weights and values.
+
+
+
+
 ### Statelessness (无后效性)
 - Solutions to smaller problems are **deterministic**. For example, the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**
 - We can expand the definition of [[Memoization#DP Table]] to keep track the state of more complex problems, aka building up from the optimal solution of smaller subproblems. However, problems like [Travelling salesman problem - Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem#:~:text=The%20travelling%20salesman%20problem%2C%20also,returns%20to%20the%20origin%20city%3F%22) is too complex to have the solutions of its subproblems modelled into a dp table. Thus, can't be solved with the help of [[Dynamic Programming]]
+
+### Dependency order of subproblems
+
+![[topological_sort.svg|500]]
+
+- In order to be solved with dynamic programming, the **dependency order of subproblems** of a given problem **MUST** follow [[Graph#Topological Sort|topological sort order]], as shown above
+- Think about the answer of $(5+5+5+5)+5$ **depends directly** on $(5+5+5+5)$, **nothing else**. If $(5+5+5+5)$ depends on $(5+5+5+5)+5$, there is no way for us to **build up** the solution from smaller subproblems! 
 
 ## State Transition Equation (状态转移方程)
 ---
