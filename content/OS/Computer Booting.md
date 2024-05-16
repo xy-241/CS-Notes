@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2024-01-27, 19:55
-Last Date: 2024-04-09T16:23:47+08:00
+Last Date: 2024-05-16T18:19:25+08:00
 References: 
 draft: 
 description: 
@@ -23,7 +23,7 @@ sr-ease: 230
 
 ### BIOS
 - Contains **low-level** IO software
-- Nowadays, stored in **Flash RAM** - nonvolatile & can be updated
+- Nowadays, stored in [[ROM#EEPROM]] which enables **firmware updates** to be performed **electronically**
 - The newer standard is called [UEFI](https://www.freecodecamp.org/news/uefi-vs-bios/)
 </br>
 
@@ -31,18 +31,22 @@ sr-ease: 230
 	1. Checks [[Main Memory]] capacity
 	2. Check [[IO Device]]
 	3. Scanning [[IO Bus]] to detect all devices attached
-	4. Determine the [[#Boot Device]] by trying out a list of devices stored in the **CMOS**. (Users can press **keyboard shortcut - F12, F11, Esc, F8, F9** to enter a **Boot Menu** and choose the boot device manually)
+	4. Determine the [[#Boot Device]] by trying out a list of devices specified in the **CMOS memory**. (Users can press **keyboard shortcut - F12, F11, Esc, F8, F9** to enter a **Boot Menu** and choose the boot device manually)
 	5. The [[#Boot loader]] inside the boot device will carry out the next step
 
 >[!tip]- Keyboard shortcut to enter BIOS
 > ![[bios_hotkey.jpeg]]
 
+>[!info] CMOS memory
+> [Nonvolatile BIOS memory](https://en.wikipedia.org/wiki/Nonvolatile_BIOS_memory) that stores the **BIOS configuration**,  it needs to have a **battery to preserve the data**. That is why we need to take off the battery to reset the BIOS.
+> 
+> CMOS memory is usually included as part of a module that provides [Real-time clock - Wikipedia](https://en.wikipedia.org/wiki/Real-time_clock).
 ### Boot Device
 ![[boot_device.png|500]]
 - Storage device that contains **Master Boot Record** and the [[OS]]
 - Master Boot Record is read into [[Main Memory]] to start the [[#Boot Loader]]
 
->[!info]- Partition Table
+>[!info] Partition Table
 > Contains information about how the partitions on the disk are organized. Can be created in 2 disk partitioning schemes - **Master Boot Record** and **GUID Partition Table** (Needs UEFI [[#BIOS]])
 
 >[!info]- Essential partitions of a Linux Boot Device
@@ -56,7 +60,7 @@ sr-ease: 230
 > - 100MB - 500MB is usually enough
 > - **Formatted as FAT32** for compatibility across different architectures
 > - Needs "boot" or "esp" flag
-> - `/boot` becomes optional to unified the partition for kernel and boot loaders. However, non-encrypted `/boot` is required whatever the UEFI choice if the rest of the system is encrypted!
+> - `/boot` becomes optional to unified the partition for kernel and boot loaders. However, non-encrypted `/boot` is required if the rest of the system is encrypted!
 > 
 > **`/`  partition (root partition)**
 > - Core of your Linux installation. It contains all your system files, user files, program data, etc
@@ -80,10 +84,13 @@ sr-ease: 230
 3. [[Kernel#Kernel Booting]] will finish up on the booting of the OS
 </br>
 
-- One common boot loader is [Grub2](https://help.ubuntu.com/community/Grub2)
+>[!info]
+> One common boot loader is [Grub2](https://help.ubuntu.com/community/Grub2).
 
 
 ## References
 ---
-- How Does Linux Boot Process Work?
-![How Does Linux Boot Process Work? - YouTube](https://youtu.be/XpFsMB6FoOs?si=uBxjBymSdHkESwsr)
+- [How Does Linux Boot Process Work?](https://youtu.be/XpFsMB6FoOs?si=uBxjBymSdHkESwsr)
+- [Where is the bios stored? - Quora](https://www.quora.com/Where-is-the-bios-stored)
+- [rom - Where is the BIOS stored? - Super User](https://superuser.com/questions/707254/where-is-the-bios-stored)
+- [Nonvolatile BIOS memory - Wikipedia](https://en.wikipedia.org/wiki/Nonvolatile_BIOS_memory)
