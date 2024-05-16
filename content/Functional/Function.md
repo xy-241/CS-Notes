@@ -9,7 +9,7 @@ tags:
   - java
   - functional
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-05-11T20:14:54+08:00
+Last Date: 2024-05-16T19:05:24+08:00
 References: 
 ---
 ## Abstract
@@ -41,7 +41,15 @@ References:
 
 >[!important]
 > Higher-order function builds on top of [[#First-class Citizen Function]], so we can **pass function into another function** or **return function from another function** as if function is a **variable**.
+> 
+> Higher-order function powers [[Closure]].
 
+>[!code] Common higher-order functions
+> `map()`: take in a function, and uses it to implement changes on a stream of values.
+> 
+> `filter()`: take in a function, and uses it to remove some values from a stream of values.
+> 
+> `reduce()`: takes in a function, and uses it to convert a stream of values into a single value.
 ## Rust Function
 ---
 - For [[#Function Signature]], you **must** declare the [[Datatype]] of each parameter
@@ -51,3 +59,6 @@ References:
 - Return the last [[Expression]] implicitly
 
 
+## References
+---
+- [The purest coding style, where bugs are near impossible - YouTube](https://www.youtube.com/watch?v=HlgG395PQWw&t=84s)

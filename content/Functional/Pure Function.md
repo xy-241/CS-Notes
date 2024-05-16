@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - functional
 Creation Date: 2023-07-23T18:04:05+08:00
-Last Date: 2024-05-12T18:39:42+08:00
+Last Date: 2024-05-16T19:21:41+08:00
 References: 
 ---
 ## Abstract
@@ -15,18 +15,19 @@ References:
 
 
 >[!info]+ Purity
-> Also known as **deterministic**. The same input **always** produces the same output.
+> Also known as **deterministic**. The same input **always** produces the same output([[#Referential Transparency]]) **without affecting anything else**(no [[#Side Effect]]).
 
->[!important]
-> Don't have any [[#Side Effect]].
+>[!question] What if my program needs side effect to work?
+> For example, printing stuff to the screen is considered as side effect. We have [Monad (functional programming) - Wikipedia](https://en.wikipedia.org/wiki/Monad_(functional_programming)) to **introduce side effects** into the program and **ensures the purity**.
+
 ## Referential Transparency
 ---
-- The output **depends only** on the input.
+- The output **only depends** on the input.
 
 ## Side Effect
 ---
 - Can be heavily avoided with the help of [[Immutability]]
-- 
+
 >[!example]
 > Some side effects are listed below:
 > 
