@@ -7,7 +7,7 @@ tags:
   - dsa
   - discrete_math
 Creation Date: 2023-10-09T09:08:00
-Last Date: 2024-05-15T11:58:50+08:00
+Last Date: 2024-05-17T13:01:50+08:00
 References: 
 description: Detailed introduction to graph from a computer science perspective
 title: Graph Data Structure
@@ -169,16 +169,31 @@ title: Graph Data Structure
 > Not a common graph representation, it is **hard to extract information** about **vertice**s and [[Graph]].
 
 
+## Complete Graph
+---
+
+![[complete_graph.svg|500]]
+
+- A [[Graph]] that has an **edge** between **every pair of vertices** 
+
+>[!question] How many edges does complete graph have?
+> **Without considering the direction of edge** and given $n$ nodes, we will have $\frac{n^{2}-n}{2}$ edges. $n^2$ represents the **total possible edges** we can have, $n^{2}-n$ removes all the **edges** that **start and end from the same node**. Lastly,  $\frac{n^{2}-n}{2}$ to **remove the duplicated edges** since we are not considering the direction of edge, so **edges that connect the same nodes** are **considered the same**.
+> 
+> Another way to think about it is that **given any node**, we need to make $n-1$ edges to connect with another $n-1$ node. So the total edges we need is $n(n-1)$ since we have a total of $n$ nodes. However, this counts every edge **twice**, because **every edge going out** from one node is a**n edge going into another node**, so we need to divide by $2$. Thus, we have $\frac{n(n-1)}{2}$ which is same as $\frac{n^{2}-n}{2}$.
+> 
+> Another way to think about is **how many unique ways** are there to **pick 2 nodes from $n$ nodes**, so $(u,v)$ and $(v,u)$ are considered as the **same selection**. This is basically [[Combination]] where we can apply [[Combination#Binomial Coefficient]]. Substituting the values into the formula, we will have $\binom{n}{2} = \frac{n!}{2!(n-2)!}$ which is $\frac{n(n-1)}{2}$.
+
+
 ## Terminologies
 ---
 ### Sparse Graph
-- A [[Graph]] in which the number of edges is much less than the possible number of edges
+- A [[Graph]] in which the number of edges is much less than the possible number of edges. One good example is [[Tree#Minimum Spanning Tree]]
 
-### Complete Graph
-- A [[Graph]] that has a **direct edge** between **every pair of vertices** 
+
 
 
 ## References
 ---
 - [Introduction to Graph Theory: A Computer Science Perspective - YouTube](https://www.youtube.com/watch?v=LFKZLXVO-Dg)
 - [Directed acyclic graph - Wikipedia](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
+- [combinatorics - Why a complete graph has $\\frac{n(n-1)}{2}$ edges? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/17747/why-a-complete-graph-has-fracnn-12-edges)
