@@ -8,7 +8,7 @@ tags:
   - bash
   - cloudflare
 Creation Date: 2023-08-14T11:18:00
-Last Date: 2024-05-14T07:27:35+08:00
+Last Date: 2024-05-15T23:57:07+08:00
 References: 
 description: Explore the Domain Name System (DNS), the internet's GPS that translates human-readable website names into machine-friendly IP addresses.
 ---
@@ -26,7 +26,7 @@ description: Explore the Domain Name System (DNS), the internet's GPS that trans
 
 ## Secure DNS
 ---
-- Basically [[DNS]] with encryption, so 3rd-party that is **monitoring the DNS traffic** is **unable to see which site you are visiting**. There are two standards on secure DNS - **DNS over [[TLS]](DoT)** & **DNS over HTTPS(DoH)**
+- Basically [[DNS]] with encryption, so 3rd-party that is **monitoring the DNS traffic** is **unable to see which site you are visiting**. There are two standards on secure DNS - **DNS over TLS(DoT)** & **DNS over HTTPS(DoH)**
 
 
 |                   | DoT                                              | DoH                                                            |
@@ -50,6 +50,7 @@ description: Explore the Domain Name System (DNS), the internet's GPS that trans
 > Services like Cloudflare allows us to control the DNS Record using an API key with **DNS Edit permission**, then we can write a script or `jeessy2/ddns-go` to achieve DDNS - updating the DNS record once the public IP address of the house network changes.
 > 
 > `jeessy2/ddns-go` comes with [[Webhook]], with the help of [ddns-telegram-bot](https://github.com/WingLim/ddns-telegram-bot), I will also get notified via Telegram whenever my house IP address is changed :)
+
 
 
 ## DNS Features

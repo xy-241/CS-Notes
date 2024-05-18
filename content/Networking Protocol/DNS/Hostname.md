@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2023-07-24T18:28:00
-Last Date: 2024-04-30T23:08:54+08:00
+Last Date: 2024-05-15T23:58:56+08:00
 References: 
 ---
 ## Abstract
@@ -47,9 +47,15 @@ References:
 >Refer to [Cloudflare Docs](https://developers.cloudflare.com/registrar/get-started/transfer-domain-to-cloudflare/#disable-dnssec) for more details
 
 >[!caution]
-> For [[DNS Record]] for Domain ownership verification, we can't proxy it, the [[X.509 Certificate#Certificate Authority (CA)]] wants to the see the verification text in the DNS record!
+> For [[DNS Record]] for **Domain ownership verification**, we can't proxy it, the [[X.509 Certificate#Certificate Authority (CA)]] wants to the see the verification text in the DNS record!
+
+
+
 ### Domain Registrar
-- The platform between the domain owner and [[DNS Server#Top-Level Domain DNS Server]], for example [Cloudflare Registrar](https://developers.cloudflare.com/registrar/)
+- The platform between the **domain owner** and [[DNS Server#Top-Level Domain DNS Server]], for example [Cloudflare Registrar](https://developers.cloudflare.com/registrar/)
+
+### Domain Zone File
+- The file we can use to configure the [[#Domain Name]]
 
 ### EPP Code
 - Alpha-numeric code required to **transfer domain** from one registrar to another registrar
