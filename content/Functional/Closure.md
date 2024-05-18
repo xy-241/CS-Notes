@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - functional
 Creation Date: 2023-09-03T10:45:58+08:00
-Last Date: 2024-05-15T19:25:09+08:00
+Last Date: 2024-05-18T00:21:04+08:00
 References: 
 ---
 ## Abstract
 ---
-- Closure is a [[Function]] **inside a function** that **remembers** and has **access to variables** that are **outside of itself,** even after the **outer function finishes executing**. The code editor below shows a simple example
+- Closure is a [[Function]] **inside a function** that **remembers** and has **access to variables** that are **outside of itself,** even after the **outer function finishes executing**. It is like **creating an instance of a function**. The code editor below shows a simple example
 
 
 <div class="onecompilerCode-wrapper">
