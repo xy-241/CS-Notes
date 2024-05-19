@@ -48,7 +48,7 @@ export default (() => {
         }}
         />
 
-        <script async src="https://rum.cronitor.io/script.js"></script>
+        {/* <script async src="https://rum.cronitor.io/script.js"></script>
         <script
         dangerouslySetInnerHTML={{
             __html: `
@@ -56,7 +56,7 @@ export default (() => {
               cronitor('config', { clientKey: 'fe62c9349bb06b60dd67e689bebb2838' });`
           }}
         >
-        </script>
+        </script> */}
 
         <title>{title}</title>
         <meta charSet="utf-8" />

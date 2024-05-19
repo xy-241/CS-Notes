@@ -19,7 +19,7 @@ export default ((opts?: Options) => {
         <hr />
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://www.linkedin.com/in/xinyang-yu/">Xinyang YU</a>, © {startYear} - {currYear}
+          <a href="https://www.linkedin.com/in/xinyang-yu/">Xinyang YU</a>, © {currYear}
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
