@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2024-04-08T16:23:09+08:00
+Last Date: 2024-05-20T21:54:38+08:00
 References: 
 description: Dive into the world of processes in operating systems!
 ---
@@ -17,7 +17,7 @@ description: Dive into the world of processes in operating systems!
 - Container that holds all the information needed to run a program, [[Abstraction (抽象)]] over running program
 </br>
 
-- 2 Components - [[Address Space]], [[Process Control Block (PCB)]]
+- 2 Components - [[Address Space]], [[Process Control Block (PCB)]], stored in [[Main Memory]]
 - Process also has a [[Page Table]] that translates a given [[Memory Page]] to the [[Memory Address]] of [[Main Memory#Memory Frames]] that stores the actual data 
 
 

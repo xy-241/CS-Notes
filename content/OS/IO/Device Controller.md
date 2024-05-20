@@ -10,6 +10,8 @@ Last Date: 2024-04-08T16:39:53+08:00
 References: 
 ---
 ## Abstract
+---
+
 * A small embedded computers that are programmed to tell [[IO Device]] what to do
 * Communicates with [[Kernel]] over [[#Device Driver]]
 

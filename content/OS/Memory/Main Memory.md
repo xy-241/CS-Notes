@@ -7,17 +7,17 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-10-07T16:38:29+08:00
-Last Date: 2024-03-02T20:34:31+08:00
+Last Date: 2024-05-20T21:55:23+08:00
 References: 
 ---
 ## Abstract
 ---
 - Also known as **RAM** (**Random-access Memory**)
-- Made of [[#Memory Element]], which can be assessed using [[#Physical Address]] in a [[#Random-Access]] manner which is very efficient
-- We use [[#Memory Frames]] for easier memory management 
+- Made of [[#Memory Element]], which can be assessed using [[#Physical Address]] in a [[#Random-Access]] manner which is very efficient, and we e use [[#Memory Frames]] for easier memory management 
+- Slower than [[CPU Cache]]
 
->[!example]- Commone Use Cases
-> - Main system memory (the RAM modules you install in your computer)
+>[!example] Common Use Cases
+> Main system memory (the RAM modules you install in your computer).
 
 ## Memory Element
 ---
@@ -42,14 +42,14 @@ References:
 ---
 - A type of [[Main Memory]] characterised by its fast access speeds, but generally higher cost and lower density (stores less data per unit area)
 
->[!example]- Use Cases
-> - CPU cache memory (L1, L2, L3)
-> - High-speed registers
+>[!example] Use Cases
+> - [[CPU Cache]] (L1, L2, L3)
+> - [[Register]]
 > - Embedded systems where speed is critical
 
 ## Terminologies
 ---
 ### Random-Access
-- A random specific memory location can be accessed instantly without waiting to render until that location. $O(1)$ complexity
+- A **random memory location** can be **accessed instantly** without waiting to reach that location, exhibiting $O(1)$ complexity. Unlike a hard disk, where we need to move the 'needle' to the physical memory location first before we can start accessing the stored data
 
 
