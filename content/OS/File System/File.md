@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-05-07T00:39:17+08:00
+Last Date: 2024-05-21T13:26:13+08:00
 References: 
 ---
 
@@ -21,7 +21,7 @@ References:
 
 - Hide the **nitty gritty** of IO Device, so users can focus on manipulating the content inside the IO Device
 - Present programmer a clean [[Abstraction (抽象)]] of **device-independent** file
-- Examples are Printers & Modems etc
+- Files are stored in the form of **blocks of bytes**
 </br>
 
 - 2 parts - **Filename** & [[Inode#Inode Number]], doesn't have any _metadata_ associated

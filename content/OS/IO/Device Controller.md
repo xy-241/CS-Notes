@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-29T20:13:44
-Last Date: 2024-04-08T16:39:53+08:00
+Last Date: 2024-05-21T16:02:50+08:00
 References: 
 ---
 ## Abstract
@@ -18,7 +18,7 @@ References:
 
 ## Device Driver
 ---
-- A piece of software that allows [[Kernel]] to talk to the [[Device Controller]] over a **standardised interface**
+- A **loadable** [[Kernel#Kernel Module]] that allows Kernel to talk to the [[Device Controller]] over a **standardised interface**
 
 ## IO Device Register
 ---
