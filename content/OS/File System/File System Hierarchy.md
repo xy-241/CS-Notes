@@ -8,7 +8,7 @@ tags:
   - linux
   - bash
 Creation Date: 2024-03-11, 20:43
-Last Date: 2024-03-11T21:34:24+08:00
+Last Date: 2024-05-24T01:11:28+08:00
 References: 
 draft: 
 description: 
@@ -24,6 +24,11 @@ description:
 - The top of the [[File System Hierarchy]]
 ### File Directory
 - A way of grouping [[File]] together
+
+>[!important]
+> File directory itself is also a type of **file**! The **size of the file directory** is decided by the **files and directories inside it**. For [[File System#APFS]], each file or directory will add $32$ [[Computer Data Representation#Byte]] to its parent directory. That is why **empty files** take up $0$ byte, all the **metadata of the empty files** is stored with its **parent directory**. 
+> 
+> However, be careful with directory, all **newly created directory** has **2 child directories**, `.` is to the **current directory** and `..` is to the **parent directory**. Thus, in APFS, all newly created directory has a size of $32 * 2 = 64$ bytes!
 
 >[!tip]- Handy tips to create File Directory
 > **`mkdir -p`**
