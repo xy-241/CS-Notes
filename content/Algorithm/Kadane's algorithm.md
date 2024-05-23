@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-05-19, 18:39
-Last Date: 2024-05-22T14:15:35+08:00
+Last Date: 2024-05-23T12:16:45+08:00
 References: 
 draft: 
 description: 
@@ -19,27 +19,42 @@ description:
 - From the [[Recursion#Recurrence Function]] $F(i)$, we can see that if the **maximum sum of contiguous subarray at index $i-1$** is **negative**, the **maximum sum** of **contiguous subarray** at **index $i$**, $F(i)$ is definitely the element at index $i$, in another word, we are actually **starting a new subarray**
 
 
->[!important]
+>[!attention]
 > **Maximum sum** of **contiguous subarray** at **index $i$** **must** include the **element at index $i$**.
 
 
 ## Maximum Subarray Problem
 ---
 - [Maximum Subarray Problem](https://leetcode.com/problems/maximum-subarray) is the task of finding the **largest possible sum** of a **contiguous subarray**, within a given **one-dimensional [[Array]] of numbers**
-- This problem can be solved efficiently in $O(n)$ using [[Kadane's algorithm]] which computes the **largest possible sum** of a **contiguous subarray** at **each index** in $O(n)$. The answer is just the **biggest number** among all the **largest possible sum** of a **contiguous subarray** at **each index**
+- This problem can be solved efficiently in $O(n)$ using [[Kadane's algorithm]] which computes the **largest possible sum** of a **contiguous subarray** at **each index** in $O(n)$. The answer is just the **biggest number** among all the **largest possible sum** of **contiguous subarray** at **each index**
 
 >[!attention]
-> The **contiguous subarray** is an **non-empty subarray**. If the given array only has negative numbers, the maximum subarray should be an empty subarray which has a sum of $0$. But the solution with Kadane's algorithm will **return the smallest value from the array**.
+> The **contiguous subarray** is an **non-empty subarray**. If the given array only has **negative numbers**, the maximum subarray should be an empty subarray which has a sum of $0$. But the solution with Kadane's algorithm will **return the smallest value from the array**.
 > 
 > We can definitely modify the solution a bit to adapt to this **edge case**. For example, we can have a variable that returns true if all the elements in the array are negative, then we just return $0$ when the variable is true.
 
-**Top DP Approach**
-- This [[Dynamic Programming#Top-down DP Approach]] doesn't require [[Memoization#DP Table]] as the [[Dynamic Programming#Optimal Substructure (最优子结构)]] removes the [[Dynamic Programming#Overlapping Subproblems (重复子问题)]]
+**Top-down DP Approach**
+
+$$
+F(i) = 
+\begin{cases}
+0 & i = 0 \\
+A[0] & i=1 \\
+max(A[i], A[i]+F(i-1)) & i\ge2
+\end{cases}
+$$
+
+- This [[Dynamic Programming#Top-down DP Approach]] doesn't require [[Memoization#DP Table]] as the [[Dynamic Programming#Optimal Substructure (最优子结构)]] removes the [[Dynamic Programming#Overlapping Subproblems (重复子问题)]]. The [[Recursion#Recurrence Function]] shown above is the core of this top-down DP approach
+- The `globalMax` variable is used to keep track of the **biggest number** among all the **largest possible sum** of **contiguous subarray** at **each index**
+
 
 ```java
 class Solution {
   int globalMax;
   public int maxSubArray(int[] nums) {
+	if (nums.length == 0) return 0;
+	if (nums.length == 1) return nums[0];
+	
     globalMax = nums[0];
     dfs(nums, nums.length - 1);
     return globalMax;
@@ -57,6 +72,26 @@ class Solution {
 }
 ```
 
+**Bottom-up DP Approach**
+- In [[Dynamic Programming#Bottom-up DP Approach]], we can see the **maximum subarray** with the inclusion of element at current index is the **maximum** of the **element at the current index** and the **sum of element at current index + maximum subarray at the previous index**
+- The `globalMax` variable is used to keep track of the **biggest number** among all the **largest possible sum** of **contiguous subarray** at **each index**
+
+```java
+class Solution {
+  public int maxSubArray(int[] nums) {
+    if (nums.length == 0) return 0;
+    if (nums.length == 1) return nums[0];
+
+    int globalMax = nums[0];
+    int localMax = nums[0];
+    for (int i = 1; i < nums.length; i++) {
+      localMax = Math.max(nums[i], localMax + nums[i]);
+      globalMax = Math.max(globalMax, localMax);
+    }
+    return globalMax;
+  }
+}
+```
 
 
 ## References
