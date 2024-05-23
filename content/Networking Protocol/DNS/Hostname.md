@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2023-07-24T18:28:00
-Last Date: 2024-05-15T23:58:56+08:00
+Last Date: 2024-05-23T14:22:49+08:00
 References: 
 ---
 ## Abstract
@@ -49,7 +49,8 @@ References:
 >[!caution]
 > For [[DNS Record]] for **Domain ownership verification**, we can't proxy it, the [[X.509 Certificate#Certificate Authority (CA)]] wants to the see the verification text in the DNS record!
 
-
+>[!tip] Check Whois info
+> You can either use the command `whois <DOMAIN_NAME/IP_ADDRESS>` or use this [whois web app](https://html.zone/whois).
 
 ### Domain Registrar
 - The platform between the **domain owner** and [[DNS Server#Top-Level Domain DNS Server]], for example [Cloudflare Registrar](https://developers.cloudflare.com/registrar/)

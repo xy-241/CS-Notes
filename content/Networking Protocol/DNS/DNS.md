@@ -8,7 +8,7 @@ tags:
   - bash
   - cloudflare
 Creation Date: 2023-08-14T11:18:00
-Last Date: 2024-05-15T23:57:07+08:00
+Last Date: 2024-05-23T14:21:49+08:00
 References: 
 description: Explore the Domain Name System (DNS), the internet's GPS that translates human-readable website names into machine-friendly IP addresses.
 ---
@@ -17,11 +17,6 @@ description: Explore the Domain Name System (DNS), the internet's GPS that trans
 - Translate [[Hostname]] to [[IP Address]]
 - Runs over [[UDP]] & port 53
 - Used by Other **application-level** [[Network Protocol]] like [[HTTP]] and [[SMTP]], to translate user-supplied [[Hostname#Domain Name]] to IP Address
-
->[!tip]- Check Whois info from CLi
-> ```bash
-> whois <DOMAIN_NAME/IP_ADDRESS>
-> ```
 
 
 ## Secure DNS
