@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-05-19, 18:39
-Last Date: 2024-05-23T12:16:45+08:00
+Last Date: 2024-05-25T00:01:39+08:00
 References: 
 draft: 
 description: 
@@ -93,6 +93,14 @@ class Solution {
 }
 ```
 
+## Maximum Product Subarray
+---
+- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray) is the task of finding the **largest possible product** of a **contiguous subarray**, within a given **one-dimensional [[Array]] of numbers**
+
+>[!important] Key point
+> It is a more advanced version of [[#Maximum Subarray Problem]], because the largest possible product **can consist of negative numbers** since **negative** $\times$ **negatives** produces **positive** but **negative** $\times$ **positive** produces **negative**.
+> 
+> If we use [[Kadane's algorithm]] to find the **maximum product** of a contiguous subarray at index $i$, there is **NO WAY** to find the largest product if it consists of two negative numbers, for example. This is because, once we **encounter a negative number**, we **discard it** since a **positive number multiplied by a negative number** is **negative**, unless the two negative numbers are the first elements. The solution is to keep track of the **minimum product** of a contiguous subarray at index $i$ as well, and the **maximum product** of a contiguous subarray at index $i$ depends on it!
 
 ## References
 ---
