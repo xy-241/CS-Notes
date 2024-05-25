@@ -6,9 +6,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-03-27T10:50:08+08:00
+Last Date: 2024-05-25T17:21:31+08:00
 References: 
-description: My Second Brain for Computer Science related stuff. Zero bullshit, short and sweet.
+description: My Second Brain for Computer Science related stuff. Zero fluff, short and sweet.
 ---
 ![[ninja.jpg|800]]
 
