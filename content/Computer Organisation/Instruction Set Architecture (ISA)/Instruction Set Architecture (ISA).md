@@ -7,33 +7,34 @@ tags:
   - computer_organisation
   - bash
 Creation Date: 2023-10-04T17:30:24+08:00
-Last Date: 2024-05-15T17:42:30+08:00
+Last Date: 2024-05-25T01:21:43+08:00
 References: 
 ---
 ## Abstract
 ---
-- A set of [[Instruction]] which contains [[Instruction#Opcode]] & **parameters** that tells [[CPU]] what to do. You can check the ISA of a machine using `uname -mp`
+- A set of [[Instruction]] which contains [[Instruction#Opcode]] & **parameters** that tells [[CPU]] what to do in the form of **0s and 1s**. You can check the ISA of a machine using `uname -mp`
 
 >[!success] Portability
-> The **exact hardware implementation** of **different CPU** can **vary** but app written for X86 ISA can be run on all the CPU that implements the X86. The ISA functions like a **standard** that different hardware implementations need to follow, so software has a **common interface** to work with different CPUs.
+> The **exact hardware implementation** of **different CPU** can **vary** but app written for a particular ISA like X86 can be run on all the CPU that implements the X86. The ISA functions like a **standard** that different hardware implementations need to follow, so software has a **common interface** to work with different CPUs.
+> 
+> Think of the **CPU implementation** as the **logic inside a function**, and the **ISA** specifies the **inputs and outputs** of the function.
 
 
 
 ## RISC
 ---
 - Stands for **Reduced Instruction Set Computer**
-- Simplified [[Instruction]] that can complete in one [[Clock Oscillator#Clock Cycle]]
-- Fewer possible Instruction
+- [[Instruction]] in RISC is like all the **unique lego pieces** that can be used to get [[CPU]] to carry out one operation. Unlike [[#CISC]] which provides **pieces built with unique lego pieces** that can be used to get CPU to carry out **multiple operation** to **complete a particular task**. Thus, RISC has fewer possible Instruction
 - Doesn't perform any [[Operation]] directly on [[Main Memory]]
 
 >[!success] Easier to Decode
 >Each [[Instruction]] is fixed-sized.
 
 >[!success] Power-Efficient
-> Needs fewer [[Transistors (晶体管)]] to perform simple [[Operation]].
+> Needs fewer [[Transistors (晶体管)]] to perform simple task.
 
 >[!attention] Tedious
->Complex [[Operation#Computation]] requires more Instructions to achieve.
+> More complicated tasks require programmers to use more instructions to achieve.
 
 >[!example] Common RISC
 > **aarch64 / arm64** 
@@ -56,11 +57,10 @@ References:
 ## CISC
 ---
 - Stands for **Complex Instruction Set Computer**
-- Very Complex set of [[Instruction]]
-- Can take multiple [[Clock Oscillator#Clock Cycle]] to execute
+- [[Instruction]] in CSIC is like **pieces built with unique lego pieces** that can be used to get [[CPU]] to carry out **multiple operation** to **complete a particular task**. Unlike [[#CISC]] which only provides **unique lego pieces** that can be used to get CPU to carry out one operation. Thus, RISC has fewer possible Instruction
 
 >[!success] Simpler to use
->Has many Instruction, **complex [[Operation#Computation]]** can be performed with just **one Instruction**.
+> Provide **instructions** that can be used to complete **different common tasks**, so programmers don't need to use multiple instructions to common tasks.
 
 >[!attention] Requires more transistors
 > The **design** of [[CPU]] needs to be **complex** to achieve complex computation with fewer Instruction, so less [[Transistors (晶体管)]] can be used improve overall computing performance. Thus, more **power-hungry**, and **more wasted power** when **performing simple instruction**.
