@@ -9,7 +9,7 @@ tags:
   - java
   - cpp
 Creation Date: 2023-07-14T20:53:45+08:00
-Last Date: 2024-03-25T20:39:47+08:00
+Last Date: 2024-05-27T19:41:45+08:00
 References: 
 ---
 ## Abstract
@@ -26,6 +26,27 @@ References:
 > 
 > However, buffer takes [[Main Memory]], we need to a fine balance between the **system call we reduce** with buffer and the the **memory usage incurred** by the buffer. 512 [[Computer Data Representation#Byte]] is common buffer size
 
+
+## IO Operation
+---
+![[io_operation.png|500]]
+- The process of [[CPU]] communicating with the outside world. This can include interactions with **humans**, other **computers**, or **peripheral devices** as shown above. CPU is **only involved** in **initiating** the operation and **processing** the **results of the operation**!!!
+
+### Sequential IO
+- [[#IO Operation]] that reads from or writes to a storage device in a **linear manner**, so the data written is all **clustered** on the **same physical area** of the storage device 
+
+| **Aspect**            | **Sequential I/O**                                    | **Random I/O**                                       |
+| --------------------- | ----------------------------------------------------- | ---------------------------------------------------- |
+| **Access Pattern**    | Linear, ordered                                       | Arbitrary, unordered                                 |
+| **Performance**       | Generally higher due to reduced overhead              | Can be slower, especially on **mechanical drives**   |
+| **Typical Use Cases** | Streaming media, backups, reading/writing large files | Database queries, accessing individual records/files |
+
+>[!success] Much faster HDD
+> ![[sequneial_io_hdd.png|500]]
+> 
+> HDD comes with a physical needle that needs to move around physically to write or retrieve data. This physical movement takes a lot of time.
+> 
+> With Sequential IO, we can make sure the data we write or retrieve live on the **same physical spot**, thus **minimise physical movement**. This property allows us to get `100MB/s` **throughput** from HDD! HDD is an order of magnitude cheaper than [[Flash Memory]] given the same storage size.
 
 ## Useful Commands
 ---
@@ -44,6 +65,3 @@ read -p "Enter your input here: " variable
 - Centrally assign **interrupt level** & **IO Addresses**
 - Tell each IO device what its numbers are
 
-### IO Operation
-![[io_operation.png|500]]
-- The process of [[CPU]] communicating with the outside world. This can include interactions with **humans**, other **computers**, or **peripheral devices** as shown above. CPU is **only involved** in **initiating** the operation and **processing** the **results of the operation**!!!
