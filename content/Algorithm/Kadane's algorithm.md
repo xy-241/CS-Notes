@@ -6,17 +6,18 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-05-19, 18:39
-Last Date: 2024-05-26T18:43:32+08:00
+Last Date: 2024-05-27T21:40:46+08:00
 References: 
 draft: 
 description: 
 ---
 ## Abstract
 ---
-![[kadane_algorithm.svg|500]]
 
-- Kadane' algorithm: given an [[Array]] of elements $A$, the **maximum sum** of **contiguous subarray** at **index $i$**, $F(i)$ is the **maximum** of **element at index $i$**, $A[i]$ and the **sum of element at index $i$ + the maximum sum of contiguous subarray at index $i-1$**, $A[i] + F(i-1)$ 
-- From the [[Recursion#Recurrence Function]] $F(i)$, we can see that if the **maximum sum of contiguous subarray at index $i-1$** is **negative**, the **maximum sum** of **contiguous subarray** at **index $i$**, $F(i)$ is definitely the element at index $i$, in another word, we are actually **starting a new subarray**
+![[kadane_algorithm.svg]]
+
+- Kadane' algorithm: given an [[Array]] of elements $A$, the **maximum sum** of **contiguous subarray** at **index $i$**, $localMax(i)$ is the **maximum** of **element at index $i$**, $A[i]$ and the **sum of element at index $i$** and **the maximum sum of contiguous subarray at index $i-1$**, $A[i] + localMax(i-1)$ 
+- From the [[Recursion#Recurrence Function]] $localMax(i)$, we can see that if the **maximum sum of contiguous subarray at index $i-1$** is **negative**, the **maximum sum** of **contiguous subarray** at **index $i$**, $localMax(i)$ is definitely the element at index $i$, in another word, we are actually **starting a new subarray**
 
 
 >[!attention]
@@ -25,8 +26,11 @@ description:
 
 ## Maximum Subarray Problem
 ---
+
+![[maximum_subarray_problem.svg]]
+
 - [Maximum Subarray Problem](https://leetcode.com/problems/maximum-subarray) is the task of finding the **largest possible sum** of a **contiguous subarray**, within a given **one-dimensional [[Array]] of numbers**
-- This problem can be solved efficiently in $O(n)$ using [[Kadane's algorithm]] which computes the **largest possible sum** of a **contiguous subarray** at **each index** in $O(n)$. The answer is just the **biggest number** among all the **largest possible sum** of **contiguous subarray** at **each index**
+- This problem can be solved efficiently in $O(n)$ using [[Kadane's algorithm]] which computes the **largest possible sum** of a **contiguous subarray** at **each index**. The answer is just the **biggest number** among all the **largest possible sum** of **contiguous subarray** at **each index**
 
 >[!attention]
 > The **contiguous subarray** is an **non-empty subarray**. If the given array only has **negative numbers**, the maximum subarray should be an empty subarray which has a sum of $0$. But the solution with Kadane's algorithm will **return the smallest value from the array**.
@@ -36,10 +40,10 @@ description:
 **Top-down DP Approach**
 
 $$
-F(i) = 
+localMax(i) = 
 \begin{cases}
 0 & i = 0 \\
-A[0] & i=1 \\
+A[1] & i=1 \\
 max(A[i], A[i]+F(i-1)) & i\ge2
 \end{cases}
 $$
@@ -56,16 +60,16 @@ class Solution {
 	if (nums.length == 1) return nums[0];
 	
     globalMax = nums[0];
-    dfs(nums, nums.length - 1);
+    localMax(nums, nums.length - 1);
     return globalMax;
   }
 
-  public int dfs(int[] nums, int currIndex) {
+  public int localMax(int[] nums, int currIndex) {
     if (currIndex == 0)
       return nums[0];
 
     int localMax =
-        Math.max(nums[currIndex], dfs(nums, currIndex - 1) + nums[currIndex]);
+        Math.max(nums[currIndex], localMax(nums, currIndex - 1) + nums[currIndex]);
     globalMax = Math.max(globalMax, localMax);
     return localMax;
   }
@@ -101,7 +105,7 @@ class Solution {
 - [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray) is the task of finding the **largest possible product** of a **contiguous subarray**, within a given **one-dimensional [[Array]] of numbers**
 
 >[!important] Key point
-> It is a more advanced version of [[#Maximum Subarray Problem]], because the largest possible product **can consist of negative numbers** since **negative** $\times$ **negatives** produces **positive** but **negative** $\times$ **positive** produces **negative**.
+> It is a more advanced version of [[#Maximum Subarray Problem]], because the largest possible product **can consist of negative numbers** since **negative** $\times$ **negatives** produces **positive**. However, **negative** $\times$ **positive** produces **negative**.
 > 
 > If we use [[Kadane's algorithm]] to find the **maximum product** of a contiguous subarray at index $i$, there is **NO WAY** to find the largest product if it consists of two negative numbers, for example. This is because, once we **encounter a negative number**, we **discard it** since a **positive number multiplied by a negative number** is **negative**, unless the two negative numbers are the first elements. The solution is to keep track of the **minimum product** of a contiguous subarray at index $i$ as well, and the **maximum product** of a contiguous subarray at index $i$ depends on it!
 
