@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-05-19, 18:39
-Last Date: 2024-05-27T21:40:46+08:00
+Last Date: 2024-05-28T14:08:32+08:00
 References: 
 draft: 
 description: 
@@ -127,7 +127,7 @@ A[1]  & i=1\\
 max(A[i], A[i]*maxVal(i-1), A[i]*minVal(i-1)) & n\ge2
 \end{cases}
 $$
-
+- This [[Dynamic Programming#Top-down DP Approach]] requires `maxArr` and `minArr` to function as [[Memoization#DP Table]] to **avoid duplicated computation**
 - The [[Dynamic Programming#State Transition Equation (状态转移方程)]] shown above is the core of this top-down DP approach. The `globalMax` variable is used to keep track of the **biggest number** among all the **largest possible product** of **contiguous subarray** at **each index** 
 
 ```java
@@ -219,6 +219,90 @@ class Solution {
   }
 }
 ```
+
+
+## Best Time to Buy and Sell Stock
+---
+
+![[the_best_time_to_buy_sell_stock.svg]]
+
+- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) is the task of finding the **largest possible profit** of a given **one-dimensional [[Array]] of numbers**, the profit is the **difference** between the number at the **right side** and the number on the **left side**
+
+>[!important] Key point
+> This can be solved with [[Kadane's algorithm]], we calculate the **minimum cost** of purchasing the stock at **each index**, which is used to calculate the **profit** on the **next index**. Each **index** here denotes a specific **day**. 
+
+
+**Top-down DP Approach**
+
+$$
+minCost(i) = 
+\begin{cases}
+A[1]  & i=1\\
+min(A[i], minCost(i-1)) & n\ge2
+\end{cases}
+$$
+
+- This [[Dynamic Programming#Top-down DP Approach]] requires `minArr` to function as [[Memoization#DP Table]] to **avoid duplicated computation**
+- The [[Dynamic Programming#State Transition Equation (状态转移方程)]] shown above is the core of this top-down DP approach. The `maxProfit` variable is used to keep track of the **biggest profit** among all the **best deals** we can make on **each day**
+
+```java
+class Solution {
+  int[] minArr;
+  public int maxProfit(int[] prices) {
+    if (prices.length <= 1)
+      return 0;
+
+    int maxProfit = 0;
+    minArr = new int[prices.length];
+    Arrays.fill(minArr, Integer.MAX_VALUE);
+
+    for (int i = 1; i < prices.length; i++) {
+      int currPrice = prices[i];
+
+      maxProfit = Math.max(maxProfit, prices[i] - minCost(prices, i - 1));
+    }
+    return maxProfit;
+  }
+
+  public int minCost(int[] prices, int currIndex) {
+    if (currIndex == 0)
+      return prices[0];
+    if (minArr[currIndex] != Integer.MAX_VALUE)
+      return minArr[currIndex];
+
+    int currCost = prices[currIndex];
+    int currLowestCost = Math.min(currCost, minCost(prices, currIndex - 1));
+    minArr[currIndex] = currLowestCost;
+    return currLowestCost;
+  }
+}
+```
+
+**Bottom-up DP Approach**
+- In [[Dynamic Programming#Bottom-up DP Approach]], we use `minCost` to hold the **smallest cost** of purchase a stock til that **particular index**, which is used to **calculate the best deal** on the **next index**
+- The `maxProfit` variable is used to keep track of the **biggest profit** among all the **best deals** we can make on **each day**
+
+```java
+class Solution {
+  public int maxProfit(int[] prices) {
+    if (prices.length <= 1)
+      return 0;
+
+    int minCost = prices[0];
+    int maxProfit = 0;
+
+    for (int i = 1; i < prices.length; i++) {
+      int currPrice = prices[i];
+
+      maxProfit = Math.max(maxProfit, currPrice - minCost);
+      minCost = Math.min(minCost, currPrice);
+    }
+
+    return maxProfit;
+  }
+}
+```
+
 ## References
 ---
 - [Kadane’s Algorithm — (Dynamic Programming) — How and Why does it Work? | by Rohit Singhal | Medium](https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d)
