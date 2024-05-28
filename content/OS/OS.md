@@ -14,7 +14,7 @@ description: The giant that powers the software application we use on a daily ba
 ---
 - Consists of [[Kernel]] and [[OS System Program]]
 - 2 main functionalities
-	1. Provide user features in the form of [[Abstraction (抽象)#Abstraction Barrier]] to **interact with the hardware**. Some key abstractions are [[Process (进程)]], [[Thread]], [[Address Space]] and [[File System]]
+	1. Provide user features in the form of [[Abstraction#Abstraction Barrier]] to **interact with the hardware**. Some key abstractions are [[Process (进程)]], [[Thread]], [[Address Space]] and [[File System]]
 	2. Resource Manager for resources like [[CPU]], [[IO Device]] & [[Main Memory]] etc
 
 >[!important]

@@ -55,7 +55,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 
 >[!success] Solution: abstraction!
-> We have [[Abstraction (抽象)#Abstraction Barrier]] built on top of these [[System Call (系统调用)]] in the form of [[Library Call]] that follows a standardised interface like [[POSIX]] by wrapping the [[Assembly language |Assembly Instruction]] of different ISAs. Specific ISA [[Instruction]] is generated during [[Compilation]] automatically.
+> We have [[Abstraction#Abstraction Barrier]] built on top of these [[System Call (系统调用)]] in the form of [[Library Call]] that follows a standardised interface like [[POSIX]] by wrapping the [[Assembly language |Assembly Instruction]] of different ISAs. Specific ISA [[Instruction]] is generated during [[Compilation]] automatically.
 > 
 > This makes it possible for user programs like [[OS System Program]] to make system call that requests privileged services from the kernel - user program is communicating with **library call** **directly** and communicating with **system call** **indirectly**!
 > 

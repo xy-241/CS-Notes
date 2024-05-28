@@ -30,7 +30,7 @@ description:
 
 ## Unix Domain Socket
 ---
-- [[Socket]] in [[Unix#Unix-like]] system that provides [[Inter-Process Communication (IPC)]] using [[File#File Descriptor]], where the [[Kernel]] handles the [[System Call (系统调用)]] and put the mechanism behind a [[Abstraction (抽象)#Abstraction Barrier]]
+- [[Socket]] in [[Unix#Unix-like]] system that provides [[Inter-Process Communication (IPC)]] using [[File#File Descriptor]], where the [[Kernel]] handles the [[System Call (系统调用)]] and put the mechanism behind a [[Abstraction#Abstraction Barrier]]
 
 >[!important]
 > ![[unix_domain_socket_performance.png|400]]

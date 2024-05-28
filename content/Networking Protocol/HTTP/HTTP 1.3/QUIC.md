@@ -30,6 +30,6 @@ References:
 
 ## QUIC Stream
 - Introduce [[HTTP Stream]] in the [[Transport Layer]]
-- An [[Abstraction (抽象)]] of [[HTTP Request]]/[[HTTP Response]] into [[#QUIC Frame]]]
+- An [[Abstraction]] of [[HTTP Request]]/[[HTTP Response]] into [[#QUIC Frame]]]
 
 

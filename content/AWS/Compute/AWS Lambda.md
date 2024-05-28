@@ -20,5 +20,5 @@ description:
 - Act as glue between [[AWS EventBridge]] and **notification channels** like telegram and slacks etc. An basic setup guide can be found [here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_cwet.html)
 
 >[!tip] Easier coding experience with Python Lambda
-> There are [Powertools for AWS Lambda (Python)](https://docs.powertools.aws.dev/lambda/python/latest/) which offer intellisense, logger and [[Abstraction (抽象)]] to retrieve data from [[AWS Parameter Store]] and AWS secrets store etc
+> There are [Powertools for AWS Lambda (Python)](https://docs.powertools.aws.dev/lambda/python/latest/) which offer intellisense, logger and [[Abstraction]] to retrieve data from [[AWS Parameter Store]] and AWS secrets store etc
 

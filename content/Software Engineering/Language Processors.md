@@ -12,7 +12,7 @@ References:
 ---
 ## Abstract
 ---
-- Tools that translates programming languages down the layers of [[Abstraction (抽象)#Programming Abstraction]]
+- Tools that translates programming languages down the layers of [[Abstraction#Programming Abstraction]]
 
 
 

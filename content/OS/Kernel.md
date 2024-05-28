@@ -13,7 +13,7 @@ description: Dive into the heart of your operating system and discover how kerne
 ---
 ## Abstract
 ---
-- An [[Abstraction (抽象)#Abstraction Barrier]] between software and hardware 
+- An [[Abstraction#Abstraction Barrier]] between software and hardware 
 - Resides inside the [[Kernel Space]]
 
 >[!success] Loose Coupling

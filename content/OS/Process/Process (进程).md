@@ -14,7 +14,7 @@ description: Dive into the world of processes in operating systems!
 
 ## Abstract
 ---
-- Container that holds all the information needed to run a program, [[Abstraction (抽象)]] over running program
+- Container that holds all the information needed to run a program, [[Abstraction]] over running program
 </br>
 
 - 2 Components - [[Address Space]], [[Process Control Block (PCB)]], stored in [[Main Memory]]

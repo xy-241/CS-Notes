@@ -11,5 +11,5 @@ References:
 ---
 ## Abstract
 ---
-- A layer of [[Abstraction (抽象)]] above [[Instruction Set Architecture (ISA)]] for human
+- A layer of [[Abstraction]] above [[Instruction Set Architecture (ISA)]] for human
 - Writing out raw [[Instruction]] out is very error-prone, imagine writing a 0 instead of 1 may lead to a different Instruction

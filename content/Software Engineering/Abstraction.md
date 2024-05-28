@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2023-07-22T18:39:52+08:00
-Last Date: 2024-02-14T15:25:17+08:00
-References:
+Last Date: 2024-05-28T23:31:48+08:00
+References: 
 ---
 ## Abstract
 ---
-- Decouple the nitty-gritty lower level details from the higher level implementation
+- **Decouple** the nitty-gritty **lower level details** from the higher level implementation, achieving **ease of use**
 
 ### Abstraction Barrier
 - Features are grouped in a container aka module
