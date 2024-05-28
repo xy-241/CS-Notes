@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-28T09:59:05+08:00
-Last Date: 2024-04-22T21:01:19+08:00
+Last Date: 2024-05-28T17:16:44+08:00
 References: 
 ---
 ## Abstract
@@ -26,15 +26,12 @@ References:
 ### Parameter
 - Can be [[Register]] Address, [[Memory Address]] or Immediate Value
 
+### Fixed-length Instruction
+- Simplifies [[Pipeline]] & [[Instruction-Level Parallelism]]
 
+### Variable-length Instruction
+- More flexible but more complicated [[Pipeline]] & [[Instruction-Level Parallelism]]
 
-## 2 Instruction Forms
----
-### Fixed-length
-- Easy [[Pipeline Stages#Fetch]] & [[Pipeline Stages#Decode]]
-- Simplified [[Pipeline]] & [[Instruction-Level Parallelism]]
-### Variable-length
-- More Flexible BUT Requires more steps for [[Pipeline Stages#Fetch]] & [[Pipeline Stages#Decode]]
 
 
 ## Branch Instruction

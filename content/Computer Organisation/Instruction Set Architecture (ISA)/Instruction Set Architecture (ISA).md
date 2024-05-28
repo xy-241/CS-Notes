@@ -7,7 +7,7 @@ tags:
   - computer_organisation
   - bash
 Creation Date: 2023-10-04T17:30:24+08:00
-Last Date: 2024-05-25T01:21:43+08:00
+Last Date: 2024-05-28T17:16:10+08:00
 References: 
 ---
 ## Abstract
@@ -23,6 +23,9 @@ References:
 
 ## RISC
 ---
+
+![[isa.svg|500]]
+
 - Stands for **Reduced Instruction Set Computer**
 - [[Instruction]] in RISC is like all the **unique lego pieces** that can be used to get [[CPU]] to carry out one operation. Unlike [[#CISC]] which provides **pieces built with unique lego pieces** that can be used to get CPU to carry out **multiple operation** to **complete a particular task**. Thus, RISC has fewer possible Instruction
 - Doesn't perform any [[Operation]] directly on [[Main Memory]]
@@ -56,17 +59,22 @@ References:
 
 ## CISC
 ---
+
+![[isa.svg|500]]
+
 - Stands for **Complex Instruction Set Computer**
 - [[Instruction]] in CSIC is like **pieces built with unique lego pieces** that can be used to get [[CPU]] to carry out **multiple operation** to **complete a particular task**. Unlike [[#CISC]] which only provides **unique lego pieces** that can be used to get CPU to carry out one operation. Thus, RISC has fewer possible Instruction
 
->[!success] Simpler to use
-> Provide **instructions** that can be used to complete **different common tasks**, so programmers don't need to use multiple instructions to common tasks.
+>[!success] Takes less resources to build applications
+> First, the programmers can code faster with **complex instructions**, because each instruction is able to do **multiple things**, you can think of it as a small function. Second, since one instruction is able to do multiple things, **less instructions are needed**, thus less usage on the [[Main Memory]].
+> 
+> **However**, thanks to [[Language Processors#Compiler]], programmers seldom code in complex instructions anymore. And with modern [[Main Memory]], the space saved with CISC isn't significant anymore.
 
 >[!attention] Requires more transistors
 > The **design** of [[CPU]] needs to be **complex** to achieve complex computation with fewer Instruction, so less [[Transistors (晶体管)]] can be used improve overall computing performance. Thus, more **power-hungry**, and **more wasted power** when **performing simple instruction**.
 
 >[!attention] Harder to decode
-> Each [[Instruction]] is [[Instruction#Variable-length]].
+> [[Instruction#Variable-length Instruction]].
 
 
 >[!example] Common CISC

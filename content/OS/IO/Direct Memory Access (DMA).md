@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-27T14:44:16+08:00
-Last Date: 2024-05-27T19:52:27+08:00
+Last Date: 2024-05-28T16:27:54+08:00
 References: 
 ---
 ## Abstract
@@ -15,8 +15,8 @@ References:
 
 ## Zero Copy
 ---
+![[zero_copy_kafka.svg|500]]
 
-![[kafka_zero_copy.svg]]
 
 - Zero copy means [[CPU]] does not perform the task of **copying data from one memory area to another** or in which **unnecessary data copies are avoided**
 - The above diagram shows data is copied directly from the OS buffer to the NIC Buffer via [[System Call (系统调用)]] like [sendfile(2)](https://man7.org/linux/man-pages/man2/sendfile.2.html). This avoids copying data from the OS buffer the Kafka buffer which is in the [[User Space]], and avoids making another system call to copy the data from Kafka buffer to the socket buffer, then eventually the NIC buffer
