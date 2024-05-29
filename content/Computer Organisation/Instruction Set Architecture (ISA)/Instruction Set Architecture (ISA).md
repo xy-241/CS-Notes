@@ -7,7 +7,7 @@ tags:
   - computer_organisation
   - bash
 Creation Date: 2023-10-04T17:30:24+08:00
-Last Date: 2024-05-28T17:16:10+08:00
+Last Date: 2024-05-29T17:08:53+08:00
 References: 
 ---
 ## Abstract
@@ -19,7 +19,10 @@ References:
 > 
 > Think of the **CPU implementation** as the **logic inside a function**, and the **ISA** specifies the **inputs and outputs** of the function.
 
-
+>[!important]
+> There are two types of ISA, [[#RISC]] and [[#CISC]]. Both don't decide the performance of [[CPU]]. [[CPU Cache]] and [[Branch Prediction]] are two main factors that determine the CPU performance.
+> 
+> "**What limit's computer performance is predictability**" - [Jim Keller](https://www.youtube.com/watch?v=yTMRGERZrQE)
 
 ## RISC
 ---
@@ -30,14 +33,17 @@ References:
 - [[Instruction]] in RISC is like all the **unique lego pieces** that can be used to get [[CPU]] to carry out one operation. Unlike [[#CISC]] which provides **pieces built with unique lego pieces** that can be used to get CPU to carry out **multiple operation** to **complete a particular task**. Thus, RISC has fewer possible Instruction
 - Doesn't perform any [[Operation]] directly on [[Main Memory]]
 
->[!success] Easier to Decode
->Each [[Instruction]] is fixed-sized.
+>[!success] Simpler decoder
+>[[Instruction#Fixed-length Instruction]]. For [ARM](https://en.wikipedia.org/wiki/ARM_architecture_family), all the instructions have a length of **4 bytes**. So the decoder know there is a new instruction after every 4 bytes, no extra logic is needed to determine if it is processing a new instruction.
+
+
+
+>[!attention] Tedious
+> More complicated tasks require programmers to use more instructions to achieve. However, with modern [[Language Processors#Compiler]], programmers code in high-level languages like C, this isn't an issue anymore.
 
 >[!success] Power-Efficient
 > Needs fewer [[Transistors (晶体管)]] to perform simple task.
 
->[!attention] Tedious
-> More complicated tasks require programmers to use more instructions to achieve.
 
 >[!example] Common RISC
 > **aarch64 / arm64** 
@@ -70,12 +76,13 @@ References:
 > 
 > **However**, thanks to [[Language Processors#Compiler]], programmers seldom code in complex instructions anymore. And with modern [[Main Memory]], the space saved with CISC isn't significant anymore.
 
+
+
+>[!attention] More complex decoder
+> [[Instruction#Variable-length Instruction]]. For [x86](https://en.wikipedia.org/wiki/X86_instruction_listings), the length of instructions range from **1-15 bytes**. So the decoder needs extra logic to determine if it is processing a new instruction.
+
 >[!attention] Requires more transistors
 > The **design** of [[CPU]] needs to be **complex** to achieve complex computation with fewer Instruction, so less [[Transistors (晶体管)]] can be used improve overall computing performance. Thus, more **power-hungry**, and **more wasted power** when **performing simple instruction**.
-
->[!attention] Harder to decode
-> [[Instruction#Variable-length Instruction]].
-
 
 >[!example] Common CISC
 > **X86** 
@@ -130,3 +137,4 @@ References:
 ## References
 ---
 - [Instruction Set Architectures](https://youtu.be/1KTW32xSs_k)
+- [ARM vs x86: 冷飯重炒的假議題 | RISC vs CISC分析 - YouTube](https://www.youtube.com/watch?v=iibDpt5f3T4)
