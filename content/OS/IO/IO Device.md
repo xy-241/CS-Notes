@@ -9,7 +9,7 @@ tags:
   - java
   - cpp
 Creation Date: 2023-07-14T20:53:45+08:00
-Last Date: 2024-05-27T19:41:45+08:00
+Last Date: 2024-05-29T21:52:04+08:00
 References: 
 ---
 ## Abstract
@@ -17,14 +17,14 @@ References:
 * Controlled by [[Device Controller]]
 * Examples are like keyboard and monitor 
 
->[!info]- Same IO Device but Different Performance Between CPP and Java
+>[!info]+ Different performance between CPP and Java running on the same IO device
 > `System.out.println()` in Java is much slower than `cout` in CPP. 
 > 
-> `cout` typically performs **buffered output by default**, meaning it accumulates a certain amount of data before actually writing it to the output device. This reduces the number of [[System Call (系统调用)]] made, which can improve performance, especially when outputting a large amount of data.
+> `cout` typically performs **[[Buffer|buffered]] output by default**, meaning it accumulates a certain amount of data before actually writing it to the output device. This reduces the number of [[System Call (系统调用)]] made, which can improve performance, especially when outputting a large amount of data.
 > 
-> `System.out.print` in Java is synchronized for [[Multi-threading#Thread Safety (线程安全)]], which can introduce some overhead
+> `System.out.println()` in Java is synchronised for [[Multi-threading#Thread Safety (线程安全)]], which can introduce some overhead too.
 > 
-> However, buffer takes [[Main Memory]], we need to a fine balance between the **system call we reduce** with buffer and the the **memory usage incurred** by the buffer. 512 [[Computer Data Representation#Byte]] is common buffer size
+> However, buffer takes [[Main Memory]], $512$ [[Computer Data Representation#Byte]] is common buffer size. we need to find a balance between the **system call we reduce** with buffer and the the **memory usage incurred** by the buffer. 
 
 
 ## IO Operation
