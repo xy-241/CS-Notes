@@ -11,6 +11,8 @@ References:
 sr-due: 2024-03-01
 sr-interval: 8
 sr-ease: 267
+aliases:
+  - ../../OS/Interrupts-(中断)/Interrupts-(中断)
 ---
 ## Interrupt
 ---

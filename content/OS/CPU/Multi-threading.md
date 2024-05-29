@@ -37,6 +37,6 @@ References:
 
 ## Thread Safety (线程安全)
 ---
-- A piece of code that functions correctly when there is **simultaneous execution** of **multiple [[Thread]]**, adn all of them accessing the **same shared resource** 
-- Free of [[Race Condition (竞态条件)]] and [[Deadlock (死锁)]] etc
+- A piece of code that functions correctly when there is **simultaneous execution** of **multiple [[Thread]]** which are accessing the **same shared resource** 
+- Thread safe also means the program is free of [[Race Condition (竞态条件)]] and [[Deadlock (死锁)]] etc
 

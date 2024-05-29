@@ -12,6 +12,8 @@ description: Discusses the concept of asynchronous and synchronous sequential ci
 sr-due: 2024-03-13
 sr-interval: 21
 sr-ease: 236
+aliases:
+  - ../../Computer-Organisation/Circuits/Sequential-Circuits/Synchronous-Sequential-Circuit
 ---
 ## Abstract
 ---

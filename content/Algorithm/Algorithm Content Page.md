@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-03-27, 10:36
-Last Date: 2024-03-31T18:17:03+08:00
+Last Date: 2024-05-29T22:10:28+08:00
 References: 
 draft: 
 description: 
@@ -37,13 +37,14 @@ description:
 
 ## Optimisation Algorithms
 ---
-5 items
+6 items
 
 - [ ] [[Combinatorial Optimisation]]
 - [ ] [[Memoization]]
 - [ ] [[Dynamic Programming]]
 - [ ] [[Greedy Algorithm]]
 - [ ] [[Dijkstra's Algorithm]]
+- [ ] [[Kadane's algorithm]]
 
 
 ## WIP
