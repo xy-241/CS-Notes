@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-19T16:36:00
-Last Date: 2024-05-14T22:37:26
-References:
+Last Date: 2024-05-30T20:12:55+08:00
+References: 
 ---
 ## Abstract
 ---
@@ -18,6 +18,8 @@ References:
 >[!success] 
 > Optimised for computation that requires **sequential execution**(One [[Instruction]] after another [[Instruction]]), [[Pipeline Branching]] and logic.
 
+>[!tip] Understand the Intel/AMD CPU naming
+> This [video](https://youtu.be/EVMLQV9tH6A?si=lqBgxcYwvPYD5BUx) explains the naming mechanism of Intel/AMD CPU pretty well.
 
 ## CPU Core
 ---
@@ -48,7 +50,7 @@ References:
 > 
 > However, if one set of the fetch and decode is **not smooth** in the cases like [[Pipeline Flush]], the another set of fetch and decode can **keep the ALU busy**, thus **improving performance**.
 > 
-> The rule of thumb is that every CPU [[CPU#CPU Core]] that supports hyperthreading has roughly an **additional $0.25$ CPU core performance**.
+> The rule of thumb is that every [[CPU#CPU Core]] that supports hyperthreading has roughly an **additional $0.25$ CPU core performance**.
 
 
 
