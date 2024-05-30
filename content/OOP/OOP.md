@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-09-14T14:01:42+08:00
-Last Date: 2024-05-05T01:18:48+08:00
+Last Date: 2024-05-30T20:46:29+08:00
 References: 
 ---
 ## Abstract
@@ -20,7 +20,7 @@ References:
 
 ## OOP Class
 ---
-- An [[Abstraction]] over a group of similar items that share the same properties and actions
+- An [[Abstraction]] over a group of similar items that share the **same properties** and **actions**
 
 ### Inner Class
 - An [[#OOP Class]] inside an OOP Class
