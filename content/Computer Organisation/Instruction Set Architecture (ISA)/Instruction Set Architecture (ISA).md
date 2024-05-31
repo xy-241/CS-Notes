@@ -7,7 +7,7 @@ tags:
   - computer_organisation
   - bash
 Creation Date: 2023-10-04T17:30:24+08:00
-Last Date: 2024-05-29T17:08:53+08:00
+Last Date: 2024-05-31T16:54:55+08:00
 References: 
 ---
 ## Abstract
@@ -22,7 +22,7 @@ References:
 >[!important]
 > There are two types of ISA, [[#RISC]] and [[#CISC]]. Both don't decide the performance of [[CPU]]. [[CPU Cache]] and [[Branch Prediction]] are two main factors that determine the CPU performance.
 > 
-> "**What limit's computer performance is predictability**" - [Jim Keller](https://www.youtube.com/watch?v=yTMRGERZrQE)
+> "**What limits computer performance is predictability**" - [Jim Keller](https://www.youtube.com/watch?v=yTMRGERZrQE)
 
 ## RISC
 ---
@@ -39,7 +39,7 @@ References:
 
 
 >[!attention] Tedious
-> More complicated tasks require programmers to use more instructions to achieve. However, with modern [[Language Processors#Compiler]], programmers code in high-level languages like C, this isn't an issue anymore.
+> More complicated tasks require programmers to use more instructions to achieve. However, with modern [[Language Processors#Compiler]], programmers code in high-level languages like C, this **isn't an issue anymore**.
 
 >[!success] Power-Efficient
 > Needs fewer [[Transistors (晶体管)]] to perform simple task.
@@ -69,7 +69,7 @@ References:
 ![[isa.svg|500]]
 
 - Stands for **Complex Instruction Set Computer**
-- [[Instruction]] in CSIC is like **pieces built with unique lego pieces** that can be used to get [[CPU]] to carry out **multiple operation** to **complete a particular task**. Unlike [[#CISC]] which only provides **unique lego pieces** that can be used to get CPU to carry out one operation. Thus, RISC has fewer possible Instruction
+- [[Instruction]] in CSIC is like **pieces built with unique lego pieces** that can be used to get [[CPU]] to carry out **multiple operation** in **one single instruction** to **complete a particular task**. Unlike [[#RISC]] which only provides **unique lego pieces** that can be used to get CPU to carry out one operation at a time. Thus, RISC has fewer possible Instruction
 
 >[!success] Takes less resources to build applications
 > First, the programmers can code faster with **complex instructions**, because each instruction is able to do **multiple things**, you can think of it as a small function. Second, since one instruction is able to do multiple things, **less instructions are needed**, thus less usage on the [[Main Memory]].
@@ -77,9 +77,8 @@ References:
 > **However**, thanks to [[Language Processors#Compiler]], programmers seldom code in complex instructions anymore. And with modern [[Main Memory]], the space saved with CISC isn't significant anymore.
 
 
-
 >[!attention] More complex decoder
-> [[Instruction#Variable-length Instruction]]. For [x86](https://en.wikipedia.org/wiki/X86_instruction_listings), the length of instructions range from **1-15 bytes**. So the decoder needs extra logic to determine if it is processing a new instruction.
+> [[Instruction#Variable-length Instruction]]. For [x86](https://en.wikipedia.org/wiki/X86_instruction_listings), the length of instructions range from **1-15 bytes**. So the decoder needs extra logic to determine if it is processing a new instruction. However, we can make use of [micro-op](https://miro.medium.com/v2/1*titoeiXLVZ-jBgaktnxJ2w.png) to handle this.
 
 >[!attention] Requires more transistors
 > The **design** of [[CPU]] needs to be **complex** to achieve complex computation with fewer Instruction, so less [[Transistors (晶体管)]] can be used improve overall computing performance. Thus, more **power-hungry**, and **more wasted power** when **performing simple instruction**.
@@ -138,3 +137,4 @@ References:
 ---
 - [Instruction Set Architectures](https://youtu.be/1KTW32xSs_k)
 - [ARM vs x86: 冷飯重炒的假議題 | RISC vs CISC分析 - YouTube](https://www.youtube.com/watch?v=iibDpt5f3T4)
+- [What the Heck is a Micro-Operation? | by Erik Engheim | Medium](https://erik-engheim.medium.com/what-the-heck-is-a-micro-operation-e991f76209e)

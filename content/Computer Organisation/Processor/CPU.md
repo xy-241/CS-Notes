@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-19T16:36:00
-Last Date: 2024-05-30T20:12:55+08:00
+Last Date: 2024-05-31T16:03:37+08:00
 References: 
 ---
 ## Abstract
@@ -21,21 +21,22 @@ References:
 >[!tip] Understand the Intel/AMD CPU naming
 > This [video](https://youtu.be/EVMLQV9tH6A?si=lqBgxcYwvPYD5BUx) explains the naming mechanism of Intel/AMD CPU pretty well.
 
-## CPU Core
----
+### CPU Core
 - One single unit of [[CPU]] that executes [[Instruction]] independently from other **CPU cores**
 
-## 32-bit CPU
----
+### 32-bit CPU
 - [[Register#Register Width]] that are **32** [[Computer Data Representation#Bit]] each
 - Because 32bits, so maximum addressable [[Main Memory]] is 4GB. The [[Register]] can't hold a [[Memory Address]] that is greater than 4GB
 - The [[Computer Data Representation#Word]] size is usually **4** [[Computer Data Representation#Byte]]
 
-## 64-bit CPU
----
+### 64-bit CPU
 - [[Register#Register Width]] that are **64** [[Computer Data Representation#Bit]] each
 - Doesn't have the [[Main Memory]] 4GB limitation in [[#32-bit CPU]]
 - The [[Computer Data Representation#Word]] size is usually **8** [[Computer Data Representation#Byte]]
+
+### CPU Scratch Area
+- A small amount of high-speed memory that is used to store temporary data in the [[CPU]]. [[Register]] and [[CPU Cache]] are considered as CPU Scratch Area 
+
 
 ## Hyperthreading
 ---
@@ -52,12 +53,6 @@ References:
 > 
 > The rule of thumb is that every [[CPU#CPU Core]] that supports hyperthreading has roughly an **additional $0.25$ CPU core performance**.
 
-
-
-
-## CPU Scratch Area
----
-- A small amount of high-speed memory that is used to store temporary data
 
 
 
