@@ -39,7 +39,7 @@ description: Explore a Greedy Algorithm paired with a clever use of Prefix Sum t
 - Then for each start-end pair, we just need to **obtain the sum of the cost between the start location and the end location**
 </br>
 
-- If we observe carefully, obtaining the sum of cost between 2 locations. We can optimise the time complexity with [[Prefix Sum (前缀和)#O(1) Range Sum Query]]!
+- If we observe carefully, obtaining the sum of cost between 2 locations. We can optimise the time complexity with [[Prefix Sum (前缀和)#Range Sum Query]]!
 - But we need to mindful that instead of $Range[i, j] = P[j]- P[i-1]$, we use $Range[i, j] = P[j]- P[i]$, because we start from location $i$, the cost is $0$, we want to know what is the cost of travelling from location $i$ to location $j$, not travelling to $i$ until $j$
 </br>
 
@@ -148,7 +148,7 @@ public class Solution {
 ## Personal Reflection
 ---
 - **Why it takes so long to solve:** I keep getting Timeout Error with just the [[Greedy Algorithm]]. I failed to see that with [[Prefix Sum (前缀和)]], we are able to obtain the cost of travelling from one city to another in constant time
-- **What you could have done better:** Practice more on prefix sum, and be dead comfortable with [[Prefix Sum (前缀和)#O(1) Range Sum Query]]
+- **What you could have done better:** Practice more on prefix sum, and be dead comfortable with [[Prefix Sum (前缀和)#Range Sum Query]]
 - **What you missed:** Prefix Sum
 - **Ideas you've seen before:** Greedy and prefix sum
 - **Ideas you found here that could help you later:** Prefix sum's range sum query
