@@ -7,14 +7,14 @@ tags:
   - cloudflare
   - security
 Creation Date: 2024-02-29, 22:22
-Last Date: 2024-04-08T17:51:25+08:00
+Last Date: 2024-05-30T10:32:23+08:00
 References: 
 draft: 
 description: 
 ---
 ## Abstract
 ---
-- A Cloudflare security service that allows you to set up [policies and rules](https://developers.cloudflare.com/cloudflare-one/policies/access/) that let you define who can or cannot access your applications based on [user Identity](https://developers.cloudflare.com/cloudflare-one/identity/), **network attributes**, and **device posture**
+- A Cloudflare security service that allows you to set up [policies and rules](https://developers.cloudflare.com/cloudflare-one/policies/access/) that let you define who can or cannot access your applications based on [user Identity](https://developers.cloudflare.com/cloudflare-one/identity/), **network attributes**, and [device posture](https://developers.cloudflare.com/cloudflare-one/identity/devices/)
 - You can access the dashboard at [Cloudflare Access](https://one.dash.cloudflare.com/:account/l)
 
 >[!tip] Access protected website via a temporary token 
