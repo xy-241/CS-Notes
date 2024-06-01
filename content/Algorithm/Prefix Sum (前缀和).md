@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-08T19:28:00
-Last Date: 2024-05-31T14:37:50+08:00
+Last Date: 2024-06-01T13:20:47+08:00
 ---
 ## Abstract
 ---
@@ -15,7 +15,7 @@ Last Date: 2024-05-31T14:37:50+08:00
 
 - Prefix sum is an [[Array]] that has the **same length** as a **given array**
 - The **value at each index** is the **sum** of values from the **first element of the given array** to the **element at the current index**
-- Calculates the **sum of a particular range** of a **given array** efficiently by leveraging on [[Memoization]]
+- [[#Range Sum Query]] enables us to calculates the **sum of a particular range** of a **given array** efficiently by leveraging on [[Memoization]]
 
 ## Range Sum Query
 ---
@@ -28,12 +28,12 @@ Last Date: 2024-05-31T14:37:50+08:00
 
 
 >[!tip]
->$Range[0, j]$ is **same** as $P_j$. So we can just retrieve the value from the prefix sum array with index $j$, instead of using the formula stated in the diagram above, which requires us to have a placeholder at index $0$.
+>$Range[0, j]$ is **same** as $P_j$. So we can just retrieve the value from the **prefix sum array** with index $j$, instead of using the formula stated in the diagram above, which requires us to have a placeholder at index $0$.
 
 
 
 ## Practice Questions
 ---
-- [ ] [[Product of Array Except Self]]
+- [ ] [[Leetcode - Product of Array Except Self]]
 - [ ] [[Romantic Glasses]]
 - [ ] [[Closest Cities]]
