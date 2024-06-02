@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-19T16:36:00
-Last Date: 2024-05-31T16:03:37+08:00
+Last Date: 2024-06-02T17:36:01+08:00
 References: 
 ---
 ## Abstract
@@ -16,7 +16,7 @@ References:
 - Start in [[Privilege Level#Kernel Mode |Kernel Mode]]. Before executing a program, the kernel initiates the switch to [[Privilege Level#User Mode |User Mode]]
 
 >[!success] 
-> Optimised for computation that requires **sequential execution**(One [[Instruction]] after another [[Instruction]]), [[Pipeline Branching]] and logic.
+> Optimised for computation that requires **sequential execution**(one [[Instruction]] can only execute when another [[Instruction]] finishes), [[Pipeline Branching]] and logic.
 
 >[!tip] Understand the Intel/AMD CPU naming
 > This [video](https://youtu.be/EVMLQV9tH6A?si=lqBgxcYwvPYD5BUx) explains the naming mechanism of Intel/AMD CPU pretty well.
@@ -26,12 +26,12 @@ References:
 
 ### 32-bit CPU
 - [[Register#Register Width]] that are **32** [[Computer Data Representation#Bit]] each
-- Because 32bits, so maximum addressable [[Main Memory]] is 4GB. The [[Register]] can't hold a [[Memory Address]] that is greater than 4GB
+- The size of [[Memory Address]] is limited to 4GB. Because 32bits [[Register]] can only hold **4GB** different unique memory address, $2^{32} = 4294967296 =  4 * 1024 * 1024 * 1024$
 - The [[Computer Data Representation#Word]] size is usually **4** [[Computer Data Representation#Byte]]
 
 ### 64-bit CPU
 - [[Register#Register Width]] that are **64** [[Computer Data Representation#Bit]] each
-- Doesn't have the [[Main Memory]] 4GB limitation in [[#32-bit CPU]]
+- Doesn't have the 4GB [[Main Memory]] limitation in [[#32-bit CPU]]
 - The [[Computer Data Representation#Word]] size is usually **8** [[Computer Data Representation#Byte]]
 
 ### CPU Scratch Area

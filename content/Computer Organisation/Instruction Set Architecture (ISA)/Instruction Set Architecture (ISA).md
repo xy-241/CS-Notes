@@ -7,12 +7,12 @@ tags:
   - computer_organisation
   - bash
 Creation Date: 2023-10-04T17:30:24+08:00
-Last Date: 2024-05-31T16:54:55+08:00
+Last Date: 2024-06-02T17:45:12+08:00
 References: 
 ---
 ## Abstract
 ---
-- A set of [[Instruction]] which contains [[Instruction#Opcode]] & **parameters** that tells [[CPU]] what to do in the form of **0s and 1s**. You can check the ISA of a machine using `uname -mp`
+- **A set of [[Instruction]]** which contains [[Instruction#Opcode]] & **parameters** that tells [[CPU]] what to do in the form of **0s and 1s**. You can check the ISA of a machine using `uname -mp`
 
 >[!success] Portability
 > The **exact hardware implementation** of **different CPU** can **vary** but app written for a particular ISA like X86 can be run on all the CPU that implements the X86. The ISA functions like a **standard** that different hardware implementations need to follow, so software has a **common interface** to work with different CPUs.
