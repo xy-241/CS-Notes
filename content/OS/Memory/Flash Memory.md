@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-02-28, 19:49
-Last Date: 2024-05-20T21:55:56+08:00
+Last Date: 2024-06-03T16:25:26+08:00
 References: 
 draft: 
 description: 
@@ -20,4 +20,3 @@ description:
 >- Memory cards (SD cards, microSD, etc.)
 >- Solid-state drives (SSDs) in computers
 >- Embedded in smartphones, tablets, cameras
->- Storing firmware on devices
