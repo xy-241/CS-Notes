@@ -7,7 +7,7 @@ tags:
   - networking
   - bash
 Creation Date: 2023-10-03T11:14:44
-Last Date: 2024-04-20T23:49:14+08:00
+Last Date: 2024-06-03T19:02:36+08:00
 ---
 ## Abstract
 ---
@@ -48,15 +48,17 @@ Last Date: 2024-04-20T23:49:14+08:00
 ---
 - [[IP Address]] that has special meanings or purposes otherwise just locating a [[Host]] on the [[Computer Network]]
 
-### 0.0.0.0
-- **Unspecified Address**
-- Applications listen on address ``0.0.0.0``,  indicates that they are willing to accept incoming network connections from any available [[Network Interface]] on the [[Host]]
+### Unspecified Address
+- The Unspecified Address is `0.0.0.0`
+- Applications listen on address `0.0.0.0`,  indicates that they are willing to accept incoming network connections from any available [[Network Interface]] on the [[Host]]
 - Useful when you want the application to be accessible from multiple interfaces or [[IP Address]]
 
-### 255.255.255.255
-- **Limited Broadcast Address**
-- This address sends a broadcast packet to all devices on the [[Computer Network#Local Area Network (LAN)]]. It's restricted to the LAN and won't be forwarded by [[Network Router]]
+### IP Broadcast Address
+- The IP Broadcast Address is `255.255.255.255`, all data with this address will be sent to all devices on the same [[Computer Network]]. The data won't be forwarded by [[Network Router]]
 - Useful for tasks such as [[DHCP]] where a device needs to obtain an [[IP Address]] from a **DHCP server**, and the DHCP server needs to broadcast its availability to all devices on the network
+
+
+
 
 
 ## Useful CLI Tool
