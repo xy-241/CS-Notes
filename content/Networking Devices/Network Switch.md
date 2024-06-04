@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-07-13T22:32:55+08:00
-Last Date: 2024-06-01T19:20:46+08:00
+Last Date: 2024-06-04T16:48:56+08:00
 References: 
 ---
 ## Abstract
 ---
 ![[network_switch.svg]]
-- Serves as a **central device** that **bridges up** all the [[Host]] on a [[Computer Network#Local Area Network (LAN)]]
-- Network switch can **only read the [[MAC Address]] information** from the data it receives, the **other information** is just a **stream of meaningless zeros & ones** to the network switch
+- Serves as a **central device** that **bridges up** all the [[Host]] on a [[Computer Network#Local Area Network (LAN)]], forwards **data packets** among the hosts with the use of [[MAC Address]]
+- Network switch can **only read the MAC Address information** from the data it receives, the **other information** is just a **stream of meaningless zeros & ones** to the network switch
 - The network switch maintains a **MAC Address Table**, so it knows **which switch port** it should **forward the data to**, **avoids** forwarding the data to **all the switch ports** 
 
 >[!important]

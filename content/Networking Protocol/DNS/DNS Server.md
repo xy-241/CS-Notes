@@ -7,12 +7,13 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2023-12-12T11:49:00+08:00
-Last Date: 2024-05-06T12:39:48+08:00
+Last Date: 2024-06-04T16:39:56+08:00
 References: 
 ---
 ## Abstract
 ---
 - [[Host#Server]] that stores [[DNS Record]]
+- You can use [Dig GUI](https://www.diggui.com) to visualise the DNS queries made to different DNS Server
 
 ## DNS Resolver
 ---
