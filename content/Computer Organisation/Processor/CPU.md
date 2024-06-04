@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-11-19T16:36:00
-Last Date: 2024-06-02T17:36:01+08:00
+Last Date: 2024-06-04T11:40:13+08:00
 References: 
 ---
 ## Abstract
@@ -18,8 +18,14 @@ References:
 >[!success] 
 > Optimised for computation that requires **sequential execution**(one [[Instruction]] can only execute when another [[Instruction]] finishes), [[Pipeline Branching]] and logic.
 
->[!tip] Understand the Intel/AMD CPU naming
+>[!info] Understand the Intel/AMD CPU naming
 > This [video](https://youtu.be/EVMLQV9tH6A?si=lqBgxcYwvPYD5BUx) explains the naming mechanism of Intel/AMD CPU pretty well.
+
+>[!info] Chip Binning
+> Chip manufacturing **isn't perfect**. A CPU manufactured with $10$ [[#CPU Core|CPU cores]] may only have 8 that are working. Chip Binning is the process of selling **chips with detects** as a **lower-tier CPUs** at a **lower cost** by **disabling the areas with defects**. This massively **improves** the **yield of a wafer** because it means that more dies can be utilised and sold.
+> 
+> The M4 chip comes with iPad Pro 2024, the more expensive version includes **one additional performance CPU** core and **8GB more [[Main Memory#DRAM]]**.
+
 
 ### CPU Core
 - One single unit of [[CPU]] that executes [[Instruction]] independently from other **CPU cores**
@@ -59,3 +65,4 @@ References:
 ## References
 ---
 - [What is Hyperthreading? - YouTube](https://www.youtube.com/watch?v=mSZpDF-zUoI)
+- [Explainer: What is Chip Binning? | TechSpot](https://www.techspot.com/article/2039-chip-binning/)
