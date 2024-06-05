@@ -70,7 +70,7 @@ References:
 
 
 >[!attention]+ Program exits before other goroutines finish!
-> We need to introduce [[Synchronization (同步)]] mechanism here to ensure the program only exists when all other goroutines finish running. Uncomment the code blocks in the editor above to add in the synchronization mechanism.
+> We need to introduce [[Synchronisation (同步)]] mechanism here to ensure the program only exists when all other goroutines finish running. Uncomment the code blocks in the editor above to add in the synchronization mechanism.
 > 
 > `sync.WaitGroup` - a Synchronization mechanism used to coordinate the **completion of multiple goroutines**. It acts like a counter that multiple goroutines can interact with.
 > 

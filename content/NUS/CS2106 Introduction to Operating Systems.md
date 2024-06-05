@@ -50,14 +50,14 @@ title: cs2106 nus notes
 
 ## Synchronisation
 ---
-- [[Synchronization (同步)]]
+- [[Synchronisation (同步)]]
 - [[Race Condition (竞态条件)]]
 - [[Deadlock (死锁)]]
 - [[Mutex (互斥体)]]
 - [[Barrier (屏障)]]
 - [[Semaphore (信号量)]]
 - [[Condition Variable (条件变量)]]
-- [[Spinlock (自旋锁)]]
+- [[Busy Waiting#Spinlock]]
 
 
 ## Memory Abstraction

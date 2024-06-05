@@ -13,7 +13,7 @@ References:
 ## Abstract
 ---
 - Stands for **Mutual Exclusion**
-- A [[Synchronization (同步)]] mechanism that controls **access** to **shared resources**, such as variables, data structures, or critical sections of code, in a systems that use [[Concurrency (并发)]]
+- A [[Synchronisation (同步)]] mechanism that controls **access** to **shared resources**, such as variables, data structures, or critical sections of code, in a systems that use [[Concurrency (并发)]]
 - Powered by [[Atomic Instruction]]
 
 >[!success] Avoid corrupted data

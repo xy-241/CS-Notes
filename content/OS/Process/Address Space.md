@@ -99,7 +99,7 @@ description: Stack (automatic memory management for function variables), Heap (d
 
 >[!success] Data management in Stack Segment is more efficient than Heap Segment
 >1. Stack memory is allocated and deallocated in a **Last In, First Out (LIFO) manner**, making it faster than heap memory. This is because all it needs to do is move the [[Register#Stack Pointer]] up or down, while heap memory requires more complex memory management
->2. No overhead of complex [[Synchronization (同步)]], unlike data inside heap segment, data inside the stack segment is dedicated to that particular [[Thread]]. Thus, manipulation of data inside the stack segment doesn't require the complex synchronisation 
+>2. No overhead of complex [[Synchronisation (同步)]], unlike data inside heap segment, data inside the stack segment is dedicated to that particular [[Thread]]. Thus, manipulation of data inside the stack segment doesn't require the complex synchronisation 
 
 
 >[!caution] Attention

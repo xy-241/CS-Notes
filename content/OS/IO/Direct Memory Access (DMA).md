@@ -6,15 +6,13 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-27T14:44:16+08:00
-Last Date: 2024-05-30T19:57:23+08:00
+Last Date: 2024-06-05T13:00:43+08:00
 References: 
 ---
 ## Abstract
 ---
-* Chip that control the flow of bits between [[Main Memory]] and some [[Device Controller]] without constant [[CPU]] intervention, solves [[#Busy Waiting]]
+* Chip that control the flow of bits between [[Main Memory]] and some [[Device Controller]] without constant [[CPU]] intervention, avoids the potential **performance hit** from [[Busy Waiting]]
 
-### Busy Waiting
-* Has a big disadvantage of involving [[CPU]] keep polling until [[Device Controller]] retrieves data from [[IO Device]]
 
 ## Zero Copy
 ---

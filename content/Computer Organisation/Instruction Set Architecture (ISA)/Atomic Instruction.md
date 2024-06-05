@@ -25,7 +25,7 @@ References:
 ## Examples
 ---
 ### Acquiring and Releasing Spinlock
-- Atomic instructions are also used to acquire and release [[Spinlock (自旋锁)]], which are locks that prevent multiple threads from accessing a shared resource simultaneously.
+- Atomic instructions are also used to acquire and release [[Busy Waiting#Spinlock]], which are locks that prevent multiple threads from accessing a shared resource simultaneously.
 ```c
 // XV6-RISCV Kernel Codes, spinlock.c
 

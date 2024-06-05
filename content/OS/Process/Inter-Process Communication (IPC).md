@@ -16,6 +16,6 @@ References:
 </br>
 
 - There are many ways to implement IPC, but there are 2 categories. Message Passing - [[Pipe (管道)]], [[Message Queue (消息队列)]], [[Interrupts (中断)#Upcall]], [[#Socket]] and [[Shared Memory]]
-- We also [[Synchronization (同步)]] methods utilised like [[Mutex (互斥体)]] and [[Semaphore (信号量)]] to ensure no [[Race Condition (竞态条件)]] from happening
+- We also [[Synchronisation (同步)]] methods utilised like [[Mutex (互斥体)]] and [[Semaphore (信号量)]] to ensure no [[Race Condition (竞态条件)]] from happening
 
 
