@@ -56,4 +56,4 @@ References:
 > We can have different datatypes in the same array!
 
 >[!caution]
-> Similar downside mentioned in [[#Java Generics]] + no [[Type Safety]].
+> Similar downside mentioned in [[#Java Generics]] + no [[Datatype#Type Safety]].
