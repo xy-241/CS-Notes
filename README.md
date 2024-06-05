@@ -8,7 +8,29 @@
 </p>
 
 
+
 <br>
+
+> Click &#9733; if you like the project. I really appreciate it 🙏🏻!
+
+
+## Why these CS Notes deserve your attention?
+### Second Brain Structure
+Each note is **interconnected** with other notes, j**ust like how our neurons** are interconnected with each other. This allows us to make **more touchpoints** to the concepts, having a **deeper** and **clearer understanding**. You can easily **refer to other related notes** on this **same page** or view the **big picture with the Graph view**!
+<div align="center">
+  <img align="center" width="500" src="https://github.com/xy-241/CS-Notes/assets/47915643/70189f8f-c994-49e4-aaec-5feb58bc414e" />
+</div>
+
+### Hand-crafted Diagrams
+
+I was unable to find **high-quality visuals** on the internet to better **illustrate** some of the **concepts**, so I created visuals for my notes. 😃.
+<div align="center">
+<img align="center" width="500" src="https://github.com/xy-241/CS-Notes/assets/47915643/dedb7826-f672-4a16-98a4-729784a2cdf5" />
+</div>
+
+### A Ten-year Project
+I am planning to work on my notes daily for the next **10 years**, building a second brain as I **learn from my mistakes** and **acquire new knowledge**. I have made over **800 commits** to this repository, totaling **150,000 words** over the **past 6 months**.
+
 
 ## 🏭 System Design
 - [Basis](https://notes.yxy.ninja/System-Design/)
