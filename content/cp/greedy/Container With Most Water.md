@@ -21,7 +21,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2022-05-09T13:29:00
-Last Date: 2024-01-12T12:20:35+08:00
+Last Date: 2024-06-05T08:30:39+08:00
 tags:
   - cp
 draft: 
@@ -30,9 +30,9 @@ draft:
 ## Approach
 ---
 ### Consensus
-- **Area:** product of the height and width
 - **Height:** shorter side of the left right side
 - **Width:** distance of from left side to the right side
+- **Area:** product of the height and width
 
 ### Main Idea
 - We start from the most left hand side and most right side, so we have the maximum possible width 
@@ -47,7 +47,9 @@ draft:
 	3. Both left and right are the same: replace left side with height that is at the right side of the current left & replace right side with heigh that is at the left side of the current right
 - `res` is used to keep track of the biggest volume at all potential situations
 - You may question if this works for the following situation:
+
 ![[Container With Most Water.excalidraw.svg]]
+
 - It seems like instead of replacing the left height `3`, it makes more sense to move the right height `4` to get `5` to have an overall higher volume
 - The answer NO, remember the height is decided by the shorter side, so if we replace `4` with `5`, the height is still unchanged, it is still `3`, and width is decreased by one
 - So the conclusion is that replacing the higher side will **ALWAYS** result in a smaller overall volume!
@@ -72,29 +74,30 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 ### 4th Attempt (Java)
 ```java
 class Solution {
-    public int maxArea(int[] height) {
-        int res=0;
-        int left=0;
-        int right=height.length-1;
+ public
+  int maxArea(int[] height) {
+    int res = 0;
+    int left = 0;
+    int right = height.length - 1;
 
-        while (left < right) {
-            int leftHeight = height[left];
-            int rightHeight = height[right];
-            int width = right - left;
+    while (left < right) {
+      int leftHeight = height[left];
+      int rightHeight = height[right];
+      int width = right - left;
 
-            int currArea = Math.min(leftHeight, rightHeight) * width;
-            if (currArea > res) res = currArea;
+      int currArea = Math.min(leftHeight, rightHeight) * width;
+      if (currArea > res) res = currArea;
 
-            if (leftHeight < rightHeight) left++;
-            if (leftHeight == rightHeight) {
-                left++;
-                right--;
-            } 
-            if (leftHeight > rightHeight) right--;
-        }
-
-        return res;
+      if (leftHeight < rightHeight) left++;
+      if (leftHeight == rightHeight) {
+        left++;
+        right--;
+      }
+      if (leftHeight > rightHeight) right--;
     }
+
+    return res;
+  }
 }
 ```
 
