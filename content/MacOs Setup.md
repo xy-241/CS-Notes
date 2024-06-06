@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-05-09T12:33:42+08:00
+Last Date: 2024-06-06T12:31:45+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -198,6 +198,8 @@ ssid=`networksetup -getairportnetwork en0 | awk -F": " '{print $2}'`
 - [ ] [[Dynamic Port Forwarding#sshuttle]] - VPN powered by [[SSH]]
 ## Hardware Tools
 ---
+- [ ] [GPU & Accelerator process monitoring](https://github.com/Syllo/nvtop)
+- [ ] [Perf monitoring CLI tool for Apple Silicon](https://tlkh.github.io/asitop/)
 - [ ] [rpi-imager](https://github.com/raspberrypi/rpi-imager)
 - [ ] [arduino ide](https://github.com/arduino/arduino-ide)
 - [ ] `brew install --cask logisim-evolution` - circuit design software
