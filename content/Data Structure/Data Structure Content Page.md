@@ -51,6 +51,6 @@ description:
 
 - [ ] [[Deque]]
 - [ ] [[Graph]]
-- [ ] [[Queue (FIFO)]]
+- [ ] [[Queue]]
 - [ ] [[Stack]]
 - [ ] [[Union Find]]

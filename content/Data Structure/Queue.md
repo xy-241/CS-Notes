@@ -6,15 +6,13 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-30T12:54:00
-Last Date: 2024-03-12T12:17:39+08:00
+Last Date: 2024-06-06T23:18:27+08:00
 References: 
 ---
 ## Abstract
 ---
 ![[queue.png|500]]
-- [[Data Structure#Linear]]
-- Aka [[Array]]/[[Linked List]] with limitations
-- Can be used in an online ordering system
+- [[Data Structure#Linear]], basically [[Array]] or [[Linked List]] with **limitation** that we can only **push new element in** from the **back** and **remove elements** from the **front**, follow a **first-in, first-out (FIFO)** principle.
 
 
 ### Time Complexity
@@ -38,12 +36,6 @@ References:
 
 - The difference in the 2 implementation is similar to [[Stack#2 implementation comparison| Stack implementation comparison]]
 
-
-## Monotonic Queue
----
-- Implemented with [[Deque]], I am not sure if it can be implemented with [[Queue (FIFO)]]
->[!example] [Sliding Window Maximum](https://leetcode.cn/problems/sliding-window-maximum/)
->- Finding the biggest element in a sliding window
 
 
 

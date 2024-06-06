@@ -35,7 +35,7 @@ References:
 >- [[Array]]
 >- [[Linked List]]
 >- [[Stack]]
->- [[Queue (FIFO)]]
+>- [[Queue]]
 >- [[Hash Map]]
 ### Non-linear
 - 2 types - **Hierarchical Relationship**([[Tree]]) and **Interconnected Relationship** ([[Graph]])

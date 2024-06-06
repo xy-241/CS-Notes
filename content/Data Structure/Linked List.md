@@ -88,7 +88,7 @@ References:
 ---
 ![[singly linked list.png|500]]
 
-- Implement [[Stack]] and [[Queue (FIFO)]], it is $O(1)$ to add/remove node from the **tail of** [[Linked List]], counting in the indexing time
+- Implement [[Stack]] and [[Queue]], it is $O(1)$ to add/remove node from the **tail of** [[Linked List]], counting in the indexing time
 - Used in [[Hash Map]] to implement [[Hash Collision#Separate Chaining]] to handle [[Hash Collision]]
 - Implement [[Graph]], where each node has [[Pointer]] to link up with other nodes
 

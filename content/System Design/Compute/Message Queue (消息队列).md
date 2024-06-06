@@ -14,7 +14,7 @@ draft:
 ---
 ![[message_queue.png|500]]
 
-- A [[Queue (FIFO)]] that decouples [[Compute Server]] into 2 parts - [[#Message Queue Producer]] and [[#Message Queue Consumer]]
+- A [[Queue]] that decouples [[Compute Server]] into 2 parts - [[#Message Queue Producer]] and [[#Message Queue Consumer]]
 - The message queue serves as a buffer and distributes [[#Message Queue Message]]. Thus supporting *asynchronous communication*
 
 ![[message_queue_example.png|500]]

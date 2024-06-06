@@ -78,7 +78,7 @@ References:
 ---
 - Connect the start and end of the [[Array]] to form a loop
 - With taking remainder from ``frontIndex % arrayCapacity``, we are able to implement circular array on an array. Take a look at [Visual](https://www.hello-algo.com/chapter_stack_and_queue/queue/#2) for better understanding
-- Used to implement [[Queue (FIFO)#Implementation|Queue]]
+- Used to implement [[Queue#Implementation|Queue]]
 
 >[!info] Front Index
 > A variable to keep track the index for the start of the circular array.
