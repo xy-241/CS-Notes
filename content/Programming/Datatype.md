@@ -8,7 +8,7 @@ tags:
   - rust
   - java
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-06-04T18:26:44+08:00
+Last Date: 2024-06-07T22:02:47+08:00
 References: 
 ---
 ## Abstract
@@ -40,6 +40,68 @@ References:
 >[!caution] Java Value Comparsion
 > We can't use `==` to compare [[OOP#OOP Object]], because `==` compares the value holding by the variable. However, variables are only holding the [[Memory Address]] to the OOP Object. So if we want to compare the value of OOP Object, we need to use the `equals()` method
 
+
+
+
+
+
+## Type Safety
+---
+- Type safety means ensuring that **operations** are only performed on **variables of compatible data types**, **preventing errors** and **ensuring correct results**
+
+| [[#Statically Typed\|Statically Typed]] | [[#Strongly Typed\|Strongly Typed]] | Meaning                                                            | **Language** |
+| --------------------------------------- | ----------------------------------- | ------------------------------------------------------------------ | ------------ |
+| ❌                                       | ❌                                   | Checking on datatype is at **runtime**, with **loose rules**       | Javascript   |
+| ❌                                       | ✅                                   | Checking on datatype is at **runtime**, with **struct rules**      | Python       |
+| ✅                                       | ❌                                   | Checking on datatype is at **compile time**, with **loose rules**  | [[C]]        |
+| ✅                                       | ✅                                   | Checking on datatype is at **compile time**, with **strict rules** | [[Java]]     |
+- C allows implicit conversions between numeric types and has a `void` pointer type that can point to any data type
+
+```c
+#include <stdio.h>
+int main()
+{
+    printf("Hello, World!");
+    int a = 1;
+    char b = 'a';
+    
+    a+=b;
+    printf("You entered: %d", a);
+}
+```
+
+
+### Statically Typed
+- [[Datatype]] checking is performed at **compile time**
+
+>[!important]
+> The datatype must be known during compilation, either by **explicitly defining** the data type or by **assigning a value** to the variable, which allows the **language to infer the type**.
+> 
+> Use **type inference** only when the assigned value clearly shows its type (e.g., `a := "thisIsStr"`). Otherwise, explicitly declare the type (e.g., `var a := foo()`).
+
+>[!success] Safer codes and more informative coding experience
+> **Errors** related to **type mismatches** are caught before the program runs, offering **early detection** of potential problems.
+> 
+> [[Language Processors#Compiler]] has more information to do more checks on the codes and enforce certain standards. Plus better code completion when coding. Refer to this [video](https://youtu.be/hwyRnHA54lI?si=lrDIYGWl04qfdXdj&t=324) for more more details and example.
+
+### Dynamically Typed
+- [[Datatype]] checking is performed when we are **running the program**
+
+>[!success] Faster coding experience
+> We don't need to think about what datatype each variable has, we can better focus on implementing the logic.
+
+>[!caution] More runtime errors
+> We may run **operation** on variables that have **incompatible datatypes** during runtime, this can be avoided if the languages is [[#Statically Typed]].
+
+### Strongly Typed
+- Strongly typed means the [[Datatype]] checking is **strict**
+- For example, we can't add `int` variable with `string` variable
+
+### Weakly Typed
+- Weakly typed means the [[Datatype]] checking **ISN'T strict**
+- For example, we can add `int` variable with `string` variable in [[Node.js]]
+
+
 ## Struct
 ---
 - Allows us to group a set of data to form our own [[Datatype]]. Refer to [Struct in GO](https://youtu.be/8uiZC0l4Ajw?si=UpYAqgfaw9H8BMxE&t=1867) to see how struct is implemented and used in Go
@@ -58,41 +120,3 @@ References:
 	1. Tuple, basically [[Array]] that contains elements of different [[Datatype]]
 	2. Array, basically Array
 - Refer to [Rust Compound Data Types](https://rust-book.cs.brown.edu/ch03-02-data-types.html#compound-types) for more details
-
-
-
-
-## Type Safety
----
-
-
->[!question] Is there language that is statically type but not strongly typed?
->
->C is statically typed, as the compiler checks types at compile time. However, it's known for its relatively weak type system. It allows implicit conversions between numeric types and has a `void` pointer type that can point to any data type.
-- example below 
-```c
-#include <stdio.h>
-int main()
-{
-    printf("Hello, World!");
-    int a = 1;
-    char b = 'a';
-    
-    a+=b;
-    printf("You entered: %d", a);
-}
-```
-
-### Statically Typed
-- [[Datatype]] checking is performed at compile-time. This means errors related to type mismatches are caught before the program runs, offering early detection of potential problems
-- The datatype must be known during compilation, either by **explicitly defining** the data type or by **assigning a value** to the variable, which allows the **language to infer the type**
-
-
->[!attention]
-> Use **type inference** only when the assigned value clearly shows its type (e.g., `a := "thisIsStr"`). Otherwise, explicitly declare the type (e.g., `var a := foo()`).
-
->[!success] Safer codes and more informative coding experience
-> [[Language Processors#Compiler]] has more information to do more checks on the codes and enforce certain standards. Plus better code completion when coding. Refer to this [video](https://youtu.be/hwyRnHA54lI?si=lrDIYGWl04qfdXdj&t=324) for more more details and example.
-
-### Strongly Typed
-- We can't add 2 variables of the different [[Datatype]] together during runtime, languages like [[Node.js]] aren't strongly typed
