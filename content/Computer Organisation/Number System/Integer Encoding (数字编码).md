@@ -6,14 +6,34 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-08, 21:54
-Last Date: 2024-06-06T19:59:30+08:00
+Last Date: 2024-06-07T21:07:07+08:00
 References: 
 ---
 ## Abstract
 ---
 - There are 3 variants; [[#Sign-and-Magnitude (原码)]], [[#1's Complement (反码)]] and [[#2's Complement (补码)]], computer uses the **2's Complement** to store integer, because it solves the flaws of [[#Sign-and-Magnitude (原码)]] and [[#1's Complement (反码)]]
-- Below is a 4-bits **Integer Encoding** under the 3 variants
-![[integer_encoding.png|400]]
+- Below is a **4-bits** integer encoding under the 3 variants
+
+
+| Decimal | Signed Magnitude | One's Complement | Two's Complement |
+| ------- | ---------------- | ---------------- | ---------------- |
+| $+7$    | $0111$           | $0111$           | $0111$           |
+| $+6$    | $0110$           | $0110$           | $0110$           |
+| $+5$    | $0101$           | $0101$           | $0101$           |
+| $+4$    | $0100$           | $0100$           | $0100$           |
+| $+3$    | $0011$           | $0011$           | $0011$           |
+| $+2$    | $0010$           | $0010$           | $0010$           |
+| $+1$    | $0001$           | $0001$           | $0001$           |
+| $+0$    | $0000$           | $0000$           | $0000$           |
+| $-0$    | $1000$           | $1111$           | $0000$           |
+| $-1$    | $1001$           | $1110$           | $1111$           |
+| $-2$    | $1010$           | $1101$           | $1110$           |
+| $-3$    | $1011$           | $1100$           | $1101$           |
+| $-4$    | $1100$           | $1011$           | $1100$           |
+| $-5$    | $1101$           | $1010$           | $1011$           |
+| $-6$    | $1110$           | $1001$           | $1010$           |
+| $-7$    | $1111$           | $1000$           | $1001$           |
+| $-8$    | -                | -                | $1000$           |
 
 
 ## Sign-and-Magnitude (原码)
