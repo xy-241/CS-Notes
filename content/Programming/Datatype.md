@@ -8,7 +8,7 @@ tags:
   - rust
   - java
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-06-07T22:02:47+08:00
+Last Date: 2024-06-08T21:09:40+08:00
 References: 
 ---
 ## Abstract
@@ -29,16 +29,14 @@ References:
 ### Primitive Datatype
 - Also known as **Built-in Datatype**
 * Great performance since there isn't much abstraction like [[#Custom Datatype]]
-</br>
-
 - In [[Java]], primitive datatypes are [[Immutability]]
 
 ### Custom Datatype
-- In [[Java]], custom datatypes **aren't** [[Immutability]]
-- Examples are [[OOP Class]] and [[#Struct]]
+- In [[Java]], custom datatypes **aren't** [[Immutability|immutable]]
+- Examples are [[OOP#OOP Class]] and [[#Struct]]
 
->[!caution] Java Value Comparsion
-> We can't use `==` to compare [[OOP#OOP Object]], because `==` compares the value holding by the variable. However, variables are only holding the [[Memory Address]] to the OOP Object. So if we want to compare the value of OOP Object, we need to use the `equals()` method
+>[!caution] Value comparison of custom datatype in Java
+> We can't use `==` to compare [[OOP#OOP Object]], because `==` compares the value holding by the variable. However, variables are only holding the [[Memory Address]] to the OOP Object. So if we want to compare the value of OOP Object, we need to use the `equals()` method.
 
 
 
@@ -49,12 +47,12 @@ References:
 ---
 - Type safety means ensuring that **operations** are only performed on **variables of compatible data types**, **preventing errors** and **ensuring correct results**
 
-| [[#Statically Typed\|Statically Typed]] | [[#Strongly Typed\|Strongly Typed]] | Meaning                                                            | **Language** |
-| --------------------------------------- | ----------------------------------- | ------------------------------------------------------------------ | ------------ |
-| ❌                                       | ❌                                   | Checking on datatype is at **runtime**, with **loose rules**       | Javascript   |
-| ❌                                       | ✅                                   | Checking on datatype is at **runtime**, with **struct rules**      | Python       |
-| ✅                                       | ❌                                   | Checking on datatype is at **compile time**, with **loose rules**  | [[C]]        |
-| ✅                                       | ✅                                   | Checking on datatype is at **compile time**, with **strict rules** | [[Java]]     |
+| [[#Statically Typed\|Statically Typed]] | [[#Strongly Typed\|Strongly Typed]] | Meaning                                                                   | **Language** |
+| --------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------- | ------------ |
+| ❌                                       | ❌                                   | Datatype checking is performed at **runtime**, with **loose rules**       | Javascript   |
+| ❌                                       | ✅                                   | Datatype checking is performed at **runtime**, with **struct rules**      | Python       |
+| ✅                                       | ❌                                   | Datatype checking is performed at **compile time**, with **loose rules**  | [[C]]        |
+| ✅                                       | ✅                                   | Datatype checking is performed at **compile time**, with **strict rules** | [[Java]]     |
 - C allows implicit conversions between numeric types and has a `void` pointer type that can point to any data type
 
 ```c
@@ -80,9 +78,9 @@ int main()
 > Use **type inference** only when the assigned value clearly shows its type (e.g., `a := "thisIsStr"`). Otherwise, explicitly declare the type (e.g., `var a := foo()`).
 
 >[!success] Safer codes and more informative coding experience
-> **Errors** related to **type mismatches** are caught before the program runs, offering **early detection** of potential problems.
+> **Errors** related to **type mismatches** can be **caught before the program runs**, offering **early detection** of potential problems.
 > 
-> [[Language Processors#Compiler]] has more information to do more checks on the codes and enforce certain standards. Plus better code completion when coding. Refer to this [video](https://youtu.be/hwyRnHA54lI?si=lrDIYGWl04qfdXdj&t=324) for more more details and example.
+> [[Language Processors#Compiler]] also has more information to do more checks on the codes and enforce certain standards. Plus better code completion when coding. Refer to this [video](https://youtu.be/hwyRnHA54lI?si=lrDIYGWl04qfdXdj&t=324) for more more details and example.
 
 ### Dynamically Typed
 - [[Datatype]] checking is performed when we are **running the program**
@@ -110,13 +108,13 @@ int main()
 ---
 ### Rust Scalar Type
 - Basically [[#Primitive Datatype]], rust supports 
-	1. [[Integer Encoding (数字编码)#2's Complement (补码)]] [[Integer (整数)]] (For [[Integer Encoding (数字编码)#Integer Overflow]] panic in debug mode and go back to the biggest or smallest value in release mode)
+	1. [[Integer Encoding (数字编码)#2's Complement (补码)]] for [[Integer Encoding (数字编码)]] (For [[Integer Encoding (数字编码)#Integer Overflow]], panic in debug mode and go back to the biggest or smallest value in release mode)
 	2. [[Floating-Point Encoding (浮点数编码)|Floating Point]]
 	3. Boolean
 	4. Character
 - Refer to [Rust Scalar Data Types](https://rust-book.cs.brown.edu/ch03-02-data-types.html#scalar-types) for more details
 ### Rust Compound Type
-- Basically [[#Custom Datatype]] rust supports natively
-	1. Tuple, basically [[Array]] that contains elements of different [[Datatype]]
-	2. Array, basically Array
+- Basically [[#Custom Datatype]] rust supports **natively**
+	1. Array, basically [[Array]]
+	2. Tuple, basically [[Array]] that contains elements of different [[Datatype]]
 - Refer to [Rust Compound Data Types](https://rust-book.cs.brown.edu/ch03-02-data-types.html#compound-types) for more details
