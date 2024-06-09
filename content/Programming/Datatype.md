@@ -7,8 +7,10 @@ tags:
   - programming
   - rust
   - java
+  - c
+  - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-06-08T21:09:40+08:00
+Last Date: 2024-06-09T19:57:43+08:00
 References: 
 ---
 ## Abstract
@@ -47,27 +49,55 @@ References:
 ---
 - Type safety means ensuring that **operations** are only performed on **variables of compatible data types**, **preventing errors** and **ensuring correct results**
 
-| [[#Statically Typed\|Statically Typed]] | [[#Strongly Typed\|Strongly Typed]] | Meaning                                                                   | **Language** |
-| --------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------- | ------------ |
-| ❌                                       | ❌                                   | Datatype checking is performed at **runtime**, with **loose rules**       | Javascript   |
-| ❌                                       | ✅                                   | Datatype checking is performed at **runtime**, with **struct rules**      | Python       |
-| ✅                                       | ❌                                   | Datatype checking is performed at **compile time**, with **loose rules**  | [[C]]        |
-| ✅                                       | ✅                                   | Datatype checking is performed at **compile time**, with **strict rules** | [[Java]]     |
-- C allows implicit conversions between numeric types and has a `void` pointer type that can point to any data type
+| [[#Statically Typed\|Statically Typed]] | [[#Strongly Typed\|Strongly Typed]] | Meaning                                                                   | **Language**    |
+| --------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------- | --------------- |
+| ❌                                       | ❌                                   | Datatype checking is performed at **runtime**, with **loose rules**       | Javascript, PHP |
+| ❌                                       | ✅                                   | Datatype checking is performed at **runtime**, with **struct rules**      | Python          |
+| ✅                                       | ❌                                   | Datatype checking is performed at **compile time**, with **loose rules**  | C               |
+| ✅                                       | ✅                                   | Datatype checking is performed at **compile time**, with **strict rules** | Java            |
 
-```c
-#include <stdio.h>
-int main()
-{
-    printf("Hello, World!");
-    int a = 1;
-    char b = 'a';
-    
-    a+=b;
-    printf("You entered: %d", a);
-}
-```
+- Javascript **allows** the **addition** between **integer** and **string**
 
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/42fqdaua5?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
+ ></iframe>
+ </div>
+
+- Python **prevents** the **addition** between **integer** and **string**. However, the datatype checking only occurs when the code is executed. Change `False` to `True` on **line 5** to observe the datatype checking process
+
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/42fqdmazh?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
+ ></iframe>
+ </div>
+ 
+
+- C allows **implicit conversions** between numeric types and has a `void` pointer type that can point to any data type. `b` contains the [[Memory Address]] which is used in the addition with `a`
+
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/42fqefxte?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
+ ></iframe>
+ </div>
+ 
+- Java **prevents** the **addition** between **integer** and **string**, even if the code with type error isn't going to get executed
+
+
+<div class="onecompilerCode-wrapper">
+<iframe
+ class="onecompilerCode"
+ frameBorder="0" 
+ src="https://onecompiler.com/embed/java/42fqfy2rj?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
+ ></iframe>
+ </div>
+ 
 
 ### Statically Typed
 - [[Datatype]] checking is performed at **compile time**
