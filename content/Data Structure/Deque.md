@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-12-11T20:43:00+08:00
-Last Date: 2024-06-07T12:54:17+08:00
+Last Date: 2024-06-10T16:34:23+08:00
 References: 
 ---
 ## Basics
@@ -57,7 +57,7 @@ class MonotonicQueue {
 > This is also why we need to use a **deque**, as we **need to pop** elements from the **back**.
 
 >[!question] How is this useful?
-> Monotonic queues are commonly used in problems related to [[Dynamic Programming]], [[Two Pointers (双指针）#Sliding Window]] algorithms, and [[Combinatorial Optimisation]] tasks where you need to **efficiently find maximum or minimum values** over a **range of elements**.
+> Monotonic queues are commonly used in problems related to [[Dynamic Programming]], **sliding window algorithms**, and [[Combinatorial Optimisation]] tasks where you need to **efficiently find maximum or minimum values** over a **range of elements**.
 > 
 >  We can use monotonic queue to solve [Sliding Window Maximum](https://xy241-dsa.notion.site/239-Sliding-Window-Maximum-9a14131e6b214ea49a2837eb712a01e4?pvs=74) which requires us to find the **biggest element in a sliding window**.
 
