@@ -10,7 +10,7 @@ tags:
   - c
   - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-06-09T19:57:43+08:00
+Last Date: 2024-06-10T20:18:04+08:00
 References: 
 ---
 ## Abstract
@@ -31,7 +31,7 @@ References:
 ### Primitive Datatype
 - Also known as **Built-in Datatype**
 * Great performance since there isn't much abstraction like [[#Custom Datatype]]
-- In [[Java]], primitive datatypes are [[Immutability]]
+- In [[Java]], primitive datatypes are [[Immutability|immutable]]
 
 ### Custom Datatype
 - In [[Java]], custom datatypes **aren't** [[Immutability|immutable]]
@@ -47,12 +47,12 @@ References:
 
 ## Type Safety
 ---
-- Type safety means ensuring that **operations** are only performed on **variables of compatible data types**, **preventing errors** and **ensuring correct results**
+- Type safety means ensuring that **operations** are only performed on **variables of compatible [[Datatype]]**, **preventing errors** and **ensuring correct results**
 
 | [[#Statically Typed\|Statically Typed]] | [[#Strongly Typed\|Strongly Typed]] | Meaning                                                                   | **Language**    |
 | --------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------- | --------------- |
 | ❌                                       | ❌                                   | Datatype checking is performed at **runtime**, with **loose rules**       | Javascript, PHP |
-| ❌                                       | ✅                                   | Datatype checking is performed at **runtime**, with **struct rules**      | Python          |
+| ❌                                       | ✅                                   | Datatype checking is performed at **runtime**, with **strict rules**      | Python          |
 | ✅                                       | ❌                                   | Datatype checking is performed at **compile time**, with **loose rules**  | C               |
 | ✅                                       | ✅                                   | Datatype checking is performed at **compile time**, with **strict rules** | Java            |
 
@@ -105,18 +105,18 @@ References:
 >[!important]
 > The datatype must be known during compilation, either by **explicitly defining** the data type or by **assigning a value** to the variable, which allows the **language to infer the type**.
 > 
-> Use **type inference** only when the assigned value clearly shows its type (e.g., `a := "thisIsStr"`). Otherwise, explicitly declare the type (e.g., `var a := foo()`).
+> Use **type inference** only when the assigned value clearly shows its type like `a := "thisIsStr"`. Otherwise, explicitly declare the type (e.g., `String a := foo()`). This ensures **code readability**.
 
->[!success] Safer codes and more informative coding experience
+>[!success] More stable codes & a more informative coding experience
 > **Errors** related to **type mismatches** can be **caught before the program runs**, offering **early detection** of potential problems.
 > 
-> [[Language Processors#Compiler]] also has more information to do more checks on the codes and enforce certain standards. Plus better code completion when coding. Refer to this [video](https://youtu.be/hwyRnHA54lI?si=lrDIYGWl04qfdXdj&t=324) for more more details and example.
+> [[Language Processors#Compiler]] also has more information to do more checks on the codes and enforce certain standards. Plus better **code completion** when coding. Refer to this [video](https://youtu.be/hwyRnHA54lI?si=lrDIYGWl04qfdXdj&t=324) for more more details and example.
 
 ### Dynamically Typed
 - [[Datatype]] checking is performed when we are **running the program**
 
 >[!success] Faster coding experience
-> We don't need to think about what datatype each variable has, we can better focus on implementing the logic.
+> We don't need to think about what datatype each variable has, we can better **focus** on **implementing the logic**.
 
 >[!caution] More runtime errors
 > We may run **operation** on variables that have **incompatible datatypes** during runtime, this can be avoided if the languages is [[#Statically Typed]].
@@ -127,7 +127,7 @@ References:
 
 ### Weakly Typed
 - Weakly typed means the [[Datatype]] checking **ISN'T strict**
-- For example, we can add `int` variable with `string` variable in [[Node.js]]
+- For example, we can add `int` variable with `string` variable in [[Node.js|Javascript]]
 
 
 ## Struct
