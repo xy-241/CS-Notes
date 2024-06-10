@@ -16,7 +16,7 @@ aliases:
 ---
 ## Interrupt
 ---
-- When an interrupt occurs, [[Control Unit#Program Counter]] jumps to [[Interrupt Handler]] & execute 
+- When an interrupt occurs, [[Register#Program Counter]] jumps to [[Interrupt Handler]] & execute 
 
 
 **Mechanism**

@@ -26,7 +26,7 @@ Last Date: 2024-05-10T20:06:41+08:00
 ## Fetch
 ---
 - Retrieve [[Instruction]] from [[Main Memory]]
-- Handled by [[Control Unit#Program Counter]] & [[Register#Instruction Register]]
+- Handled by [[Register#Program Counter]] & [[Register#Instruction Register]]
 ## Decode
 ---
 - [[Control Unit]] configures **different parts** of the [[CPU]] like [[ALU]] with the given [[Instruction]] based on the [[Instruction#Opcode]] with referencing to its [[Instruction Set Architecture (ISA)]]

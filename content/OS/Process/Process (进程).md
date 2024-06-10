@@ -61,7 +61,7 @@ alias ps='sudo procs --load-config <path_to_your_config.toml>' # Refer to https:
 3. Block - Process is waiting for some other things like **I/O** to finish working (eg. waiting for file to be read)
 ### Process Resources
 - [[Address Space]]
-- [[Register]] (Include [[Control Unit#Program Counter]] and [[Register#Stack Pointer]])
+- [[Register]] (Include [[Register#Program Counter]] and [[Register#Stack Pointer]])
 - A list of open [[File]]
 - Outstanding [[Interrupts (中断)#Software Interrupt]]
 - List of related processes

@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-04-21T14:34:07+08:00
+Last Date: 2024-06-10T20:46:24+08:00
 References: 
 ---
 ## Abstract
@@ -24,11 +24,13 @@ References:
 ### Instruction Register
 - Holds the actual [[Instruction]] that is **currently being executed** by the [[CPU]]
 
-### Memory Address Register
-- [[Register]] that points to [[Memory Address]] that contains the data required by the current [[Instruction]] that is being executed 
 
 ### Program Counter
-- For modern computers, it is the [[Register]] that indicates the [[Virtual Memory#Virtual Address]] of the next [[Instruction]] to be executed for the current [[Process (进程)]]
+- Also known as **Instruction Address Register**, **Instruction Pointer**
+- For modern computers, it is the [[Register]] that indicates the [[Virtual Memory#Virtual Address]] of the next [[Instruction]] to be **executed** for the current [[Process (进程)]]
+
+### Memory Address Register
+- [[Register]] that points to [[Memory Address]] that contains the data required by the current [[Instruction]] that is being executed 
 
 
 ### Stack Pointer
@@ -66,7 +68,7 @@ References:
 ### Register Width
 - The number of [[Computer Data Representation#Bit]] a [[Register]] can hold
 ### Register File
-- A collection of registers that [[CPU]] can quickly store and retrieve [[Data]]
+- A collection of [[Register]] that [[CPU]] can use to **quickly store** and **retrieve** [[Data]]
 ### Memory Mapped Register
 - [[Register]] that can be accessed via a [[Main Memory]] location 
 - This means that the register can be accessed using the same [[Instruction]] and addressing modes as memory.
