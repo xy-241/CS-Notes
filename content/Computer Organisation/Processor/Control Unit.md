@@ -6,7 +6,9 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:45:00
-Last Date: 2023-12-26T19:45:29+08:00
+Last Date: 2024-06-10T20:26:00+08:00
+aliases:
+  - ../../Computer-Organisation/CPU/Control-Unit
 ---
 ## Abstract
 ---
