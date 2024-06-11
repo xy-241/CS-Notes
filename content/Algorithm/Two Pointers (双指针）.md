@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-02T19:48:00
-Last Date: 2024-06-10T16:33:00+08:00
+Last Date: 2024-06-11T13:10:05+08:00
 References: 
 ---
 ## Abstract
@@ -54,8 +54,9 @@ public void twoPointerSort(int left, int right, int[] arr) {
 
 ## Two-Pointers Sliding Window
 ---
-- [[Two Pointers (双指针）]] move in the same direction at the same or different speed
-- Can be used to find [Minimum Size Subarray](https://leetcode.cn/problems/minimum-size-subarray-sum/) with sum that equals or exceeds the target value, can also be used to [find longest substring without repeating characters](https://xy241-dsa.notion.site/Longest-Substring-Without-Repeating-Characters-1d16b9fc5bac4918a82d59a3a72b667c)
+- [[Two Pointers (双指针）]] move in the same direction at the **same** or **different speed**
+- The sliding window technique can be used to find [Minimum Size Subarray](https://leetcode.cn/problems/minimum-size-subarray-sum/) with **sum** that **equals or exceeds** the **target value**, as well as the [find longest substring without repeating characters](https://xy241-dsa.notion.site/Longest-Substring-Without-Repeating-Characters-1d16b9fc5bac4918a82d59a3a72b667c)
+
 
 >[!tip] 
 > The **operation** of **expanding** and **shrinking** the window is **usually the same**.
@@ -66,4 +67,9 @@ public void twoPointerSort(int left, int right, int[] arr) {
 > 3. When should we **increment** the **right pointer**?
 
 >[!help] Need to keep track of the element frequency?
-> We can use [[Hash Map]] to keep track the element frequencies. This is needed in solving [Longest Repeating Character Replacement](https://xy241-dsa.notion.site/Longest-Repeating-Character-Replacement-deca9f39034a44709340029f5ab10f4b?pvs=4) problem, where we need the **highest element frequency** in a **sliding window** to ensure the two-pointers sliding pointer is valid at **each index**.
+> We can use [[Hash Map]] to keep track the element frequencies. 
+> 
+> This is needed when solving [Longest Repeating Character Replacement](https://xy241-dsa.notion.site/Longest-Repeating-Character-Replacement-deca9f39034a44709340029f5ab10f4b?pvs=4) problem, where we need the **highest element frequency** in a **sliding window** to ensure the **two-pointers sliding window** is valid while **expanding the window**. **Shrinking the window** when it **isn't valid** anymore.
+> 
+> This is needed when solving [Find All Anagrams in a String](https://xy241-dsa.notion.site/Find-All-Anagrams-in-a-String-c293f0c9c80b47748019aa20711dac47?pvs=4) problem, where we need to keep track **whether** the **elements** inside the **window** contain **all the characters** of the **given anagram**. If so, we can start **shrinking the window** to **find the anagram**.
+
