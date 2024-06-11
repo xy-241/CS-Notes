@@ -10,19 +10,19 @@ tags:
   - c
   - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-06-10T20:18:04+08:00
+Last Date: 2024-06-11T18:09:31+08:00
 References: 
 ---
 ## Abstract
 ---
 - Datatype is a **classification of information** and it has a **set of [[Operation]]** associated with it
 
->[!success] Benefits of Explicit Datatype
+>[!success] Benefits of explicit datatype
 > 1. Save [[Main Memory]]
-> 2. **Generally speeds up** program, refer to this [video](https://www.youtube.com/watch?v=hwyRnHA54lI) for more details. However, use it with caution, refer to the block below for more information 
+> 2. **Generally speeds up** program, refer to this [video](https://www.youtube.com/watch?v=hwyRnHA54lI) for more details. However, use it with caution, refer to the 'Premature optimisation is the root of all evil' below for more information 
 > 
 
->[!bigbrain] Premature optimisation is the root of all evil
+>[!bigbrain]- Premature optimisation is the root of all evil
 > Something to note is that the size of your data can affect performance as well as memory usage. CPUs are specifically designed to handle 32 bit and 64 bit values very fast, and sometimes, counterintuitively, an 8 bit value may take longer to process. So, as with everything, **premature optimisation** is the **root of all evil**. 
 > 
 > Keep the integer as a 32 bit integer for now, if you have 10 million of them and have identified it as a problem that it uses too much memory then go down to a u8 or use **bit-packing methods**.
