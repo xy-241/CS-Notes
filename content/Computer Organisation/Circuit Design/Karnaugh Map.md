@@ -6,28 +6,31 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-07-22T17:35:21+08:00
-Last Date: 2023-12-25T19:54:27+08:00
+Last Date: 2024-06-11T17:02:34+08:00
 References: 
 ---
 ## Abstract
 ---
-- Uses [[Grey Code]] as part of its implementation
+- Uses [[Gray Code]] as part of its implementation
 - Works around [[#Karnaugh Map Group]]
 
+>[!success] Save hardware cost
+> We can remove [[Logic Gates]] that are **redundant** and **don't affect** the **truth values** of any rows in a truth table.
 
-## Karnaugh Map Group
----
+
+### Karnaugh Map Group
 - We group the `1`s to show us some of the inputs don't matter. Thus, we can eliminate those inputs
 
-### Karnaugh Map Goup Requirements
-1. Shape: Rectangles/Square (No diagonals)
-2. Size: Power of 2 & as large as possible
-3. Number: Just enough (No redundant groups and cover all the 1s)
-4. Can overlap 
-5. Can wrap around the table
+>[!important] Karnaugh Map Goup requirements
+> **Shape**: Rectangles/Square (No diagonals)
+> 
+> **Size**: Power of 2 & as large as possible
+> 
+> **Number**: Just enough (No redundant groups and cover all the 1s)
+> 
+> **Overlap**: ✔️
+> 
+> **Wrap around the table**: ✔️
 
 
-## Benefits
----
-### Save Hardware Cost
-- We can remove [[Logic Gates]] that are repeated & don't affect the truth values of all rows in a [[Truth Table]]
+

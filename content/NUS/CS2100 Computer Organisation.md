@@ -74,7 +74,7 @@ title: cs2100 nus notes
 ## Circuit Simplification
 ---
 - [[Circuit Design]]
-- [[Grey Code]]
+- [[Gray Code]]
 - [[Karnaugh Map]]
 
 ## Combinational Circuits
