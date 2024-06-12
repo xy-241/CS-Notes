@@ -10,7 +10,7 @@ tags:
   - js
   - rust
 Creation Date: 2024-03-10, 17:29
-Last Date: 2024-04-12T00:55:48+08:00
+Last Date: 2024-06-12T01:33:37+08:00
 References: 
 draft: 
 description: 
@@ -74,7 +74,7 @@ description:
 > Upgrade all packages: `pipx upgrade-all`
 
 >[!caution]
-> Currently, there isn't a way to check for outdated packaged. Refer to this [issue](https://github.com/pypa/pipx/issues/149) for more updates on this matter.
+> Currently, there isn't a way to check for outdated packages. Refer to this [issue](https://github.com/pypa/pipx/issues/149) for more updates on this matter.
 
 ## NPM
 ---

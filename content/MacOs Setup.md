@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-06-06T12:31:45+08:00
+Last Date: 2024-06-12T01:29:08+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -152,7 +152,7 @@ h() {
 
 ## Cloud Computing
 ---
-- [ ] `brew install terraform`
+- [ ] `brew tap hashicorp/tap & brew install hashicorp/tap/terraform`
 - [ ] `brew install azure-cli`
 - [ ] `brew install infracost`
 - [ ] `brew install terraform-docs`
