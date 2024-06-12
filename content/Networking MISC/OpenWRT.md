@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2024-04-11, 20:20
-Last Date: 2024-05-12T23:13:59+08:00
+Last Date: 2024-06-08T21:47:20+08:00
 References: 
 draft: 
 description: 
@@ -30,6 +30,7 @@ description:
 > - [ ] `opkg install tar wget-ssl shadow-useradd shadow-usermod shadow-groupadd sudo openssh-sftp-server unzip curl bash git-http`
 
 ### GUI System Tools
+- [ ] [luci-app-wechatpush](https://github.com/tty228/luci-app-wechatpush?tab=readme-ov-file), push network info to telegram chat, useful!
 - [ ] [luci-theme-argo](https://github.com/jerrykuku/luci-theme-argon) & `opkg install luci-lib-ipkg`
 - [ ] `opkg install luci-i18n-netdata-zh-cn`
 - [ ] `opkg install luci-i18n-uhttpd-zh-cn`
