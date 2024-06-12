@@ -19,7 +19,7 @@ description:
 
 - [ ] [[Algorithm]]
 - [ ] [[Algorithm Complexity Analysis]]
-- [ ] [[Two Pointers (双指针）]]
+- [ ] [[Two Pointers (双指针)]]
 - [ ] [[Binary Search]]
 - [ ] [[Prefix Sum (前缀和)]]
 

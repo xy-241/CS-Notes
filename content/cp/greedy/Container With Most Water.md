@@ -40,7 +40,7 @@ draft:
 - There is a chance that the max volume has a different left index and right index, so the next step is to find that potential left index and right index
 - How do we do that?
 - We can use a [[Greedy Algorithm]] approach here. The only possible way to increase the volume is to replace the shorter side with a new height.
-- So if height at left index is shorter, we replace it with height at the right side, if height at the right index is shorter, we replace it with height at the left side. This can be achieved easily with [[Two Pointers (双指针）#Left-Right Pointers]]
+- So if height at left index is shorter, we replace it with height at the right side, if height at the right index is shorter, we replace it with height at the left side. This can be achieved easily with [[Two Pointers (双指针)#Left-Right Pointers]]
 - There 3 possible situations
 	1. Left side is shorter: replace left side with height that is at the right side of the current left
 	2. Right side is shorter: replace right side with heigh that is at the left side of the current right
@@ -57,7 +57,7 @@ draft:
 
 ### Conclusion
 - We start with left at index 0 and right at the most right hand side
-- Then with [[Greedy Algorithm]], we replace the side with shorter height with the help of [[Two Pointers (双指针）#Left-Right Pointers]]
+- Then with [[Greedy Algorithm]], we replace the side with shorter height with the help of [[Two Pointers (双指针)#Left-Right Pointers]]
 - At the same time, we are using a `res` variable to keep track the highest volume across all potential volumes 
 
 ## Space & Time Analysis

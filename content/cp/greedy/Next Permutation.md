@@ -39,7 +39,7 @@ draft:
 - And we use [[Greedy Algorithm]] to find this `nextIndex`
 - We loop through the second last element from backwards, the index of the first element that is smaller than the element on the right side is the `nextIndex`
 - For example, given `[1,2,3]`, `2<3`, therefore, the `nextIndex` is `1`
-- If we are unable to find such an element, that simply means the given [[Array]] is sorted from biggest to smallest, then we can just use [[Two Pointers (双指针）#Left-Right Pointers]] `twoPointerSort()` to sort it from smallest to biggest which is the next permutation
+- If we are unable to find such an element, that simply means the given [[Array]] is sorted from biggest to smallest, then we can just use [[Two Pointers (双指针)#Left-Right Pointers]] `twoPointerSort()` to sort it from smallest to biggest which is the next permutation
 - Remember, when we loop through the elements from right to left, **what is on the right is always equal or bigger**, otherwise, we will find our `nextIndex` and terminate the loop already
 
 ### Find `smallIndex`
@@ -122,7 +122,7 @@ class Solution {
 ---
 - **Why it takes so long to solve:** Overwhelmed by the complexity of the problem
 - **What you could have done better:** Look at one example, and see how to progress it to the answer step by step
-- **What you missed:** How to be [[Greedy Algorithm|Greedy]] and [[Two Pointers (双指针）#Left-Right Pointers]] to reverse a sorted [[Array]] [[Sorting#In-Place]] in `O(n)` time
+- **What you missed:** How to be [[Greedy Algorithm|Greedy]] and [[Two Pointers (双指针)#Left-Right Pointers]] to reverse a sorted [[Array]] [[Sorting#In-Place]] in `O(n)` time
 - **Ideas you've seen before:** Greediness!
 - **Ideas you found here that could help you later:** Be Greedy, take it one part by one part! And using left-right pointers to reverse a sorted array in-place in linear time
 - **Ideas that didn't work and why:** Find out all the possible [[Permutation]], but this will take `O(n!)` for both time and space

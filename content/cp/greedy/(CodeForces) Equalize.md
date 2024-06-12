@@ -55,7 +55,7 @@ description: Equalize Codeforces
 
 - Now imagine we explore the next element in $a$, and realise the most right element - the most left element $\gt (n-1)$. What should we do? Should we call it a day? The answer is no, we should throw away elements from left hand side until the difference of the maximum value and minimum value of the subarray meet $\le (n-1)$ again, because we may have a a lot of elements on the right hand side that can fulfil $\le (n-1)$ 
 - So just keep expanding the subarray to the right side and shrink from left if the sub-array fails $\le (n-1)$ , and record down the longest subarray until we finish go through the entire $a$
-- We make use of [[Two Pointers (双指针）#Two-Pointers Sliding Window]] to achieve this behaviour in a in $O(n)$
+- We make use of [[Two Pointers (双指针)#Two-Pointers Sliding Window]] to achieve this behaviour in a in $O(n)$
 ### Conclusion
 - We first remove all the duplicate values inside $a$ since they don't attribute to the final answer
 - Then sort the remaining elements in $a$ from smallest to biggest to have the optimal substructure
