@@ -6,11 +6,14 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-07-22T17:35:21+08:00
-Last Date: 2024-06-11T17:02:34+08:00
+Last Date: 2024-06-12T13:51:37+08:00
 References: 
 ---
 ## Abstract
 ---
+
+![[karnaugh_map.svg]]
+
 - Uses [[Gray Code]] as part of its implementation
 - Works around [[#Karnaugh Map Group]]
 
@@ -34,3 +37,6 @@ References:
 
 
 
+## References
+---
+- [Introduction to Karnaugh Maps - Combinational Logic Circuits, Functions, & Truth Tables](https://youtu.be/RO5alU6PpSU?si=CYKjwSRP__toOpWw "https://youtu.be/RO5alU6PpSU?si=CYKjwSRP__toOpWw")
