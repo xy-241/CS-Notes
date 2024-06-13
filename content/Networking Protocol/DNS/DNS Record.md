@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-01-17, 00:10
-Last Date: 2024-03-19T14:22:14+08:00
+Last Date: 2024-06-13T13:29:11+08:00
 References: 
 draft: 
 description: Dive into DNS records, the powerful mappings that connect hostnames to IP addresses, email servers, and more. ️ Explore A, CNAME, MX, and NS records, and learn how they keep your online experience seamless.
@@ -20,13 +20,13 @@ description: Dive into DNS records, the powerful mappings that connect hostnames
 >[!bigbrain] Local DNS Record vs Public DNS Record
 > If we have the DNS Record with the same name on both a [Local DNS server](https://docs.pi-hole.net/guides/dns/unbound/) and a Public DNS server like `1.1.1.1`. The DNS record inside the local DNS server **will always be used** if your local DNS server has a record.
 
->[!tip]- Check the status DNS propagation
+>[!tip] Check the status DNS propagation
 > You can check it on [DNS Checker - DNS Check Propagation Tool](https://dnschecker.org/#A/www.hello-algo.com). This is useful to see if a particular DNS record is taking effect already or not.
 
->[!tip]- Obtain the DNS records of a given domain name
-> You can obtain the list of current and past DNS records of a given domain name at [securitytrails](https://securitytrails.com)
+>[!tip] Obtain the DNS records of a given domain name
+> You can obtain the list of **current** and **past DNS records** of a **given [[Hostname#Domain Name]]** at [securitytrails](https://securitytrails.com).
 > 
-> Or [DNSdumpster.com](https://dnsdumpster.com/), but the information obtained is much more limited
+> Or [DNSdumpster.com](https://dnsdumpster.com/), but the information obtained is much more limited.
 
 
 ### A Record
@@ -51,8 +51,8 @@ description: Dive into DNS records, the powerful mappings that connect hostnames
 - Powers **Mail Server Aliasing** which allow root [[Hostname#Domain Name]] to be mapped to [[E-mail Server]]'s [[Hostname]]
 - In this above example, all the emails sent to `hello@yxy.ninja` is handled by the email servers behind `mail.tutanota.de`
 
->[!info]- Cloudflare's Priority Attribute
-> The value is used to determine the order in which mail servers are used to deliver email to your domain. The lower the value the higher the priority. This provides **redundancy**
+>[!info] Cloudflare's priority attribute
+> The value is used to determine the **order** in which **mail servers** are used to deliver email to your domain. The lower the value the higher the priority. This provides **redundancy**.
 
 ### NS Record
 - Symbol is ``NS`` which stands for **Name Server** 
@@ -61,9 +61,8 @@ description: Dive into DNS records, the powerful mappings that connect hostnames
 ### TXT Record
 - Can used to verify the ownership of the [[Hostname#Domain Name]]
 
->[!caution] Can't be proxy 
-> 
-
+>[!caution] Can't be proxied
+> If we proxy TXT record, we will only get back the proxy address when we check the TXT record value, defeating the purpose of the TXT record.
 ## References
 ---
 - [DNS record types · Cloudflare DNS docs](https://developers.cloudflare.com/dns/manage-dns-records/reference/dns-record-types/)
