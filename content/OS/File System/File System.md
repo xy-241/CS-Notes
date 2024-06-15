@@ -9,7 +9,7 @@ tags:
   - bash
   - macos
 Creation Date: 2023-07-26T17:21:48+08:00
-Last Date: 2024-04-07T00:28:45+08:00
+Last Date: 2024-06-15T15:40:51+08:00
 References: 
 ---
 ## Abstract
@@ -19,7 +19,7 @@ References:
 
 
 
->[!code]- List the filesystem of attached block device
+>[!tool] List the filesystem of attached block device
 > **[[Linux Kernel]]**
 > ```bash
 > lsblk --fs
@@ -30,17 +30,17 @@ References:
 > diskutil list
 > ```
 
->[!code]- Manipulate Filesystem with `mkfs`
+>[!tool] Manipulate Filesystem with `mkfs`
 > Format a storage device to specific filesystem with `sudo mkfs -t <FILESYSTEM_TYPE> -f /dev/<STORAGE_NAME>`. 
 
->[!code]- Check the storage size of current directory recursively
+>[!tool] Check the storage size of current directory recursively
 > ```bash
 > du -sh .
 > ```
 > - `-s` means summary
 > - `-h` means human-readable
 
->[!tip] Disk re-sizing
+>[!tool] Disk re-sizing
 > You can refer to [Increase the size of a persistent disk | Google Cloud](https://cloud.google.com/compute/docs/disks/resize-persistent-disk?authuser=2) to play with re-sizing a file system.
 
 ### Mounted File System

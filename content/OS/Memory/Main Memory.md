@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-10-07T16:38:29+08:00
-Last Date: 2024-06-03T17:14:46+08:00
+Last Date: 2024-06-15T15:52:10+08:00
 References: 
 ---
 ## Abstract
@@ -54,8 +54,7 @@ References:
 - The **'RAM'** that is commonly known to the consumers 
 
 >[!important]
-> - DRAM **decays in seconds** and thus must be periodically [refreshed](https://en.wikipedia.org/wiki/Memory_refresh "Memory refresh")
-> - Slower than [[#SRAM]]
+> DRAM **decays in seconds** and thus must be periodically [refreshed](https://en.wikipedia.org/wiki/Memory_refresh "Memory refresh"). Thus Slower than [[#SRAM]].
 
 >[!important]
 > [DDR SDRAM](https://en.wikipedia.org/wiki/DDR_SDRAM) is the DRAM that is commonly found in our machines, the common size is 8GB and 16GB.

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-15T19:39:44
-Last Date: 2024-02-12T00:16:14+08:00
+Last Date: 2024-06-15T16:14:24+08:00
 References: 
 description: Discusses the concept of asynchronous and synchronous sequential circuits, touching on level-sensitive and edge-triggered circuits, latches and flip-flops, Emphasising the benefits of synchronization in the design and analysis of circuits.
 sr-due: 2024-03-13
@@ -64,7 +64,7 @@ aliases:
 >![[sync_sequential_circuit.gif|500]]
 > Ability to coordinate and manage the flow of information within the circuit in a reliable & predicable way. 
 > 
-> The flat parts are the **breathing room** to set things up like turning off the store signal if we want it to stop storing data, making it easier to **design** and **analyze**.
+> The flat parts are the **breathing room** to set things up like turning off the store signal if we want it to stop execution on the [[ALU]], making it easier to **design** and **analyze**.
 ### Edge-triggered
 
 ![[positive_edge_triggered.png|400]]
@@ -77,7 +77,7 @@ aliases:
 - **Negative edge triggering:** Transition from a high voltage (1) to a low voltage (0) on the clock signal
 
 ### Flip-flops
-- [[#Synchronous Sequential Circuit]]
+- A form of [[#Synchronous Sequential Circuit]]
 
 
 
