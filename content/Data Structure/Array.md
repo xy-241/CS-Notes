@@ -7,46 +7,59 @@ tags:
   - dsa
   - js
 Creation Date: 2023-10-08T20:10:00
-Last Date: 2024-03-19T11:49:55+08:00
+Last Date: 2024-06-17T11:13:34+08:00
 References: 
 ---
 ## Abstract
 ---
 - A [[Data Structure#Linear]] collection of elements of the same [[Datatype]] that are stored in [[Data Structure#Continuous Memory]]. The next node is obtained by adding a **constant value** to the [[Memory Address]] of current node
-- Can be used to implement [[Hash Map]] when keys are fixed
-- [Leetcode questions](https://github.com/youngyangyang04/leetcode-master#%E6%95%B0%E7%BB%84)
+
 
 >[!success] Cache Hit
-> Elements of array are stored in [[Main Memory]] in a compact manner, thus making great use of [[CPU Cache#Cache Locality]]
+> Elements of array are stored in [[Main Memory]] in a **compact manner**, thus making great use of [[CPU Cache#Cache Locality]].
 
->[!caution] Fixed Size
-> If we want to expand, we have to create another bigger array & **copy all the elements** to the new array which is very time consuming 
-
->[!attention] Element Removal
-> We can't delete elements in arrays, we can only overwrite
-
-### Time Complexity 
->[!note]- Search
-> $O(n)$ to search for a value.
-
->[!note]- Indexing
-> It is $O(1)$  to index any elements in an array. The indexing formula is `elementAddr = firtstElementAddr + elementLength * elementIndex`, `elementIndex` is $0$ when we try to access the first element.
+>[!important] 
+> Array has a **fixed size**. If we want to **expand**, we have to **create another bigger array** & **copy all the elements** to the new array which is very **time consuming**.
 > 
-> ![[array_indexing.png]]
+> It takes $O(n)$ to **search for a value**.
 
->[!note]- Insert, Delete
-> $O(1)$ at the 2 ends of the array
-> 
-> $O(n)$ in the middle of the array
-> - For insert, we have to move all the elements next to the new element one step to right
-> - For delete, we have move all element next to the deleted element one step to left
-> 
-> ![[array_delete.gif]]
+>[!tip]
+> Can be used to implement [[Hash Map]] when keys are fixed.
+### Element Removal in Array
 
->[!info]- Performance comparison with Linked List when going through all elements
-> Array is much faster if there is [[CPU Cache]], otherwise it may be slightly slower. Because Array has to calculate the address of the next element, while [[Linked List]] is already calculated.
+![[array_delete.gif]]
+
+- [[Array]] has a **fixed size**, we can delete elements from them. However, the process is **NOT** as straightforward as simply **removing** the element and having the **array automatically adjust**. Here's a breakdown of the options:
+- **Overwriting (Not true deletion):** The simplest way is to overwrite the element to be **deleted** with a **placeholder value** (e.g., null or a default value). This doesn't change the array's size, but effectively marks the element as removed
+- **Shifting elements:** To truly **delete** an **element** and **maintain** the **order of the array**, you need to **shift** all **elements after** the **deleted one** to the **left by one position**. This can be **inefficient for large arrays**. This is illustrated with the animation above
+- **Creating a new array:** A more flexible approach is to create a new array that excludes the deleted element. This **avoids** the **shifting process** but requires **additional memory allocation**
+
+>[!question] What is the time complexity of deletion in array?
+> For true deletion (**removing the element** and **shifting others** to **fill the gap**), it takes $O(1)$ time to **delete the last element**. However, deleting an element from the **front of the array** or the **middle of the array** takes $O(n)$ time.
 > 
-> The reason why array is faster with CPU Cache is because array is stored in a [[Data Structure#Continuous Memory]] manner. Thus array is able to take advantage of [[CPU Cache#Cache Locality]]
+> This time complexity is same as the **deletion operation**.
+
+>[!tip] Efficient array element deletion trick
+> ![[replace_swap_array_element_removal.svg]]
+> 
+> I call this the '**replace and pop**' trick which takes only $O(1)$ time. We **replace** the **element to be deleted** with the **last element** in the array, then **pop (remove)** the **last element**. 
+> 
+> This allows us to perform **true deletion (removing and shifting)** in $O(1)$ time, **regardless** of the **deleted element's position**. However, this is **only suitable** if we **don't mind changing the order of elements**, as the **last element's index** will be **modified** while the **others remain unchanged**.
+
+
+
+
+### Element Indexing in Array
+![[array_indexing.png]]
+
+-  It is $O(1)$  to index **any elements** in an [[Array]]
+- $elementAddr = firtstElementAddr + elementLength \times elementIndex$ is the **indexing formula** where `elementIndex` is $0$ when we try to access the **first element**
+- In most programming languages, `my_array[i]` is a **convenient syntax** that [[Abstraction|abstracts]] the process of accessing the element at index `i` in an array. While the underlying mechanism usually involves **calculating the [[Memory Address]]** of the element and then **[[Pointer#Pointer Dereference|dereferencing]] that address** to **obtain the value**
+
+### Array Versus Linked List
+- When iterating over **all elements** in an [[Array]] and a [[Linked List]], the **array** is typically **much faster** if the elements are present in the [[CPU Cache]]. This is because arrays store elements in [[Data Structure#Continuous Memory|contiguous memory]], allowing them to benefit from [[CPU Cache#Cache Locality|cache locality]]. However, when [[CPU Cache#Cache Miss|cache misses]] occur, an **array** may be **slightly slower** than a **linked list**, as it needs to **calculate** the [[Memory Address|memory address]] of each **subsequent element**, whereas the next **element's address** is **directly stored** within each **node of a linked list**
+
+
 
 ### Contiguous Segment
 - A continuous range of [[Array]]
@@ -56,7 +69,7 @@ References:
 ---
 ![[dyanmic_array_memory_allocation.png|500]]
 - Also known as **List**
-- A [[Datatype]] that contains a [[Pointer]] to the underlying [[Array]] and other metadata like the capacity of the array and the current size of the array. As shown above, the purple blocks contain the metadata of the dynamic array. The yellow blocks are the actually array that hold the elements
+- A [[Datatype]] that contains a [[Pointer]] to the underlying [[Array]] and other **metadata** like the **capacity** of the array and the **current size** of the array. As shown above, the **purple blocks** contain the **metadata of the dynamic array**. The **yellow blocks** are the actual **array** that **hold the elements**
 
 
 >[!bigbrain] Dynamic array mechanism visualisation
