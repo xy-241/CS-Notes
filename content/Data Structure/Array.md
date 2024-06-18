@@ -7,7 +7,7 @@ tags:
   - dsa
   - js
 Creation Date: 2023-10-08T20:10:00
-Last Date: 2024-06-17T11:13:34+08:00
+Last Date: 2024-06-18T20:33:10+08:00
 References: 
 ---
 ## Abstract
@@ -45,6 +45,8 @@ References:
 > I call this the '**replace and pop**' trick which takes only $O(1)$ time. We **replace** the **element to be deleted** with the **last element** in the array, then **pop (remove)** the **last element**. 
 > 
 > This allows us to perform **true deletion (removing and shifting)** in $O(1)$ time, **regardless** of the **deleted element's position**. However, this is **only suitable** if we **don't mind changing the order of elements**, as the **last element's index** will be **modified** while the **others remain unchanged**.
+> 
+> This is useful trick in solving problems like [Insert Delete GetRandom O(1)](https://www.notion.so/xy241-dsa/Insert-Delete-GetRandom-O-1-2ae8c2430a3f4632b25085d9a9f8b60c?pvs=4).
 
 
 
