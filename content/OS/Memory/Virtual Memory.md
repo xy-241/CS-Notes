@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:16:23+08:00
-Last Date: 2024-06-21T22:31:36+08:00
+Last Date: 2024-06-22T16:42:36+08:00
 References: 
 ---
 ## Abstract
@@ -17,10 +17,11 @@ References:
 
 
 >[!success] Handles memory fragmentation
-> With [[#Virtual Address]], [[Kernel]] decouples data placement from the [[Main Memory]]. It is able to break down data like **Address Space** into smaller sizes and fit them inside fragmented main memory. Thus solving the [[Memory Fragmentation]] issue.
+> With [[#Virtual Address|virtual addressing]], the [[Kernel]] decouples data placement from the [[Main Memory]]. It is able to **break down** [[Address Space]] into **smaller sizes** and fit them inside **fragmented main memory**, thus solving the [[Memory Fragmentation]] issue.
+
 
 >[!success] Use storage as part of the memory
-> With **virtual address**, **kernel** is in control of labelling the memory. It is able assign some virtual address to point to the [[Flash Memory]] - [[Swap Space]] to have data of some [[Process (进程)]] stored outside of the **main memory**. However, we will suffer from [[Page Fault]] if we want to use these data.
+> With **virtual addressing**, the **kernel** controls **memory mapping**. It can assign **virtual address** to point to the [[Flash Memory]], using it as [[Swap Space]] to store process data outside of main memory. However, accessing this data will result in a [[Page Fault]].
 
 
 >[!code] Manipulating memory with C
