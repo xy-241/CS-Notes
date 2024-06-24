@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-06-23T21:25:16+08:00
+Last Date: 2024-06-24T21:43:50+08:00
 References: 
 ---
 ## Abstract
@@ -30,6 +30,6 @@ References:
 > By delaying the actual allocation, we **speed up startup time** & **eliminate allocation** entirely **if it isn't used**.
 
 >[!caution]
-> Lazy allocation can lead to **slower execution speed**  [[Page Fault#Major Page Fault]].
+> Lazy allocation can lead to **slower execution speed** caused by [[Page Fault#Major Page Fault]].
 > 
 > It also increases the risk of **runtime allocation errors**, making the application more likely to crash during execution.
