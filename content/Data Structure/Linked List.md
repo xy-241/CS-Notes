@@ -7,7 +7,7 @@ tags:
   - dsa
   - java
 Creation Date: 2023-08-05T14:45:43+08:00
-Last Date: 2024-03-23T21:30:31+08:00
+Last Date: 2024-06-25T23:47:43+08:00
 References: 
 ---
 ## Abstract
@@ -33,7 +33,7 @@ References:
 
 
 
->[!code]- Linked list node implemented with Java
+>[!code] Linked list node implemented with Java
 > ```java
 > public class Node {
 > 	int val;
@@ -45,7 +45,7 @@ References:
 > ```
 
 
->[!code]- Print Out Linked List
+>[!code]  Print Out Linked List
 > ```java
 > public void printLinkedList(ListNode node) {
 > 	ListNode a = node;
@@ -58,11 +58,12 @@ References:
 > ```
 
 
->[!tip]- Draw It Out
+>[!tip] Draw It Out
 > When unsure about the relationship, draw out the nodes & pointers. It really makes the visualization of the manipulation easy!
 
->[!tip]- Virtual Node
-> O(1) to access either the **head node** or the **tail node**, this makes handling edge cases & reverting linked list easier.
+### Virtual Node
+- $O(1)$ to access either the **head node** or the **tail node**, this makes handling edge cases & reverting linked list easier.
+
 ### Time Complexity
 >[!note]- Search
 > $O(n)$ to search for a value. 
@@ -100,7 +101,7 @@ References:
 - Implement [[Cache Server#Eviction Policy]] like [[LRU]]
 - Implement **Browser History Navigation**. When we at a page, knowing what is the previous page (parent node) & what is the next page(child node). This makes the browsing experience more smooth
 
->[!code]- Node Implementation
+>[!code]  Node Implementation
 > 
 > ```java
 > public class Node {
@@ -112,6 +113,8 @@ References:
 >   Node(int key, int val) this.val = val;
 > }
 > ```
+> 
+> In an [[LRU]] cache implementation, we need to include an additional piece of information, the `key`. This is necessary to remove an invalidated cache entry from the [[Hash Map]] in constant time `O(1)`.
 
 
 ## Circular Linked List

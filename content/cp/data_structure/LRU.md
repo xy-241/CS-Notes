@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-02-02T13:56:00
-Last Date: 2024-01-01T21:29:41+08:00
+Last Date: 2024-06-25T23:57:21+08:00
 tags:
   - cp
 draft: 
@@ -32,7 +32,7 @@ draft:
 ---
 - The idea here is to use a [[Hash Map]] to keep a mapping between the key and the value. And we use a [[Linked List#Double Linked List]] to keep track the least recently used key-value pair and most recently used key-value pair in constant time
 - The value in the hash map is mapped to a node inside the double linked list, so we are able to locate the least recently used key-value pair in linear time
-- We also make use of [[Linked List#Virtual Node]] to make the linked list operations easy to manage. Refer to [[Linked List#Tips|Linked List Tips]] to help with the solution implementation
+- We also make use of [[Linked List#Virtual Node]] to make the linked list operations easy to manage.
 
 
 ## Space & Time Analysis
@@ -47,90 +47,99 @@ The analysis method we are using is [[Algorithm Complexity Analysis]]
 
 ## Codes
 ---
-### 4th Attempt (Java)
+### 5th Attempt (Java)
 ```java
-public class Node {
-    int key;
-    int val;
-    Node prev;
-    Node next;
-    Node(){}
+class Node {
+  int key;
+  int val;
 
-    Node(int key, int val) {
-        this.key = key;
-        this.val = val;
-    }
+  Node prev;
+  Node next;
+
+  public Node() {}
+
+  public Node(int key, int val) {
+    this.key = key;
+    this.val = val;
+  }
 }
 
 class LRUCache {
-    int capacity;
-    HashMap<Integer, Node> map;
-    Node head;
-    Node tail;
+  Node head;
+  Node tail;
+  int capacity;
+  Map<Integer, Node> map;
 
-    public LRUCache(int capacity) {
-        this.capacity = capacity;
-        map = new HashMap<>();
+  public LRUCache(int capacity) {
+    this.capacity = capacity;
 
-        head = new Node();
-        tail = new Node();
-        head.next = tail;
-        tail.prev = head;
+    head = new Node();
+    tail = new Node();
+    head.next = tail;
+    tail.prev = head;
+
+    map = new HashMap<>();
+  }
+
+  public int get(int key) {
+    if (!map.containsKey(key))
+      return -1;
+
+	// Recently used
+    Node currNode = map.get(key);
+    removeNode(currNode);
+    addToHead(currNode);
+
+    return currNode.val;
+  }
+
+  public void put(int key, int value) {
+    if (!map.containsKey(key)) {
+	  // Evict least used key to create space for new key
+      if (capacity <= 0) {
+        Node currLast = tail.prev;
+        removeNode(currLast);
+        map.remove(currLast.key);
+        capacity++;
+      }
+
+      // New key added
+      Node newNode = new Node(key, value);
+
+      map.put(key, newNode);
+      addToHead(newNode);
+      capacity--;
+
+      return;
     }
     
-    public int get(int key) {
-        if (!map.containsKey(key)) return -1;
-        
-        // Recently Used
-        Node currNode = map.get(key);
-        remove(currNode);
-        accessed(currNode);
+	// Key updated
+    Node currNode = map.get(key);
+    currNode.val = value;
 
-        return currNode.val;
-    }
-    
-    public void put(int key, int value) {
-        if (map.containsKey(key)) {
-            Node currNode = map.get(key);
-            currNode.val = value;
-            
-            // Recently Used (updated)
-            remove(currNode);
-            accessed(currNode);
-            return;
-        }
+    removeNode(currNode);
+    addToHead(currNode);
+  }
 
-        if (map.size() < capacity) {
-            Node newNode = new Node(key, value);
+  public void addToHead(Node node) {
+    Node currFirst = head.next;
 
-            // Recently Used (added)
-            accessed(newNode);
-            map.put(key, newNode);
-            return;
-        }
+    head.next = node;
+    currFirst.prev = node;
+    node.prev = head;
+    node.next = currFirst;
+  }
 
-        // Evict
-        Node lastNode = tail.prev;
-        remove(lastNode);
-        map.remove(lastNode.key);
-        
-        // Add
-        Node newNode = new Node(key, value);
-        map.put(key, newNode);
-        // Recently Used (added)
-        accessed(newNode);
-    }
+  public void removeNode(Node node) {
+    Node prevNode = node.prev;
+    Node nextNode = node.next;
 
-    void remove(Node node) {
-        node.prev.next = node.next;
-        node.next.prev = node.prev;
-    }
-    void accessed(Node node) {
-        node.next = head.next;
-        node.prev = head;
-        head.next = node;
-        node.next.prev = node;
-    }
+    prevNode.next = nextNode;
+    nextNode.prev = prevNode;
+
+    node.prev = null;
+    node.next = null;
+  }
 }
 
 /**
@@ -139,6 +148,7 @@ class LRUCache {
  * int param_1 = obj.get(key);
  * obj.put(key,value);
  */
+
 ```
 
 ## Personal Reflection
