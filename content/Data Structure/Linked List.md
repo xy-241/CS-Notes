@@ -7,24 +7,23 @@ tags:
   - dsa
   - java
 Creation Date: 2023-08-05T14:45:43+08:00
-Last Date: 2024-06-25T23:47:43+08:00
+Last Date: 2024-06-26T19:04:46+08:00
 References: 
 ---
 ## Abstract
 ---
 ![[linked_list.png|700]]
-- A [[Data Structure#Linear]] collection of elements of the same [[Datatype]] that stored in [[Data Structure#Discrete Memory]]. Each node contains a [[Pointer]] to the next node
+- A [[Data Structure#Linear]] collection of elements of the same [[Datatype]] that stored in [[Data Structure#Discrete Memory Location]]. Each node contains a [[Pointer]] that **references** the **next node** in the **sequence**
 
 
->[!success] Adjustable size with minimal impact
-> If we want to add in a new node, we just need to modify the pointer of the previous node & the pointer of the next node - in **constant time**. Since the connection between the 2 nodes are via **Pointer**, we can have nodes all around the [[Main Memory]]. This means we can add more nodes as long as there is free memory size that can fit a single node.
+>[!success] Efficiently adjustable size
+> If we want to add in a new node, we only need to modify the pointer of the previous node and the next node, which takes **constant time**. Since nodes are connected via pointers, they can be located anywhere in [[Main Memory]]. This allows us to add more nodes as long as there is **free memory space sufficient for a single node**.
 > 
 > ![[linked_list_memory_operation.gif]]
 
 
-
 >[!attention] Cache Miss!!!
-> Since the connection between 2 nodes are via Pointer, the nodes are scattered around the Main Memory. This means we can't make use of [[CPU Cache#Cache Locality]] and this results in [[CPU Cache#Cache Miss]].
+> Since the connection between 2 nodes are via Pointer, the nodes are scattered around the Main Memory. This means we can't make use of [[CPU Cache#Cache Locality]] and this results in a very high rate [[CPU Cache#Cache Miss]].
 > 
 > ![[linked_list_cache_miss.gif]]
 

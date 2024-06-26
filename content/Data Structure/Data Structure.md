@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-10-07T16:38:00
-Last Date: 2023-12-13T18:13:47+08:00
+Last Date: 2024-06-26T19:00:53+08:00
 References: 
 ---
 ## Abstract
@@ -21,7 +21,7 @@ References:
 ### Continuous Memory
 - Elements are stored one next to another in the[[Virtual Memory]]
 
-### Discrete Memory
+### Discrete Memory Location
 - Elements are scattered around the [[Virtual Memory]]
 - The exact location depends on [[OS]]'s **Memory Management**
 

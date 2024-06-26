@@ -20,7 +20,7 @@ Author:
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 Creation Date: 2023-02-02T13:56:00
-Last Date: 2024-06-25T23:57:21+08:00
+Last Date: 2024-06-26T18:48:38+08:00
 tags:
   - cp
 draft: 
@@ -30,9 +30,13 @@ draft:
 [Past Solutions](https://www.notion.so/xy241-dsa/LRU-Cache-7cef86ef560f4e768a24b9043256ae96?pvs=4)
 ## Idea
 ---
-- The idea here is to use a [[Hash Map]] to keep a mapping between the key and the value. And we use a [[Linked List#Double Linked List]] to keep track the least recently used key-value pair and most recently used key-value pair in constant time
-- The value in the hash map is mapped to a node inside the double linked list, so we are able to locate the least recently used key-value pair in linear time
-- We also make use of [[Linked List#Virtual Node]] to make the linked list operations easy to manage.
+- A [[Linked List#Double Linked List]] allows us to perform **LRU cache manipulation** in $O(1)$ time, regardless of where the cache is located. However, it takes $O(n)$ time to **find the cache given a key**. This can be solved with a [[Hash Map]] that stores a **mapping** between the **key** and the **doubly linked list node** that **holds the cache value** for that particular key
+
+>[!tip]
+> We also make use of [[Linked List#Virtual Node]] to make the linked list operations easy to manage.
+
+
+
 
 
 ## Space & Time Analysis
@@ -99,13 +103,12 @@ class LRUCache {
       if (capacity <= 0) {
         Node currLast = tail.prev;
         removeNode(currLast);
-        map.remove(currLast.key);
+        map.remove(currLast.key); // remember to remove from the hash map too!
         capacity++;
       }
 
       // New key added
       Node newNode = new Node(key, value);
-
       map.put(key, newNode);
       addToHead(newNode);
       capacity--;
