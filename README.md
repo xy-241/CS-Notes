@@ -23,16 +23,20 @@ Each note is **interconnected** with other notes, j**ust like how our neurons** 
 
 ### Hand-crafted Diagrams
 
-I was unable to find **high-quality visuals** on the internet to better **illustrate** some of the **concepts**, so I created visuals for my notes. 😃.
+I was unable to find **high-quality visuals** on the internet to better **illustrate** some of the **concepts**, so I created visuals for my notes 😃.
 <div align="center">
 <img align="center" width="500" src="https://github.com/xy-241/CS-Notes/assets/47915643/dedb7826-f672-4a16-98a4-729784a2cdf5" />
 </div>
 
-### A Ten-year Project
+### A Ten-Year Project
 I am planning to work on my notes daily for the next **10 years**, building a second brain as I **learn from my mistakes** and **acquire new knowledge**. I have made over **800 commits** to this repository, totaling **150,000 words** over the **past 6 months**.
 
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=xy-241/CS-Notes&type=Date)](https://star-history.com/#xy-241/CS-Notes&Date)
 
-## 🏭 System Design
+## Notes Navigator 🧭
+
+### 🏭 System Design
 - [Basis](https://notes.yxy.ninja/System-Design/)
 - [Proxy](https://notes.yxy.ninja/System-Design/Proxy/)
 - [Load Balancer](https://notes.yxy.ninja/System-Design/Load-Balancers/)
@@ -43,7 +47,7 @@ I am planning to work on my notes daily for the next **10 years**, building a se
 - [Architecture](https://notes.yxy.ninja/System-Design/Architectures/)
 
 
-## 💻 Operating System
+### 💻 Operating System
 - [Intro](https://notes.yxy.ninja/OS/)
 </br>
 
@@ -66,7 +70,7 @@ I am planning to work on my notes daily for the next **10 years**, building a se
 - [MISC](https://notes.yxy.ninja/OS/Terminologies/)
 
 
-## 🖥️ Computer Organisation 
+### 🖥️ Computer Organisation 
 - [Number System](https://notes.yxy.ninja/Computer-Organisation/Number-System/)
 - [Processor](https://notes.yxy.ninja/Computer-Organisation/Processor/)
 </br>
@@ -87,12 +91,12 @@ I am planning to work on my notes daily for the next **10 years**, building a se
 - [Circuit Design](https://notes.yxy.ninja/Computer-Organisation/Circuit-Design/)
 </br>
 
-## 🧠 Data Structure & Algorithm
+### 🧠 Data Structure & Algorithm
 - [Problem Solving Tricks](https://notes.yxy.ninja/tags/problem_solving)
 - [Algorithm](https://notes.yxy.ninja/Algorithm/Algorithm-Content-Page)
 - [Data Structure](https://notes.yxy.ninja/Data-Structure/Data-Structure-Content-Page)
 
-## 👩‍💻 Competitive Programming
+### 👩‍💻 Competitive Programming
 - [Code Template](https://notes.yxy.ninja/cp/Competitive-Programming-Code-Templates)
 - [Data Structure](https://notes.yxy.ninja/cp/data_structure/)
 - [Prefix Sum](https://notes.yxy.ninja/cp/prefix_sum/)
@@ -102,7 +106,7 @@ I am planning to work on my notes daily for the next **10 years**, building a se
 - [Combinatorics](https://notes.yxy.ninja/cp/combinatorics/)
 
 
-## ➕ Math
+### ➕ Math
 - [Number Theory Basis](https://notes.yxy.ninja/tags/number_theory)
 - [Divisibility & Primes](https://notes.yxy.ninja/Number-Theory/Divisibility-and-Primes/)
 </br>
@@ -111,7 +115,7 @@ I am planning to work on my notes daily for the next **10 years**, building a se
 - [Boolean Algebra](https://notes.yxy.ninja/tags/boolean_algebra)
 
 
-## 🔤 Programming Language
+### 🔤 Programming Language
 - [C](https://notes.yxy.ninja/tags/c)
 - [Python](https://notes.yxy.ninja/tags/python)
 - [Rust](https://notes.yxy.ninja/tags/rust)
@@ -119,7 +123,7 @@ I am planning to work on my notes daily for the next **10 years**, building a se
 - [Javascript](https://notes.yxy.ninja/tags/js)
 
 
-## 🛠️ Software Engineering 
+### 🛠️ Software Engineering 
 - [Software Engineering Theories](https://notes.yxy.ninja/tags/software_engineering)
 - [Amazon Web Services](https://notes.yxy.ninja/tags/aws)
 - [Datadog - Application Monitoring](https://notes.yxy.ninja/tags/Datadog)
@@ -128,7 +132,8 @@ I am planning to work on my notes daily for the next **10 years**, building a se
 - [Object Oriented Programming](https://notes.yxy.ninja/tags/OOP)
 
 
-
-
-## 🕸️ Networking
+### 🕸️ Networking
 - [Networking Basis (Under heavy revision)](https://notes.yxy.ninja/tags/networking)
+
+
+
