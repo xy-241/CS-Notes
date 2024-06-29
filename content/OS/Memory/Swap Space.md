@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2024-01-07, 17:59
-Last Date: 2024-06-28T20:36:48+08:00
+Last Date: 2024-06-29T17:50:39+08:00
 References: 
 draft: 
 ---
@@ -17,7 +17,7 @@ draft:
 
 
 
->[!code] Swap Space Usage
+>[!code] Check for swap space usage on Linux
 > `free -h`
 
 
@@ -27,11 +27,13 @@ draft:
 
 ## ZRAM
 ---
-- ZRAM is a [[Kernel#Kernel Module]] that **compresses unused data** and moves it to the [[Main Memory]]. This is like having [[Swap Space]] in main memory. This frees up more RAM because the compressed data takes up about **1/4 of its original size**
+- ZRAM is a [[Kernel#Kernel Module]] that **compresses unused data** in [[Main Memory]] and moves it back to the Main Memory. We basically have [[Swap Space]] inside the main memory
 
+>[!success] More memory!
+> When data is compressed, it typically occupies **one-quarter of its original size**, **freeing the remaining three-quarters** for other applications to use.
 
 >[!success] Speed
-> [[#Paging]] is much faster given the [[CPU]] **isn't busy**.
+> [[#Paging]] is much faster since **everything happens inside the main memory**.
 
 >[!attention]
 > CPU has to **work harder** to compress and decompress the data. This also **increases power consumption**.
