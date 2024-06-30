@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2024-01-07, 17:59
-Last Date: 2024-06-29T17:50:39+08:00
+Last Date: 2024-06-30T16:44:13+08:00
 References: 
 draft: 
 ---
@@ -29,6 +29,9 @@ draft:
 ---
 - ZRAM is a [[Kernel#Kernel Module]] that **compresses unused data** in [[Main Memory]] and moves it back to the Main Memory. We basically have [[Swap Space]] inside the main memory
 
+>[!important]
+> ZRAM focuses on **optimising main memory usage** by **compressing pages directly in main memory**. Zram allocates a **dedicated area in main memory** for its compressed memory storage. You can check the status of your ZRAM using `sudo swapon --show`.
+
 >[!success] More memory!
 > When data is compressed, it typically occupies **one-quarter of its original size**, **freeing the remaining three-quarters** for other applications to use.
 
@@ -38,6 +41,17 @@ draft:
 >[!attention]
 > CPU has to **work harder** to compress and decompress the data. This also **increases power consumption**.
 
+
+
+## ZSwap
+---
+- A feature of [[Linux Kernel]] that **intercepts** [[Memory Page|memory pages]] that are about to be [[#Paging|swapped out]] to the [[Swap Space]], **compress them**, and **stores them temporarily in [[Main Memory]]** instead of immediately writing them to the swap space
+
+>[!important]
+> Zswap focuses on **improving** the **efficiency** of [[Swap Space]].
+
+>[!success] Better swapping performance
+> ZSwap **reduces** the amount of **data written to slower swap space**, which can improve performance by **reducing slow [[IO Device#IO Operation]]**.
 
 
 ## References
