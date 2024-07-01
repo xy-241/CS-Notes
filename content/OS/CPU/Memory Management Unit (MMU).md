@@ -6,13 +6,14 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T01:39:00
-Last Date: 2024-06-26T19:20:09+08:00
+Last Date: 2024-07-01T16:05:03+08:00
 ---
 ## Abstract
 ---
-![[memory_management_unit.png|500]]
 
-- A hardware that takes in [[Virtual Memory#Virtual Address]] and translates it into a [[Main Memory#Physical Address]] using [[Page Table]]. This allows the [[CPU]] access data stored in [[Main Memory]] using virtual addresses. This **translation process** is what makes [[Virtual Memory]] possible.
+![[data_retrieval_during_process_execution.svg]]
+
+- A hardware that takes in [[Virtual Memory#Virtual Address]] and translates it into a [[Main Memory#Physical Address]] using [[Page Table]]. This allows the [[CPU]] access data stored in [[Main Memory]] using virtual addresses. This **translation process** is what makes [[Virtual Memory]] possible
 
 >[!attention]
 > A [[Page Fault]] occurs when the Memory Management Unit (MMU) is unable to locate a specific [[Memory Page]] in its page table.
