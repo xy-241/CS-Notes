@@ -6,12 +6,19 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-07-14T20:41:40+08:00
-Last Date: 2024-07-04T13:15:25+08:00
+Last Date: 2024-07-05T13:29:01+08:00
 References: 
 ---
 ## Abstract
 ---
-- A **small-sized** type of volatile computer memory that provides **high-speed data access** to a [[CPU]]. **10-100 times faster** than accessing accessing data from [[Main Memory]]
+- A **small-sized** type of volatile computer memory that provides **high-speed data access** to a [[CPU]]. **10-100 times faster** than accessing accessing data from [[Main Memory]]. Built with [[Main Memory#SRAM]]
+
+>[!question] Differences between L1, L2, and L3 CPU Cache?
+> **L1 Cache** is known as **primary cache**, runs at the **same speed** as the **CPU**.
+> 
+> **L2 Cache**, also called the **secondary cache**, is accessed if the CPU cannot find the data in L1 Cache. It can be up to [[Latency Number|10 times slower]] than L1 cache.
+> 
+> **L3 Cache** is known as **shared cache**, because it is shared between all the [[CPU#CPU Core|cores]] of the CPU. Accessed if data isn't found in L2 cache. L3 Cache is still twice as fast as [[Main Memory#DRAM]].
 
 ### Cache Line
 * Ranging from 32 to 128 [[Computer Data Representation#Byte]]
