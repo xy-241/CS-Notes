@@ -6,16 +6,15 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-01T16:41:00
-Last Date: 2023-12-21T10:35:12+08:00
+Last Date: 2024-07-02T17:18:52+08:00
 ---
 ## Abstract
 ---
-A tool to remove *all resources* in an AWS Account automatically without manually clicking countless buttons 
+- A tool to remove *all resources* in an AWS Account automatically without manually clicking countless buttons 
+- Refer to [Github Repo](https://github.com/rebuy-de/aws-nuke#caution) for more details
 
-Refer to [Github Repo](https://github.com/rebuy-de/aws-nuke#caution) for more details
-
->[!CAUTION] Always double check what resources that AWS Nuke aren't able to remove
->- There are a few resources that require manual removal like *AWS Network Firewall*
+>[!CAUTION] 
+> Always double check what resources that AWS Nuke aren't able to remove. There are a few resources that require manual removal like **AWS Network Firewall**.
 
 Setup Checklist:
 - [ ] [[#AWS Account Setting]]
@@ -23,8 +22,9 @@ Setup Checklist:
 - [ ] [[#Run in Docker]]
 ## AWS Account Setting
 ---
-We need to create **Account Alias** in order to start using `aws-nuke`
 ![[account_alias.png]]
+- We need to create **Account Alias** in order to start using `aws-nuke`
+
 
 
 
@@ -59,9 +59,9 @@ accounts:
         - "arn:aws:acm:ap-southeast-1:106330972960:certificate/5212c31a-94f1-4dc9-80a8-b72d8d6b2054"
 ```
 
-## Run in [[Docker]]
+## Start the Nuke!
 ---
-Pass in the [[#AWS Nuke Configuration File]] & **AWS Credentials** to the container using [[Docker Volume]]
+- Pass in the [[#AWS Nuke Configuration File]] & **AWS Credentials** to the container using [[Docker Volume]]
 ```bash /<ABSOLUTE_PATH_TO_CONFIG.YAML>/ /<ABSOLUTE_PATH_TO_.aws>/ /<YOUR_AWS_PROFILE>/
 docker run \
    --rm -it \

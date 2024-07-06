@@ -10,12 +10,12 @@ tags:
   - c
   - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-06-11T18:09:31+08:00
+Last Date: 2024-07-06T01:06:25+08:00
 References: 
 ---
 ## Abstract
 ---
-- Datatype is a **classification of information** and it has a **set of [[Operation]]** associated with it
+- Datatype is a **classification of information** and it **decides** the **computation** that can be performed on a variable
 
 >[!success] Benefits of explicit datatype
 > 1. Save [[Main Memory]]
@@ -28,6 +28,9 @@ References:
 > Keep the integer as a 32 bit integer for now, if you have 10 million of them and have identified it as a problem that it uses too much memory then go down to a u8 or use **bit-packing methods**.
 >
  > It's actually even more nuanced than that, because of [[CPU Cache#Cache Locality]], so actually smaller data can be faster and slower depending on the circumstance. But that's very complex and should be left to experimentation **if the need arises**.
+
+### Type System
+- A set of rules about [[Datatype]] of [[Abstraction#Data Abstraction|variable]], [[Expression]], [[Function]], and their interactions
 ### Primitive Datatype
 - Also known as **Built-in Datatype**
 * Great performance since there isn't much abstraction like [[#Custom Datatype]]
