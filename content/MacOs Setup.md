@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-06-12T01:29:08+08:00
+Last Date: 2024-07-09T19:52:14+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -31,7 +31,7 @@ title: Macos setup for software engineer
 
 ## Terminal & Shell Setup
 ---
-- [ ] [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts) - Terminal Font
+- [ ] [Install FiraCode Nerd Font](https://github.com/ryanoasis/nerd-fonts) - Terminal Font (Download Fira Code and Fira Mono from the release page, then drag and drop them into Font Book)
 - [ ] [[Terminal#ZSH]] - [[Terminal#Shell]]
 - [ ] [[Terminal#iterm2]] - [[Terminal]]
 - [ ] [[Terminal#Termius]] - Terminal
@@ -177,14 +177,11 @@ aws configure # Auth CLi
 
 ## Networking
 ---
-- [ ] [[Cloudflare#Abstract|Cloudflare CLi]]
 - [ ] [[Secure Tunneling#Cloudflare Tunnel|cloudflared]] 
 - [ ] [[DNS#q]] - `dig` replacement
 - [ ] [[Secure Tunneling#Ngrok]]
 - [ ] [[File Sharing]]
-- [ ] [[Bandwidth#Bandwhich]]
 - [ ] `brew install telnet`
-- [ ] `brew install socat`
 - [ ] `basher install rauchg/wifi-password` - get the password for the WiFi you’re currently logged onto, make the following changes to the installed bash script at `$HOME/.basher/cellar/bin/wifi-password.sh$`
 ```bash
 # Comment out the below
@@ -193,9 +190,16 @@ ssid="`$airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`"
 # Add in the following
 ssid=`networksetup -getairportnetwork en0 | awk -F": " '{print $2}'`
 ``` 
-- [ ] [[IP Address#ipinfo/cli]]
-- [ ] [[IP Address#asn]]
-- [ ] [[Dynamic Port Forwarding#sshuttle]] - VPN powered by [[SSH]]
+
+
+>[!tool]+ Some other useful tools
+> - [ ] [[Cloudflare#Abstract|Cloudflare CLi]]
+> - [ ] [[IP Address#ipinfo/cli]]
+> - [ ] [[IP Address#asn]]
+> - [ ] [[Bandwidth#Bandwhich]]
+> - [ ] `brew install socat`
+> - [ ] [[Dynamic Port Forwarding#sshuttle]] - VPN powered by [[SSH]]
+
 ## Hardware Tools
 ---
 - [ ] [GPU & Accelerator process monitoring](https://github.com/Syllo/nvtop)
