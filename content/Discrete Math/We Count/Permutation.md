@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-02-08, 10:07
-Last Date: 2024-04-11T15:22:09+08:00
+Last Date: 2024-07-09T17:38:50+08:00
 References: 
 draft: 
 description: 
@@ -35,3 +35,10 @@ aliases:
  src="https://onecompiler.com/embed/java/429xtgctj?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
  ></iframe>
  </div>
+
+## Permutation Questions
+---
+### Without Duplicates
+- [46. Permutations](https://leetcode.cn/problems/permutations/)
+### With Duplicates
+- [47. Permutations II](https://leetcode.cn/problems/permutations-ii/)
