@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-01-28, 15:23
-Last Date: 2024-07-09T17:37:44+08:00
+Last Date: 2024-07-10T20:59:51+08:00
 References: 
 draft: 
 description: Exploring the binomial coefficient, delving into two formulas for its calculation. Formula 1 utilizes recursion, while Formula 2 involves factorials. We also touch upon properties like symmetry and its representation in Pascal's Triangle.
@@ -30,7 +30,7 @@ aliases:
 - [40. Combination Sum II](https://leetcode.cn/problems/combination-sum-ii/)
 - [216. Combination Sum III](https://leetcode.cn/problems/combination-sum-iii/)
 ### Multiple Sets
-- [17. Letter Combinations of a Phone Number](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/)
+- [17. Letter Combinations of a Phone Number](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/) - essentially, finding the [[Set#Cartesian Product]] involves treating **each phone number** as a [[Set]]
 
 ### Partition (分割)
 

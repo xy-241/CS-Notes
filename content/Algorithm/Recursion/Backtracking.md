@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-09-18T12:15:00
-Last Date: 2024-07-09T17:44:48+08:00
+Last Date: 2024-07-10T21:45:30+08:00
 ---
 ## Abstract
 ---
@@ -27,14 +27,19 @@ Last Date: 2024-07-09T17:44:48+08:00
 ### Handling Duplicates in Combination
 - For [[Combination]], each element can be **used only once**, so we **need** to **remove duplicates**. We can achieve this by **sorting the given set**. At each level, **skip elements** with the **same value** as the **previous element**
 
+
 ```java
 // In the primary function
 Arrays.sort(nums);
 
 // In Backtracking function
-for (start = start; start<nums.length; start++) {
-	// ...
-	while(start < nums.length-1 && nums[start]==nums[start+1]) start++;
+while (startIdx < nums.length) {
+  // ... 
+  
+  startIdx++; // go to the next element
+
+  while (startIdx < nums.length && nums[startIdx] == nums[startIdx - 1])
+    startIdx++; // skipping duplicate elements
 }
 ```
 ### 2 Ways to Handle Duplicates in Permutation
@@ -74,8 +79,8 @@ if (i>0 && nums[i-1]==nums[i] && visited[i-1]==false) continue;
 
 
 ### Subset (子集)
-- [78. Subsets](https://leetcode.cn/problems/subsets/)
-- [90. Subsets II](https://leetcode.cn/problems/subsets-ii/)
+- [78. Subsets](https://leetcode.cn/problems/subsets/) - given [[Set]] contains no duplicate elements
+- [90. Subsets II](https://leetcode.cn/problems/subsets-ii/) - given set contains duplicate element, we need to [[#Handling Duplicates in Combination|handle duplicates in combination]]
 #### Maintain Given Order
 - [491. Non-decreasing Subsequences](https://leetcode.cn/problems/non-decreasing-subsequences/)
 
