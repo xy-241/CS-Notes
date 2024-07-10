@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-19T17:16:23+08:00
-Last Date: 2024-07-09T23:33:26+08:00
+Last Date: 2024-07-10T23:38:13+08:00
 References: 
 ---
 ## Abstract
 ---
-![[virtual_memory.png|500]]
+![[data_retrieval_during_process_execution.svg]]
 
-- An [[Abstraction|abstraction]] that maps [[#Virtual Address]] to [[Main Memory#Physical Address]]. In layman's terms, virtual memory takes **program addresses** and **maps them** to **RAM addresses**. The mapping is handled by [[Memory Management Unit (MMU)]]
+- An [[Abstraction|abstraction]] that maps [[#Virtual Address]] to [[Main Memory#Physical Address]]. In layman's terms, virtual memory takes **program addresses** and **maps them** to **RAM addresses**. The mapping is known as [[Page Table]] which is handled by [[Memory Management Unit (MMU)]]
 
 >[!important]
 > The **mapping** gives us **flexibility** in how we use the physical [[Main Memory]].
@@ -44,9 +44,9 @@ References:
 ### Virtual Address
 - Also known as **Logical Address**
 - The addressing system for [[Virtual Memory]], not bounded to physical [[Main Memory]]
-- The address that the [[Process (进程)]] "thinks" it is using
 
-
+>[!important]
+> The address that the [[Process (进程)]] sees and uses to retrieve data or [[Instruction]].
 
 
 

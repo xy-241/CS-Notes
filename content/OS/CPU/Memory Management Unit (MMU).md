@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T01:39:00
-Last Date: 2024-07-01T16:05:03+08:00
+Last Date: 2024-07-10T22:00:55+08:00
 ---
 ## Abstract
 ---
@@ -31,3 +31,7 @@ Last Date: 2024-07-01T16:05:03+08:00
 > 
 > The Translation Lookaside Buffer (TLB) is a component of the CPU's memory management unit (MMU). Its **access speed** is **significantly faster** than accessing the main memory where the [[Page Table]] is stored.
 
+
+## References
+---
+- [图解|什么是缺页错误Page Fault-CSDN博客](https://blog.csdn.net/g6U8W7p06dCO99fQ3/article/details/107240849)
