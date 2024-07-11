@@ -119,3 +119,25 @@ pre {
   width: 100%;
   border-radius: 10px;
 }
+
+// The footer line break
+.footerHr {
+  color: var(--gray);
+  height: 0;
+
+    text-align: center;
+    border: none;
+    border-color: var(--gray);
+    width: 40%;
+    margin: 4em auto;
+    padding: 0;
+    overflow: visible;
+}
+.footerHr::after {
+  content: "* * *";
+  color: var(--gray);
+  margin: -1em 0 .5em;
+  padding: .5em 1em;
+  font-size: 1.5em;
+  display: inline-block;
+}

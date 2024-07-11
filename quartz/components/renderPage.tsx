@@ -234,7 +234,8 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
-              <hr />
+              
+              {/* <hr class="footerHr"/> */}
               <div class="page-footer">
                 {afterBody.map((BodyComponent) => (
                   <BodyComponent {...componentData} />
