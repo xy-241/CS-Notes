@@ -6,16 +6,20 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-06-24T21:43:50+08:00
+Last Date: 2024-07-11T14:15:50+08:00
 References: 
 ---
 ## Abstract
 ---
-- Page fault happens when a [[Virtual Memory#Virtual Address]] is **not mapped** to a [[Main Memory#Memory Frames]] in the [[Page Table]]. Essentially, the actual data within the [[Memory Page]] **isn't found** in the [[Main Memory]]. The [[CPU]] can only start working on the task after obtaining the **data** from the **main memory**
+- A page fault occurs when a [[Memory Page|memory page]] is **not mapped** to a [[Main Memory#Memory Frames|memory frame]] in the [[Page Table|page table]]. This means that the **data from** the corresponding [[Memory Page|memory page]] is **not currently present** in the [[Main Memory|main memory]]. The CPU can only proceed with the task after the required data is fetched from the main memory
 
 ## Minor Page Fault
 ---
-- The [[Memory Page]] exists in [[Virtual Memory]] but needs to be transferred from secondary storage ([[Flash Memory]] or [[Hard Disk]]) into [[Main Memory]]. This process, known as [[Swap Space#Paging]], is typically fast
+
+![[minor_page_fault.png|500]]
+
+- The [[Page Table#Page Table Entry|page table entry]] exists in [[Page Table|page table]], but it points to the secondary storage ([[Flash Memory|flash memory]] or [[Hard Disk|hard disk]])
+- The corresponding data needs to be transferred from secondary storage into [[Main Memory|main memory]] to be used by the [[CPU]]. This process, known as [[Swap Space#Paging|paging]], is a **significant performance hit**
 
 
 ## Major Page Fault

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T20:17:38+08:00
-Last Date: 2024-07-10T23:59:21+08:00
+Last Date: 2024-07-11T13:59:53+08:00
 References: 
 ---
 ## Abstract
@@ -21,6 +21,8 @@ References:
 >[!attention]
 > Each [[Process (进程)]] has its own Page Table for better memory protection.
 
+### Page Table Entry
+- A **mapping** of [[Memory Page|memory page]] and [[Main Memory#Memory Frames|memory frame]] in the [[Page Table|page table]]
 
 ## Page Table Address Translation
 ---
