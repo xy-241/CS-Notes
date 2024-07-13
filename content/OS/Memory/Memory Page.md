@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-10-07T16:38:28+08:00
-Last Date: 2024-06-21T22:40:41+08:00
+Last Date: 2024-07-12T16:36:28+08:00
 References: 
 ---
 ## Abstract
@@ -23,6 +23,9 @@ References:
 
 ### Page Number
 - A number to identify a [[Memory Page]]
+
+### Dirty Memory Page
+- [[Memory Page]] that has been modified in the [[Main Memory]], and **needs to be written back** to **secondary storage** ([[Flash Memory]] or [[Hard Disk]]) to **ensure consistency** and **data integrity**
 
 ## Memory Page Size
 ---
