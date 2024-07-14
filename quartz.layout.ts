@@ -5,7 +5,7 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [Component.Comments()],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/xy-241/CS-Notes"
@@ -36,7 +36,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
     Component.Graph(),
-    Component.Comments(),
   ],
 }
 
