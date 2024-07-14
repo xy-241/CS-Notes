@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T20:17:38+08:00
-Last Date: 2024-07-11T13:59:53+08:00
+Last Date: 2024-07-14T18:25:04+08:00
 References: 
 ---
 ## Abstract
@@ -18,8 +18,9 @@ References:
 >[!question] Why doesn't one virtual address simply map to one physical address?
 > Because this would make our page table **too large**! We would need one entry in the page table to keep track of each individual address. With memory pages, we can have **one entry** to **keep track** of **4096 addresses** if the page size is `4KB`.
 
->[!attention]
-> Each [[Process (进程)]] has its own Page Table for better memory protection.
+>[!important] Different process different page table
+> Separate page tables allow us to **isolate [[Process (进程)|processes]]**, preventing them from accessing each other's data, while still providing the **flexibility for controlled data sharing** when necessary. For example, refer to the [[Linux Address Space#Virtual Memory in Linux|virtual memory implementation in Linux]].
+
 
 ### Page Table Entry
 - A **mapping** of [[Memory Page|memory page]] and [[Main Memory#Memory Frames|memory frame]] in the [[Page Table|page table]]

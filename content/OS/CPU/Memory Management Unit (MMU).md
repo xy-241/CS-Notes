@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T01:39:00
-Last Date: 2024-07-10T22:00:55+08:00
+Last Date: 2024-07-14T18:36:13+08:00
 ---
 ## Abstract
 ---
@@ -24,14 +24,17 @@ Last Date: 2024-07-10T22:00:55+08:00
 ---
 ![[page_table_mapping.png|500]]
 
-- Part of [[Memory Management Unit (MMU)]] that caches the **mappings** of [[Virtual Memory#Virtual Address]] to [[Main Memory#Physical Address]] in the [[CPU]]
+- Part of [[Memory Management Unit (MMU)]] that **caches** the [[Page Table#Page Table Entry|page table entries]]
 
->[!success] Much faster than accessing page table directly
+>[!question] Why do we need Translation Lookaside Buffer?
 > ![[mmu_tlb.png|300]]
 > 
-> The Translation Lookaside Buffer (TLB) is a component of the CPU's memory management unit (MMU). Its **access speed** is **significantly faster** than accessing the main memory where the [[Page Table]] is stored.
+> The [[Page Table|page table]] resides in [[Main Memory|main memory]], and accessing it is [[Latency Number|slow]]. The Translation Lookaside Buffer (TLB) is a component of the CPU's memory management unit (MMU). By **caching recently used** page table entries, the TLB **eliminates** the **need for frequent memory accesses**, **significantly improving the speed** of obtaining [[Main Memory#Physical Address|physical addresses]].
+
+
 
 
 ## References
 ---
 - [图解|什么是缺页错误Page Fault-CSDN博客](https://blog.csdn.net/g6U8W7p06dCO99fQ3/article/details/107240849)
+- [Virtual Memory: 10 Making Virtual Memory Fast - YouTube](https://youtu.be/uyrSn3qbZ8U?si=TqOhXWXu4DczN9r7)
