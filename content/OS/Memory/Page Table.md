@@ -13,7 +13,7 @@ References:
 ---
 ![[page_table.png]]
 
-- Maintains mappings between [[Memory Page]] and the [[Main Memory#Memory Frames]]. The mappings are stored inside the [[Main Memory]], we can use [[Memory Management Unit (MMU)#Translation Lookaside Buffer]] to reduce the number of memory access since memory access is an [[Latency Number|expensive operation]]
+- Maintains mappings between [[Memory Page]] and the [[Main Memory#Memory Frames]]. The mappings are stored inside the [[Main Memory]], we can use [[TLB]] to reduce the number of memory access since memory access is an [[Latency Number|expensive operation]]
 
 >[!question] Why doesn't one virtual address simply map to one physical address?
 > Because this would make our page table **too large**! We would need one entry in the page table to keep track of each individual address. With memory pages, we can have **one entry** to **keep track** of **4096 addresses** if the page size is `4KB`.
@@ -29,7 +29,7 @@ References:
 ---
 ![[page_table_mapping.png|600]]
 
-- The above diagram assumes the [[Memory Page]] and the [[Main Memory#Memory Frames]] are `4kb`. The [[Memory Management Unit (MMU)#Translation Lookaside Buffer]] is part of [[Memory Management Unit (MMU)]] that handles the mapping
+- The above diagram assumes the [[Memory Page]] and the [[Main Memory#Memory Frames]] are `4kb`. The [[TLB]] is part of [[MMU]] that handles the mapping
 - As you can see, the value in the mapping ignores the last 12 [[Computer Data Representation#Bit]] which is known as the **page offset**. The **same memory page number** share the **same memory frame number**
 
 ## References

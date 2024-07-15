@@ -6,13 +6,14 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T01:39:00
-Last Date: 2024-07-14T18:36:13+08:00
+Last Date: 2024-07-15T18:49:50+08:00
 ---
 ## Abstract
 ---
 
 ![[data_retrieval_during_process_execution.svg]]
 
+- Stands for **M**emory **M**anagement **U**nit
 - A hardware that takes in [[Virtual Memory#Virtual Address]] and translates it into a [[Main Memory#Physical Address]] using [[Page Table]]. This allows the [[CPU]] access data stored in [[Main Memory]] using virtual addresses. This **translation process** is what makes [[Virtual Memory]] possible
 
 >[!attention]
@@ -20,16 +21,7 @@ Last Date: 2024-07-14T18:36:13+08:00
 
 
 
-## Translation Lookaside Buffer
----
-![[page_table_mapping.png|500]]
 
-- Part of [[Memory Management Unit (MMU)]] that **caches** the [[Page Table#Page Table Entry|page table entries]]
-
->[!question] Why do we need Translation Lookaside Buffer?
-> ![[mmu_tlb.png|300]]
-> 
-> The [[Page Table|page table]] resides in [[Main Memory|main memory]], and accessing it is [[Latency Number|slow]]. The Translation Lookaside Buffer (TLB) is a component of the CPU's memory management unit (MMU). By **caching recently used** page table entries, the TLB **eliminates** the **need for frequent memory accesses**, **significantly improving the speed** of obtaining [[Main Memory#Physical Address|physical addresses]].
 
 
 

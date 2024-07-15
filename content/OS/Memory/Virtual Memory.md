@@ -13,7 +13,7 @@ References:
 ---
 ![[data_retrieval_during_process_execution.svg]]
 
-- An [[Abstraction|abstraction]] that maps [[#Virtual Address]] to [[Main Memory#Physical Address]]. In layman's terms, virtual memory takes **program addresses** and **maps them** to **RAM addresses**. The mapping is known as [[Page Table]] which is handled by [[Memory Management Unit (MMU)]]
+- An [[Abstraction|abstraction]] that maps [[#Virtual Address]] to [[Main Memory#Physical Address]]. In layman's terms, virtual memory takes **program addresses** and **maps them** to **RAM addresses**. The mapping is known as [[Page Table]] which is handled by [[MMU]]
 
 >[!important]
 > The **mapping** gives us **flexibility** in how we use the physical [[Main Memory]].
