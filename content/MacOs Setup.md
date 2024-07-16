@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-07-09T19:52:14+08:00
+Last Date: 2024-07-16T23:25:51+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -24,8 +24,12 @@ title: Macos setup for software engineer
 - [ ] [Floorp](https://floorp.app/en/), a Firefox-based browser, [Install Bypass Paywalls](https://github.com/iamadamdev/bypass-paywalls-chrome)
 - [ ] [Arc](https://www.youtube.com/watch?v=8PhdfcX9tG0) - Chrome-based browser with great UX
 - [ ] [Google Drive Client](https://www.google.com/intl/en_sg/drive/download/) - Cloud storage
-- [ ] [Obsidian](https://obsidian.md/) - Note Taking App
+- [ ] [Obsidian](https://obsidian.md/) - Note taking App
+- [ ] [Notion](https://www.notion.so/desktop) - Note taking app
+- [ ] [Anytype](https://download.anytype.io/) - Notion but local
+- [ ] [Telegram Desktop](https://desktop.telegram.org/) - Messaging app
 - [ ] [StrongBox](https://apps.apple.com/us/app/strongbox-password-manager/id897283731) - Password Manager
+- [ ] [Gifski](https://apps.apple.com/us/app/gifski/id1351639930?mt=12) - GIF convertor
 - [ ] [Tutanota](https://tutanota.com/#download)- Private email
 - [ ] [List of Wonderful Apps Waiting to Be Explored!](https://sindresorhus.com/apps)
 
