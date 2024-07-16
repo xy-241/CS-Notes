@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T14:45:06+08:00
-Last Date: 2024-03-08T11:24:39+08:00
+Last Date: 2024-07-16T13:48:57+08:00
 References: 
 description: Simple yet Evil
 ---
@@ -47,6 +47,13 @@ right = mid-1; // When target is smaller
 
 >[!question] Why `left<=right` and not `left<right`
 > For ``while (left<right){ ... }``, the loop exits when `left>=right`, we may potentially miss an element which may be the desired value. Since `right` points to an valid index of the array.
+
+
+>[!important]
+>Setting the boundary for `left` and `right` also depends on the question.
+>
+> Binary search is generally used on **index range**. For questions like "[Kth Smallest Element in a Sorted Matrix](https://xy241-dsa.notion.site/Kth-Smallest-Element-in-a-Sorted-Matrix-896f67cca6034496af5ed2b56493797c)" where `mid` is the potential answer, we set `right = mid` and break the while loop when `left == right`, since `left == right` is the answer. We are using binary search on **number range**.
+
 ### Right Boundary Excludes last Element (左闭右开)
 ```java
 // Assuming nums is an array

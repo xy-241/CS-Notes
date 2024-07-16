@@ -6,26 +6,27 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-03-26, 10:30
-Last Date: 2024-03-26T11:02:10+08:00
+Last Date: 2024-07-16T13:44:00+08:00
 References: 
 draft: 
 description: 
 ---
-**Total 19 items**
-
 ## Basics
 ---
-4 items
-
 - [ ] [[Data Structure]]
 - [ ] [[Abstract Data Type (ADT)]]
 - [ ] [[Array]]
 - [ ] [[Linked List]]
+- [ ] [[Stack]]
+- [ ] [[Queue]]
+- [ ] [[Deque]]
+
+## Graph
+---
+- [ ] [[Graph]]
 
 ## Tree
 ---
-7 items
-
 - [ ] [[Tree]]
 - [ ] [[Binary Tree]]
 - [ ] [[Perfect Binary Tree (完美二叉树)]]
@@ -37,20 +38,13 @@ description:
 
 ## Hash Map
 ---
-3 items
-
 - [ ] [[Hash Map]]
 - [ ] [[Hash Function]]
 - [ ] [[Hash Collision]]
 
 
 
+
 ## WIP
 ---
-5 items
-
-- [ ] [[Deque]]
-- [ ] [[Graph]]
-- [ ] [[Queue]]
-- [ ] [[Stack]]
 - [ ] [[Union Find]]
