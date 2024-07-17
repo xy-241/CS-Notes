@@ -7,7 +7,7 @@ tags:
   - nus
   - OS
 Creation Date: 2024-02-12, 19:32
-Last Date: 2024-02-13T17:21:11+08:00
+Last Date: 2024-07-17T14:46:19+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2106 on this website, based on the textbook. Get help preparing for your lab and final.
@@ -70,6 +70,8 @@ title: cs2106 nus notes
 - [[Page Table]]
 - [[Memory Page]]
 - [[Page Fault]]
+- [[MMU]]
+- [[TLB]]
 - [[Segmentation Fault]]
 - [[Memory Safety]]
 - [[Null Safety]]
