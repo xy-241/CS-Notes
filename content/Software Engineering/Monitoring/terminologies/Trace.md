@@ -21,7 +21,7 @@ References:
 ### Metrics
 - Captures request counts, error counts, and latency measures of requests
 ### Runtime Metrics
-- Allow to view [[Heap]], non-heap memory usage and [[Garbage Collector]] activity of the app
+- Allow to view [[Address Space#Heap Segment]], non-heap memory usage and [[Garbage Collector]] activity of the app
 - [[Datadog]] can have this enabled with `export DD_RUNTIME_METRICS_ENABLED=true` 
 ### Instrumented
 - Code or tools have been added to the application to monitor, measure, or analyze its behavior during execution

@@ -21,6 +21,6 @@ References:
 - Aim for the perfect middle ground of 50%
 ### Dynamic 
 - Typically has some learning or storage capability to detect patterns
-- More complicated than [[#Static]] and [[#Random]]. Using extra [[Main Memory]] like [[Heap]] to store the state and loading up multiple [[Instruction]] to analysis them
+- More complicated than [[#Static]] and [[#Random]]. Using [[Address Space#Heap Segment]] to store the state and loading up multiple [[Instruction]] to analysis them
 
 %% ### Neural %%
