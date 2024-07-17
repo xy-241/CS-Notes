@@ -10,7 +10,7 @@ tags:
   - c
   - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-07-06T01:06:25+08:00
+Last Date: 2024-07-17T21:35:24+08:00
 References: 
 ---
 ## Abstract
@@ -29,8 +29,7 @@ References:
 >
  > It's actually even more nuanced than that, because of [[CPU Cache#Cache Locality]], so actually smaller data can be faster and slower depending on the circumstance. But that's very complex and should be left to experimentation **if the need arises**.
 
-### Type System
-- A set of rules about [[Datatype]] of [[Abstraction#Data Abstraction|variable]], [[Expression]], [[Function]], and their interactions
+
 ### Primitive Datatype
 - Also known as **Built-in Datatype**
 * Great performance since there isn't much abstraction like [[#Custom Datatype]]
@@ -43,101 +42,32 @@ References:
 >[!caution] Value comparison of custom datatype in Java
 > We can't use `==` to compare [[OOP#OOP Object]], because `==` compares the value holding by the variable. However, variables are only holding the [[Memory Address]] to the OOP Object. So if we want to compare the value of OOP Object, we need to use the `equals()` method.
 
-
-
-
-
-
-## Type Safety
+## Subtyping
 ---
-- Type safety means ensuring that **operations** are only performed on **variables of compatible [[Datatype]]**, **preventing errors** and **ensuring correct results**
+- A [[Datatype|data type]] $T$ is a **subtype** of a data type $S$ if a piece of **code written for** a variable of data type $S$ can also be **safely used** on a variable of data type $T$
+- The relationship can be represented with $T <: S$, where $S$ is also known as the **super type** of $T$
 
-| [[#Statically Typed\|Statically Typed]] | [[#Strongly Typed\|Strongly Typed]] | Meaning                                                                   | **Language**    |
-| --------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------- | --------------- |
-| ❌                                       | ❌                                   | Datatype checking is performed at **runtime**, with **loose rules**       | Javascript, PHP |
-| ❌                                       | ✅                                   | Datatype checking is performed at **runtime**, with **strict rules**      | Python          |
-| ✅                                       | ❌                                   | Datatype checking is performed at **compile time**, with **loose rules**  | C               |
-| ✅                                       | ✅                                   | Datatype checking is performed at **compile time**, with **strict rules** | Java            |
-
-- Javascript **allows** the **addition** between **integer** and **string**
-
-<div class="onecompilerCode-wrapper">
-<iframe
- class="onecompilerCode"
- frameBorder="0" 
- src="https://onecompiler.com/embed/java/42fqdaua5?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
- ></iframe>
- </div>
-
-- Python **prevents** the **addition** between **integer** and **string**. However, the datatype checking only occurs when the code is executed. Change `False` to `True` on **line 5** to observe the datatype checking process
-
-<div class="onecompilerCode-wrapper">
-<iframe
- class="onecompilerCode"
- frameBorder="0" 
- src="https://onecompiler.com/embed/java/42fqdmazh?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
- ></iframe>
- </div>
- 
-
-- C allows **implicit conversions** between numeric types and has a `void` pointer type that can point to any data type. `b` contains the [[Memory Address]] which is used in the addition with `a`
-
-<div class="onecompilerCode-wrapper">
-<iframe
- class="onecompilerCode"
- frameBorder="0" 
- src="https://onecompiler.com/embed/java/42fqefxte?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
- ></iframe>
- </div>
- 
-- Java **prevents** the **addition** between **integer** and **string**, even if the code with type error isn't going to get executed
-
-
-<div class="onecompilerCode-wrapper">
-<iframe
- class="onecompilerCode"
- frameBorder="0" 
- src="https://onecompiler.com/embed/java/42fqfy2rj?codeChangeEvent=true&theme=dark&hideLanguageSelection=true&hideNew=true&hideNewFileOption=true&availableLanguages=true&hideTitle=true&hideStdin=true" 
- ></iframe>
- </div>
- 
-
-### Statically Typed
-- [[Datatype]] checking is performed at **compile time**
+>[!example] Java
+> Subtyping among Java [[#Primitive Datatype]]
+> - `byte` <: `short` <: `int` <: `long`
+> - `long` <: `float` <: `double`
+> - `char` <: `int`
 
 >[!important]
-> The datatype must be known during compilation, either by **explicitly defining** the data type or by **assigning a value** to the variable, which allows the **language to infer the type**.
+> Subtyping is [[Relation#Reflexive]], $T <: T$
 > 
-> Use **type inference** only when the assigned value clearly shows its type like `a := "thisIsStr"`. Otherwise, explicitly declare the type (e.g., `String a := foo()`). This ensures **code readability**.
+> Subtyping is [[Relation#Transitive]], if $S <: T$ and $T <: U$, then $S <: U$
 
->[!success] More stable codes & a more informative coding experience
-> **Errors** related to **type mismatches** can be **caught before the program runs**, offering **early detection** of potential problems.
-> 
-> [[Language Processors#Compiler]] also has more information to do more checks on the codes and enforce certain standards. Plus better **code completion** when coding. Refer to this [video](https://youtu.be/hwyRnHA54lI?si=lrDIYGWl04qfdXdj&t=324) for more more details and example.
-
-### Dynamically Typed
-- [[Datatype]] checking is performed when we are **running the program**
-
->[!success] Faster coding experience
-> We don't need to think about what datatype each variable has, we can better **focus** on **implementing the logic**.
-
->[!caution] More runtime errors
-> We may run **operation** on variables that have **incompatible datatypes** during runtime, this can be avoided if the languages is [[#Statically Typed]].
-
-### Strongly Typed
-- Strongly typed means the [[Datatype]] checking is **strict**
-- For example, we can't add `int` variable with `string` variable
-
-### Weakly Typed
-- Weakly typed means the [[Datatype]] checking **ISN'T strict**
-- For example, we can add `int` variable with `string` variable in [[Node.js|Javascript]]
-
+### Widening Type Conversion
+- A value of datatype $T$ **can be assigned** to a variable of type $S$ if and only if $T$ is a [[#Subtyping|subtype]] of $S$
+- Supported by [[Java]]
 
 ## Struct
 ---
 - Allows us to group a set of data to form our own [[Datatype]]. Refer to [Struct in GO](https://youtu.be/8uiZC0l4Ajw?si=UpYAqgfaw9H8BMxE&t=1867) to see how struct is implemented and used in Go
 
-## Rust
+
+## Rust Datatype
 ---
 ### Rust Scalar Type
 - Basically [[#Primitive Datatype]], rust supports 
@@ -149,5 +79,5 @@ References:
 ### Rust Compound Type
 - Basically [[#Custom Datatype]] rust supports **natively**
 	1. Array, basically [[Array]]
-	2. Tuple, basically [[Array]] that contains elements of different [[Datatype]]
+	2. Tuple, basically array that contains elements of different [[Datatype]]
 - Refer to [Rust Compound Data Types](https://rust-book.cs.brown.edu/ch03-02-data-types.html#compound-types) for more details
