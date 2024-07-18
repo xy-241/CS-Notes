@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-03-26, 10:42
-Last Date: 2024-04-15T16:34:56+08:00
+Last Date: 2024-07-18T12:34:09+08:00
 References: 
 draft: 
 description: 
@@ -14,16 +14,24 @@ description:
 ## Abstract
 ---
 - Each node has $0$ to $2$ [[#Edge]]
-- The maximum number of nodes at `n`th [[Tree#Level]] is `2^(n-1)`
+- The maximum number of nodes at the `nth` [[Tree#Level|level]] is `2^(n-1)`, counting from $1$
 
 >[!bigbrain]- Implementation with Linked List
 > Refer to [[Linked List]] to understand its properties.
-> ![[binary_tree_linked_list.png|500]]
+>
 
->[!bigbrain]- Implementation with Array
-> Given the index of parent node is `i`, the index of its left child is `i*2+1`, right child is `i*2+2`. Refer to [[Array]] to understand its properties.
-> ![[binary_tree_array.png|500]]
 
+
+## Binary Tree Array Representation
+---
+
+ ![[binary_tree_array.png|400]]
+- Given the index of a parent node `i`, the **index of its left child** is calculated as `i * 2 + 1`, The **index of its right child** is calculated as `i * 2 + 2`
+
+## Binary Tree Linked List Representation
+---
+ ![[binary_tree_linked_list.png|400]]
+- Compared to the [[#Binary Tree Array Representation|array representation]], the linked list representation of a binary tree is **easier to scale in terms of size**, but it comes with **higher memory usage** due to the overhead of storing pointers for each node. Additionally, it cannot take advantage of [[CPU Cache#Cache Locality|CPU cache locality]] as effectively as the array representation
 ## Degenerate Binary Tree
 ---
 ![[bst_to_skewed_tree.png|400]]
