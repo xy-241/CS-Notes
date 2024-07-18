@@ -6,9 +6,22 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-23T17:47:10+08:00
-Last Date: 2024-05-28T23:25:10+08:00
+Last Date: 2024-07-18T21:56:37+08:00
 References: 
 ---
 ## Abstract
 ---
 - Extending from existing [[OOP#OOP Class]] or [[Interface]], the child classes take up all the properties and methods of their parent classes, building up on existing [[Abstraction]]
+
+
+## "Is-a" Relationship
+---
+- "A subclass **is a** superclass", we mean that the subclass [[Inheritance|inherits]] from the superclass. This implies that the **subclass can be used wherever the superclass is expected**, adhering to the "is-a" relationship
+
+>[!important] A less abstracted explanation
+> Consider a superclass `Animal` and a subclass `Dog`. In this scenario, a `Dog` **is an** `Animal`. This means `Dog` inherits all the characteristics (methods and fields) of `Animal`. During compilation, a `Dog` object can be assigned the `Animal` data type and utilise methods defined in `Animal`, potentially with modifications through **method overriding** in the `Dog` class.
+> 
+> This concept promotes [[Polymorphism|polymorphism]], allowing `Dog` objects to be treated as instances of their superclass `Animal`.
+
+
+

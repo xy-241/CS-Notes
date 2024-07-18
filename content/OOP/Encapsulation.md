@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2024-05-28, 23:25
-Last Date: 2024-07-17T22:00:34+08:00
+Last Date: 2024-07-18T21:59:39+08:00
 References: 
 draft: 
 description: 
@@ -29,3 +29,16 @@ description:
 
 >[!success] Improves readability
 > It makes the code easier to understand as it **focuses on actions** and **responsibilities** rather than on the internal states of objects.
+
+
+## "Has-a" Relationship
+---
+- Also known as **Composition**
+- "Class A **has a** Class B," it means that Class A contains an instance of Class B as one of its members or attributes. This relationship, known as composition, is achieved by Class A **holding a reference** to an object of Class B
+
+>[!important] A less abstracted explanation
+> Consider a class `Car` and a class `Engine`. In this case, a `Car` **has an** `Engine`, meaning that a `Car` object contains an instance of the `Engine` class.
+> 
+> This allows for flexible designs as the `Engine` class can be **easily replaced** with another class that exhibits the same behaviour. It also promotes [[Encapsulation|encapsulation]] by **keeping related functionalities within the classes responsible for them**.
+> 
+> "Has-a" Relationship is employed when **one class** needs to **utilise** the **functionality of another class** **without** [[Inheritance|inheriting]] from it, resulting in a more **modular** and **adaptable design**.
