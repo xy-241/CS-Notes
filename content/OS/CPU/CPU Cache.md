@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-07-14T20:41:40+08:00
-Last Date: 2024-07-05T13:29:01+08:00
+Last Date: 2024-07-20T19:05:59+08:00
 References: 
 ---
 ## Abstract
@@ -21,8 +21,13 @@ References:
 > **L3 Cache** is known as **shared cache**, because it is shared between all the [[CPU#CPU Core|cores]] of the CPU. Accessed if data isn't found in L2 cache. L3 Cache is still twice as fast as [[Main Memory#DRAM]].
 
 ### Cache Line
-* Ranging from 32 to 128 [[Computer Data Representation#Byte]]
-* When the CPU fetches data into the cache, it brings in entire cache lines rather than individual bytes
+* Ranging from 32 to 128 [[Computer Data Representation#Byte|bytes]]
+* When the CPU fetches data into the cache, it brings in an entire cache line rather than the bytes currently being accessed. This is to take advantage of [[#Spacial Locality|spatial locality]]
+
+>[!important]
+> A [[CPU|processor]] uses the **lower bits** of a [[Main Memory#Physical Address|RAM address]] to **index the cache**. This allows a CPU cache with limited size to cover the entire main memory, as multiple physical addresses can be mapped to the same cache line.
+> 
+> However, this also means that multiple physical addresses share the same cache line. To **differentiate between these addresses**, each cache line contains an **address tag** that **identifies which physical address** is currently mapped to that line.
 
 ### Cache Hit
 - When [[CPU Cache]]needed is in [[CPU Cache]]
@@ -57,3 +62,4 @@ References:
 ## References 
 ---
 - [Ep 073: Introduction to Cache Memory - YouTube](https://youtu.be/Bz49xnKBH_0?si=KvO_9Bw3fUl1SnJr)
+- [What is a cache line actually? - Quora](https://www.quora.com/What-is-a-cache-line-actually)
