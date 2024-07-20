@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-07-17, 10:02
-Last Date: 2024-07-18T11:56:33+08:00
+Last Date: 2024-07-20T17:23:25+08:00
 References: 
 draft: 
 description: 
@@ -35,6 +35,40 @@ description:
 > 
 > As you can see, priority queues are used extensively in [[Graph|graph-related]] algorithms.
 
+## Priority Queue Operations
+---
+
+| Operation                         | Description                                                   | Time Complexity (Average) | Time Complexity (Worst) |
+| --------------------------------- | ------------------------------------------------------------- | ------------------------- | ----------------------- |
+| `add(element)` / `offer(element)` | Inserts an element into the priority queue.                   | O(log n)                  | O(log n)                |
+| `poll()`                          | Removes and returns the highest priority element.             | O(log n)                  | O(log n)                |
+| `peek()`                          | Retrieves, but does not remove, the highest priority element. | O(1)                      | O(1)                    |
+| `remove(element)`                 | Removes a specific element.                                   | O(n)                      | O(n)                    |
+| `contains(element)`               | Checks if the queue contains a specific element.              | O(n)                      | O(n)                    |
+| `size()`                          | Returns the number of elements in the queue.                  | O(1)                      | O(1)                    |
+>[!important]
+> We can optimise `remove(element)` and `contains(element)` to $O(log n)$ and $O(1)$, respectively, with the help of a [[Hash Map|hashmap]].
+> 
+> Refer to [this video](https://www.youtube.com/watch?v=eVq8CmoC1x8) for the implementation details.
+
+>[!question] `add()` vs `offer()`?
+> **`add()`:** If the queue is full, `add()` would throw an `IllegalStateException`.
+> 
+> **`offer()`:** If the queue is full, `offer()` would return `false`.
+## Flipping Priority Queues: Min to Max and Back
+---
+- Programming languages usually come with either a min [[Priority Queue|priority queue]] or a max priority queue.
+
+>[!question] How to have a max priority queue when the language only provides a min priority queue, and vice versa?
+> **1. Negating the comparator value:**
+> Since priority queues are comparable (they implement some sort of comparable interface, such as [[Java Comparison|Java's Comparator interface]]), we can simply **negate the comparison result**.
+> 
+> **2. Negating the elements:**
+> Another way is to **negate the values before** we insert them into the priority queue and **negate them again** when they are taken out.
+
+
 ## References
 ---
 - [Priority Queue Introduction - YouTube](https://youtu.be/wptevk0bshY?si=bomLk1DsxWS5s3PI)
+- [Priority Queue Min Heaps and Max Heaps - YouTube](https://youtu.be/HCEr35qpawQ?si=BhHC1NhqzMsPtDFE)
+- [Priority Queue Removing Elements - YouTube](https://www.youtube.com/watch?v=eVq8CmoC1x8)

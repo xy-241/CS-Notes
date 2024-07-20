@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T14:45:06+08:00
-Last Date: 2024-07-16T13:48:57+08:00
+Last Date: 2024-07-20T16:44:16+08:00
 References: 
 description: Simple yet Evil
 ---
@@ -52,7 +52,9 @@ right = mid-1; // When target is smaller
 >[!important]
 >Setting the boundary for `left` and `right` also depends on the question.
 >
-> Binary search is generally used on **index range**. For questions like "[Kth Smallest Element in a Sorted Matrix](https://xy241-dsa.notion.site/Kth-Smallest-Element-in-a-Sorted-Matrix-896f67cca6034496af5ed2b56493797c)" where `mid` is the potential answer, we set `right = mid` and break the while loop when `left == right`, since `left == right` is the answer. We are using binary search on **number range**.
+> Binary search is generally used on **index range**. For questions like ["Kth Smallest Element in a Sorted Matrix"](https://xy241-dsa.notion.site/Kth-Smallest-Element-in-a-Sorted-Matrix-896f67cca6034496af5ed2b56493797c) where `mid` is the potential answer, we set `right = mid` and break the while loop when `left == right`, since `left == right` is the answer. We are using binary search on **number range**.
+> 
+> We can use binary search to [search for a value in a 2D matrix](https://xy241-dsa.notion.site/74-Search-a-2D-Matrix-a5e993ffe622474e96e9848d88c7e998?pvs=4), given that **each row** is **sorted in non-decreasing order** and the **first integer of each row** is **greater than the last integer of the previous row**. This approach **utilises creative row and column indexing**, where binary search is applied to the **index range**.
 
 ### Right Boundary Excludes last Element (左闭右开)
 ```java

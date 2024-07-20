@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-03-26, 10:42
-Last Date: 2024-07-18T12:34:09+08:00
+Last Date: 2024-07-19T12:13:43+08:00
 References: 
 draft: 
 description: 
@@ -26,7 +26,7 @@ description:
 ---
 
  ![[binary_tree_array.png|400]]
-- Given the index of a parent node `i`, the **index of its left child** is calculated as `i * 2 + 1`, The **index of its right child** is calculated as `i * 2 + 2`
+- Given the index of a parent node `i`, the **index of its left child** is calculated as `i * 2 + 1`, the **index of its right child** is calculated as `i * 2 + 2`. We can find the **index of its parent node** with `(i - 1) / 2`
 
 ## Binary Tree Linked List Representation
 ---
