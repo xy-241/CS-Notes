@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-04-26T13:52:47+08:00
+Last Date: 2024-07-21T16:20:11+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -467,8 +467,20 @@ import java.util.*;
 >[!caution]- Slow on almost sorted array!
 > Merge sort's performance is still $O(nlogn)$ when the array is almost sorted, because it needs to perform the full divide-and-conquer process regardless how chaotic the given array is. While [[#Bubble Sort]] and [[#Insertion Sort]] have a time complexity of $O(n)$.
 
+## Quick Sort
+---
+- **Divide:** Select a 'pivot' element from the array
+- **Partition:** Rearrange the array so that all elements smaller than the pivot are placed to its left and all elements greater than the pivot are placed to its right. 
+- **Conquer:** Recursively apply the same process (steps 1 and 2) to the sub-array on the left of the pivot and the sub-array on the right of the pivot. The base case for recursion occurs when an array or sub-array has one or zero elements, as they are already sorted by default
 
+>[!important]
+> Quick sort is an [[#In-Place]] sorting algorithm.
 
+>[!question] How is partition implemented?
+> Essentially, we have two indices, `i` and `j`, both starting at index 0. The index `i` keeps track of the **last position** where an **element smaller than the pivot** was placed. Meanwhile, `j` **scans** the array from index 0 to the last index.
+> 
+> Here is a [short video](https://youtu.be/MZaf_9IZCrc?si=1tH1H2VEaxcLwRg6) showing how partition is carried
 ## References
 ---
 - [Sorting Algorithms Animations | Toptal®](https://www.toptal.com/developers/sorting-algorithms)
+- [Quicksort: Partitioning an array - YouTube](https://youtu.be/MZaf_9IZCrc?si=1tH1H2VEaxcLwRg6)
