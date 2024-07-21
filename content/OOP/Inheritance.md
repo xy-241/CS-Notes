@@ -6,12 +6,17 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-23T17:47:10+08:00
-Last Date: 2024-07-18T21:56:37+08:00
+Last Date: 2024-07-22T01:43:13+08:00
 References: 
 ---
 ## Abstract
 ---
-- Extending from existing [[OOP#OOP Class]] or [[Interface]], the child classes take up all the properties and methods of their parent classes, building up on existing [[Abstraction]]
+- Extending from existing [[OOP#OOP Class]], the child classes take up all the properties and methods of their parent classes, building up on existing [[Abstraction|abstraction]]
+
+>[!important]
+> Inheritance should be used only when a **clear [[#"Is-a" Relationship|hierarchical relationship]]** and **shared behaviours** exist between the **parent (or base) class** and the **child (or derived) class**. 
+> 
+> Otherwise, consider using [[OOP#OOP Interface|interfaces]] and [[Encapsulation#"Has-a" Relationship|composition]].
 
 
 ## "Is-a" Relationship

@@ -3,7 +3,10 @@ Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
-tags: 
+tags:
+  - java
+  - functional
+  - OOP
 Creation Date: 2024-05-01, 20:35
 Last Date: 2024-05-10T22:08:44+08:00
 References: 
