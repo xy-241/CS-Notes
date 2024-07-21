@@ -9,7 +9,7 @@ tags:
   - java
   - functional
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-05-16T19:05:24+08:00
+Last Date: 2024-07-19T17:23:38+08:00
 References: 
 ---
 ## Abstract
@@ -18,7 +18,7 @@ References:
 
 ### Function Signature 
 - Refers to the declaration of a function
-- Including its name, return [[Datatype]], and parameter datatype
+- The signature is the combination of the **function's name**, **argument [[Datatype|types]]**, **argument order**, **argument count**, and **return type**
 
 ## First-class Citizen Function
 ---

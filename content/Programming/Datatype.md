@@ -10,7 +10,7 @@ tags:
   - c
   - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-07-17T21:35:24+08:00
+Last Date: 2024-07-19T17:24:34+08:00
 References: 
 ---
 ## Abstract
@@ -58,9 +58,18 @@ References:
 > 
 > Subtyping is [[Relation#Transitive]], if $S <: T$ and $T <: U$, then $S <: U$
 
+
 ### Widening Type Conversion
 - A value of datatype $T$ **can be assigned** to a variable of type $S$ if and only if $T$ is a [[#Subtyping|subtype]] of $S$
 - Supported by [[Java]]
+
+### Compile-time Type vs Run-time Type
+- We can assign a [[#Subtyping|subtype]] **instance** to a [[#Subtyping|supertype]] variable **during compilation**
+- **At runtime**, we **can call all methods** with **matching [[Function#Function Signature|signatures]]** declared **in the supertype** on the subtype instance, **including those overridden in the subtype**
+
+>[!important]
+> The **runtime type** of an object is **always a subtype** of its **compile-time type**.
+
 
 ## Struct
 ---

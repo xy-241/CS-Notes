@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-07-20T21:02:30+08:00
-Last Date: 2024-07-18T21:47:27+08:00
+Last Date: 2024-07-19T17:11:45+08:00
 References: 
 ---
 ## Abstract
@@ -25,6 +25,11 @@ References:
 
 ### extends
 - The `extends` keyword establishes an [[Inheritance#"Is-a" Relationship|"is-a" relationship]] from the subclass to the superclass, enabling [[Inheritance|inheritance]]
+
+
+## The Mother of All Classes
+---
+- `java.lang.Object` is the root of all [[OOP#OOP Class|classes]] in [[Java]]. Whether they are part of the Java libraries or custom classes you create yourself, all classes **implicitly [[Inheritance|inherit]]** from `java.lang.Object`
 
 ## Java Iterator
 ---
