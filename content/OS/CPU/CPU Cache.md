@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-07-14T20:41:40+08:00
-Last Date: 2024-07-20T19:05:59+08:00
+Last Date: 2024-07-22T16:25:09+08:00
 References: 
 ---
 ## Abstract
@@ -58,6 +58,30 @@ References:
 >[!important]
 > Spacial Locality has a special **sub-category** called **sequential locality**, which **shines** in cases like executing a **for loop**.
 
+### Average Memory Access Time
+- Average memory access time = [[#Cache Hit|hit rate]] $\times$ hit time $+$ [[#Cache Miss|miss rate]] $\times$ miss penalty
+- Miss rate is basically $1 -$ hit rate
+
+>[!example]
+> If the CPU cache hit time is `0.8 ns` and the [[Main Memory#DRAM|DRAM memory]] access time is `10 ns`, the **miss penalty** is $10 + 0.8$ = `10.8 ns`. To achieve an average memory access time of `1 ns`, we need a hit rate of $98\%$.
+> 
+> Here's how we calculate that:
+> 
+> Let $h$ be the hit rate. The formula for average memory access time (AMAT) is:
+> 
+> AMAT = (Hit Rate $\times$ Hit Time) $+$ (Miss Rate $\times$ Miss Penalty)
+> 
+> We want AMAT to be `1 ns`. Substituting the known values:
+> 
+> `1 ns` = ($h \times$ `0.8 ns`) $+ ((1 - h) \times$ `10.8 ns`) 
+> 
+> Solving for $h$:
+> 
+> - $1 = 0.8h + 10.8 - 10.8h$
+> - $9.8 = 10h$
+> - $h = 0.98$
+> 
+> Therefore, the required hit rate is $0.98$ or $98\%$.
 
 ## References 
 ---
