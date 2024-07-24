@@ -62,7 +62,7 @@ References:
 
 
 ### Compile-time Type vs Run-time Type
-- We can assign a [[#Subtyping|subtype]] **instance** to a [[#Subtyping|supertype]] variable **during compilation**
+- We can assign a [[Subtyping|subtype]] **instance** to a [[Subtyping|supertype]] variable **during compilation**
 - **At runtime**, we **can call all methods** with **matching [[Function#Function Signature|signatures]]** declared **in the supertype** on the subtype instance, **including those overridden in the subtype**
 
 >[!important]
@@ -82,7 +82,7 @@ References:
 > **Invalid Casting:** Incorrectly casting objects (e.g., trying to treat a `Cat` object as if it were a `Dog` object) will typically result in a runtime error (such as a `ClassCastException` in Java).
 
 ### Widening Type Conversion
-- [[#Type Casting|Casting]] a [[#Subtyping|subclass]] object to its superclass
+- [[#Type Casting|Casting]] a [[Subtyping|subclass]] object to its superclass
 - A value of datatype $T$ **can be assigned** to a variable of type $S$ if and only if $T$ is a subtype of $S$
 - Supported by [[Java]]
 

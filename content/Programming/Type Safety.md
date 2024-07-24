@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - programming
 Creation Date: 2024-07-17, 21:08
-Last Date: 2024-07-17T21:15:41+08:00
+Last Date: 2024-07-24T23:05:34+08:00
 References: 
 draft: 
 description: 
@@ -15,8 +15,7 @@ description:
 ---
 - Type safety means ensuring that **operations** are only performed on **variables of compatible [[Datatype]]**, **preventing errors** and **ensuring correct results**
 
-### Type System
-- A set of rules about [[Datatype]] of [[Abstraction#Data Abstraction|variable]], [[Expression]], [[Function]], and their interactions
+
 ### Statically Typed
 - [[Datatype]] checking is performed at **compile time**
 
