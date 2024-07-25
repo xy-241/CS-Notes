@@ -21,7 +21,7 @@ description:
 > It allows us to create an implementation of a [[OOP#OOP Interface]] without the need to create an [[OOP#OOP Class]] or [[OOP#Anonymous Inner Class]] explicitly.
 
 >[!attention]
-> Can only be used in the context of **Functional Interface**, because Java lambda **can only define** the **implementation** of **one** [[OOP#OOP Abstract Method]].
+> Can only be used in the context of **Functional Interface**, because Java lambda **can only define** the **implementation** of **one** [[OOP Method#OOP Abstract Method]].
 
 >[!important]
 > Creating an **illusion** of [[Function#First-class Citizen Function]].
