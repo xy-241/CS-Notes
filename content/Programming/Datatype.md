@@ -10,7 +10,7 @@ tags:
   - c
   - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-07-22T02:35:09+08:00
+Last Date: 2024-07-26T20:08:18+08:00
 References: 
 ---
 ## Abstract
@@ -42,31 +42,6 @@ References:
 >[!caution] Value comparison of custom datatype in Java
 > We can't use `==` to compare [[OOP#OOP Object]], because `==` compares the value holding by the variable. However, variables are only holding the [[Memory Address]] to the OOP Object. So if we want to compare the value of OOP Object, we need to use the `equals()` method.
 
-## Subtyping
----
-- A [[Datatype|data type]] $T$ is a **subtype** of a data type $S$ if a piece of **code written for** a variable of data type $S$ can also be **safely used** on a variable of data type $T$
-- The relationship can be represented with $T <: S$, where $S$ is also known as the **super type** of $T$
-
->[!example] Java
-> Subtyping among Java [[#Primitive Datatype]]
-> - `byte` <: `short` <: `int` <: `long`
-> - `long` <: `float` <: `double`
-> - `char` <: `int`
-
->[!important]
-> Subtyping is [[Relation#Reflexive]], $T <: T$
-> 
-> Subtyping is [[Relation#Transitive]], if $S <: T$ and $T <: U$, then $S <: U$
-
-
-
-
-### Compile-time Type vs Run-time Type
-- We can assign a [[Subtyping|subtype]] **instance** to a [[Subtyping|supertype]] variable **during compilation**
-- **At runtime**, we **can call all methods** with **matching [[Function#Function Signature|signatures]]** declared **in the supertype** on the subtype instance, **including those overridden in the subtype**
-
->[!important]
-> The **runtime type** of an object is **always a subtype** of its **compile-time type**.
 
 
 ## Type Casting
