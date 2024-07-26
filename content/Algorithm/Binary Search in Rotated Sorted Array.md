@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-06-04, 15:46
-Last Date: 2024-06-04T16:13:06+08:00
+Last Date: 2024-07-26T11:28:15+08:00
 References: 
 draft: 
 description: Binary Search in Rotated Sorted Array, detailed solution with hand-crafted visuals for Leetcode Search in Rotated Sorted Array.
@@ -19,8 +19,10 @@ description: Binary Search in Rotated Sorted Array, detailed solution with hand-
 - [Search in rotated sorted array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/) gives us a **rotated sorted array** as shown above. We need to **find the index** of a **given target value** in $O(logn)$. This can be achieved using [[Binary Search]] with a bit more logic involved
 
 >[!important]
-> All elements in the given array is **unique**!
+> All elements in the given array are **unique**!
 
+>[!note]
+> There is a simplified version called ["Find Minimum in Rotated Sorted Array"](https://xy241-dsa.notion.site/Find-Minimum-in-Rotated-Sorted-Array-46608ea582af4a33b3e90669cd36803c?pvs=4). It is simpler because we only need to focus on using binary search to **narrow down** the **search range to a single element**. At each step, the logic is straightforward: **move the left and right pointers to the smaller range**.
 
 ## Solution
 ---
