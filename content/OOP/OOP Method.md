@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2024-07-25, 23:18
-Last Date: 2024-07-25T23:18:41+08:00
+Last Date: 2024-07-28T17:54:13+08:00
 References: 
 draft: 
 description: 
@@ -26,6 +26,7 @@ description:
 - Method overloading can also occur when a **child class** defines a method with the **same name as a method in its parent class**, but with a different function signature
 
  >[!question] Why is this useful?
+ >
  > This allows the class to provide **different implementations** for the **same conceptual operation** based on the input it receives, promoting [[Polymorphism]].
 
 
