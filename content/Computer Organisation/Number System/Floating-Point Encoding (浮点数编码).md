@@ -6,54 +6,85 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-12T15:43:00
-Last Date: 2024-01-10T16:12:47+08:00
+Last Date: 2024-07-28T17:30:13+08:00
 References: 
 ---
 ## Abstract
 ---
+
+![[IEEE 754 Floating-Point Rep.png|500]]
+
 - Based on the [IEEE 754 Standard](https://en.wikipedia.org/wiki/IEEE_754)
-- **sign** 0 for positive, 1 for negative
-- **exponent** by default -127 with all bits set to 0. If we want positive, we need to set the 8th bit to `1` which is `128`
-- **mantissa** takes the binary behind the decimal place after normalisation (the yellow circle part) 
-- Reliable precision is *7 decimal digits*
-![[IEEE 754 Floating-Point Rep.png]]
+- **Sign:** $0$ indicates a positive number, $1$ indicates a negative number
+- **Exponent:** The default bias is $- 127$, represented by all exponent bits set to 0. To obtain a positive exponent, set the 8th (most significant) bit to `1`, resulting in a value of `128`
+- **Mantissa:** This represents the **fractional part of the number** after [[#Normalised Number|normalisation]]. The binary digits following the decimal point are included in the mantissa.
 
 
-## Approximation of Real Number
----
-- mantissa gives the precision
-![[floating_point_as_an_approximation.png]]
-- From 1 to 2 (2^0-2^1), there are 23 bits of mantissa used for precision after decision point
-- For 2 to 4 (2^1-2^2), there are 22 bits of mantissa used for precision after decision point, one of the bit is used to present the whole number before decimal point
-- With every range of 2, the precision after the decimal point is reduced by 2
-- Thus, the precision of the number after decimal point is getting worse as the number getting bigger
+>[!important] How Mantissa Precision Varies with Exponent
+> ![[floating_point_as_an_approximation.png]]
+> 
+> The **mantissa** in IEEE 754 floating-point representation **determines the precision** of a number. Let's analyze how precision changes across different ranges:
+> - **Range 1 to 2 ($2^0$ to $2^1$):** All 23 bits of the mantissa contribute to the precision after the decimal point.
+> - **Range 2 to 4 ($2^1$ to $2^2$):** One bit is used to represent the whole number (2) before the decimal point, leaving 22 bits for precision after the decimal.
+> - **Generalisation:** For every increase in the exponent by 1 (doubling the range), the precision after the decimal point decreases by a factor of 2. This is because one more bit is allocated to representing the whole number part.
+
+
+>[!tip]
+> To store large whole numbers, use the `long` data type. Floating-point options like `double` may introduce precision loss.
+> 
+> For improved readability, convert binary representations to hexadecimal. 
+> 
+> Here is an [Online Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html) to help visualising the floating-point encoding better.
+
+>[!question] Why 0.1 + 0.2 = 0.30000000000000004?
+> For numbers whose binary representation requires **infinite precision**, like the decimal number $0.1$, the binary equivalent is analogous to representing $\frac{1}{3}$ in decimal form. 
+> 
+> With limited precision (e.g., 32 bits), we inevitably lose some accuracy. This is why 0.1 + 0.2 in binary floating-point arithmetic does not strictly equal 0.3.
 
 
 ## Normalised Number
 ---
-- The range of real numbers between 0 and smallest [[Normalised Number]] isn't covered, covered by [[#Subnormal Number (Denormalized Number)]]
-![[normal_number_range.png]]
-- The 1 is implicit when exponent isn't 0. When exponent is 0, we get [[#Subnormal Number (Denormalized Number)]]
-![[implicit_1.png]]
-### Smallest positive [[Normalised Number]]
-- One bit for *exponent* to differentiate from [[#Subnormal Number (Denormalized Number)]]
+
+![[implicit_1.png|500]]
+
+- In the context of [[Floating-Point Encoding (浮点数编码)]], a normalised number is one where the **leading digit** (the digit to the left of the decimal point) is **always** $1$. This 1 is not explicitly stored **but is implicit**
+
+
+>[!important]
+> ![[normal_number_range.png|500]]
+>
+> The range of real numbers between $0$ and the [[#Smallest Positive Normalised Number]] is not covered by normalised numbers, but by [[#Subnormal Number|subnormal numbers]]. 
+> 
+> The leading 1 is implicit in **normalised numbers when the exponent is not zero**. When the exponent is zero, we have a subnormal number, and the implicit leading 1 is no longer assumed.
+
+### Smallest Positive Normalised Number
 ![[smallest_normalized_number.png]]
-### Biggest positive [[Normalised Number]]
-- All 1s for *exponent* means [[#Infinity]]
+
+- One bit for *exponent* to differentiate from [[#Subnormal Number]]
+
+### Biggest Positive Normalised Number
 ![[biggest_normalised_number.png]]
 
+- All 1s for *exponent* means [[#Infinity]]
 
-## Subnormal Number (Denormalized Number)
+
+
+## Subnormal Number
 ---
+- Also known as **Denormalised Number**
 - Fill up the gap between 0 and the smallest [[#Normalised Number]]
-- Without, we will get a 0 if the difference between 2 numbers is smaller than the smallest [[#Normalised Number]]
- ![[importance_of_subnormal.png]]
- >[!caution] In non-debug mode, Subnormal Number maybe turned off for performance reasons, and this may lead to unexpected errors
-### Smallest positive [[Subnormal Number (Denormalized Number)]]
+- Without, we will get a 0 if the difference between 2 numbers is smaller than the smallest normalised number
+
+ ![[importance_of_subnormal.png|500]]
+ >[!caution] 
+ > In non-debug mode, subnormal number maybe turned off for performance reasons, and this may lead to unexpected errors.
+ 
+ 
+### Smallest Positive Subnormal Number
 - The exponent bias is fixed at -126 when denormalised, and 0 is implicit instead of 1
 ![[smallest_denormalized_exponent.png]] 
 
-### Biggest [[Subnormal Number (Denormalized Number)]]
+### Biggest Positive Subnormal Number
 - [[#0]] when Mantissa bits are all 0
 ![[biggest_denormalized.png]]
 
@@ -74,27 +105,11 @@ References:
 - Exponent is 255 & Mantissa isn't 0
 ![[float_NaA.png]]
 
-## Tips 
----
-- When it comes to store a large whole number, use `long` to represent, because floating options like `double` may have precision loss issues
-- Usually [[Number Base Conversion#Binary to Hex]] for better readability 
- - [Online Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html) to visualise better
 
-## Side Notes
----
-### Floating-point rounding error
-- Binary representation that requires infinite precision 
-- Decimal number like 0.1 in binary representation is like 1/3 in decimal presentation. With limited precision (32bits), we will lose some precision. That is why 0.1+0.2 in binary isn't strictly 0.3
 
 ## References 
 ---
-- Wait, so comparisons in floating point only just KINDA work? What DOES work?
-
-![Wait, so comparisons in floating point only just KINDA work? What DOES work? - YouTube](https://youtu.be/Oo89kOv9pVk?si=noZ4DOmQWjy7uEsp)
-
-- Why Is This Happening?! [[#Floating-point rounding error]]
-
-![Why Is This Happening?! Floating Point Approximation - YouTube](https://youtu.be/2gIxbTn7GSc?si=vEfOf70rThDTwYOj)
-
--  [Hello Algo](https://www.hello-algo.com/chapter_data_structure/number_encoding/#332)
+- [Wait, so comparisons in floating point only just KINDA work? What DOES work?](https://youtu.be/Oo89kOv9pVk?si=noZ4DOmQWjy7uEsp)
+- [Why Is This Happening?! - Floating-point rounding error](https://youtu.be/2gIxbTn7GSc?si=vEfOf70rThDTwYOj)
+- [Hello Algo](https://www.hello-algo.com/chapter_data_structure/number_encoding/#332)
 - [CS2100 Week 1 Lecture](https://www.comp.nus.edu.sg/~cs2100/2_resources/lectures.html)
