@@ -6,24 +6,27 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-05T12:16:00
-Last Date: 2023-12-27T17:25:57+08:00
+Last Date: 2024-07-29T15:14:34+08:00
 References: 
 ---
-## Abstract
+## Closure (闭包)
 ---
-### Closure (闭包)
-- An property of a *set* whereby an operation on members of the set always produces a member of the same set
-- For example, Integers are *closed* under addition and multiplication like *1+1=2*, where 2 is an integer (*By  closure of integers under multiplication and addition*)
-### Commutativity (交换律)
-- The *order in which the operands* are taken does not affect the result of the operation
-- Addition & multiplication are *commutative*
-- x+y = y+x
-### Associativity (结合律)
-- Do not need to worry about the *placement of parentheses* in expressions with more than two operands
-- Addition & multiplication are *associative*
-### Distributivity (分配律)
+- A property of a [[Set|set]] whereby an operation on members of the set always produces a member of the same set is called **closure**. For example, integers are closed under addition and multiplication, like $1 + 1 = 2$, where $2$ is an integer (**By  closure of integers under multiplication and addition**)
+## Commutativity (交换律)
+---
+- The **order** in which the operands are taken **does not affect** the result of the operation. Addition and multiplication are commutative, meaning $x + y = y + x$
+
+## Associativity (结合律)
+---
+- You do not need to worry about the placement of parentheses in expressions with more than two operands when the operations are associative. For example, addition and multiplication are associative
+
+## Distributivity (分配律)
+---
+$$
+x \times (y+z) = (x\times y) + (x \times z)
+$$
 - Multiplication distributes over addition
-- ```x * (y + z) = (x * y) + (x * z)```
-### Trichotomy (三分法)
-- For any *two given inputs*, there are exactly *three possible outcomes*. One of the outcomes *must be true*
-- `x=y`, `x<y`, `x>y`
+
+## Trichotomy (三分法)
+---
+- For **any two given inputs** ($x$ and $y$), **exactly one** of the following three outcomes **must be true**: $x = y$, $x < y$ or $x > y$

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-07-21T16:20:11+08:00
+Last Date: 2024-07-26T11:56:12+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -477,9 +477,9 @@ import java.util.*;
 > Quick sort is an [[#In-Place]] sorting algorithm.
 
 >[!question] How is partition implemented?
-> Essentially, we have two indices, `i` and `j`, both starting at index 0. The index `i` keeps track of the **last position** where an **element smaller than the pivot** was placed. Meanwhile, `j` **scans** the array from index 0 to the last index.
+> Essentially, we have two indices, `i` and `j`, both starting at index $0$. The index `i` keeps track of the **last position** where an **element smaller than the pivot** was placed. Meanwhile, `j` **scans** the array from index $0$ to the last index.
 > 
-> Here is a [short video](https://youtu.be/MZaf_9IZCrc?si=1tH1H2VEaxcLwRg6) showing how partition is carried
+> Here is a [short video](https://youtu.be/MZaf_9IZCrc?si=1tH1H2VEaxcLwRg6) showing how partition is carried out.
 ## References
 ---
 - [Sorting Algorithms Animations | Toptal®](https://www.toptal.com/developers/sorting-algorithms)
