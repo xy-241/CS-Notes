@@ -7,7 +7,7 @@ tags:
   - math
   - discrete_math
 Creation Date: 2024-07-29, 15:16
-Last Date: 2024-07-29T16:06:09+08:00
+Last Date: 2024-08-07T14:11:56+08:00
 References: 
 draft: 
 description: 
@@ -36,4 +36,4 @@ description:
 
 ## References
 ---
-- [Fetching Title#ub6a](https://youtu.be/zRKZ0-kOUZM?si=8PgfLlOquzkbfIkZ)
+- [Geometric Series and Geometric Sequences - Basic Introduction - YouTube](https://youtu.be/zRKZ0-kOUZM?si=8PgfLlOquzkbfIkZ)
