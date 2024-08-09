@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-24T17:56:06+08:00
-Last Date: 2024-08-08T00:47:53+08:00
+Last Date: 2024-08-09T23:37:48+08:00
 References: 
 ---
 ## Abstract
@@ -16,9 +16,8 @@ References:
 
 >[!example] Java
 > Subtyping among Java [[#Primitive Datatype]]
-> - `byte` <: `short` <: `int` <: `long`
-> - `long` <: `float` <: `double`
-> - `char` <: `int`
+> - `byte` <: `short` <: `int` <: `long` <: `float` <: `double`
+> - `char` <: `int` <: `long` <: `float` <: `double`
 
 >[!important]
 > Subtyping is [[Relation#Reflexive]], $T <: T$
