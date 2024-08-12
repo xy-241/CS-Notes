@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-12T15:43:00
-Last Date: 2024-07-28T17:30:13+08:00
+Last Date: 2024-08-12T17:03:59+08:00
 References: 
 ---
 ## Abstract
@@ -41,6 +41,16 @@ References:
 > 
 > With limited precision (e.g., 32 bits), we inevitably lose some accuracy. This is why 0.1 + 0.2 in binary floating-point arithmetic does not strictly equal 0.3.
 
+
+>[!tip] Converting from Decimal to Float (IEEE 754 Single Precision)
+> ![[decimal_to_float.png|300]]
+> 
+> 1. Convert [[Number Base Conversion#Decimal to Binary|Decimal to Binary]]
+> 2. Convert the binary form to [[#Normalised Number|normalised form]]
+> 3. Calculate the Exponent Field by adding the bias $127$ to the exponent & convert the sum to binary (8 bits)
+> 4. Determine the Sign Bit, $0$ for positive, $1$ for negative
+> 5. Assemble the Float
+> 6. Convert to Hexadecimal by grouping the 32 bits into groups of 4, and convert each group to its hexadecimal equivalent
 
 ## Normalised Number
 ---
