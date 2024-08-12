@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-20T15:42:00
-Last Date: 2024-02-23T10:56:39+08:00
+Last Date: 2024-08-12T08:35:52+08:00
 References: 
 sr-due: 2024-03-09
 sr-interval: 15
@@ -35,6 +35,9 @@ sr-ease: 290
 ### Bi-conditional
 - Represented with $\leftrightarrow$
 - $P \leftrightarrow Q$ means $P$ is true `if AND only if` $Q$
+
+>[!important]
+> $P \leftrightarrow Q$ is [[Propositional Logic#Logical Equivalence|logically equivalent]] to $(P \rightarrow Q) \land (Q \rightarrow P)$.
 
 ### Sufficient Condition
 - Given $P \rightarrow Q$
