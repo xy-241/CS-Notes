@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - c
+  - computer_organisation
 Creation Date: 2023-09-08T18:14:42+08:00
-Last Date: 2023-12-22T23:48:29+08:00
+Last Date: 2024-08-15T22:45:49+08:00
 References: 
 ---
 ## Abstract
@@ -15,7 +16,7 @@ References:
 
 ```c {2} {11}
 #include <stdio.h>
-#define PI 3.1415
+#define PI 3.1415 // Macro Expansion!
 
 int main()
 {
@@ -30,6 +31,12 @@ int main()
     return 0;
 }
 ```
+
+>[!success] Memory efficiency
+> This avoids the use of variables which saves memory.
+
+>[!important]
+> Not to put `;` at the end, or it will be considered as part of the macro value!
 
 ## Function-like Macro
 ---
@@ -51,10 +58,6 @@ int main() {
     return 0;
 }
 ```
-
-## Benefits
----
-- Saving memory of using variables to store the values
 
 
 

@@ -8,12 +8,25 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-04-17T21:11:13+08:00
+Last Date: 2024-08-15T22:42:32+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
 title: cs2100 nus notes
 ---
+
+## MISC
+---
+- [ ] [[Flash Memory]]
+## C
+---
+- [ ] [[C]]
+- [ ] [[C Program Compilation]]
+- [ ] [[Language Processors]]
+- [ ] [[Macro Expansion]]
+
+
+
 ## Data Representation and Number Systems
 ---
 - [[Computer Data Representation]]
@@ -64,12 +77,13 @@ title: cs2100 nus notes
 
 ## Logic Circuits
 ---
-- [[Logic Gates]]
-- [[AND]]
-- [[OR]]
-- [[NOT]]
-- [[XOR]]
-- [[NOR]]
+- [ ] [[Transistors (晶体管)]]
+- [ ] [[Logic Gates]]
+- [ ] [[AND]]
+- [ ] [[OR]]
+- [ ] [[NOT]]
+- [ ] [[XOR]]
+- [ ] [[NOR]]
 
 ## Circuit Simplification
 ---
