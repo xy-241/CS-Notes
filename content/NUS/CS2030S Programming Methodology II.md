@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2024-08-16, 11:13
-Last Date: 2024-08-16T12:05:08+08:00
+Last Date: 2024-08-16T16:56:53+08:00
 References: 
 draft: 
 description: 
@@ -26,10 +26,12 @@ description:
 - [ ] [[Java]]
 - [ ] [[Access Modifier]]
 - [ ] [[Java Constructor]]
+- [ ] [[Function#Function Signature]]
 
 
 ### OOP
 - [ ] [[OOP]]
+- [ ] [[OOP Method]]
 - [ ] [[Encapsulation]]
 - [ ] [[Inheritance]]
 - [ ] [[Polymorphism]]

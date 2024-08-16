@@ -9,7 +9,7 @@ tags:
   - java
   - functional
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-07-19T17:23:38+08:00
+Last Date: 2024-08-16T17:01:45+08:00
 References: 
 ---
 ## Abstract
@@ -19,6 +19,9 @@ References:
 ### Function Signature 
 - Refers to the declaration of a function
 - The signature is the combination of the **function's name**, **argument [[Datatype|types]]**, **argument order**, **argument count**, and **return type**
+
+>[!important] Java
+> In [[Java]], the return type isn't part of the function signature. The method signature is the combination of the method name and the parameter list (argument types, argument order and argument count).
 
 ## First-class Citizen Function
 ---

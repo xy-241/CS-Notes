@@ -6,7 +6,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-05-25T17:21:31+08:00
+Last Date: 2024-08-16T15:45:16+08:00
 References: 
 description: My Second Brain for Computer Science related stuff. Zero fluff, short and sweet.
 ---
@@ -23,6 +23,7 @@ Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues
 ---
 - [[CS1231S Discrete Structures]]
 - [[CS2100 Computer Organisation]]
+- [[CS2030S Programming Methodology II]]
 - [[CS2106 Introduction to Operating Systems]]
 
 ## 🏭 System Design
