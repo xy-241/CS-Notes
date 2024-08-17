@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-08, 21:54
-Last Date: 2024-08-17T19:12:08+08:00
+Last Date: 2024-08-18T02:20:06+08:00
 References: 
 ---
 ## Abstract
@@ -38,6 +38,20 @@ References:
 >[!important]
 > For the three integer encoding variants, the **encodings** for **positive integer** are **exactly the same**.
 
+>[!important]
+> $1010_2$ is a positive binary number, $-(1010_2)$ is a negative binary number.
+> 
+> $1010_{sm}$ is a negative binary number encoded using [[#Sign-and-Magnitude (原码)]].
+> 
+> $1010_{1s}$ is a negative binary number encoded using [[#1's Complement (反码)]].
+> 
+> $1010_{2s}$ is a negative binary number encoded using [[#2's Complement (补码)]].
+> 
+> >[!example] Examples
+> > 
+> > The 8-bit 2’s complement representation of $1010_2$ is $00001010_{2s}$.
+> > 
+> > The 8-bit 2’s complement representation of $-(11111111_2)$ is $00000001_{2s}$.
 ### Sign Bit
 - $0$ denotes **positive** 
 - $1$ denotes **negative**

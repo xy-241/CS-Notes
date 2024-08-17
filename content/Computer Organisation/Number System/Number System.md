@@ -7,7 +7,7 @@ tags:
   - computer_organisation
   - c
 Creation Date: 2023-12-17, 20:32
-Last Date: 2024-08-17T16:57:57+08:00
+Last Date: 2024-08-18T00:51:14+08:00
 References: 
 ---
 ## Abstract
@@ -31,8 +31,10 @@ References:
 | $13$    | $1101$ | $D$         |
 | $14$    | $1110$ | $E$         |
 | $15$    | $1111$ | $F$         |
->[important] Conversion between bases
-> We convert from one base to decimal base, then from decimal base convert to the desired base.
+>[!important] Conversion between bases
+> ![[base_conversion_quiz.png|400]]
+>
+> We convert from one base to decimal base with the help of the [[#Radix|radix]], then from decimal base convert to the desired base by either **division** with that particular base for the whole number or **multiplication** with that particular base for the fraction.
 
 ### Whole Number Decimal to Binary
 ![[decimal_to_binary_1.png|300]]
