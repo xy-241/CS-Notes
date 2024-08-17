@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-12-22, 23:53
-Last Date: 2024-08-15T23:01:42+08:00
+Last Date: 2024-08-17T14:54:27+08:00
 References: 
 draft: 
 ---
@@ -16,19 +16,14 @@ draft:
 >[!important] Entry point function
 > A C program must **have** a [[Function|function]] with the [[Function#Function Signature|function signature]] `int main()`. It is **the** standardised entry point, **ensuring** proper interaction with the operating system.
 
->[!important] Uninitialised variables
-> Uninitialised variables in C contain **unknown values**, unlike [[Java]] which sets $0$ for uninitialised [[Datatype#Primitive Datatype]]!
 
->[!important] Importance of explicit datatype
-> C uses the [[Datatype|data type]] to determine the underlying [[Instruction|instruction]] to be generated. Different instructions are used to handle [[Floating-Point Encoding (浮点数编码)|floating-point numbers]] and [[Integer Encoding (数字编码)|integers]].
-
->[!question] What is char in C?
-> Char is basically a 8-bit integer, but usually used to hold a [[Character Encoding (字符编码）|character]] using [ascii table](https://www.ascii-code.com/).
+>[!question] What does `a = b = c = 3 + 6` mean?
+> `9` assigned to variables `c`, `b` and `a`.
 > 
-> **Everything in C is an number!**
+> `c = 3 + 6` returns `9` which is assigned to `b`, then `b = 9` returns `9` which is assigned to `a`. `c = 3 + 6` returns `9` is known as **side effect**.
 
->[!question] How to find the spaces used by a datatype?
-> `sizeof(int)` returns the size of `int` in the current machine.
+>[!attention] Remainder operation in C
+> `10 % 4` gives `2`, `-10 % 4` gives `-2`. The **sign of the dividend is preserved**.
 
 ## C Terminology
 ---
@@ -49,4 +44,7 @@ draft:
 > `printf("That equals %9.3f km.\n", kms);` prints a floating-point number to the screen, formatted to occupy a **minimal width** of 9 characters (including the decimal point and any padding spaces if the number is shorter). The number will be displayed with 3 decimal places of precision.
 > 
 > `"That equals %9.3f km.\n"` is known as a format string, `kms` is known as print list. `\n` is known as [[escape_sequence.png|escape sequence]] to format the string.
+
+
+
 

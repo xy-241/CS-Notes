@@ -8,23 +8,23 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-08-15T22:42:32+08:00
+Last Date: 2024-08-17T14:58:39+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
 title: cs2100 nus notes
 ---
-
-## MISC
+## Week 1
 ---
-- [ ] [[Flash Memory]]
-## C
----
+### C
 - [ ] [[C]]
-- [ ] [[C Program Compilation]]
 - [ ] [[Language Processors]]
+- [ ] [[C Program Compilation]]
 - [ ] [[Macro Expansion]]
+- [ ] [[C Datatype]]
 
+### Misc
+- [ ] [[Flash Memory]]
 
 
 ## Data Representation and Number Systems
