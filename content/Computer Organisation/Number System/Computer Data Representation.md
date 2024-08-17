@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-17, 19:58
-Last Date: 2024-05-10T19:39:55+08:00
+Last Date: 2024-08-17T16:03:29+08:00
 References: 
 ---
 ## Abstract
@@ -38,6 +38,8 @@ $$
 >- **Approach 1:** `2^2 - 1 = 3`
 >- **Approach 2:** `2^1 + 2^0 = 3`
 
+>[!question] How many bits are required to represent a decimal number?
+> Given $M$ is a decimal number, the number of bits required to represent it is the ceiling of log₂ M, which is represented with $\lceil \log_2 M \rceil$.
 
 ### Bit String
 - A collection of 0s & 1s
@@ -53,7 +55,7 @@ $$
 ## Word
 ---
 - The size of a word can vary depending on the [[Instruction Set Architecture (ISA)]]
-- It typically represents the amount of data that the [[CPU]] processes in a single [[Operation]]
+- A single unit of transfer from the [[Main Memory]] to the [[CPU]] and within the CPU
 - Common word sizes are 16 bits, 32 bits, or 64 bits
 
 

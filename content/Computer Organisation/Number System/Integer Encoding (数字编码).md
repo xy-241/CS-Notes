@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-08, 21:54
-Last Date: 2024-06-16T18:19:20+08:00
+Last Date: 2024-08-17T19:12:08+08:00
 References: 
 ---
 ## Abstract
@@ -96,6 +96,10 @@ References:
 >
 > We can **reuse** [[Adder]] [[Logic Gates]] to perform subtraction without the need for dedicated subtraction logic gates.
 
+>[!important] Obtaining 1s-complement
+> We can obtain the two's complement, also known as the negative representation of a positive number, using the formula: $-x = 2^{n}- x - 1$.
+
+
 
 >[!caution] Mathematically wrong definition of 0
 > We have `+0` (when all bits are 0) & `-0`(when all bits are 1) under this encoding, this can be solved with [[#2's Complement (补码)]].
@@ -123,12 +127,19 @@ References:
 >[!success] Mathematically correct definition of Zero
 > The integer encoding for both $+0$ and $-0$ is $0000$, thus **eliminating** two different integer encodings for $0$.
 
+>[!important] Obtaining 2s-complement
+> We can obtain the two's complement, also known as the negative representation of a positive number, using the formula: $-x = 2^{n}- x$.
 
 >[!tip] Trick to convert from 2's complement to decimal value
 > ![[2's_complement_to_integer_trick.svg|250]]
 > 
 > The **decimal value** = the **negative decimal value** of  [[#Sign Bit]] + the **positive sum** of the [[#Magnitude Bit|magnitude bits]].
-> 
+
+>[!tip] Trick to obtain 2's complement
+> Start from the rightmost bit and move left. Write down each bit as it is until you encounter the first '1'. From that point onwards, invert all the remaining bits.
+
+>[!important] Complement on fraction
+> Given `0101.01`, the 2s complement is `1010.11`.
 ## Integer Overflow
 ---
 - When a value is out of the range that the [[Datatype]] can hold

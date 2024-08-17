@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-08-17T14:58:39+08:00
+Last Date: 2024-08-17T18:15:41+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -23,18 +23,21 @@ title: cs2100 nus notes
 - [ ] [[Macro Expansion]]
 - [ ] [[C Datatype]]
 
+### Data Representation
+- [ ] [[Computer Data Representation]]
+- [ ] [[Number System]]
+- [ ] [[Character Encoding (字符编码）]]
+- [ ] [[Integer Encoding (数字编码)]]
+
 ### Misc
 - [ ] [[Flash Memory]]
+- [ ] [[Parity Bit (奇偶校验码)]]
 
 
 ## Data Representation and Number Systems
 ---
-- [[Computer Data Representation]]
 - [[Endianness]]
-- [[Number Base Conversion]]
-- [[Integer Encoding (数字编码)]]
 - [[Floating-Point Encoding (浮点数编码)]]
-- [[Character Encoding (字符编码）]]
 
 >[!seealso]- Interesting Related Topics
 > - [[Base 64 Encoding]]

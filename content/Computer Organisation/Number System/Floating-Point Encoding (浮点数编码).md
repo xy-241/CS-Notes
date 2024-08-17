@@ -45,7 +45,7 @@ References:
 >[!tip] Converting from Decimal to Float (IEEE 754 Single Precision)
 > ![[decimal_to_float.png|300]]
 > 
-> 1. Convert [[Number Base Conversion#Decimal to Binary|Decimal to Binary]]
+> 1. Convert [[Number System#Decimal to Binary|Decimal to Binary]]
 > 2. Convert the binary form to [[#Normalised Number|normalised form]]
 > 3. Calculate the Exponent Field by adding the bias $127$ to the exponent & convert the sum to binary (8 bits)
 > 4. Determine the Sign Bit, $0$ for positive, $1$ for negative
