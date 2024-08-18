@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-12T15:43:00
-Last Date: 2024-08-12T17:03:59+08:00
+Last Date: 2024-08-18T16:59:10+08:00
 References: 
 ---
 ## Abstract
@@ -16,9 +16,11 @@ References:
 
 - Based on the [IEEE 754 Standard](https://en.wikipedia.org/wiki/IEEE_754)
 - **Sign:** $0$ indicates a positive number, $1$ indicates a negative number
-- **Exponent:** The default bias is $- 127$, represented by all exponent bits set to 0. To obtain a positive exponent, set the 8th (most significant) bit to `1`, resulting in a value of `128`
+- **Exponent:** Comes with a bias of $- 127$, represented by all exponent bits set to 0. To obtain a positive exponent, set the 8th (most significant) bit to `1`, resulting in a value of `128`
 - **Mantissa:** This represents the **fractional part of the number** after [[#Normalised Number|normalisation]]. The binary digits following the decimal point are included in the mantissa.
 
+>[!question] Why make it so complicated?
+> A more intuitive way to represent numbers with decimal points is to use **fixed-point**, where we allocate a certain number of bits for the whole number part and a certain number of bits for the fractional part. However, floating-point encoding allows us to use the same number of bits to represent **both very large and very small numbers, with high precision** thanks to the use of **exponent**.
 
 >[!important] How Mantissa Precision Varies with Exponent
 > ![[floating_point_as_an_approximation.png]]
@@ -57,7 +59,7 @@ References:
 
 ![[implicit_1.png|500]]
 
-- In the context of [[Floating-Point Encoding (浮点数编码)]], a normalised number is one where the **leading digit** (the digit to the left of the decimal point) is **always** $1$. This 1 is not explicitly stored **but is implicit**
+- In the context of [[Floating-Point Encoding (浮点数编码)]], a normalised number is one where the **leading digit** (the digit to the left of the decimal point) is **always** $1$. This $1$ is not explicitly stored **but is implicit**, thus one more bit for the mantissa for a **higher accuracy**
 
 
 >[!important]
