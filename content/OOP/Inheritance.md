@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-23T17:47:10+08:00
-Last Date: 2024-07-22T01:43:13+08:00
+Last Date: 2024-08-20T00:56:51+08:00
 References: 
 ---
 ## Abstract
@@ -18,6 +18,8 @@ References:
 > 
 > Otherwise, consider using [[OOP#OOP Interface|interfaces]] and [[Encapsulation#"Has-a" Relationship|composition]].
 
+>[!important] Inheritance subtyping relationship
+> If $S$ inherits from $T$, then $S :< T$. $S$ is a [[Subtyping|subtype]] of $T$.
 
 ## "Is-a" Relationship
 ---

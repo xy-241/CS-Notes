@@ -7,7 +7,7 @@ tags:
   - java
   - OOP
 Creation Date: 2024-08-16, 12:04
-Last Date: 2024-08-16T12:27:08+08:00
+Last Date: 2024-08-20T00:50:26+08:00
 References: 
 draft: 
 description: 
@@ -20,3 +20,14 @@ description:
 > 1. The name of the constructor must be the same as the name of the [[OOP#OOP Class|class]]
 > 2. Constructors do not have a return type, not even `void`
 > 3. Constructors can have [[Access Modifier|access modifiers]]
+
+
+
+
+## Java Default Constructor
+---
+- Java's default constructor is called **implicitly** when you don't define any [[Java Constructor|constructors]] in your [[OOP#OOP Class|class.]]
+
+>[!important] Properties
+> - Doesn't set any fields
+> - Calls the super constructor, the default super constructor

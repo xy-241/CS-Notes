@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2024-07-25, 23:18
-Last Date: 2024-08-16T16:46:09+08:00
+Last Date: 2024-08-20T01:15:09+08:00
 References: 
 draft: 
 description: 
@@ -35,6 +35,11 @@ description:
 >[!question] Why is this useful?
 > Method overriding enables **different objects** to **respond to the same method call** in a way that's **specific to their type**, thus fulfilling the OOP principle of [[Polymorphism|polymorphism]].
 
+>[!important] Java method overriding
+> In [[Java]], method overriding happens when a subclass defines an instance method with the same [[Function#Function Signature|method descriptor]] as superclass.
+> 
+> As a good practice, use [[#@Override]].
+
 ### @Override
 - A flag in [[Java]] that helps the [[Language Processors|compiler]] catch errors when [[OOP Method#Method Overriding|overriding methods]] by telling the compiler a [[OOP Method|method]] is intended to override another method
 
@@ -49,4 +54,4 @@ description:
 
 
 >[!question] What if the current class puts `@override` for a method that isn't inside the superclass?
-> This is because the `@Override` annotation specifically indicates that the **method** is **meant to override a method from the superclass**. If no such method exists, it signals an error.
+> `@Override` annotation specifically indicates that the **method** is **meant to override a method from the superclass**. If no such method exists, it signals an error.

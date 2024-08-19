@@ -7,7 +7,7 @@ tags:
   - java
   - OOP
 Creation Date: 2024-08-16, 11:57
-Last Date: 2024-08-16T11:58:34+08:00
+Last Date: 2024-08-19T22:22:30+08:00
 References: 
 draft: 
 description: 
@@ -15,6 +15,11 @@ description:
 ## Abstract
 ---
 - Keywords that define the accessibility or scope of [[OOP#OOP Class|classes]], [[OOP Method|methods]], and field
+
+>[!important] Good design
+> We should make all attributes within the class [[#private|private]]. 
+> 
+> Use methods to enforce access or modify attribute values if necessary, but this is generally not recommended.
 
 ## private
 ---
