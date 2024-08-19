@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - number_theory
 Creation Date: 2023-12-16, 17:40
-Last Date: 2024-02-27T14:44:27+08:00
+Last Date: 2024-08-19T15:43:16+08:00
 References: 
 ---
 ## Abstract
@@ -14,6 +14,9 @@ References:
 - **Discrete objects**, for example there is a clear separation between $1$ and $2$, unlike there can be $1.25$ between $1.2$ and $1.3$
 - Used a lot in [[Discrete Math]]
 - The mathematical symbol is $\mathbb{Z}$ (315, -9045), positive integers are represented with $\mathbb{N}$ (0,1,2,3,4...)
+
+>[!important]
+> $0$ is neither negative or positive.
 
 ### Integer Mathematical Model
 - any integer can be obtain from $\sum_{i=0}^{i=n-1}d_{i} \times 10^{i}$
@@ -43,4 +46,4 @@ $$
 ![[quotient-remainder-theorem.png|500]]
 ### Theorem 4.6.1
 - **There is no greatest integer**
-- Proved by [[Mathematical Proof#Proof by Contradiction (反证法)]]
+- Proved by [[Indirect Proof#Proof by Contradiction (矛盾证明法)]]

@@ -10,19 +10,34 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-02-24T15:37:15+08:00
+Last Date: 2024-08-19T20:24:08+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
 title: cs1231s nus notes
 ---
 
+
+## Week 1
+---
+- [ ] [[Integer (整数)]]
+- [ ] [[Properties of Integer]] 
+- [ ] [[Rational Number]]
+- [ ] [[Universal Statement]]
+- [ ] [[Existential Statement]]
+- [ ] [[Mathematical Proof]]
+- [ ] [[Direct Proof]]
+- [ ] [[Indirect Proof]]
+- [ ] [[Mathematical Statement]]
+- [ ] [[Propositional Logic]]
+- [ ] [[Conditional Statement]]
+
+
 >[!tip]- Good to Have
 > **Geometry**
 > - [[Discrete Geometry]]
 >   
 > **Number Theory**
-> - [[Integer (整数)]]
 > - [[Prime Number (质数)]]
 >   
 > **Number Theory - Divisibility and Primes** 
@@ -34,10 +49,6 @@ title: cs1231s nus notes
 ## Speaking Mathematically and Logically
 ---
 - [[Discrete Math]]
-- [[Algebra Properties]]
-- [[Mathematical Statement]]
-- [[Conditional Statement]]
-- [[Propositional Logic]]
 - [[Mathematical Argument]]
 - [[Rule of Inference (推理规则)]]
 - [[Fallacy]]
@@ -45,13 +56,10 @@ title: cs1231s nus notes
 ## Quantified Statements
 ---
 - [[Predicate]]
-- [[Universal Statement]]
-- [[Existential Statement]]
 - [[Quantified Rule of Inference]]
 
 ## Methods of Proofs
 ---
-- [[Mathematical Proof]]
 - [[Deductive Reasoning (演繹推理)]]
 
 ## Set Theory
