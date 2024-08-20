@@ -10,7 +10,7 @@ tags:
   - c
   - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-08-09T23:55:24+08:00
+Last Date: 2024-08-15T22:10:03+08:00
 References: 
 ---
 ## Abstract
@@ -50,7 +50,7 @@ References:
 - The process of converting a variable from one [[Datatype|data type]] to another. This allows the variable to be **treated as a different data type and utilise its properties**. Type conversion can be **implicit**, where the conversion is handled automatically by the programming language, or **explicit**, where the conversion is performed manually by the programmer.
 
 >[!attention] Explicit type casting is dangerous
-> **Data Loss:** Converting from a floating-point number (`float`) to an integer (`int`) results in the truncation (loss) of the decimal portion **(narrowing type conversion**).
+> **Data Loss:** Converting from a floating-point number (`float`) to an integer (`int`) results in the truncation (loss) of the decimal portion **(narrowing type conversion**). This isn't allowed in in [[Java]], but allowed in [[C]], thus Java is [[Type Safety#Strongly Typed|more strongly typed]].
 > 
 > **Loss of Object State or Methods:** [[#Widening Type Conversion|Widening type conversions]] can lead to the loss of access to specific subclass attributes and methods.
 > 

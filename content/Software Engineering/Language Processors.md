@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - software_engineering
   - c
+  - computer_organisation
 Creation Date: 2023-12-16, 20:14
-Last Date: 2024-04-23T19:08:01+08:00
+Last Date: 2024-08-15T21:35:43+08:00
 References: 
 ---
 ## Abstract
@@ -25,6 +26,17 @@ References:
 ### Preprocessor
 - Text substitution tool
 - It instructs the [[#Compiler]] to do required pre-processing before the actual **compilation**
+
+### Preprocessor Directives
+- Instructions to tell the [[#Preprocessor]] what kind of library headers it needs to bring in header files, define constants, and create [[Macro Expansion]]
+
+>[!example]
+>Bring header files
+>- `#include <stdio.h>`
+>
+> Define constants
+> - `#define KMS_PER_MILE 1.609`
+
 
 ## Assembler
 ---

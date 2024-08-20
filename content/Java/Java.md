@@ -6,12 +6,17 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-07-20T21:02:30+08:00
-Last Date: 2024-07-22T02:16:29+08:00
+Last Date: 2024-08-16T13:08:26+08:00
 References: 
 ---
 ## Abstract
 ---
 - A [[OOP]] language that is [[Type Safety#Statically Typed]] & [[Type Safety#Strongly Typed]]. It also provides some features of the [[Function|functional paradigms]] but it isn't very elegant
+
+>[!important] Entry point method
+> The class that kickstarts the Java program must **have** a [[Function|function]] with the [[Function#Function Signature|function signature]] `public static void main(String[] args)`. This is **the** standardised entry point, so the JVM knows where to start executing the program.
+> 
+> Adding `final` to the function signature also works.
 
 
 ## The Mother of All Classes

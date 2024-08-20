@@ -8,23 +8,37 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-04-17T21:11:13+08:00
+Last Date: 2024-08-18T17:08:54+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
 title: cs2100 nus notes
 ---
-## Data Representation and Number Systems
+## Week 1
 ---
-- [[Computer Data Representation]]
-- [[Endianness]]
-- [[Number Base Conversion]]
-- [[Integer Encoding (数字编码)]]
-- [[Floating-Point Encoding (浮点数编码)]]
-- [[Character Encoding (字符编码）]]
+### C
+- [ ] [[C]]
+- [ ] [[Language Processors]]
+- [ ] [[C Program Compilation]]
+- [ ] [[Macro Expansion]]
+- [ ] [[C Datatype]]
 
->[!seealso]- Interesting Related Topics
+### Data Representation
+- [ ] [[Computer Data Representation]]
+- [ ] [[Number System]]
+- [ ] [[Character Encoding (字符编码）]]
+- [ ] [[Integer Encoding (数字编码)]]
+- [ ] [[Floating-Point Encoding (浮点数编码)]]
+
+### Misc
+- [ ] [[Flash Memory]]
+- [ ] [[Parity Bit (奇偶校验码)]]
+
+>[!seealso] Extra Readings
+> - [[Endianness]]
 > - [[Base 64 Encoding]]
+
+
 ## MIPS
 ---
 - [[MIPS]]
@@ -64,12 +78,13 @@ title: cs2100 nus notes
 
 ## Logic Circuits
 ---
-- [[Logic Gates]]
-- [[AND]]
-- [[OR]]
-- [[NOT]]
-- [[XOR]]
-- [[NOR]]
+- [ ] [[Transistors (晶体管)]]
+- [ ] [[Logic Gates]]
+- [ ] [[AND]]
+- [ ] [[OR]]
+- [ ] [[NOT]]
+- [ ] [[XOR]]
+- [ ] [[NOR]]
 
 ## Circuit Simplification
 ---

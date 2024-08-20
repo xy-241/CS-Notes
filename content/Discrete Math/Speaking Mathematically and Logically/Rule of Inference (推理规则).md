@@ -50,7 +50,7 @@ References:
 ### Contradiction Rule
 - [[Mathematical Argument#Premise|Premise]]: `~p -> false`
 - [[Mathematical Argument#Conclusion|Conclusion]]: `p`
-- The core of [[Mathematical Proof#Proof by Contradiction (反证法)]]
+- The core of [[Indirect Proof#Proof by Contradiction (矛盾证明法)]]
 - If a *assumption* leads to a *contradiction*, then that *assumption* must be false
 
 

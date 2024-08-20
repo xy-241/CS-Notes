@@ -59,7 +59,7 @@ $$
 - Convert $\rightarrow$ to $\cup$
 
 >[!tip] Mathematical Proof
-> Useful when we need to perform [[Mathematical Proof#Proof by Contradiction (反证法)]] on [[Conditional Statement]]
+> Useful when we need to perform [[Indirect Proof#Proof by Contradiction (矛盾证明法)]] on [[Conditional Statement]]
 
 
 

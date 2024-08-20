@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - discrete_math
+  - number_theory
 Creation Date: 2023-11-05T12:16:00
-Last Date: 2024-07-29T15:14:34+08:00
+Last Date: 2024-08-18T22:03:06+08:00
 References: 
 ---
 ## Closure (闭包)

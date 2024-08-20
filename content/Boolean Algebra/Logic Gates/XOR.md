@@ -32,7 +32,7 @@ $$
 >
 >**Now when we pick the first element or a random element from the list, we are sure it is the XOR summation of the rest of the integers**
 >
-> **Proof** using [[Mathematical Proof#Proof by Exhaustion/Brute-force/Cases]] and **Self-inverse**, [[#Own-Inverse]] and [[Algebra Properties#Commutativity (交换律)]]. There are 2 possible outcomes of picking a random integer from the list
+> **Proof** using [[Mathematical Proof#Proof by Exhaustion/Brute-force/Cases]] and **Self-inverse**, [[#Own-Inverse]] and [[Properties of Integer#Commutativity (交换律)]]. There are 2 possible outcomes of picking a random integer from the list
 >1. $x$, $x$ is the XOR summation by definition
 >2. $a_1$, $a_1$ is an integer that is in the given list
 >	- For $a_1$ to be the XOR Summation of the rest of the elements, it must fulfil the following $a_{1}= a_{2}\oplus \ldots\oplus a_{n-1}\oplus a_{n}\oplus x$ 

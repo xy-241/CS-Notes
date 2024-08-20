@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2024-07-22, 02:15
-Last Date: 2024-07-22T02:16:57+08:00
+Last Date: 2024-08-16T15:34:40+08:00
 References: 
 draft: 
 description: 
@@ -30,11 +30,3 @@ description:
 ---
 - The `extends` keyword establishes an [[Inheritance#"Is-a" Relationship|"is-a" relationship]] from the subclass to the superclass, enabling [[Inheritance|inheritance]]
 
-## @Override
----
-- A flag that helps the [[Language Processors|compiler]] catch errors when **overriding methods**
-
->[!example]
->  If a programmer intends to override a method from the parent class but **misspells** the **method name** or changes the [[Function#Function Signature|signature]], the compiler would normally **treat it as a new method in the child class**. 
->  
->  The `@Override` annotation prevents this by **explicitly signalling to the compiler** that the method should override an existing method in the parent class. If the method doesn't correctly override a parent class method, the compiler will generate an error.

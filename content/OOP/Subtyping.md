@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-24T17:56:06+08:00
-Last Date: 2024-08-09T23:37:48+08:00
+Last Date: 2024-08-12T12:50:48+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,7 @@ References:
 - A [[Datatype|data type]] $T$ is a **subtype** of a data type $S$ if a piece of **code written for** a variable of data type $S$ can also be **safely used** on a variable of data type $T$
 - The relationship can be represented with $T <: S$, where $S$ is also known as the **super type** of $T$
 
->[!example] Java
+>[!example] Java Primitive Subtyping
 > Subtyping among Java [[#Primitive Datatype]]
 > - `byte` <: `short` <: `int` <: `long` <: `float` <: `double`
 > - `char` <: `int` <: `long` <: `float` <: `double`
