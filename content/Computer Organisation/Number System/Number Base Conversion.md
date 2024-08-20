@@ -44,3 +44,23 @@ References:
 - Then the binary form counts from *top to bottom*
 ![[decimal_to_binary_2.png]]
 
+## Decimal to any base 
+---
+### Integer 
+![[base10_to_base8.jpg]]
+- keep diving by the base you want to convert to e.g(base8,base3 etc )
+- take the reminder and multiply it by the base 
+- repeat the steps until we are left with 1 or infinite loop 
+
+### decimal
+- multiply by the desired base you want to convert
+- take the integer portion of the result that is the converted number 
+- continue by multiplying the reminder
+- repeat the steps until you get 1 or infinite loop 
+## convert any base to any base
+--- 
+### method 1 
+convert initial base to decimal/base 10 and then convert to desiered base using the [[Decimal to any base ]]
+
+
+

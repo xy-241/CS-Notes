@@ -12,6 +12,12 @@ References:
 ## Abstract
 ---
 - [[Instruction Set Architecture (ISA)#Load-Store ISA]]
+
+
 - Use 32 [[Register]]
 - Uses [[Memory Address#Word Addressing]], each [[Computer Data Representation#Word]] is 4 [[Computer Data Representation#Byte]] 
  ![[mips stages.png]]
+
+
+### simplified mips flow 
+![[9BF8D94D-157B-453F-9BA1-B432397FC0A1_1_201_a.jpeg]]

@@ -87,7 +87,7 @@ References:
 | $-6$    | $1110$           | $1001$           |
 | $-7$    | $1111$           | $1000$           |
 
-- Basically same as the [[#Sign-and-Magnitude (原码)]], but for **negative decimal integers**, all [[#Magnitude Bit|magnitude bits]] are **inverted** 
+- Basically same as the [[#Sign-and-Magnitude (原码)]], but for **negative decimal integers**, all [[#Magnitude Bit|magnitude bits]] are **flipped** aka 0 become 1 and 1 become 0 
 
 
 
@@ -139,6 +139,14 @@ References:
 > How can the sum of two positive integer result in a negative number, and how the sum of two negative integer result in a positive number?
 > 
 > The **sum** of a **negative** and **positive** integer **guaranteed** **no integer overflow**.
+
+## sign extension
+- sign extension is used to increase the number of bits of a **signed** binary number while preserving its sign and value is commonly used to convert smaller sized sign integer to a larger size  
+- it works by copying the **MSB** $target bits - original bits$ times 
+- Example with negative sign : $\text{Original (4-bit)} = 1101 \quad \text{Sign-extended (8-bit)} = 1111\ 1101$
+- - Example with positive  sign : $\text{Original (4-bit)} = 0101 \quad \text{Sign-extended (8-bit)} = 0000\ 0101$
+
+
 
 
 
