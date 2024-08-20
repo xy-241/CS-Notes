@@ -548,3 +548,11 @@ ol.overflow {
   overflow-x: auto;
   overflow-y: hidden;
 }
+
+.external-embed.youtube,
+iframe.pdf {
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
