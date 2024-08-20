@@ -8,9 +8,8 @@ tags:
   - rust
   - java
   - functional
-  - c
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-08-20T18:08:46+08:00
+Last Date: 2024-08-20T23:04:31+08:00
 References: 
 ---
 ## Abstract
@@ -26,24 +25,16 @@ References:
 > 
 > The **method descriptor** of Java is made of the **function signature** and the **return type**.
 
+### Function Scope Rule
+- **Local parameters** and **variables** are only accessible within the [[Function|function]] they are declared in
 
-### Function Prototype
-- In [[C]], a function prototype consists of the **return type**, **name of the function**, and the **list of parameter [[Datatype|datatypes]]** (names of parameters are **optional**)
+### Function Call
+- When a function is called, an **activation record** is created on the [[Address Space#Stack Segment|call stack]], allocating memory for its local parameters and variables. Once the function completes, its activation record is removed, and the allocated memory is released. Thus, **local parameters and variables exist in memory only during the function's execution** and are known as **automatic variables**. In contrast, **static variables** persist in memory even after the function's execution.
 
->[!important] Placement of function prototype
-> It's good practice to put function prototypes at the top of the program, before the `main()` function. This informs the [[Language Processors#Compiler|compiler]] of the functions your program may use, along with their return types and parameter types.
->  
-> Without function prototypes , you'll receive error or warning messages from the compiler like `implicit declaration of function`.
+>[!important] Passing by value to a new function call
+> The new function receives **its own set of automatic variables and operates on them**, not the automatic variables of the calling function.
 
->[!important] Function definition
-> [[#Function Definition|Function definitions]] should follow after the `main()` function. So `main()` stays at the top of the program which makes it easier to analyse.
 
->[!important]
-> Without function prototype, C assumes the default(implicit) return type of the custom functions is `int`.
-> 
-
-### Function Definition
-- The actual code implementation of the the [[#Function Prototype]]
 ## First-class Citizen Function
 ---
 - [[Function]] that can be manipulated and used in flexible ways **like a variable**. This is what powers [[#Higher-order Function]]

@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-08-20T18:09:11+08:00
+Last Date: 2024-08-20T23:05:14+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -43,8 +43,8 @@ title: cs2100 nus notes
 ### C
 - [ ] [[Pointer]]
 - [ ] [[Pointer Arithmetic]]
-- [ ] [[Function#Function Prototype]]
-- [ ] [[Function#Function Definition]]
+- [ ] [[C Function]]
+- [ ] [[Function#Function Call]]
 
 
 ## MIPS

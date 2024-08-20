@@ -10,7 +10,7 @@ tags:
   - java
   - go
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-08-20T17:39:47+08:00
+Last Date: 2024-08-20T23:33:25+08:00
 References: 
 draft: 
 ---
@@ -21,17 +21,23 @@ draft:
 
 ![[pointer_example.png|600]]
 
->[!success] Pass data by pointer
+>[!success] Memory efficiency
 > Pass data to functions by pointer is **memory-efficient**. The data we pass into a function is basically a [[Memory Address]] to access that block of data. If we pass data into functions without pointer. We need to create an entire duplicate of data and pass it to the functions. 
 > 
 > In [[Java]], data is passed to functions by pointer by default. However in [[Go]], we need to explicity specify the pointer datatype for the function input, then we can pass data by point!
 > 
 > Pointer is the usual way of accessing hardware.
+
+>[!important] More power!
+> [[Function#Function Scope Rule|Function scope rules]] prevent a [[Function#Function Call|function call]] from directly modifying variables outside its own scope. However, using pointers allows you to pass [[Memory Address|memory addresses]] to a function, **enabling changes made within the function to affect variables outside its scope**.
+
+>[!tip] Printing pointer in C
+> Use `%p` as the [[C#C IO|format string]].
 ### Pointee
 - The **actual data** that a [[Pointer]] points-to inside the [[Address Space#Heap Segment]]
 
 ### Pointer Dereference
-- The process of accessing [[#Pointee]] of a [[Pointer]]
+- The process of modifying [[#Pointee]] of a [[Pointer]]
 
 
 
