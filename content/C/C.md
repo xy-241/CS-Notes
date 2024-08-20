@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-12-22, 23:53
-Last Date: 2024-08-17T14:54:27+08:00
+Last Date: 2024-08-20T17:16:36+08:00
 References: 
 draft: 
 ---
@@ -46,5 +46,9 @@ draft:
 > `"That equals %9.3f km.\n"` is known as a format string, `kms` is known as print list. `\n` is known as [[escape_sequence.png|escape sequence]] to format the string.
 
 
+## C Operator Precedence
+---
+ ![[c_operator_precedence.png|500]]
 
+- If we want operators with **lower precedence** to **execute first**, we need to **use parentheses**
 
