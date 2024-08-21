@@ -7,7 +7,7 @@ tags:
   - c
   - computer_organisation
 Creation Date: 2024-08-21, 14:42
-Last Date: 2024-08-21T15:18:35+08:00
+Last Date: 2024-08-21T16:06:49+08:00
 References: 
 draft: 
 description: 
@@ -50,7 +50,7 @@ description:
 - The syntax is `char *fgets(char *str, int size, FILE *stream);`
 
 >[!important] More reliable
-> `fgets()` reads until the first newline character or the specified `size` is reached, whichever comes first. So we can control how large the input will be; any excess will simply be ignored.
+> `fgets()` reads until the first newline character or the specified `size`(`size-1` chars) is reached, whichever comes first. So we can control how large the input will be; any excess will simply be ignored.
 > 
 > The `\n` is read in as one character.
 
