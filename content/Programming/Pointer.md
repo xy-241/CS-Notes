@@ -53,7 +53,7 @@ draft:
 ## C Pointer
 ---
 >[!code] Printing pointer in C
-> Use `%p` as the [[C#C IO|format string]].
+> Use `%p` as the [[C String#C IO|format string]].
 
 >[!code] Obtaining variable memory address in C
 > Prefix the variable with the address operator `&`. The address is in [[Number System|hex format]]
