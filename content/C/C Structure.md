@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-08-21, 15:51
-Last Date: 2024-08-21T16:02:48+08:00
+Last Date: 2024-08-21T23:08:13+08:00
 References: 
 draft: 
 description: 
@@ -30,3 +30,8 @@ typedef struct {
 
 >[!code] Accessing members of structure variables
 > Using the code snippet above, we can access and modify the `balance` using `a_1.balance;`
+
+>[!important] Dereferencing a pointer to a structure and accessing its attributes
+> We need to make sure we use parentheses like `(*player_ptr).name`, because `.` has a higher [[C#C Operator Precedence|operator precedence]].
+> 
+> Or we can simply use `player_ptr->name` to achieve the same, this is a syntactic sugar.

@@ -7,7 +7,7 @@ tags:
   - c
   - computer_organisation
 Creation Date: 2024-08-21, 14:42
-Last Date: 2024-08-21T16:06:49+08:00
+Last Date: 2024-08-21T23:31:00+08:00
 References: 
 draft: 
 description: 
@@ -25,6 +25,9 @@ description:
 > 
 > The issue shown in the picture can be resolved by assigning the string using double quotation marks - `"apple"`, or, less preferably, by using `str[5] = '\0';`.
 
+>[!important] Boolean value of null terminator
+> The null terminator `\0` has a boolean value of `false` which is equivalent to the integer `0`!
+
 >[!code] Return length of string
 > Use `strlen(s)`, `\n` is considered as a character.
 
@@ -34,7 +37,7 @@ description:
 > We should use `strncmp(s1, s2, n)`, because it safer, it will compare the first `n` characters if a null termination `\0` is missing.
 
 >[!code] Assign string value in C
-> When we want to re-assign string value in C, we need to use `strcpy(s1, s2` which assigns `s2` to `s1`.
+> When we want to re-assign string value in C, we need to use `strcpy(s1, s2)` which assigns `s2` to `s1`.
 > 
 > We should use `strncpy(s1, s2, n)`, because it safer, it will only copy the first `n` characters if a null termination `\0` is missing.
 

@@ -7,7 +7,7 @@ tags:
   - c
   - computer_organisation
 Creation Date: 2024-08-20, 22:43
-Last Date: 2024-08-20T22:44:47+08:00
+Last Date: 2024-08-22T00:21:12+08:00
 References: 
 draft: 
 description: 
@@ -30,6 +30,10 @@ description:
 >[!important]
 > Without function prototype, C assumes the default(implicit) return type of the custom functions is `int`.
 > 
+
+>[!important]
+> Always end the function prototype with `;`!
+
 
 ### Function Definition
 - The actual code implementation of the the [[#Function Prototype]]
