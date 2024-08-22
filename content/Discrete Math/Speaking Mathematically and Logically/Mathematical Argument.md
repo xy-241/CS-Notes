@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-11-04T19:24:00
-Last Date: 2024-02-18T13:24:23+08:00
+Last Date: 2024-08-23T03:14:19+08:00
 References: 
 ---
 ## Abstract
@@ -30,13 +30,16 @@ References:
 - A row of **Truth Table** in which all the [[#Premise]] are true
 ### Valid
 - *Does the conclusion follow logically from the premises, regardless of whether those premises are actually true?*
-- [[Mathematical Argument]] is said to be **Valid** if and only if whenever [[Mathematical Statement]] substituted that make all [[#Premise]] true, and the [[#Conclusion]] is also true 
+- [[Mathematical Argument]] is said to be **Valid** if and only if whenever [[Mathematical Statement]] substituted that make all [[#Premise]] true, and the [[#Conclusion]] **is also true** 
 - The conclusion logically follows from the premises. It doesn't guarantee that the premises themselves are actually true.
-</br>
 
-- There is [[#Critical Row]] in which Conclusion is false: **Invalid**
-- The Conclusion in every Critical Row is true: **valid**
-- For all non-critical rows, regardless is conclusion is true or false: **valid**
+>[!important]
+> There is [[#Critical Row]] in which Conclusion is false: **invalid**.
+> 
+> The Conclusion in every Critical Row is true: **valid**.
+> 
+> For all non-critical rows, regardless is conclusion is true or false: **valid**.
+
 
 ### Sound
 - A [[Mathematical Argument]] is called **sound** if & only if it is [[#Valid]] **AND** all the [[#Premise]] is true. That means the [[#Conclusion]] also must be true
