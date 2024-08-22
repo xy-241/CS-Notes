@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2024-08-16, 11:13
-Last Date: 2024-08-16T16:56:53+08:00
+Last Date: 2024-08-22T20:50:42+08:00
 References: 
 draft: 
 description: 
@@ -35,3 +35,17 @@ description:
 - [ ] [[Encapsulation]]
 - [ ] [[Inheritance]]
 - [ ] [[Polymorphism]]
+
+## Week 3
+---
+### Java
+- [ ] [[Java Keywords#final]]
+
+### OOP
+- [ ] [[OOP Method#Method Overloading]]
+- [ ] [[OOP Method#Method Overriding]]
+- [ ] [[Polymorphism]]
+- [ ] [[Type Casting]]
+- [ ] [[Dynamic Binding]]
+- [ ] [[Liskov Substitution Principle (LSP)]]
+
