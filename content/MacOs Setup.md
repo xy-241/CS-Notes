@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-07-16T23:25:51+08:00
+Last Date: 2024-07-21T19:02:19+08:00
 References: 
 title: Macos setup for software engineer
 ---
@@ -133,6 +133,7 @@ h() {
 ## Software Engineering Tools
 ---
 - [ ] [[Code Editor Setup#Neovim]]
+- [ ] [[Code Editor Setup#Visual Studio Code]]
 - [ ] [[Code Editor Setup]]
 - [ ] [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
 - [ ] [Postman - API Testing Tool](https://www.postman.com/downloads/)
