@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-10-20T15:42:00
-Last Date: 2024-08-12T08:35:52+08:00
+Last Date: 2024-08-23T01:09:50+08:00
 References: 
 sr-due: 2024-03-09
 sr-interval: 15
@@ -18,12 +18,15 @@ sr-ease: 290
 - [[#Vacuously True]] when the [[#Hypothesis]] $P$ is $0$ aka false
 - [[Propositional Logic#Logical Equivalence]] to [[#Contrapositive (逆否命题)]] and $\neg P \lor Q$ 
 	
-| $P$   | $Q$   | $P \rightarrow Q$ | $\neg P \lor Q$ |
-| --- | --- | ------ | ------- |
-| 0   | 0   | 1      |     1    |
-| 0   | 1   | 1      |      1   |
-| 1   | 0   | 0      |       0  |
-| 1   | 1   | 1      |      1   |
+| $P$ | $Q$ | $P \rightarrow Q$ | $\neg P \lor Q$ |
+| --- | --- | ----------------- | --------------- |
+| 0   | 0   | 1                 | 1               |
+| 0   | 1   | 1                 | 1               |
+| 1   | 0   | 0                 | 0               |
+| 1   | 1   | 1                 | 1               |
+
+>[!important] Only if
+> "$p$ only if $q$" means "if not $q$ then not $p$" or $\neg q \rightarrow \neg p$.
 
 ### Hypothesis
 - Also known as **Antecedent**
@@ -38,6 +41,8 @@ sr-ease: 290
 
 >[!important]
 > $P \leftrightarrow Q$ is [[Propositional Logic#Logical Equivalence|logically equivalent]] to $(P \rightarrow Q) \land (Q \rightarrow P)$.
+> 
+> $P$ is a [[#Sufficient Condition|sufficient condition]] and [[#Necessary Condition|necessary condition]] for $Q$ means $P$ if and only if $Q$, or $P \leftrightarrow Q$.
 
 ### Sufficient Condition
 - Given $P \rightarrow Q$

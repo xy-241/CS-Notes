@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-12-22, 23:53
-Last Date: 2024-08-17T14:54:27+08:00
+Last Date: 2024-08-21T15:18:25+08:00
 References: 
 draft: 
 ---
@@ -33,18 +33,15 @@ draft:
 | C Vector    | Basically [[Array#Dynamic Array]]   |
 | C Structs   | Allow grouping of heterogenous data |
 
-## C IO
+
+
+
+
+
+
+## C Operator Precedence
 ---
->[!important] Read float
-> `scanf("%f", &miles);` reads in a [[Floating-Point Encoding (浮点数编码)|float number]]. The value it returns is the total number of successfully matched and assigned input items.
-> 
-> `"%f"` is known as a [[c_format_string.png|format string]], `&miles` is known as a input list.
+ ![[c_operator_precedence.png|500]]
 
->[!important] Print float
-> `printf("That equals %9.3f km.\n", kms);` prints a floating-point number to the screen, formatted to occupy a **minimal width** of 9 characters (including the decimal point and any padding spaces if the number is shorter). The number will be displayed with 3 decimal places of precision.
-> 
-> `"That equals %9.3f km.\n"` is known as a format string, `kms` is known as print list. `\n` is known as [[escape_sequence.png|escape sequence]] to format the string.
-
-
-
+- If we want operators with **lower precedence** to **execute first**, we need to **use parentheses**
 

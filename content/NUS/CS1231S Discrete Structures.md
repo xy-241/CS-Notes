@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-08-19T20:24:08+08:00
+Last Date: 2024-08-23T04:20:34+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -20,6 +20,7 @@ title: cs1231s nus notes
 
 ## Week 1
 ---
+- [ ] [[Discrete Math]]
 - [ ] [[Integer (整数)]]
 - [ ] [[Properties of Integer]] 
 - [ ] [[Rational Number]]
@@ -30,8 +31,13 @@ title: cs1231s nus notes
 - [ ] [[Indirect Proof]]
 - [ ] [[Mathematical Statement]]
 - [ ] [[Propositional Logic]]
-- [ ] [[Conditional Statement]]
 
+## Week 2
+---
+- [ ] [[Conditional Statement]]
+- [ ] [[Mathematical Argument]]
+- [ ] [[Rule of Inference (推理规则)]]
+- [ ] [[Fallacy]]
 
 >[!tip]- Good to Have
 > **Geometry**
@@ -46,12 +52,7 @@ title: cs1231s nus notes
 > - [[Factor]]
 > - [[GCD]]
 > - [[Modulo]]
-## Speaking Mathematically and Logically
----
-- [[Discrete Math]]
-- [[Mathematical Argument]]
-- [[Rule of Inference (推理规则)]]
-- [[Fallacy]]
+
 
 ## Quantified Statements
 ---

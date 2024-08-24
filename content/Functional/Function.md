@@ -9,7 +9,7 @@ tags:
   - java
   - functional
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-08-20T01:15:24+08:00
+Last Date: 2024-08-20T23:04:31+08:00
 References: 
 ---
 ## Abstract
@@ -24,6 +24,16 @@ References:
 > In [[Java]], the return type isn't part of the function signature. The method signature is the combination of the method name and the parameter list (argument types, argument order and argument count).
 > 
 > The **method descriptor** of Java is made of the **function signature** and the **return type**.
+
+### Function Scope Rule
+- **Local parameters** and **variables** are only accessible within the [[Function|function]] they are declared in
+
+### Function Call
+- When a function is called, an **activation record** is created on the [[Address Space#Stack Segment|call stack]], allocating memory for its local parameters and variables. Once the function completes, its activation record is removed, and the allocated memory is released. Thus, **local parameters and variables exist in memory only during the function's execution** and are known as **automatic variables**. In contrast, **static variables** persist in memory even after the function's execution.
+
+>[!important] Passing by value to a new function call
+> The new function receives **its own set of automatic variables and operates on them**, not the automatic variables of the calling function.
+
 
 ## First-class Citizen Function
 ---
