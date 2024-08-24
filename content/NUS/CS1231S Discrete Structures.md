@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-08-23T04:20:34+08:00
+Last Date: 2024-08-23T04:30:52+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -38,6 +38,7 @@ title: cs1231s nus notes
 - [ ] [[Mathematical Argument]]
 - [ ] [[Rule of Inference (推理规则)]]
 - [ ] [[Fallacy]]
+- [ ] [[Predicate]]
 
 >[!tip]- Good to Have
 > **Geometry**
@@ -56,7 +57,6 @@ title: cs1231s nus notes
 
 ## Quantified Statements
 ---
-- [[Predicate]]
 - [[Quantified Rule of Inference]]
 
 ## Methods of Proofs
