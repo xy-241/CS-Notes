@@ -9,12 +9,13 @@ Creation Date: 2023-10-12T15:43:00
 Last Date: 2024-08-18T16:59:10+08:00
 References: 
 ---
-## Abstract
+   ## Abstract
 ---
 
 ![[IEEE 754 Floating-Point Rep.png|500]]
 
 - Based on the [IEEE 754 Standard](https://en.wikipedia.org/wiki/IEEE_754)
+- 32 bits in total 
 - **Sign:** $0$ indicates a positive number, $1$ indicates a negative number
 - **Exponent:** Comes with a bias of $- 127$, represented by all exponent bits set to 0. To obtain a positive exponent, set the 8th (most significant) bit to `1`, resulting in a value of `128`
 - **Mantissa:** This represents the **fractional part of the number** after [[#Normalised Number|normalisation]]. The binary digits following the decimal point are included in the mantissa.
@@ -51,7 +52,7 @@ References:
 > 2. Convert the binary form to [[#Normalised Number|normalised form]]
 > 3. Calculate the Exponent Field by adding the bias $127$ to the exponent & convert the sum to binary (8 bits)
 > 4. Determine the Sign Bit, $0$ for positive, $1$ for negative
-> 5. Assemble the Float
+> 5. Assemble the Float remember 1 bit for sign , 8 bit for exponent and 23 bits for mantisa 
 > 6. Convert to Hexadecimal by grouping the 32 bits into groups of 4, and convert each group to its hexadecimal equivalent
 
 ## Normalised Number
