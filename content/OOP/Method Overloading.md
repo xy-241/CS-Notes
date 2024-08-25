@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2024-08-25, 14:50
-Last Date: 2024-08-25T16:16:03+08:00
+Last Date: 2024-08-25T19:24:41+08:00
 References: 
 draft: 
 description: 
@@ -18,7 +18,9 @@ description:
 
  >[!question] Why is this useful?
  >
- > This allows the class to provide **different implementations** for the **same conceptual operation** based on the input it receives, promoting [[Polymorphism]].
+ > This allows the class to provide **different implementations** for the **same conceptual operation** based on the input it receives, **promoting** [[Polymorphism]]. 
+ > 
+ > However, **method overloading is not considered a form of polymorphism**. Polymorphism involves providing different implementations to an existing [[Function#Function Signature|method descriptor]] defined in a parent class or interface!
 
 >[!important] *Not* about changing the names of the parameters
 > Overloading is about changing the **order, number, or types of parameters**.

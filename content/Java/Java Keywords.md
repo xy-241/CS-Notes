@@ -23,7 +23,7 @@ description:
 ## final
 ---
 - On [[OOP#OOP Class]]: prevents [[Inheritance]]
-- On method: prevents overriding
+- On method: prevents [[Method Overriding]]
 - On variable: makes it a constant (prevents modification after initialisation)
 
 ## extends

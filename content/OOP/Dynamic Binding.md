@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2024-08-22, 20:48
-Last Date: 2024-08-25T17:56:43+08:00
+Last Date: 2024-08-25T20:53:33+08:00
 References: 
 draft: 
 description: 
@@ -26,4 +26,4 @@ description:
 
 
 >[!attention]
-> Dynamic binding only works with regular methods, not with [[Java Keywords#static]] methods (those belonging to the class itself).
+> Dynamic binding only works with regular methods, not with [[Java Keywords#static]] methods (those belonging to the class itself) and field access.

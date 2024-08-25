@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-23T17:48:21+08:00
-Last Date: 2024-08-25T17:37:03+08:00
+Last Date: 2024-08-25T19:16:33+08:00
 References: 
 ---
 ## Abstract
@@ -20,7 +20,7 @@ References:
 >[!important] The Chameleon's Trick
 > [[Method Overriding|Method overriding]] is the key to polymorphism's magic. It lets you redefine how an object behaves, even if you don't have access to the original code. This is like teaching a new trick to an old dog - you're updating its behaviour without changing its core identity.
 > 
-> Coupled with [[Dynamic Binding|dynamic binding,]] we are able to utilise the desired form from the many forms available during runtime to fulfil the task precisely.
+> Coupled with [[Dynamic Binding|dynamic binding,]] we are able to utilise the desired form from the many forms available during runtime to fulfil the task precisely. Thus, it allows us to write **generic and succinct code** based only on the compile-time type of the target. The actual behaviour of the code will be based on the run-time type of the target.
 
 
 >[!success] Future-proofing codes
