@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OOP
+  - java
 Creation Date: 2023-09-14T14:01:42+08:00
-Last Date: 2024-07-25T23:21:53+08:00
+Last Date: 2024-08-25T18:17:06+08:00
 References: 
 ---
 ## Abstract
@@ -36,6 +37,19 @@ References:
 - An actual instance of [[#OOP Class]] that occupies some space in the [[Address Space#Heap Segment]]
 - The variable holds a **memory pointer** to the OOP Object, not the values inside the OOP Object
 
+### Abstract Class
+```java
+abstract class Shape {
+  public abstract double getArea();
+}
+```
+
+- A blueprint for other [[#OOP Class|classes]]
+
+>[!important]
+> Abstract class can't be used to create objects directly.
+> 
+> An **abstract method** is declared but doesn't have an implementation. Subclasses must provide the implementation.
 
 
 
@@ -43,6 +57,12 @@ References:
 ---
 - Defines a **set of [[OOP Method#OOP Abstract Method]]** that a [[#OOP Class]] must implement if it chooses to implement that interface. It doesn't provide any concrete implementations for these methods
 - Focus on **what a class should do** rather than **how it should do it**
+
+>[!important] Interface Inheritance
+> Interfaces can also inherit from other interfaces.
+
+>[!important] Casting with Interfaces
+> You can cast an object to an interface type, even if its class doesn't directly implement it. This is because a subclass **might implement the interface**.
 
 ### Functional Interface
 - Also known as **Single Abstract Method(SAM)**

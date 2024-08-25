@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2023-07-20T00:24:49+08:00
-Last Date: 2024-08-22T20:55:04+08:00
+Last Date: 2024-08-25T18:04:02+08:00
 References: 
 ---
 
@@ -16,6 +16,11 @@ References:
 > **Objects of a** [[Subtyping|superclass]] should be replaceable with **objects of a subclass** without affecting the **correctness of the program**.
 
 - Not all [[Inheritance#"Is-a" Relationship]] should be modelled with [[Inheritance]]
+
+>[!question] What is the correctness of the program?
+> If a program works correctly using objects of a certain type, it should also work correctly if you replace those objects with objects of a subtype (a class that [[Inheritance|inherits]] from the original type).
+> 
+> The Liskov Substitution Principle is about ensuring that subclasses behave in a way that's compatible with their parent classes. This helps prevent unexpected bugs and makes your code more reliable. Remember, with the power of inheritance comes the responsibility to use it wisely.
 
 >[!example] Fly example
 > Consider a base class `Bird` with a method `fly()`. If you derive a class `Penguin` from `Bird`, but `Penguin` cannot fly, it would violate the LSP because substituting a `Bird` with a `Penguin` would break the `fly()` method's expected behaviour.
