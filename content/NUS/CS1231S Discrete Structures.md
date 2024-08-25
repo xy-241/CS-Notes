@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-08-23T04:30:52+08:00
+Last Date: 2024-08-25T21:40:11+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -39,6 +39,9 @@ title: cs1231s nus notes
 - [ ] [[Rule of Inference (推理规则)]]
 - [ ] [[Fallacy]]
 - [ ] [[Predicate]]
+- [ ] [[Quantifier]]
+- [ ] [[Universal Statement]]
+- [ ] [[Existential Statement]]
 
 >[!tip]- Good to Have
 > **Geometry**
