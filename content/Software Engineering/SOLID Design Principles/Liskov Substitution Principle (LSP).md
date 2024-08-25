@@ -37,7 +37,7 @@ References:
 >[!question] How can we fix this?
 > **Leverage a Common [[OOP#OOP Interface|OOP Interface]]:** Abstract the `Square` and `Rectangle` properties into an interface. Implement the `width` and `length` in each respective class. This prevents object substitution when obtaining the `length` (which is specific to `Rectangle` objects), thereby ensuring OOP compatibility.
 >
-> **Prevent [[Inheritance|Inheritance]] and [[OOP Method#Method Overriding|Method Overriding]]:** Declare the OOP class or individual [[OOP#OOP Class|OOP methods]] as [[Java Keywords#final|final]]. This enhances the ability to reason about program correctness. Noteworthy examples include `java.lang.Math` and `java.lang.String`, which are not inheritable.
+> **Prevent [[Inheritance|Inheritance]] and [[Method Overriding|Method Overriding]]:** Declare the OOP class or individual [[OOP#OOP Class|OOP methods]] as [[Java Keywords#final|final]]. This enhances the ability to reason about program correctness. Noteworthy examples include `java.lang.Math` and `java.lang.String`, which are not inheritable.
 >
 > **Unit Testing:** Employ assertions to verify the LSP during compilation. You can find an illustrative example [here](https://nus-cs2030s.github.io/2223-s2/16-lsp.html#lsp-through-the-lens-of-testing).
 

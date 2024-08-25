@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2024-08-16, 11:13
-Last Date: 2024-08-22T20:50:42+08:00
+Last Date: 2024-08-25T16:32:05+08:00
 References: 
 draft: 
 description: 
@@ -40,10 +40,12 @@ description:
 ---
 ### Java
 - [ ] [[Java Keywords#final]]
+- [ ] [[Java#The Mother of All Classes]]
+- [ ] [[Java Constructor#Chaining Constructors]]
 
 ### OOP
-- [ ] [[OOP Method#Method Overloading]]
-- [ ] [[OOP Method#Method Overriding]]
+- [ ] [[Method Overriding]]
+- [ ] [[Method Overloading]]
 - [ ] [[Polymorphism]]
 - [ ] [[Type Casting]]
 - [ ] [[Dynamic Binding]]

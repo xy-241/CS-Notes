@@ -30,7 +30,7 @@ References:
 
 ### Compile-time Type vs Run-time Type
 - We can assign a [[Subtyping|subtype]] **instance** to a [[Subtyping|supertype]] variable **during compilation**
-- **At runtime**, we **can call all methods** with **matching [[Function#Function Signature|signatures]]** declared **in the supertype** on the subtype instance, **including those [[OOP Method#Method Overriding|overridden]] in the subtype**
+- **At runtime**, we **can call all methods** with **matching [[Function#Function Signature|signatures]]** declared **in the supertype** on the subtype instance, **including those [[Method Overriding|overridden]] in the subtype**
 
 >[!important]
 > The **runtime type** of an object is **always a subtype** of its **compile-time type**.
