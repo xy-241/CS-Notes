@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-12T15:43:00
-Last Date: 2024-08-18T16:59:10+08:00
+Last Date: 2024-08-26T16:04:25+08:00
 References: 
 ---
 ## Abstract
@@ -43,6 +43,10 @@ References:
 > 
 > With limited precision (e.g., 32 bits), we inevitably lose some accuracy. This is why 0.1 + 0.2 in binary floating-point arithmetic does not strictly equal 0.3.
 
+>[!important] Approximation destroys associativity
+> Given 3 floating points number $A$, $B$ and $C$, $(A ~op~ B) ~op~ C \neq A ~op~ (B ~op~ C)$, which is same as $D ~op~ C \neq A ~op~ E$.
+> 
+> [[Properties of Integer#Associativity (结合律)|Associativity]] is not guaranteed with floating-point numbers because each operation may produce an approximated value.
 
 >[!tip] Converting from Decimal to Float (IEEE 754 Single Precision)
 > ![[decimal_to_float.png|300]]
