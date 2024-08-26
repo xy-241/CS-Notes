@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-02-13, 13:45
-Last Date: 2024-08-25T22:07:53+08:00
+Last Date: 2024-08-26T13:49:50+08:00
 References: 
 draft: 
 description: 
@@ -33,15 +33,19 @@ $$
 ### Vacuous Truth of Universal
 - Given the statement: `All balls in the bowl are blue`, however `no balls in the bowl`. The statement is vacuously true, because the [[#Negation of Universal]] is `One of the balls in the bowl isn't blue` which is **obviously false**
 
+>[!important] Another perspective
+> If you consider a [[Mathematical Argument#Premise|hypothesis]] as a [[Set|set]], when the set is an [[Common Sets#Empty Set|empty set]] (aka the hypothesis is false), the negation of the statement is that there exists at least one element in the set that contradicts the given universal statement. Since it is an empty set, there isn't such an element. Thus, an empty set or a false hypothesis will always result in a universal statement that is true.
+
 ## Universal Conditional
 ---
 $$
 \forall x (P(x) \rightarrow Q(x))
 $$
 - Made of [[Universal Statement]] & [[Conditional Statement]]
+
   
-  >[!tip] Simplified to universal statement
-  > The above universal conditional statement can be reduced to $\forall x \in P, Q(x)$ by narrowing down the [[Predicate#Domain of Predicate Variable]] $x$ with respect to $P(x)$. In essence, the new $x$ is the [[Predicate#Truth Set]] of $P(x)$.
+>[!tip] Simplified to universal statement
+> The above universal conditional statement can be reduced to $\forall x \in P, Q(x)$ by narrowing down the [[Predicate#Domain of Predicate Variable]] $x$ with respect to $P(x)$. In essence, the new $x$ is the [[Predicate#Truth Set]] of $P(x)$.
 
 ### Negation of Universal Conditional
 - Make use of [[#Negation of Universal]] & [[Conditional Statement#Implication Law]]
