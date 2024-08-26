@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-08-21T16:29:32+08:00
+Last Date: 2024-08-26T15:25:20+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -48,6 +48,12 @@ title: cs2100 nus notes
 - [ ] [[C String]]
 - [ ] [[C Structure]]
 - [ ] [[C Array]]
+- [ ] [[C Keywords#extern]]
+
+### Programming
+- [ ] [[Expression]]
+- [ ] [[Statement]]
+- [ ] [[Function#Function Scope Rule]]
 
 
 ## MIPS

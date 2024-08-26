@@ -8,8 +8,9 @@ tags:
   - rust
   - java
   - functional
+  - c
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-08-20T23:04:31+08:00
+Last Date: 2024-08-26T15:24:59+08:00
 References: 
 ---
 ## Abstract
@@ -27,6 +28,9 @@ References:
 
 ### Function Scope Rule
 - **Local parameters** and **variables** are only accessible within the [[Function|function]] they are declared in
+
+>[!question] In C, what if I have a local variable and a global variable with the same name?
+> C will prioritize the local variable within its scope.
 
 ### Function Call
 - When a function is called, an **activation record** is created on the [[Address Space#Stack Segment|call stack]], allocating memory for its local parameters and variables. Once the function completes, its activation record is removed, and the allocated memory is released. Thus, **local parameters and variables exist in memory only during the function's execution** and are known as **automatic variables**. In contrast, **static variables** persist in memory even after the function's execution.
