@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2024-07-22, 02:15
-Last Date: 2024-08-16T15:34:40+08:00
+Last Date: 2024-08-27T21:26:44+08:00
 References: 
 draft: 
 description: 
@@ -25,6 +25,16 @@ description:
 - On [[OOP#OOP Class]]: prevents [[Inheritance]]
 - On method: prevents [[Method Overriding]]
 - On variable: makes it a constant (prevents modification after initialisation)
+
+>[!attention] The following code can compile & run!
+>```java
+>final int x;
+>if (true) {
+>  x = 10;
+} else x = 20;
+>```
+>
+> It works because `final int x` isn't initialised yet, and the if/else statement ensures only one initialisation will take place.
 
 ## extends
 ---

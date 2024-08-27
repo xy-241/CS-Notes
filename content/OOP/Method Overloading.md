@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2024-08-25, 14:50
-Last Date: 2024-08-25T19:24:41+08:00
+Last Date: 2024-08-27T17:05:42+08:00
 References: 
 draft: 
 description: 
@@ -32,9 +32,12 @@ description:
 
 ## Method Invocation
 ---
-- [[Java]] favours the **"more specific"** method when there are [[Method Overloading|multiple methods with the same name]]
+- [[Java]] favours the **"more specific"** method when there are [[Method Overloading|multiple methods with the same name but different function signature]]
+
 
 >[!question] What is more specific?
-> A method is "more specific" if it accepts a **narrower range of objects** compared to another method with the same name.
+> A method `M` is more specific than a method `N` if the arguments to `M` can be passed to `N` without a compilation error.
 > 
-> For example, `equals(Circle)` is more specific than `equals(Object)` because it only accepts `Circle` objects, while `equals(Object)` accepts any object.
+> For example, `equals(Circle)` is more specific than `equals(Object)` because a `Circle` object can be passed to `equals(Object)` without a compilation error.
+> 
+> Another example, `equals(int)` is more specific than `equals(double)` because an `int` value can be passed to `equals(double)` without a compilation error due to [[Type Casting#Widening Type Conversion|automatic widening conversion]]. However, a `double` value cannot be passed to `equals(int)` without a compilation error because it would require an [[Type Casting#Narrowing Type Conversion|explicit narrowing conversion]].

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2024-08-22, 20:44
-Last Date: 2024-08-25T20:52:06+08:00
+Last Date: 2024-08-26T19:54:34+08:00
 References: 
 draft: 
 description: 
@@ -30,6 +30,11 @@ description:
 
 ### Narrowing Type Conversion
 - [[Type Casting|Casting]] a [[Subtyping|superclass]] object to its superclass
+- Supported by [[Java]] **explicitly**
 
 >[!important] Explicit narrowing type conversion in Java
 > It tells [[Language Processors#Compiler|compiler]] we know what we are doing, don't enforce any checks, thus we will get runtime error if the type conversion is not compatible.
+
+
+>[!question] Why do we need narrowing?
+> [[Dynamic Binding|Dynamic binding]] allows us to pass [[Subtyping|subtypes]] to a supertype. However, if we want to use methods specific to the subtype, we need to perform narrowing. Otherwise, we'll encounter compilation errors. This is because, to the compiler, the [[Subtyping#Compile-time Type vs Run-time Type|compile-time type]] (the supertype) **doesn't support those subtype-specific methods**.
