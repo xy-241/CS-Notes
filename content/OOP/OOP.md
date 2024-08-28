@@ -7,10 +7,10 @@ tags:
   - OOP
   - java
 Creation Date: 2023-09-14T14:01:42+08:00
-Last Date: 2024-08-25T18:17:06+08:00
+Last Date: 2024-08-28T17:15:43+08:00
 References: 
 ---
-## Abstract
+# Abstract
 ---
 
 ![[oop_4_pillars.png|500]]
@@ -44,12 +44,15 @@ abstract class Shape {
 }
 ```
 
-- A blueprint for other [[#OOP Class|classes]]
+- A blueprint for other [[#OOP Class|classes]], thus can’t be used to create objects directly
 
->[!important]
-> Abstract class can't be used to create objects directly.
-> 
-> An **abstract method** is declared but doesn't have an implementation. Subclasses must provide the implementation.
+>[!important] Properties 
+> - Can be a subclass of other concrete class
+> - Can have fields
+> - Can have abstract methods (doesn't have an implementation). Subclasses must provide the implementation
+> - Can have concrete methods
+> - Not required to have abstract methods
+
 
 
 
@@ -58,12 +61,22 @@ abstract class Shape {
 - Defines a **set of [[OOP Method#OOP Abstract Method]]** that a [[#OOP Class]] must implement if it chooses to implement that interface. It doesn't provide any concrete implementations for these methods
 - Focus on **what a class should do** rather than **how it should do it**
 
->[!important] Interface Inheritance
-> Interfaces can also inherit from other interfaces.
+>[!important] Pure interface
+> An interface should only contain abstract methods.
+
+>[!code] Java interface
+> All the methods inside are automatically [[Access Modifier|public]].
+
 
 >[!important] Casting with Interfaces
 > You can cast an object to an interface type, even if its class doesn't directly implement it. This is because a subclass **might implement the interface**.
+> 
+> If we create an instance with the interface as its [[Datatype|data type]], then we cast it to a data type that is not in a [[Subtyping|subtyping]] relationship, this may still work, but it is not recommended and can lead to runtime errors.
 
+>[!important] Interface Inheritance
+> Interfaces can also inherit from other interfaces.
+> 
+> In Java, an interface can extend zero or more interfaces.
 ### Functional Interface
 - Also known as **Single Abstract Method(SAM)**
 - [[OOP#OOP Interface]] that contains **only one** [[OOP#OOP Abstract Method]]

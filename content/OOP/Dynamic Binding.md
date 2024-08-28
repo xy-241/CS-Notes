@@ -15,7 +15,7 @@ description:
 ## Abstract
 ---
 - Also known as **late binding**
-- A concept in programming where the [[OOP Method|method]] to be invoked is determined [[#Compile-time Type vs Run-time Type|at runtime rather than at compile-time]]. The actual method that is called is decided based on the runtime type of the object. This adds a layer of flexibility and adaptability to your code
+- A concept in programming where the [[OOP Method|method]] to be invoked is determined [[Subtyping#Compile-time Type vs Run-time Type|at runtime rather than at compile-time]]. The actual method that is called is decided based on the runtime type of the object. This adds a layer of flexibility and adaptability to your code
 
 
 

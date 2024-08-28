@@ -5,8 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - OOP
+  - java
 Creation Date: 2024-08-25, 15:53
-Last Date: 2024-08-25T16:02:48+08:00
+Last Date: 2024-08-28T16:27:23+08:00
 References: 
 draft: 
 description: 
@@ -15,13 +16,16 @@ description:
 ---
 - Method overriding occurs when a **child class** provides its own implementation of a **method that already exists in its parent class**. The overriding method in the child class must have the same [[Function#Function Signature|function signature]] (in Java, this includes the return type and function signature) as the method it is overriding in the parent class
 
+>[!important] Java method overriding
+> In [[Java]], method overriding happens when a subclass defines an instance method with the same [[Function#Function Signature|method descriptor]] as superclass. The **return type can be different** if it is a [[Subtyping|subtype]] of the return type of the method in the parent class.
+> 
+> As a good practice, use [[#@Override]] to ensure method overriding is carried out.
+
+
 >[!question] Why is this useful?
 > Method overriding enables **different objects** to **respond to the same method call** in a way that's **specific to their type**, thus fulfilling the OOP principle of [[Polymorphism|polymorphism]].
 
->[!important] Java method overriding
-> In [[Java]], method overriding happens when a subclass defines an instance method with the same [[Function#Function Signature|method descriptor]] as superclass.
-> 
-> As a good practice, use [[#@Override]] to ensure method overriding is carried out.
+
 
 ## @Override
 ---
