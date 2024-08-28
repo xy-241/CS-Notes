@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-11-26T17:42:00
-Last Date: 2024-04-27T21:31:49+08:00
+Last Date: 2024-08-26T15:28:15+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,8 @@ References:
 - Keywords that may change the behaviours of [[Language Processors#Compiler]] or program
 
 
-### volatile
+## volatile
+---
 - Used to indicate to the [[Language Processors#Compiler]] that a variable's value may change unexpectedly
 - Often the case when a variable is being accessed by multiple [[Thread]] or when it represents **hardware** that is external to the computer
 - Compiler will not optimize the code that accesses the variable. This means that the compiler **will not reorder instructions or eliminate redundant reads or writes to the variable**
@@ -37,7 +38,8 @@ uartinit(void)
 }
 ```
 
-### `asm volatile {:c}`
+## `asm volatile {:c}`
+---
 - Used to insert [[Assembly language]] directly into C code
 - Below example is [[Interrupts (中断)#Turn off interrupt in XV6-RISCV]]
 
@@ -52,3 +54,11 @@ w_sstatus(uint64 x)
 }
 // ..
 ```
+
+
+## extern
+---
+- Declare a variable or function that is **defined in another file**, allowing it to be accessed across multiple files. It informs the [[Language Processors#Compiler|compiler]] about the existence of the variable or function without allocating storage for it
+
+>[!success] Shines in large projects
+> Useful for managing global scope in large projects and [[C Program Compilation#Stage 4|linking]] functions or variables across different source files.

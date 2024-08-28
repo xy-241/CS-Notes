@@ -13,7 +13,7 @@ description:
 ---
 ## Abstract
 ---
-- [[Rule of Inference (推理规则)]] with [[Predicate#Quantifiers]]
+- [[Rule of Inference (推理规则)]] with [[Quantifier]]
 
 ### Universal Modus Ponens
 - [[Mathematical Argument#Premise|Premise]]: For all x, if x makes P(x) true, then x makes Q(x) true

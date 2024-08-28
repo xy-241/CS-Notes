@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2023-07-20T00:24:49+08:00
-Last Date: 2024-08-22T20:55:04+08:00
+Last Date: 2024-08-25T18:04:02+08:00
 References: 
 ---
 
@@ -16,6 +16,11 @@ References:
 > **Objects of a** [[Subtyping|superclass]] should be replaceable with **objects of a subclass** without affecting the **correctness of the program**.
 
 - Not all [[Inheritance#"Is-a" Relationship]] should be modelled with [[Inheritance]]
+
+>[!question] What is the correctness of the program?
+> If a program works correctly using objects of a certain type, it should also work correctly if you replace those objects with objects of a subtype (a class that [[Inheritance|inherits]] from the original type).
+> 
+> The Liskov Substitution Principle is about ensuring that subclasses behave in a way that's compatible with their parent classes. This helps prevent unexpected bugs and makes your code more reliable. Remember, with the power of inheritance comes the responsibility to use it wisely.
 
 >[!example] Fly example
 > Consider a base class `Bird` with a method `fly()`. If you derive a class `Penguin` from `Bird`, but `Penguin` cannot fly, it would violate the LSP because substituting a `Bird` with a `Penguin` would break the `fly()` method's expected behaviour.
@@ -37,7 +42,7 @@ References:
 >[!question] How can we fix this?
 > **Leverage a Common [[OOP#OOP Interface|OOP Interface]]:** Abstract the `Square` and `Rectangle` properties into an interface. Implement the `width` and `length` in each respective class. This prevents object substitution when obtaining the `length` (which is specific to `Rectangle` objects), thereby ensuring OOP compatibility.
 >
-> **Prevent [[Inheritance|Inheritance]] and [[OOP Method#Method Overriding|Method Overriding]]:** Declare the OOP class or individual [[OOP#OOP Class|OOP methods]] as [[Java Keywords#final|final]]. This enhances the ability to reason about program correctness. Noteworthy examples include `java.lang.Math` and `java.lang.String`, which are not inheritable.
+> **Prevent [[Inheritance|Inheritance]] and [[Method Overriding|Method Overriding]]:** Declare the OOP class or individual [[OOP#OOP Class|OOP methods]] as [[Java Keywords#final|final]]. This enhances the ability to reason about program correctness. Noteworthy examples include `java.lang.Math` and `java.lang.String`, which are not inheritable.
 >
 > **Unit Testing:** Employ assertions to verify the LSP during compilation. You can find an illustrative example [here](https://nus-cs2030s.github.io/2223-s2/16-lsp.html#lsp-through-the-lens-of-testing).
 

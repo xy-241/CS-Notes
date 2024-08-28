@@ -7,7 +7,7 @@ tags:
   - software_engineering
   - bash
 Creation Date: 2024-03-10, 17:36
-Last Date: 2024-04-06T21:25:27+08:00
+Last Date: 2024-08-20T11:48:33+08:00
 References: 
 draft: 
 description: 
@@ -23,6 +23,8 @@ description:
 - User friendly [[Terminal]], currently I only use it for [[SSH]] & GUI [[File Sharing#SFTP]] that supports **drag & drop**!
 - [Termius - Terminal GUI](https://www.termius.com/download/macos)
 
+>[!important]
+> Install Termius as a dmg from the official website instead of the App Store, so you can access your local machine from the Termius app. For more information, view [here](https://support.termius.com/hc/en-us/articles/21150508470809-I-can-t-find-the-local-terminal-option-in-the-desktop-app).
 
 >[!tip]- Termius Config
 > [Modify Default Shell to zsh](https://support.termius.com/hc/en-us/articles/8414917685145-How-to-change-the-default-shell-in-local-terminal-)

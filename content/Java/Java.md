@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-07-20T21:02:30+08:00
-Last Date: 2024-08-16T13:08:26+08:00
+Last Date: 2024-08-25T15:52:47+08:00
 References: 
 ---
 ## Abstract
@@ -22,6 +22,11 @@ References:
 ## The Mother of All Classes
 ---
 - `java.lang.Object` is the root of all [[OOP#OOP Class|classes]] in [[Java]]. Whether they are part of the Java libraries or custom classes you create yourself, all classes **implicitly [[Inheritance|inherit]]** from `java.lang.Object`
+
+>[!important] 2 useful methods
+> `boolean equals(Object obj)`: Checks if two objects are the same.
+> 
+> `String toString()`: Returns a text representation of an object. Java automatically uses `toString` to convert objects to text when you combine them with strings (using `+`) or print them.
 
 ## Java Iterator
 ---

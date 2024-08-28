@@ -8,7 +8,7 @@ tags:
   - c
   - computer_organisation
 Creation Date: 2023-12-16, 20:14
-Last Date: 2024-08-20T18:23:52+08:00
+Last Date: 2024-08-24T01:17:04+08:00
 References: 
 ---
 ## Abstract
@@ -37,6 +37,8 @@ References:
 > Define constants
 > - `#define KMS_PER_MILE 1.609`
 
+>[!question] `#include <stdio.h>` vs `#include "stdio.h"`
+> `#include <stdio.h>` instructs the preprocessor to search for the header file `stdio.h` in the standard include directories, typically where system libraries reside. In contrast, `#include "stdio.h"` directs the preprocessor to search for the header file in the current directory first, and if not found, then in the standard include directories.
 
 ## Assembler
 ---

@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-08-21, 15:51
-Last Date: 2024-08-21T23:08:13+08:00
+Last Date: 2024-08-27T15:38:48+08:00
 References: 
 draft: 
 description: 
@@ -35,3 +35,25 @@ typedef struct {
 > We need to make sure we use parentheses like `(*player_ptr).name`, because `.` has a higher [[C#C Operator Precedence|operator precedence]].
 > 
 > Or we can simply use `player_ptr->name` to achieve the same, this is a syntactic sugar.
+
+
+## C Union
+---
+```c
+union _union_name_ {
+    _datatype member1_;
+    _datatype member2_;
+    ...
+};
+```
+
+- The Union is a user-defined data type in C language that can contain elements of the different [[Datatype|data types]] just like [[C Structure|structure]]. But unlike structures, all the members in the C union are stored in the same [[Memory Address|memory location]]. Due to this, **only one member can store data at the given instance**
+
+>[!question] What can we do with this?
+> We can efficiently obtain the representation of the same element in different data type encodings.
+
+
+
+## References
+---
+- [C Unions - GeeksforGeeks](https://www.geeksforgeeks.org/c-unions/)

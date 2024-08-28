@@ -6,10 +6,25 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-23T17:48:21+08:00
-Last Date: 2024-07-23T16:37:37+08:00
+Last Date: 2024-08-25T19:16:33+08:00
 References: 
 ---
 ## Abstract
 ---
-- Ability of an [[OOP#OOP Object|object]] to take on **many forms**. This allows us to **extend** or **modify** the behaviour of existing code **without directly altering its source**, promoting **code reusability** and **maintainability**.
+>[!quote]
+> Many Forms, One Purpose.
 
+- Think of polymorphism like a chameleon. A chameleon can change its appearance to blend in with its surroundings. Similarly, in programming, polymorphism lets **objects take on different forms while still serving the same purpose**
+
+
+>[!important] The Chameleon's Trick
+> [[Method Overriding|Method overriding]] is the key to polymorphism's magic. It lets you redefine how an object behaves, even if you don't have access to the original code. This is like teaching a new trick to an old dog - you're updating its behaviour without changing its core identity.
+> 
+> Coupled with [[Dynamic Binding|dynamic binding,]] we are able to utilise the desired form from the many forms available during runtime to fulfil the task precisely. Thus, it allows us to write **generic and succinct code** based only on the compile-time type of the target. The actual behaviour of the code will be based on the run-time type of the target.
+
+
+>[!success] Future-proofing codes
+> With polymorphism, we can add **new objects or features without breaking existing parts of your program**.
+
+>[!caution] Adding functionality challenge
+> If you want all animals to have a new ability, like `move`, you need to add that method to the base `Animal` class and then **override it in every existing animal class**. This can be **tedious and error-prone**.
