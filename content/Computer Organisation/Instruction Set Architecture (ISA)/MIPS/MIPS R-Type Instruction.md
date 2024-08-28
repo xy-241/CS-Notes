@@ -66,13 +66,27 @@ R-type instructions have a fixed format and consist of several fields that speci
 4. **srl**: 
    - **Binary**: `000000 00000 00010 00011 00001 000010`
    - **Assembly**: `srl $3, $2, 1`
-   - **Explanation**: This instruction performs a logical right shift on the value in register $2 by 1 bit. The result is stored in register $3. For instance, if $2 contains the binary value `00000100` (which is 4 in decimal), after the shift, $3 will contain `00000010` (which is 2 in decimal).
+   - **Explanation**: This instruction performs a logical right shift on the value in register $2 by 1 bit. The result is stored in register $3. For instance, if $2 contains the binary value `00000100` (which is 4 in decimal), after the shift, $3 will contain `00000010` (which is 2 in decimal). 
    
+
+>[!important]
+>    
+>sll and srl only need 5 bits (i.e., C5) because
+shifting by 32-bits empties the register (i.e., set to 0)
+>    
+
+>[!important] multiplication and division
+> can be done with sll and slr because in mips there exist no multiplication or division instruction 
+>
+>- example of sll multiplication, `a = a * 8` the instruction will be `sll $a $a 3` 3 denotes the number of bits to move to the left
+>- example of slr division , `a = a / 4` the instruction will be `slr $a $a 2` 2 denotes the number of bits to move to the right 
+
+
 
 5. **and**: 
    - **Binary**: `000000 00001 00010 00011 00000 100100`
    - **Assembly**: `and $3, $1, $2`
-   - **Explanation**: This instruction performs a bitwise [[AND]] operation between the values in registers $1 and $2. The result is stored in register $3. For example, if $1 contains `00001111` (15 in decimal) and $2 contains `00000011` (3 in decimal), the result in $3 will be `00000011` (3 in decimal).
+   - **Explanation**: This instruction performs a bitwise [[AND]] operation between the values in registers $1 and $2. The result is stored in register $3. For example, if $1 contains `00001111` (15 in decimal) and $2 contains `00000011` (3 in decimal), the result in $3 will be `00000011` (3 in decimal).typically it’s used for masking operations 
 
 6. **or**: 
    - **Binary**: `000000 00001 00010 00011 00000 100101`
