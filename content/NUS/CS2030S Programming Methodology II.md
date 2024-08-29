@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2024-08-16, 11:13
-Last Date: 2024-08-28T16:48:12+08:00
+Last Date: 2024-08-29T21:08:42+08:00
 References: 
 draft: 
 description: 
@@ -53,3 +53,9 @@ description:
 - [ ] [[Liskov Substitution Principle (LSP)]]
 - [ ] [[Type Casting]]
 
+
+## Week 4
+---
+### Java
+- [ ] [[Wrapper Class Datatype]]
+- [ ] [[Primitive and Object Conversion]]

@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-08-25T21:40:11+08:00
+Last Date: 2024-08-26T19:46:01+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -24,8 +24,6 @@ title: cs1231s nus notes
 - [ ] [[Integer (整数)]]
 - [ ] [[Properties of Integer]] 
 - [ ] [[Rational Number]]
-- [ ] [[Universal Statement]]
-- [ ] [[Existential Statement]]
 - [ ] [[Mathematical Proof]]
 - [ ] [[Direct Proof]]
 - [ ] [[Indirect Proof]]
