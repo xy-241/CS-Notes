@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-28T09:59:05+08:00
-Last Date: 2024-05-28T17:16:44+08:00
+Last Date: 2024-08-30T11:22:32+08:00
 References: 
 ---
 ## Abstract
@@ -32,7 +32,11 @@ References:
 ### Variable-length Instruction
 - More flexible but more complicated [[Pipeline]] & [[Instruction-Level Parallelism]]
 
+### Pseudo Instruction
+- Syntactic sugar for a set of [[Instruction]], so it is easier for programmers to use
 
+>[!example] Assigning value from one variable to another in MIPS
+> Instead of `add $s0, $s1, $zero`, we have pseudo-instruction `move $s0, $s1`.
 
 ## Branch Instruction
 ---

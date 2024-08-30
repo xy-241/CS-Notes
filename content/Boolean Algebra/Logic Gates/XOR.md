@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - cp
 Creation Date: 2023-09-21T10:01:00
-Last Date: 2024-02-21T14:18:32+08:00
+Last Date: 2024-08-30T12:06:16+08:00
 References: 
 sr-due: 2024-03-21
 sr-interval: 29
@@ -19,7 +19,7 @@ sr-ease: 250
 $$
 B - A = \{x \in U: x \in B \land x \notin A\}
 $$
-- **Exclusive OR**, **difference**
+- **Exclusive OR**, **not equal**
 - Returns true only when 2 inputs aren't the same
 
 
@@ -72,12 +72,3 @@ The [[Mathematical Statement]] is $(A \lor B) \land (\neg A \lor \neg B)$
 2. [[AND]], [[NOT]] (De Morgan's laws): Either $A$ or $B$ are `false`
 3. [[AND]]: The above 2 must be true in order to let the statement to be true
 
-### XOR Bitmasking
-- Flip a a [[Subnet]] of [[Computer Data Representation#Bit]] of the given input
-```
-     1 1 1 0 1 1 0 1     input
-(^)  0 0 1 1 1 1 0 0      mask
-------------------------------
-     1 1 0 1 0 0 0 1    output
-```
-- The position of mask that is set to `1` flips the bits of the given input

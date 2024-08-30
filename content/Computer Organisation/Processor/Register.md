@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-06-10T20:46:24+08:00
+Last Date: 2024-08-30T11:18:09+08:00
 References: 
 ---
 ## Abstract
@@ -15,10 +15,11 @@ References:
 - A group of [[Sequential Circuit#Flip-flops]]
 - Accessible via [[Instruction]]
 - 2 main purposes
-	1. Storing values during computations (like [[Memory Address]] & value)
-	2. Configuring [[CPU]]
+	1. Storing values during computations like [[Memory Address]] & value
+	2. Configuring [[CPU]] to carry out computations
 
-
+>[!important] Registers have no datatypes
+> For example, `add` in [[MIPS]] assumes the data is in [[Integer Encoding (数字编码)#2's Complement (补码)]] and `addu` assumes the data is unsigned binary number.
 ## Common Registers
 ---
 ### Instruction Register
@@ -56,9 +57,7 @@ References:
 - There are multiple such registers in the [[CPU]], the main purpose is storing information about the current state of the processor or device
 - CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
 
-## MIPS Registers
----
-![[MIPS_Register.png|500]]
+
 
 
 

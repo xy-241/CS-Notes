@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:16:00
-Last Date: 2023-12-17T20:24:59+08:00
+Last Date: 2024-08-30T11:49:16+08:00
 References: 
 ---
 ## Abstract
@@ -17,9 +17,7 @@ References:
 
 ## Examples
 ---
-### `andi`
-- Perform a bitwise [[AND]] operation between a register and an immediate value
-- Get last 4 significant [[Computer Data Representation#Bit]] of $s0, and store it inside $t0 - `andi $t0, $s0 , 0xF`
+
 
 ### `slti`
 - Set Less Than Immediate
