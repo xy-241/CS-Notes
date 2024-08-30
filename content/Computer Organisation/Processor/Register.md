@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-08-30T11:18:09+08:00
+Last Date: 2024-08-30T16:48:41+08:00
 References: 
 ---
 ## Abstract
@@ -20,6 +20,8 @@ References:
 
 >[!important] Registers have no datatypes
 > For example, `add` in [[MIPS]] assumes the data is in [[Integer Encoding (数字编码)#2's Complement (补码)]] and `addu` assumes the data is unsigned binary number.
+> 
+> The data stored in the register is interpreted according to the instruction that uses it.
 ## Common Registers
 ---
 ### Instruction Register

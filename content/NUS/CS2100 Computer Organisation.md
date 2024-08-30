@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-08-30T15:15:55+08:00
+Last Date: 2024-08-30T16:38:32+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -64,10 +64,12 @@ title: cs2100 nus notes
 - [ ] [[Assembly language]]
 - [ ] [[Register]]
 - [ ] [[Language Processors#Variable Mapping]]
+- [ ] [[Computer Data Representation#Word]]
 
 ### MIPS
 - [ ] [[MIPS]]
 - [ ] [[MIPS Register]]
+- [ ] [[MIPS Memory Access]]
 
 ### Logical Operations
 - [ ] [[NOR]]
@@ -75,12 +77,12 @@ title: cs2100 nus notes
 - [ ] [[Bit Shifting]]
 - [ ] [[Bitmasking]]
 
->[!seealso] Extra Readings
-> - [[Atomic Instruction]]
-
 ### C
 - [ ] [[Pointer#Dangling Pointer]]
 - [ ] [[C Keywords#static]]
+
+>[!seealso] Extra Readings
+> - [[Atomic Instruction]]
 
 ## MIPS
 ---
