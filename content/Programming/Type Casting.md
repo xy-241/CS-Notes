@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2024-08-22, 20:44
-Last Date: 2024-08-26T19:54:34+08:00
+Last Date: 2024-08-28T17:21:15+08:00
 References: 
 draft: 
 description: 
@@ -23,6 +23,8 @@ description:
 > 
 > **Invalid Casting:** Incorrectly casting objects (e.g., trying to treat a `Cat` object as if it were a `Dog` object) will typically result in a runtime error (such as a `ClassCastException` in Java).
 
+>[!important]
+> Type casting changes [[Subtyping#Compile-time Type vs Run-time Type]].
 ### Widening Type Conversion
 - [[Type Casting|Casting]] a [[Subtyping|subclass]] object to its superclass
 - A value of datatype $T$ **can be assigned** to a variable of type $S$ if and only if $T$ is a subtype of $S$

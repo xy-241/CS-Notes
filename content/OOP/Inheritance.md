@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OOP
 Creation Date: 2023-07-23T17:47:10+08:00
-Last Date: 2024-08-25T15:05:32+08:00
+Last Date: 2024-08-28T17:03:43+08:00
 References: 
 ---
 ## Abstract
@@ -21,6 +21,11 @@ References:
 >[!important] Inheritance subtyping relationship
 > If $S$ inherits from $T$, then $S :< T$. $S$ is a [[Subtyping|subtype]] of $T$.
 
+>[!important] Multiple inheritance
+> When a subclass is able to inherit from multiple super classes. This leads to [the diamond problem
+> ](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem).
+> 
+> [[Java]] avoid multiple inheritance uses [[OOP Method#OOP Abstract Method]]. This can be proved with [[Indirect Proof#Proof by Contradiction (矛盾证明法)]].
 ## "Is-a" Relationship
 ---
 - "A subclass **is a** superclass", we mean that the subclass [[Inheritance|inherits]] from the superclass. This implies that the **subclass can be used wherever the superclass is expected**, adhering to the "is-a" relationship

@@ -7,7 +7,7 @@ tags:
   - c
   - computer_organisation
 Creation Date: 2024-08-21, 16:24
-Last Date: 2024-08-21T23:46:52+08:00
+Last Date: 2024-08-29T22:18:03+08:00
 References: 
 draft: 
 description: 
@@ -23,7 +23,7 @@ int dest;
 dest = source; // illegal!
 ```
 
-- An array name is a **fixed** [[Pointer|pointer]]; it points to the first element of the array and thus **cannot be altered**. The code above attempts to alter `dest`, making it point elsewhere
+- An array name is a **fixed** [[Pointer|pointer]]; it points to the first element of the array and thus **cannot be altered**, `source` is same as `&source[0]`. The code above attempts to alter `dest`, making it point elsewhere
 
 >[!question] What if I want to make a copy to another array?
 > Use a for-loop, `for (int i=0; i<N; i++) dest[i] = source[i];`.
