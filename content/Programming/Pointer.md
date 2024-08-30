@@ -10,7 +10,7 @@ tags:
   - java
   - go
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-08-21T00:26:40+08:00
+Last Date: 2024-08-30T15:07:17+08:00
 References: 
 draft: 
 ---
@@ -77,6 +77,22 @@ draft:
 
 >[!important]
 > We should always try to cast it to a specific type whenever it is possible.
+
+## Dangling Pointer
+---
+```c
+int *ptr = (int *)malloc(sizeof(int));
+*ptr = 1;
+
+func(ptr); // func() carelessly does "free(ptr);"
+
+*ptr = 2; // ptr is now a dangling pointer
+```
+
+- A [[Pointer|pointer]] that has been freed, but the program logic still assumes it's valid.
+
+>[!important]
+> The program may still run without a crash, this will lead to bug that very hard to trace back to.
 
 ## Rust
 ---

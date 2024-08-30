@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - c
 Creation Date: 2023-11-26T17:42:00
-Last Date: 2024-08-26T15:28:15+08:00
+Last Date: 2024-08-30T15:15:42+08:00
 References: 
 ---
 ## Abstract
@@ -62,3 +62,21 @@ w_sstatus(uint64 x)
 
 >[!success] Shines in large projects
 > Useful for managing global scope in large projects and [[C Program Compilation#Stage 4|linking]] functions or variables across different source files.
+
+
+## static
+---
+```c
+int func() {
+  static int i;
+}
+```
+- The variable `i` will persist between calls of `func()`
+
+```c
+static int i;
+
+int func() {
+}
+```
+- The variable `i` can't be named outside of the current file
