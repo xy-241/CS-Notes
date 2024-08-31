@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-08-30, 16:29
-Last Date: 2024-08-30T16:47:23+08:00
+Last Date: 2024-08-31T21:08:25+08:00
 References: 
 draft: 
 description: 
@@ -21,6 +21,8 @@ description:
 >[!important]
 > MIPS disallows loading/storing unaligned word using [[#lw]] and [[#sw]].
 
+>[!important]
+>Using [[Pointer|pointers]] will often result in less MIPS code when looping through array elements. This is because we can use the memory address directly as the loop termination condition, rather than having to **calculate the offset**.
 ### lw
 ![[mips_lw.png|500]]
 

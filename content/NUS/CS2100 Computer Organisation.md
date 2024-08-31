@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-08-30T16:38:32+08:00
+Last Date: 2024-08-31T17:12:54+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -70,6 +70,7 @@ title: cs2100 nus notes
 - [ ] [[MIPS]]
 - [ ] [[MIPS Register]]
 - [ ] [[MIPS Memory Access]]
+- [ ] [[MIPS Control Flow]]
 
 ### Logical Operations
 - [ ] [[NOR]]

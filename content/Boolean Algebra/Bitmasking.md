@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-08-30, 11:47
-Last Date: 2024-08-30T12:24:55+08:00
+Last Date: 2024-08-31T15:58:41+08:00
 References: 
 draft: 
 description: 
@@ -60,7 +60,7 @@ description:
        1 1 1 0 1 1 0 1     input
 (nor)  0 0 0 0 0 0 0 0      mask
 --------------------------------
-     0 0 0 1 0 0 1 0    output
+       0 0 0 1 0 0 1 0    output
 ```
 
 - With `0` mask we are able to use [[NOR]] as an [[NOT]] to invert the given input
