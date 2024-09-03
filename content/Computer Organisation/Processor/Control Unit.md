@@ -12,7 +12,7 @@ aliases:
 ---
 ## Abstract
 ---
-- The part of [[CPU]] that understands the [[Instruction]] by looking at its [[Instruction#Opcode]], referencing to the corresponding [[Instruction Set Architecture (ISA)]]. It then determines which [[Register]], [[ALU]] & [[Main Memory]] to active, generating [[#Control Signal]] to carry out the [[Operation]]
+- The part of [[CPU]] that understands the [[Instruction]] by looking at its [[ISA Instruction Format#Opcode]], referencing to the corresponding [[Instruction Set Architecture (ISA)]]. It then determines which [[Register]], [[ALU]] & [[Main Memory]] to active, generating [[#Control Signal]] to carry out the [[Operation]]
 
 ### Control Signal
 - **Electric signals** that tells [[CPU Datapath]], [[Main Memory]] & [[IO Device]] what to do according to a given [[Instruction]]

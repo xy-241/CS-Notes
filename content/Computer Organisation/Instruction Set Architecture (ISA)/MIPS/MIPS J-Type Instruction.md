@@ -12,5 +12,5 @@ References:
 ## Abstract
 ---
  - [[Instruction]] that tells [[CPU]] jump to [[Memory Address]] & execute [[Instruction]] starting from that point
- - 2 sections - [[Instruction#Opcode]], [[Memory Address]]
+ - 2 sections - [[ISA Instruction Format#Opcode]], [[Memory Address]]
  - Supports `if-else` and loops 

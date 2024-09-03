@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-08-30T16:48:41+08:00
+Last Date: 2024-09-03T17:14:46+08:00
 References: 
 ---
 ## Abstract
@@ -22,6 +22,16 @@ References:
 > For example, `add` in [[MIPS]] assumes the data is in [[Integer Encoding (数字编码)#2's Complement (补码)]] and `addu` assumes the data is unsigned binary number.
 > 
 > The data stored in the register is interpreted according to the instruction that uses it.
+
+
+## Memory Register
+---
+### Memory Address Register
+- [[Register]] that points to [[Memory Address]] that contains the data required by the current [[Instruction]] that is being executed 
+
+### Memory Data Register
+- A [[Register|register]] temporarily stores data that is being transferred to or retrieved from [[Main Memory|memory]]
+
 ## Common Registers
 ---
 ### Instruction Register
@@ -32,8 +42,7 @@ References:
 - Also known as **Instruction Address Register**, **Instruction Pointer**
 - For modern computers, it is the [[Register]] that indicates the [[Virtual Memory#Virtual Address]] of the next [[Instruction]] to be **executed** for the current [[Process (进程)]]
 
-### Memory Address Register
-- [[Register]] that points to [[Memory Address]] that contains the data required by the current [[Instruction]] that is being executed 
+
 
 
 ### Stack Pointer

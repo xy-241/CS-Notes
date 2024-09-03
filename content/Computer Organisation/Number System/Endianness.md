@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-18T20:46:09+08:00
-Last Date: 2024-01-06T18:56:58+08:00
+Last Date: 2024-09-03T17:19:50+08:00
 References: 
 ---
 ## Abstract
@@ -21,3 +21,7 @@ References:
 ***Small-endian***
 - We locate the least significant byte of the data at the byte with the lowest address
 - Dominant ordering in processor architecture, because it offers certain advantages in terms of memory access (we can confidently say that the first 2 bytes are 0-31bits)
+
+
+>[!important]
+> For Small-endian, we don't reverse the order of the content in each [[Memory Address|memory address]].

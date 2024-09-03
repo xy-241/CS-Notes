@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-28T09:59:05+08:00
-Last Date: 2024-08-30T11:22:32+08:00
+Last Date: 2024-09-03T17:40:28+08:00
 References: 
 ---
 ## Abstract
@@ -18,25 +18,14 @@ References:
 - Doesn't specify which [[CPU Datapath]] does what, just specify what outputs are expected with a given input
 - The instruction lifecycle can be broken down into [[Pipeline Stages]]
 
-### Opcode
-- Config for [[Control Unit#Control Signal]]
-
->[!example]
-> In [[MIPS]], it is 6-bits, so total 2^6 -> 64 different arrangements.
-### Parameter
-- Can be [[Register]] Address, [[Memory Address]] or Immediate Value
-
-### Fixed-length Instruction
-- Simplifies [[Pipeline]] & [[Instruction-Level Parallelism]]
-
-### Variable-length Instruction
-- More flexible but more complicated [[Pipeline]] & [[Instruction-Level Parallelism]]
-
 ### Pseudo Instruction
 - Syntactic sugar for a set of [[Instruction]], so it is easier for programmers to use
 
 >[!example] Assigning value from one variable to another in MIPS
 > Instead of `add $s0, $s1, $zero`, we have pseudo-instruction `move $s0, $s1`.
+
+
+
 
 ## Branch Instruction
 ---
@@ -51,8 +40,6 @@ References:
 - This allows one [[Instruction]] to operate on multiple data at once and have multiple outputs essentially
 - This can reduce the number of instructions in a program significantly, and have more data processed without the involvement of the inefficient [[Main Memory]]
 
-### Expanding Opcode Scheme
-- The [[#Opcode]] in an [[Instruction]] can be **extended** to accommodate additional instructions in the future without changing the basic format of the instruction set
 
 
 ## References

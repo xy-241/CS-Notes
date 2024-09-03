@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-08-31T17:12:54+08:00
+Last Date: 2024-09-03T17:42:47+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -17,7 +17,7 @@ title: cs2100 nus notes
 ## Week 1
 ---
 ### C
-- [ ] [[C]]
+- [ ] [[C/C]]
 - [ ] [[Language Processors]]
 - [ ] [[C Program Compilation]]
 - [ ] [[Macro Expansion]]
@@ -35,7 +35,6 @@ title: cs2100 nus notes
 - [ ] [[Parity Bit (奇偶校验码)]]
 
 >[!seealso] Extra Readings
-> - [[Endianness]]
 > - [[Base 64 Encoding]]
 
 ## Week 2
@@ -85,12 +84,27 @@ title: cs2100 nus notes
 >[!seealso] Extra Readings
 > - [[Atomic Instruction]]
 
-## MIPS
+## Week 4
 ---
-- [[MIPS Instruction]]
-- [[MIPS R-Type Instruction]]
-- [[MIPS I-Type Instruction]]
-- [[MIPS J-Type Instruction]]
+### ISA
+- [ ] [[CISC]]
+- [ ] [[RISC]]
+- [ ] [[ISA Storage Architecture]]
+- [ ] [[ISA Addressing Mode]]
+- [ ] [[ISA Instruction Format]]
+
+
+### Hardware
+- [ ] [[Register#Memory Register]] 
+- [ ] [[Endianness]]
+
+### MIPS
+- [ ] [[MIPS Instruction]]
+- [ ] [[MIPS R-Type Instruction]]
+- [ ] [[MIPS I-Type Instruction]]
+- [ ] [[MIPS J-Type Instruction]]
+
+
 
 
 ## Instruction Set Architecture

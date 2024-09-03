@@ -29,7 +29,7 @@ Last Date: 2024-05-10T20:06:41+08:00
 - Handled by [[Register#Program Counter]] & [[Register#Instruction Register]]
 ## Decode
 ---
-- [[Control Unit]] configures **different parts** of the [[CPU]] like [[ALU]] with the given [[Instruction]] based on the [[Instruction#Opcode]] with referencing to its [[Instruction Set Architecture (ISA)]]
+- [[Control Unit]] configures **different parts** of the [[CPU]] like [[ALU]] with the given [[Instruction]] based on the [[ISA Instruction Format#Opcode]] with referencing to its [[Instruction Set Architecture (ISA)]]
 ## Execute
 ---
 - Where the execution of [[Instruction]] is performed, can be further beak down to [[#Read]] & [[#Write Back]]

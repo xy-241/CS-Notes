@@ -12,7 +12,7 @@ References:
 ## Abstract
 ---
 - `I` because it is [[Instruction]] that contains [[#Immediate Value]]
-- 4 parts - [[Instruction#Opcode]], [[MIPS Instruction#Source Register]], [[MIPS Instruction#Target Register]] & [[#Immediate Value]]
+- 4 parts - [[ISA Instruction Format#Opcode]], [[MIPS Instruction#Source Register]], [[MIPS Instruction#Target Register]] & [[#Immediate Value]]
 - Meaning:  Add the **Source Register** with the  **Immediate Value**, and store the result to the  **Target Register**
 
 ## Examples

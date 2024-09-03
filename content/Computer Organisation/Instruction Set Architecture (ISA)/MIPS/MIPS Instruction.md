@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- **32 bits**, the **first 6 bits** are [[Instruction#Opcode]]
+- **32 bits**, the **first 6 bits** are [[ISA Instruction Format#Opcode]]
 - There are 3 different format types - [[MIPS R-Type Instruction]], [[MIPS I-Type Instruction]] and [[MIPS J-Type Instruction]]
 
 
