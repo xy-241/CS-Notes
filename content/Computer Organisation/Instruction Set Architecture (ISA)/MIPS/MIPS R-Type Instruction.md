@@ -6,14 +6,34 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:16:00
-Last Date: 2023-12-10T18:03:38+08:00
+Last Date: 2024-09-03T22:56:02+08:00
 References: 
 ---
 ## Abstract
 ---
- - [[Instruction#Opcode]] is always **000000**
-- [[Operation]] is decided by the [[#Function Code]]
-- 6 parts - [[Instruction#Opcode]], [[MIPS Instruction#Source Register]], [[MIPS Instruction#Target Register]], [[#Destination Register]], [[#Shift Amount]] & [[#Function Code]]
+```
++--------+------+------+------+------+------+
+| Opcode |  Rs  |  Rt  |  Rd  | Shamt| Funct|
+| 6 bits |5 bits|5 bits|5 bits|5 bits|6 bits|
++--------+------+------+------+------+------+
+```
+
+- [[ISA Instruction Format#Opcode|Opcode]] is always `000000`
+- `funct` combined with opcode exactly specifies the [[Instruction|instruction]]
+- `rs` specifies register containing first operand
+- `rt` specifies register containing second operand. Set to `0` for shift instructions
+- `rd` specifies register which will receive result of computation
+- `shamt` for `sll` and `srl`. Set to `0` for non-shift instructions
+
+
+>[!important] 2 types of instructions
+> 1. `arith $rt, $rs, 16_2s`
+> 2. `lw/sw $rt, 16_2s($rs)`
+
+### Function Code
+- 6 bits 
+- Give [[MIPS]] (2^6-1) + 2^6 = 127 instead of 2^6=64 [[Instruction]]
+- Dedicated for [[MIPS R-Type Instruction]] 
 
 ## Examples
 ---
@@ -29,10 +49,3 @@ References:
 - 5bits
 - Labeled `rd`, mapped to `WR`
 - [[Register]] that gets the result of [[Operation]] in [[MIPS R-Type Instruction]] [[Instruction]]
-### Function Code
-- 6 bits 
-- Give [[MIPS]] (2^6-1) + 2^6 = 127 instead of 2^6=64 [[Instruction]]
-- Dedicated for [[MIPS R-Type Instruction]] (if my understanding isn't wrong)
-### Shift Amount 
-- 5bits
-- Labeled as `shamt`

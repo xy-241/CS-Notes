@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-09, 21:24
-Last Date: 2023-12-10T18:08:29+08:00
+Last Date: 2024-09-03T17:58:39+08:00
 References: 
 ---
 ## Abstract
@@ -16,8 +16,6 @@ References:
 
 
 
-## Terminologies
----
 ### Source Register 
 - 5bits
 - Labeled `rs`, mapped to `RR1`

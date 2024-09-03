@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-09-03T17:42:47+08:00
+Last Date: 2024-09-03T22:32:33+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -86,6 +86,12 @@ title: cs2100 nus notes
 
 ## Week 4
 ---
+### MIPS
+- [ ] [[MIPS Instruction]]
+- [ ] [[MIPS R-Type Instruction]]
+- [ ] [[MIPS I-Type Instruction]]
+- [ ] [[MIPS J-Type Instruction]]
+
 ### ISA
 - [ ] [[CISC]]
 - [ ] [[RISC]]
@@ -97,12 +103,9 @@ title: cs2100 nus notes
 ### Hardware
 - [ ] [[Register#Memory Register]] 
 - [ ] [[Endianness]]
+- [ ] [[Register#Program Counter]]
 
-### MIPS
-- [ ] [[MIPS Instruction]]
-- [ ] [[MIPS R-Type Instruction]]
-- [ ] [[MIPS I-Type Instruction]]
-- [ ] [[MIPS J-Type Instruction]]
+
 
 
 
@@ -138,8 +141,6 @@ title: cs2100 nus notes
 - [ ] [[AND]]
 - [ ] [[OR]]
 - [ ] [[NOT]]
-- [ ] [[XOR]]
-- [ ] [[NOR]]
 
 ## Circuit Simplification
 ---

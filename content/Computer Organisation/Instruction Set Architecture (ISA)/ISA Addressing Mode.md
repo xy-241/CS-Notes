@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-09-03, 17:21
-Last Date: 2024-09-03T17:41:58+08:00
+Last Date: 2024-09-03T22:37:17+08:00
 References: 
 draft: 
 description: 
@@ -28,3 +28,8 @@ description:
 ## Displacement Addressing Mode
 ---
 - [[ISA Instruction Format#Instruction Operand]] is in [[Main Memory|memory]] with [[Memory Address]] calculated as `Base + Offset` (`lw $t1, 20($t2)`)
+
+
+## PC-relative Addressing Mode
+---
+- [[ISA Instruction Format#Instruction Operand]] is the sum of [[Register#Program Counter]] and constant in the instruction (`beq`, `bne`)

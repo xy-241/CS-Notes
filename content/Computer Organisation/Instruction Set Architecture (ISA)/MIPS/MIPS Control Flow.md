@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-08-31, 16:57
-Last Date: 2024-08-31T20:56:55+08:00
+Last Date: 2024-09-03T22:39:43+08:00
 References: 
 draft: 
 description: 
@@ -34,6 +34,8 @@ description:
 >[!tip] Translating from C to MIPS
 > To optimise the number of MIPS instructions, consider inverting the condition. For example, use `bne` (branch if not equal) for `if ($t0 == $t1) goto label` and `beq` (branch if equal) for `if ($t0 != $t1) goto label`.
 
+>[!important] New address
+> When branch is taken, [[Register#Program Counter]] PC = (PC + 4) + ([[MIPS I-Type Instruction#Immediate Value]] * 4).
 ## Unconditional Jump
 ---
 ```asm

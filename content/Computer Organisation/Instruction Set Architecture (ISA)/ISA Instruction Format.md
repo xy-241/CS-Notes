@@ -6,13 +6,14 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-09-03, 17:29
-Last Date: 2024-09-03T17:41:39+08:00
+Last Date: 2024-09-03T17:47:54+08:00
 References: 
 draft: 
 description: 
 ---
 ## Abstract
 ---
+- It specifies how different parts of an [[Instruction|instruction]] are organised within a **binary code word**
 
 ### Fixed-length Instruction
 - Simplifies [[Pipeline]] & [[Instruction-Level Parallelism]]
