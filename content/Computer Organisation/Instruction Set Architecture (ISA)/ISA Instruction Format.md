@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-09-03, 17:29
-Last Date: 2024-09-03T17:47:54+08:00
+Last Date: 2024-09-04T20:49:07+08:00
 References: 
 draft: 
 description: 
@@ -32,6 +32,9 @@ description:
 
 ### Expanding Opcode 
 - The [[ISA Instruction Format#Opcode]] has **variable lengths** for different [[Instruction]]. This is a good way to maximise instruction bits
+
+>[!example]
+> ![[expanding_opcode.png|400]]
 
 ## Instruction Operand
 ---

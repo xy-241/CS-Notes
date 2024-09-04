@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:16:00
-Last Date: 2024-09-03T22:55:56+08:00
+Last Date: 2024-09-04T20:47:58+08:00
 References: 
 ---
 ## Abstract
@@ -30,7 +30,7 @@ References:
 > 1. `arith $rt, $rs, 16_2s`
 > 2. `lw/sw $rt, 16_2s($rs)`
 > 3. `logic $rt, $rs, 16`
-> 4. `branch $rs, $rt, label`
+> 4. `branch $rs, $rt, label`, label in branch instruction refers to the **number of instructions** from the next instruction address.
 
 >[!code] `slti`
 > - Set Less Than Immediate

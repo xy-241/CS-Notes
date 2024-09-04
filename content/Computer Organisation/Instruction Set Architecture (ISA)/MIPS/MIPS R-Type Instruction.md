@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:16:00
-Last Date: 2024-09-03T22:56:02+08:00
+Last Date: 2024-09-04T20:43:19+08:00
 References: 
 ---
 ## Abstract
@@ -27,9 +27,11 @@ References:
 
 
 >[!important] 2 types of instructions
-> 1. `arith $rt, $rs, 16_2s`
-> 2. `lw/sw $rt, 16_2s($rs)`
+> 1. `arith $rd, $rs, $rt`
+> 2. `shift $rd, $rt, shamt`
 
+>[!important]
+> R format instructions has only [[Register|registers]] as [[ISA Instruction Format#Instruction Operand]] except the **shift instructions**.
 ### Function Code
 - 6 bits 
 - Give [[MIPS]] (2^6-1) + 2^6 = 127 instead of 2^6=64 [[Instruction]]

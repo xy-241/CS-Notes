@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-09-03, 16:58
-Last Date: 2024-09-03T17:03:27+08:00
+Last Date: 2024-09-04T20:51:14+08:00
 References: 
 draft: 
 description: 
@@ -14,6 +14,11 @@ description:
 ## Abstract
 ---
 - Defines the way how a computer system manages and accesses data storage
+
+>[!important]
+> [[#Accumulator ISA]] and [[#Stack ISA]] use **implicit operands**.
+> 
+> The implicit operand in Stack-based architecture is **“top-of-the-stack”** whereas in accumulator-based architecture it is a special register called an **accumulator**.
 
 ## Accumulator ISA
 ---
