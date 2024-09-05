@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2024-02-25T14:38:32+08:00
+Last Date: 2024-09-06T01:56:12+08:00
 References: 
 aliases:
   - ../../Discrete-Math/Set
@@ -16,8 +16,7 @@ aliases:
 $$
 \{9, 8, 7\} = \{7, 9, 8\} = \{7, 8, 7, 9, 9, 7, 7\}
 $$
-- A **unordered** collection of elements
-- **Order** and **duplicates** don't matter
+- A **unordered** collection of elements, so the **order** and **duplicates** don't matter
 
 >[!info]- Set Elements
 > - Example: `1`, `2`, `3` `{1}` are objects in the set of [[Integer (整数)]]
@@ -25,40 +24,6 @@ $$
 
 
 
-
-## Notations
----
-### Set-Roster Notation
-$$
-\{1, 2, 3\}
-$$
-$$
-\{1, 2, 3, \ldots, 100\}
-$$
-$$
-\{1,2,3, \ldots\}
-$$
-- A [[Set|Set]] may be specified by writing all of its elements between braces 
-- Symbol $\ldots$ is called **ellipsis** and read "and so forth"
-### Set-Builder Notation
-$$
-\{x \in U : P(x)\}
-$$
-$$
-\{x \in U | P(x)\}
-$$
-- The set of all `x` in `U` such that `P(x)` is true
-
-### Replacement Notation
-$$
-\{t(x) : x \in A\}
-$$
-$$
-\{t(x) | x \in A\}
-$$
-- For elements x in `A`, we apply the function `t(x)`
-## Properties
----
 ### Membership of a Set
 $$
 \in, \not\in

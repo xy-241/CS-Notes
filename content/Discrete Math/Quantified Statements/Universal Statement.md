@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-02-13, 13:45
-Last Date: 2024-08-26T13:49:50+08:00
+Last Date: 2024-09-05T22:16:21+08:00
 References: 
 draft: 
 description: 
@@ -14,6 +14,9 @@ description:
 ---
 $$
 \forall x \in D, Q(x)
+$$
+$$
+\forall x (x\in D \rightarrow Q(x))
 $$
 - Made of [[Predicate#Predicate Symbol]], [[Predicate#Predicate Variable]] & [[Quantifier]]
 - `true` iff `Q(x)` is `true for every x` in `D`

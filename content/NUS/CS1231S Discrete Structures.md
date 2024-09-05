@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-08-26T19:46:01+08:00
+Last Date: 2024-09-06T01:55:53+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -41,32 +41,30 @@ title: cs1231s nus notes
 - [ ] [[Universal Statement]]
 - [ ] [[Existential Statement]]
 
+
+## Week 3
+---
+- [ ] [[Quantified Rule of Inference]]
+- [ ] [[Prime Number (质数)]]
+- [ ] [[Divisibility (可除性)]]
+- [ ] [[Deductive Reasoning (演繹推理)]]
+- [ ] [[Set]]
+- [ ] [[Set Notation]]
+
 >[!tip]- Good to Have
 > **Geometry**
 > - [[Discrete Geometry]]
 >   
-> **Number Theory**
-> - [[Prime Number (质数)]]
->   
 > **Number Theory - Divisibility and Primes** 
-> - [[Prime Number (质数)]]
-> - [[Divisibility (可除性)]]
 > - [[Factor]]
 > - [[GCD]]
 > - [[Modulo]]
 
 
-## Quantified Statements
----
-- [[Quantified Rule of Inference]]
-
-## Methods of Proofs
----
-- [[Deductive Reasoning (演繹推理)]]
 
 ## Set Theory
 ---
-- [[Set]]
+- 
 - [[Common Sets]]
 
 ## Relation

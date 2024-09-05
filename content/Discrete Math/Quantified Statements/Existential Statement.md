@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-02-14, 10:22
-Last Date: 2024-08-25T22:07:13+08:00
+Last Date: 2024-09-05T22:17:20+08:00
 References: 
 draft: 
 description: 
@@ -15,6 +15,9 @@ description:
 ---
 $$
 \exists x \in D, Q(x)
+$$
+$$
+\exists x (x\in D \land Q(x))
 $$
 - Made of [[Predicate#Predicate Symbol]], [[Predicate#Predicate Variable]] & [[Quantifier]]
 - `true` iff `Q(x)` is `true for at least one x` in `D`
