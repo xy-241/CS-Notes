@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2023-09-14T14:01:42+08:00
-Last Date: 2024-08-31T20:27:02+08:00
+Last Date: 2024-09-04T13:23:48+08:00
 References: 
 ---
 # Abstract
@@ -45,6 +45,7 @@ abstract class Shape {
 ```
 
 - A blueprint for other [[#OOP Class|classes]], thus can’t be used to create objects directly
+- It is useful when we only know certain properties
 
 >[!important] Properties 
 > - Can be a subclass of other concrete class
@@ -62,7 +63,7 @@ abstract class Shape {
 - Focus on **what a class should do** rather than **how it should do it**
 
 >[!important] Pure interface
-> An interface should only contain abstract methods.
+> An interface should only contain abstract methods. It should not hold any fields too!
 
 
 

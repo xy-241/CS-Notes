@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-08-25T19:10:57+08:00
-Last Date: 2024-09-01T03:39:45+08:00
+Last Date: 2024-09-05T20:16:25+08:00
 References: 
 ---
 ## Abstract
 ---
-- Make [[Datatype#Primitive Datatype]] to fit into the [[OOP]] concept
+- Make [[Datatype#Primitive Datatype]] to be in a subtyping relationship with the object class to fit into the [[OOP]] concept
 - Has built-in method to convert current value to other Primitive Datatype or custom datatypes primitive, known as [[Boxing]]
 
 >[!important]
@@ -24,5 +24,7 @@ References:
 >[!important] `Double d = 4` results in compilation error
 > `int cannot be converted to Double`, but `double d = 4` works because it is a [[Type Casting#Widening Type Conversion]]. 
 > 
-> `Double d = 4.0` also works because it is [[Boxing#Auto-boxing]]
+> `Double d = 4.0` also works because it is [[Boxing#Auto-boxing]]. 
+> 
+> `Object o = 4;` works because `4` will be first auto-boxed to an `Integer`, and `Integer` is a [[Subtyping|subtype]] of `Object`. 
 

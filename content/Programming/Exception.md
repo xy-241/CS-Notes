@@ -7,7 +7,7 @@ tags:
   - programming
   - java
 Creation Date: 2024-09-01, 03:02
-Last Date: 2024-09-01T03:22:50+08:00
+Last Date: 2024-09-05T20:36:03+08:00
 References: 
 draft: 
 description: 
@@ -40,7 +40,6 @@ description:
 > 
 > **Do NOT Overreact:** Don't exit the program just because of an exception.
 
-
 ### Raising Exception
 - Use the `throws` keyword in the method declaration to indicate that the method might throw an exception.
 - Create a new exception object and `throw` it to the caller.
@@ -53,16 +52,18 @@ description:
 > Generally not explicitly caught or thrown.
 
 >[!code] Unchekd exceptions in Java
-> Subclasses of `RuntimeException`
+> Subclasses of `RuntimeException`.
 
 ### Checked Exceptions
 - Programmer has no control over them (e.g., `FileNotFoundException`)
 
 >[!important] Must be handled or declared
-> Must be either handled or declared in the method signature using `throws`.
+> Must be either handled or declared in the method signature using `throws`, or we can't pass compilation checks.
 
 ## Java Exception
 ---
+![[java_exception_hierarchy.png|300]]
+
 - Exceptions are instances that are a [[Subtyping|subtype]] of the `Exception` class. Information about an exception is encapsulated in an exception instance and "passed" into the `catch` block
 - [[Inheritance|Inherit]] from an existing exception class if you need to provide additional information or behaviour
 
@@ -72,4 +73,8 @@ description:
 
 
 
+>[!important]
+> Only handles one `catch()` block!
+> 
+> Exceptions can be handled with a catch block that catches its [[Subtyping|supertype]].
 
