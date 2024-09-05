@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-08-31, 16:57
-Last Date: 2024-09-03T22:39:43+08:00
+Last Date: 2024-09-05T21:47:28+08:00
 References: 
 draft: 
 description: 
@@ -16,7 +16,7 @@ description:
 - [[MIPS]] executes [[Instruction|instructions]] in a **sequential manner**. It follows the instructions one by one in order. If we want to have loops, we need the **ability to change the order of executing instructions**
 
 >[!important] Labels are not instructions
-> Labels usually point to the target of branching or jumping.
+> Labels usually point to the target of branching or jumping. They aren't stored in the generated machine codes!
 
 >[!important]
 > Any form of loop can be written in [[Assembly language]] with the help of [[#Conditional Branch]] and [[#Unconditional Jump]].

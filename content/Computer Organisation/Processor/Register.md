@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-09-03T17:14:46+08:00
+Last Date: 2024-09-05T21:30:46+08:00
 References: 
 ---
 ## Abstract
@@ -23,7 +23,8 @@ References:
 > 
 > The data stored in the register is interpreted according to the instruction that uses it.
 
-
+### Register Allocation
+- [[Language Processors#Compiler]] associates [[Register]] with variables in the given program 
 ## Memory Register
 ---
 ### Memory Address Register

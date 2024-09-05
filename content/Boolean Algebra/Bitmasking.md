@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-08-30, 11:47
-Last Date: 2024-08-31T15:58:41+08:00
+Last Date: 2024-09-04T22:44:30+08:00
 References: 
 draft: 
 description: 
@@ -78,7 +78,7 @@ description:
      1 1 1 0 0 0 1 0    output
 ```
 
-- Flip a subset of [[Computer Data Representation#Bit|bits]] in the given input. The positions in the mask that are set to `1` determine which bits in the input are flipped
+- Flip a subset of [[Computer Data Representation#Bit|bits]] in the given input. The positions in the mask that are set to `1` determine which bits in the input are flipped. The positions in the mask that are set to `0` will not make any changes to the given input
 
 
 >[!important] Using XOR as NOT
