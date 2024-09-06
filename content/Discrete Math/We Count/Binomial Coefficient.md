@@ -18,7 +18,7 @@ description:
 </br>
 
 
-- Also known as the number of **k-element** [[Common Sets#Subset]] (or **k-combinations**) of a **n-element** [[Set]] 
+- Also known as the number of **k-element** [[Subset]] (or **k-combinations**) of a **n-element** [[Set]] 
 - $\binom{2}{1} = 2$, because given a set of 2 elements $\{1,2\}$ for example, there are 2 subsets of 1 elements: $\{1\}$ and $\{2\}$ 
 
 

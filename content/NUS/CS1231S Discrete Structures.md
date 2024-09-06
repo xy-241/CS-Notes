@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-09-06T01:55:53+08:00
+Last Date: 2024-09-06T16:31:09+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -50,6 +50,14 @@ title: cs1231s nus notes
 - [ ] [[Deductive Reasoning (演繹推理)]]
 - [ ] [[Set]]
 - [ ] [[Set Notation]]
+- [ ] [[Subset]]
+- [ ] [[Empty Set]]
+
+
+## Week 4
+---
+- [ ] [[Partition]]
+
 
 >[!tip]- Good to Have
 > **Geometry**
@@ -59,13 +67,6 @@ title: cs1231s nus notes
 > - [[Factor]]
 > - [[GCD]]
 > - [[Modulo]]
-
-
-
-## Set Theory
----
-- 
-- [[Common Sets]]
 
 ## Relation
 ---

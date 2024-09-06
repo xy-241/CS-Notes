@@ -37,7 +37,7 @@ $$
 - Given the statement: `All balls in the bowl are blue`, however `no balls in the bowl`. The statement is vacuously true, because the [[#Negation of Universal]] is `One of the balls in the bowl isn't blue` which is **obviously false**
 
 >[!important] Another perspective
-> If you consider a [[Mathematical Argument#Premise|hypothesis]] as a [[Set|set]], when the set is an [[Common Sets#Empty Set|empty set]] (aka the hypothesis is false), the negation of the statement is that there exists at least one element in the set that contradicts the given universal statement. Since it is an empty set, there isn't such an element. Thus, an empty set or a false hypothesis will always result in a universal statement that is true.
+> If you consider a [[Mathematical Argument#Premise|hypothesis]] as a [[Set|set]], when the set is an [[Empty Set|empty set]] (aka the hypothesis is false), the negation of the statement is that there exists at least one element in the set that contradicts the given universal statement. Since it is an empty set, there isn't such an element. Thus, an empty set or a false hypothesis will always result in a universal statement that is true.
 
 ## Universal Conditional
 ---

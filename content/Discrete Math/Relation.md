@@ -7,13 +7,13 @@ tags:
   - discrete_math
   - calculus
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-03-27T10:10:05+08:00
+Last Date: 2024-09-06T16:31:34+08:00
 References: 
 draft: 
 ---
 ## Abstract
 ---
-- Basically a [[Common Sets#Subset]] of [[Set#Cartesian Product]] or [[Set#Order n-tuples]] filtered by some conditions which define the relation among the elements from the given [[Set]]
+- Basically a [[Subset]] of [[Set#Cartesian Product]] or [[Set#Order n-tuples]] filtered by some conditions which define the relation among the elements from the given [[Set]]
 
 >[!example] Real-world Implication 
 > Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation aka all the rows that can be stored inside the database. Each row is a actual [[Set#Order n-tuples]] inside the relation
@@ -88,7 +88,7 @@ $$
 - $R$ is equivalence relation iff $R$ is [[#Reflexive]], [[#Symmetric]] and [[#Transitive]]
 
 ### Equivalence Class
-- Basically same as the **component** of a [[Common Sets#Partition]] or elements of [[#Equivalence Relation]]
+- Basically same as the **component** of a [[Partition]] or elements of [[#Equivalence Relation]]
 - Can be represented with $[a]_{relation}$, it means the Equivalence Class contains element $a$
 - $[a]_{relation}$ and $[b]_{relation}$ are the same iff $b$ is in the same equivalence class as $a$
 
@@ -102,7 +102,7 @@ $$
 	3. $[x] \cap [y] \ne \emptyset$
 
 ### Theorem 8.3.4
-- The [[Common Sets#Partition]] induced by [[#Equivalence Relation]]
+- The [[Partition]] induced by [[#Equivalence Relation]]
 - If $R$ is equivalence relation on [[Set]] $A$, then the distinct [[#Equivalence Class]] form a partition of $A$
 
 

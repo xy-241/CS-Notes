@@ -13,7 +13,7 @@ description:
 ---
 ## Abstract
 ---
-- [[Data Structure]] that lets you manage a collection of [[Common Sets#Disjoin Set]] also known **Dynamic Relation** **efficiently**
+- [[Data Structure]] that lets you manage a collection of [[Subset#Disjoin Set]]x also known **Dynamic Relation** **efficiently**
 
 >[!info] Dynamic Relation
 > A Dynamic Relation is a [[Relation]] that has a different set of elements inside the relation depends on the given input. In Union Find, the operation `union(x, y)` gives the dynamic property, it combine 2 relations into one relation
