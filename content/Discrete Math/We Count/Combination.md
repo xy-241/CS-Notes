@@ -30,7 +30,7 @@ aliases:
 - [40. Combination Sum II](https://leetcode.cn/problems/combination-sum-ii/)
 - [216. Combination Sum III](https://leetcode.cn/problems/combination-sum-iii/)
 ### Multiple Sets
-- [17. Letter Combinations of a Phone Number](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/) - essentially, finding the [[Set#Cartesian Product]] involves treating **each phone number** as a [[Set]]
+- [17. Letter Combinations of a Phone Number](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/) - essentially, finding the [[Cartesian Product]] involves treating **each phone number** as a [[Set]]
 
 ### Partition (分割)
 

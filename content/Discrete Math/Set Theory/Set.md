@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2023-12-18, 10:33
-Last Date: 2024-09-06T01:56:12+08:00
+Last Date: 2024-09-06T18:12:19+08:00
 References: 
 aliases:
   - ../../Discrete-Math/Set
@@ -40,75 +40,12 @@ $$
 
 
 
-## Theorems
----
-### Theorem 6.2.1
-#### Inclusion of Intersection
-$$
-A \cap B \subseteq A
-$$
-$$
-A \cap B \subseteq B
-$$
-
-#### Inclusion in Union
-$$
-A \subseteq A \cup B
-$$
-$$
-B \subseteq A \cup B
-$$
-
-#### Transitive Property of Subsets
-$$
-(A \subseteq B) \land (B \subseteq C) \rightarrow A \subseteq C
-$$
-
-### Set Identities
-![[set_identities_Theorem 6.2.2.png|500]]
-- Very similar to [[Propositional Logic#Logical Equivalence]]
 
 
 
 
 
-## Terminologies
----
 
-
-### Set Equality
-- Given [[Set|Set]] `A` and `B`. The [[#Cardinality of a Set]] must be the same
-- **First way to prove:**
-$$
-A = B \leftrightarrow (A \subseteq B) \land (B \subseteq A)
-$$
-- **Second way to prove:**
-$$
-A = B \leftrightarrow \forall x (x \in A \leftrightarrow x \in B)
-$$
-### Ordered Pair
-$$
-(c, y)
-$$
-$$
-(a, b) = (c, d) \leftrightarrow (a=c) \land (b=d)
-$$
-
-### Order n-tuples
-- `n` denotes the number of [[Set|Set]] we are multiplying
-- [[#Ordered Pair]] is order 2-tuples, because are multiplying 2 sets
-
-### Cartesian Product
-- Given [[Set|Set]] `A` and `B`, the Cartesian product is a set of [[#Ordered Pair]]
-$$
-A \times B = \{(a,b) : a\in A \land b\in B\}
-$$
-- Thus
-$$
-A \times B \neq B \times A
-$$
-- Cartesian Product of real numbers is basically a set that contains all the possible (x,y) coordinates on the *Cartesian Plane* 
-- Depends on the number of set - `n`, the Cartesian product is a set of [[#Order n-tuples]]
 
 
 

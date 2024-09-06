@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-09-06T16:31:09+08:00
+Last Date: 2024-09-06T18:13:50+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -56,7 +56,15 @@ title: cs1231s nus notes
 
 ## Week 4
 ---
-- [ ] [[Partition]]
+- [ ] [[Ordered Pair]]
+- [ ] [[Cartesian Product]]
+- [ ] [[Set Equality]]
+- [ ] [[Interval]]
+- [ ] [[Mutually Disjoin Set]]
+- [ ] [[Set Partition]]
+- [ ] [[Integer (整数)#Theorem 4.4.1|Quotient-Remainder Theorem]]
+- [ ] [[Power Set]]
+- [ ] [[Set Theorem]]
 
 
 >[!tip]- Good to Have

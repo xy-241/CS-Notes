@@ -13,17 +13,17 @@ draft:
 ---
 ## Abstract
 ---
-- Basically a [[Subset]] of [[Set#Cartesian Product]] or [[Set#Order n-tuples]] filtered by some conditions which define the relation among the elements from the given [[Set]]
+- Basically a [[Subset]] of [[Cartesian Product]] or [[Ordered Pair#Order n-tuples]] filtered by some conditions which define the relation among the elements from the given [[Set]]
 
 >[!example] Real-world Implication 
-> Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation aka all the rows that can be stored inside the database. Each row is a actual [[Set#Order n-tuples]] inside the relation
+> Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation aka all the rows that can be stored inside the database. Each row is a actual [[Ordered Pair#Order n-tuples]] inside the relation
 
 
 ### Binary Relation
 - Let $x \in A, y \in B$, we say $x~R~y \leftrightarrow (x,y) \in R$
 
 ### Inversion of Relation
-- Basically reverse the order of elements of the [[Set#Order n-tuples]]
+- Basically reverse the order of elements of the [[Ordered Pair#Order n-tuples]]
 $$
 R^{-1} = \{(y,x) \in B \times A : (x,y) \in R\}
 $$
@@ -88,7 +88,7 @@ $$
 - $R$ is equivalence relation iff $R$ is [[#Reflexive]], [[#Symmetric]] and [[#Transitive]]
 
 ### Equivalence Class
-- Basically same as the **component** of a [[Partition]] or elements of [[#Equivalence Relation]]
+- Basically same as the **component** of a [[Set Partition]] or elements of [[#Equivalence Relation]]
 - Can be represented with $[a]_{relation}$, it means the Equivalence Class contains element $a$
 - $[a]_{relation}$ and $[b]_{relation}$ are the same iff $b$ is in the same equivalence class as $a$
 
@@ -102,7 +102,7 @@ $$
 	3. $[x] \cap [y] \ne \emptyset$
 
 ### Theorem 8.3.4
-- The [[Partition]] induced by [[#Equivalence Relation]]
+- The [[Set Partition]] induced by [[#Equivalence Relation]]
 - If $R$ is equivalence relation on [[Set]] $A$, then the distinct [[#Equivalence Class]] form a partition of $A$
 
 
@@ -142,7 +142,7 @@ $$
 - A [[Relation]] that is [[#Reflexive]] [[#Symmetric]] & [[#Transitive]]
 
 ### Transitive Closure of Relation
-- The [[Relation]] obtained by adding the least number of [[Set#Ordered Pair]] to ensure [[#Transitive]]
+- The [[Relation]] obtained by adding the least number of [[Ordered Pair]] to ensure [[#Transitive]]
 - Represented with $R^{t}$
 - Following 3 properties:
 	1. $R^{t}$ is transitive

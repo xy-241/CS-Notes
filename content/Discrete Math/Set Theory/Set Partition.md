@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-02-24, 15:33
-Last Date: 2024-09-06T16:28:58+08:00
+Last Date: 2024-09-06T17:37:43+08:00
 References: 
 draft: 
 description: 
@@ -15,7 +15,8 @@ description:
 ## Abstract
 ---
 ![[union_of_mutually_disjoint_subsets.png|300]]
-- A partition of [[Set]] $A$ is a finite or infinite collection of not empty, [[#Mutually Disjoin Subset]] that can be chained with [[OR]] to form $A$
+
+- A partition of [[Set]] $A$ is a finite or infinite collection of **NOT** [[Empty Set]], [[Mutually Disjoin Set]] that can be chained with [[OR]] to form $A$
 </br>
 
 
@@ -34,8 +35,8 @@ $$
 
 
 #### Theorem 8.3.1
-- [[Relation]] **induced** by [[Partition]]
-- Two elements are related if and only if they belong to the [[#Mutually Disjoin Subset]] in the partition. This connection created by the partition is called the **relation induced by the partition**
+- [[Relation]] **induced** by [[Set Partition]]
+- Two elements are related if and only if they belong to the [[Mutually Disjoin Set]] in the partition. This connection created by the partition is called the **relation induced by the partition**
 </br>
 
 - Let $A$ be a [[Set]] with a Partition
