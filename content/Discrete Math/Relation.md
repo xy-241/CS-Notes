@@ -7,7 +7,7 @@ tags:
   - discrete_math
   - calculus
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-09-06T16:31:34+08:00
+Last Date: 2024-09-07T00:57:56+08:00
 References: 
 draft: 
 ---
@@ -19,6 +19,22 @@ draft:
 > Commonly used in [[Database]], the columns are the different sets, the Cartesian Product of the columns are all the potential relation aka all the rows that can be stored inside the database. Each row is a actual [[Ordered Pair#Order n-tuples]] inside the relation
 
 
+### Domain
+- Basically the [[Set]] of elements of the left hand Set that is involved in the [[Relation]]
+$$
+\{a \in A : aRb \space for \space some \space b \in B\}
+$$
+
+### Co-domain
+- The whole [[Set]] at the right hand side
+
+### Range
+- Basically the [[Set]] of elements of the right hand set that is involved in the [[Relation]]
+$$
+\{b \in B : aRb \space for \space some \space a\in A\}
+$$
+
+
 ### Binary Relation
 - Let $x \in A, y \in B$, we say $x~R~y \leftrightarrow (x,y) \in R$
 
@@ -28,36 +44,11 @@ $$
 R^{-1} = \{(y,x) \in B \times A : (x,y) \in R\}
 $$
 
-## Composition of Relation
----
-- The composite of 2 [[Relation]] - `R` and `S`
-- Given [[Set]] `A`, `B`, `C`, $R \subseteq A \times B$ and $S \subseteq B \times C$
-$$
-\forall x \in A, \forall z \in C (x S \circ R z \leftrightarrow (\exists y \in B (xRy \cap ySz)))
-$$
-- For all $a$ in $A$ and all $z$ in $C$,  the below 2 conditions must be fulfilled in order to have composition of relation $S\circ R$
-	1. If there is a 'path' from $x$ to $z$, there must have a path from $x$ to $y$ AND $y$ to $z$ , the $S\circ R \rightarrow (\exists y \in B (xRy \cap ySz))$ part
-	2. If there is a 'path' from $x$ to $y$  and $y$ to $z$, there must has a path from $x$ to $z$, the $S\circ R \leftarrow (\exists y \in B (xRy \cap ySz))$ part
 
-### Composition is Associative
-- Let $A, B, C, D$ be [[Set]]
-- The we have 3 [[Relation]]: 
-	- $R \subseteq A \times B$
-	- $S \subseteq B \times C$
-	- $T\subseteq C \times D$
+### Arrow Diagram 
+- Visualize  [[Relation]]
+- Usually used when there is more than one [[Set]] involve in the relation
 
-$$
-T \circ (S\circ R) = (T\circ S) \circ R = T \circ S \circ R
-$$
-### Inverse of Composition
-- Let $A, B, C$ be [[Set]]
-- The we have 3 [[Relation]]: 
-	- $R \subseteq A \times B$
-	- $S \subseteq B \times C$
-
-$$
-(S \circ R)^{-1} = R^{-1} \circ S^{-1}
-$$
 
 ## Relation Properties 
 ---
@@ -109,25 +100,9 @@ $$
 
 ## Terminologies
 ---
-### Arrow Diagram 
-- Visualize  [[Relation]]
-- Usually used when there is more than one [[Set]] involve in the relation
 
 
-### Domain
-- Basically the [[Set]] of elements of the left hand Set that is involved in the [[Relation]]
-$$
-\{a \in A : aRb \space for \space some \space b \in B\}
-$$
 
-### Co-domain
-- The whole [[Set]] at the right hand side
-
-### Range
-- Basically the [[Set]] of elements of the right hand set that is involved in the [[Relation]]
-$$
-\{b \in B : aRb \space for \space some \space a\in A\}
-$$
 
 ### N-ary Relation 
 - A [[Relation]] involving 2 [[Set]] is called **binary relation**, also known as 2-ary

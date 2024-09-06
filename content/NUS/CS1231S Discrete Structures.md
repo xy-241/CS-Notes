@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-09-06T18:13:50+08:00
+Last Date: 2024-09-07T01:00:29+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -45,26 +45,38 @@ title: cs1231s nus notes
 ## Week 3
 ---
 - [ ] [[Quantified Rule of Inference]]
-- [ ] [[Prime Number (质数)]]
-- [ ] [[Divisibility (可除性)]]
 - [ ] [[Deductive Reasoning (演繹推理)]]
+
+### Set
 - [ ] [[Set]]
 - [ ] [[Set Notation]]
 - [ ] [[Subset]]
 - [ ] [[Empty Set]]
 
+### Number Theory
+- [ ] [[Prime Number (质数)]]
+- [ ] [[Divisibility (可除性)]]
+
 
 ## Week 4
 ---
+### Set
 - [ ] [[Ordered Pair]]
 - [ ] [[Cartesian Product]]
 - [ ] [[Set Equality]]
 - [ ] [[Interval]]
 - [ ] [[Mutually Disjoin Set]]
 - [ ] [[Set Partition]]
-- [ ] [[Integer (整数)#Theorem 4.4.1|Quotient-Remainder Theorem]]
 - [ ] [[Power Set]]
 - [ ] [[Set Theorem]]
+
+### Relation
+- [ ] [[Relation]]
+- [ ] [[Relation Composition]]
+
+### Number Theory
+- [ ] [[Integer (整数)#Theorem 4.4.1|Quotient-Remainder Theorem]]
+
 
 
 >[!tip]- Good to Have
@@ -76,9 +88,7 @@ title: cs1231s nus notes
 > - [[GCD]]
 > - [[Modulo]]
 
-## Relation
----
-- [[Relation]]
+
 
 
 
