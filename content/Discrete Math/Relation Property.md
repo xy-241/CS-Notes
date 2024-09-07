@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-09-07, 01:15
-Last Date: 2024-09-07T01:28:35+08:00
+Last Date: 2024-09-07T15:33:57+08:00
 References: 
 draft: 
 description: 
@@ -40,7 +40,8 @@ $$
 
 
 
-### Equivalence Relation
+## Equivalence Relation
+---
 - Let $A$ be a [[Set]] and $R$ be a [[Relation]] on $A$
 - $R$ is equivalence relation iff $R$ is [[#Reflexive]], [[#Symmetric]] and [[#Transitive]]
 
