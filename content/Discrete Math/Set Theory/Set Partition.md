@@ -41,7 +41,7 @@ $$
 
 - Let $A$ be a [[Set]] with a Partition
 - Let $R$ be the relation induced by the partition
-- Then $R$ is [[Relation#Reflexive]], [[Relation#Symmetric]] and [[Relation#Transitive]]
+- Then $R$ is [[Relation Property#Reflexive]], [[Relation Property#Symmetric]] and [[Relation Property#Transitive]]
 </br>
 
 >[!example]-

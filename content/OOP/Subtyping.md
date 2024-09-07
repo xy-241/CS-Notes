@@ -20,9 +20,9 @@ References:
 > - `char` <: `int` <: `long` <: `float` <: `double`
 
 >[!important]
-> Subtyping is [[Relation#Reflexive]], $T <: T$
+> Subtyping is [[Relation Property#Reflexive]], $T <: T$
 > 
-> Subtyping is [[Relation#Transitive]], if $S <: T$ and $T <: U$, then $S <: U$
+> Subtyping is [[Relation Property#Transitive]], if $S <: T$ and $T <: U$, then $S <: U$
 
 >[!important] OOP 
 > It can be a type that inherits from a [[OOP#OOP Class]] or [[Interface]]. Less specific compared to [[Sub-class]]

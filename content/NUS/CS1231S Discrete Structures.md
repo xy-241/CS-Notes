@@ -10,7 +10,7 @@ tags:
   - probability
   - geometry
 Creation Date: 2024-02-12, 16:12
-Last Date: 2024-09-07T01:00:29+08:00
+Last Date: 2024-09-07T01:17:53+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS1231S on this website. Get help preparing for your final exam and answers to your questions.
@@ -73,6 +73,7 @@ title: cs1231s nus notes
 ### Relation
 - [ ] [[Relation]]
 - [ ] [[Relation Composition]]
+- [ ] [[Relation Property]]
 
 ### Number Theory
 - [ ] [[Integer (整数)#Theorem 4.4.1|Quotient-Remainder Theorem]]

@@ -7,7 +7,7 @@ tags:
   - discrete_math
   - calculus
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-09-07T00:57:56+08:00
+Last Date: 2024-09-07T01:17:35+08:00
 References: 
 draft: 
 ---
@@ -38,6 +38,11 @@ $$
 ### Binary Relation
 - Let $x \in A, y \in B$, we say $x~R~y \leftrightarrow (x,y) \in R$
 
+### N-ary Relation 
+- A [[Relation]] involving 2 [[Set]] is called **binary relation**, also known as 2-ary
+- Ternary is 3-ary
+- Quaternary is 4-ary
+
 ### Inversion of Relation
 - Basically reverse the order of elements of the [[Ordered Pair#Order n-tuples]]
 $$
@@ -49,39 +54,6 @@ $$
 - Visualize  [[Relation]]
 - Usually used when there is more than one [[Set]] involve in the relation
 
-
-## Relation Properties 
----
-- Not properties of the elements of the [[Set]]!
-### Reflexive 
-- Every element in the given [[Set]] must be related to itself
-
-$$
-\forall x \in A (xRx)
-$$
-
-### Symmetric
-- If an element is related to another element, the another element must be related to this element too
-
-$$
-\forall x,y \in A (xRy \rightarrow yRx)
-$$
-
-### Transitive
-- If an element is related to another element, and that element is related to a third element. Then this must be related to the third element
-
-$$
-\forall x,y,z \in A (xRy \cap yRz \rightarrow xRz)
-$$
-
-### Equivalence Relation
-- Let $A$ be a [[Set]] and $R$ be a [[Relation]] on $A$
-- $R$ is equivalence relation iff $R$ is [[#Reflexive]], [[#Symmetric]] and [[#Transitive]]
-
-### Equivalence Class
-- Basically same as the **component** of a [[Set Partition]] or elements of [[#Equivalence Relation]]
-- Can be represented with $[a]_{relation}$, it means the Equivalence Class contains element $a$
-- $[a]_{relation}$ and $[b]_{relation}$ are the same iff $b$ is in the same equivalence class as $a$
 
 ## Theorem
 ---
@@ -100,15 +72,6 @@ $$
 
 ## Terminologies
 ---
-
-
-
-
-### N-ary Relation 
-- A [[Relation]] involving 2 [[Set]] is called **binary relation**, also known as 2-ary
-- Ternary is 3-ary
-- Quaternary is 4-ary
-
 ### Congruence Modulo 3
 - [[Modulo#Congruence Modulo]] 3 means the [[Integer (整数)]] is divisible by 3
 $$
