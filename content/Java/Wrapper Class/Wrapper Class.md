@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2023-08-25T19:10:57+08:00
-Last Date: 2024-09-05T20:16:25+08:00
+Last Date: 2024-09-09T01:41:22+08:00
 References: 
 ---
 ## Abstract
@@ -28,3 +28,5 @@ References:
 > 
 > `Object o = 4;` works because `4` will be first auto-boxed to an `Integer`, and `Integer` is a [[Subtyping|subtype]] of `Object`. 
 
+>[!attention]
+> All the wrapper classes are not in a [[Subtyping|subtyping relationship]] that is found with the primitive datatypes, and you can't [[Inheritance|inherits]] from any wrapper classes!

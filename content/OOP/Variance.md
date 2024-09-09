@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2024-09-01, 02:33
-Last Date: 2024-09-01T02:45:37+08:00
+Last Date: 2024-09-09T01:42:29+08:00
 References: 
 draft: 
 description: 
@@ -32,3 +32,6 @@ description:
 
 ### Invariant
 - If [[Datatype#Complex Type|complex type]] $C$ is neither [[#Covariant]] nor [[#Contravariant]]
+
+>[!example] Invariants in Java
+> Primitive arrays and [[Generics]] are invariant.
