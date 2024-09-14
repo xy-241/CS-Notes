@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-08-30, 11:47
-Last Date: 2024-09-04T22:44:30+08:00
+Last Date: 2024-09-14T11:48:37+08:00
 References: 
 draft: 
 description: 
@@ -52,6 +52,10 @@ description:
 
 >[!code] MIPS loading 32-bit constant
 > ![[mips_load_32_bits_constant.png|500]]
+> 
+> Why not just use `lw` to load the 32-bit constant from memory? Because `lw` requires us to access memory to fetch data, which is slow.
+> 
+> Why not just use `li`? It is a [[Instruction#Pseudo Instruction|pseudo-instruction]] that gets translated to something similar to what's shown above.
 
 
 ## NOR Bitmasking
