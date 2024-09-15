@@ -13,7 +13,7 @@ description:
 ---
 ## Abstract
 ---
-- Ways to specify an [[Instruction#Instruction Operand]] in an assembly language
+- Ways to specify an [[ISA Instruction Format#Instruction Operand]] in an assembly language
 
 
 ## Register Addressing Mode
