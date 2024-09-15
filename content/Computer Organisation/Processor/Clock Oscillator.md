@@ -67,7 +67,7 @@ draft:
 - The **amount of time** the [[CPU]] takes to perform a [[Main Memory]] or [[OS/IO/IO Device|IO Device]] **access**. One machine cycle consists of **several** [[#Clock Cycle]]
 
 ### Instruction Cycle
-- The **amount of time** the [[CPU]] takes to [[Pipeline Stages#Fetch]], [[Pipeline Stages#Decode]] and [[Pipeline Stages#Execute]] **one** [[Instruction]]. One Instruction cycle consists of **several** [[#Machine Cycle]]
+- The **amount of time** the [[CPU]] takes to [[Instruction Stages#Fetch]], [[Instruction Stages#Decode]] and [[Instruction Stages#Execute]] **one** [[Instruction]]. One Instruction cycle consists of **several** [[#Machine Cycle]]
 
 ### Clock Frequency
 - The total number of [[#Clock Cycle]] in one second

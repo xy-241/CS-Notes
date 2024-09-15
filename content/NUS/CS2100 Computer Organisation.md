@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-09-03T22:32:33+08:00
+Last Date: 2024-09-15T08:57:20+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -106,13 +106,14 @@ title: cs2100 nus notes
 - [ ] [[Register#Program Counter]]
 
 
-
-
-
-
-## Instruction Set Architecture
+## Week 5
 ---
-- [[Instruction Execution]]
+- [ ] [[CPU Datapath]]
+- [ ] [[Instruction Stages]]
+- [ ] [[Instruction Execution]]
+- [ ] [[Multiplexer]]
+
+
 
 ## The Processor
 ---
@@ -120,7 +121,6 @@ title: cs2100 nus notes
 - [[ALU]]
 - [[Control Unit]]
 - [[Register]]
-- [[CPU Datapath]]
 
 >[!seealso]- Interesting Related Topics
 > - [[Clock Oscillator]]
@@ -163,7 +163,6 @@ title: cs2100 nus notes
 ---
 ### Basics
 - [[Pipeline]]
-- [[Pipeline Stages]]
 - [[Instruction-Level Parallelism]]
 
 ### Pipeline Hazards

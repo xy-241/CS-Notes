@@ -16,7 +16,7 @@ References:
 - Also known as **Machine Codes**
 - [[Computer Data Representation#Bit String]], which is passed to [[CPU]], gets translated to carry out [[Operation]]
 - Doesn't specify which [[CPU Datapath]] does what, just specify what outputs are expected with a given input
-- The instruction lifecycle can be broken down into [[Pipeline Stages]]
+- The instruction lifecycle can be broken down into [[Instruction Stages]]
 
 ### Pseudo Instruction
 - Syntactic sugar for a set of [[Instruction]], so it is easier for programmers to use

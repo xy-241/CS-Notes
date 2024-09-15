@@ -20,7 +20,7 @@ description:
 
 ### Variable-length Instruction
 - More flexible but more complicated [[Pipeline]] & [[Instruction-Level Parallelism]]
-- Requires multi-step [[Pipeline Stages#Fetch]] and [[Pipeline Stages#Decode]]
+- Requires multi-step [[Instruction Stages#Fetch]] and [[Instruction Stages#Decode]]
 
 
 ## Opcode
