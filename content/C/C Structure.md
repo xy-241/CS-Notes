@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-08-21, 15:51
-Last Date: 2024-08-27T15:38:48+08:00
+Last Date: 2024-08-30T14:52:50+08:00
 References: 
 draft: 
 description: 
@@ -53,6 +53,20 @@ union _union_name_ {
 > We can efficiently obtain the representation of the same element in different data type encodings.
 
 
+## Enum
+---
+```c
+enum Heat {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+```
+
+- A C type that represents a group integer constants that can't be changed
+
+>[!success] Benefits
+> This improves code readability and prevents bugs.
 
 ## References
 ---

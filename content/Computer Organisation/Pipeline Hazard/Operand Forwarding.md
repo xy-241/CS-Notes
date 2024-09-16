@@ -13,5 +13,5 @@ References:
 ---
 ![[operand_forwarding.png|500]]
 
-- A **tunnel** that connects one [[Pipeline Stages|Pipeline Stage]] of [[Instruction]] to another pipeline stage of another instruction
-- As shown in the diagram above, we are able to save the idle time caused by the [[Pipeline Stages#Write Back]] of the first instruction
+- A **tunnel** that connects one [[Instruction Stages|Pipeline Stage]] of [[Instruction]] to another pipeline stage of another instruction
+- As shown in the diagram above, we are able to save the idle time caused by the [[Instruction Stages#Write Back]] of the first instruction

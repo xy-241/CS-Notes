@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-17, 19:58
-Last Date: 2024-08-17T16:03:29+08:00
+Last Date: 2024-08-30T16:02:56+08:00
 References: 
 ---
 ## Abstract
@@ -78,6 +78,8 @@ Therefore, you need 8 bits to represent 150.
 - Common word sizes are 16 bits, 32 bits, or 64 bits
 - typically a word in mips is 32 bits made up of $4 * 8 bytes$ which corresponds to the size of the register 
 
+>[!question] How do we check if a given memory address is word-aligned?
+> It should divisible by the word size.
 
 ## Qubit
 ---

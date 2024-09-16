@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Reduce idle time when executing the [[Pipeline Stages]] by using [[Instruction-Level Parallelism]]
+- Reduce idle time when executing the [[Instruction Stages]] by using [[Instruction-Level Parallelism]]
 
 
 ### Pipeline Width

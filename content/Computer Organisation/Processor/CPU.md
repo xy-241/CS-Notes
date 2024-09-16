@@ -50,7 +50,7 @@ References:
 ![[hyperthreading.png|400]]
 
 - **Hyperthreading technology** enables a single [[CPU]] to **handle multiple [[Thread]] simultaneously**. Thus, achieving [[Concurrency (并发)#Parallelism (并行)]] 
-- This is achieved by duplicating the [[Register#Register File]] like [[Register#Program Counter]]. [[Pipeline Stages#Fetch]] and [[Pipeline Stages#Decode]] are also duplicated to allow for **simultaneous processing** of [[Instruction]] from multiple [[Thread]]. The rest like [[ALU]] is shared
+- This is achieved by duplicating the [[Register#Register File]] like [[Register#Program Counter]]. [[Instruction Stages#Fetch]] and [[Instruction Stages#Decode]] are also duplicated to allow for **simultaneous processing** of [[Instruction]] from multiple [[Thread]]. The rest like [[ALU]] is shared
 
 >[!important]
 > The performance gain from Hyperthreading is **minimal** when **one set of the fetch and decode** is smooth and **able to keep the ALU busy**. 

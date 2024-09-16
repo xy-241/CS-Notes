@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-08-27T15:17:07+08:00
+Last Date: 2024-09-15T16:00:43+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -17,7 +17,7 @@ title: cs2100 nus notes
 ## Week 1
 ---
 ### C
-- [ ] [[C]]
+- [ ] [[C/C]]
 - [ ] [[Language Processors]]
 - [ ] [[C Program Compilation]]
 - [ ] [[Macro Expansion]]
@@ -35,7 +35,6 @@ title: cs2100 nus notes
 - [ ] [[Parity Bit (奇偶校验码)]]
 
 >[!seealso] Extra Readings
-> - [[Endianness]]
 > - [[Base 64 Encoding]]
 
 ## Week 2
@@ -57,33 +56,74 @@ title: cs2100 nus notes
 - [ ] [[Function#Function Scope Rule]]
 
 
-## MIPS
+## Week 3
 ---
-- [[MIPS]]
-- [[MIPS Instruction]]
-- [[MIPS R-Type Instruction]]
-- [[MIPS I-Type Instruction]]
-- [[MIPS J-Type Instruction]]
+- [ ] [[Instruction Set Architecture (ISA)]]
+- [ ] [[Instruction]]
+- [ ] [[Assembly language]]
+- [ ] [[Register]]
+- [ ] [[Language Processors#Variable Mapping]]
+- [ ] [[Computer Data Representation#Word]]
+
+### MIPS
+- [ ] [[MIPS]]
+- [ ] [[MIPS Register]]
+- [ ] [[MIPS Memory Access]]
+- [ ] [[MIPS Control Flow]]
+
+### Logical Operations
+- [ ] [[NOR]]
+- [ ] [[XOR]]
+- [ ] [[Bit Shifting]]
+- [ ] [[Bitmasking]]
+
+### C
+- [ ] [[Pointer#Dangling Pointer]]
+- [ ] [[C Keywords#static]]
+
+>[!seealso] Extra Readings
+> - [[Atomic Instruction]]
+
+## Week 4
+---
+### MIPS
+- [ ] [[MIPS Instruction]]
+- [ ] [[MIPS R-Type Instruction]]
+- [ ] [[MIPS I-Type Instruction]]
+- [ ] [[MIPS J-Type Instruction]]
+
+### ISA
+- [ ] [[CISC]]
+- [ ] [[RISC]]
+- [ ] [[ISA Storage Architecture]]
+- [ ] [[ISA Addressing Mode]]
+- [ ] [[ISA Instruction Format]]
 
 
-## Instruction Set Architecture
+### Hardware
+- [ ] [[Register#Memory Register]] 
+- [ ] [[Endianness]]
+- [ ] [[Register#Program Counter]]
+
+
+## Week 5
 ---
-- [[Instruction]]
-- [[Atomic Instruction]]
-- [[Instruction Set Architecture (ISA)]]
-- [[Instruction Execution]]
-- [[Assembly language]]
+- [ ] [[CPU Datapath]]
+- [ ] [[Instruction Stages]]
+- [ ] [[Instruction Execution]]
+- [ ] [[Multiplexer]]
+- [ ] [[ALU]]
+- [ ] [[MIPS Data Memory]]
+
+>[!seealso] Extra Readings
+> - [[Clock Oscillator]]
 
 ## The Processor
 ---
 - [[CPU]]
-- [[ALU]]
 - [[Control Unit]]
-- [[Register]]
-- [[CPU Datapath]]
 
->[!seealso]- Interesting Related Topics
-> - [[Clock Oscillator]]
+>[!seealso] Interesting Related Topics
 > - [[GPU]]
 > - [[Specialised Processor]]
 
@@ -101,8 +141,6 @@ title: cs2100 nus notes
 - [ ] [[AND]]
 - [ ] [[OR]]
 - [ ] [[NOT]]
-- [ ] [[XOR]]
-- [ ] [[NOR]]
 
 ## Circuit Simplification
 ---
@@ -125,7 +163,6 @@ title: cs2100 nus notes
 ---
 ### Basics
 - [[Pipeline]]
-- [[Pipeline Stages]]
 - [[Instruction-Level Parallelism]]
 
 ### Pipeline Hazards

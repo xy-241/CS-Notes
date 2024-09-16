@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-08, 21:54
-Last Date: 2024-08-18T16:27:34+08:00
+Last Date: 2024-09-11T21:59:19+08:00
 References: 
 ---
 ## Abstract
@@ -121,7 +121,7 @@ References:
 >[!tip] Trick to convert from 1's complement to decimal value
 > The **decimal value** equals the **negative decimal value** of  [[#Sign Bit]] + the **positive sum** of the [[#Magnitude Bit|magnitude bits]]. 
 > 
-> The weight of the sign bit is $-2^{n-1} - 1$, where $n$ is the total number of bits the binary number has.
+> The weight of the sign bit is $-2^{n-1} + 1$, where $n$ is the total number of bits the binary number has.
 
 ### 1s Complement in Addition and Subtraction
 - For addition, we can simply perform standard binary addition

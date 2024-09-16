@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2024-08-16, 11:13
-Last Date: 2024-08-29T21:08:42+08:00
+Last Date: 2024-09-09T17:52:34+08:00
 References: 
 draft: 
 description: 
@@ -57,5 +57,17 @@ description:
 ## Week 4
 ---
 ### Java
-- [ ] [[Wrapper Class Datatype]]
-- [ ] [[Primitive and Object Conversion]]
+- [ ] [[Wrapper Class]]
+- [ ] [[Boxing]]
+- [ ] [[Exception]]
+
+
+### OOP
+- [ ] [[Datatype#Complex Type]]
+- [ ] [[Variance]]
+
+## Week 5
+---
+### Programming
+- [ ] [[Generics]]
+- [ ] [[Type Erasure]]

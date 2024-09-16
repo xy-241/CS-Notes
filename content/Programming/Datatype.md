@@ -10,7 +10,7 @@ tags:
   - c
   - js
 Creation Date: 2023-08-18T20:47:17+08:00
-Last Date: 2024-08-22T20:45:18+08:00
+Last Date: 2024-09-01T02:38:18+08:00
 References: 
 ---
 ## Abstract
@@ -44,7 +44,8 @@ References:
 
 
 
-
+### Complex Type
+- Data structures that are built upon simpler types. [[Array]] are a primary example of a complex type in this context
 
 
 

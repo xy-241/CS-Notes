@@ -6,29 +6,36 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:16:00
-Last Date: 2023-12-10T18:03:38+08:00
+Last Date: 2024-09-04T20:43:19+08:00
 References: 
 ---
 ## Abstract
 ---
- - [[Instruction#Opcode]] is always **000000**
-- [[Operation]] is decided by the [[#Function Code]]
-- 6 parts - [[Instruction#Opcode]], [[MIPS Instruction#Source Register]], [[MIPS Instruction#Target Register]], [[#Destination Register]], [[#Shift Amount]] & [[#Function Code]]
+```
++--------+------+------+------+------+------+
+| Opcode |  Rs  |  Rt  |  Rd  | Shamt| Funct|
+| 6 bits |5 bits|5 bits|5 bits|5 bits|6 bits|
++--------+------+------+------+------+------+
+```
+
+- [[ISA Instruction Format#Opcode|Opcode]] is always `000000`
+- `funct` combined with opcode exactly specifies the [[Instruction|instruction]]
+- `rs` specifies register containing first operand
+- `rt` specifies register containing second operand. Set to `0` for shift instructions
+- `rd` specifies register which will receive result of computation
+- `shamt` for `sll` and `srl`. Set to `0` for non-shift instructions
 
 
-## Terminologies 
----
-R-type instructions have a fixed format and consist of several fields that specify the operation to be performed and the registers involved. The key fields in an R-type instruction are:
+>[!important] 2 types of instructions
+> 1. `arith $rd, $rs, $rt`
+> 2. `shift $rd, $rt, shamt`
 
-
-| Field  | Size (bits) | Description                                                                                                                                        |
-| ------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| opcode | 6           | This field specifies the operation to be performed. For R-type instructions, this is always set to 0.                                              |
-| rs     | 5           | Source register 1 (first operand)                                                                                                                  |
-| rt     | 5           | Target register 2 (second operand)                                                                                                                 |
-| rd     | 5           | Destination register (where the result is stored)                                                                                                  |
-| shamt  | 5           | Shift amount (used for shift instructions) specifies the amount to shift. It is not used in most R-type instructions, so it is typically set to 0. |
-| funct  | 6           | This field specifies the exact operation to be performed (e.g., addition, subtraction).                                                            |
+>[!important]
+> R format instructions has only [[Register|registers]] as [[ISA Instruction Format#Instruction Operand]] except the **shift instructions**.
+### Function Code
+- 6 bits 
+- Give [[MIPS]] (2^6-1) + 2^6 = 127 instead of 2^6=64 [[Instruction]]
+- Dedicated for [[MIPS R-Type Instruction]] 
 
 
 ## MIPS R instruction types 
@@ -102,3 +109,8 @@ shifting by 32-bits empties the register (i.e., set to 0)
    - **Binary**: `000000 00001 00010 00011 00000 100111`
    - **Assembly**: `nor $3, $1, $2`
    - **Explanation**: This instruction performs a bitwise [[NOR]] operation between the values in registers $1 and $2. The result is stored in register $3. For instance, if $1 contains `00001111` (15 in decimal) and $2 contains `00000011` (3 in decimal), the result in $3 will be `11110000` (240 in decimal, which is the bitwise negation of the OR result).
+=======
+### Destination Register 
+- 5bits
+- Labeled `rd`, mapped to `WR`
+- [[Register]] that gets the result of [[Operation]] in [[MIPS R-Type Instruction]] [[Instruction]]

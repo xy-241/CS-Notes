@@ -27,7 +27,7 @@ description:
 > Cheaper than [Application-specific integrated circuit (ASIC) - Wikipedia](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit) if the demand for that particular chip design is very small. ASIC is cheaper if the demand is huge by leveraging on the economy of scale. 
 
 >[!success] Much faster
-> Normal processor needs to perform [[Pipeline Stages#Fetch]], [[Pipeline Stages#Decode]] of the **software [[Instruction]]**, FPGA can just go straight to [[Pipeline Stages#Execute]] since the hardware is structured in a way that process the incoming zeros and ones without the need of pre-processing.
+> Normal processor needs to perform [[Instruction Stages#Fetch]], [[Instruction Stages#Decode]] of the **software [[Instruction]]**, FPGA can just go straight to [[Instruction Stages#Execute]] since the hardware is structured in a way that process the incoming zeros and ones without the need of pre-processing.
 
 >[!caution] More complex to work with
 > Require special tools and knowledge in circuit design.

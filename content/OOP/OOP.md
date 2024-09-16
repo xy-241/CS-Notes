@@ -7,7 +7,7 @@ tags:
   - OOP
   - java
 Creation Date: 2023-09-14T14:01:42+08:00
-Last Date: 2024-08-28T17:15:43+08:00
+Last Date: 2024-09-04T13:23:48+08:00
 References: 
 ---
 # Abstract
@@ -45,6 +45,7 @@ abstract class Shape {
 ```
 
 - A blueprint for other [[#OOP Class|classes]], thus can’t be used to create objects directly
+- It is useful when we only know certain properties
 
 >[!important] Properties 
 > - Can be a subclass of other concrete class
@@ -62,14 +63,16 @@ abstract class Shape {
 - Focus on **what a class should do** rather than **how it should do it**
 
 >[!important] Pure interface
-> An interface should only contain abstract methods.
+> An interface should only contain abstract methods. It should not hold any fields too!
 
->[!code] Java interface
-> All the methods inside are automatically [[Access Modifier|public]].
 
+
+
+### Java Interface
+- All the methods inside are automatically [[Access Modifier|public]]
 
 >[!important] Casting with Interfaces
-> You can cast an object to an interface type, even if its class doesn't directly implement it. This is because a subclass **might implement the interface**.
+> You can [[Type Casting|cast]] an object to an interface type, even if its class doesn't directly implement it. This is because a subclass **might implement the interface**.
 > 
 > If we create an instance with the interface as its [[Datatype|data type]], then we cast it to a data type that is not in a [[Subtyping|subtyping]] relationship, this may still work, but it is not recommended and can lead to runtime errors.
 
@@ -77,6 +80,9 @@ abstract class Shape {
 > Interfaces can also inherit from other interfaces.
 > 
 > In Java, an interface can extend zero or more interfaces.
+
+
+
 ### Functional Interface
 - Also known as **Single Abstract Method(SAM)**
 - [[OOP#OOP Interface]] that contains **only one** [[OOP#OOP Abstract Method]]

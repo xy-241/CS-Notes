@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:26:04+08:00
-Last Date: 2024-05-14T22:55:32+08:00
+Last Date: 2024-09-16T14:13:53+08:00
 References: 
 ---
 ## Abstraction
@@ -14,5 +14,24 @@ References:
 ![[alu.svg|500]]
 
 - A digital circuit inside [[CPU]] that is responsible to carry **arithmetic operation** like addition and multiplication etc
-- ALU takes in **operand_1** and **operand_2** that are required to carry out the **arithmetic operation** and it also takes in [[Instruction#Opcode]] which tells the ALU **what arithmetic operation to carry out**
-- Besides outputting the result of the arithmetic operation, the ALU also outputs a status bit, known as a **flag**, to **summarize the operation**, such as indicating overflow
+- ALU takes in **operand_1** and **operand_2** that are required to carry out the **arithmetic operation** and it also takes in [[ISA Instruction Format#Opcode]] which tells the ALU **what arithmetic operation to carry out**
+- Besides outputting the result of the arithmetic operation, the ALU also outputs a status bit, known as a **flag**, to **summarise the operation**, such as indicating overflow
+
+## MIPS ALU
+---
+### Non-branch Instruction
+
+![[mips_alu_non_branch.png|500]]
+
+- 4 bits are used for `ALUcontrol`
+
+### Branch Instruction
+
+![[mips_alu_branch.png|500]]
+
+- `PCSrc` is `0` for **not taking** a branch and `1` for **taking** a branch. `isZero?` flag is also used to determine the value of `PCSrc`. `isZero?` is `1` when a branch should take place
+
+ >[!important]
+> `ALUSrc` is `0`, even though branch instruction is an [[MIPS I-Type Instruction|I-type instruction]].
+> 
+> The branch target address **isn't** calculated by the ALU!

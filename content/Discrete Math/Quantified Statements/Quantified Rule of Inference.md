@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-02-16, 10:36
-Last Date: 2024-02-17T16:21:41+08:00
+Last Date: 2024-09-05T22:54:18+08:00
 References: 
 draft: 
 description: 
@@ -16,13 +16,29 @@ description:
 - [[Rule of Inference (推理规则)]] with [[Quantifier]]
 
 ### Universal Modus Ponens
-- [[Mathematical Argument#Premise|Premise]]: For all x, if x makes P(x) true, then x makes Q(x) true
-- [[Mathematical Argument#Premise|Premise]]: a is an element of x, a makes P(x) true
-- [[Mathematical Argument#Conclusion|Conclusion]]: a makes Q(x) true
+
+|            | Case 1                             |
+| ---------- | ---------------------------------- |
+| Premise 1  | $\forall x(P(x) \rightarrow Q(x))$ |
+| Premise 2  | $P(a)$                             |
+| Conclusion | $Q(a)$                             |
+
 ### Universal Modus Tollens
-- [[Mathematical Argument#Premise|Premise]]: If x makes P(x) true, then x makes Q(x) true
-- [[Mathematical Argument#Premise|Premise]]: a doesn't make Q(x) true
+
+|            | Case 1                             |
+| ---------- | ---------------------------------- |
+| Premise 1  | $\forall x(P(x) \rightarrow Q(x))$ |
+| Premise 2  | $\lnot Q(a)$                       |
+| Conclusion | $\lnot P(a)$                       |
+
+
 ### Universal Transitivity
+
+|            | Case 1                             |
+| ---------- | ---------------------------------- |
+| Premise 1  | $\forall x(P(x) \rightarrow Q(x))$ |
+| Premise 2  | $\forall x(Q(x) \rightarrow R(x))$ |
+| Conclusion | $\forall x(P(x) \rightarrow R(x))$ |
 
 
 ### Existential Instantiation

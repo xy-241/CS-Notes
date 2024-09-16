@@ -13,7 +13,7 @@ References:
 ---
 ![[Pipeline Stall.png|500]] 
 
-- **Pause the [[Instruction]]** before the previous Instruction has [[Pipeline Stages#Write Back]] the data it needs to
+- **Pause the [[Instruction]]** before the previous Instruction has [[Instruction Stages#Write Back]] the data it needs to
 
 >[!attention] Performance hit
 > Too much pipeline stall will reduce the benefits of [[Pipeline]]. Because when one instruction stalls, the other instructions that are dependent on the previous instruction have to stall too. 

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-12-09, 21:24
-Last Date: 2023-12-10T18:08:29+08:00
+Last Date: 2024-09-05T21:38:16+08:00
 References: 
 ---
 ## Abstract
@@ -22,7 +22,15 @@ References:
 
 
 **32 bits**, the **first 6 bits** are [[Instruction#Opcode]]
+=======
+- **32 bits**, the **first 6 bits** are [[ISA Instruction Format#Opcode]]
 - There are 3 different format types - [[MIPS R-Type Instruction]], [[MIPS I-Type Instruction]] and [[MIPS J-Type Instruction]]
+
+>[!important]
+> Every MIPS instruction that is stored in [[Main Memory|memory]] must be [[Computer Data Representation#Word|word aligned]]!
+
+>[!tip]
+> Here is an [online calculator](http://mipsconverter.com/instruction.html) that translates a MIPS instruction to hex, and vice versa.
 
 
 
@@ -33,6 +41,7 @@ References:
 - 6bits 
 - labeled as op
 - used to specify to the control what operation to perform 
+=======
 ### Source Register 
 - 5bits
 - Labeled `rs`, mapped to `RR1`

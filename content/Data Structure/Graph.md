@@ -80,7 +80,7 @@ title: Graph Data Structure
 
 ![[directed_graph.svg|250]]
 
-- Edges are directed, and **NOT** [[Set#Ordered Pair]] which means $(u, v)$ and $(v, u)$ are **two different pairs**
+- Edges are directed, and **NOT** [[Ordered Pair]] which means $(u, v)$ and $(v, u)$ are **two different pairs**
 - Can be used to represent [[Relation]] which only involves one [[Set]] 
 
 ### Directed Cyclic Graph
@@ -163,7 +163,7 @@ title: Graph Data Structure
 - A collection of all [[Tree#Edge]]
 
 >[!important]
-> For **undirected graph**, the **edge definitions** inside the adjacency set **ARE NOT** [[Set#Ordered Pair]], that means if we have 2 edges $(0,1)$ and $(1,0)$, **both** are **considered as one single edge definition** in edge set!
+> For **undirected graph**, the **edge definitions** inside the adjacency set **ARE NOT** [[Ordered Pair]], that means if we have 2 edges $(0,1)$ and $(1,0)$, **both** are **considered as one single edge definition** in edge set!
 
 >[!caution]
 > Not a common graph representation, it is **hard to extract information** about **vertice**s and [[Graph]].

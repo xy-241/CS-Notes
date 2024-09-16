@@ -49,7 +49,7 @@ description:
 > ![[inverse_function_reflection.png|200]]
 ## Real-value function
 ---
-- A [[Mathematical Function]] that assigns [[Real Number]] as outputs for real numbers as inputs. In other words, it's a function where both the [[Relation#Domain]] and the [[Relation#Co-domain]] are [[Common Sets#Subset]] of the real numbers
+- A [[Mathematical Function]] that assigns [[Real Number]] as outputs for real numbers as inputs. In other words, it's a function where both the [[Relation#Domain]] and the [[Relation#Co-domain]] are [[Subset]] of the real numbers
 
 
 

@@ -8,7 +8,7 @@ tags:
   - c
   - computer_organisation
 Creation Date: 2023-12-16, 20:14
-Last Date: 2024-08-24T01:17:04+08:00
+Last Date: 2024-08-30T10:59:41+08:00
 References: 
 ---
 ## Abstract
@@ -20,7 +20,10 @@ References:
 ## Compiler
 ---
 - Translate Programming Language codes to [[Instruction]] or an intermediate code like [[Assembly language]] in [[C]] and **Bytecode** in [[Java]]
+- 
 
+### Variable Mapping
+- [[Language Processors#Compiler|Compiler]] associates variables in program with [[Register]]
 
 
 ### Preprocessor
