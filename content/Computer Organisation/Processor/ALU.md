@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:26:04+08:00
-Last Date: 2024-09-15T15:58:51+08:00
+Last Date: 2024-09-16T14:13:53+08:00
 References: 
 ---
 ## Abstraction
@@ -29,7 +29,9 @@ References:
 
 ![[mips_alu_branch.png|500]]
 
-- `PCSrc` is `0` for **not taking** a branch and `1` for **taking** a branch. `isZero?` flag is also used to determine the value of `PCSrc`
+- `PCSrc` is `0` for **not taking** a branch and `1` for **taking** a branch. `isZero?` flag is also used to determine the value of `PCSrc`. `isZero?` is `1` when a branch should take place
 
  >[!important]
- > `ALUSrc` is `0`, even though branch instruction is an [[MIPS I-Type Instruction|I-type instruction]].
+> `ALUSrc` is `0`, even though branch instruction is an [[MIPS I-Type Instruction|I-type instruction]].
+> 
+> The branch target address **isn't** calculated by the ALU!

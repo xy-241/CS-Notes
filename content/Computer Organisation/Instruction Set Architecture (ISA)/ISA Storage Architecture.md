@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-09-03, 16:58
-Last Date: 2024-09-04T20:51:14+08:00
+Last Date: 2024-09-16T14:14:34+08:00
 References: 
 draft: 
 description: 
@@ -32,6 +32,9 @@ description:
 ![[register-register,load-store isa.png|150]]
 - Also known as **Register-Register ISA**
 - The data is decoupled from the [[Register]] to [[Main Memory]]
+
+>[!important]
+> The only [[Instruction]] that can access main memory are load and store!
 
 >[!caution] Data Loading
 > ![[word_alignment.png|500]]
