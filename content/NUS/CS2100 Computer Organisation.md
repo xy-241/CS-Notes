@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-09-15T16:00:43+08:00
+Last Date: 2024-09-18T20:44:41+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -110,7 +110,6 @@ title: cs2100 nus notes
 ---
 - [ ] [[CPU Datapath]]
 - [ ] [[Instruction Stages]]
-- [ ] [[Instruction Execution]]
 - [ ] [[Multiplexer]]
 - [ ] [[ALU]]
 - [ ] [[MIPS Data Memory]]
@@ -118,10 +117,17 @@ title: cs2100 nus notes
 >[!seealso] Extra Readings
 > - [[Clock Oscillator]]
 
+
+## Week 6
+---
+- [ ] [[Control Unit]]
+- [ ] [[MIPS Control Unit]]
+- [ ] [[MIPS ALU]]
+- [ ] [[Instruction Execution]]
+
 ## The Processor
 ---
 - [[CPU]]
-- [[Control Unit]]
 
 >[!seealso] Interesting Related Topics
 > - [[GPU]]

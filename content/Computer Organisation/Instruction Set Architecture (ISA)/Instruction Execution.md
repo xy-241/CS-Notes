@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-19T19:20:29+08:00
-Last Date: 2024-09-15T08:06:03+08:00
+Last Date: 2024-09-18T20:44:48+08:00
 References: 
 ---
 ## Abstract
 ---
-[[CPU]]'s instruction execution process
+- [[CPU]]'s instruction execution process
 
 
 ## Single Cycle Execution

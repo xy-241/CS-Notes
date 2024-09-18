@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-21T21:43:00
-Last Date: 2024-09-15T08:20:58+08:00
+Last Date: 2024-09-18T12:49:45+08:00
 References: 
 ---
 ## Abstract
@@ -23,3 +23,8 @@ References:
 | [[Clock Oscillator\|Clock]]               | **Synchronises** the operations of the CPU by providing a [[Clock Oscillator#Clock Signal\|timing signal]].                                                                                                 |
 | Instruction Memory                        | [[Main Memory]] that **stores the instructions** that are fetched and executed by the CPU.                                                                                                                  |
 | [[MIPS Data Memory\|Data Memory]]         | Main memory that stores **data** that can be read from or written to by the CPU during program execution.                                                                                                   |
+
+## MIPS Datapath
+---
+
+![[mips_datapath.png|600]]

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:16:00
-Last Date: 2024-09-04T20:48:20+08:00
+Last Date: 2024-09-18T16:09:23+08:00
 References: 
 ---
 ## Abstract
@@ -19,7 +19,7 @@ References:
 ```
 
  - [[Instruction]] that tells [[CPU]] jump to [[Memory Address]] & execute [[Instruction]] starting from that point
- - 2 sections - [[ISA Instruction Format#Opcode]], [[Memory Address]]
+ - 2 sections - [[ISA Instruction Format#Opcode]] which is always `000010`, [[Memory Address]]
  - Supports `if-else` and loops 
  - Label here refers to the **partial target address**
 

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:45:00
-Last Date: 2024-06-10T20:37:08+08:00
+Last Date: 2024-09-18T17:28:36+08:00
 aliases:
   - ../../Computer-Organisation/CPU/Control-Unit
 ---
@@ -16,6 +16,11 @@ aliases:
 
 ### Control Signal
 - **Electric signals** that tells [[CPU Datapath]], [[Main Memory]] & [[IO Device]] what to do according to a given [[Instruction]]
+
+
+
+
+
 
 
 
