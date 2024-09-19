@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-09-18, 17:26
-Last Date: 2024-09-18T20:40:14+08:00
+Last Date: 2024-09-18T21:49:39+08:00
 References: 
 draft: 
 description: 
@@ -26,5 +26,6 @@ description:
 | `PCSrc`              | Select the next value for the [[Register#Program Counter]]                                                                              | `0` for `PC + 4`<br><br>`1` for `PC + 4 + 4 * immed`                                                                        |
 
 
-
+>[!important]
+> The `MemToReg` [[Multiplexer]] is the only one with its inputs swapped.
 

@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-19T19:20:29+08:00
-Last Date: 2024-09-18T20:44:48+08:00
+Last Date: 2024-09-18T21:51:58+08:00
 References: 
 ---
 ## Abstract
@@ -21,7 +21,8 @@ References:
 >[!caution]
 > All instruction will take the same time as the **slowest instruction**.
 
-
+>[!important]
+> In the simple MIPS implementation, an instruction executes in a single clock cycle!
 ## Multi Cycle Execution
 ---
 - Breaks down [[Instruction Stages]] into multiple cycles, each stage takes one cycle to complete. The time given to one cycle is the time taken by the **slowest pipeline stage**
