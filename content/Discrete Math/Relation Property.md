@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-09-07, 01:15
-Last Date: 2024-09-07T15:33:57+08:00
+Last Date: 2024-09-22T18:59:42+08:00
 References: 
 draft: 
 description: 
@@ -39,13 +39,3 @@ $$
 - If an element is related to another element, and that element is related to a third element. Then this must be related to the third element
 
 
-
-## Equivalence Relation
----
-- Let $A$ be a [[Set]] and $R$ be a [[Relation]] on $A$
-- $R$ is equivalence relation iff $R$ is [[#Reflexive]], [[#Symmetric]] and [[#Transitive]]
-
-### Equivalence Class
-- Basically same as the **component** of a [[Set Partition]] or elements of [[#Equivalence Relation]]
-- Can be represented with $[a]_{relation}$, it means the Equivalence Class contains element $a$
-- $[a]_{relation}$ and $[b]_{relation}$ are the same iff $b$ is in the same equivalence class as $a$

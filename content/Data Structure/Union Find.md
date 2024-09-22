@@ -18,7 +18,7 @@ description:
 >[!info] Dynamic Relation
 > A Dynamic Relation is a [[Relation]] that has a different set of elements inside the relation depends on the given input. In Union Find, the operation `union(x, y)` gives the dynamic property, it combine 2 relations into one relation
 > 
-> And all the relations in Union Find are [[Relation#Equivalence Relation]]!
+> And all the relations in Union Find are [[Equivalence Relation]]!
 
 >[!abstract] 2 main operations 
 > `find(x)`

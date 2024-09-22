@@ -57,16 +57,11 @@ $$
 
 ## Theorem
 ---
-### Lemma Rel.1
-- [[#Equivalence Relation]]
-- Let `~` be an *[[#Equivalence Class]]* on [[Set]] $A$ and $x, y \in A$
-	1. $x$ is equivalent related to $y$
-	2. The equivalent class $x$ is in is same as the equivalent class $y$ is in
-	3. $[x] \cap [y] \ne \emptyset$
+
 
 ### Theorem 8.3.4
-- The [[Set Partition]] induced by [[#Equivalence Relation]]
-- If $R$ is equivalence relation on [[Set]] $A$, then the distinct [[#Equivalence Class]] form a partition of $A$
+- The [[Set Partition]] induced by [[Equivalence Relation]]
+- If $R$ is equivalence relation on [[Set]] $A$, then the distinct [[Equivalence Relation#Equivalence Class]] form a partition of $A$
 
 
 
