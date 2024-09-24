@@ -19,8 +19,7 @@ References:
 | rs        | 5 bits         | Source register (the register containing the first operand)                              |
 | rt        | 5 bits         | Target register (the register where the result is stored or the immediate value is used) |
 | immediate | 16 bits        | Immediate value or address offset used in the instruction                                |
-- `I` because it is [[Instruction]] that contains [[#Immediate Value]]
-- 4 parts - [[Instruction#Opcode]], [[MIPS Instruction#Source Register]], [[MIPS Instruction#Target Register]] & [[#Immediate Value]]
+
 ### Explanation of Each Field
 
 1. **opcode**: 
@@ -179,7 +178,6 @@ References:
 - 16-bits, can represent up to +-2^15 [[Computer Data Representation#Word]], 2^17 [[Memory Address]] because 4-bytes [[Memory Address#Word Addressing]]
 - to represent longer values can use [[Integer Encoding (数字编码)#sign extension]]
 -  Used for **PC-Relative Addressing**
-=======
 - Used for [[ISA Addressing Mode#PC-relative Addressing Mode]]
 
 
