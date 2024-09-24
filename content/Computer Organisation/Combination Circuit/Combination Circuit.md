@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-01T22:46:25+08:00
-Last Date: 2024-06-10T21:13:27+08:00
+Last Date: 2024-09-18T21:50:21+08:00
 References: 
 ---
 
@@ -18,6 +18,6 @@ References:
 >[!example]
 >- [[Adder]]
 >- [[Encoder]]
->- [[Decoder]]
+>- [[MIPS Control Unit|Decoder]]
 >- [[Multiplexer]]
 >- [[Multiplexer#De-multiplexer]]

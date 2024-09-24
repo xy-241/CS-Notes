@@ -7,7 +7,7 @@ tags:
   - computer_organisation
   - c
 Creation Date: 2023-12-17, 20:32
-Last Date: 2024-08-18T00:51:14+08:00
+Last Date: 2024-09-19T11:01:13+08:00
 References: 
 ---
 ## Abstract
@@ -36,6 +36,14 @@ References:
 >
 > We convert from one base to decimal base with the help of the [[#Radix|radix]], then from decimal base convert to the desired base by either **division** with that particular base for the whole number or **multiplication** with that particular base for the fraction.
 
+>[!tip] Practice conversion
+> You can use [this](https://lukerissacher.com/hexquiz) to practice hex to decimal conversion.
+> 
+> You can use [this](https://www.webcalculate.com/games/binary-to-hexadecimal-game/index.html) to practice binary to hex conversion.
+> 
+> You can use [this](https://www.purposegames.com/game/powers-of-two-quiz) to practice decimal to power of 2 conversion.
+> 
+> You can use [this](https://www.jetpunk.com/user-quizzes/91108/fast-typing-powers-of-2) to practice power of 2 to decimal conversion.
 ### Whole Number Decimal to Binary
 ![[decimal_to_binary_1.png|300]]
 

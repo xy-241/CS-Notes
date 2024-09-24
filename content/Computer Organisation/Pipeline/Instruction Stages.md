@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-10-07T16:57:00
-Last Date: 2024-09-15T16:52:12+08:00
+Last Date: 2024-09-19T10:36:46+08:00
 ---
 ## Abstract
 ---
@@ -33,7 +33,7 @@ Last Date: 2024-09-15T16:52:12+08:00
 
 ## Decode
 ---
-- [[Control Unit]] configures **different parts** of the [[CPU]] like [[ALU]] with the given [[Instruction]] based on the [[ISA Instruction Format#Opcode]] with referencing to its [[Instruction Set Architecture (ISA)]]
+- Fetch the [[ISA Instruction Format#Opcode|opcode]] which is used by the [[Control Unit]] to configure the [[CPU]] and send the [[Instruction|instruction]] to the [[ALU]]. Obtain the operands, which can be either [[Register|register]] values or immediate values within the instruction, and send the data to the ALU
 
 >[!example] MIPS decode stage
 > ![[mips_decode_stage.png|500]]
