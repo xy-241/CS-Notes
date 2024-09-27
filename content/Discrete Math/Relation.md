@@ -7,7 +7,7 @@ tags:
   - discrete_math
   - calculus
 Creation Date: 2024-01-01, 13:46
-Last Date: 2024-09-07T01:17:35+08:00
+Last Date: 2024-09-25T22:02:53+08:00
 References: 
 draft: 
 ---
@@ -67,12 +67,7 @@ $$
 
 ## Terminologies
 ---
-### Congruence Modulo 3
-- [[Modulo#Congruence Modulo]] 3 means the [[Integer (整数)]] is divisible by 3
-$$
-\forall x,y \in \mathbb{Z} (xRy \leftrightarrow 3 |(x-y))
-$$
-- A [[Relation]] that is [[#Reflexive]] [[#Symmetric]] & [[#Transitive]]
+
 
 ### Transitive Closure of Relation
 - The [[Relation]] obtained by adding the least number of [[Ordered Pair]] to ensure [[#Transitive]]
@@ -81,4 +76,5 @@ $$
 	1. $R^{t}$ is transitive
 	2. $R \subseteq R^{t}$
 	3. $R^{t} \subseteq S$, where $S$ is any other transitive relation that contains $R$
-	
+
+

@@ -26,4 +26,4 @@ draft:
 </br>
 
 - $a \equiv b$ (mod $m$) is true if and only if $m|(a-b)$
-- $a$ and $b$ are in the same [[Equivalence Relation#Equivalence Class]] modulo $m$, $[a]_{m} = [b]_{m}$
+- $a$ and $b$ are in the same [[Equivalence Relation]] modulo $m$, $[a]_{m} = [b]_{m}$
