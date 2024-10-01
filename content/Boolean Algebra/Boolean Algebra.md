@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2024-09-30, 20:59
-Last Date: 2024-09-30T23:43:51+08:00
+Last Date: 2024-10-01T17:16:57+08:00
 References: 
 draft: 
 description: 
@@ -24,3 +24,4 @@ description:
 
 >[!important] Boolean Algebra Theorems
 > ![[boolean_algebra_theorems.png|500]]
+>  Take note of absorption law!

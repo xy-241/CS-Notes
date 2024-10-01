@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-09-30T23:42:12+08:00
+Last Date: 2024-10-01T00:00:21+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -138,6 +138,9 @@ title: cs2100 nus notes
 - [ ] [[AND]]
 - [ ] [[OR]]
 - [ ] [[Programming Logic Array]]
+- [ ] [[Adder]]
+- [ ] [[Gray Code]]
+- [ ] [[Karnaugh Map]]
 
 >[!seealso] Extra Readings
 > -  [[Transistors (晶体管)]]
