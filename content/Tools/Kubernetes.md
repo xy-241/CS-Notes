@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-09-26, 22:41
-Last Date: 2024-09-28T00:00:02+08:00
+Last Date: 2024-10-02T13:07:00+08:00
 References: 
 draft: 
 description: 
@@ -63,3 +63,9 @@ description:
 > - Routes traffic to the correct pods
 > - Handles load balancing
 > - **Cluster networking** ensures that pods on different nodes can communicate seamlessly, so traffic can be routed between nodes without issue.
+
+
+
+## References
+---
+- [A visual guide to Kubernetes networking fundamentals | Opensource.com](https://opensource.com/article/22/6/kubernetes-networking-fundamentals)
