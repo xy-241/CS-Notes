@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-07-22T17:35:21+08:00
-Last Date: 2024-06-14T10:09:20+08:00
+Last Date: 2024-10-01T00:04:22+08:00
 References: 
 ---
 ## Abstract
@@ -14,7 +14,7 @@ References:
 ![[karnaugh_map.svg]]
 
 
-- Karnaugh Map is a **truth table** arranged in a **grid structure**, providing a **visual way** to **simplify** [[Boolean Function]]. The **rows** and **columns** of the grid are **labeled** with the **input variables** using [[Gray Code]]. Each **cell** in the grid represents the **truth value** of a specific **combination** of **input variables**.
+- Karnaugh Map is a **truth table** arranged in a **grid structure**, providing a **visual way** to **simplify** [[Boolean Standard Form#Sum-of-Products (SOP)]]. The **rows** and **columns** of the grid are **labeled** with the **input variables** using [[Gray Code]]. Each **cell** in the grid represents the **truth value** of a specific **combination** of **input variables**.
 - We group the `1` in the Karnaugh Map using  [[#Karnaugh Map Group]] to **find** the **simplified boolean function**
 
 
@@ -30,7 +30,7 @@ References:
 
 ![[karnaugh_map_group.svg|500]]
 
-- **Group Shape**: rectangles or squares that are either horizontal or vertical (no diagonals)
+- **Group Shape**: rectangles or squares that are either horizontal or vertical (no diagonals).
 - **Group Size**: $2^n$ `1s`, where the value of $2^n$ should be as large as possible
 - **Number of Groups**: as few groups as possible (covering all 1s with no redundancy)
 - **Can Overlap**: Yes

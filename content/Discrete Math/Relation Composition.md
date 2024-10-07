@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - discrete_math
 Creation Date: 2024-09-07, 00:57
-Last Date: 2024-09-07T00:58:03+08:00
+Last Date: 2024-09-26T18:41:31+08:00
 References: 
 draft: 
 description: 
@@ -21,6 +21,9 @@ $$
 - For all $a$ in $A$ and all $z$ in $C$,  the below 2 conditions must be fulfilled in order to have composition of relation $S\circ R$
 	1. If there is a 'path' from $x$ to $z$, there must have a path from $x$ to $y$ AND $y$ to $z$ , the $S\circ R \rightarrow (\exists y \in B (xRy \cap ySz))$ part
 	2. If there is a 'path' from $x$ to $y$  and $y$ to $z$, there must has a path from $x$ to $z$, the $S\circ R \leftarrow (\exists y \in B (xRy \cap ySz))$ part
+
+>[!important]
+> The bridging set must be exactly the same for two relations in order to form a relation composition.
 
 ### Composition is Associative
 - Let $A, B, C, D$ be [[Set]]

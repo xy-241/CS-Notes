@@ -8,7 +8,7 @@ tags:
   - computer_organisation
   - boolean_algebra
 Creation Date: 2024-02-12, 18:18
-Last Date: 2024-09-18T20:44:41+08:00
+Last Date: 2024-10-01T00:00:21+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2100 on this website. Get help preparing for your final exam and answers to your questions.
@@ -125,6 +125,26 @@ title: cs2100 nus notes
 - [ ] [[MIPS ALU]]
 - [ ] [[Instruction Execution]]
 
+
+## Week 7
+---
+- [ ] [[Boolean Algebra]]
+- [ ] [[Boolean Function]]
+- [ ] [[Boolean Standard Form]]
+- [ ] [[Minterm]]
+- [ ] [[Maxterm]]
+- [ ] [[Logic Gates]]
+- [ ] [[NOT]]
+- [ ] [[AND]]
+- [ ] [[OR]]
+- [ ] [[Programming Logic Array]]
+- [ ] [[Adder]]
+- [ ] [[Gray Code]]
+- [ ] [[Karnaugh Map]]
+
+>[!seealso] Extra Readings
+> -  [[Transistors (晶体管)]]
+
 ## The Processor
 ---
 - [[CPU]]
@@ -133,20 +153,7 @@ title: cs2100 nus notes
 > - [[GPU]]
 > - [[Specialised Processor]]
 
-## Boolean Algebra
----
-- [[Boolean Standard Form]]
-- [[Boolean Function]]
-- [[Maxterm]]
-- [[Minterm]]
 
-## Logic Circuits
----
-- [ ] [[Transistors (晶体管)]]
-- [ ] [[Logic Gates]]
-- [ ] [[AND]]
-- [ ] [[OR]]
-- [ ] [[NOT]]
 
 ## Circuit Simplification
 ---
