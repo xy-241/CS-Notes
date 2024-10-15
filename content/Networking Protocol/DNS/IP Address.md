@@ -7,16 +7,18 @@ tags:
   - networking
   - bash
 Creation Date: 2023-10-03T11:14:44
-Last Date: 2024-07-16T21:48:10+08:00
+Last Date: 2024-10-11T16:09:20+08:00
 ---
 ## Abstract
 ---
 - It is like your house address, it provides the specific information to locate a [[Host]] in an [[Computer Network]]
 
 >[!important]
-> Unlike [[MAC Address|MAC addresses]], which are **flat** and identify individual devices on a [[Computer Network#Local Area Network (LAN)|local network]], IP addresses use a **hierarchical addressing scheme**. 
+> Unlike [[MAC Address|MAC addresses]], which are **flat** and identify individual devices on the **same physical** [[Computer Network#Local Area Network (LAN)|local network]], IP addresses use a **hierarchical addressing scheme**. 
 > 
-> This hierarchy enables **efficient routing** of data packets across the vast interconnected networks of the internet, ensuring they reach their intended destinations.
+> This hierarchy enables **efficient routing** of data packets across the vast **interconnected networks** of the internet.
+> 
+> In conclusion, IP address helps in **routing between networks**, while the MAC address helps **identify devices on the same local network**.
 
 
 ### IPv4
