@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-09-28T11:29:42+08:00
-Last Date: 2024-01-09T20:53:33+08:00
+Last Date: 2024-10-15T17:15:17+08:00
 References: 
 ---
 ## Abstract
@@ -15,16 +15,15 @@ References:
 - A [[Reverse Proxy (反向代理)]] that does [[Reverse Proxy (反向代理)#Load Balancing]]
 - 2 types [[Application Load Balancer]] and [[Network Load Balancer]]. The example above is an [[Application Load Balancer#External Application Load Balancer]]
 
-## Benefits
----
-### Failover Capability 
-- If one server goes offline, all the traffic will be routed to other servers by [[Load Balancer]]. This prevents the website from going offline or the downtime incurred by spinning up a new server
-- We will also add a new healthy web server to the server pool to balance the load
-- Thus making the system [[System Design#Fault Tolerance (容错性)]]
+>[!success] Failover Capability
+> If one server goes offline, all the traffic will be routed to other servers by [[Load Balancer]]. This prevents the website from going offline or the **downtime incurred** by spinning up a new server.
+> 
+> We will also add a new healthy web server to the server pool to balance the load. Thus making the system [[System Design#Fault Tolerance (容错性)]].
+> 
+> It is good to have multiple load balancers if we want to eliminate a [[System Design#Single Point of Failure|single point of failure]].
 
-### Scalability
-- If the traffic grows rapidly, and current set of servers are not enough to handle the traffic
-- We only need to add more servers to the server pool, and the [[Load Balancer]] automatically starts to send requests to them
+>[!success] Scalability
+> If the traffic grows rapidly, and current set of servers are not enough to handle the traffic. We only need to add more servers to the server pool, and the [[Load Balancer]] automatically starts to send requests to them.
 
 ## Load-balancing Strategies
 ---
@@ -35,6 +34,9 @@ References:
 ### Weighted Round Robin Load-balancing
 - Similar to [[#Round-Robin Load-balancing]], but [[Host#Server]] are assigned different weights. Servers with higher weights receive more requests than those with lower weights
 - This is commonly used in [A/B Testing](https://en.wikipedia.org/wiki/A/B_testing)
+
+### Least Connection Load-balancing
+- Sends requests to [[Load Balancer]] with least active connections
 
 ## Terminologies
 ---

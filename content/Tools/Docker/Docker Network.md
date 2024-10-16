@@ -7,7 +7,7 @@ tags:
   - docker
   - networking
 Creation Date: 2023-08-22T12:09:04+08:00
-Last Date: 2024-03-03T22:26:36+08:00
+Last Date: 2024-10-16T19:56:09+08:00
 References: 
 aliases:
   - ../../Tools/Docker/Docker-Network/Docker-Network
@@ -25,7 +25,8 @@ aliases:
 - Network Comparison
 ![[docker_network_comparison.png|500]]
 
->[!caution] We cant remove all the default Docker Network
+>[!attention] 
+> We cant remove all the default Docker Network.
 
 ### Docker Bridge Network
 - When we create a [[Docker Container]] inside this network
@@ -38,7 +39,7 @@ aliases:
 - There is a [[Virtual Ethernet]] that connects the 2 network interface mentioned above
 ![[docker_bridge_network.png|500]]
 
->[!caution]- Accessing application running on host machine port
+>[!question] Accessing application running on host machine port
 > If we have an application running on host on port `80`, we can't access the application via `localhost:80`, because the network interface of the container is isolated from the network interface of the host. This only works on [[#Docker Host Network]] in which the network interface of host is shared with the container
 > 
 > If we want to access the application running on host machine port, we need to use `host.docker.internal:80`, `host.docker.internal` will be converted to the [[IP Address]] of the host machine by docker automatically.  However, this is **a feature of Docker Desktop** for Mac and Windows specifically!!!
@@ -48,10 +49,10 @@ aliases:
 - Network communication from containers to host machine and the internet
 ![[docker_network_bridge_network_communication.png|500]]
 
->[!caution]- Communication via hostname
-> Default docker bridge network doesn't support [[DNS Resolution]]. So it is impossible to communicate from one container to another container via [[Hostname]], same for host machine to containers
+>[!important] Communication via hostname
+> Default docker bridge network doesn't support [[DNS Resolution]]. So it is impossible to communicate from one container to another container via [[Hostname]], same for host machine to containers.
 > 
-> But we are able to create a new bridge network that supports DNS Resolution, refer to [[#Create/Delete Docker Network]]
+> But we are able to create a new bridge network that supports DNS Resolution, refer to [[#Create/Delete Docker Network]].
 
 ### Docker Host Network
 - When we create a [[Docker Container]] inside this network, the container is basically an application running inside the host machine, sharing the same [[Network Interface]] as the host machine. That means in the host machine, we can access the container on `localhost:8080` if the the container is running on port 8080 without the need to tell docker to bridge the port between the host and container

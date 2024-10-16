@@ -6,12 +6,14 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-19T17:43:08+08:00
-Last Date: 2024-01-06T21:49:03+08:00
+Last Date: 2024-10-16T17:22:47+08:00
 References: 
 ---
->[!abstract] Obtained by dividing the [[HTTP Request]] & [[HTTP Response]] into multiple pieces
->![[http1.2_frame.png]]
+## Abstract
+---
+![[http1.2_frame.png|500]]
 
->[!ntoe] 2 types
->1. [[HTTP Header Frame]]
->2. [[HTTP Data Frame]]
+- An abstraction that allows us to divide [[HTTP Request]] and [[HTTP Response]] into multiple pieces 
+- There are two types - [[HTTP Header Frame]], [[HTTP Data Frame]]
+
+

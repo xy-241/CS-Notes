@@ -7,7 +7,7 @@ tags:
   - networking
   - system_design
 Creation Date: 2023-10-07T17:40:00
-Last Date: 2024-01-27T01:28:34+08:00
+Last Date: 2024-10-16T17:51:07+08:00
 ---
 ## Abstract
 ---
@@ -25,7 +25,7 @@ Last Date: 2024-01-27T01:28:34+08:00
 ### REpresentational
 - Represent *resources* in a way([[URI]]) for clients to consume
 ### State Transfer
-- This architecture is [[Network Protocol#Stateless Network Protocol]] so a *state* is required to be exchanged for client-server to have a continous communication
+- This architecture is [[Network Protocol#Stateless Network Protocol]] so a *state* is required to be exchanged for client-server to have a continuous communication
 
 ## 6 Rules
 ---
@@ -44,10 +44,10 @@ Delete - DELETE
 ### Cacheable
 - Support *cacheing* because [[Network Protocol#Stateless Network Protocol]], `Get` requests are usually cached
 ### Layer System
-- We can have a [[Load Balancer]] infront of the [[Host]]
-- This increases the difficulty for [[Host]] to know the [[Host]] architecture
-- Add in an extra layer of security like *API Gateway* & *Web Application Firewall*
-- And it is easier to scale the architecture - add in *Lambda Functions* for example with the layers acting as abstraction layers
+- We can place a [[Load Balancer|load balancer]] in front of the **client**. This makes it harder for the **client** to fully understand the underlying architecture
+- We can also add an extra layer of security, such as an **API Gateway** or a **Web Application Firewall** to enhance protection
+- It also becomes easier to scale the architecture; for example, you can add **Lambda functions** with these layers acting as abstraction layers
+
 ### Code on Demand
 
 

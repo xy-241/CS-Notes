@@ -16,7 +16,7 @@ References:
 - Also known as **Digital Certificate**
 - Contains [[Asymmetric Cryptography#Public Key]] that the client can use to perform [[TLS 1.2#Symmetric Key Exchange]]
 - Sent with [[Digital Signature]](created by [[#Certificate Authority (CA)]]) which is used to **verify** the digital certificate on the [[Host#Client]] side
-- The component that powers [[TLS (Transport Layer Security)]]
+- The component that powers [[TLS]]
 
 >[!code]- Show certificate information
 > `openssl x509 -in <YOUR_CERTIFICATE_FILE_NAME> -text -noout`

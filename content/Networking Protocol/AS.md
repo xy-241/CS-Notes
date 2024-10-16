@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2024-04-19, 11:37
-Last Date: 2024-04-21T02:17:34+08:00
+Last Date: 2024-10-16T22:50:08+08:00
 References: 
 draft: 
 description: 
@@ -20,8 +20,8 @@ description:
 - A **very large** [[Computer Network]] or group of computer network with a **single routing policy** under the control of one entity (such as a company or [[ISP]]). 
 - Each AS is assigned a **unique ASN**, which is a number that identifies the AS
 
-
-
+>[!tool]
+> You use this [tool](https://mxtoolbox.com/SuperTool.aspx?action=asn%3aAutonomous+System&run=toolpage#) to check out the information of a particular AS.
 ## BGP
 ---
 

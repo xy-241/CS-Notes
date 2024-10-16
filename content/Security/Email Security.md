@@ -7,7 +7,7 @@ tags:
   - security
   - networking
 Creation Date: 2024-03-06, 17:07
-Last Date: 2024-03-07T16:33:35+08:00
+Last Date: 2024-10-16T20:10:58+08:00
 References: 
 draft: 
 description: 
@@ -20,7 +20,7 @@ description:
 ## DNS Records
 ---
 ### SPF
-- Sender Policy Framework
+- **Sender Policy Framework**
 - A [[DNS Record#TXT Record]] that specifies the list of emails server you authorise to send emails with your [[Hostname#Domain Name]]. Receiver can use it to decide if he/she should accept or deny the email
 - **Only one SPF TXT record associated with your domain**
 

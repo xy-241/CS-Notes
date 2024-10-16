@@ -8,7 +8,7 @@ tags:
   - cloudflare
   - security
 Creation Date: 2023-07-20T19:16:00
-Last Date: 2024-04-08T20:29:09+08:00
+Last Date: 2024-10-16T21:50:23+08:00
 References: 
 ---
 ## Abstract
@@ -20,7 +20,7 @@ References:
 > - [All-in-one Website OSINT Scanner](https://web-check.xyz)
 
 ### Network Route
-- The sequence of [[Communication Links]] and [[Network Switch]] traversed by a [[Packet]] between [[Host#Client]] and [[Host#Server]]
+- The sequence of [[Communication Links]] and [[Network Switch]] traversed by a [[Network Packet]] between [[Host#Client]] and [[Host#Server]]
 
 
 
@@ -72,4 +72,4 @@ References:
 
 >[!note] Key Distinguishing Features
 > - A [[Computer Network]] of storage devices separated from the actual [[#Local Area Network (LAN)]]
-> - Appears as a connected connected computers as a local device/drive
+> - Appears to a connected computers as a local device/drive
