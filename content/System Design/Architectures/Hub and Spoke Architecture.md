@@ -30,7 +30,7 @@ Last Date: 2023-12-14T18:16:44+08:00
 - [[#Spoke]] only needs to form a 1-1 connection with hub to access other [[#Spoke]], instead of 1-many in order to communicate many other [[#Spoke]]
 - Simplifies network management and allows for easier scalability (Just to update [[#Hub]], so all other [[#Spoke]] can access the new [[#Spoke]])
 ### More secure & reliable
-- [[#Spoke]] doesn't need to go through [[Internet]] which is risky and more likely to lose [[Packet]] to access other [[#Spoke]]
+- [[#Spoke]] doesn't need to go through [[Internet]] which is risky and more likely to lose [[Network Packet]] to access other [[#Spoke]]
 ### Enhanced Security: since all traffic goes through the hub, we can
 - Enforce consistent security policies
 - Monitor traffic

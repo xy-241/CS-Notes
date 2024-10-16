@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2023-12-30, 01:04
-Last Date: 2024-02-22T18:09:12+08:00
+Last Date: 2024-10-16T13:17:35+08:00
 References: 
 draft: 
 ---
@@ -47,6 +47,23 @@ draft:
 - More desirable for large scale applications due to [[#Vertical Scaling Limitations]]
 - Usually has a [[Load Balancer]] sits between the client and server, to distribute the traffic evenly to the servers
 
+
+>[!important] CAP Theorem in distributed systems
+> You can only choose two out of the three.
+> 
+> **Consistency**
+> - All nodes display identical data, guaranteeing that reads always reflect the most recent write.
+> 
+> **Availability**
+> - Every request receives a response, **without guarantee that it contains the most recent writes**.
+>   
+> **Partition Tolerance**
+> - The system continues to operate despite network failures.
+>
+> If a system prioritizes **consistency** (CP), it may become unavailable during a partition to ensure that data remains consistent across nodes.
+> 
+> If a system prioritises **availability** (AP), it may sacrifice consistency during a partition, allowing nodes in different partitions to respond, even though they might not have the latest data.
+
 ## Fault Tolerance (容错性)
 ---
 - **Refers to** a system's ability to continue operating and providing its intended services even in the presence of hardware or software faults
@@ -66,10 +83,19 @@ draft:
 - **It ensures** consistent and predictable behavior of a system. It involves minimizing the chances of failures and, in case of failures, having mechanisms in place for quick recovery
 - Can be achieved with [[Monitoring]] and automation like ci/cd pipeline
 
+## Efficiency 
+---
+>[!important] Latency
+> Delay in first response.
+
+
+>[!important] Throughput
+> Operations per time unit.
 
 ## References
 ---
 - [ByteByteGo](https://bytebytego.com/courses/system-design-interview/scale-from-zero-to-millions-of-users)
+- [I ACED my Technical Interviews knowing these System Design Basics - YouTube](https://youtu.be/FxAom29OEKE?si=VI6J6TkYQHVM4aEO)
 
 
 
