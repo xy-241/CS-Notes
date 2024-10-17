@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-02-19T12:56:54+08:00
+Last Date: 2024-10-17T16:40:37+08:00
 References: 
 description: Dive into the heart of your operating system and discover how kernels manage hardware, allocate resources, and keep your system running smoothly. Explore the trade-offs between microkernels and monolithic kernels, and learn about preemptive kernels that ensure a responsive user experience.
 ---
@@ -19,7 +19,7 @@ description: Dive into the heart of your operating system and discover how kerne
 >[!success] Loose Coupling
 > Software doesn't need to know the complexity of hardware. It can use the hardware thought a standard interface called [[System Call (系统调用)]]
 
->[!info]- Common Modern Kernels
+>[!info] Common Modern Kernels
 > - [[MacOS]]'s kernel is **XNU**
 > - [[Windows]]'s kernel is **NT Kernel**
 > - [[Linux Kernel]]
@@ -27,14 +27,14 @@ description: Dive into the heart of your operating system and discover how kerne
 - [[Kernel]] that can be [[Interrupts (中断) |interrupted]] and scheduled just like [[Process (进程)]] in the [[User Space]] 
 
 >[!success] Avoid Kernel Hogging
-> Prevent kernel from hogging the [[CPU]], and slow down user space process
+> Prevent kernel from hogging the [[CPU]] that slows down user space process
 
 ### Kernel Module
-- Known as Kernel Extension in the context of MacOS and IOS
+- Known as **Kernel Extension** in the context of MacOS and IOS
 - Extend the functionality of the [[Kernel]]
 - [[FUSE#FUSE Mechanism|FUSE]] is a kernel Module for example
 
->[!tip]- Application of Kernel Module in Linux 
+>[!tip] Application of Kernel Module in Linux 
 > The functionalities of the [[Linux Kernel]] is group into different Kernel Modules which can be either disabled, enabled or rendered toggle-able at compile-time
 > 
 > We also able to add/remove/disable Kernel Modules during runtime using the `modprobe` command

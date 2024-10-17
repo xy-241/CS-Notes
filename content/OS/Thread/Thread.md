@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-12T18:59:00
-Last Date: 2024-03-27T21:07:55+08:00
+Last Date: 2024-10-17T17:45:41+08:00
 References: 
 ---
 
@@ -18,23 +18,23 @@ References:
 ![[thread_resources.png|500]]
 </br>
 
-- There are 3 types - [[User Thread]], [[Kernel Thread]] & [[Hybrid Threads]]
+- There are 3 types - [[User Thread]], [[Kernel Thread]] & [[Hybrid Thread]]
 
->[!success]- More Performant
+>[!success] More Performant
 > Since thread doesn't have the need to perform [[Context Switch#An expensive operation|Expensive Context Switching]]. It is **10-100 times faster** than Process.
 > 
-> Faster to create and destroy compared to Process, because it can be created without making [[System Call (系统调用)]] to the underlying [[Kernel]].
+> Faster to create and destroy compared to process, because it can be created without making [[System Call (系统调用)]] to the underlying [[Kernel]].
 
->[!success]- Easier to program
+>[!success] Easier to program
 > Unlike process, different parts of program able to communicate **without** the use of [[Interrupts (中断)]] and [[Inter-Process Communication (IPC)]] etc.
 
->[!caution]- No protection among threads
+>[!caution] No protection among threads
 > One thread can read, write, or even wipe out another thread’s stack. It is also able to bring down the entire Process.
 
->[!caution]- Forking
+>[!caution] Forking
 > Should we copy over all the threads or just a single one?
 
->[!caution]- Interrupt Handling
+>[!caution] Interrupt Handling
 > For [[Interrupts (中断)#Software Interrupt]] handling - which thread should handle it?
 
 ### Blocking Thread

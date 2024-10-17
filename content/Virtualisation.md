@@ -7,20 +7,18 @@ tags:
   - OS
   - docker
 Creation Date: 2024-03-06, 14:20
-Last Date: 2024-03-06T14:33:18+08:00
+Last Date: 2024-10-17T17:02:50+08:00
 References: 
 draft: 
 description: 
 ---
 ## Abstract
 ---
-- Virtualization is a technology that allows you to create multiple simulated, or "virtual," computer environments on a single physical machine
+- Virtualisation is a technology that allows you to create multiple simulated, or "virtual" computer environments on a single physical machine
 
 
 ## Virtualisation Tools
-
-
-
+---
 ### Vagrant
 - A piece of software to manage VMs with ease
 </br>
@@ -36,6 +34,7 @@ vagrant plugin install vagrant-share
 
 ### QEMU
 - Powerful open-source machine **emulator** and **virtualizer**
+
 ```bash
 brew install qemu
 ```

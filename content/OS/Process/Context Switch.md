@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-10T23:12:00
-Last Date: 2024-04-04T15:33:25+08:00
+Last Date: 2024-10-17T17:43:46+08:00
 References: 
 ---
 ## Abstract
@@ -25,7 +25,7 @@ References:
 ---
 ![[process_context_switching.png|500]]
 ### An expensive operation
-- We not only need to save & load [[Register]], we also need to use an entirely different [[Process Control Block (PCB)]] which may require us to switch out [[Memory Page]] which is an expensive operation
+- We not only need to save & load [[Register]], we also need to use an entirely different [[Process Control Block (PCB)]] which may require us to **switch out** [[Memory Page]] which is an expensive operation
 
 
 ## Thread Context Switch

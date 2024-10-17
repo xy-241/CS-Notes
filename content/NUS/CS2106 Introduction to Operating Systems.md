@@ -45,7 +45,7 @@ title: cs2106 nus notes
 - [[Thread Pool]]
 - [[Kernel Thread]]
 - [[User Thread]]
-- [[Hybrid Threads]]
+- [[Hybrid Thread]]
 - [[Producer Consumer Problem]]
 
 ## Synchronisation
