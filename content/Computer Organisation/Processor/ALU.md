@@ -30,6 +30,7 @@ References:
 ![[mips_alu_branch.png|500]]
 
 - `PCSrc` is `0` for **not taking** a branch and `1` for **taking** a branch. `isZero?` flag is also used to determine the value of `PCSrc`. `isZero?` is `1` when a branch should take place
+- PCSrc value is computed using by doing a subtract operation on the s1 and s2 registers , if the result is 0 set PCSrc to 0 else 1  
 
  >[!important]
 > `ALUSrc` is `0`, even though branch instruction is an [[MIPS I-Type Instruction|I-type instruction]].

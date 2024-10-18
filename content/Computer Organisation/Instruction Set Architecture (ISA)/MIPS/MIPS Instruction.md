@@ -11,6 +11,18 @@ References:
 ---
 ## Abstract
 ---
+
+### mips comes in 3 instruction types 
+![[mips instruct types.jpeg]]
+
+>[!question] why is the source ,target and destination field 5 bits 
+>$2^5 = 32bits$
+>it is because we do operations on the data stored on the register and each register address is 32 bits 
+
+
+
+**32 bits**, the **first 6 bits** are [[Instruction#Opcode]]
+=======
 - **32 bits**, the **first 6 bits** are [[ISA Instruction Format#Opcode]]
 - There are 3 different format types - [[MIPS R-Type Instruction]], [[MIPS I-Type Instruction]] and [[MIPS J-Type Instruction]]
 
@@ -22,6 +34,14 @@ References:
 
 
 
+
+## Terminologies
+---
+### Op register 
+- 6bits 
+- labeled as op
+- used to specify to the control what operation to perform 
+=======
 ### Source Register 
 - 5bits
 - Labeled `rs`, mapped to `RR1`
@@ -31,3 +51,6 @@ References:
 - Labeled `rt`, mapped to `RR2`
 - [[Register|Register]] with value stored we want to use in [[MIPS R-Type Instruction]]
 - [[Register|Register]] that gets the result of [[Operation]] in [[MIPS I-Type Instruction]]
+
+
+

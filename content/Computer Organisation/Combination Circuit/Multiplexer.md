@@ -15,6 +15,31 @@ description:
 ---
 - Short form `Mux`
 - A multiplexer is a [[Combination Circuit]] that selects **one** of **several input signals** and forwards the selected input **into a single line**. It uses **selection lines**(**control signals**) to **choose** which input to send to the output
+- uses $\log_2(2) = 1 bits$ to represent the number of instructions 
+
+### Example of How It mux Works
+
+Let's consider a simple 4-to-1 multiplexer (4 inputs, 1 output):
+
+- **Inputs**: \( I_0, I_1, I_2, I_3 \)
+- **Select Lines**: \( S_1, S_0 \)
+- **Output**: \( Y \)
+
+| \( S_1 \) | \( S_0 \) | Output \( Y \)  |
+|-----------|-----------|-----------------|
+| 0         | 0         | \( I_0 \)       |
+| 0         | 1         | \( I_1 \)       |
+| 1         | 0         | \( I_2 \)       |
+| 1         | 1         | \( I_3 \)       |
+
+In this 4-to-1 MUX:
+- If \( S_1 = 0 \) and \( S_0 = 0 \), the output \( Y \) is \( I_0 \)
+- If \( S_1 = 0 \) and \( S_0 = 1 \), the output \( Y \) is \( I_1 \)
+- If \( S_1 = 1 \) and \( S_0 = 0 \), the output \( Y \) is \( I_2 \)
+- If \( S_1 = 1 \) and \( S_0 = 1 \), the output \( Y \) is \( I_3 \)
+
+---
+
 
 >[!example] General example
 > An **8-to-1 multiplexer** has **8 input lines**, **3 selection lines** (to choose between the 8 inputs), and **1 output line**. Depending on the combination of the selection lines, one of the 8 inputs is connected to the output.
