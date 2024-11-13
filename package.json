@@ -84,7 +84,7 @@
     "remark-smartypants": "^3.0.2",
     "rfdc": "^1.4.1",
     "rimraf": "^6.0.1",
-    "satori": "^0.10.14",
+    "satori": "^0.11.3",
     "serve-handler": "^6.1.6",
     "sharp": "^0.33.5",
     "shiki": "^1.22.2",
