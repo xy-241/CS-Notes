@@ -7,7 +7,7 @@ tags:
   - computer_organisation
   - arduino
 Creation Date: 2024-01-11, 21:59
-Last Date: 2024-05-05T18:09:27+08:00
+Last Date: 2024-11-27T14:24:12+08:00
 References: 
 draft: 
 ---
@@ -70,7 +70,11 @@ draft:
 - The **amount of time** the [[CPU]] takes to [[Instruction Stages#Fetch]], [[Instruction Stages#Decode]] and [[Instruction Stages#Execute]] **one** [[Instruction]]. One Instruction cycle consists of **several** [[#Machine Cycle]]
 
 ### Clock Frequency
-- The total number of [[#Clock Cycle]] in one second
+- Also known as the **clock rate**
+- The total number of [[#Clock Cycle]] in **one second**
+
+>[!example]
+> `500 MHz` means there are $500 \times 10^6$ clock cycles in 1 second. Each cycle takes $\frac{1}{500 \times 10^6}$ which is `2ns`.
 
 ### Duty Cycle
 ![[duty_cycle.png|350]]
