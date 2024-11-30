@@ -5,9 +5,9 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-11-15T12:13:08+08:00
+Last Date: 2024-11-30T23:46:19+08:00
 References: 
-title: Macos setup for software engineer
+title: A macOS setup guide for development, covering essential tools, configurations, and resources for productivity and efficiency.
 ---
 ## ⚠️ Pre-requisites
 ---
@@ -31,6 +31,7 @@ title: Macos setup for software engineer
 - [ ] [StrongBox](https://apps.apple.com/us/app/strongbox-password-manager/id897283731) - Password Manager
 - [ ] [Gifski](https://apps.apple.com/us/app/gifski/id1351639930?mt=12) - GIF convertor
 - [ ] [Tutanota](https://tutanota.com/#download)- Private email
+- [ ] [NeoHtop](https://abdenasser.github.io/neohtop/) - A nicer Activity Monitor
 - [ ] [List of Wonderful Apps Waiting to Be Explored!](https://sindresorhus.com/apps)
 
 ## Terminal & Shell Setup

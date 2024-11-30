@@ -7,13 +7,14 @@ tags:
   - OS
   - bash
 Creation Date: 2024-01-07, 17:59
-Last Date: 2024-07-13T19:30:29+08:00
+Last Date: 2024-11-30T23:24:43+08:00
 References: 
 draft: 
+description: Swap space is a storage area used as virtual memory when physical memory is under high pressure, allowing systems to handle insufficient RAM without crashing.
 ---
 ## Abstract
 ---
-- A swap space is an area on a **storage device** (usually a [[Hard Disk]] or [[Flash Memory]]) that is used as part of [[Virtual Memory]]. When the physical [[Main Memory]] of a computer is **fully utilised**, the [[Kernel]] may transfer some data from the main memory to the swap space to **free up physical memory for other tasks**. This allows the system to continue running applications and processes even when the **main memory is insufficient**
+- A swap space is an area on a **storage device** (usually a [[Hard Disk]] or [[Flash Memory]]) that is used as part of [[Virtual Memory]]. When the physical [[Main Memory]] of a computer is under **high memory pressure** (a decent amount of main memory is used, the **sensitivity** can be adjusted with [[#Swappiness]]), the [[Kernel]] may transfer some data from the main memory to the swap space to **free up physical memory for other tasks**. This allows the system to continue running applications and processes even when the **main memory is insufficient**
 
 
 
@@ -52,6 +53,13 @@ draft:
 > 
 > OS X 10.9 uses [[#ZSwap]], which compresses the program first and then resorts to paging if necessary.
 
+### Swappiness
+- A value between `0` and `100` that controls the tendency of the [[Kernel|kernel]] to move [[Process (进程)|processes]] out of physical memory and onto the [[Swap Space]]
+
+>[!tool]
+> Check the swappiness value with `cat /proc/sys/vm/swappiness`.
+> 
+> Edit `vm.swappiness=10` in `/etc/sysctl.conf` to change the swappiness.
 
 ## ZRAM
 ---
@@ -86,3 +94,4 @@ draft:
 ---
 - [Arch ZRAM](https://wiki.archlinux.org/title/Zram)
 - [(INFO)What is zram and how does it work???](https://xdaforums.com/t/info-what-is-zram-and-how-does-it-work.2023568/)
+- [kernel - Why is swap being used even though I have plenty of free RAM? - Ask Ubuntu](https://askubuntu.com/questions/157793/why-is-swap-being-used-even-though-i-have-plenty-of-free-ram)

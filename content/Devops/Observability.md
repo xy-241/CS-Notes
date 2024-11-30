@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - devops
 Creation Date: 2024-11-16, 16:25
-Last Date: 2024-11-16T17:06:34+08:00
+Last Date: 2024-11-30T23:39:00+08:00
 References: 
 draft: 
 description: Data points needed to find the root cause of an issue.
@@ -17,6 +17,9 @@ description: Data points needed to find the root cause of an issue.
 
 >[!important]
 > Observability is a broader concept that includes [[Monitoring]]. The higher the observability, the faster we can **find the root cause** when **notified of an issue**.
+
+>[!info] Linux performance observability tools
+> ![[linux_performance_observability_tools.jpeg|500]]
 
 ## Metric
 ---
@@ -72,3 +75,4 @@ description: Data points needed to find the root cause of an issue.
 ## References
 ---
 - [Observability vs. Monitoring - YouTube](https://www.youtube.com/watch?v=vY61h6cSkVA&t=700s&pp=ygUbb2JzZXJ2YWJpbGl0eSB2cyBtb25pdG9yaW5n)
+- [Linux Performance](https://brendangregg.com/linuxperf.html)
