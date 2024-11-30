@@ -35,7 +35,7 @@
     "quartz": "./quartz/bootstrap-cli.mjs"
   },
   "dependencies": {
-    "@clack/prompts": "^0.7.0",
+    "@clack/prompts": "^0.8.1",
     "@floating-ui/dom": "^1.6.12",
     "@myriaddreamin/rehype-typst": "^0.5.0-rc7",
     "@napi-rs/simple-git": "0.1.19",
@@ -84,10 +84,10 @@
     "remark-smartypants": "^3.0.2",
     "rfdc": "^1.4.1",
     "rimraf": "^6.0.1",
-    "satori": "^0.10.14",
+    "satori": "^0.11.3",
     "serve-handler": "^6.1.6",
     "sharp": "^0.33.5",
-    "shiki": "^1.22.2",
+    "shiki": "^1.23.1",
     "source-map-support": "^0.5.21",
     "to-vfile": "^8.0.0",
     "toml": "^3.0.0",
