@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-27T14:44:16+08:00
-Last Date: 2024-12-01T14:27:24+08:00
+Last Date: 2024-12-01T15:07:33+08:00
 References: 
 description: DMA enables direct data transfer between memory and device controllers, avoiding CPU intervention and busy waiting. Zero copy minimises memory copies using system calls like sendfile(2), freeing the CPU for other tasks.
 ---
@@ -20,11 +20,16 @@ description: DMA enables direct data transfer between memory and device controll
 ![[zero_copy_kafka.svg|500]]
 
 
-- Zero copy means [[CPU]] does not perform the task of **copying data from one memory area to another** or in which **unnecessary data copies are avoided**
-- The above diagram shows data is copied directly from the OS buffer to the NIC Buffer via [[System Call (系统调用)]] like [sendfile(2)](https://man7.org/linux/man-pages/man2/sendfile.2.html). This avoids copying data from the OS buffer to the Kafka buffer which is in the [[User Space]], and avoids making another system call to copy the data from Kafka buffer to the socket buffer, then eventually the NIC buffer
+- Zero copy means [[CPU]] does not perform the task of **copying data from one memory area to another** with the help of [[Direct Memory Access (DMA)|DMA]] or in which **unnecessary data copies are avoided**
 
->[!success] CPU is free!
-> The direct copying of data is handled by [[Direct Memory Access (DMA)]], so the CPU isn't involved and is free to work on other tasks!
+>[!success] Benefits of zero copy
+> The CPU is **consistently involved** in copying data between the **OS buffer** in [[Kernel Space|kernel space]] and the **Kafka buffer** in user space, and vice versa. Expensive [[Context Switch|context switching]] is also involved.
+> 
+> Using system calls like [`sendfile(2)`](https://man7.org/linux/man-pages/man2/sendfile.2.html), data is copied directly from the OS buffer to the NIC buffer.
+> 
+> Unlike `read` and `write`, which require transferring data to and from user space, copying with `sendfile` occurs entirely within kernel space. The actual data transfer is offloaded to the [[Direct Memory Access (DMA)|DMA]], freeing the CPU for other computational tasks. 
+> 
+> `sendfile` is particularly useful when the application in user space does not need to process the data, and the data is ready to be sent out via the NIC (Network Interface Card).
 
 
 
@@ -32,3 +37,4 @@ description: DMA enables direct data transfer between memory and device controll
 ## References
 ---
 - [System Design: Why is Kafka fast? - YouTube](https://youtu.be/UNUz1-msbOM?si=2nC4zt0WOb1CgR6P)
+- [sendfile(2) - Linux manual page](https://man7.org/linux/man-pages/man2/sendfile.2.html)

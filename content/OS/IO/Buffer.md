@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-04-16, 12:48
-Last Date: 2024-04-16T13:13:47+08:00
+Last Date: 2024-12-01T14:47:58+08:00
 References: 
 draft: 
 description: 
@@ -14,10 +14,9 @@ description:
 ## Abstract
 ---
 - A buffer serves as a **temporary storage area** that **consolidates multiple pieces of data** before they are read from or written to an [[OS/IO/IO Device|IO Device]]/[[Socket]] by the [[Kernel]]
-- Reducing the negative impact of [[System Call (系统调用)]] overhead and smoothen the data flow
 
 >[!success] Better performance
-> This consolidation helps optimize data transfer by **minimizing the overhead** associated with individual data transfers which requires System Call, and can also help **smooth out disparities** in data transfer rates between different components of the system.
+> This consolidation helps optimise data transfer by **minimising the overhead** associated with individual data transfers, which require [[System Call (系统调用)|system calls]], and also helps **smooth out disparities** in data transfer rates between different system components.
 
 >[!example]
 > IO Device Buffering
