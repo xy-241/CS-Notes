@@ -5,9 +5,10 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-11-30T23:46:19+08:00
+Last Date: 2024-12-01T14:33:06+08:00
 References: 
-title: A macOS setup guide for development, covering essential tools, configurations, and resources for productivity and efficiency.
+title: A collection of useful tools for developers who use MacOS
+description: A macOS setup guide for development, covering essential tools, configurations, and resources for productivity and efficiency.
 ---
 ## ⚠️ Pre-requisites
 ---
