@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-27T14:44:16+08:00
-Last Date: 2024-06-05T13:00:43+08:00
+Last Date: 2024-12-01T14:27:24+08:00
 References: 
+description: DMA enables direct data transfer between memory and device controllers, avoiding CPU intervention and busy waiting. Zero copy minimises memory copies using system calls like sendfile(2), freeing the CPU for other tasks.
 ---
 ## Abstract
 ---
