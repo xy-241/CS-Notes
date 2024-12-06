@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-05-19T20:00:45+08:00
+Last Date: 2024-12-02T22:35:13+08:00
 References: 
 description: The giant that powers the software application we use on a daily basis!
 ---
@@ -14,7 +14,7 @@ description: The giant that powers the software application we use on a daily ba
 ---
 - Consists of [[Kernel]] and [[OS System Program]]
 - 2 main functionalities
-	1. Provide user features in the form of [[Abstraction#Abstraction Barrier]] to **interact with the hardware**. Some key abstractions are [[Process (进程)]], [[Thread]], [[Address Space]] and [[File System]]
+	1. Provide user features in the form of [[Abstraction#Abstraction Barrier]] to **interact with the hardware**(hardware virtualisation). Some key abstractions are [[Process (进程)]], [[Thread]], [[Address Space]] and [[File System]]
 	2. Resource Manager for resources like [[CPU]], [[IO Device]] & [[Main Memory]] etc
 
 >[!important]
@@ -25,6 +25,8 @@ description: The giant that powers the software application we use on a daily ba
 > We **can remove the OS software** if we build our **solution directly on top of the hardware** without the need of abstraction and  we **manages the direct communication** with the **hardware**. 
 > 
 > The benefit of doing so is **huge huge performance gains**. OS comes with **many abstractions** to **be general-purpose**, all these abstractions come with **overheads**! So the task that doesn't need an OS needs to be a **very specific task** that **aren't built on many abstractions**.
+> 
+> Thus, we can write a program to run without an OS.
 
 
 ## Types of OS

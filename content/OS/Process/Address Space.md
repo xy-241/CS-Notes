@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-04-11T16:45:41+08:00
+Last Date: 2024-12-02T22:43:17+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -84,8 +84,10 @@ description: Stack (automatic memory management for function variables), Heap (d
 - **Expands** as functions are called and **shrinks** as they return
 - We can obtain the default stack size assigned by the system using `ulimit -s`
 
->[!question]- Grows Downwards
+>[!question] Grows Downwards
 >Stack Segment starts at a higher [[Memory Address]], then **memory address decreases** as we add in **Stack Frame**, thus **growing downwards** in terms of Memory Address, so to remove stack frame, we need to increment the [[Register#Stack Pointer]].
+>
+> When `fn1()` calls `fn2()`, `fn1()`'s stack frame is created first. Then, `fn2()`'s stack frame is placed on top of `fn1()`'s on the call stack, although it may appear below the older frame in the diagram because the stack grows downwards.
 
 >[!info]- Fun Fact Regarding Grow Downwards
 > Growing downwards is a convention from when computers had small memories and the stack was placed at the end of the [[#Data Segment]]. Nowadays the stack can be anywhere, but the convention stuck on, at the end of the day it makes no difference.
