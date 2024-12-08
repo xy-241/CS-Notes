@@ -1,4 +1,4 @@
-import { formatDate, getDate } from "./Date"
+import { Date, getDate } from "./Date"
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import readingTime from "reading-time"
 import { classNames } from "../util/lang"
@@ -36,13 +36,13 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
         const cfgDefaultDataType = cfg.defaultDateType // For backward compatibility, just in case this is used somewhere else by the original author
 
         if (fileData.dates.created) {
-          cfg.defaultDateType = "created"
-          createdSegment = formatDate(getDate(cfg, fileData)!)
+          cfg.defaultDateType = "created" // sets which date type to be set
+          createdSegment = <Date date={getDate(cfg, fileData)!} locale={cfg.locale} /> 
         }
 
         if (fileData.dates.modified) {
-          cfg.defaultDateType = "modified"
-          modifiedSegment = formatDate(getDate(cfg, fileData)!)
+          cfg.defaultDateType = "modified" // sets which date type to be set
+          modifiedSegment = <Date date={getDate(cfg, fileData)!} locale={cfg.locale} /> 
         }
 
         cfg.defaultDateType = cfgDefaultDataType

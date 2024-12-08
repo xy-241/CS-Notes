@@ -31,5 +31,6 @@ Want to see what Quartz can do? Here are some cool community gardens:
 - [Eledah's Crystalline](https://blog.eledah.ir/)
 - [🌓 Projects & Privacy - FOSS, tech, law](https://be-far.com)
 - [Zen Browser Docs](https://docs.zen-browser.app)
+- [🪴8cat life](https://8cat.life)
 
 If you want to see your own on here, submit a [Pull Request adding yourself to this file](https://github.com/jackyzha0/quartz/blob/v4/docs/showcase.md)!

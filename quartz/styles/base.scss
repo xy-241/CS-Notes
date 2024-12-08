@@ -85,7 +85,7 @@ a {
     line-height: 1.4rem;
 
     &:has(> img) {
-      background-color: none;
+      background-color: transparent;
       border-radius: 0;
       padding: 0;
     }

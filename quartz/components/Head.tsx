@@ -219,8 +219,6 @@ export default (() => {
           <>
             <meta property="og:image:width" content={fullOptions.width.toString()} />
             <meta property="og:image:height" content={fullOptions.height.toString()} />
-            <meta property="og:width" content={fullOptions.width.toString()} />
-            <meta property="og:height" content={fullOptions.height.toString()} />
           </>
         )}
         <meta property="og:image:url" content={ogImagePath} />
