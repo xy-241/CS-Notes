@@ -6,8 +6,10 @@ Author Profile:
 tags:
   - Datadog
 Creation Date: 2023-12-04T23:09:00
-Last Date: 2024-05-02T16:51:18+08:00
+Last Date: 2024-12-10T13:37:46+08:00
 References: 
+title: Datadog Real User Monitoring
+description: Datadog RUM enables comprehensive frontend performance tracking and user interaction insights for web applications. This guide provides a step-by-step integration process for Next.js using Datadog's browser monitoring package.
 ---
 ## Abstract
 ---

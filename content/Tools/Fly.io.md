@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2024-07-30T01:13:20+08:00
+Last Date: 2024-12-10T13:32:22+08:00
 References: 
 draft: 
 description: Fly.io Starter Guide
 ---
 ## Abstract
 ---
-- Serverless Container Cloud Provier, come with **free hosting**!
+- Serverless Container Cloud Provider, come with **free hosting**!
 - You can record down the app infra configuration with `fly.toml`, see [Fly Launch configuration (fly.toml) · Fly Docs](https://fly.io/docs/reference/configuration/) for more details
 
 ## Fly.io CLi Cheatsheet
