@@ -7,10 +7,10 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-03-07, 16:38
-Last Date: 2024-03-20T12:58:56+08:00
+Last Date: 2024-12-10T23:08:49+08:00
 References: 
 draft: 
-description: 
+description: Email routing directs emails to recipients using rules for secure, organized, and flexible delivery, including custom domain support. Cloudflare Email Routing is a free service that enhances this process with routing analytics and programmable handling via Cloudflare Workers.
 ---
 ## Abstract
 ---
@@ -46,3 +46,12 @@ description:
 
 >[!bigbrain] Process emails programmatically
 > Route to Cloudflare Workers to program any logic you can dream of for processing your emails. Refer to [Cloudflare Email Workers](https://developers.cloudflare.com/email-routing/email-workers/) for more details.
+
+
+### Cloudflare Email Worker
+- A custom script built using **Cloudflare Workers** that allows developers to process, forward, or manage emails directly within the Cloudflare network. It enables flexible and serverless email handling, such as filtering, parsing, or routing emails to different destinations based on specific rules.
+
+>[!important] Worker parameters
+> ![[cloudflare_email_worker_message_object.png|500]]
+> 
+> You can access the environment variables of the email worker via the `env` parameter. The screenshot above shows the structure of the `message` parameter.
