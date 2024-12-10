@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-12-01T14:33:06+08:00
+Last Date: 2024-12-10T20:40:40+08:00
 References: 
 title: A collection of useful tools for developers who use MacOS
 description: A macOS setup guide for development, covering essential tools, configurations, and resources for productivity and efficiency.
@@ -185,6 +185,7 @@ aws configure # Auth CLi
 ## Networking
 ---
 - [ ] [[Secure Tunneling#Cloudflare Tunnel|cloudflared]] 
+- [ ] `npm install -g wrangler` - Cloudflare worker cli, deploy worker with `wrangler deploy`
 - [ ] [[DNS#q]] - `dig` replacement
 - [ ] [[Secure Tunneling#Ngrok]]
 - [ ] [[File Sharing]]
