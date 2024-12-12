@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - java
 Creation Date: 2024-12-12, 14:17
-Last Date: 2024-12-12T15:03:58+08:00
+Last Date: 2024-12-12T18:24:12+08:00
 References: 
 draft: 
 description: The use of Java's Optional to handle data presence explicitly while reserving exceptions for operational issues like database errors. By returning Optional.empty() for missing data, it avoids ambiguity around null values, ensuring clarity and safer code execution.
@@ -43,3 +43,11 @@ try {
 > `Optional` focuses on **data presence**, while exceptions handle **operational issues**, such as database connectivity. By returning `Optional.empty()` for missing data, the caller knows it’s not an error, it’s simply an empty result. Without `Optional`, it’s unclear whether `null` means "no data" or "method failed." With `Optional`, the intent becomes explicit.
 > 
 > Java Optional is a [Maybe Monad](https://en.wikipedia.org/wiki/Monad_(functional_programming)).
+
+>[!attention]
+> We shouldn't overuse `Optional`. It should be used as a return type to indicate whether the returned object contains a value or is empty. Avoid using it as a parameter!
+
+
+## References
+---
+- [Optionals In Java - Simple Tutorial - YouTube](https://youtu.be/vKVzRbsMnTQ?si=xrbg9QOQXDL7kLuc)
