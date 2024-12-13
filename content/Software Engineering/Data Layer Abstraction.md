@@ -6,11 +6,11 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2024-12-13, 12:05
-Last Date: 2024-12-13T12:33:13+08:00
+Last Date: 2024-12-13T12:43:04+08:00
 References: 
 draft: 
 description: Data Layer Abstraction separates data access from business logic, enabling easier database swaps and enhancing security.
-title: "Understanding Data Layer Abstraction: DO, VO, and DTO Explained"
+title: "Understanding Data Layer Abstraction: DO, DAO, VO, and DTO Explained"
 ---
 ## Abstract
 ---
@@ -44,7 +44,7 @@ public class UserDO {
 - Direct mapping to a database table, used in the [[#DAO|DAO layer]]
 - We can obtain an instance of DO using [[#Mapper]] - `UserDO userDO = userMapper.getUserById(1);`
 
-### Mapper
+### DAO Mapper
 
 ```java
 import org.apache.ibatis.annotations.Select;
@@ -55,7 +55,8 @@ public interface UserMapper {
 }
 ```
 
-- A **mapper** is a component that maps data between different layers, typically between the database and the application’s object model, simplifying interactions with data sources and improving code maintainability
+- **Data Access Object Mapper**
+- A **DAO mapper** is a component that maps data between different layers, typically between the database and the application’s object model, simplifying interactions with data sources and improving code maintainability
 
 ## VO
 ---
@@ -84,7 +85,7 @@ public class UserVO {
 >[!question] Why no setters?
 > VO represents **immutable** business/domain data.
 
-## DAO
+## DTO
 ---
 
 | id  | name     | email            | created_at       |
