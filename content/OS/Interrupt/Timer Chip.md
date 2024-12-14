@@ -11,7 +11,7 @@ References:
 ---
 ## Abstract
 ---
-- Used by [[Process Management#Process Scheduler]] to trigger [[Interrupts (中断)#Hardware interrupts (外中断]] for [[Concurrency (并发)#Preemptive Scheduling]] 
+- Used by [[Process Management#Process Scheduler]] to trigger [[Interrupts (中断)#Hardware interrupts (外中断]] for [[CPU Scheduling Techniques#Preemptive Scheduling]] 
 - [Example](https://en.wikipedia.org/wiki/Programmable_interval_timer)
 
 ### Expiring

@@ -90,7 +90,7 @@ aliases:
 ## Hardware interrupts (外中断)
 ---
 - Raised by hardware devices. Follow the [[Sequential Circuit#Asynchronous Sequential Circuit]] behaviour, can occur at any time
-- One example is [[Timer Chip]] used for [[Concurrency (并发)#Preemptive Scheduling]]
+- One example is [[Timer Chip]] used for [[CPU Scheduling Techniques#Preemptive Scheduling]]
 - We have a [[Interrupt Controller]] like the [[RISCV CLINT]] in RISCV to handle interrupt sources that share the same **interrupt pin**
 
 >[!example]- Alarm Signal

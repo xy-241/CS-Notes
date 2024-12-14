@@ -44,7 +44,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 
 >[!important] System call & process management
-> Control is passed back to the [[Kernel]] when a system call is made by the [[Process (进程)]]. Kernel uses this opportunity to perform its [[Process Management]]. If the process hogs to the [[CPU]] and doesn't make any system call, we have [[Concurrency (并发)#Preemptive Scheduling]] to handle this.
+> Control is passed back to the [[Kernel]] when a system call is made by the [[Process (进程)]]. Kernel uses this opportunity to perform its [[Process Management]]. If the process hogs to the [[CPU]] and doesn't make any system call, we have [[CPU Scheduling Techniques#Preemptive Scheduling]] to handle this.
 
 >[!tip]
 > The system calls made by a process can be traced by [``strace``](https://stackoverflow.com/questions/65510246/can-a-system-call-happen-in-a-c-program).

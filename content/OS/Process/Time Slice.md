@@ -12,7 +12,7 @@ References:
 ## Abstract
 ---
 - Also known as **Quantums**
-- The **period of time** for which a [[Process (进程)]] is allowed to run in a [[Concurrency (并发)#Preemptive Scheduling]] system
+- The **period of time** for which a [[Process (进程)]] is allowed to run in a [[CPU Scheduling Techniques#Preemptive Scheduling]] system
 
 >[!attention]
 > The **length of each time slice** can be critical to balancing **system performance** and **process responsiveness** - if the time slice is **too short** then the [[Process Management#Process Scheduler]] will **consume too much processing time**, but if the time slice is **too long**, processes will take **longer to respond to input**.
@@ -22,7 +22,7 @@ References:
 
 ## Minimum Granularity
 ---
-- Minimum Granularity is the **minimum time period** the [[Time Slice]] should have, this guarantees a minimum amount of **CPU time** for each process gets before being [[Concurrency (并发)#Preemptive Scheduling|preempted]]
+- Minimum Granularity is the **minimum time period** the [[Time Slice]] should have, this guarantees a minimum amount of **CPU time** for each process gets before being [[CPU Scheduling Techniques#Preemptive Scheduling|preempted]]
 
 >[!success] Control resource usage of process scheduler
 > Process preemption is an **expensive operation**, it involves [[Context Switch]] and change in [[Privilege Level]]. Thus, minimum granularity ensures the resource cost of process scheduler is controlled.
