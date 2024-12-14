@@ -7,10 +7,11 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-03-07, 16:38
-Last Date: 2024-12-10T23:08:49+08:00
+Last Date: 2024-12-14T17:05:15+08:00
 References: 
 draft: 
 description: Email routing directs emails to recipients using rules for secure, organized, and flexible delivery, including custom domain support. Cloudflare Email Routing is a free service that enhances this process with routing analytics and programmable handling via Cloudflare Workers.
+title: "Email Routing: Mechanisms, Security, and Cloudflare Solutions"
 ---
 ## Abstract
 ---
@@ -44,14 +45,21 @@ description: Email routing directs emails to recipients using rules for secure, 
 > 
 > However, there is a message limit of **25MB**, **200 email routing rules** and **200 destination emails**. Refer to [Cloudflare Email Routing Limits](https://developers.cloudflare.com/email-routing/limits/) for more details.
 
->[!bigbrain] Process emails programmatically
-> Route to Cloudflare Workers to program any logic you can dream of for processing your emails. Refer to [Cloudflare Email Workers](https://developers.cloudflare.com/email-routing/email-workers/) for more details.
 
+>[!attention]
+> Each custom address can only have one routing rule. You will get a 'Duplicated Zone rule' error if you try to create another.
+> 
+> If you are using [Terraform](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/email_routing_rule) to create the routing rule, the `value` in `action` is an array. However, you should only input a single email string. If you provide multiple strings in the array, Cloudflare will concatenate them into one.
+
+>[!bigbrain] Process emails programmatically
+> Route to Cloudflare Workers to program any logic you can dream of for processing your emails.
 
 ### Cloudflare Email Worker
-- A custom script built using **Cloudflare Workers** that allows developers to process, forward, or manage emails directly within the Cloudflare network. It enables flexible and serverless email handling, such as filtering, parsing, or routing emails to different destinations based on specific rules.
+- A custom script built using **Cloudflare Workers** that allows developers to process, forward, or manage emails directly within the Cloudflare network. It enables flexible and serverless email handling, such as filtering, parsing, or routing emails to different destinations based on specific rules
+- Refer to [Cloudflare Email Workers](https://developers.cloudflare.com/email-routing/email-workers/) for more details
 
 >[!important] Worker parameters
 > ![[cloudflare_email_worker_message_object.png|500]]
 > 
 > You can access the environment variables of the email worker via the `env` parameter. The screenshot above shows the structure of the `message` parameter.
+
