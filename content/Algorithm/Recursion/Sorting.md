@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-07-26T11:56:12+08:00
+Last Date: 2024-12-15T18:02:58+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -480,7 +480,24 @@ import java.util.*;
 > Essentially, we have two indices, `i` and `j`, both starting at index $0$. The index `i` keeps track of the **last position** where an **element smaller than the pivot** was placed. Meanwhile, `j` **scans** the array from index $0$ to the last index.
 > 
 > Here is a [short video](https://youtu.be/MZaf_9IZCrc?si=1tH1H2VEaxcLwRg6) showing how partition is carried out.
+
+## Bucket Sort
+---
+![[bucket_sort.png|500]]
+
+1. The algorithm divides the value range of elements into categories called **buckets**. Each bucket covers a smaller, mutually exclusive range
+2. Elements are placed into the corresponding bucket based on their value
+3. Each bucket is sorted individually, and the elements from all buckets are then combined to form the final sorted array.
+
+>[!important]
+> The time complexity is `O(n)` if the elements are **uniformly distributed**, or `O(n logn)` when the elements are **clustered** within a small portion of the buckets.
+
+>[!code] Leetcode questions
+> - [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+
 ## References
 ---
 - [Sorting Algorithms Animations | Toptal®](https://www.toptal.com/developers/sorting-algorithms)
 - [Quicksort: Partitioning an array - YouTube](https://youtu.be/MZaf_9IZCrc?si=1tH1H2VEaxcLwRg6)
+- [Bucket Sort Algorithm: Time Complexity & Pseudocode | Simplilearn](https://www.simplilearn.com/tutorials/data-structure-tutorial/bucket-sort-algorithm)
+- [Top K Frequent Elements - Bucket Sort - Leetcode 347 - Python - YouTube](https://youtu.be/YPTqKIgVk-k?si=hkIyLa6jb3bwTFMp)
