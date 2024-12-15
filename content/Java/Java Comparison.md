@@ -7,10 +7,10 @@ tags:
   - java
   - OOP
 Creation Date: 2024-04-22, 12:07
-Last Date: 2024-05-26T22:03:50+08:00
+Last Date: 2024-12-15T20:01:28+08:00
 References: 
 draft: 
-description: 
+description: "Java provides two interfaces for implementing object comparison: Comparable<T> and Comparator<T>. While Comparable<T> inserts comparison logic directly into objects, Comparator<T> allows custom comparison logic externally or overrides existing logic, often leveraging Java lambdas for concise implementation."
 ---
 ## Abstract
 ---
@@ -22,7 +22,7 @@ description:
 | Comparison Method | [`int compareTo(T o1, T o2)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-)<br><br>Negative -> $o1 < o2$<br>Zero -> $o1 == o2$<br>Positive -> $o1 > o2$ | [`int compare(T o1, T o2)`](https://docs.oracle.com/javase%2F7%2Fdocs%2Fapi%2F%2F/java/util/Comparator.html#compare(T,%20T))<br><br>Negative -> $o1 < o2$<br>Zero -> $o1 == o2$<br>Positive -> $o1 > o2$                                                                                                                                                          |
 
 >[!important]
-> Use `Integer.compare()` to compare integers to avoid overflow.
+> Use `Integer.compare()` to compare integers to avoid overflow. For more information, refer to [Java docs](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#compare-int-int-).
 
 ## Code Example
 ---
