@@ -156,7 +156,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           src = src.toString()
         }
 
-        src = src.replace(commentRegex, "")
+        src = (src as string).replace(commentRegex, "")
       }
 
       // pre-transform blockquotes
@@ -165,7 +165,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           src = src.toString()
         }
 
-        src = src.replace(calloutLineRegex, (value) => {
+        src = (src as string).replace(calloutLineRegex, (value) => {
           // force newline after title of callout
           return value + "\n> "
         })
@@ -178,7 +178,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         }
 
         // replace all wikilinks inside a table first
-        src = src.replace(tableRegex, (value) => {
+        src = (src as string).replace(tableRegex, (value) => {
           // escape all aliases and headers in wikilinks inside a table
           return value.replace(tableWikilinkRegex, (_value, raw) => {
             // const [raw]: (string | undefined)[] = capture
@@ -192,7 +192,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         })
 
         // replace all other wikilinks
-        src = src.replace(wikilinkRegex, (value, ...capture) => {
+        src = (src as string).replace(wikilinkRegex, (value, ...capture) => {
           const [rawFp, rawHeader, rawAlias]: (string | undefined)[] = capture
 
           const [fp, anchor] = splitAnchor(`${rawFp ?? ""}${rawHeader ?? ""}`)
