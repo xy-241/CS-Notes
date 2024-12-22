@@ -6,8 +6,10 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-09T22:50:00
-Last Date: 2023-12-27T15:49:57+08:00
+Last Date: 2024-12-22T19:09:46+08:00
 References: 
+description: Process creation uses fork() and exec() to create a child process, with termination occurring voluntarily or involuntarily. In POSIX, fork() creates a child, and wait() allows the parent to wait for its termination while preventing zombie processes.
+title: Process Creation and Termination in POSIX Systems
 ---
 ## Abstract
 ---
@@ -18,8 +20,9 @@ References:
 ## Process Creation
 ---
 - A 2 steps process - [[#fork()]], [[exec()]]
-- The two-step process gives the child the flexibility to manipulate its file descriptors(STDIN in the above example) after the fork but before the _execve_ in order to accomplish *redirection* of *standard input, standard output, and standard error*
-- The code below creates a child [[Process (进程)]], [[Pipe (管道)]] the input of the child process, load and execute child process
+- This two-step process gives the child process the flexibility to manipulate its file descriptors (stdin in the example below) after `fork()` but before `execve()`, in order to accomplish redirection of standard input, standard output, and standard error
+- The code below creates a child process, [[Pipe (管道)|pipes]] the input to the child process, then loads and executes the child process
+
 ```c
 int pid = fork();
 if (pid == 0)
@@ -45,6 +48,34 @@ if (pid == 0)
 ## POSIX 
 ---
 ### fork()
+
+```c
+/* Fork a new process - returns 0 in child, child's PID in parent */ 
+int pid = fork();
+```
 - Creates an exact duplicate of the original [[Process (进程)]]
-- When return value is `0`: we are inside the duplicate process
-- Duplicated process' s [[Process IDentifier (PID)]] in parent process
+- `fork()` returns `-1` if the fork fails
+
+### wait()
+
+```c
+int status; // Used to store termination information
+
+// This only waits for ONE child to finish
+wait(&status);
+
+// Wait specifically for first child
+waitpid(pid1, &status, 0);
+
+// Keep waiting until no children are left 
+while (wait(NULL) > 0) { 
+	// Each iteration handles one child process 
+	// Loop continues until all children are done 
+}
+
+// WRONG - may leave zombie processes
+wait(&status); // Only waits for one child
+exit(0); // Other children become zombies
+```
+
+- Used by a parent [[Process (进程)|process]] to wait for one of its child processes to terminate

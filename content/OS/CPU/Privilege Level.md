@@ -6,14 +6,17 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-20T11:15:17+08:00
-Last Date: 2024-04-09T17:15:08+08:00
+Last Date: 2024-12-22T19:08:06+08:00
 References: 
+description: The CPU operates in Machine, Kernel, and User modes, with varying privilege levels. Kernel Mode allows full access to resources, while User Mode restricts access, causing errors like segmentation faults when unauthorised resources are accessed.
 ---
 ## Abstract
 ---
 - Determines what [[Instruction]] may be executed by [[CPU]]
 
-## 3 Modes
+
+
+## CPU Mode
 ---
 ### Machine Mode
 - Free to do anything on the computer
@@ -26,6 +29,8 @@ References:
 - Applications run in this mode
 - If application trying to access resources they don't have access to like [[Main Memory]] they don't have access to, [[Segmentation Fault]] will occur
 
+## Hardware Context
+- The state of the [[CPU]] and other hardware components at a particular point in time. This includes [[Register|registers]], memory mappings, [[#CPU Mode|CPU mode]] (user or kernel), and other processor-specific settings
 
 ## Example
 ---
