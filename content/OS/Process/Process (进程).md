@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2024-05-20T21:54:38+08:00
+Last Date: 2024-12-23T10:34:37+08:00
 References: 
 description: Dive into the world of processes in operating systems!
 ---
@@ -33,21 +33,6 @@ description: Dive into the world of processes in operating systems!
 > 
 > `VmRSS` represents the size of [[Main Memory#Memory Frames]] a process is currently using.
 
-## Useful CLI tool
----
-## procs
-- A `ps` replacement written in [[Rust]]
-
-```bash
-brew install procs # Installation 
-
-# Alias to ps, and add in config file, add the following line to .zshrc
-alias ps='sudo procs --load-config <path_to_your_config.toml>' # Refer to https://github.com/dalance/procs?tab=readme-ov-file#configuration for more info on the config.toml
-```
-
-## Terminologies
----
-
 ### Core Image
 
 - A  **suspended** [[Process (进程)]] consists of its [[Address Space]]
@@ -66,3 +51,17 @@ alias ps='sudo procs --load-config <path_to_your_config.toml>' # Refer to https:
 - Outstanding [[Interrupts (中断)#Software Interrupt]]
 - List of related processes
 - [[Process Management]] information etc
+
+
+
+## procs
+---
+- A `ps` replacement written in [[Rust]]
+
+```bash
+brew install procs # Installation 
+
+# Alias to ps, and add in config file, add the following line to .zshrc
+alias ps='sudo procs --load-config <path_to_your_config.toml>' # Refer to https://github.com/dalance/procs?tab=readme-ov-file#configuration for more info on the config.toml
+```
+
