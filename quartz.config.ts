@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       tagId: "G-H0G1YKHC31"
     },
     baseUrl: "notes.yxy.ninja",
-    ignorePatterns: ["private", "Templates", ".obsidian", "Personal", "Archive", "Omnivore", "**/*.excalidraw.md", "rawNotes"],
+    ignorePatterns: ["private", "Templates", ".obsidian", "Personal", "Archive", "Omnivore", "**/*.excalidraw.md", "Excalidraw", "rawNotes"],
     defaultDateType: "modified",
     locale: "en-US",
     generateSocialImages: {
