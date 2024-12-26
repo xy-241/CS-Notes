@@ -9,7 +9,7 @@ tags:
   - python
   - programming
 Creation Date: 2024-12-14, 20:31
-Last Date: 2024-12-18T23:05:46+08:00
+Last Date: 2024-12-26T19:13:13+08:00
 References: 
 draft: 
 description: 
@@ -123,6 +123,29 @@ minHeap.pop();
 minHeap.top().val;
 ```
 
+## Stack Manipulation
+---
+```java title="Java"
+// Create a stack
+Stack<Integer> stack = new Stack<>();
+
+// Add a new element to the stack
+stack.push(10);
+
+// Remove and return the top element from the stack
+int topElement = stack.pop();
+
+// Return the top element from the stack
+int topElement = stack.peek();
+```
+
+## Convert from Integer to Character
+
+```java title="Java"
+int intValue = 65; // Unicode value of 'A' 
+char charValue = (char) intValue; 
+System.out.println(charValue); // Output: A
+```
 
 ## Convert HTML to TXT
 ---
@@ -158,3 +181,14 @@ writer.close();
 > 
 >  Also note that, The `FileWriter writer` formats and writes the content into a text file, ensuring that line breaks are correctly represented using `\n`.
 
+## Object Comparison
+---
+```python title="Python"
+# Compares values for equality
+# For example, check if two numbers or strings are the same
+a == b
+
+# Compares identity
+# Whether two variables point to the same object in memory
+a is b
+```
