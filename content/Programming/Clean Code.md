@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - programming
 Creation Date: 2024-05-20, 22:45
-Last Date: 2024-05-20T22:55:23+08:00
+Last Date: 2024-12-21T22:24:15+08:00
 References: 
 draft: 
 description: 
@@ -14,6 +14,9 @@ description:
 ## Abstract
 ---
 - Codes that are written in a way that makes it **simple**, **concise**, and **expressive**
+
+>[!important]
+> Clean code should minimise cognitive load as much as possible, that means it takes less effort for new joiners or ourselves to get a sense of the codes. 
 
 
 ## Never Nester
@@ -35,3 +38,4 @@ description:
 ## References
 ---
 - [Why You Shouldn't Nest Your Code - YouTube](https://www.youtube.com/watch?v=CFRhGnuXG-4)
+- [Cognitive load is what matters](https://minds.md/zakirullin/cognitive#long)

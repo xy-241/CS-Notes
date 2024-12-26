@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2024-01-12, 00:12
-Last Date: 2024-11-19T15:28:21+08:00
+Last Date: 2024-12-25T21:57:27+08:00
 References: 
 draft: 
 sr-due: 2024-01-30
@@ -95,3 +95,11 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 > - Press `Shift` twice to open "Search Everywhere" dialog.
 > - Press `Cmd+2` to manage bookmarks
 > - Press `Fn+3` to bookmark files or codes
+
+
+## Cursor
+---
+- [Install Curso](https://www.cursor.com/)
+
+>[!tool] Removing settings and extensions installed
+> Run `rm -rf ~/Library/Application Support/Cursor` and `rm -rf ~/.cursor*`. For more information, refer to [here](https://forum.cursor.com/t/100-remove-cursor/4864/2).

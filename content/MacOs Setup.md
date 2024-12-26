@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-12-10T20:40:40+08:00
+Last Date: 2024-12-26T19:18:41+08:00
 References: 
 title: A collection of useful tools for developers who use MacOS
 description: A macOS setup guide for development, covering essential tools, configurations, and resources for productivity and efficiency.
@@ -136,6 +136,7 @@ h() {
 ---
 - [ ] [[Code Editor Setup#Neovim]]
 - [ ] [[Code Editor Setup#Visual Studio Code]]
+- [ ] [[Code Editor Setup#Cursor]] - This is better than VSC!
 - [ ] [[Code Editor Setup]]
 - [ ] [GitKraken - Git GUI Tool](https://www.gitkraken.com/download) 
 - [ ] [Postman - API Testing Tool](https://www.postman.com/downloads/)

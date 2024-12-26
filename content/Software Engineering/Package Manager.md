@@ -10,7 +10,7 @@ tags:
   - js
   - rust
 Creation Date: 2024-03-10, 17:29
-Last Date: 2024-06-12T01:33:37+08:00
+Last Date: 2024-12-23T17:53:42+08:00
 References: 
 draft: 
 description: 
@@ -164,6 +164,10 @@ description:
 
 >[!caution]
 > We need to manually update the packages installed. 
+
+## Nix
+---
+- Install Nix with `sh <(curl -L https://nixos.org/nix/install)`. You can test your installation with `nix-shell -p nix-info --run "nix-info -m"` which creates a temporary environment with the `nix-info` tool installed and executed
 
 
 ## References
