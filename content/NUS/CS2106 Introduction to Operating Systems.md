@@ -31,7 +31,7 @@ title: cs2106 nus notes
 ---
 - [[Process (进程)]]
 - [[Process Hierarchy]]
-- [[Process Management]]
+- [[Process Scheduling]]
 - [[Process Operations]]
 - [[Process Control Block (PCB)]]
 - [[Address Space]]

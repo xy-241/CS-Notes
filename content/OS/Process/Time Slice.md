@@ -15,7 +15,7 @@ References:
 - The **period of time** for which a [[Process (进程)]] is allowed to run in a [[CPU Scheduling Techniques#Preemptive Scheduling]] system
 
 >[!attention]
-> The **length of each time slice** can be critical to balancing **system performance** and **process responsiveness** - if the time slice is **too short** then the [[Process Management#Process Scheduler]] will **consume too much processing time**, but if the time slice is **too long**, processes will take **longer to respond to input**.
+> The **length of each time slice** can be critical to balancing **system performance** and **process responsiveness** - if the time slice is **too short** then the [[Process Scheduling#Process Scheduler]] will **consume too much processing time**, but if the time slice is **too long**, processes will take **longer to respond to input**.
 > 
 > Thus, we have [[#Minimum Granularity]] to **control the resource usage of process scheduler** and [[#Target Latency]] to **ensure the responsiveness of the system**.
 

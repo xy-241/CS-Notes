@@ -18,7 +18,7 @@ References:
 >[!important] 3 Steps
 > 1. [[interrupt_handler_saving_state.png|Saves the state of the CPU]] for the [[Process (进程)]] into the process's [[Process Control Block (PCB)]]. The [[Register#Program Counter]] of the process is saved to a different [[Register]]. So the interrupted process can be resumed later
 > 2. Does its other business
-> 3. Invokes the [[Process Management#Process Scheduler]]
+> 3. Invokes the [[Process Scheduling#Process Scheduler]]
 
 
 >[!caution] C Implementation

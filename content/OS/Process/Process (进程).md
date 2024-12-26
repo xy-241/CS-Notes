@@ -50,7 +50,7 @@ description: Dive into the world of processes in operating systems!
 - A list of open [[File]]
 - Outstanding [[Interrupts (中断)#Software Interrupt]]
 - List of related processes
-- [[Process Management]] information etc
+- [[Process Scheduling]] information etc
 
 
 

@@ -63,7 +63,7 @@ description: Dive into the heart of your operating system and discover how kerne
 > Due to the overhead of communication between different modules
 
 >[!info] Components of Traditional Microkernel
-> 1. [[Process Management]]
+> 1. [[Process Scheduling]]
 > 2. [[Main Memory]] Management 
 > 3. [[Inter-Process Communication (IPC)]]
 >    
