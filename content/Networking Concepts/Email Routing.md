@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-03-07, 16:38
-Last Date: 2024-12-14T17:05:15+08:00
+Last Date: 2024-12-25T22:34:04+08:00
 References: 
 draft: 
 description: Email routing directs emails to recipients using rules for secure, organized, and flexible delivery, including custom domain support. Cloudflare Email Routing is a free service that enhances this process with routing analytics and programmable handling via Cloudflare Workers.
@@ -63,3 +63,5 @@ title: "Email Routing: Mechanisms, Security, and Cloudflare Solutions"
 > 
 > You can access the environment variables of the email worker via the `env` parameter. The screenshot above shows the structure of the `message` parameter.
 
+>[!important] Worker observability
+>We are able to collect [[Observability#Log|logs]] of the worker now! For more details, refer to [Cloudflare worker logs](https://developers.cloudflare.com/workers/observability/logs/workers-logs/).
