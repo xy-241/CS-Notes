@@ -1,14 +1,14 @@
 ---
-title: Home Page
+title: Second Brain for Computer Science | Engineering Insights
 Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-08-16T15:45:16+08:00
+Last Date: 2024-12-27T12:00:28+08:00
 References: 
-description: My Second Brain for Computer Science related stuff. Zero fluff, short and sweet.
+description: Your go-to second brain for learning and sharing computer science concepts—zero fluff, just concise and actionable insights. Explore topics like algorithms, data structures, networking, databases, cloud computing, software design, system architecture, and more. Delve into tools like Docker, Linux, Python, and gain clear explanations on low-level learning, security, and engineering essentials.
 ---
 ![[ninja.jpg|800]]
 
