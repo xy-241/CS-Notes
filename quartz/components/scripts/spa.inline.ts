@@ -42,8 +42,22 @@ function notifyNav(url: FullSlug) {
 const cleanupFns: Set<(...args: any[]) => void> = new Set()
 window.addCleanup = (fn) => cleanupFns.add(fn)
 
+function startLoading() {
+  const loadingBar = document.createElement("div")
+  loadingBar.className = "navigation-progress"
+  loadingBar.style.width = "0"
+  if (!document.body.contains(loadingBar)) {
+    document.body.appendChild(loadingBar)
+  }
+
+  setTimeout(() => {
+    loadingBar.style.width = "80%"
+  }, 100)
+}
+
 let p: DOMParser
 async function navigate(url: URL, isBack: boolean = false) {
+  startLoading()
   p = p || new DOMParser()
   const contents = await fetch(`${url}`)
     .then((res) => {
@@ -104,6 +118,7 @@ async function navigate(url: URL, isBack: boolean = false) {
   if (!isBack) {
     history.pushState({}, "", url)
   }
+
   notifyNav(getFullSlug(window))
   delete announcer.dataset.persist
 }
