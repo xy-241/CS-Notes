@@ -7,26 +7,48 @@ tags:
   - networking
   - js
 Creation Date: 2023-10-04T11:22:56+08:00
-Last Date: 2024-03-26T01:11:35+08:00
+Last Date: 2024-12-28T14:55:18+08:00
 References: 
+description: A URL specifies a resource's location and access method via protocols like http. Key parts include Path (resource location), Path Parameters (dynamic segments), Query (customisation via key-value pairs), and Slug (human-readable, simplified resource identifiers).
 ---
 ## Abstract
 ---
 ![[url.png|400]]
 
 - Stands for **Uniform Resource Locator**
+- Specifies the **location** of a resource and **how to access it** using a [[Network Protocol]] such as `http`, `https`, or `ftp`
 
 ### URL Path
-- The exact place to find the resource 
-- Given `blog.yxy.ninja/resume.pdf`, the URL Path is `resume.pdf`, it is also known as **Path Parameter**
-- In Express.js, path parameters are accessed through `req.params`
+- Specific part of the [[URL]] that identifies the location of a resource on the server
+- For example, in `https://blog.yxy.ninja/resume.pdf`, the URL Path is `/resume.pdf`. Note: This is not the same as a [[#URL Path Parameter]]!
+
+### URL Path Parameter
+- Path parameters are **dynamic segments in a URL path** used to identify resources or pass information to the server
+
+
+>[!code]
+> Given `http://localhost:3000/users/123/posts/456`
+> - `123` is the value for the path parameter `userId`
+> - `456` is the value for the path parameter `postId`
+> 
+>In **Express.js**, path parameters are accessed through the `req.params` object. For the given URL, `req.params` would look like: `{ userId: '123', postId: '456' }`.
 
 ### URL Query
-- A way for [[Host#Client]] to customise the resources it is trying to obtain from a particular [[#URL Path]]. Thus URL Query should be placed after all URL Path
-- Key-value pair
-	- Single URL Query:  `?KEY=VALUE`
-	- Multiple URL Query: `?KEY=VALUE&KEY=VALUE`
-- In Express.js, query parameters are accessed through `req.query`
+- A **URL Query** allows the [[Host#Client|client]] to **customise the resource** it is trying to obtain from a particular [[#URL Path]]
+- The query string is appended **after** the URL path, starting with a `?` and followed by **key-value pairs**
+
+>[!important] Format
+> Single query parameter: `?KEY=VALUE`
+> 
+> Multiple query parameters: `?KEY=VALUE&KEY=VALUE`
+
+>[!code]
+> Given `http://localhost:3000/users/123/posts?sort=asc&limit=10`
+> - `sort=asc` is a query parameter specifying the sort order
+> - `limit=10` is a query parameter specifying the number of results to return
+>   
+> In **Express.js**, query parameters are accessed through the `req.query` object. For the given URL, `req.query` would look like: `{ sort: 'asc', limit: '10' }`.
+
 
 ### Slug
 - A **human-readable**, **simplified** part of a URL used to identify a specific page or resource on a website (The URL Path)
