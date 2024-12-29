@@ -22,7 +22,7 @@ description: Dive into the world of processes in operating systems!
 
 
 >[!notes] Communication among processes
-> Process **usually** don't share [[Main Memory#Memory Frames]] among themselves for isolation purposes. We need [[Inter-Process Communication (IPC)]] for communication among processes.
+> Process **usually** don't share [[Main Memory#Memory Frames]] among themselves for isolation purposes. We need [[Inter-Process Communication]] for communication among processes.
 
 
 >[!code] Process memory usage

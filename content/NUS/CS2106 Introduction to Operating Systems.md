@@ -37,7 +37,7 @@ title: cs2106 nus notes
 - [[Address Space]]
 - [[Context Switch]]
 - [[Time Slice]]
-- [[Inter-Process Communication (IPC)]]
+- [[Inter-Process Communication]]
 
 ## Process Alternatives - Threads
 ---

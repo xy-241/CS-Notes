@@ -63,7 +63,7 @@ aliases:
 ![[software_interrupt.png|300]]
 
 - Known as **Signal** in [[Unix#Unix-like]], or **Asynchronous Events** in **Windows**
-- Follow the [[Sequential Circuit#Asynchronous Sequential Circuit]] behaviour, can occur at any time. Primarily focused on [[Inter-Process Communication (IPC)]] and **event handling** within a process
+- Follow the [[Sequential Circuit#Asynchronous Sequential Circuit]] behaviour, can occur at any time. Primarily focused on [[Inter-Process Communication]] and **event handling** within a process
 - Upcall allows us to insert [[#Upcall Handler]] to [[Process (进程)]], a way to bridge the gap between process and [[#Hardware interrupts (外中断)]]
 
 

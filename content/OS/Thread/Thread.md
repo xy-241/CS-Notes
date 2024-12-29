@@ -26,7 +26,7 @@ References:
 > Faster to create and destroy compared to process, because it can be created without making [[System Call (系统调用)]] to the underlying [[Kernel]].
 
 >[!success] Easier to program
-> Unlike process, different parts of program able to communicate **without** the use of [[Interrupts (中断)]] and [[Inter-Process Communication (IPC)]] etc.
+> Unlike process, different parts of program able to communicate **without** the use of [[Interrupts (中断)]] and [[Inter-Process Communication]] etc.
 
 >[!caution] No protection among threads
 > One thread can read, write, or even wipe out another thread’s stack. It is also able to bring down the entire Process.

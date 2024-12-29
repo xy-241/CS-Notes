@@ -53,7 +53,7 @@ description: Dive into the heart of your operating system and discover how kerne
 ### Micro Kernel Architecture 
 ![[microkernel.png|500]]
 - [[Kernel]] only handles critical part of the system. The rest runs in [[User Space]]
-- Different kernel components communicate with each other via  [[Inter-Process Communication (IPC)]]
+- Different kernel components communicate with each other via  [[Inter-Process Communication]]
 - Used by [[MINIX]]
 
 >[!success] Fault-tolerant
@@ -65,7 +65,7 @@ description: Dive into the heart of your operating system and discover how kerne
 >[!info] Components of Traditional Microkernel
 > 1. [[Process Scheduling]]
 > 2. [[Main Memory]] Management 
-> 3. [[Inter-Process Communication (IPC)]]
+> 3. [[Inter-Process Communication]]
 >    
 > There are no [[Device Controller#Device Driver]] and [[File System]] etc
 
