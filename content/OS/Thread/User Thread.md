@@ -7,51 +7,48 @@ tags:
   - OS
   - go
 Creation Date: 2023-08-16T23:11:00
-Last Date: 2024-10-17T17:19:26+08:00
+Last Date: 2024-12-31T12:46:19+08:00
 References: 
+description: User-space threads offer enhanced performance and portability by managing threads in user space with no kernel intervention. They are customizable, scalable, and faster than kernel-based threads. However, they face challenges like thread hogging, requiring efficient thread management via runtime systems and schedulers for optimal execution.
 ---
 ## Abstract
 ---
 ![[thread_implementation_in_user_space.png|300]]
 
 
-- [[Thread]] are managed entirely in [[User Space]]. They run on top of a [[#Runtime System]]. A user thread library is used to implement the threads
-- Each process needs its own private [[Thread#Thread Table]], unlike the [thread table managed by the kernel for kernel threads](thread_implementation_in_kernel_space.png)
+- [[Thread]] are managed entirely in [[User Space]], running on top of a [[#Runtime System]]. A user thread library is used to implement the threads
+- Each process maintains its own private [[Thread#Thread Table|thread table]], in contrast to the [thread table managed by the kernel for kernel threads](thread_implementation_in_kernel_space.png)
 
 >[!important]
-> The [[Kernel]] knows nothing about them. As far as the kernel is concerned, it is managing single-threaded [[Process (进程)]].
-
-
->[!success] Good Compatibility
-> Thread can be implemented on an kernel that does not support threads.
-
->[!success] Great Performance
-> Thread switching is at least **an order of magnitude faster** than trapping to the kernel. No [[Trap Interrupt (陷入)]] and [[Context Switch]] are needed. The [[CPU Cache]] also don't need to be flushed.
-
->[!success] Easy to customise
-> Each Process can have its own **customized Process Scheduling Algorithms** without the need to modify the kernel codes.
-
->[!success] Better Scalability
-> [[Kernel Thread]] require some table space and [[Address Space#Stack Segment]] in the Kernel, which can be a problem if there is a very large number of threads.
-
->[!caution] Declined Performance
-> Since Kernel sees a Process with multiple user threads as **one single thread**, when the running user thread has a [[Page Fault]], other user threads can't be scheduled to run.
-
->[!caution] Risk of Thread Hogging
-> If an user thread starts running, no other User Thread in that Process will ever run unless the first thread voluntarily gives up the [[CPU]]. Within a single process, there is no [[Interrupts (中断)]], making it impossible to schedule processes in a round-robin fashion.
+> With a pure user-space threading model (many-to-one), the [[Kernel|kernel]] perceives a [[Process (进程)|process]] with multiple [[User Thread|user threads]] as a **single [[Kernel Thread|kernel thread]]**. 
 > 
-> Implementing [[Interrupts (中断)]] in [[#Runtime System]] is **resource intensive**.
+> When a [[Page Fault|page fault]] occurs, it is not possible to schedule another thread within the same process to run. This limitation can be addressed by adopting a **kernel-supported threading model,** such as a [[Kernel Thread|one-to-one kernel thread mapping]] or a [[Hybrid Thread|many-to-many hybrid threading model]]
 
->[!question] What happens when thread is blocked locally?
-> Thread calls the Runtime System to check if the thread must be put into blocked state. If so, Runtime System stores the thread’s registers (i.e., its own) in the thread table and looks in the table for a thread that is ready to run.
+>[!important] Key advantages
+> **Portability**: Threads can be implemented on a kernel that does not natively support threads.
+> 
+> **Performance**: Thread switching is significantly faster than [[Kernel Thread|kernel-based switching]], with no need for [[Trap Interrupt (陷入)]] or [[Context Switch]], and the [[CPU Cache]] does not need to be flushed.
+> 
+> **Customisation**: Each process can implement its own **customised process scheduling algorithms** without altering the kernel code.
+> 
+> **Scalability**: Unlike [[Kernel Thread]], which require additional table space and [[Address Space#Stack Segment]] in the kernel, user threads avoid these limitations, supporting better scalability for large numbers of threads.
+
+>[!caution] Risk of thread hogging
+> If a user thread starts running, no other user thread in the same process will execute unless the first thread voluntarily relinquishes the [[CPU]]. Within a single process, there are no [[Interrupts (中断)]], making it impossible to schedule threads in a round-robin manner.
+> 
+> Implementing [[Interrupts (中断)]] in the [[#Runtime System]] is **resource-intensive**.
 
 
 ## Runtime System
 ---
-- Contains a **Thread Scheduler** in [[User Space]] for [[User Thread]]
+- Contains a **Thread Scheduler** in [[User Space]] for managing [[User Thread]]
+
+>[!important] Thread blocking
+> The thread calls the runtime system to check if it needs to be put into a blocked state. If so, the runtime system stores the thread’s registers (i.e., its state) in the thread table and searches the table for a thread that is ready to run.
+
 ### Scheduler Activations
-- Instead of relying on the [[Kernel]] for every thread management decision, the [[#Runtime System]]  is responsible for scheduling [[Thread]]
-- Mitigates inefficiency from Kernel
+- Instead of relying on the [[Kernel]] for every thread management decision, the [[#Runtime System]] is responsible for scheduling [[Thread]]
+- This approach mitigates inefficiencies caused by kernel involvement in thread management
 
 
 ## Goroutines
