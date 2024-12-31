@@ -108,10 +108,10 @@ const _rebaseHtmlElement = (el: Element, attr: string, newBase: string | URL) =>
   el.setAttribute(attr, rebased.pathname + rebased.hash)
 }
 export function normalizeRelativeURLs(el: Element | Document, destination: string | URL) {
-  el.querySelectorAll('[href^="./"], [href^="../"]').forEach((item) =>
+  el.querySelectorAll('[href=""], [href^="./"], [href^="../"]').forEach((item) =>
     _rebaseHtmlElement(item, "href", destination),
   )
-  el.querySelectorAll('[src^="./"], [src^="../"]').forEach((item) =>
+  el.querySelectorAll('[src=""], [src^="./"], [src^="../"]').forEach((item) =>
     _rebaseHtmlElement(item, "src", destination),
   )
 }

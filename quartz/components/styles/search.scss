@@ -151,6 +151,7 @@
         }
 
         & > #preview-container {
+          flex-grow: 1;
           display: block;
           overflow: hidden;
           font-family: inherit;
