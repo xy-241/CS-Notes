@@ -6,20 +6,21 @@ Author Profile:
 tags:
   - git
 Creation Date: 2023-11-28T16:31:00
-Last Date: 2024-01-08T22:10:31+08:00
+Last Date: 2024-12-31T17:58:34+08:00
 References: 
+description: git rebase rewrites commit history for linearity. Avoid rebasing public branches; use it for local feature branches. Commands like --continue, --abort, and -i manage conflicts or edits. For shared branches, prefer git merge.
 ---
+>[!important]
+> The golden rule of `git rebase` is to **avoid rebasing public branches** to prevent rewriting history that others might rely on.
+> 
+> `git rebase` should only be applied to **local feature branches** or branches derived from feature branches.
+> 
+> For **public branches** shared among team members, it's better to use `git merge` to preserve the integrity of shared history.
+
 ## Abstract
 ---
-- 
+- `git rebase` is a Git command used to rewrite the commit history of a branch by moving its base to a new starting point. This allows you to integrate changes from another branch while maintaining a linear and clean commit history
 
-
-## Benefits
----
-### Concise History
-- Sometimes, there are commits that are used to tested the idea
-- If we don't clean them up, when people branch out, these testing idea commits will follow too which make it harder to read and understand the development of the project
-- To prevent meaningless trails and errors commits from polluting the git history, especially when others are branching out
 
 ## Basics
 ---
@@ -55,6 +56,11 @@ References:
 >[!info]
 >- Make sure the oldest commit in the included commits can't be squashed 
 >- Or we will get `error: cannot 'squash' without a previous commit` error
-### Remove feature branch from [[Git#History]]
-- Initialise the rebase, include commits between the merged commit(inclusive) and the commit(inclusive) where the feature branch starts 
-- If we just want to remove the feature branch, we can just save and quite the rebase plan. And it is done
+
+### Remove feature branch from Git history
+- Initialise the rebase, including commits between the merged commit (inclusive) and the commit where the feature branch starts (inclusive) 
+- If you only want to remove the feature branch, simply save and exit the rebase plan without making any changes. The branch will be effectively removed from the history 
+
+## References
+---
+- [ByteByteGo on LinkedIn: #systemdesign #coding #interviewtips \| 10 comments](https://www.linkedin.com/posts/bytebytego_systemdesign-coding-interviewtips-activity-7279732455685648384-aZJv?utm_source=share&utm_medium=member_desktop)
