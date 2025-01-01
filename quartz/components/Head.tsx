@@ -14,7 +14,7 @@ import { unescapeHTML } from "../util/escape"
  * @param opts options for generating image
  */
 async function generateSocialImage(
-  { cfg, description, fileName, fontsPromise, title, fileData }: ImageOptions,
+  { cfg, description, fileName, fontsPromise, ogImageTitle, fileData }: ImageOptions,
   userOpts: SocialImageOptions,
   imageDir: string,
 ) {
@@ -22,7 +22,7 @@ async function generateSocialImage(
   const { width, height } = userOpts
 
   // JSX that will be used to generate satori svg
-  const imageComponent = userOpts.imageStructure(cfg, userOpts, title, description, fonts, fileData)
+  const imageComponent = userOpts.imageStructure(cfg, userOpts, ogImageTitle, description, fonts, fileData)
 
   const svg = await satori(imageComponent, { width, height, fonts })
 
@@ -78,6 +78,15 @@ export default (() => {
     const titleSuffix = cfg.pageTitleSuffix ?? ""
     const title =
       (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+    const ogImageTitle = (
+      fileData.slug?.split('/').pop()  // 1. Get the last part of the file path
+        ?.replace(/-/g, ' ')           // 2. Replace hyphens with spaces
+        ?.replace(/[\u4e00-\u9fa5]/g, '')  // 3. Remove Chinese characters
+        ?.replace(/\([^)]*\)/g, '')    // 4. Remove parentheses and their contents
+        ?.trim() ??                     // 5. Remove extra spaces
+      i18n(cfg.locale).propertyDefaults.title  // 6. Fallback to "Untitled"
+    ) + titleSuffix                    // 7. Add the suffix
+
     let description = ""
     if (fdDescription) {
       description = unescapeHTML(fdDescription)
@@ -100,7 +109,7 @@ export default (() => {
         // Generate social image (happens async)
         generateSocialImage(
           {
-            title,
+            ogImageTitle,
             description,
             fileName,
             fileDir,
