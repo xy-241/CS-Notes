@@ -31,8 +31,14 @@ I was unable to find **high-quality visuals** on the internet to better **illust
 ### A Ten-Year Project
 I am planning to work on my notes daily for the next **10 years**, building a second brain as I **learn from my mistakes** and **acquire new knowledge**. I have made over **800 commits** to this repository, totaling **150,000 words** over the **past 6 months**.
 
-## Star History
+## Project Stats
+<div align="center">
+
+![Repo stats](https://repobeats.axiom.co/api/embed/9aeddc1eb7a41064b764dba1ea1b5617a6d11d03.svg "Repobeats analytics image")
+
 [![Star History Chart](https://api.star-history.com/svg?repos=xy-241/CS-Notes&type=Date)](https://star-history.com/#xy-241/CS-Notes&Date)
+
+</div>
 
 ## Notes Navigator 🧭
 
