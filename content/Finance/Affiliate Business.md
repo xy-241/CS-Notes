@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - finance
 Creation Date: 2024-12-22, 13:39
-Last Date: 2024-12-22T18:27:49+08:00
+Last Date: 2025-01-03T11:36:56+08:00
 References: 
 draft: 
 description: Affiliate apps do not save you the most!
@@ -24,12 +24,19 @@ description: Affiliate apps do not save you the most!
 2. When you make a purchase, the referral information, including the cookie value, is sent to the merchant
 3. The merchant credits the sale to the affiliate associated with the cookie
 
+>[!question] How do third-party affiliate businesses take the last-click attribution?
+> The last-click attribution to the referrer is determined by the [[Cookie|cookies]] set by the website. Third-party affiliate businesses are **unable to directly access the cookies** of the website, as these may contain sensitive data, such as access tokens. 
+> 
+> To circumvent this, they often **open a new tab** or redirect the user to the same product page, embedding their own referral code in the URL. This action effectively modifies the last-click attribution cookie. 
+> 
+> By doing so, they can claim credit for the referral without needing direct access to the user's cookies.
+
 ## Why Third-Party Affiliate Businesses Fall Short?
 ---
-- Third-party affiliate businesses often take the last-click attribution when users activate their services. Companies like Honey encourage users to do so by marketing their services as a quick way to find the biggest discount (which is often false, but they argue with time-sensitive discounts and similar sales tactics.)
+- Third-party affiliate businesses often take the [[#Last-click Attribution|last-click attribution]] when users activate their services during checkout. Companies like Honey encourage users to do so by marketing their services as a quick way to find the biggest discount (which is often false, but they argue with time-sensitive discounts and similar sales tactics.)
 
 >[!important] Damage
-> **Referrers lose rewards** because, even though consumers accessed the product via their referral link, the third-party affiliate business overrides the cookie value with its own referral ID and claims the [[#Last-click Attribution|last-click attribution]].
+> **Referrers lose rewards** because, even though consumers accessed the product via their referral link, the third-party affiliate business overrides the cookie value with its own referral ID and claims the last-click attribution.
 > 
 > **Consumers only gets a portion** of the affiliate value when using apps like Honey or ShopBack. This process is not entirely transparent, and consumers often miss out on the full benefits.
 
