@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-12T18:59:00
-Last Date: 2024-12-31T13:06:47+08:00
+Last Date: 2025-01-04T23:19:57+08:00
 References: 
 description: Threads within a process share the same address space, allowing for faster execution and easier communication without system calls. Types include User, Kernel, and Hybrid Threads. Threads are more performant, easier to program, but lack protection between them, leading to potential issues.
 ---
@@ -52,6 +52,37 @@ description: Threads within a process share the same address space, allowing for
 - Tracks the [[Thread|threads]] in a [[Process (进程)|process]]
 - Similar to the [[Kernel]]'s [[Process Control Block (PCB)#Process Table|process table]], but it specifically tracks [per-thread items](thread_resources.png)
 - Managed by the [[User Thread#Runtime System|runtime system]] for [[User Thread]] and by the kernel for [[Kernel Thread]]
+
+## Thread Interleaving
+---
+```c
+int x = 0;
+void thread1() {
+    x += 1; // Operation 1
+    x *= 2; // Operation 2
+}
+void thread2() {
+    x += 3; // Operation 3
+    x *= 4; // Operation 4
+}
+
+// Sequential Execution
+x = 0 → x + 1 = 1 → x * 2 = 2 → x + 3 = 5 → x * 4 = 20
+
+// Interleaved Execution
+x = 0 → x + 3 = 3 (Operation 3)
+      → x + 1 = 4 (Operation 1)
+      → x * 4 = 16 (Operation 4)
+      → x * 2 = 32 (Operation 2)
+```
+- The way multiple [[Thread|threads]] execute [[Concurrency (并发)|concurrently]], where their **operations are interleaved in an unpredictable sequence** due to the **scheduling decisions** of the [[Kernel|kernel]] or [[User Thread#Runtime System|runtime system]]
+
+>[!important]
+> Since threads **often share resources** (e.g., memory, variables, or files), the order in which their instructions are executed can **affect the outcome of a program**.
+> 
+> The **non-deterministic nature** of thread interleaving **makes bugs hard to reproduce and debug**.
+> 
+> It can lead to problems like [[Race Condition (竞态条件)|race conditions]] if not handled carefully with [[Synchronisation (同步)|synchronisation techniques]].
 
 
 ## PThread
