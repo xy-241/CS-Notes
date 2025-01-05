@@ -6,16 +6,16 @@ Author Profile:
 tags:
   - git
 Creation Date: 2023-11-28T16:31:00
-Last Date: 2024-12-31T17:58:34+08:00
+Last Date: 2025-01-05T15:40:25+08:00
 References: 
 description: git rebase rewrites commit history for linearity. Avoid rebasing public branches; use it for local feature branches. Commands like --continue, --abort, and -i manage conflicts or edits. For shared branches, prefer git merge.
 ---
 >[!important]
 > The golden rule of `git rebase` is to **avoid rebasing public branches** to prevent rewriting history that others might rely on.
 > 
-> `git rebase` should only be applied to **local feature branches** or branches derived from feature branches.
+> `git rebase` should only be applied to **local feature branches** to keep your feature branch commit history clean.
 > 
-> For **public branches** shared among team members, it's better to use `git merge` to preserve the integrity of shared history.
+> For **public branches** shared among team members, it's better to use `git merge` to preserve the integrity of the shared history. This way, when tracing which new feature caused an issue, you can troubleshoot using the merge commits instead of relying just on `git bisect`, which can be more complex and less intuitive.
 
 ## Abstract
 ---
@@ -63,4 +63,5 @@ description: git rebase rewrites commit history for linearity. Avoid rebasing pu
 
 ## References
 ---
-- [ByteByteGo on LinkedIn: #systemdesign #coding #interviewtips \| 10 comments](https://www.linkedin.com/posts/bytebytego_systemdesign-coding-interviewtips-activity-7279732455685648384-aZJv?utm_source=share&utm_medium=member_desktop)
+- [ByteByteGo on LinkedIn](https://www.linkedin.com/posts/bytebytego_systemdesign-coding-interviewtips-activity-7279732455685648384-aZJv?utm_source=share&utm_medium=member_desktop)
+- [直接使用git pull拉代码，被同事狠狠diss了！\_哔哩哔哩\_bilibili](https://b23.tv/CFCm3Bo)
