@@ -6,6 +6,7 @@ Author Profile:
 tags:
   - sql
   - java
+  - binance
 Creation Date: 2024-12-24, 20:16
 Last Date: 2024-12-29T18:31:44+08:00
 References: 

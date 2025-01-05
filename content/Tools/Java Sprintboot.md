@@ -6,6 +6,7 @@ Author Profile:
 tags:
   - backend_dev
   - java
+  - binance
 Creation Date: 2024-11-19, 15:35
 Last Date: 2024-11-20T16:20:41+08:00
 References: 

@@ -5,6 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - java
+  - binance
 Creation Date: 2024-12-12, 14:17
 Last Date: 2024-12-12T18:24:12+08:00
 References: 

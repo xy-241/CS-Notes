@@ -7,6 +7,7 @@ tags:
   - bash
   - java
   - OS
+  - binance
 Creation Date: 2024-03-19, 17:24
 Last Date: 2024-12-13T02:23:26+08:00
 References: 

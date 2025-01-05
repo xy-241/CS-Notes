@@ -6,6 +6,7 @@ Author Profile:
 tags:
   - system_design
   - devops
+  - binance
 Creation Date: 2024-01-02, 13:05
 Last Date: 2024-11-16T23:41:07+08:00
 References: 

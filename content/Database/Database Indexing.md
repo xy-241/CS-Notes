@@ -5,6 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - database
+  - binance
 Creation Date: 2024-12-26, 21:50
 Last Date: 2024-12-26T22:48:25+08:00
 References: 

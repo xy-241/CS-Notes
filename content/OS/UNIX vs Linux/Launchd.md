@@ -6,6 +6,7 @@ Author Profile:
 tags:
   - OS
   - devops
+  - binance
 Creation Date: 2024-11-11, 10:41
 Last Date: 2024-11-13T13:56:47+08:00
 References: 

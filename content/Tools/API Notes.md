@@ -6,11 +6,12 @@ Author Profile:
 tags:
   - programming
   - networking
+  - binance
 Creation Date: 2024-12-17, 16:01
 Last Date: 2024-12-17T16:09:41+08:00
 References: 
 draft: 
-description: 
+description:
 ---
 
 ## Google API
