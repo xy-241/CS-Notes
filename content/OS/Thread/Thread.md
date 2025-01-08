@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-12T18:59:00
-Last Date: 2025-01-04T23:19:57+08:00
+Last Date: 2025-01-08T23:13:40+08:00
 References: 
 description: Threads within a process share the same address space, allowing for faster execution and easier communication without system calls. Types include User, Kernel, and Hybrid Threads. Threads are more performant, easier to program, but lack protection between them, leading to potential issues.
 ---
@@ -20,6 +20,14 @@ description: Threads within a process share the same address space, allowing for
 - Threads within a process share the same [[Address Space]] and other per-process resources, as illustrated above. So threads within the same process **can share memory without** having to use any [[System Call (系统调用)]]
 
 - There are 3 types - [[User Thread]], [[Kernel Thread]] & [[Hybrid Thread]]
+
+>[!important]
+> In [[Linux Kernel|Linux]], each thread is treated as a process, so each has its **own process ID**. This allows the kernel to treat threads and processes **in the same way**.
+> 
+> All threads in the same process **share the same thread group ID (TGID)**, which is the **PID of the main thread of the process**. User-space tools like `ps` and `top` often only show the TGID by default.
+> 
+> A TGID is handy as it allows the kernel to apply operations, such as [[Interrupts (中断)#Upcall|signals]], that apply to all threads of the same process.
+
 
 >[!success] More Performant
 > Threads avoid the need for expensive [[Context Switch#Process Context Switch|context switching]], making them **10-100 times faster** than processes.
