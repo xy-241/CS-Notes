@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2023-08-06T15:13:00
-Last Date: 2024-03-21T12:48:27+08:00
+Last Date: 2025-01-13T23:19:49+08:00
 References: 
 ---
 ## Abstract
@@ -26,6 +26,8 @@ References:
 > We only cares about what is the complexity when the input size is approaching Infinity (∞), that is where the name **asymptotic** comes from.
 >
 >So when the actual input size in real world is small, the algorithms with worst time complexity may run fast!
+>
+>In the above example, array find is faster than binary search on **smaller datasets** because the array can leverage the [[CPU Cache|CPU cache]] to **fetch data at a much faster rate**. This results in **shorter overall execution time**. However, this CPU cache advantage **diminishes as the dataset size increases**.
 
 - Asymptotic Analysis doesn't return some good approximations of the time the program takes to run. We mean the time taken by the program bounded by **some constant** $\times$ **a function** when the **input size is bigger** than a **certain constant**
 - $O()$ represents the upper bound
