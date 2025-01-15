@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-10T23:12:00
-Last Date: 2024-10-17T17:43:46+08:00
+Last Date: 2025-01-15T18:23:38+08:00
 References: 
+description: Context switching enables the CPU to alternate tasks seamlessly, powering concurrency. It relies on the Process Control Block (PCB) to store task states, ensuring tasks resume without restarting. Process switches are slower with higher overhead, while thread switches are faster.
 ---
 ## Abstract
 ---
@@ -19,6 +20,9 @@ References:
 | --------------------------------------------------- | --------------- | --------------- | --------- |
 | [[#Process Context Switch\|Process Context Switch]] | Slow            | High            | ✅         |
 | [[#Thread Context Switch\|Thread Context Switch]]   | Fast            | Low             | ❌         |
+
+>[!important]
+> To perform context switching, we need to access [[Register|registers]] which can only be done with [[Assembly language|assembly language]], or high-level languages like [[C]] indirectly, via **inline assembly**.
 
 
 ## Process Context Switch
