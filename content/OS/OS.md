@@ -6,19 +6,23 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-13T19:06:12+08:00
-Last Date: 2024-12-02T22:35:13+08:00
+Last Date: 2025-01-15T18:22:38+08:00
 References: 
 description: The giant that powers the software application we use on a daily basis!
 ---
 ## Abstract
 ---
 - Consists of [[Kernel]] and [[OS System Program]]
-- 2 main functionalities
-	1. Provide user features in the form of [[Abstraction#Abstraction Barrier]] to **interact with the hardware**(hardware virtualisation). Some key abstractions are [[Process (进程)]], [[Thread]], [[Address Space]] and [[File System]]
-	2. Resource Manager for resources like [[CPU]], [[IO Device]] & [[Main Memory]] etc
 
->[!important]
-> As you can see from the two main functionalities of OS. OS aims to be a **general-purpose software** that **provides a platform** for users to **build on top** to complete different tasks. At the same time, OS **manages** the **direct communication** with the **hardware**.
+
+>[!important] 2 main functionalities
+> 1. Provide user features in the form of [[Abstraction#Abstraction Barrier]] to **interact with the hardware**. Some key abstractions are [[Process (进程)]], [[Thread]], [[Address Space]] and [[File System]]
+> 2. Resource Manager for resources like [[CPU]], [[IO Device]] & [[Main Memory]] etc
+> 
+> OS aims to be a **general-purpose software** that **provides a platform** for users to **build on top** to complete different tasks. At the same time, OS **manages** the **direct communication** with the **hardware**, acting as a **control program**.
+
+>[!important] OS provides hardware virtualisation
+> This enables each [[Process (进程)|process]] to execute **as if** it has **all the resources** to itself. One example is [[Virtual Memory|virtual memory]].
 
 
 >[!question] Do we even need an OS?
