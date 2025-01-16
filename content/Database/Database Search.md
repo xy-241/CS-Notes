@@ -7,7 +7,7 @@ tags:
   - database
   - binance
 Creation Date: 2025-01-16, 10:40
-Last Date: 2025-01-16T11:48:08+08:00
+Last Date: 2025-01-16T12:09:59+08:00
 References: 
 draft: 
 description: 
@@ -61,15 +61,15 @@ WHERE MATCH(job_title, job_description) AGAINST('software engineer remote' IN NA
 > Great for **large datasets** containing **textual information**.
 
 >[!attention] Minimum word length
-> The default minimum word length for indexing is **4 characters**. Words shorter than this are ignored.
+> The default minimum word length for indexing is **4 characters**. Words shorter than this are **excluded from the index** and will **not be searchable** using the full-text search functionality
 > 
-> We can change this with `ft_min_word_len` system variable in the MySQL configuration file.
+> We can change this with `ft_min_word_len` system variable in the MySQL configuration file - `SET GLOBAL ft_min_word_len = <desired_length>;`. Use with care, as this **increases the noise in search results** and **consumes more resources**.
 
 >[!attention] Stopwords
 > Common words (e.g., "the", "is", "and") are ignored by default because they are in the stopword list. You can customize the stopword list.
 
 >[!code] 
-> `REPAIR TABLE table_name QUICK;`, often used when `ft_min_word_len` or stop list are changed.
+> `OPTIMIZE TABLE your_table_name;`, often used when `ft_min_word_len` or stop list are changed.
 
 ### Adding FULLTEXT Index to Existing Table
 
