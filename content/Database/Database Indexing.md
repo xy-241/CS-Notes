@@ -7,7 +7,7 @@ tags:
   - database
   - binance
 Creation Date: 2024-12-26, 21:50
-Last Date: 2024-12-26T22:48:25+08:00
+Last Date: 2025-01-16T11:12:28+08:00
 References: 
 draft: 
 description: Database indexing speeds up queries by organizing column values in structures like B-trees, allowing for O(log n) search times versus O(n) full table scans. However, pattern-based searches like LIKE %ZA% require full table scans. Trigram search addresses this by using trigrams (three-character substrings) for efficient matching. Use EXPLAIN ANALYZE to measure query performance and IGNORE INDEX() to disable indexing.
@@ -32,6 +32,13 @@ ON people (name);
 
 >[!tool] Performance analysis
 > Prefix the SQL query with `EXPLAIN ANALYZE` to check the time taken by the query, and use `IGNORE INDEX()` to force the database to avoid using an index.
+
+>[!code] Drop index
+> ```sql title="MySQL"
+> DROP INDEX index_name ON table_name;
+> ```
+> Can be used to drop [[Database Search#Full-text Search|full-text search index]].
+
 
 ## References
 ---
