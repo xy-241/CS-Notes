@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-10T23:12:00
-Last Date: 2025-01-15T18:23:38+08:00
+Last Date: 2025-01-16T23:59:36+08:00
 References: 
 description: Context switching enables the CPU to alternate tasks seamlessly, powering concurrency. It relies on the Process Control Block (PCB) to store task states, ensuring tasks resume without restarting. Process switches are slower with higher overhead, while thread switches are faster.
 ---
@@ -39,3 +39,6 @@ description: Context switching enables the CPU to alternate tasks seamlessly, po
 
 >[!success] Low overhead
 > The [[Address Space]] and [[thread_resources.png|per-process items]] are remain unchanged when [[Thread|threads]] are switched within the same [[Process (进程)]]. This avoids switching out the [[Memory Page]] which is an expensive operation.
+
+>[!important] Thread ID
+> [[Thread#Thread ID|Thread ID]] **does not change** during **context switching**, so it is **not explicitly saved/restored**.
