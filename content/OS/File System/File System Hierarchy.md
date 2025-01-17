@@ -8,7 +8,7 @@ tags:
   - linux
   - bash
 Creation Date: 2024-03-11, 20:43
-Last Date: 2024-05-25T01:24:41+08:00
+Last Date: 2025-01-15T18:46:25+08:00
 References: 
 draft: 
 description: 
@@ -77,7 +77,18 @@ brew install fzf
 # eval "$(zoxide init zsh --hook prompt)" 
 # alias cd='z'
 ```
+
+### Yazi
+- ranger-like terminal file manager written in [[Rust]]
+
+```bash
+brew install yazi ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide imagemagick font-symbols-only-nerd-font
+```
+
 ### joshuto
+
+>[!attention]
+> Use [[#Yazi]] instead. 
 - ranger-like terminal file manager written in [[Rust]]
 - [Config Instructions](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration), [Image Preview](https://github.com/kamiyaa/joshuto/tree/main/docs/configuration)
 ```bash
@@ -85,3 +96,4 @@ brew install joshuto
 # Alias to have joshuto to exit in the current directory it is in
 alias joshuto='joshuto --change-directory --output-file $HOME/.joshutoExit; LASTDIR=`bat $HOME/.joshutoExit`; cd "$LASTDIR"'
 ```
+

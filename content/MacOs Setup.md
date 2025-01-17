@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2024-12-26T19:18:41+08:00
+Last Date: 2025-01-15T18:46:42+08:00
 References: 
 title: A collection of useful tools for developers who use MacOS
 description: A macOS setup guide for development, covering essential tools, configurations, and resources for productivity and efficiency.
@@ -54,7 +54,7 @@ description: A macOS setup guide for development, covering essential tools, conf
 - [ ] [[File System Hierarchy#zoxide]] - `cd` replacement
 - [ ] [[File#bat]] - `cat` replacement
 - [ ] [[Atuin]] - `history` replacement
-- [ ] [[File System Hierarchy#joshuto]] - Terminal File Manager
+- [ ] [[File System Hierarchy#Yazi]] - Terminal File Manager
 - [ ] [[File#dua]] - Disk Usage Analyser
 - [ ] `brew install btop` - `htop`/`top` replacement
 - [ ] `brew install xh` - partial [[curl]] replacement
