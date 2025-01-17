@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-07T14:27:00
-Last Date: 2025-01-01T20:14:25+08:00
+Last Date: 2025-01-18T00:11:36+08:00
 References: 
 ---
 ## Abstract
@@ -15,10 +15,13 @@ References:
 
 ## Critical Section 
 ---
-- The section of codes where [[Race Condition (竞态条件)]] happens, like changing the common variables, updating a table, wiritng to a share file etc
+- A critical section is a **segment of a program’s code** where **shared resources**, such as variables, files, or devices, are accessed and modified, which may lead to [[Race Condition (竞态条件)|race conditions]]
+
 
 >[!important]
 > At any point of time, at most one [[Process (进程)]] can be in the critical section. 
+> 
+> Or **race conditions can occur in critical sections** due to the [[Concurrency (并发)|concurrent execution]] of [[Thread|threads]] that **access shared resources** without proper [[Synchronisation (同步)|synchronisation mechanisms]].
 
 
 ## References

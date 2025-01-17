@@ -26,4 +26,4 @@ References:
 - Also known as **自旋锁**
 - A type of [[Busy Waiting]] specifically used as a **lock mechanism** where a [[Thread]] **repeatedly checks** and attempts to **acquire a lock** until it becomes available
 - This is in contrast to [[Semaphore (信号量)]] or [[Mutex (互斥体)]], which releases the [[CPU]] and **allows other threads to run** while **waiting for the condition** to be met
-- Usually used to protect short **critical sections** in a [[Kernel]] or [[Device Controller#Device Driver]]
+- Usually used to protect short [[Race Condition (竞态条件)#Critical Section|critical sections]] in a [[Kernel]] or [[Device Controller#Device Driver]]

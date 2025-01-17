@@ -14,11 +14,11 @@ References:
 - **Coordination of execution** of multiple [[Process (进程)]] or [[Thread]] in a system to ensure that they **access shared resources** in a **controlled and predictable manner** 
 - The table below lists some common synchronisation methods
 
-| Synchronization Method              | Usage                                  | Advantages                       | Disadvantages                                | Example Use Case           |
-| ----------------------------------- | -------------------------------------- | -------------------------------- | -------------------------------------------- | -------------------------- |
-| [[Barrier (屏障)]]                    | Synchronise threads at **a point**     | Simple, ensures synchronisation  | Limited use cases                            | Parallel computing phases  |
-| [[Condition Variable (条件变量)]]       | Wait for condition with mutex          | Handles complex conditions       | Complex, potential [[Race Condition (竞态条件)]] | Producer-consumer problems |
-| [[Mutex (互斥体)]]                     | Protect shared data                    | Simple, effective                | Contention, potential [[Deadlock (死锁)]]      | Critical sections          |
-| [[Semaphore (信号量)]]                 | Control access to resources            | Flexible, versatile              | Complex, potential errors                    | Resource pools             |
-| [[Busy Waiting#Spinlock\|Spinlock]] | [[Busy Waiting]] for **short periods** | Low overhead for **short waits** | Inefficient for long waits                   | Low-level programming      |
+| Synchronization Method              | Usage                                  | Advantages                       | Disadvantages                                | Example Use Case                           |
+| ----------------------------------- | -------------------------------------- | -------------------------------- | -------------------------------------------- | ------------------------------------------ |
+| [[Barrier (屏障)]]                    | Synchronise threads at **a point**     | Simple, ensures synchronisation  | Limited use cases                            | Parallel computing phases                  |
+| [[Condition Variable (条件变量)]]       | Wait for condition with mutex          | Handles complex conditions       | Complex, potential [[Race Condition (竞态条件)]] | Producer-consumer problems                 |
+| [[Mutex (互斥体)]]                     | Protect shared data                    | Simple, effective                | Contention, potential [[Deadlock (死锁)]]      | [[Race Condition (竞态条件)#Critical Section]] |
+| [[Semaphore (信号量)]]                 | Control access to resources            | Flexible, versatile              | Complex, potential errors                    | Resource pools                             |
+| [[Busy Waiting#Spinlock\|Spinlock]] | [[Busy Waiting]] for **short periods** | Low overhead for **short waits** | Inefficient for long waits                   | Low-level programming                      |
 
