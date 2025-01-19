@@ -226,6 +226,13 @@ sudo ifconfig <interface_name> ether <new_MAC_address>
 - [ ] [arduino ide](https://github.com/arduino/arduino-ide)
 - [ ] `brew install --cask logisim-evolution` - circuit design software
 
+## Handy Tools
+---
+- [ ] [Image Resizer](https://www.adobe.com/express/feature/image/resize)
+- [ ] [Image Compressor](https://www.iloveimg.com/compress-image)
+- [ ] [Online Audio Volume Booster - Make Mp3s Louder](https://audiotrimmer.com/volume-booster/)
+- [ ] [Online Mp3 Cutter - Audio Trimmer](https://audiotrimmer.com/)
+- [ ] [Quack Sound Effects: Free MP3 Downloads of Duck Quack, Quack Sound, and More - Pixabay](https://pixabay.com/sound-effects/search/quack/)
 
 
 ## OS Config
