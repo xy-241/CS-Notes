@@ -1,5 +1,4 @@
 import { removeAllChildren } from "./util"
-import mermaid from "mermaid"
 
 interface Position {
   x: number
@@ -144,6 +143,7 @@ const cssVars = [
   "--codeFont",
 ] as const
 
+let mermaidImport = undefined
 document.addEventListener("nav", async () => {
   const center = document.querySelector(".center") as HTMLElement
   const nodes = center.querySelectorAll("code.mermaid") as NodeListOf<HTMLElement>
@@ -156,6 +156,12 @@ document.addEventListener("nav", async () => {
     },
     {} as Record<(typeof cssVars)[number], string>,
   )
+
+  mermaidImport ||= await import(
+    //@ts-ignore
+    "https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs"
+  )
+  const mermaid = mermaidImport.default
 
   const darkMode = document.documentElement.getAttribute("saved-theme") === "dark"
   mermaid.initialize({

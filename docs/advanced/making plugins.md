@@ -274,7 +274,7 @@ export const ContentPage: QuartzEmitterPlugin = () => {
       const allFiles = content.map((c) => c[1].data)
       for (const [tree, file] of content) {
         const slug = canonicalizeServer(file.data.slug!)
-        const externalResources = pageResources(slug, resources)
+        const externalResources = pageResources(slug, file.data, resources)
         const componentData: QuartzComponentProps = {
           fileData: file.data,
           externalResources,
