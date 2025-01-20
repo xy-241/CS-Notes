@@ -9,7 +9,7 @@ tags:
   - OS
   - binance
 Creation Date: 2024-03-19, 17:24
-Last Date: 2024-12-13T02:23:26+08:00
+Last Date: 2025-01-20T15:55:50+08:00
 References: 
 draft: 
 description: Cron jobs are automated tasks scheduled via crontab on Unix-like systems. Tools like Cronitor enhance monitoring for crontab, while XXL-Job supports distributed scheduling for Java applications.
@@ -18,9 +18,17 @@ title: Cron Jobs and Enhanced Monitoring Tools
 ## Abstract
 ---
 - Cron jobs are tasks scheduled to run automatically at specific times or intervals
-</br>
 
-- Set cron job with interactive visual
+>[!important] Every N units
+> `*/5 * * * *`: Runs the job every **5 minutes**.
+> 
+> `0 */5 * * *`: Runs the job every **5 hours**.
+> 
+> `0 0 */5 * *`: Runs the job every **5 days**.
+
+
+### Set cron job with interactive visual
+
 <div class="onecompilerCode-wrapper">
 <iframe
  class="onecompilerCode"
