@@ -7,7 +7,7 @@ tags:
   - database
   - binance
 Creation Date: 2025-01-16, 10:40
-Last Date: 2025-01-16T12:09:59+08:00
+Last Date: 2025-01-20T16:45:14+08:00
 References: 
 draft: 
 description: 
@@ -70,6 +70,20 @@ WHERE MATCH(job_title, job_description) AGAINST('software engineer remote' IN NA
 
 >[!code] 
 > `OPTIMIZE TABLE your_table_name;`, often used when `ft_min_word_len` or stop list are changed.
+
+>[!attention] No fuzzy search!
+> Full-text search is a form of **keyword-based search**.
+> 
+> **Word-Based Search**
+> - searching for "cat" will return entries containing "cat" but not "catalog" unless stemming is applied.
+> 
+> **Language-Aware Features**
+> - **Stemming**: Matches variations of a word by reducing them to their root form (e.g., "running," "runs," and "ran" might match "run").
+> - **Stop Words**: Common words like "the," "and," and "is" may be ignored during searches to improve efficiency.
+> - **Synonym Support**: Some full-text search engines allow custom synonym lists.
+> 
+> **Relevance-Based Ranking**:
+> - a match in a title might rank higher than a match in the body text
 
 ### Adding FULLTEXT Index to Existing Table
 
