@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-09-06T19:46:17+08:00
-Last Date: 2024-10-17T16:40:37+08:00
+Last Date: 2025-01-22T20:50:52+08:00
 References: 
 description: Dive into the heart of your operating system and discover how kernels manage hardware, allocate resources, and keep your system running smoothly. Explore the trade-offs between microkernels and monolithic kernels, and learn about preemptive kernels that ensure a responsive user experience.
 ---
@@ -17,16 +17,17 @@ description: Dive into the heart of your operating system and discover how kerne
 - Resides inside the [[Kernel Space]]
 
 >[!success] Loose Coupling
-> Software doesn't need to know the complexity of hardware. It can use the hardware thought a standard interface called [[System Call (系统调用)]]
+> Software doesn't need to know the complexity of hardware. It can use the hardware thought a standard interface called [[System Call (系统调用)]].
 
 >[!info] Common Modern Kernels
 > - [[MacOS]]'s kernel is **XNU**
 > - [[Windows]]'s kernel is **NT Kernel**
 > - [[Linux Kernel]]
-### Preemptive Kernel
-- [[Kernel]] that can be [[Interrupts (中断) |interrupted]] and scheduled just like [[Process (进程)]] in the [[User Space]] 
 
->[!success] Avoid Kernel Hogging
+### Preemptive Kernel
+- [[Kernel]] that can be [[Interrupts (中断) |interrupted]] and scheduled just like [[Process (进程)|process]] in the [[User Space|user space]] 
+
+>[!success] Avoid kernel hogging
 > Prevent kernel from hogging the [[CPU]] that slows down user space process
 
 ### Kernel Module
@@ -48,13 +49,13 @@ description: Dive into the heart of your operating system and discover how kerne
 5. Starts up [[OS System Program]]
 6. [[OS]] is booted up and ready to be used by the [[User]]
 
-## Kernel Architecture
+## Micro Kernel Architecture 
 ---
-### Micro Kernel Architecture 
-![[microkernel.png|500]]
+![[micro_kernel.png|500]]
+
 - [[Kernel]] only handles critical part of the system. The rest runs in [[User Space]]
 - Different kernel components communicate with each other via  [[Inter-Process Communication]]
-- Used by [[MINIX]]
+- Used by [[MINIX]] and [[MacOS]]
 
 >[!success] Fault-tolerant
 > If one of the kernel [[Process (进程)]] crashes, this doesn't crash the entire system 
@@ -64,24 +65,29 @@ description: Dive into the heart of your operating system and discover how kerne
 
 >[!info] Components of Traditional Microkernel
 > 1. [[Process Scheduling]]
-> 2. [[Main Memory]] Management 
+> 2. [[Interrupts (中断)]]
 > 3. [[Inter-Process Communication]]
 >    
-> There are no [[Device Controller#Device Driver]] and [[File System]] etc
+> There are no [[Device Controller#Device Driver|device drivers]] and [[File System|file system]] etc
+
+>[!important] Variant of micrkernel
+> Client and server processes can be on **separate machine**!
 
 
+## Monolithic Kernel Architecture
+---
+![[monolithic_kernel.png|500]]
 
-### Monolithic Kernel Architecture
 - By far, the most common [[Kernel]] architecture, used by [[Linux Kernel]]
 - The entire kernel runs as a single program in [[Privilege Level#Kernel Mode]]
 - Consist of a collection of [[Procedures]], linked together into a single large executable binary program. Each Procedures in the system is free to call any other one
 
 >[!success] Performant
-> No much overhead to call any of the kernel procedures
+> No much overhead to call any of the kernel procedures, as everything runs inside [[Privilege Level#Kernel Mode|kernel mode]].
 
 >[!caution] Harder to Maintain
 >  Thousands of procedures that can call each other without restriction may also lead to a system that is difficult to understand
 
 >[!caution] Not So Fault-tolerant
-> A crash in any of these Procedures will take down the entire Kernel
+> A crash in any of these procedures will take down the entire Kernel
 
