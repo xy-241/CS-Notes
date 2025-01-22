@@ -12,6 +12,8 @@ description: The giant that powers the software application we use on a daily ba
 ---
 ## Abstract
 ---
+![[os_archi.png]]
+
 - Consists of [[Kernel]] and [[OS System Program]]
 
 
