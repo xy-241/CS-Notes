@@ -7,8 +7,9 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2024-10-24T09:05:35+08:00
+Last Date: 2025-01-23T12:26:23+08:00
 References: 
+description: Registers are hardware components used for storing values and configuring CPU operations. They lack fixed datatypes, with data interpreted by instructions. Key types include memory, stack, and control registers. Concepts like spilling, allocation, and memory mapping optimize computational efficiency and hardware interaction.
 ---
 ## Abstract
 ---
@@ -26,6 +27,11 @@ References:
 
 ### Register Allocation
 - [[Language Processors#Compiler]] associates [[Register]] with variables in the given program 
+
+### Register Spilling
+- When there are **more variables than the available registers** can hold (due to the limited number of registers), we encounter a situation known as **register spilling**
+- To handle this, some variables are temporarily saved to memory (usually the [[Address Space#Stack Frame|stack frame]]) and restored later when they are needed again
+
 ## Memory Register
 ---
 ### Memory Address Register
@@ -45,8 +51,14 @@ References:
 - For modern computers, it is the [[Register]] that indicates the [[Virtual Memory#Virtual Address]] of the next [[Instruction]] to be **executed** for the current [[Process (进程)]]
 
 
+### Control & Status Registers (CSRs)
+- There are multiple such registers in the [[CPU]], the main purpose is storing information about the current state of the processor or device
+- CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
 
 
+
+## Stack Registers
+---
 ### Stack Pointer
 - A [[Register]] that holds the [[Memory Address]] of the top of the [[Address Space#Stack Segment]] in the current **execution context**. Here is the [[stack_segment.png|Diagram]] 
 
@@ -62,18 +74,12 @@ References:
 > ```
 
 ### Frame Pointer
-- Maintains a reference point within the current [[Address Space#Stack Frame]]
-- **At the beginning of a function (prologue)**, the Frame Pointer is typically set to the current value of the [[#Stack Pointer]], establishing the base of the current stack frame
-- **Throughout the function:** The FP remains relatively unchanged, offering a stable reference point
+- Maintains a reference point for the current [[Address Space#Stack Frame]]
+- **At the beginning of a function (prologue)**, the frame pointer is typically set to the [[Address Space#Stack Frame|stack frame]]
+- **Throughout the function:** The FP remains relatively unchanged, offering a stable reference point which is used to **access data inside the new stack frame** via [[ISA Addressing Mode#Displacement Addressing Mode|displacement addressing mode]]
 
-### Control & Status Registers (CSRs)
-- There are multiple such registers in the [[CPU]], the main purpose is storing information about the current state of the processor or device
-- CSRs are typically used to control various aspects of the processor's operation, such as interrupt handling, memory management, and power management etc
-
-
-
-
-
+>[!attention]
+> The usage of FP is platform dependent!
 
 ## Terminologies
 ---
