@@ -9,7 +9,7 @@ tags:
   - c
   - rust
 Creation Date: 2023-10-19T17:15:00
-Last Date: 2024-12-02T22:43:17+08:00
+Last Date: 2025-01-23T12:23:20+08:00
 References: 
 description: Stack (automatic memory management for function variables), Heap (dynamic memory management), Data (stores pre-defined variables shipped with the program) and Text (stores unchangeable program codes).
 ---
@@ -82,7 +82,10 @@ description: Stack (automatic memory management for function variables), Heap (d
 - **Dynamically allocated region** used to store **function calls**, local variables, and temporary data etc
 - Made up of [[#Stack Frame]], following a [[Stack]] structure
 - **Expands** as functions are called and **shrinks** as they return
-- We can obtain the default stack size assigned by the system using `ulimit -s`
+
+
+>[!code] Obtain stack size
+> `ulimit -s`
 
 >[!question] Grows Downwards
 >Stack Segment starts at a higher [[Memory Address]], then **memory address decreases** as we add in **Stack Frame**, thus **growing downwards** in terms of Memory Address, so to remove stack frame, we need to increment the [[Register#Stack Pointer]].
@@ -163,8 +166,53 @@ description: Stack (automatic memory management for function variables), Heap (d
 >- Then based on the core id (0-7), we set the [[Register#Stack Pointer]] for each [[CPU]]. We can see the stack pointer starting point is obtained by adding `(hartid * 4096)` to the base address, this is because **stack segment grows downwards** when we are adding values to the stack
 
 ### Stack Frame
+
+![[stack_frame.png|500]]
+
 - A section of the [[#Stack Segment]] dedicated to a **specific function call**
-- Except for the first frame, all frames contains the [[Memory Address]] of the previous stack frame, and the size of current stack frame which is used to adjust the [[Register#Stack Pointer]] to exclude the current stack frame from the stack segment when the function call of the current frame ends. The current stack frame will be overwritten when a new frame is added to the stack segment 
+
+```c title="f()"
+void f() {
+	c = g(2, 90);
+}
+```
+
+```c title="g()"
+void g(int i, int j) {
+	int a;
+}
+```
+
+>[!important] Stack frame setup 
+> This is just one of the many ways to setup a stack frame!
+>
+> Caller `f()`:
+> 1. Allocate space for the new stack frame, including **space** for **parameters** and the **return address** for the [[Register#Program Counter|PC]].
+> 2. **Pass parameters** (`i`, `j`) onto the new stack frame.
+> 3. **Save the return address (PC)** onto the new stack frame.
+> 
+> **Transfer control to the callee**: Jump to the function `g()` to hand over control from `f()` to `g()`.
+> 
+> Callee `g()`:
+> 1. Save the old [[Register#Stack Pointer|stack pointer]] onto the new stack frame.
+> 2. Save the old [[Register#Frame Pointer]] in the new stack frame.
+> 3. Save the values in [[Register|registers]] that are going to be used by the callee new stack frame.
+> 4. **Determine the amount of memory needed** for **local variables (a)** and allocate the necessary space in the new stack frame.
+> 5. Adjust the stack pointer to point to the top of the newly allocated stack frame.
+
+>[!important] Stack frame teardown
+> This is just one of the many ways to setup a stack frame!
+> 
+> Callee `g()`:
+>  1. Place return results onto the current stack frame (if applicable).
+>  2. Restore the saved **old stack pointer**, **old frame pointer** and **saved registers**.
+>  3. Restore the saved return address to transfer control back to the caller, `f()`.
+>  
+> Caller `f()`:
+>  1. Accessing the return results via [[ISA Addressing Mode#Displacement Addressing Mode|displacement addressing mode]].
+>  
+> As you can see, the teardown process only involves restoring the stack pointer and the return address. We do not reset or clear the values in the stack frame. This is why, in C, you can **never assume a newly created variable has a specific values**. Instead, it may contain **leftover data ("garbage values")** from previously reused stack space.
+
 
 ### Stack Overflow
 - Happens when the **size of all the stack frame** is **over** the **default fixed size** of the stack segment. Usually can be triggered easily without a proper implementation of [[Recursion#Recurrence Function]]
