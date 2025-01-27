@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2024-05-30T20:05:39+08:00
+Last Date: 2025-01-27T17:54:40+08:00
 References: 
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
@@ -32,7 +32,7 @@ description: "Unlock the power of your computer's hardware while staying secure!
 
 **Step 6:** Execute [[Trap Interrupt (陷入)]] to enter the [[Privilege Level#Kernel Mode]] and start execution at a **fixed address within the kernel**
 
-**Step 7:** The **kernel codes** following the trap interrupt examines **system call interrupt number**, dispatch the correct [[Interrupt Handler]] via [[Interrupt Vector Table]]
+**Step 7:** The **kernel codes** known as **dispatcher** following the trap interrupt examines **system call interrupt number**, dispatch the correct [[Interrupt Handler]] via [[Interrupt Vector Table]]
 
 **Step 8:** The desired Interrupt Handler starts running
 
