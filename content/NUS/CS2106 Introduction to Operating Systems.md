@@ -7,7 +7,7 @@ tags:
   - nus
   - OS
 Creation Date: 2024-02-12, 19:32
-Last Date: 2025-01-27T16:46:16+08:00
+Last Date: 2025-01-27T18:10:32+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2106 on this website, based on the textbook. Get help preparing for your lab and final.
@@ -28,6 +28,13 @@ title: cs2106 nus notes
 ## Week 3
 ---
 - [ ] [[Process (进程)#Process State]]
+- [ ] [[Context Switch|Process's 3 states]]
+- [ ] [[Process Control Block (PCB)]]
+- [ ] [[System Call (系统调用)#System Call Mechanism]]
+- [ ] [[Interrupts (中断)#Software Interrupt]]
+- [ ] [[Interrupts (中断)#Hardware interrupts (外中断)]]
+- [ ] [[Interrupt Vector Table]]
+- [ ] [[Process Operations#Process Creation]]
 
 ## Introduction
 ---
