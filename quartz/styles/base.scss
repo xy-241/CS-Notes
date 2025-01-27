@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @use "./variables.scss" as *;
 @use "./syntax.scss";
 @use "./callouts.scss";
@@ -121,7 +123,7 @@ a {
 }
 
 .page {
-  max-width: calc(#{map-get($breakpoints, desktop)} + 300px);
+  max-width: calc(#{map.get($breakpoints, desktop)} + 300px);
   margin: 0 auto;
   & article {
     & > h1 {
@@ -151,24 +153,25 @@ a {
 
   & > #quartz-body {
     display: grid;
-    grid-template-columns: #{map-get($desktopGrid, templateColumns)};
-    grid-template-rows: #{map-get($desktopGrid, templateRows)};
-    column-gap: #{map-get($desktopGrid, columnGap)};
-    row-gap: #{map-get($desktopGrid, rowGap)};
-    grid-template-areas: #{map-get($desktopGrid, templateAreas)};
+    grid-template-columns: #{map.get($desktopGrid, templateColumns)};
+    grid-template-rows: #{map.get($desktopGrid, templateRows)};
+    column-gap: #{map.get($desktopGrid, columnGap)};
+    row-gap: #{map.get($desktopGrid, rowGap)};
+    grid-template-areas: #{map.get($desktopGrid, templateAreas)};
+
     @media all and ($tablet) {
-      grid-template-columns: #{map-get($tabletGrid, templateColumns)};
-      grid-template-rows: #{map-get($tabletGrid, templateRows)};
-      column-gap: #{map-get($tabletGrid, columnGap)};
-      row-gap: #{map-get($tabletGrid, rowGap)};
-      grid-template-areas: #{map-get($tabletGrid, templateAreas)};
+      grid-template-columns: #{map.get($tabletGrid, templateColumns)};
+      grid-template-rows: #{map.get($tabletGrid, templateRows)};
+      column-gap: #{map.get($tabletGrid, columnGap)};
+      row-gap: #{map.get($tabletGrid, rowGap)};
+      grid-template-areas: #{map.get($tabletGrid, templateAreas)};
     }
     @media all and ($mobile) {
-      grid-template-columns: #{map-get($mobileGrid, templateColumns)};
-      grid-template-rows: #{map-get($mobileGrid, templateRows)};
-      column-gap: #{map-get($mobileGrid, columnGap)};
-      row-gap: #{map-get($mobileGrid, rowGap)};
-      grid-template-areas: #{map-get($mobileGrid, templateAreas)};
+      grid-template-columns: #{map.get($mobileGrid, templateColumns)};
+      grid-template-rows: #{map.get($mobileGrid, templateRows)};
+      column-gap: #{map.get($mobileGrid, columnGap)};
+      row-gap: #{map.get($mobileGrid, rowGap)};
+      grid-template-areas: #{map.get($mobileGrid, templateAreas)};
     }
 
     @media all and not ($desktop) {
