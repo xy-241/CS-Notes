@@ -7,12 +7,28 @@ tags:
   - nus
   - OS
 Creation Date: 2024-02-12, 19:32
-Last Date: 2024-07-17T14:46:19+08:00
+Last Date: 2025-01-27T16:46:16+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2106 on this website, based on the textbook. Get help preparing for your lab and final.
 title: cs2106 nus notes
 ---
+## Week 1
+---
+- [ ] [[OS]]
+- [ ] [[Virtualisation]]
+- [ ] [[Kernel#Micro Kernel Architecture]]
+- [ ] [[Kernel#Monolithic Kernel Architecture]]
+
+## Week 2
+---
+- [ ] [[Address Space#Stack Segment]]
+- [ ] [[Register#Stack Registers]]
+
+## Week 3
+---
+- [ ] [[Process (进程)#Process State]]
+
 ## Introduction
 ---
 - [[OS]]

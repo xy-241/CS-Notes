@@ -21,10 +21,10 @@ Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues
 
 ## 🎓 NUS Computer Science
 ---
+- [[CS2106 Introduction to Operating Systems]]
 - [[CS1231S Discrete Structures]]
 - [[CS2100 Computer Organisation]]
 - [[CS2030S Programming Methodology II]]
-- [[CS2106 Introduction to Operating Systems]]
 
 ## 🏭 System Design
 ---
