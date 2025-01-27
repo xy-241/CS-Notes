@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2024-12-23T10:34:37+08:00
+Last Date: 2025-01-27T16:41:23+08:00
 References: 
 description: Dive into the world of processes in operating systems!
 ---
@@ -20,6 +20,8 @@ description: Dive into the world of processes in operating systems!
 - 2 Components - [[Address Space]], [[Process Control Block (PCB)]], stored in [[Main Memory]]
 - Process also has a [[Page Table]] that translates a given [[Memory Page]] to the [[Memory Address]] of [[Main Memory#Memory Frames]] that stores the actual data 
 
+>[!important] Kernel not a process!
+> [[OS System Program]] like the [[Init System]] and the shell are [[Process (进程)|processes]], but the kernel itself **isn't a process**!
 
 >[!notes] Communication among processes
 > Process **usually** don't share [[Main Memory#Memory Frames]] among themselves for isolation purposes. We need [[Inter-Process Communication]] for communication among processes.
@@ -40,10 +42,7 @@ description: Dive into the world of processes in operating systems!
 ### Child Process
 
 - Has the same [[User#UID|UID]] as its parent
-### Process State
-1. Running
-2. Ready to Run - Could be running but [[CPU]] gave processing power to some other [[Process (进程)]]
-3. Block - Process is waiting for some other things like **I/O** to finish working (eg. waiting for file to be read)
+
 ### Process Resources
 - [[Address Space]]
 - [[Register]] (Include [[Register#Program Counter]] and [[Register#Stack Pointer]])
@@ -51,6 +50,21 @@ description: Dive into the world of processes in operating systems!
 - Outstanding [[Interrupts (中断)#Software Interrupt]]
 - List of related processes
 - [[Process Scheduling]] information etc
+
+## Process State
+---
+
+![[5_state_process_model.png|500]]
+
+- **Ready to Run**: could be running but [[CPU]] gave processing power to some other [[Process (进程)|processes]]
+- **Block**: process is waiting for things like **I/O** to finish working (eg. waiting for file to be read)
+
+### Queuing Model for State Transition
+
+![[queuing_model_for_process_state_transition.png|500]]
+
+- **Ready queue** to hold the [[Process (进程)|processes]] that are ready to run 
+- Blocked queue to hold processes that are waiting for things like **I/O** to finish working (eg. waiting for file to be read)
 
 
 
