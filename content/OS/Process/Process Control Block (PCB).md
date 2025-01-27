@@ -13,7 +13,7 @@ References:
 ---
 ![[PCB.png|400]]
 
-- Contains [[Metadata]] of the [[Process (进程)#Process Resources]], so that [[Process (进程)]] can be stopped and then restarted later as if it had never been stopped
+- Contains **metadata** of the [[Process (进程)#Process Resources]], so that [[Process (进程)]] can be stopped and then restarted later as if it had never been stopped
 
 
 ## Process Table
