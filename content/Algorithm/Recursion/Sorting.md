@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2025-01-29T21:59:17+08:00
+Last Date: 2025-01-29T22:08:26+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -494,7 +494,9 @@ import java.util.*;
 3. Each bucket is sorted individually, and the elements from all buckets are then combined to form the final sorted array.
 
 >[!important]
-> The time complexity is `O(n)` if the elements are **uniformly distributed**, or `O(n logn)` when the elements are **clustered** within a small portion of the buckets.
+> When elements are **well-distributed** across many buckets, bucket sort performs in `O(n)` because each bucket has a small number of elements, which can be sorted quickly or no sorting is even required!
+> 
+> When elements are **clustered into a few buckets**, and if the sorting algorithm for those buckets takes more time (e.g., due to a large number of elements in some buckets), the overall complexity can rise to `O(n logn)`.
 
 >[!code] Leetcode questions
 > - [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
