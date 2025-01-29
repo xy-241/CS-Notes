@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2024-12-15T18:02:58+08:00
+Last Date: 2025-01-29T21:59:17+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -15,11 +15,15 @@ description: Trying to sort my life out.
 ---
 - Basically re-arranging a collection of items or data elements in an ascending or descending order
 
->[!attention]- Not all the $O(n^2)$ sorting algorithms are the same
+>[!attention] Not all the $O(n^2)$ sorting algorithms are the same
 > Different algorithms have different inputs that they are good or bad on.
 > 
 > For example, [[#Bubble Sort]], [[#Selection Sort]] and [[#Insertion Sort]] have the $O(n^2)$ time complexity. But on sorted or almost sorted array, bubble sort and insertion sort have the $O(n)$ time complexity while selection sort has $O(n^2)$ time complexity.
+
+>[!important] Minimal swap operation 
+> **Selection sort has the least number of swap operations** compared to **bubble sort** and **insertion sort** in the worst case. 
 > 
+> Selection sort has $n$ swaps in the worst case, both bubble sort and insertion sort has $n^2$ swap in the worst case.
 
 ### In-Place
 - Perform [[Sorting]] with constant [[Main Memory]] usage regardless the input size
@@ -228,7 +232,7 @@ import java.util.*;
 
 >[!note]- Time Complexity
 > **Best-case**
-> - $O(n^2)$, because at each iteration, we can only find the current smallest element. Even if we are given a fully sorted array, we need to perform $n$ iterations, in order to have the confidence to say that the array is sorted 
+> - $O(n^2)$, because at each iteration, we can only find the current smallest element. Even if we are given a fully sorted array, we need to perform $n^2$ iterations, in order to have the confidence to say that the array is sorted 
 >   
 > **Average-case**
 > - $O(n^2)$, assume inputs are chosen at random
