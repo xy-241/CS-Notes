@@ -7,7 +7,7 @@ tags:
   - OS
   - arduino
 Creation Date: 2024-02-26, 16:08
-Last Date: 2024-05-05T17:44:16+08:00
+Last Date: 2025-01-30T13:27:38+08:00
 References: 
 draft: 
 description: 
@@ -15,6 +15,11 @@ description:
 ## Abstract
 ---
 - Data exchange between 2 hardware devices via [[IO Bus#Serial Bus Architecture]]
+
+>[!important] Serial communication takes time!
+> For example, with a [[#Baud Rate|baud rate]] of 9600, it takes approximately **1.2 ms** to transmit one byte, resulting in a **1.2 ms delay**. 
+> 
+> For **time-sensitive tasks** involving serial communication, we should **use millisecond-based timing functions instead**.
 
 
 ### Baud Rate
