@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-29T19:10:00
-Last Date: 2024-04-20T22:25:15+08:00
+Last Date: 2025-01-30T23:28:13+08:00
 References: 
 sr-due: 2024-03-01
 sr-interval: 8
@@ -22,7 +22,7 @@ aliases:
 **Mechanism**
 1. Causes [[Process (进程)]] to temporarily suspend
 2. Save the state info of the process into the corresponding [[Process Control Block (PCB)]]
-3. Executes the [[Interrupt Handler]]
+3. Obtain the [[Interrupt Handler|interrupt handler]] from the [[Interrupt Vector Table]] and execute it
 4. When Interrupt Handler is done, the running [[Process (进程)]] is restarted and the state is restored from the PCB
 
 >[!success] Free the CPU, no more Polling
