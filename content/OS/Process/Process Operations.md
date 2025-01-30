@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-09T22:50:00
-Last Date: 2024-12-23T10:55:10+08:00
+Last Date: 2025-01-27T18:11:28+08:00
 References: 
 description: Process creation uses fork() and exec() to create a child process, with termination occurring voluntarily or involuntarily. In POSIX, fork() creates a child, and wait() allows the parent to wait for its termination while preventing zombie processes.
 title: Process Creation and Termination in POSIX Systems
@@ -32,6 +32,9 @@ if (pid == 0)
 	execvp(sub_process[0], (char *const *)sub_process);
 }
 ```
+
+>[!important] `fork()`
+> `fork()` makes exact copy of a parent processes, so the newly forked process will execute codes right after `fork()` 
 
 
 ## Process Termination 
