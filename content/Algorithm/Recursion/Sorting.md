@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2025-02-01T00:20:00+08:00
+Last Date: 2025-02-01T00:37:36+08:00
 References: 
 draft: 
 description: Sorting algorithms arrange data in order. Bubble sort is simple and stable, but inefficient for large datasets (O(n) best, O(n^2) average/worst). Selection sort is unstable and always O(n^2), minimising swaps. Insertion sort is stable and efficient for small or nearly sorted arrays (O(n) best, O(n^2) average/worst). Merge sort is stable and O(n log n) always, but not in-place. Quick sort is unstable, in-place, and generally efficient (O(n log n) average, O(n^2) worst). Bucket sort is efficient for uniform data (O(n) best), but degrades with clustering.
@@ -15,15 +15,6 @@ description: Sorting algorithms arrange data in order. Bubble sort is simple and
 ---
 - Basically re-arranging a collection of items or data elements in an ascending or descending order
 
->[!attention] Not all the $O(n^2)$ sorting algorithms are the same
-> Different algorithms have different inputs that they are good or bad on.
-> 
-> For example, [[#Bubble Sort]], [[#Selection Sort]] and [[#Insertion Sort]] have the $O(n^2)$ time complexity. But on sorted or almost sorted array, bubble sort and insertion sort have the $O(n)$ time complexity while selection sort has $O(n^2)$ time complexity.
-
->[!important] Minimal swap operation 
-> **Selection sort has the least number of swap operations** compared to **bubble sort** and **insertion sort** in the worst case. 
-> 
-> Selection sort has $n$ swaps in the worst case, both bubble sort and insertion sort has $n^2$ swap in the worst case.
 
 ### In-Place
 - Perform [[Sorting]] with constant [[Main Memory]] usage regardless the input size
@@ -50,6 +41,8 @@ description: Sorting algorithms arrange data in order. Bubble sort is simple and
 > 
 > **[[#Selection Sort]]**
 > - Imagine in iteration $j$, the element at position $j$ is $8$ and element at position $j+1$ is $8$ too. Then the smallest element in the range $[j, k]$ is $7$. We swap $7$ with the $8$ at position $j$. As you can see, the order of the 2 same value is changed. Thus, unstable
+>   
+> [[#Quick Sort]]
 
 ### Divide-and-Conquer Sorting
 - **Divide**: split array into two halves
@@ -85,6 +78,10 @@ description: Sorting algorithms arrange data in order. Bubble sort is simple and
 > 
 > **Unstable** & **average case**: **Quick sort** performs significantly better than **selection sort**. However, if the **costs** of the two sorting algorithms **are not directly comparable** and we are **unable to construct a worst-case scenario** for **quick sort** due to the **unclear pivot selection mechanism in quick sort**, we cannot directly compare the cost differences between the average case and the worst case. In this case, we **should plot a graph** to illustrate how the cost grows as the number of elements increases. **Quick sort will grow much slower than selection sort.**
 
+>[!attention] Not all the `O(n^2)` sorting algorithms are the same
+> Different algorithms have different inputs that they are good or bad on.
+> 
+> For example, [[#Bubble Sort]], [[#Selection Sort]] and [[#Insertion Sort]] have the $O(n^2)$ time complexity. But on sorted or almost sorted array, bubble sort and insertion sort have the $O(n)$ time complexity while selection sort has $O(n^2)$ time complexity.
 
 ### Number of comparisons 
 
@@ -107,7 +104,10 @@ description: Sorting algorithms arrange data in order. Bubble sort is simple and
 | [[#Merge Sort\|Merge sort]]         | `O(nlogn)` | `O(nlogn)` | High data movement, but stable              |
 | [[#Quick Sort\|Quick sort]]         | `O(nlogn)` | `O(n^2)`   | Low swaps in best case, worst in worst-case |
 
-
+>[!important] Minimal swap operation 
+> **Selection sort has the least number of swap operations** compared to **bubble sort** and **insertion sort** in the worst case. 
+> 
+> Selection sort has $n$ swaps in the worst case, both bubble sort and insertion sort has $n^2$ swap in the worst case.
 
 
 ## Bubble Sort
