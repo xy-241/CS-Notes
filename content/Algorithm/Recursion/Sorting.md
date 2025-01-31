@@ -6,10 +6,10 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2025-01-31T17:11:55+08:00
+Last Date: 2025-02-01T00:20:00+08:00
 References: 
 draft: 
-description: Trying to sort my life out.
+description: Sorting algorithms arrange data in order. Bubble sort is simple and stable, but inefficient for large datasets (O(n) best, O(n^2) average/worst). Selection sort is unstable and always O(n^2), minimising swaps. Insertion sort is stable and efficient for small or nearly sorted arrays (O(n) best, O(n^2) average/worst). Merge sort is stable and O(n log n) always, but not in-place. Quick sort is unstable, in-place, and generally efficient (O(n log n) average, O(n^2) worst). Bucket sort is efficient for uniform data (O(n) best), but degrades with clustering.
 ---
 ## Abstract
 ---
@@ -81,9 +81,10 @@ description: Trying to sort my life out.
 >[!important]
 > **Stable** & **worst case**: **Merge sort** perform significantly better.
 >
-> **Stable** & **almost sorted**: If the array has a **small misplaced element at the wrong end**, **Bubble Sort** can still take `O(n^2)`. While other stable sorting algorithms will be significantly faster. Especially insertion sort is **the fastest**.
+> **Stable** & **almost sorted**: If the array has a **small misplaced element at the wrong end**, **Bubble Sort** can still take `O(n^2)`. While other stable sorting algorithms will be significantly faster. Especially **insertion sort is the fastest**.
 > 
-> **Unstable** & **average case**: **Quick sort** performs significantly better than other unstable sorting algorithms.
+> **Unstable** & **average case**: **Quick sort** performs significantly better than **selection sort**. However, if the **costs** of the two sorting algorithms **are not directly comparable** and we are **unable to construct a worst-case scenario** for **quick sort** due to the **unclear pivot selection mechanism in quick sort**, we cannot directly compare the cost differences between the average case and the worst case. In this case, we **should plot a graph** to illustrate how the cost grows as the number of elements increases. **Quick sort will grow much slower than selection sort.**
+
 
 ### Number of comparisons 
 
