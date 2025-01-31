@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2025-01-29T22:08:26+08:00
+Last Date: 2025-01-31T16:37:56+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -55,6 +55,51 @@ description: Trying to sort my life out.
 - **Divide**: split array into two halves
 - **[[Recursion]] up**: hit the base case, kickstart sorting the two halves
 - **Combine**: merge the sorted halves
+
+## Identify Sorting Algorithms 
+---
+
+- Time complexity 
+
+| Algorithm                           | Best Case  | Worst Case | Stability | Notes                                                  |
+| ----------------------------------- | ---------- | ---------- | --------- | ------------------------------------------------------ |
+| [[#Bubble Sort\|Bubble sort]]       | `O(n)`     | `O(n^2)`   | ✅         | Slow, **worst on random & reverse-sorted**             |
+| [[#Selection Sort\|Selection sort]] | `O(n^2)`   | `O(n^2)`   | ❌         | Similar time **across all cases - slow**               |
+| [[#Insertion Sort\|Insertion sort]] | `O(n)`     | `O(n^2)`   | ✅         | Very **fast on almost sorted data** (minimal swaps)    |
+| [[#Merge Sort\|Merge sort]]         | `O(nlogn)` | `O(nlogn)` | ✅         | **Consistent** times                                   |
+| [[#Quick Sort\|Quick sort]]         | `O(nlogn)` | `O(n^2)`   | ❌         | **Worst** on reverse sorted (pivot selection strategy) |
+
+
+- Number of comparisons 
+
+| Algorithm                           | Best Case  | Worst Case | Notes                                            |
+| ----------------------------------- | ---------- | ---------- | ------------------------------------------------ |
+| [[#Bubble Sort\|Bubble sort]]       | `O(n)`     | `O(n^2)`   | Less comparisons in best case                    |
+| [[#Selection Sort\|Selection sort]] | `O(n^2)`   | `O(n^2)`   | Always does `n^2` comparisons                    |
+| [[#Insertion Sort\|Insertion sort]] | `O(n)`     | `O(n^2)`   | Less comparisons in best case                    |
+| [[#Merge Sort\|Merge sort]]         | `O(nlogn)` | `O(nlogn)` | Consistent and less number of comparisons        |
+| [[#Quick Sort\|Quick sort]]         | `O(nlogn)` | `O(n^2)`   | Only less number of comparisons in the best case |
+
+
+- Number of swaps 
+
+| Algorithm                           | Best Case  | Worst Case | Notes                                       |
+| ----------------------------------- | ---------- | ---------- | ------------------------------------------- |
+| [[#Bubble Sort\|Bubble sort]]       | `O(1)`     | `O(n^2)`   | High swaps in worst case                    |
+| [[#Selection Sort\|Selection sort]] | `O(n)`     | `O(n)`     | Always does **n swaps**                     |
+| [[#Insertion Sort\|Insertion sort]] | `O(1)`     | `O(n^2)`   | High swaps in worst case                    |
+| [[#Merge Sort\|Merge sort]]         | `O(nlogn)` | `O(nlogn)` | High data movement, but stable              |
+| [[#Quick Sort\|Quick sort]]         | `O(nlogn)` | `O(n^2)`   | Low swaps in best case, worst in worst-case |
+
+>[!important] Ways to test 
+> 1. [[#Stability of Sorting|Check on the stability]]
+> 2. Check on the time complexity 
+>     - **Sorted Input** (Best-case performance)
+>     - **Random Input** (Average-case performance)
+>     - **Reverse Sorted Input** (Worst-case performance)
+>     - **Almost Sorted Input** (Tests adaptive behaviour)
+> 3. **Number of Comparisons & Swaps** (Helps distinguish algorithms like Merge Sort from Quick Sort)
+
 
 ## Bubble Sort
 ---
@@ -484,6 +529,9 @@ import java.util.*;
 > Essentially, we have two indices, `i` and `j`, both starting at index $0$. The index `i` keeps track of the **last position** where an **element smaller than the pivot** was placed. Meanwhile, `j` **scans** the array from index $0$ to the last index.
 > 
 > Here is a [short video](https://youtu.be/MZaf_9IZCrc?si=1tH1H2VEaxcLwRg6) showing how partition is carried out.
+
+>[!attention] Worst case is `n^2`
+> This happens when the pivot selection consistently leads to **highly unbalanced partitions**, causing the recursion depth to reach `O(n)`  instead of  `O(log n)`.
 
 ## Bucket Sort
 ---
