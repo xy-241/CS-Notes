@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - dsa
 Creation Date: 2024-01-03, 14:26
-Last Date: 2025-01-31T16:37:56+08:00
+Last Date: 2025-01-31T17:11:55+08:00
 References: 
 draft: 
 description: Trying to sort my life out.
@@ -59,7 +59,16 @@ description: Trying to sort my life out.
 ## Identify Sorting Algorithms 
 ---
 
-- Time complexity 
+>[!important] Ways to test 
+> 1. [[#Stability of Sorting|Check on the stability]]
+> 2. Check on the time complexity 
+>     - **Sorted Input** (Best-case performance)
+>     - **Random Input** (Average-case performance)
+>     - **Reverse Sorted Input** (Worst-case performance)
+>     - **Almost Sorted Input** (Tests adaptive behaviour)
+> 3. **Number of Comparisons & Swaps** (Helps distinguish algorithms like Merge Sort from Quick Sort)
+
+### Time complexity 
 
 | Algorithm                           | Best Case  | Worst Case | Stability | Notes                                                  |
 | ----------------------------------- | ---------- | ---------- | --------- | ------------------------------------------------------ |
@@ -69,8 +78,14 @@ description: Trying to sort my life out.
 | [[#Merge Sort\|Merge sort]]         | `O(nlogn)` | `O(nlogn)` | ✅         | **Consistent** times                                   |
 | [[#Quick Sort\|Quick sort]]         | `O(nlogn)` | `O(n^2)`   | ❌         | **Worst** on reverse sorted (pivot selection strategy) |
 
+>[!important]
+> **Stable** & **worst case**: **Merge sort** perform significantly better.
+>
+> **Stable** & **almost sorted**: If the array has a **small misplaced element at the wrong end**, **Bubble Sort** can still take `O(n^2)`. While other stable sorting algorithms will be significantly faster. Especially insertion sort is **the fastest**.
+> 
+> **Unstable** & **average case**: **Quick sort** performs significantly better than other unstable sorting algorithms.
 
-- Number of comparisons 
+### Number of comparisons 
 
 | Algorithm                           | Best Case  | Worst Case | Notes                                            |
 | ----------------------------------- | ---------- | ---------- | ------------------------------------------------ |
@@ -81,7 +96,7 @@ description: Trying to sort my life out.
 | [[#Quick Sort\|Quick sort]]         | `O(nlogn)` | `O(n^2)`   | Only less number of comparisons in the best case |
 
 
-- Number of swaps 
+### Number of swaps 
 
 | Algorithm                           | Best Case  | Worst Case | Notes                                       |
 | ----------------------------------- | ---------- | ---------- | ------------------------------------------- |
@@ -91,14 +106,7 @@ description: Trying to sort my life out.
 | [[#Merge Sort\|Merge sort]]         | `O(nlogn)` | `O(nlogn)` | High data movement, but stable              |
 | [[#Quick Sort\|Quick sort]]         | `O(nlogn)` | `O(n^2)`   | Low swaps in best case, worst in worst-case |
 
->[!important] Ways to test 
-> 1. [[#Stability of Sorting|Check on the stability]]
-> 2. Check on the time complexity 
->     - **Sorted Input** (Best-case performance)
->     - **Random Input** (Average-case performance)
->     - **Reverse Sorted Input** (Worst-case performance)
->     - **Almost Sorted Input** (Tests adaptive behaviour)
-> 3. **Number of Comparisons & Swaps** (Helps distinguish algorithms like Merge Sort from Quick Sort)
+
 
 
 ## Bubble Sort
