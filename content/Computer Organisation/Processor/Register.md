@@ -7,7 +7,7 @@ tags:
   - OS
   - computer_organisation
 Creation Date: 2023-11-20T10:58:00
-Last Date: 2025-01-23T12:26:23+08:00
+Last Date: 2025-01-31T11:25:44+08:00
 References: 
 description: Registers are hardware components used for storing values and configuring CPU operations. They lack fixed datatypes, with data interpreted by instructions. Key types include memory, stack, and control registers. Concepts like spilling, allocation, and memory mapping optimize computational efficiency and hardware interaction.
 ---
@@ -60,7 +60,7 @@ description: Registers are hardware components used for storing values and confi
 ## Stack Registers
 ---
 ### Stack Pointer
-- A [[Register]] that holds the [[Memory Address]] of the top of the [[Address Space#Stack Segment]] in the current **execution context**. Here is the [[stack_segment.png|Diagram]] 
+- A [[Register]] that holds the [[Memory Address]] of the top of the [[Address Space#Stack Segment]] (**start of free space** on the stack or the **last item** on the stack) in the current **execution context**. Here is the [[stack_segment.png|Diagram]] 
 
 >[!info] `offset($sp)`
 > Used to **access a memory location** **relative** to the **current top** of the stack.
@@ -78,8 +78,10 @@ description: Registers are hardware components used for storing values and confi
 - **At the beginning of a function (prologue)**, the frame pointer is typically set to the [[Address Space#Stack Frame|stack frame]]
 - **Throughout the function:** The FP remains relatively unchanged, offering a stable reference point which is used to **access data inside the new stack frame** via [[ISA Addressing Mode#Displacement Addressing Mode|displacement addressing mode]]
 
->[!attention]
-> The usage of FP is platform dependent!
+>[!attention] Optional!
+> The usage of FP is [[Instruction Set Architecture (ISA)|ISA]] dependent!
+> 
+> FP isn't necessary for operation on the stack, it exists to provide convenience to the [[Language Processors#Compiler|compiler]].
 
 ## Terminologies
 ---
