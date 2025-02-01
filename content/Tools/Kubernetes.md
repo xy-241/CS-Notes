@@ -5,13 +5,14 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2024-09-26, 22:41
-Last Date: 2024-10-02T13:07:00+08:00
+Last Date: 2025-02-01T22:44:37+08:00
 References: 
 draft: 
 description: 
 ---
 ## Abstract
 ---
+
 
 >[!success] Benefits
 > - Self-healing
@@ -23,6 +24,11 @@ description:
 > - Costs associated with running nodes
 > 
 > Managed control planes can help mitigate complexity.
+>
+
+>[!tool] Sandbox to play with k8s
+> [Play with Kubernetes](https://labs.play-with-k8s.com) provides you with Linux machines that have k8s preinstalled.
+
 ## Control Plane
 ---
 - Runs on multiple nodes across data center zones for high availability
