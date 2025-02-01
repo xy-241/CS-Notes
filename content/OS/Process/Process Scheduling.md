@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-12-11, 22:54
-Last Date: 2024-12-26T21:38:16+08:00
+Last Date: 2025-02-01T11:30:56+08:00
 References: 
 ---
 ## Abstract
@@ -14,13 +14,13 @@ References:
 - [[Kernel]] manages multiple [[Process (进程)]] that want to run at the [[Concurrency (并发)|same time]]
 - Kernel needs to manage processes **actively** because process can hog the [[CPU]] forever
 
->[!important]
+>[!important] Preemptive scheduling for lower turnaround
 > [[Process Scheduling]] that is [[CPU Scheduling Techniques#Preemptive Scheduling]] can help **shorter tasks** that arrive later [[#Turnaround Time|turnaround]] faster instead of being blocked forever by a long task.
 
 ### Turnaround Time
 - Turnaround Time = **Completion Time** - **Arrival Time**
 
->[!important]
+>[!important] Performance indicator
 > **Lower turnaround times** indicate **better** overall performance and **quicker** job completion.
 
 >[!important] 3 components
@@ -52,7 +52,7 @@ References:
 > 
 > This can be mitigated by dynamically decreasing the priority of currently running processes after each [[Time Slice]] and ensuring every process gets a fair share of CPU time with [[Time Slice#Minimum Granularity]].
 > 
-> However, it is challenging to guarantee or control the exact amount of CPU time allocated to a process solely through priority-based scheduling.
+> However, it is **challenging to guarantee** or control the **exact amount of CPU time allocated to a process** solely through priority-based scheduling.
 
 ### Process Priority
 - A value that determines which [[Process (进程)]] should get executed first
@@ -67,7 +67,7 @@ References:
 > - Command to adjust niceness - `renice`
 
 ### Priority Inversion
-- Occurs when a higher-priority [[Process (进程)|process]] is **waiting for a resource that is currently held by a lower-priority process**. This can lead to a situation where the higher-priority process is effectively blocked because the lower-priority process cannot finish its task and release the resource.
+- Occurs when a higher-priority [[Process (进程)|process]] is **waiting for a resource that is currently held by a lower-priority process**. This can lead to a situation where the higher-priority process is effectively blocked because the lower-priority process cannot finish its task and release the resource
 - The problem worsens if there is a **medium-priority process** that **preempts the lower-priority process** as it isn't blocked by the lower-priority process, delaying the release of the resource further. As a result, the high-priority process waits indefinitely, even though it has a higher priority than the low-priority process and medium-priority process
 
 >[!example]
