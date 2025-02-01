@@ -7,10 +7,11 @@ tags:
   - docker
   - networking
 Creation Date: 2023-11-17T20:17:44
-Last Date: 2024-10-15T23:29:50+08:00
+Last Date: 2025-02-01T22:43:59+08:00
 References: 
 aliases:
   - ../../Tools/Docker/Useful-Docker-Images
+description: Docker simplifies containerized application deployment with Docker Containers, Images, and Dockerfiles. It relies on a Linux VM on Mac/Windows and requires root access, making it less secure than Podman. Install via OrbStack (Mac) or curl (Ubuntu). Explore Play with Docker online.
 ---
 ## Abstract
 ---
@@ -19,6 +20,15 @@ aliases:
 - 3 components - [[Docker Container]], [[Docker Image]] & [[Dockerfile]]
 - Built on top of [[Linux Namespace]], so on **Windows** & **Mac**, we have a hidden **Linux VM**
 - Less secure compared to [[Podman]], because it has [[#Docker Daemon]] which needs root access to work
+
+>[!tool] Sandbox to play with Docker 
+> [Play with Docker](https://labs.play-with-docker.com/) provides you with Linux machines that have Docker preinstalled. You can use it to **experiment with different containers**, run **Docker Compose**, **open ports** for internet access, and SSH into it from your own terminal.
+> 
+> Run `docker run -d -p 8001:80 docker/getting-started` to kickstart the Docker tutorial!
+> 
+> Be aware that the Linux machines **only last for 4 hours**, and using **personal credentials is HIGHLY discouraged**!
+> 
+> There is [Play with Kubernetes](https://labs.play-with-k8s.com)
 
 >[!help] Working with Apple Silicon
 > `--platform linux/amd64` flag is needed. Refer to [ISA Unmatch error](https://stackoverflow.com/questions/66662820/m1-docker-preview-and-keycloak-images-platform-linux-amd64-does-not-match-th)
@@ -56,3 +66,6 @@ aliases:
 ### Networking
 - [wbitt/network-multitool](https://github.com/wbitt/Network-MultiTool) - `docker run -d --name eff1 --hostname eeg1 wbitt/network-multitool`
 
+## References
+---
+- [Docker 101 Tutorial \| Docker](https://www.docker.com/101-tutorial/)
