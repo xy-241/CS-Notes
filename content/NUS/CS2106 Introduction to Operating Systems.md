@@ -7,7 +7,7 @@ tags:
   - nus
   - OS
 Creation Date: 2024-02-12, 19:32
-Last Date: 2025-01-31T00:32:42+08:00
+Last Date: 2025-02-01T11:32:02+08:00
 References: 
 draft: 
 description: Find notes and cheat sheets for NUS CS2106 on this website, based on the textbook. Get help preparing for your lab and final.
@@ -28,7 +28,7 @@ title: cs2106 nus notes
 ## Week 3
 ---
 - [ ] [[Process (进程)#Process State]]
-- [ ] [[Context Switch|Process's 3 states]]
+- [ ] [[Context Switch|Process's 3 contexts]]
 - [ ] [[Process Control Block (PCB)]]
 - [ ] [[System Call (系统调用)#System Call Mechanism]]
 - [ ] [[Interrupts (中断)]]
@@ -41,6 +41,12 @@ title: cs2106 nus notes
 - [ ] [[Process Operations#Process Termination]]
 - [ ] [[Process Operations#Parent-Child Synchronisation]]
 - [ ] [[Init System#Orphan Process]]
+- [ ] [[CPU Scheduling Techniques#Corporative Scheduling]]
+- [ ] [[CPU Scheduling Techniques#Preemptive Scheduling]]
+- [ ] [[Time Slice]]
+- [ ] [[Context Switch]]
+- [ ] [[Concurrency (并发)#Multi-tasking]]
+- [ ] [[Process Scheduling]]
 
 
 ## Introduction
