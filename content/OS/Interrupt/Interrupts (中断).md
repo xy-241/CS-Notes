@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-29T19:10:00
-Last Date: 2025-01-30T23:28:13+08:00
+Last Date: 2025-02-01T11:37:57+08:00
 References: 
 sr-due: 2024-03-01
 sr-interval: 8
@@ -21,12 +21,12 @@ aliases:
 
 **Mechanism**
 1. Causes [[Process (进程)]] to temporarily suspend
-2. Save the state info of the process into the corresponding [[Process Control Block (PCB)]]
-3. Obtain the [[Interrupt Handler|interrupt handler]] from the [[Interrupt Vector Table]] and execute it
+2. [[CPU]] **automatically pushes** the minimal state ([[Register#Program Counter]], status register) onto **current process's kernel stack**
+3. Obtain the [[Interrupt Handler|interrupt handler]] from the [[Interrupt Vector Table]] and execute it in [[Privilege Level#Kernel Mode]]
 4. When Interrupt Handler is done, the running [[Process (进程)]] is restarted and the state is restored from the PCB
 
 >[!success] Free the CPU, no more Polling
-> We don't need to get [[CPU]] to keep **Polling** for response which may take a long time to produce. Instead, send a notification to the CPU via interrupt. Thus, CPU is able to do other stuff while waiting for a response 
+> We don't need to get [[CPU]] to keep **polling** for response which may take a long time to produce. Instead, send a notification to the CPU via interrupt. Thus, CPU is able to do other stuff while waiting for a response 
 
 
 >[!caution] Generally can't be interrupted
