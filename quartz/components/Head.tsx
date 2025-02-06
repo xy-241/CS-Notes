@@ -174,6 +174,33 @@ export default (() => {
           }}
         >
         </script> */}
+          <script
+          src="https://notesss.yxy.ninja/script.js"
+          type="text/javascript">
+        </script>
+        <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.DD_RUM && window.DD_RUM.init({
+              clientToken: 'pubf8e87c77bc40109caafef497cae669d9',
+              applicationId: '1790642d-89c4-45b7-8ba8-b2d58a5212b2',
+              proxy: 'https://notesss.yxy.ninja',
+              site: 'datadoghq.com',
+              service: 'notes.yxy.ninja',
+              env: 'prod',
+              // Specify a version number to identify the deployed version of your application in Datadog 
+              // version: '1.0.0', 
+              sessionSampleRate: 100,
+              sessionReplaySampleRate: 100,
+              trackUserInteractions: true,
+              trackResources: true,
+              trackLongTasks: true,
+              defaultPrivacyLevel: 'allow',
+              usePartitionedCrossSiteSessionCookie: true,
+            });
+          `,
+        }}
+        />
 
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -220,35 +247,6 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
-
-        <script
-          src="https://notesss.yxy.ninja/script.js"
-          type="text/javascript"
-          defer>
-        </script>
-        <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.DD_RUM && window.DD_RUM.init({
-              clientToken: 'pubf8e87c77bc40109caafef497cae669d9',
-              applicationId: '1790642d-89c4-45b7-8ba8-b2d58a5212b2',
-              proxy: 'https://notesss.yxy.ninja',
-              site: 'datadoghq.com',
-              service: 'notes.yxy.ninja',
-              env: 'prod',
-              // Specify a version number to identify the deployed version of your application in Datadog 
-              // version: '1.0.0', 
-              sessionSampleRate: 100,
-              sessionReplaySampleRate: 100,
-              trackUserInteractions: true,
-              trackResources: true,
-              trackLongTasks: true,
-              defaultPrivacyLevel: 'allow',
-              usePartitionedCrossSiteSessionCookie: true,
-            });
-          `,
-        }}
-        defer/>
       </head>
     )
   }
