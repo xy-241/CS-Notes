@@ -35,7 +35,7 @@
     "quartz": "./quartz/bootstrap-cli.mjs"
   },
   "dependencies": {
-    "@clack/prompts": "^0.9.1",
+    "@clack/prompts": "^0.10.0",
     "@floating-ui/dom": "^1.6.13",
     "@myriaddreamin/rehype-typst": "^0.5.4",
     "@napi-rs/simple-git": "0.1.19",
@@ -48,7 +48,7 @@
     "esbuild-sass-plugin": "^3.3.1",
     "flexsearch": "0.7.43",
     "github-slugger": "^2.0.0",
-    "globby": "^14.0.2",
+    "globby": "^14.1.0",
     "gray-matter": "^4.0.3",
     "hast-util-to-html": "^9.0.4",
     "hast-util-to-jsx-runtime": "^2.3.2",
@@ -86,7 +86,7 @@
     "satori": "^0.12.1",
     "serve-handler": "^6.1.6",
     "sharp": "^0.33.5",
-    "shiki": "^1.26.2",
+    "shiki": "^2.3.2",
     "source-map-support": "^0.5.21",
     "to-vfile": "^8.0.0",
     "toml": "^3.0.0",
@@ -102,13 +102,13 @@
     "@types/d3": "^7.4.3",
     "@types/hast": "^3.0.4",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.12.0",
+    "@types/node": "^22.13.1",
     "@types/pretty-time": "^1.1.5",
     "@types/source-map-support": "^0.5.10",
     "@types/ws": "^8.5.14",
     "@types/yargs": "^17.0.33",
-    "esbuild": "^0.24.2",
-    "prettier": "^3.4.2",
+    "esbuild": "^0.25.0",
+    "prettier": "^3.5.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   }
