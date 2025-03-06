@@ -6,9 +6,6 @@ import DepGraph from "../../depgraph"
 
 export const Static: QuartzEmitterPlugin = () => ({
   name: "Static",
-  getQuartzComponents() {
-    return []
-  },
   async getDependencyGraph({ argv, cfg }, _content, _resources) {
     const graph = new DepGraph<FilePath>()
 

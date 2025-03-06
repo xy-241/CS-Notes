@@ -143,12 +143,10 @@ export const defaultImage: SocialImageOptions["imageStructure"] = (
   fonts: SatoriOptions["fonts"],
   _fileData: QuartzPluginData,
 ) => {
-  // How many characters are allowed before switching to smaller font
   const fontBreakPoint = 22
   const useSmallerFont = title.length > fontBreakPoint
-
-  // Setup to access image
   const iconPath = `https://${cfg.baseUrl}/static/icon.png`
+
   return (
     <div
       style={{
@@ -160,43 +158,66 @@ export const defaultImage: SocialImageOptions["imageStructure"] = (
         width: "100%",
         backgroundColor: cfg.theme.colors[colorScheme].light,
         gap: "2rem",
-        paddingTop: "1.5rem",
-        paddingBottom: "1.5rem",
-        paddingLeft: "5rem",
-        paddingRight: "5rem",
+        padding: "1.5rem 5rem",
       }}
     >
       <div
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "flex-start",
           width: "100%",
           flexDirection: "row",
           gap: "2.5rem",
         }}
       >
         <img src={iconPath} width={135} height={135} />
-        <p
+        <div
           style={{
+            display: "flex",
             color: cfg.theme.colors[colorScheme].dark,
             fontSize: useSmallerFont ? 70 : 82,
             fontFamily: fonts[0].name,
+            maxWidth: "70%",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
         >
-          {title}
-        </p>
+          <p
+            style={{
+              margin: 0,
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {title}
+          </p>
+        </div>
       </div>
-      <p
+      <div
         style={{
+          display: "flex",
           color: cfg.theme.colors[colorScheme].dark,
           fontSize: 44,
-          lineClamp: 3,
           fontFamily: fonts[1].name,
+          maxWidth: "100%",
+          maxHeight: "40%",
+          overflow: "hidden",
         }}
       >
-        {description}
-      </p>
+        <p
+          style={{
+            margin: 0,
+            display: "-webkit-box",
+            WebkitBoxOrient: "vertical",
+            WebkitLineClamp: 3,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
+        >
+          {description}
+        </p>
+      </div>
     </div>
   )
 }

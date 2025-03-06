@@ -3,9 +3,12 @@ import remarkFrontmatter from "remark-frontmatter"
 import { QuartzTransformerPlugin } from "../types"
 import yaml from "js-yaml"
 import toml from "toml"
-import { slugTag } from "../../util/path"
+import { FilePath, FullSlug, joinSegments, slugifyFilePath, slugTag } from "../../util/path"
 import { QuartzPluginData } from "../vfile"
 import { i18n } from "../../i18n"
+import { Argv } from "../../util/ctx"
+import { VFile } from "vfile"
+import path from "path"
 
 export interface Options {
   delimiters: string | [string, string]
@@ -40,16 +43,32 @@ function coerceToArray(input: string | string[]): string[] | undefined {
     .map((tag: string | number) => tag.toString())
 }
 
+export function getAliasSlugs(aliases: string[], argv: Argv, file: VFile): FullSlug[] {
+  const dir = path.posix.relative(argv.directory, path.dirname(file.data.filePath!))
+  const slugs: FullSlug[] = aliases.map(
+    (alias) => path.posix.join(dir, slugifyFilePath(alias as FilePath)) as FullSlug,
+  )
+  const permalink = file.data.frontmatter?.permalink
+  if (typeof permalink === "string") {
+    slugs.push(permalink as FullSlug)
+  }
+  // fix any slugs that have trailing slash
+  return slugs.map((slug) =>
+    slug.endsWith("/") ? (joinSegments(slug, "index") as FullSlug) : slug,
+  )
+}
+
 export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "FrontMatter",
-    markdownPlugins({ cfg }) {
+    markdownPlugins({ cfg, allSlugs, argv }) {
       return [
         [remarkFrontmatter, ["yaml", "toml"]],
         () => {
           return (_, file) => {
-            const { data } = matter(Buffer.from(file.value), {
+            const fileData = Buffer.from(file.value as Uint8Array)
+            const { data } = matter(fileData, {
               ...opts,
               engines: {
                 yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object,
@@ -67,7 +86,11 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             if (tags) data.tags = [...new Set(tags.map((tag: string) => slugTag(tag)))]
 
             const aliases = coerceToArray(coalesceAliases(data, ["aliases", "alias"]))
-            if (aliases) data.aliases = aliases
+            if (aliases) {
+              data.aliases = aliases // frontmatter
+              const slugs = (file.data.aliases = getAliasSlugs(aliases, argv, file))
+              allSlugs.push(...slugs)
+            }
             const cssclasses = coerceToArray(coalesceAliases(data, ["cssclasses", "cssclass"]))
             if (cssclasses) data.cssclasses = cssclasses
 
@@ -98,6 +121,7 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
 
 declare module "vfile" {
   interface DataMap {
+    aliases: FullSlug[]
     frontmatter: { [key: string]: unknown } & {
       title: string
     } & Partial<{

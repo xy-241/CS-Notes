@@ -15,9 +15,6 @@ const filesToCopy = async (argv: Argv, cfg: QuartzConfig) => {
 export const Assets: QuartzEmitterPlugin = () => {
   return {
     name: "Assets",
-    getQuartzComponents() {
-      return []
-    },
     async getDependencyGraph(ctx, _content, _resources) {
       const { argv, cfg } = ctx
       const graph = new DepGraph<FilePath>()

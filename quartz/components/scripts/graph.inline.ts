@@ -370,9 +370,9 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
   const stage = app.stage
   stage.interactive = false
 
-  const labelsContainer = new Container<Text>({ zIndex: 3 })
-  const nodesContainer = new Container<Graphics>({ zIndex: 2 })
-  const linkContainer = new Container<Graphics>({ zIndex: 1 })
+  const labelsContainer = new Container<Text>({ zIndex: 3, isRenderGroup: true })
+  const nodesContainer = new Container<Graphics>({ zIndex: 2, isRenderGroup: true })
+  const linkContainer = new Container<Graphics>({ zIndex: 1, isRenderGroup: true })
   stage.addChild(nodesContainer, labelsContainer, linkContainer)
 
   for (const n of graphData.nodes) {

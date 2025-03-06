@@ -4,7 +4,6 @@
   .page > #quartz-body {
     // Shift page position when toggling Explorer on mobile.
     & > :not(.sidebar.left:has(.explorer)) {
-      transform: translateX(0);
       transition: transform 300ms ease-in-out;
     }
     &.lock-scroll > :not(.sidebar.left:has(.explorer)) {

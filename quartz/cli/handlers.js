@@ -34,13 +34,22 @@ import {
 } from "./constants.js"
 
 /**
+ * Resolve content directory path
+ * @param contentPath path to resolve
+ */
+function resolveContentPath(contentPath) {
+  if (path.isAbsolute(contentPath)) return path.relative(cwd, contentPath)
+  return path.join(cwd, contentPath)
+}
+
+/**
  * Handles `npx quartz create`
  * @param {*} argv arguments for `create`
  */
 export async function handleCreate(argv) {
   console.log()
   intro(chalk.bgGreen.black(` Quartz v${version} `))
-  const contentFolder = path.join(cwd, argv.directory)
+  const contentFolder = resolveContentPath(argv.directory)
   let setupStrategy = argv.strategy?.toLowerCase()
   let linkResolutionStrategy = argv.links?.toLowerCase()
   const sourceDirectory = argv.source
@@ -450,7 +459,7 @@ export async function handleBuild(argv) {
  * @param {*} argv arguments for `update`
  */
 export async function handleUpdate(argv) {
-  const contentFolder = path.join(cwd, argv.directory)
+  const contentFolder = resolveContentPath(argv.directory)
   console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`))
   console.log("Backing up your content")
   execSync(
@@ -502,7 +511,7 @@ export async function handleUpdate(argv) {
  * @param {*} argv arguments for `restore`
  */
 export async function handleRestore(argv) {
-  const contentFolder = path.join(cwd, argv.directory)
+  const contentFolder = resolveContentPath(argv.directory)
   await popContentFolder(contentFolder)
 }
 
@@ -511,7 +520,7 @@ export async function handleRestore(argv) {
  * @param {*} argv arguments for `sync`
  */
 export async function handleSync(argv) {
-  const contentFolder = path.join(cwd, argv.directory)
+  const contentFolder = resolveContentPath(argv.directory)
   console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`))
   console.log("Backing up your content")
 

@@ -9,7 +9,7 @@ import { write } from "./helpers"
 import { i18n } from "../../i18n"
 import DepGraph from "../../depgraph"
 
-export type ContentIndex = Map<FullSlug, ContentDetails>
+export type ContentIndexMap = Map<FullSlug, ContentDetails>
 export type ContentDetails = {
   title: string
   links: SimpleSlug[]
@@ -25,6 +25,7 @@ interface Options {
   enableRSS: boolean
   rssLimit?: number
   rssFullHtml: boolean
+  rssSlug: string
   includeEmptyFiles: boolean
 }
 
@@ -33,10 +34,11 @@ const defaultOptions: Options = {
   enableRSS: true,
   rssLimit: 10,
   rssFullHtml: false,
+  rssSlug: "index",
   includeEmptyFiles: true,
 }
 
-function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndex): string {
+function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndexMap): string {
   const base = cfg.baseUrl ?? ""
   const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<url>
     <loc>https://${joinSegments(base, encodeURI(slug))}</loc>
@@ -48,7 +50,7 @@ function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndex): string {
   return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`
 }
 
-function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: number): string {
+function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?: number): string {
   const base = cfg.baseUrl ?? ""
 
   const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<item>
@@ -116,7 +118,7 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
     async emit(ctx, content, _resources) {
       const cfg = ctx.cfg.configuration
       const emitted: FilePath[] = []
-      const linkIndex: ContentIndex = new Map()
+      const linkIndex: ContentIndexMap = new Map()
       for (const [tree, file] of content) {
         const slug = file.data.slug!
         const date = getDate(ctx.cfg.configuration, file.data) ?? new Date()
@@ -151,7 +153,7 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
           await write({
             ctx,
             content: generateRSSFeed(cfg, linkIndex, opts.rssLimit),
-            slug: "index" as FullSlug,
+            slug: (opts?.rssSlug ?? "index") as FullSlug,
             ext: ".xml",
           }),
         )
@@ -180,6 +182,19 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
 
       return emitted
     },
-    getQuartzComponents: () => [],
+    externalResources: (ctx) => {
+      if (opts?.enableRSS) {
+        return {
+          additionalHead: [
+            <link
+              rel="alternate"
+              type="application/rss+xml"
+              title="RSS Feed"
+              href={`https://${ctx.cfg.configuration.baseUrl}/index.xml`}
+            />,
+          ],
+        }
+      }
+    },
   }
 }
