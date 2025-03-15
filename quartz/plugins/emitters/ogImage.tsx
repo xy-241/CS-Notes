@@ -22,7 +22,7 @@ const defaultOptions: SocialImageOptions = {
  * @param opts options for generating image
  */
 async function generateSocialImage(
-  { cfg, description, fonts, title, fileData }: ImageOptions,
+  { cfg, description, fonts, ogImageTitle: title, fileData }: ImageOptions,
   userOpts: SocialImageOptions,
 ): Promise<Readable> {
   const { width, height } = userOpts
@@ -65,8 +65,15 @@ export const CustomOgImages: QuartzEmitterPlugin<Partial<SocialImageOptions>> = 
 
         const slug = vfile.data.slug!
         const titleSuffix = cfg.pageTitleSuffix ?? ""
-        const title =
-          (vfile.data.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+        const title = (
+          // Get the last part of the file path or Fallback to "Untitled" before processing
+          ((vfile.data.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title))
+            .replace(/-/g, ' ')           // Replace hyphens with spaces
+            .replace(/[\u4e00-\u9fa5]/g, '')  // Remove Chinese characters
+            .replace(/\([^)]*\)/g, '')    // Remove parentheses and their contents
+            .trim()                       // Remove extra spaces
+          + titleSuffix
+        )
         const description =
           vfile.data.frontmatter?.socialDescription ??
           vfile.data.frontmatter?.description ??
@@ -76,7 +83,7 @@ export const CustomOgImages: QuartzEmitterPlugin<Partial<SocialImageOptions>> = 
 
         const stream = await generateSocialImage(
           {
-            title,
+            ogImageTitle: title,
             description,
             fonts,
             cfg,

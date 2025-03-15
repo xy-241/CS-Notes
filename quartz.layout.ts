@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { SimpleSlug } from "./quartz/util/path"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -25,11 +26,6 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.RecentNotes({ linkToMore: "tags/" , limit: 3, showTags: false })),
-    Component.DesktopOnly(Component.Explorer()),
-    //Component.MobileOnly(Component.Explorer()),
     Component.Flex({
       components: [
         {
@@ -39,6 +35,16 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
+    Component.DesktopOnly(Component.RecentNotes({ 
+      title: "Recent writing",
+      linkToMore: "tags/" as SimpleSlug, 
+      limit: 3, 
+      showTags: true,
+      // Optional: add custom filter function
+      // filter: (page) => true,
+      // Optional: add custom sort function
+      // sort: (pageA, pageB) => pageB.date - pageA.date
+    })),
     Component.Explorer(),
   ],
   right: [
@@ -69,16 +75,3 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [],
 }
-
-Component.Explorer({
-  sortFn: (a, b) => {
-    if ((!a.file && !b.file) || (a.file && b.file)) {
-      return a.displayName.localeCompare(b.displayName)
-    }
-    if (a.file && !b.file) {
-      return -1
-    } else {
-      return 1
-    }
-  },
-})
