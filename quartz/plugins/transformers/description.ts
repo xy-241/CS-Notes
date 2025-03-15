@@ -5,11 +5,13 @@ import { escapeHTML } from "../../util/escape"
 
 export interface Options {
   descriptionLength: number
+  maxDescriptionLength: number
   replaceExternalLinks: boolean
 }
 
 const defaultOptions: Options = {
   descriptionLength: 150,
+  maxDescriptionLength: 300,
   replaceExternalLinks: true,
 }
 
@@ -37,35 +39,41 @@ export const Description: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
               text = text.replace(urlRegex, "$<domain>" + "$<path>")
             }
 
-            const desc = frontMatterDescription ?? text
-            const sentences = desc.replace(/\s+/g, " ").split(/\.\s/)
-            const finalDesc: string[] = []
-            const len = opts.descriptionLength
-            let sentenceIdx = 0
-            let currentDescriptionLength = 0
+            if (frontMatterDescription) {
+              file.data.description = frontMatterDescription
+              file.data.text = text
+              return
+            }
 
-            if (sentences[0] !== undefined && sentences[0].length >= len) {
-              const firstSentence = sentences[0].split(" ")
-              while (currentDescriptionLength < len) {
-                const sentence = firstSentence[sentenceIdx]
-                if (!sentence) break
-                finalDesc.push(sentence)
-                currentDescriptionLength += sentence.length
+            // otherwise, use the text content
+            const desc = text
+            const sentences = desc.replace(/\s+/g, " ").split(/\.\s/)
+            let finalDesc = ""
+            let sentenceIdx = 0
+
+            // Add full sentences until we exceed the guideline length
+            while (sentenceIdx < sentences.length) {
+              const sentence = sentences[sentenceIdx]
+              if (!sentence) break
+
+              const currentSentence = sentence.endsWith(".") ? sentence : sentence + "."
+              const nextLength = finalDesc.length + currentSentence.length + (finalDesc ? 1 : 0)
+
+              // Add the sentence if we're under the guideline length
+              // or if this is the first sentence (always include at least one)
+              if (nextLength <= opts.descriptionLength || sentenceIdx === 0) {
+                finalDesc += (finalDesc ? " " : "") + currentSentence
                 sentenceIdx++
-              }
-              finalDesc.push("...")
-            } else {
-              while (currentDescriptionLength < len) {
-                const sentence = sentences[sentenceIdx]
-                if (!sentence) break
-                const currentSentence = sentence.endsWith(".") ? sentence : sentence + "."
-                finalDesc.push(currentSentence)
-                currentDescriptionLength += currentSentence.length
-                sentenceIdx++
+              } else {
+                break
               }
             }
 
-            file.data.description = finalDesc.join(" ")
+            // truncate to max length if necessary
+            file.data.description =
+              finalDesc.length > opts.maxDescriptionLength
+                ? finalDesc.slice(0, opts.maxDescriptionLength) + "..."
+                : finalDesc
             file.data.text = text
           }
         },

@@ -53,46 +53,16 @@ pre {
   }
 
   & > #mermaid-space {
-    display: grid;
-    width: 90%;
-    height: 90vh;
-    margin: 5vh auto;
-    background: var(--light);
-    box-shadow:
-      0 14px 50px rgba(27, 33, 48, 0.12),
-      0 10px 30px rgba(27, 33, 48, 0.16);
+    border: 1px solid var(--lightgray);
+    background-color: var(--light);
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    width: 80vw;
     overflow: hidden;
-    position: relative;
-
-    & > .mermaid-header {
-      display: flex;
-      justify-content: flex-end;
-      padding: 1rem;
-      border-bottom: 1px solid var(--lightgray);
-      background: var(--light);
-      z-index: 2;
-      max-height: fit-content;
-
-      & > .close-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 32px;
-        height: 32px;
-        padding: 0;
-        background: transparent;
-        border: none;
-        border-radius: 4px;
-        color: var(--darkgray);
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-        &:hover {
-          background: var(--lightgray);
-          color: var(--dark);
-        }
-      }
-    }
 
     & > .mermaid-content {
       padding: 2rem;

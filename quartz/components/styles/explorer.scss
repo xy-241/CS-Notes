@@ -16,11 +16,11 @@
       box-sizing: border-box;
       position: sticky;
       background-color: var(--light);
+      padding: 1rem 0 1rem 0;
+      margin: 0;
     }
 
-    // Hide Explorer on mobile until done loading.
-    // Prevents ugly animation on page load.
-    .hide-until-loaded ~ #explorer-content {
+    .hide-until-loaded ~ .explorer-content {
       display: none;
     }
   }
@@ -28,9 +28,23 @@
 
 .explorer {
   display: flex;
-  height: 100%;
   flex-direction: column;
   overflow-y: hidden;
+
+  min-height: 1.2rem;
+  flex: 0 1 auto;
+  &.collapsed {
+    flex: 0 1 1.2rem;
+    & .fold {
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  & .fold {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+  }
 
   @media all and ($mobile) {
     order: -1;
@@ -40,20 +54,20 @@
     align-self: flex-start;
   }
 
-  button#mobile-explorer {
+  button.mobile-explorer {
     display: none;
   }
 
-  button#desktop-explorer {
+  button.desktop-explorer {
     display: flex;
   }
 
   @media all and ($mobile) {
-    button#mobile-explorer {
+    button.mobile-explorer {
       display: flex;
     }
 
-    button#desktop-explorer {
+    button.desktop-explorer {
       display: none;
     }
   }
@@ -64,22 +78,18 @@
     }
   }
 
-  /*&:after {
-    pointer-events: none;
-    content: "";
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    background: linear-gradient(transparent 0px, var(--light));
-  }*/
+  svg {
+    pointer-events: all;
+    transition: transform 0.35s ease;
+
+    & > polyline {
+      pointer-events: none;
+    }
+  }
 }
 
-button#mobile-explorer,
-button#desktop-explorer {
+button.mobile-explorer,
+button.desktop-explorer {
   background-color: transparent;
   border: none;
   text-align: left;
@@ -94,77 +104,46 @@ button#desktop-explorer {
     display: inline-block;
     margin: 0;
   }
-
-  & .fold {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-    opacity: 0.8;
-  }
-
-  &.collapsed .fold {
-    transform: rotateZ(-90deg);
-  }
 }
 
-.folder-outer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-in-out;
-}
-
-.folder-outer.open {
-  grid-template-rows: 1fr;
-}
-
-.folder-outer > ul {
-  overflow: hidden;
-}
-
-#explorer-content {
+.explorer-content {
   list-style: none;
   overflow: hidden;
   overflow-y: auto;
-  max-height: 0px;
-  transition:
-    max-height 0.35s ease,
-    visibility 0s linear 0.35s;
   margin-top: 0.5rem;
-  visibility: hidden;
-
-  &.collapsed {
-    max-height: 100%;
-    transition:
-      max-height 0.35s ease,
-      visibility 0s linear 0s;
-    visibility: visible;
-  }
 
   & ul {
     list-style: none;
-    margin: 0.08rem 0;
+    margin: 0;
     padding: 0;
-    transition:
-      max-height 0.35s ease,
-      transform 0.35s ease,
-      opacity 0.2s ease;
 
     & li > a {
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
+
+      &.active {
+        opacity: 1;
+        color: var(--tertiary);
+      }
     }
   }
 
-  > #explorer-ul {
-    max-height: none;
+  .folder-outer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-in-out;
   }
-}
 
-svg {
-  pointer-events: all;
+  .folder-outer.open {
+    grid-template-rows: 1fr;
+  }
 
-  & > polyline {
-    pointer-events: none;
+  .folder-outer > ul {
+    overflow: hidden;
+    margin-left: 6px;
+    padding-left: 0.8rem;
+    border-left: 1px solid var(--lightgray);
   }
 }
 
@@ -227,69 +206,54 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   color: var(--tertiary);
 }
 
-.no-background::after {
-  background: none !important;
-}
-
-#explorer-end {
-  // needs height so IntersectionObserver gets triggered
-  height: 4px;
-  // remove default margin from li
-  margin: 0;
-}
-
 .explorer {
   @media all and ($mobile) {
-    #explorer-content {
-      box-sizing: border-box;
-      overscroll-behavior: none;
-      z-index: 100;
-      position: absolute;
-      top: 0;
-      background-color: var(--light);
-      max-width: 100dvw;
-      left: -100dvw;
-      width: 100%;
-      transition: transform 300ms ease-in-out;
-      overflow: hidden;
-      padding: $topSpacing 2rem 2rem;
-      height: 100dvh;
-      max-height: 100dvh;
-      margin-top: 0;
-      visibility: hidden;
+    &.collapsed {
+      flex: 0 0 34px;
 
-      &:not(.collapsed) {
-        transform: translateX(100dvw);
-        visibility: visible;
+      & > .explorer-content {
+        transform: translateX(-100vw);
+        visibility: hidden;
       }
+    }
 
-      ul.overflow {
-        max-height: 100%;
-        width: 100%;
-      }
+    &:not(.collapsed) {
+      flex: 0 0 34px;
 
-      &.collapsed {
+      & > .explorer-content {
         transform: translateX(0);
         visibility: visible;
       }
     }
 
-    #mobile-explorer {
-      margin: 5px;
-      z-index: 101;
+    .explorer-content {
+      box-sizing: border-box;
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 0;
+      background-color: var(--light);
+      max-width: 100vw;
+      width: 100%;
+      transform: translateX(-100vw);
+      transition:
+        transform 200ms ease,
+        visibility 200ms ease;
+      overflow: hidden;
+      padding: 4rem 0 2rem 0;
+      height: 100dvh;
+      max-height: 100dvh;
+      visibility: hidden;
+    }
 
-      &:not(.collapsed) .lucide-menu {
-        transform: rotate(-90deg);
-        transition: transform 200ms ease-in-out;
-      }
+    .mobile-explorer {
+      margin: 0;
+      padding: 5px;
+      z-index: 101;
 
       .lucide-menu {
         stroke: var(--darkgray);
-        transition: transform 200ms ease;
-
-        &:hover {
-          stroke: var(--dark);
-        }
       }
     }
   }

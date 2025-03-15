@@ -18,15 +18,13 @@ export const AliasRedirects: QuartzEmitterPlugin = () => ({
 
     return graph
   },
-  async emit(ctx, content, _resources): Promise<FilePath[]> {
-    const fps: FilePath[] = []
-
+  async *emit(ctx, content, _resources) {
     for (const [_tree, file] of content) {
       const ogSlug = simplifySlug(file.data.slug!)
 
       for (const slug of file.data.aliases ?? []) {
         const redirUrl = resolveRelative(slug, file.data.slug!)
-        const fp = await write({
+        yield write({
           ctx,
           content: `
             <!DOCTYPE html>
@@ -43,10 +41,7 @@ export const AliasRedirects: QuartzEmitterPlugin = () => ({
           slug,
           ext: ".html",
         })
-
-        fps.push(fp)
       }
     }
-    return fps
   },
 })

@@ -7,6 +7,7 @@ import { Root } from "hast"
 import { htmlToJsx } from "../../util/jsx"
 import { i18n } from "../../i18n"
 import { ComponentChildren } from "preact"
+import { concatenateResources } from "../../util/resources"
 
 interface TagContentOptions {
   sort?: SortFn
@@ -124,6 +125,6 @@ export default ((opts?: Partial<TagContentOptions>) => {
     }
   }
 
-  TagContent.css = style + PageList.css
+  TagContent.css = concatenateResources(style, PageList.css)
   return TagContent
 }) satisfies QuartzComponentConstructor

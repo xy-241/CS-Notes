@@ -14,7 +14,7 @@ export const CNAME: QuartzEmitterPlugin = () => ({
   async getDependencyGraph(_ctx, _content, _resources) {
     return new DepGraph<FilePath>()
   },
-  async emit({ argv, cfg }, _content, _resources): Promise<FilePath[]> {
+  async emit({ argv, cfg }, _content, _resources) {
     if (!cfg.configuration.baseUrl) {
       console.warn(chalk.yellow("CNAME emitter requires `baseUrl` to be set in your configuration"))
       return []
@@ -24,7 +24,7 @@ export const CNAME: QuartzEmitterPlugin = () => ({
     if (!content) {
       return []
     }
-    fs.writeFileSync(path, content)
+    await fs.promises.writeFile(path, content)
     return [path] as FilePath[]
   },
 })

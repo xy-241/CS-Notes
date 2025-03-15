@@ -69,8 +69,7 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FolderPageOptions>> = (user
 
       return graph
     },
-    async emit(ctx, content, resources): Promise<FilePath[]> {
-      const fps: FilePath[] = []
+    async *emit(ctx, content, resources) {
       const allFiles = content.map((c) => c[1].data)
       const cfg = ctx.cfg.configuration
 
@@ -119,16 +118,13 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FolderPageOptions>> = (user
         }
 
         const content = renderPage(cfg, slug, componentData, opts, externalResources)
-        const fp = await write({
+        yield write({
           ctx,
           content,
           slug,
           ext: ".html",
         })
-
-        fps.push(fp)
       }
-      return fps
     },
   }
 }

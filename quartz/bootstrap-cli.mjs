@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env -S node --no-deprecation
 import yargs from "yargs"
 import { hideBin } from "yargs/helpers"
 import {

@@ -4,18 +4,21 @@
   display: flex;
   flex-direction: column;
 
-  &.desktop-only {
-    max-height: 40%;
+  overflow-y: hidden;
+  min-height: 4rem;
+  flex: 0 1 auto;
+  &:has(button.toc-header.collapsed) {
+    flex: 0 1 1.2rem;
   }
 }
 
 @media all and not ($mobile) {
-  .toc {
+  .toc-header {
     display: flex;
   }
 }
 
-button#toc {
+button.toc-header {
   background-color: transparent;
   border: none;
   text-align: left;
@@ -42,28 +45,9 @@ button#toc {
   }
 }
 
-#toc-content {
+.toc-content {
   list-style: none;
-  overflow: hidden;
-  overflow-y: auto;
-  max-height: 100%;
-  transition:
-    max-height 0.35s ease,
-    visibility 0s linear 0s;
   position: relative;
-  visibility: visible;
-
-  &.collapsed {
-    max-height: 0;
-    transition:
-      max-height 0.35s ease,
-      visibility 0s linear 0.35s;
-    visibility: hidden;
-  }
-
-  &.collapsed > .overflow::after {
-    opacity: 0;
-  }
 
   & ul {
     list-style: none;
@@ -79,10 +63,6 @@ button#toc {
         opacity: 0.75;
       }
     }
-  }
-  > ul.overflow {
-    max-height: none;
-    width: 100%;
   }
 
   @for $i from 0 through 6 {

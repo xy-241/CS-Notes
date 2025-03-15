@@ -1,179 +1,40 @@
 import { i18n } from "../i18n"
-import { FullSlug, joinSegments, pathToRoot } from "../util/path"
+import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
 import { googleFontHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import satori, { SatoriOptions } from "satori"
-import { loadEmoji, getIconCode } from "../util/emoji"
-import fs from "fs"
-import sharp from "sharp"
-import { ImageOptions, SocialImageOptions, getSatoriFont, defaultImage } from "../util/og"
 import { unescapeHTML } from "../util/escape"
-
-/**
- * Generates social image (OG/twitter standard) and saves it as `.webp` inside the public folder
- * @param opts options for generating image
- */
-async function generateSocialImage(
-  { cfg, description, fileName, fontsPromise, ogImageTitle, fileData }: ImageOptions,
-  userOpts: SocialImageOptions,
-  imageDir: string,
-) {
-  const fonts = await fontsPromise
-  const { width, height } = userOpts
-
-  // JSX that will be used to generate satori svg
-  const imageComponent = userOpts.imageStructure(cfg, userOpts, ogImageTitle, description, fonts, fileData)
-
-  const svg = await satori(imageComponent, {
-    width,
-    height,
-    fonts,
-    loadAdditionalAsset: async (languageCode: string, segment: string) => {
-      if (languageCode === "emoji") {
-        return `data:image/svg+xml;base64,${btoa(await loadEmoji(getIconCode(segment)))}`
-      }
-
-      return languageCode
-    },
-  })
-
-  // Convert svg directly to webp (with additional compression)
-  const compressed = await sharp(Buffer.from(svg)).webp({ quality: 40 }).toBuffer()
-
-  // Write to file system
-  const filePath = joinSegments(imageDir, `${fileName}.${extension}`)
-  fs.writeFileSync(filePath, compressed)
-}
-
-const extension = "webp"
-
-const defaultOptions: SocialImageOptions = {
-  colorScheme: "lightMode",
-  width: 1200,
-  height: 630,
-  imageStructure: defaultImage,
-  excludeRoot: false,
-}
-
+import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
 export default (() => {
-  let fontsPromise: Promise<SatoriOptions["fonts"]>
-
-  let fullOptions: SocialImageOptions
   const Head: QuartzComponent = ({
     cfg,
     fileData,
     externalResources,
     ctx,
   }: QuartzComponentProps) => {
-    // Initialize options if not set
-    if (!fullOptions) {
-      if (typeof cfg.generateSocialImages !== "boolean") {
-        fullOptions = { ...defaultOptions, ...cfg.generateSocialImages }
-      } else {
-        fullOptions = defaultOptions
-      }
-    }
-
-    // Memoize google fonts
-    if (!fontsPromise && cfg.generateSocialImages) {
-      fontsPromise = getSatoriFont(cfg.theme.typography.header, cfg.theme.typography.body)
-    }
-
-    const slug = fileData.filePath
-    // since "/" is not a valid character in file names, replace with "-"
-    const fileName = slug?.replaceAll("/", "-")
-
-    // Get file description (priority: frontmatter > fileData > default)
-    const fdDescription =
-      fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
     const titleSuffix = cfg.pageTitleSuffix ?? ""
     const title =
       (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
-    const ogImageTitle = (
-      fileData.slug?.split('/').pop()  // 1. Get the last part of the file path
-        ?.replace(/-/g, ' ')           // 2. Replace hyphens with spaces
-        ?.replace(/[\u4e00-\u9fa5]/g, '')  // 3. Remove Chinese characters
-        ?.replace(/\([^)]*\)/g, '')    // 4. Remove parentheses and their contents
-        ?.trim() ??                     // 5. Remove extra spaces
-      i18n(cfg.locale).propertyDefaults.title  // 6. Fallback to "Untitled"
-    ) + titleSuffix                    // 7. Add the suffix
-
-    let description = ""
-    if (fdDescription) {
-      description = unescapeHTML(fdDescription)
-    }
-
-    if (fileData.frontmatter?.socialDescription) {
-      description = fileData.frontmatter?.socialDescription as string
-    } else if (fileData.frontmatter?.description) {
-      description = fileData.frontmatter?.description
-    }
-
-    const fileDir = joinSegments(ctx.argv.output, "static", "social-images")
-    if (cfg.generateSocialImages) {
-      // Generate folders for social images (if they dont exist yet)
-      if (!fs.existsSync(fileDir)) {
-        fs.mkdirSync(fileDir, { recursive: true })
-      }
-
-      if (fileName) {
-        // Generate social image (happens async)
-        void generateSocialImage(
-          {
-            ogImageTitle,
-            description,
-            fileName,
-            fileDir,
-            fileExt: extension,
-            fontsPromise,
-            cfg,
-            fileData,
-          },
-          fullOptions,
-          fileDir,
-        )
-      }
-    }
+    const description =
+      fileData.frontmatter?.socialDescription ??
+      fileData.frontmatter?.description ??
+      unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
 
     const { css, js, additionalHead } = externalResources
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
-
     const iconPath = joinSegments(baseDir, "static/icon.png")
-
-    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
-    // "static/social-images/slug-filename.md.webp"
-    const ogImageGeneratedPath = `https://${cfg.baseUrl}/${fileDir.replace(
-      `${ctx.argv.output}/`,
-      "",
-    )}/${fileName}.${extension}`
-
-    // Use default og image if filePath doesnt exist (for autogenerated paths with no .md file)
-    const useDefaultOgImage = fileName === undefined || !cfg.generateSocialImages
-
-    // Path to og/social image (priority: frontmatter > generated image (if enabled) > default image)
-    let ogImagePath = useDefaultOgImage ? ogImageDefaultPath : ogImageGeneratedPath
-
-    // TODO: could be improved to support external images in the future
-    // Aliases for image and cover handled in `frontmatter.ts`
-    const frontmatterImgUrl = fileData.frontmatter?.socialImage
-
-    // Override with default og image if config option is set
-    if (fileData.slug === "index") {
-      ogImagePath = ogImageDefaultPath
-    }
-
-    // Override with frontmatter url if existing
-    if (frontmatterImgUrl) {
-      ogImagePath = `https://${cfg.baseUrl}/static/${frontmatterImgUrl}`
-    }
 
     // Url of current page
     const socialUrl =
       fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
+
+    const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
+      (e) => e.name === CustomOgImagesEmitterName,
+    )
+    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
 
     return (
       <head>
@@ -233,28 +94,32 @@ export default (() => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta property="og:description" content={description} />
-        <meta property="og:image:type" content={`image/${extension}`} />
         <meta property="og:image:alt" content={description} />
-        {/* Dont set width and height if unknown (when using custom frontmatter image) */}
-        {!frontmatterImgUrl && (
+
+        {!usesCustomOgImage && (
           <>
-            <meta property="og:image:width" content={fullOptions.width.toString()} />
-            <meta property="og:image:height" content={fullOptions.height.toString()} />
+            <meta property="og:image" content={ogImageDefaultPath} />
+            <meta property="og:image:url" content={ogImageDefaultPath} />
+            <meta name="twitter:image" content={ogImageDefaultPath} />
+            <meta
+              property="og:image:type"
+              content={`image/${getFileExtension(ogImageDefaultPath) ?? "png"}`}
+            />
           </>
         )}
-        <meta property="og:image:url" content={ogImagePath} />
+
         {cfg.baseUrl && (
           <>
-            <meta name="twitter:image" content={ogImagePath} />
-            <meta property="og:image" content={ogImagePath} />
             <meta property="twitter:domain" content={cfg.baseUrl}></meta>
             <meta property="og:url" content={socialUrl}></meta>
             <meta property="twitter:url" content={socialUrl}></meta>
           </>
         )}
+
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")

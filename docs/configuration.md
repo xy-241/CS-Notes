@@ -108,3 +108,25 @@ Some plugins are included by default in the [`quartz.config.ts`](https://github.
 You can see a list of all plugins and their configuration options [[tags/plugin|here]].
 
 If you'd like to make your own plugins, see the [[making plugins|making custom plugins]] guide.
+
+## Fonts
+
+Fonts can be specified as a `string` or a `FontSpecification`:
+
+```ts
+// string
+typography: {
+  header: "Schibsted Grotesk",
+  ...
+}
+
+// FontSpecification
+typography: {
+  header: {
+    name: "Schibsted Grotesk",
+    weights: [400, 700],
+    includeItalic: true,
+  },
+  ...
+}
+```

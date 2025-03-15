@@ -61,10 +61,6 @@ export interface GlobalConfiguration {
    *   Quartz will avoid using this as much as possible and use relative URLs most of the time
    */
   baseUrl?: string
-  /**
-   * Whether to generate social images (Open Graph and Twitter standard) for link previews
-   */
-  generateSocialImages: boolean | Partial<SocialImageOptions>
   theme: Theme
   /**
    * Allow to translate the date in the language of your choice.

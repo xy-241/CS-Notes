@@ -19,7 +19,7 @@ export default ((userOpts?: Partial<SearchOptions>) => {
     const searchPlaceholder = i18n(cfg.locale).components.search.searchBarPlaceholder
     return (
       <div class={classNames(displayClass, "search")}>
-        <button class="search-button" id="search-button">
+        <button class="search-button">
           <p>{i18n(cfg.locale).components.search.title}</p>
           <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
             <title>Search</title>
@@ -29,17 +29,17 @@ export default ((userOpts?: Partial<SearchOptions>) => {
             </g>
           </svg>
         </button>
-        <div id="search-container">
-          <div id="search-space">
+        <div class="search-container">
+          <div class="search-space">
             <input
               autocomplete="off"
-              id="search-bar"
+              class="search-bar"
               name="search"
               type="text"
               aria-label={searchPlaceholder}
               placeholder={searchPlaceholder}
             />
-            <div id="search-layout" data-preview={opts.enablePreview}></div>
+            <div class="search-layout" data-preview={opts.enablePreview}></div>
           </div>
         </div>
       </div>

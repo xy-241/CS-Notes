@@ -102,7 +102,7 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
 
         // Add current slug to full path
         currentPath = joinSegments(currentPath, slugParts[i])
-        const includeTrailingSlash = !isTagPath || i < 1
+        const includeTrailingSlash = !isTagPath || i < slugParts.length - 1
 
         // Format and add current crumb
         const crumb = formatCrumb(
