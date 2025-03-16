@@ -40,10 +40,11 @@ export const defaultContentPageLayout: PageLayout = {
       linkToMore: "tags/" as SimpleSlug, 
       limit: 3, 
       showTags: true,
-      // Optional: add custom filter function
-      // filter: (page) => true,
-      // Optional: add custom sort function
-      // sort: (pageA, pageB) => pageB.date - pageA.date
+      sort: (pageA, pageB) => {
+        const dateA = pageA.dates?.modified?.getTime() ?? 0
+        const dateB = pageB.dates?.modified?.getTime() ?? 0
+        return dateB - dateA
+      }
     })),
     Component.Explorer(),
   ],
