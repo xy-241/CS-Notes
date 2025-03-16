@@ -7,7 +7,7 @@ tags:
   - devops
   - binance
 Creation Date: 2024-11-16, 16:25
-Last Date: 2025-01-08T13:28:30+08:00
+Last Date: 2025-03-16T17:34:49+08:00
 References: 
 draft: 
 description: Data points needed to find the root cause of an issue.
@@ -16,8 +16,17 @@ description: Data points needed to find the root cause of an issue.
 ---
 - There are 3 pillars of observability [[#Log]], [[#Metric]] and [[Trace]]
 
->[!important]
+>[!important] Observability vs monitoring 
 > Observability is a broader concept that includes [[Monitoring]]. The higher the observability, the faster we can **find the root cause** when **notified of an issue**.
+
+>[!important] Collection methods 
+> **Push-based**:
+> - Examples are Datadog and [Vector](https://vector.dev/)
+> 
+> **Pull-based**:
+> - Examples are [[Prometheus]]
+> 
+> Cloud environments favor push-based methods for scalability, eliminating the need for centralised polling infrastructure.
 
 >[!info] Linux performance observability tools
 > ![[linux_performance_observability_tools.jpeg|500]]
