@@ -6,12 +6,12 @@ Author Profile:
 tags:
   - interview
 Creation Date: 2025-03-16, 17:36
-Last Date: 2025-03-16T17:47:51+08:00
+Last Date: 2025-03-16T18:13:09+08:00
 References: 
 draft: 
-description: 
+description: HFT babies
 ---
-## 2025-03-16 
+## 2025-03-16 with Yu Heng
 ---
 - [[Go#Terrform|Terraform and Go]]
 - [[Goroutine|Goroutines & Goroutine Scheduling & Goroutine advantages]]
