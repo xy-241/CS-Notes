@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - go
 Creation Date: 2024-03-04, 21:38
-Last Date: 2024-03-17T17:02:57+08:00
+Last Date: 2025-03-16T17:09:07+08:00
 References: 
 draft: 
 description: 
@@ -34,3 +34,8 @@ description:
 ## Go Slice
 ---
 - Wrapper around [[Array]] to give a more general, powerful and convenient interface to sequences of data. It is basically [[Array#Dynamic Array]]
+
+## Terrform 
+---
+- Terraform is built with [[Go]]
+- Go's [[User Thread#Goroutines]] efficiently handle parallel API calls, making it ideal for infrastructure tools
