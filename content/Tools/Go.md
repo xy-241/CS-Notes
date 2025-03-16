@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - go
 Creation Date: 2024-03-04, 21:38
-Last Date: 2025-03-16T17:09:07+08:00
+Last Date: 2025-03-16T17:55:16+08:00
 References: 
 draft: 
 description: 
@@ -38,4 +38,4 @@ description:
 ## Terrform 
 ---
 - Terraform is built with [[Go]]
-- Go's [[User Thread#Goroutines]] efficiently handle parallel API calls, making it ideal for infrastructure tools
+- Go's [[Goroutine]] efficiently handle parallel API calls, making it ideal for infrastructure tools

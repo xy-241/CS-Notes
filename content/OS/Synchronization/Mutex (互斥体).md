@@ -33,7 +33,7 @@ References:
  </div>
 
 >[!caution] Corrupted data!
-> Since the [[User Thread#Goroutines]] are running in a [[Concurrency (并发)]] manner, both goroutines may read in the same `counter` value, one goroutine will overwrite the changes made by another goroutine - [[Race Condition (竞态条件)]]. Uncomment the code blocks in the editor above to add in the [[Mutex (互斥体)]]!
+> Since the [[Goroutine]] are running in a [[Concurrency (并发)]] manner, both goroutines may read in the same `counter` value, one goroutine will overwrite the changes made by another goroutine - [[Race Condition (竞态条件)]]. Uncomment the code blocks in the editor above to add in the [[Mutex (互斥体)]]!
 
 >[!question] Program runs perfectly without Mutex
 > Sometimes, without Mutex (互斥体), the program runs without any issues, this is because the Goroutines **complete too fast**, run a few times to see corrupted data caused by [[Race Condition (竞态条件)]]. 
