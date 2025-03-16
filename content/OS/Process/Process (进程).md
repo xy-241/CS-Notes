@@ -7,7 +7,7 @@ tags:
   - OS
   - linux
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2025-01-27T16:41:23+08:00
+Last Date: 2025-03-15T19:15:04+08:00
 References: 
 description: Dive into the world of processes in operating systems!
 ---
@@ -79,3 +79,7 @@ brew install procs # Installation
 alias ps='sudo procs --load-config <path_to_your_config.toml>' # Refer to https://github.com/dalance/procs?tab=readme-ov-file#configuration for more info on the config.toml
 ```
 
+>[!tool] OG `ps`
+> Given `4327 ttys002    0:07.79 /opt/homebrew/bin/zsh -il`, it means: 
+> 
+> a `zsh` process is running on terminal session `ttys002` with a process ID of `4327`, accumulating a total CPU time of `0:07.79`, which translates to **0 minutes and 7.79 seconds**.
