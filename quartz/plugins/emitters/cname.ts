@@ -2,7 +2,6 @@ import { FilePath, joinSegments } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
 import fs from "fs"
 import chalk from "chalk"
-import DepGraph from "../../depgraph"
 
 export function extractDomainFromBaseUrl(baseUrl: string) {
   const url = new URL(`https://${baseUrl}`)
@@ -11,10 +10,7 @@ export function extractDomainFromBaseUrl(baseUrl: string) {
 
 export const CNAME: QuartzEmitterPlugin = () => ({
   name: "CNAME",
-  async getDependencyGraph(_ctx, _content, _resources) {
-    return new DepGraph<FilePath>()
-  },
-  async emit({ argv, cfg }, _content, _resources) {
+  async emit({ argv, cfg }) {
     if (!cfg.configuration.baseUrl) {
       console.warn(chalk.yellow("CNAME emitter requires `baseUrl` to be set in your configuration"))
       return []
@@ -27,4 +23,5 @@ export const CNAME: QuartzEmitterPlugin = () => ({
     await fs.promises.writeFile(path, content)
     return [path] as FilePath[]
   },
+  async *partialEmit() {},
 })

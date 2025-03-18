@@ -13,6 +13,7 @@ import chalk from "chalk"
 
 const defaultHeaderWeight = [700]
 const defaultBodyWeight = [400]
+
 export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: FontSpecification) {
   // Get all weights for header and body fonts
   const headerWeights: FontWeight[] = (
@@ -134,21 +135,12 @@ export type SocialImageOptions = {
   excludeRoot: boolean
   /**
    * JSX to use for generating image. See satori docs for more info (https://github.com/vercel/satori)
-   * @param cfg global quartz config
-   * @param userOpts options that can be set by user
-   * @param title title of current page
-   * @param description description of current page
-   * @param fonts global font that can be used for styling
-   * @param fileData full fileData of current page
-   * @returns prepared jsx to be used for generating image
    */
   imageStructure: (
-    cfg: GlobalConfiguration,
-    userOpts: UserOpts,
-    title: string,
-    description: string,
-    fonts: SatoriOptions["fonts"],
-    fileData: QuartzPluginData,
+    options: ImageOptions & {
+      userOpts: UserOpts
+      iconBase64?: string
+    },
   ) => JSXInternal.Element
 }
 
@@ -178,17 +170,17 @@ export type ImageOptions = {
 }
 
 // This is the default template for generated social image.
-export const defaultImage: SocialImageOptions["imageStructure"] = (
-  cfg: GlobalConfiguration,
-  { colorScheme }: UserOpts,
-  title: string,
-  description: string,
-  _fonts: SatoriOptions["fonts"],
-  fileData: QuartzPluginData,
-) => {
+export const defaultImage: SocialImageOptions["imageStructure"] = ({
+  cfg,
+  userOpts,
+  title,
+  description,
+  fileData,
+  iconBase64,
+}) => {
+  const { colorScheme } = userOpts
   const fontBreakPoint = 32
   const useSmallerFont = title.length > fontBreakPoint
-  const iconPath = `https://${cfg.baseUrl}/static/icon.png`
 
   // Format date if available
   const rawDate = getDate(cfg, fileData)
@@ -226,14 +218,16 @@ export const defaultImage: SocialImageOptions["imageStructure"] = (
           marginBottom: "0.5rem",
         }}
       >
-        <img
-          src={iconPath}
-          width={56}
-          height={56}
-          style={{
-            borderRadius: "50%",
-          }}
-        />
+        {iconBase64 && (
+          <img
+            src={iconBase64}
+            width={56}
+            height={56}
+            style={{
+              borderRadius: "50%",
+            }}
+          />
+        )}
         <div
           style={{
             display: "flex",

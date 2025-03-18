@@ -32,7 +32,7 @@ If you prefer instructions in a video format you can try following Nicole van de
 ## 🔧 Features
 
 - [[Obsidian compatibility]], [[full-text search]], [[graph view]], note transclusion, [[wikilinks]], [[backlinks]], [[features/Latex|Latex]], [[syntax highlighting]], [[popover previews]], [[Docker Support]], [[i18n|internationalization]], [[comments]] and [many more](./features/) right out of the box
-- Hot-reload for both configuration and content
+- Hot-reload on configuration edits and incremental rebuilds for content edits
 - Simple JSX layouts and [[creating components|page components]]
 - [[SPA Routing|Ridiculously fast page loads]] and tiny bundle sizes
 - Fully-customizable parsing, filtering, and page generation through [[making plugins|plugins]]

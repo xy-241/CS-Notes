@@ -221,12 +221,26 @@ export type QuartzEmitterPlugin<Options extends OptionType = undefined> = (
 
 export type QuartzEmitterPluginInstance = {
   name: string
-  emit(ctx: BuildCtx, content: ProcessedContent[], resources: StaticResources): Promise<FilePath[]>
+  emit(
+    ctx: BuildCtx,
+    content: ProcessedContent[],
+    resources: StaticResources,
+  ): Promise<FilePath[]> | AsyncGenerator<FilePath>
+  partialEmit?(
+    ctx: BuildCtx,
+    content: ProcessedContent[],
+    resources: StaticResources,
+    changeEvents: ChangeEvent[],
+  ): Promise<FilePath[]> | AsyncGenerator<FilePath> | null
   getQuartzComponents(ctx: BuildCtx): QuartzComponent[]
 }
 ```
 
-An emitter plugin must define a `name` field, an `emit` function, and a `getQuartzComponents` function. `emit` is responsible for looking at all the parsed and filtered content and then appropriately creating files and returning a list of paths to files the plugin created.
+An emitter plugin must define a `name` field, an `emit` function, and a `getQuartzComponents` function. It can optionally implement a `partialEmit` function for incremental builds.
+
+- `emit` is responsible for looking at all the parsed and filtered content and then appropriately creating files and returning a list of paths to files the plugin created.
+- `partialEmit` is an optional function that enables incremental builds. It receives information about which files have changed (`changeEvents`) and can selectively rebuild only the necessary files. This is useful for optimizing build times in development mode. If `partialEmit` is undefined, it will default to the `emit` function.
+- `getQuartzComponents` declares which Quartz components the emitter uses to construct its pages.
 
 Creating new files can be done via regular Node [fs module](https://nodejs.org/api/fs.html) (i.e. `fs.cp` or `fs.writeFile`) or via the `write` function in `quartz/plugins/emitters/helpers.ts` if you are creating files that contain text. `write` has the following signature:
 

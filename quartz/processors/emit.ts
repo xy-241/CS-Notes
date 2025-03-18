@@ -11,7 +11,7 @@ export async function emitContent(ctx: BuildCtx, content: ProcessedContent[]) {
   const perf = new PerfTimer()
   const log = new QuartzLogger(ctx.argv.verbose)
 
-  log.start(`Emitting output files`)
+  log.start(`Emitting files`)
 
   let emittedFiles = 0
   const staticResources = getStaticResourcesFromPlugins(ctx)
@@ -26,7 +26,7 @@ export async function emitContent(ctx: BuildCtx, content: ProcessedContent[]) {
             if (ctx.argv.verbose) {
               console.log(`[emit:${emitter.name}] ${file}`)
             } else {
-              log.updateText(`Emitting output files: ${emitter.name} -> ${chalk.gray(file)}`)
+              log.updateText(`${emitter.name} -> ${chalk.gray(file)}`)
             }
           }
         } else {
@@ -36,7 +36,7 @@ export async function emitContent(ctx: BuildCtx, content: ProcessedContent[]) {
             if (ctx.argv.verbose) {
               console.log(`[emit:${emitter.name}] ${file}`)
             } else {
-              log.updateText(`Emitting output files: ${emitter.name} -> ${chalk.gray(file)}`)
+              log.updateText(`${emitter.name} -> ${chalk.gray(file)}`)
             }
           }
         }

@@ -1,4 +1,4 @@
-import { FilePath, FullSlug, joinSegments } from "../../util/path"
+import { FullSlug, joinSegments } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
 
 // @ts-ignore
@@ -13,7 +13,6 @@ import { googleFontHref, joinStyles, processGoogleFonts } from "../../util/theme
 import { Features, transform } from "lightningcss"
 import { transform as transpile } from "esbuild"
 import { write } from "./helpers"
-import DepGraph from "../../depgraph"
 
 type ComponentResources = {
   css: string[]
@@ -222,9 +221,6 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
 export const ComponentResources: QuartzEmitterPlugin = () => {
   return {
     name: "ComponentResources",
-    async getDependencyGraph(_ctx, _content, _resources) {
-      return new DepGraph<FilePath>()
-    },
     async *emit(ctx, _content, _resources) {
       const cfg = ctx.cfg.configuration
       // component specific scripts and styles
@@ -300,19 +296,22 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
           },
           include: Features.MediaQueries,
         }).code.toString(),
-      }),
-        yield write({
-          ctx,
-          slug: "prescript" as FullSlug,
-          ext: ".js",
-          content: prescript,
-        }),
-        yield write({
-          ctx,
-          slug: "postscript" as FullSlug,
-          ext: ".js",
-          content: postscript,
-        })
+      })
+
+      yield write({
+        ctx,
+        slug: "prescript" as FullSlug,
+        ext: ".js",
+        content: prescript,
+      })
+
+      yield write({
+        ctx,
+        slug: "postscript" as FullSlug,
+        ext: ".js",
+        content: postscript,
+      })
     },
+    async *partialEmit() {},
   }
 }

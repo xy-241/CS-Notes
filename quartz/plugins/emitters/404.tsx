@@ -3,13 +3,12 @@ import { QuartzComponentProps } from "../../components/types"
 import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { FullPageLayout } from "../../cfg"
-import { FilePath, FullSlug } from "../../util/path"
+import { FullSlug } from "../../util/path"
 import { sharedPageComponents } from "../../../quartz.layout"
 import { NotFound } from "../../components"
 import { defaultProcessedContent } from "../vfile"
 import { write } from "./helpers"
 import { i18n } from "../../i18n"
-import DepGraph from "../../depgraph"
 
 export const NotFoundPage: QuartzEmitterPlugin = () => {
   const opts: FullPageLayout = {
@@ -28,9 +27,6 @@ export const NotFoundPage: QuartzEmitterPlugin = () => {
     getQuartzComponents() {
       return [Head, Body, pageBody, Footer]
     },
-    async getDependencyGraph(_ctx, _content, _resources) {
-      return new DepGraph<FilePath>()
-    },
     async *emit(ctx, _content, resources) {
       const cfg = ctx.cfg.configuration
       const slug = "404" as FullSlug
@@ -44,7 +40,7 @@ export const NotFoundPage: QuartzEmitterPlugin = () => {
         description: notFound,
         frontmatter: { title: notFound, tags: [] },
       })
-      const externalResources = pageResources(path, vfile.data, resources)
+      const externalResources = pageResources(path, resources)
       const componentData: QuartzComponentProps = {
         ctx,
         fileData: vfile.data,
@@ -62,5 +58,6 @@ export const NotFoundPage: QuartzEmitterPlugin = () => {
         ext: ".html",
       })
     },
+    async *partialEmit() {},
   }
 }

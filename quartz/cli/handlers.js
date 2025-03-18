@@ -225,6 +225,10 @@ See the [documentation](https://quartz.jzhao.xyz) for how to get started.
  * @param {*} argv arguments for `build`
  */
 export async function handleBuild(argv) {
+  if (argv.serve) {
+    argv.watch = true
+  }
+
   console.log(chalk.bgGreen.black(`\n Quartz v${version} \n`))
   const ctx = await esbuild.context({
     entryPoints: [fp],
@@ -331,9 +335,10 @@ export async function handleBuild(argv) {
     clientRefresh()
   }
 
+  let clientRefresh = () => {}
   if (argv.serve) {
     const connections = []
-    const clientRefresh = () => connections.forEach((conn) => conn.send("rebuild"))
+    clientRefresh = () => connections.forEach((conn) => conn.send("rebuild"))
 
     if (argv.baseDir !== "" && !argv.baseDir.startsWith("/")) {
       argv.baseDir = "/" + argv.baseDir
@@ -433,6 +438,7 @@ export async function handleBuild(argv) {
 
       return serve()
     })
+
     server.listen(argv.port)
     const wss = new WebSocketServer({ port: argv.wsPort })
     wss.on("connection", (ws) => connections.push(ws))
@@ -441,16 +447,27 @@ export async function handleBuild(argv) {
         `Started a Quartz server listening at http://localhost:${argv.port}${argv.baseDir}`,
       ),
     )
-    console.log("hint: exit with ctrl+c")
-    const paths = await globby(["**/*.ts", "**/*.tsx", "**/*.scss", "package.json"])
+  } else {
+    await build(clientRefresh)
+    ctx.dispose()
+  }
+
+  if (argv.watch) {
+    const paths = await globby([
+      "**/*.ts",
+      "quartz/cli/*.js",
+      "quartz/static/**/*",
+      "**/*.tsx",
+      "**/*.scss",
+      "package.json",
+    ])
     chokidar
       .watch(paths, { ignoreInitial: true })
       .on("add", () => build(clientRefresh))
       .on("change", () => build(clientRefresh))
       .on("unlink", () => build(clientRefresh))
-  } else {
-    await build(() => {})
-    ctx.dispose()
+
+    console.log(chalk.grey("hint: exit with ctrl+c"))
   }
 }
 
