@@ -150,7 +150,7 @@ export type ImageOptions = {
   /**
    * what title to use as header in image
    */
-  ogImageTitle: string
+  title: string
   /**
    * what description to use as body in image
    */

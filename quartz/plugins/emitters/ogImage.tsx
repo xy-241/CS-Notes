@@ -26,7 +26,7 @@ const defaultOptions: SocialImageOptions = {
  * @param opts options for generating image
  */
 async function generateSocialImage(
-  { cfg, description, fonts, ogImageTitle: title, fileData }: ImageOptions,
+  { cfg, description, fonts, title: title, fileData }: ImageOptions,
   userOpts: SocialImageOptions,
 ): Promise<Readable> {
   const { width, height } = userOpts
@@ -153,7 +153,7 @@ export const CustomOgImages: QuartzEmitterPlugin<Partial<SocialImageOptions>> = 
 
         const stream = await generateSocialImage(
           {
-            ogImageTitle: title,
+            title: title,
             description,
             fonts,
             cfg,
