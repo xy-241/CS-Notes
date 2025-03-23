@@ -1,6 +1,7 @@
 import { slug as slugAnchor } from "github-slugger"
 import type { Element as HastElement } from "hast"
 import { clone } from "./clone"
+
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
 export const QUARTZ = "quartz"
@@ -37,6 +38,15 @@ export function isRelativeURL(s: string): s is RelativeURL {
   const validStart = /^\.{1,2}/.test(s)
   const validEnding = !endsWith(s, "index")
   return validStart && validEnding && ![".md", ".html"].includes(getFileExtension(s) ?? "")
+}
+
+export function isAbsoluteURL(s: string): boolean {
+  try {
+    new URL(s)
+  } catch {
+    return false
+  }
+  return true
 }
 
 export function getFullSlug(window: Window): FullSlug {

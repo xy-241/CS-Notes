@@ -62,7 +62,7 @@ The following properties can be used to customize your link previews:
 | `socialDescription` | `description`    | Description to be used for preview. |
 | `socialImage`       | `image`, `cover` | Link to preview image.              |
 
-The `socialImage` property should contain a link to an image relative to `quartz/static`. If you have a folder for all your images in `quartz/static/my-images`, an example for `socialImage` could be `"my-images/cover.png"`.
+The `socialImage` property should contain a link to an image either relative to `quartz/static`, or a full URL. If you have a folder for all your images in `quartz/static/my-images`, an example for `socialImage` could be `"my-images/cover.png"`. Alternatively, you can use a fully qualified URL like `"https://example.com/cover.png"`.
 
 > [!info] Info
 >

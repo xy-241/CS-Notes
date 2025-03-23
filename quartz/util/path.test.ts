@@ -38,6 +38,17 @@ describe("typeguards", () => {
     assert(!path.isRelativeURL("./abc/def.md"))
   })
 
+  test("isAbsoluteURL", () => {
+    assert(path.isAbsoluteURL("https://example.com"))
+    assert(path.isAbsoluteURL("http://example.com"))
+    assert(path.isAbsoluteURL("ftp://example.com/a/b/c"))
+    assert(path.isAbsoluteURL("http://host/%25"))
+    assert(path.isAbsoluteURL("file://host/twoslashes?more//slashes"))
+
+    assert(!path.isAbsoluteURL("example.com/abc/def"))
+    assert(!path.isAbsoluteURL("abc"))
+  })
+
   test("isFullSlug", () => {
     assert(path.isFullSlug("index"))
     assert(path.isFullSlug("abc/def"))
