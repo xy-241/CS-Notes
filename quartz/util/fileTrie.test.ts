@@ -330,4 +330,86 @@ describe("FileTrie", () => {
       )
     })
   })
+
+  describe("pathToNode", () => {
+    test("should return root node for empty path", () => {
+      const data = { title: "Root", slug: "index", filePath: "index.md" }
+      trie.add(data)
+      const path = trie.ancestryChain([])
+      assert.deepStrictEqual(path, [trie])
+    })
+
+    test("should return root node for index path", () => {
+      const data = { title: "Root", slug: "index", filePath: "index.md" }
+      trie.add(data)
+      const path = trie.ancestryChain(["index"])
+      assert.deepStrictEqual(path, [trie])
+    })
+
+    test("should return path to first level node", () => {
+      const data = { title: "Test", slug: "test", filePath: "test.md" }
+      trie.add(data)
+      const path = trie.ancestryChain(["test"])
+      assert.deepStrictEqual(path, [trie, trie.children[0]])
+    })
+
+    test("should return path to nested node", () => {
+      const data = {
+        title: "Nested",
+        slug: "folder/subfolder/test",
+        filePath: "folder/subfolder/test.md",
+      }
+      trie.add(data)
+      const path = trie.ancestryChain(["folder", "subfolder", "test"])
+      assert.deepStrictEqual(path, [
+        trie,
+        trie.children[0],
+        trie.children[0].children[0],
+        trie.children[0].children[0].children[0],
+      ])
+    })
+
+    test("should return undefined for non-existent path", () => {
+      const data = { title: "Test", slug: "test", filePath: "test.md" }
+      trie.add(data)
+      const path = trie.ancestryChain(["nonexistent"])
+      assert.strictEqual(path, undefined)
+    })
+
+    test("should return file data for intermediate folders", () => {
+      const data1 = {
+        title: "Root",
+        slug: "index",
+        filePath: "index.md",
+      }
+      const data2 = {
+        title: "Test",
+        slug: "folder/subfolder/test",
+        filePath: "folder/subfolder/test.md",
+      }
+      const data3 = {
+        title: "Folder Index",
+        slug: "folder/index",
+        filePath: "folder/index.md",
+      }
+
+      trie.add(data1)
+      trie.add(data2)
+      trie.add(data3)
+      const path = trie.ancestryChain(["folder", "subfolder"])
+      assert.deepStrictEqual(path, [trie, trie.children[0], trie.children[0].children[0]])
+      assert.strictEqual(path[1].data, data3)
+    })
+
+    test("should return path for partial path", () => {
+      const data = {
+        title: "Nested",
+        slug: "folder/subfolder/test",
+        filePath: "folder/subfolder/test.md",
+      }
+      trie.add(data)
+      const path = trie.ancestryChain(["folder"])
+      assert.deepStrictEqual(path, [trie, trie.children[0]])
+    })
+  })
 })

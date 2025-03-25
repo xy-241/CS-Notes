@@ -8,7 +8,8 @@ import { i18n } from "../../i18n"
 import { QuartzPluginData } from "../../plugins/vfile"
 import { ComponentChildren } from "preact"
 import { concatenateResources } from "../../util/resources"
-import { FileTrieNode } from "../../util/fileTrie"
+import { trieFromAllFiles } from "../../util/ctx"
+
 interface FolderContentOptions {
   /**
    * Whether to display number of folders
@@ -25,31 +26,11 @@ const defaultOptions: FolderContentOptions = {
 
 export default ((opts?: Partial<FolderContentOptions>) => {
   const options: FolderContentOptions = { ...defaultOptions, ...opts }
-  let trie: FileTrieNode<
-    QuartzPluginData & {
-      slug: string
-      title: string
-      filePath: string
-    }
-  >
 
   const FolderContent: QuartzComponent = (props: QuartzComponentProps) => {
     const { tree, fileData, allFiles, cfg } = props
 
-    if (!trie) {
-      trie = new FileTrieNode([])
-      allFiles.forEach((file) => {
-        if (file.frontmatter) {
-          trie.add({
-            ...file,
-            slug: file.slug!,
-            title: file.frontmatter.title,
-            filePath: file.filePath!,
-          })
-        }
-      })
-    }
-
+    const trie = (props.ctx.trie ??= trieFromAllFiles(allFiles))
     const folder = trie.findNode(fileData.slug!.split("/"))
     if (!folder) {
       return null

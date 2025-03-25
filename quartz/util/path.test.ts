@@ -1,7 +1,7 @@
 import test, { describe } from "node:test"
 import * as path from "./path"
 import assert from "node:assert"
-import { FullSlug, TransformOptions } from "./path"
+import { FullSlug, TransformOptions, SimpleSlug } from "./path"
 
 describe("typeguards", () => {
   test("isSimpleSlug", () => {
@@ -312,5 +312,52 @@ describe("link strategies", () => {
       assert.strictEqual(path.transformLink(cur, "e/g/h", opts), "./e/g/h")
       assert.strictEqual(path.transformLink(cur, "a/b/index", opts), "./a/b/")
     })
+  })
+})
+
+describe("resolveRelative", () => {
+  test("from index", () => {
+    assert.strictEqual(path.resolveRelative("index" as FullSlug, "index" as FullSlug), "./")
+    assert.strictEqual(path.resolveRelative("index" as FullSlug, "abc" as FullSlug), "./abc")
+    assert.strictEqual(
+      path.resolveRelative("index" as FullSlug, "abc/def" as FullSlug),
+      "./abc/def",
+    )
+    assert.strictEqual(
+      path.resolveRelative("index" as FullSlug, "abc/def/ghi" as FullSlug),
+      "./abc/def/ghi",
+    )
+  })
+
+  test("from nested page", () => {
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "index" as FullSlug), "../")
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "abc" as FullSlug), "../abc")
+    assert.strictEqual(
+      path.resolveRelative("abc/def" as FullSlug, "abc/def" as FullSlug),
+      "../abc/def",
+    )
+    assert.strictEqual(
+      path.resolveRelative("abc/def" as FullSlug, "ghi/jkl" as FullSlug),
+      "../ghi/jkl",
+    )
+  })
+
+  test("with index paths", () => {
+    assert.strictEqual(path.resolveRelative("abc/index" as FullSlug, "index" as FullSlug), "../")
+    assert.strictEqual(
+      path.resolveRelative("abc/def/index" as FullSlug, "index" as FullSlug),
+      "../../",
+    )
+    assert.strictEqual(path.resolveRelative("index" as FullSlug, "abc/index" as FullSlug), "./abc/")
+    assert.strictEqual(
+      path.resolveRelative("abc/def" as FullSlug, "abc/index" as FullSlug),
+      "../abc/",
+    )
+  })
+
+  test("with simple slugs", () => {
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "" as SimpleSlug), "../")
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "ghi" as SimpleSlug), "../ghi")
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "ghi/" as SimpleSlug), "../ghi/")
   })
 })
