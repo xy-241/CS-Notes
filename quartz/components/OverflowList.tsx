@@ -1,5 +1,4 @@
 import { JSX } from "preact"
-import { randomIdNonSecure } from "../util/random"
 
 const OverflowList = ({
   children,
@@ -13,8 +12,9 @@ const OverflowList = ({
   )
 }
 
+let numExplorers = 0
 export default () => {
-  const id = randomIdNonSecure()
+  const id = `list-${numExplorers++}`
 
   return {
     OverflowList: (props: JSX.HTMLAttributes<HTMLUListElement>) => (

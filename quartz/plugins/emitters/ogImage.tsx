@@ -55,8 +55,9 @@ async function generateSocialImage(
     fonts,
     loadAdditionalAsset: async (languageCode: string, segment: string) => {
       if (languageCode === "emoji") {
-        return `data:image/svg+xml;base64,${btoa(await loadEmoji(getIconCode(segment)))}`
+        return await loadEmoji(getIconCode(segment))
       }
+
       return languageCode
     },
   })

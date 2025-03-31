@@ -65,6 +65,14 @@ ul,
   }
 }
 
+article > mjx-container.MathJax {
+  display: flex;
+  > svg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 strong {
   font-weight: $semiBoldWeight;
 }
@@ -553,8 +561,8 @@ video {
 }
 
 div:has(> .overflow) {
-  display: flex;
   max-height: 100%;
+  overflow-y: hidden;
 }
 
 ul.overflow,
