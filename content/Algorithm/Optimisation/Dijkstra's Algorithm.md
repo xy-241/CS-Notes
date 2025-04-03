@@ -7,7 +7,7 @@ tags:
   - dsa
   - java
 Creation Date: 2023-10-09T08:54:00
-Last Date: 2025-04-03T11:18:17+08:00
+Last Date: 2025-04-03T12:09:53+08:00
 References:
   - "Mike: https://youtu.be/GazC3A4OQTE?si=NZgAiSYMoewpywwF"
   - "Abdul: https://youtu.be/XB4MIexjvY0?si=v5wN_1UZopp7E76u"
@@ -40,8 +40,56 @@ References:
   - Multiple relaxations may be needed for the same node
   - Later paths through negative edges could be shorter than earlier direct paths
 
-## Positive Edge Weights
+### Triangle Inequality
+- For any three nodes A, B, and C in a graph, the shortest path distances found by Dijkstra's algorithm satisfy:
+  - `d(A,B) ≤ d(A,C) + d(C,B)`
+  - Where `d(X,Y)` represents the shortest path distance from X to Y found by Dijkstra's algorithm
+
+>[!note] Key Insight
+> This inequality holds because:
+> - If there was a shorter path from A to B through C, Dijkstra's algorithm would have found it
+> - The direct path from A to B is guaranteed to be no longer than any path that goes through C
+> - This property is fundamental to why Dijkstra's algorithm works correctly for non-negative edge weights
+
+>[!caution] Important Note
+> The triangle inequality only holds for shortest path distances found by Dijkstra's algorithm
+> - It does not hold for arbitrary paths in the graph
+> - For example, if S->B is not the shortest path from S to B, then d(S,B) > d(S,C) + d(C,B) might be possible
+> - This is why Dijkstra's algorithm must always find the actual shortest paths to maintain the triangle inequality
+
+## Complexity Intuition
 ---
+- Dijkstra's algorithm always performs two key operations:
+
+1. **Process all vertices** (V extract-min operations)
+   - Each vertex must be processed exactly once
+   - This is necessary to guarantee we find the shortest path to every node
+   - The cost of each extraction depends on the priority queue implementation
+
+2. **Consider all edges** (up to E decrease-key operations)
+   - Each edge may need to be relaxed (updated) if a shorter path is found
+   - The number of relaxations is bounded by the number of edges
+   - The cost of each relaxation **depends on the priority queue's decrease-key operation**
+
+- **Total complexity = Cost of V vertex extractions + Cost of E edge relaxations**
+
+>[!note] Key Insight
+> Different priority queue implementations change the cost of these operations, not the number of operations performed. This explains why the time complexity varies based on the data structure used, while the algorithm's fundamental approach remains unchanged.
+
+## Limitations and Common Misconceptions
+---
+>[!warning] Negating Weights for Longest Path
+> A common misconception is that we can find the longest path by negating all edge weights and running Dijkstra's algorithm. This approach fails because:
+> 
+> **Greedy Property**: Dijkstra's algorithm relies on the greedy property that once a node is processed, we've found its shortest path. This property doesn't hold for longest paths
+> 
+> Instead, consider:
+> - For DAGs: Use [[Topological Sort]] and dynamic programming
+> - For general graphs: Use [[Bellman-Ford Algorithm]] with modified relaxation rules
+
+## Examples
+---
+### Positive Edge Weights Example
 
 ![[positive_edges.svg]]
 
@@ -51,12 +99,7 @@ References:
   1. Priority Queue processes nodes in order of increasing distance
   2. Any alternative path would involve additional positive edges, making it longer
 
-## Negative Edge Weights
----
-- Algorithm may fail to find shortest paths when negative edges exist
-- Nodes may require multiple edge relaxations as later paths could be shorter
-
-### Execution Example
+### Negative Edge Weights Example
 
 ![[negative_edges.svg|500]]
 
@@ -93,6 +136,40 @@ Starting from node `a`:
 > - Do not use Dijkstra's algorithm when graph contains negative edges
 > - Consider using [[Bellman-Ford Algorithm]] instead for graphs with negative edges
 > - Negative cycles (cycles with negative total weight) make shortest path undefined
+
+## Graph Types and Applicability
+---
+### Supported Graph Types ✓ Yes
+1. **Unweighted Trees**
+   - All edges have the same weight (typically 1)
+   - Trees have no cycles, so shortest path between any two vertices is the unique path connecting them
+   - Algorithm will correctly find this path, relaxing each edge at most once
+
+2. **Weighted Graphs with Non-negative Edge Weights**
+   - Classic scenario where Dijkstra's algorithm is guaranteed to work correctly
+   - Non-negative edge weights ensure that once a vertex is processed, its distance is final
+   - Any alternative path would have to be at least as long
+   - Each node is processed exactly once
+   - Priority Queue processes nodes in order of increasing distance
+
+### Unsupported Graph Types ✗ No
+1. **Weighted Graphs with Negative Edge Weights**
+   - Fails if graph contains negative edge weights
+   - Greedy selection assumes adding edges can never decrease path length
+   - This assumption is violated with negative weights
+   - Nodes may require multiple edge relaxations as later paths could be shorter
+
+2. **Weighted Graphs with Negative Weight Cycles**
+   - Even without negative cycles, negative edge weights can cause incorrect results
+   - Algorithm might prematurely mark a vertex as "visited" before discovering a shorter path through a negative edge
+   - Consider using [[Bellman-Ford Algorithm]] instead for graphs with negative edges
+
+>[!note] Summary
+> Dijkstra's algorithm will always return the correct answer (relaxing each edge at most once) only for:
+> - Unweighted trees
+> - Weighted graphs with non-negative edge weights
+
+
 
 ## Java Code Templates
 ---
@@ -182,8 +259,11 @@ Starting from node `a`:
 > }
 > ```
 
+
 >[!question] Leetcode questions
 > - [Byte-dance Mock Test (Product Recommendation)](https://www.jdoodle.com/ia/O7d)
+
+
 
 
 ## References
