@@ -7,7 +7,7 @@ tags:
   - dsa
   - java
 Creation Date: 2023-10-09T08:54:00
-Last Date: 2024-04-28T20:49:45+08:00
+Last Date: 2025-04-03T11:18:17+08:00
 References:
   - "Mike: https://youtu.be/GazC3A4OQTE?si=NZgAiSYMoewpywwF"
   - "Abdul: https://youtu.be/XB4MIexjvY0?si=v5wN_1UZopp7E76u"
@@ -18,12 +18,81 @@ References:
 - Used to find the shortest path from **any starting node** to all other nodes in a [[Graph]] - **Single Source Shortest Path** on a [[Graph#Weighted | Weighted Graph]] that is either [[Graph#Directed Graph]] or [[Graph#Undirected Graph]]
 </br>
 
-- Use [[Greedy Algorithm]] to improve the computation performance via [[Priority Queue]]
-- Use  [[Combinatorial Optimisation]] to obtain the shortest distance from the given node to all other nodes
+- Uses [[Priority Queue]] to always process the node with smallest current distance first ([[Greedy Algorithm]]):
+  - Instead of checking all possible paths (which would be slow)
+  - We greedily choose the currently shortest known path
+  - This works because any path through unprocessed nodes must be longer (for positive edges)
 
->[!caution] Negative Edge
-> May not work if there are negative [[Tree#Edge|Edge]] 
+- Uses [[Combinatorial Optimisation]] to build up shortest paths incrementally:
+  - Starts with direct paths from source node
+  - Gradually finds better paths by combining known paths with new edges
+  - Updates distances whenever a shorter path is found (edge relaxation)
 
+### Source Vertex
+- The starting node from which we want to find shortest paths to all other nodes
+
+### Edge Relaxation 
+- Process of updating the shortest known distance to a node when a shorter path is found
+- For positive-weight graphs:
+  - Each node typically **needs only one relaxation** when it's first discovered
+  - Priority Queue ensures we process shorter paths before longer ones
+- For negative-weight graphs:
+  - Multiple relaxations may be needed for the same node
+  - Later paths through negative edges could be shorter than earlier direct paths
+
+## Positive Edge Weights
+---
+
+![[positive_edges.svg]]
+
+- When all edges have positive weights, each node is processed exactly once
+- Once a node is polled from the Priority Queue, we have found its shortest path
+- This is guaranteed because:
+  1. Priority Queue processes nodes in order of increasing distance
+  2. Any alternative path would involve additional positive edges, making it longer
+
+## Negative Edge Weights
+---
+- Algorithm may fail to find shortest paths when negative edges exist
+- Nodes may require multiple edge relaxations as later paths could be shorter
+
+### Execution Example
+
+![[negative_edges.svg|500]]
+
+Starting from node `a`:
+1. Initial distances: a(0), b(∞), c(∞), d(∞)
+2. Process a's edges:
+   - a->b: Update b to -5 (shortest so far, b is marked as "processed")
+   - a->c: Update c to 1
+3. Process b (smallest distance):
+   - No outgoing edges
+4. Process c:
+   - c->d: Update d to 2
+5. Process d:
+   - d->b: Update b to -8 (2 + -10)
+6. Final distances: a(0), b(-8), c(1), d(2)
+
+
+>[!important] Why Dijkstra's Assumption is violated?
+> 1. Node b is processed early due to direct negative edge (a->b with -5)
+> 2. Algorithm assumes b's shortest path is found (-5)
+> 3. Discovers a shorter path (a->c->d->b = -8) and b was "processed" again
+
+>[!question] Why it still works in this case?
+> Despite b being "processed" early, our implementation still updates b's distance when we find a shorter path.
+> 
+> The code `if (distToNextNode < distTo[nextNodeID])` allows for multiple updates to the same node.
+> 
+> However, this is not guaranteed to work for all graphs with negative edges, especially:
+> - Graphs with negative cycles where shortest paths are undefined 
+> - More complex graphs where the order of processing affects the final result 
+> - Cases where a negative edge later in the path could lead to missing even shorter paths
+
+>[!caution] Negative Edge Limitation
+> - Do not use Dijkstra's algorithm when graph contains negative edges
+> - Consider using [[Bellman-Ford Algorithm]] instead for graphs with negative edges
+> - Negative cycles (cycles with negative total weight) make shortest path undefined
 
 ## Java Code Templates
 ---
@@ -113,14 +182,10 @@ References:
 > }
 > ```
 
-## Leetcode Question
----
-- [Byte-dance Mock Test (Product Recommendation)](https://www.jdoodle.com/ia/O7d)
+>[!question] Leetcode questions
+> - [Byte-dance Mock Test (Product Recommendation)](https://www.jdoodle.com/ia/O7d)
 
 
-## Terminologies
+## References
 ---
-### Source Vertex
-- The starting node
-### Edge Relaxation 
-- Update path for already known nodes as soon as we find a shorter path to reach it 
+- [3.6 Dijkstra Algorithm - Single Source Shortest Path - Greedy Method - YouTube](https://youtu.be/XB4MIexjvY0?si=n8EUlCv87qIwXAH5)
