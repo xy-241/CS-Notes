@@ -10,9 +10,9 @@ import { defaultImage } from "./quartz/util/og"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "CS Notes",
-    enableSPA: true,
+    enableSPA: false,
     pageTitleSuffix: "",
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "google",
       tagId: "G-H0G1YKHC31"
