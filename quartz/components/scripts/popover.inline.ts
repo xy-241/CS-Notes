@@ -1,33 +1,40 @@
 import { computePosition, flip, inline, shift } from "@floating-ui/dom"
 import { normalizeRelativeURLs } from "../../util/path"
 import { fetchCanonical } from "./util"
+import { randomIdNonSecure } from "../../util/random"
 
 const p = new DOMParser()
+
 async function mouseEnterHandler(
   this: HTMLAnchorElement,
   { clientX, clientY }: { clientX: number; clientY: number },
 ) {
+  clearActivePopover()
+
   const link = this
+  const id = randomIdNonSecure()
   if (link.dataset.noPopover === "true") {
     return
   }
 
   async function setPosition(popoverElement: HTMLElement) {
     const { x, y } = await computePosition(link, popoverElement, {
+      strategy: "fixed",
       middleware: [inline({ x: clientX, y: clientY }), shift(), flip()],
     })
     Object.assign(popoverElement.style, {
-      left: `${x}px`,
-      top: `${y}px`,
+      transform: `translate(${x.toFixed()}px, ${y.toFixed()}px)`,
     })
   }
 
-  const hasAlreadyBeenFetched = () =>
-    [...link.children].some((child) => child.classList.contains("popover"))
+  const prevPopoverElement = document.getElementById(`popover-${id}`)
+  const hasAlreadyBeenFetched = () => !!document.getElementById(`popover-${id}`)
 
   // dont refetch if there's already a popover
   if (hasAlreadyBeenFetched()) {
-    return setPosition(link.lastChild as HTMLElement)
+    setPosition(prevPopoverElement as HTMLElement)
+    prevPopoverElement?.classList.add("active-popover")
+    return
   }
 
   const thisUrl = new URL(document.location.href)
@@ -82,8 +89,11 @@ async function mouseEnterHandler(
       const contents = await response.text()
       const html = p.parseFromString(contents, "text/html")
       normalizeRelativeURLs(html, targetUrl)
-      // strip all IDs from elements to prevent duplicates
-      html.querySelectorAll("[id]").forEach((el) => el.removeAttribute("id"))
+      // prepend all IDs inside popovers to prevent duplicates
+      html.querySelectorAll("[id]").forEach((el) => {
+        const targetID = `popover-internal-${el.id}`
+        el.id = targetID
+      })
       const elts = [...html.getElementsByClassName("popover-hint")]
       if (elts.length === 0) return
 
@@ -91,10 +101,13 @@ async function mouseEnterHandler(
   }
 
   setPosition(popoverElement)
-  link.appendChild(popoverElement)
+  popoverElement.id = `popover-${id}`
+  popoverElement.classList.add("active-popover")
+  document.body.appendChild(popoverElement)
 
   if (hash !== "") {
-    const heading = popoverInner.querySelector(hash) as HTMLElement | null
+    const targetAnchor = `#popover-internal-${hash.slice(1)}`
+    const heading = popoverInner.querySelector(targetAnchor) as HTMLElement | null
     if (heading) {
       // leave ~12px of buffer when scrolling to a heading
       popoverInner.scroll({ top: heading.offsetTop - 12, behavior: "instant" })
@@ -102,10 +115,23 @@ async function mouseEnterHandler(
   }
 }
 
+function clearActivePopover() {
+  const allPopoverElements = document.querySelectorAll(".popover")
+  if (allPopoverElements) {
+    allPopoverElements.forEach((popoverElement) =>
+      popoverElement.classList.remove("active-popover"),
+    )
+  }
+}
+
 document.addEventListener("nav", () => {
   const links = [...document.getElementsByClassName("internal")] as HTMLAnchorElement[]
   for (const link of links) {
+    link.addEventListener("mouseleave", clearActivePopover)
     link.addEventListener("mouseenter", mouseEnterHandler)
-    window.addCleanup(() => link.removeEventListener("mouseenter", mouseEnterHandler))
+    window.addCleanup(() => {
+      link.removeEventListener("mouseenter", mouseEnterHandler)
+      link.removeEventListener("mouseleave", clearActivePopover)
+    })
   }
 })

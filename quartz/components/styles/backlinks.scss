@@ -8,10 +8,12 @@
     margin: 0;
   }
 
-  & > ul {
+  & > ul.overflow {
     list-style: none;
     padding: 0;
     margin: 0.5rem 0;
+    max-height: calc(100% - 2rem);
+    overscroll-behavior: contain;
 
     & > li {
       & > a {

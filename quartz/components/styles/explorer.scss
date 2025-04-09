@@ -118,6 +118,7 @@ button.desktop-explorer {
     list-style: none;
     margin: 0;
     padding: 0;
+    overscroll-behavior: contain;
 
     & li > a {
       color: var(--dark);

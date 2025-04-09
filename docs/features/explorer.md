@@ -131,7 +131,8 @@ Using this example, the display names of all `FileNodes` (folders + files) will 
 ```ts title="quartz.layout.ts"
 Component.Explorer({
   mapFn: (node) => {
-    return (node.displayName = node.displayName.toUpperCase())
+    node.displayName = node.displayName.toUpperCase()
+    return node
   },
 })
 ```
@@ -145,8 +146,12 @@ Note that this example filters on the title but you can also do it via slug or a
 Component.Explorer({
   filterFn: (node) => {
     // set containing names of everything you want to filter out
-    const omit = new Set(["authoring content", "tags", "hosting"])
-    return !omit.has(node.data.title.toLowerCase())
+    const omit = new Set(["authoring content", "tags", "advanced"])
+
+    // can also use node.slug or by anything on node.data
+    // note that node.data is only present for files that exist on disk
+    // (e.g. implicit folder nodes that have no associated index.md)
+    return !omit.has(node.displayName.toLowerCase())
   },
 })
 ```
@@ -159,7 +164,7 @@ You can access the tags of a file by `node.data.tags`.
 Component.Explorer({
   filterFn: (node) => {
     // exclude files with the tag "explorerexclude"
-    return node.data.tags.includes("explorerexclude") !== true
+    return node.data.tags?.includes("explorerexclude") !== true
   },
 })
 ```
