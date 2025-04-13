@@ -133,11 +133,13 @@
         }
 
         @media all and ($mobile) {
-          & > #preview-container {
+          flex-direction: column;
+
+          & > .preview-container {
             display: none !important;
           }
 
-          &[data-preview] > #results-container {
+          &[data-preview] > .results-container {
             width: 100%;
             height: auto;
             flex: 0 0 100%;
@@ -202,6 +204,12 @@
 
             & > h3 {
               margin: 0;
+            }
+
+            @media all and not ($mobile) {
+              & > p.card-description {
+                display: none;
+              }
             }
 
             & > ul.tags {
