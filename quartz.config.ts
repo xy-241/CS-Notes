@@ -12,7 +12,7 @@ const config: QuartzConfig = {
     pageTitle: "CS Notes",
     enableSPA: false,
     pageTitleSuffix: "",
-    enablePopovers: false,
+    enablePopovers: true,
     analytics: {
       provider: "google",
       tagId: "G-H0G1YKHC31"
