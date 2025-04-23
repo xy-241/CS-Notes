@@ -7,7 +7,7 @@ tags:
   - OS
   - js
 Creation Date: 2024-03-29, 17:48
-Last Date: 2024-05-12T17:22:53+08:00
+Last Date: 2025-04-23T15:27:05+08:00
 References: 
 draft: 
 description: 
@@ -42,6 +42,8 @@ description:
 > 
 > [[Docker]] uses [[HTTP]] over unix domain socket instead of [[TCP]] for better performance. Refer to this [article](https://dev.to/rajasegar/http-over-unix-sockets-in-common-lisp-4l72) for more information.
 
+>[!info] Use in Linux kernel
+> [Linux Kernel TCP/IP protocol suite implementation](https://github.com/torvalds/linux/blob/master/include/net/sock.h) uses the Unix domain socket.
 
 ### Unix Domain Socket Lifecycle
 ![[unix_domain_socket_lifecycle.png|300]]
