@@ -589,7 +589,8 @@ export async function handleSync(argv) {
   await popContentFolder(contentFolder)
   if (argv.push) {
     console.log("Pushing your changes")
-    const res = spawnSync("git", ["push", "-uf", ORIGIN_NAME, QUARTZ_SOURCE_BRANCH], {
+    const currentBranch = execSync("git rev-parse --abbrev-ref HEAD").toString().trim()
+    const res = spawnSync("git", ["push", "-uf", ORIGIN_NAME, currentBranch], {
       stdio: "inherit",
     })
     if (res.status !== 0) {
