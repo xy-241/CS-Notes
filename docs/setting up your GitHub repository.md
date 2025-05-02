@@ -34,6 +34,13 @@ npx quartz sync --no-pull
 > [!warning]- `fatal: --[no-]autostash option is only valid with --rebase`
 > You may have an outdated version of `git`. Updating `git` should fix this issue.
 
+> [!warning]- `fatal: The remote end hung up unexpectedly`
+> It might be due to Git's default buffer size. You can fix it by increasing the buffer with this command:
+>
+> ```bash
+> git config http.postBuffer 524288000
+> ```
+
 In future updates, you can simply run `npx quartz sync` every time you want to push updates to your repository.
 
 > [!hint] Flags and options

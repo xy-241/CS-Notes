@@ -68,13 +68,28 @@ type TweenNode = {
   stop: () => void
 }
 
+// workaround for pixijs webgpu issue: https://github.com/pixijs/pixijs/issues/11389
 async function determineGraphicsAPI(): Promise<"webgpu" | "webgl"> {
   const adapter = await navigator.gpu?.requestAdapter().catch(() => null)
-  if (!adapter) {
+  const device = adapter && (await adapter.requestDevice().catch(() => null))
+  if (!device) {
     return "webgl"
   }
-  // Devices with WebGPU but no float32-blendable feature fail to render the graph
-  return adapter.features.has("float32-blendable") ? "webgpu" : "webgl"
+
+  const canvas = document.createElement("canvas")
+  const gl =
+    (canvas.getContext("webgl2") as WebGL2RenderingContext | null) ??
+    (canvas.getContext("webgl") as WebGLRenderingContext | null)
+
+  // we have to return webgl so pixijs automatically falls back to canvas
+  if (!gl) {
+    return "webgl"
+  }
+
+  const webglMaxTextures = gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS)
+  const webgpuMaxTextures = device.limits.maxSampledTexturesPerShaderStage
+
+  return webglMaxTextures === webgpuMaxTextures ? "webgpu" : "webgl"
 }
 
 async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
