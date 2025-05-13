@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - finance
 Creation Date: 2025-01-04, 15:15
-Last Date: 2025-02-16T19:25:40+08:00
+Last Date: 2025-05-13T22:50:12+08:00
 References: 
 draft: 
 description: As a student, you can meet the salary requirements for credit cards by securing a paid internship with CPF contributions. For cashback, cards like Maribank and Tiger Debit offer benefits like Shopee and Nvidia cashback. For miles, the Amaze + Citi Rewards strategy is effective for long-term accumulation. No minimum spending required for some cards.
@@ -30,14 +30,16 @@ description: As a student, you can meet the salary requirements for credit cards
 ## Miles Strategy as a Student
 ---
 >[!important]
-> In my opinion, I feel the miles card isn't worth it if you don't spend much per month, like at least five hundred dollars that qualify for miles rewards, and are okay with cheap flights like Scoot. This is because it takes much longer to accumulate miles, and the value of miles decreases significantly, as cheap flights are much cheaper, even in economy class, compared to Singapore Airlines, for example.
+> In my opinion, a miles card isn't worthwhile unless you spend at least $500 a month on eligible purchases and are aiming for premium flights. 
+> 
+> Otherwise, it takes a long time to accumulate enough miles, and their value tends to be low. Especially if you're content flying budget airlines like Scoot, which are often much cheaper than full-service carriers like Singapore Airlines, even in economy.
 
 | Card                          | Benefits                        | Foreign Transaction Fee          | Key Features                                                                                                                  |
 | ----------------------------- | ------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Amaze + Citi Rewards Strategy | **4 MPD** & Amaze reward points | **2.5%** foreign transaction fee | **Spending capped at SGD 1000** for rewards, ideal for accumulating miles over time, high exchange cost for overseas spending |
 
 >[!important]
-> No minimum spending! You can for yearly fee wavier for Citi rewards card.
+> No minimum spending! You can ask for yearly fee wavier for Citi rewards card.
 
 >[!question] What role does Amaze play?
 > It converts all transactions, including in-person transactions, into online transactions, since some card rewards are only given for online transactions.
