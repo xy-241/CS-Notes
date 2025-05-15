@@ -6,18 +6,21 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2024-12-27T12:00:28+08:00
+Last Date: 2025-05-16T02:55:21+08:00
 References: 
 description: Your go-to second brain for learning and sharing computer science concepts—zero fluff, just concise and actionable insights. Explore topics like algorithms, data structures, networking, databases, cloud computing, software design, system architecture, and more. Delve into tools like Docker, Linux, Python, and gain clear explanations on low-level learning, security, and engineering essentials.
 ---
-![[ninja.jpg|800]]
+![[ninja.jpg|400]]
 
 >[!quote]
 > 循序渐进, 负重前行. 砥砺前进, 天道酬勤.
 > 
 > Step by step, embrace great challenges. Advance with determination, diligence brings rewards.
 
-Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
+>[!important]
+> 👋🏻 Feel free to join my [Telegram channel](https://t.me/xy_241/18)! I share bite-sized insights from what I’m learning or exploring, updates on new and existing notes, and more. It’s also a space for quick discussions and deeper conversations.
+> 
+> 🙏🏻 Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
 
 ## 🎓 NUS Computer Science
 ---
