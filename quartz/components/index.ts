@@ -23,6 +23,7 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import Banner from "./Banner"
 
 import Comments from "./Comments"
 import Author from "./Author"
@@ -55,4 +56,5 @@ export {
   Author,
   Flex,
   ConditionalRender,
+  Banner,
 }
