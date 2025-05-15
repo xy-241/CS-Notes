@@ -7,7 +7,7 @@ tags:
   - networking
   - opcode
 Creation Date: 2023-10-03T11:11:00
-Last Date: 2025-05-15T14:39:13+08:00
+Last Date: 2025-05-15T14:56:04+08:00
 description: IP multicast enables efficient one-to-many data delivery. Learn how it works, its protocols (IGMP, PIM), use cases, and network requirements.
 ---
 ## Abstract
@@ -25,6 +25,9 @@ description: IP multicast enables efficient one-to-many data delivery. Learn how
 > **LAN gaming and communication**
 >
 > **IPTV services by ISPs**
+> 
+> **Providing real-time stock-market data**
+> - All market participants receive the same information at the same time to ensure the market is fair
 >
 > **Service Discovery**
 > - Protocols like SSDP use multicast for device discovery
@@ -124,5 +127,6 @@ description: IP multicast enables efficient one-to-many data delivery. Learn how
 ---
 - [Understanding IP Multicasting](http://www.steves-internet-guide.com/introduction-multicasting/)
 - [Multicast - Understand How IP Multicast Works](https://www.firewall.cx/networking/network-fundamentals/network-multicast.html)
+- [Multicast Networking: Everything You Need to Know](https://www.auvik.com/franklyit/blog/multicast-networking/)
 
 
