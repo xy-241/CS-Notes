@@ -7,7 +7,7 @@ const Banner: QuartzComponent = ({}: QuartzComponentProps) => {
         <div class="banner-header">
           <button class="close-button" aria-label="Close banner"></button>
         </div>
-        <p><span class="wave">👋🏻</span> <strong>Join my <a href="https://t.me/xy_241/18">Telegram channel</a></strong>! I share bite-sized insights from what I'm learning, updates on new and existing notes, and the occasional deep dive. It's a chill space for quick chats and meaningful discussions. Come hang out!</p>
+        <p><span class="wave">👋🏻</span> <strong>Join my <a href="https://link.yxy.ninja/tg">Telegram channel</a></strong>! I share bite-sized insights from what I'm learning, updates on new and existing notes, and the occasional deep dive. It's a chill space for quick chats and meaningful discussions. Come hang out!</p>
       </div>
     </div>
   )
