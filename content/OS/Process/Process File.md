@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2025-05-18, 20:26
-Last Date: 2025-05-18T21:00:15+08:00
+Last Date: 2025-05-18T21:06:31+08:00
 References: 
 draft: 
 description: Understand how Linux exposes process details through the /proc virtual filesystem. Learn about key files like cmdline, environ, fd, maps, status, limits, and io, vital for performance monitoring, debugging latency, and analyzing resource usage in critical applications.
@@ -15,7 +15,9 @@ description: Understand how Linux exposes process details through the /proc virt
 ---
 ![[process_dir.png]]
 
-- For [[Linux Kernel|Linux]], we can view the [[Process (进程)|process]] info in the form of [[File|file]] under `/proc`
+- For [[Linux Kernel|Linux]], we can view the [[Process (进程)|process]] info in the form of [[File|file]] under `/proc/PID` in human-readable text format
+- It allows us to view and modify parameters, automate with shell scripts
+- We also feed these real-time system information to monitoring tools without requiring special APIs
 
 >[!important] Key files 
 > - `cmdline`: Contains the command line arguments used to start the process
