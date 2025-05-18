@@ -1,0 +1,36 @@
+---
+Author:
+  - Xinyang YU
+Author Profile:
+  - https://linkedin.com/in/xinyang-yu
+tags:
+  - OS
+Creation Date: 2025-05-18, 20:26
+Last Date: 2025-05-18T21:00:15+08:00
+References: 
+draft: 
+description: Understand how Linux exposes process details through the /proc virtual filesystem. Learn about key files like cmdline, environ, fd, maps, status, limits, and io, vital for performance monitoring, debugging latency, and analyzing resource usage in critical applications.
+---
+## Abstract
+---
+![[process_dir.png]]
+
+- For [[Linux Kernel|Linux]], we can view the [[Process (进程)|process]] info in the form of [[File|file]] under `/proc`
+
+>[!important] Key files 
+> - `cmdline`: Contains the command line arguments used to start the process
+> - `environ`: Contains the environment variables for the process
+> - `fd`: Directory containing [[File System Link#Soft (Symbolic) File System Link|symbolic links]] to files the process has open
+> - `maps`: Memory mapping information, useful for debugging memory issues
+> - `status`: General process status information (state, memory usage, etc.)
+> - `limits`: Resource limits for the process
+> - `io`: I/O statistics for the process
+> 
+> These files are useful for 
+> - Performance monitoring and troubleshooting
+> - Resource usage of critical trading applications
+> - Debugging latency issues by examining process states
+
+## References
+---
+- [The Linux Programming Interface](https://man7.org/tlpi/)
