@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-22T23:19:44
-Last Date: 2024-05-21T13:26:13+08:00
+Last Date: 2025-05-19T13:16:20+08:00
 References: 
 ---
 
@@ -42,7 +42,9 @@ References:
 > ```
 
 ### File Descriptor
-- A small [[Integer (整数)]] associated with [[File]]
+- A small [[Integer (整数)|integer]] associated with [[File|file]]
+- Refer to [[VFS#File Access Mechanism]] if you are curious about how is the integer obtained for a [[Process (进程)|process]]
+
 ### File Permission
 - In [[POSIX]], file permissions are handled by **rwx bits**
 
