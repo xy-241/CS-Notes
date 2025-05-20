@@ -36,8 +36,8 @@
   },
   "dependencies": {
     "@clack/prompts": "^0.10.1",
-    "@floating-ui/dom": "^1.6.13",
-    "@myriaddreamin/rehype-typst": "^0.5.4",
+    "@floating-ui/dom": "^1.7.0",
+    "@myriaddreamin/rehype-typst": "^0.6.0",
     "@napi-rs/simple-git": "0.1.19",
     "@tweenjs/tween.js": "^25.0.0",
     "@webgpu/types": "^0.1.60",
@@ -63,10 +63,10 @@
     "mdast-util-to-string": "^4.0.0",
     "micromorph": "^0.4.5",
     "minimatch": "^10.0.1",
-    "pixi.js": "^8.9.1",
+    "pixi.js": "^8.9.2",
     "preact": "^10.26.5",
     "preact-render-to-string": "^6.5.13",
-    "pretty-bytes": "^6.1.1",
+    "pretty-bytes": "^7.0.0",
     "pretty-time": "^1.1.0",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^7.1.0",
@@ -97,21 +97,21 @@
     "unist-util-visit": "^5.0.0",
     "vfile": "^6.0.3",
     "workerpool": "^9.2.0",
-    "ws": "^8.18.1",
+    "ws": "^8.18.2",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@types/d3": "^7.4.3",
     "@types/hast": "^3.0.4",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.15.3",
+    "@types/node": "^22.15.7",
     "@types/pretty-time": "^1.1.5",
     "@types/source-map-support": "^0.5.10",
     "@types/ws": "^8.18.1",
     "@types/yargs": "^17.0.33",
     "esbuild": "^0.25.3",
     "prettier": "^3.5.3",
-    "tsx": "^4.19.3",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   }
 }

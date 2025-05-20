@@ -29,6 +29,9 @@ export default {
       lightMode: "Trzyb jasny",
       darkMode: "Tryb ciemny",
     },
+    readerMode: {
+      title: "Tryb czytania",
+    },
     explorer: {
       title: "Przeglądaj",
     },

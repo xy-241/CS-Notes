@@ -29,6 +29,9 @@ export default {
       lightMode: "Világos mód",
       darkMode: "Sötét mód",
     },
+    readerMode: {
+      title: "Olvasó mód",
+    },
     explorer: {
       title: "Fájlböngésző",
     },

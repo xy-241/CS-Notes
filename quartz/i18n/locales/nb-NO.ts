@@ -29,6 +29,9 @@ export default {
       lightMode: "Lys modus",
       darkMode: "Mørk modus",
     },
+    readerMode: {
+      title: "Læsemodus",
+    },
     explorer: {
       title: "Utforsker",
     },

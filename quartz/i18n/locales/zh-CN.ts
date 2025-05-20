@@ -29,6 +29,9 @@ export default {
       lightMode: "亮色模式",
       darkMode: "暗色模式",
     },
+    readerMode: {
+      title: "阅读模式",
+    },
     explorer: {
       title: "探索",
     },

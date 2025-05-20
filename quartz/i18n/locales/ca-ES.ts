@@ -29,6 +29,9 @@ export default {
       lightMode: "Mode clar",
       darkMode: "Mode fosc",
     },
+    readerMode: {
+      title: "Mode lector",
+    },
     explorer: {
       title: "Explorador",
     },

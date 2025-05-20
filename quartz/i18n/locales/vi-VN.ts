@@ -29,6 +29,9 @@ export default {
       lightMode: "Sáng",
       darkMode: "Tối",
     },
+    readerMode: {
+      title: "Chế độ đọc",
+    },
     explorer: {
       title: "Trong bài này",
     },
