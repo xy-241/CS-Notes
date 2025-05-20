@@ -112,7 +112,8 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       const umamiScript = document.createElement("script")
       umamiScript.src = "https://analytics.umami.is/script.js"
       umamiScript.setAttribute("data-website-id", "5cc5e1c4-8202-4eed-b059-f4867a8f7f0b")
-      umamiScript.async = true
+      umamiScript.setAttribute("data-auto-track", "true");
+      umamiScript.defer = true;
   
       document.head.appendChild(umamiScript)
     `)
@@ -121,7 +122,8 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     const umamiScript = document.createElement("script")
     umamiScript.src = "https://notess.yxy.ninja/pxsd83yn"
     umamiScript.setAttribute("data-website-id", "339ec462-99c5-450f-a994-9b452857c5d7")
-    umamiScript.async = true
+    umamiScript.setAttribute("data-auto-track", "true");
+    umamiScript.defer = true;
 
     document.head.appendChild(umamiScript)
   `)
