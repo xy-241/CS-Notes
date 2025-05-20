@@ -5,7 +5,7 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags: 
 Creation Date: 2023-11-30T16:47:00
-Last Date: 2025-05-15T21:51:35+08:00
+Last Date: 2025-05-20T15:56:45+08:00
 References: 
 title: A collection of useful tools for developers who use MacOS
 description: A macOS setup guide for development, covering essential tools, configurations, and resources for productivity and efficiency.
@@ -208,7 +208,8 @@ openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'
 # MAC address reverts to the original after rebooting
 sudo ifconfig <interface_name> ether <new_MAC_address>
 ```
-- [ ] `brew install iproute2mac` - manage network interfaces, routing, and tunnels.
+- [ ] `brew install iproute2mac` - manage network interfaces, routing, and tunnels
+- [ ] `brew install oha` - HTTP load generator, [Stress test in more realistic condition](https://github.com/hatoo/oha?tab=readme-ov-file#stress-test-in-more-realistic-condition), [Dynamic url feature](https://github.com/hatoo/oha?tab=readme-ov-file#dynamic-url-feature)
 
 >[!tool]+ Some other useful tools
 > - [ ] [[Cloudflare#Abstract|Cloudflare CLi]]
