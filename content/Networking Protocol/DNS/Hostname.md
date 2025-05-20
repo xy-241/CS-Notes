@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2023-07-24T18:28:00
-Last Date: 2024-05-23T14:22:49+08:00
+Last Date: 2025-05-20T13:31:17+08:00
 References: 
 ---
 ## Abstract
@@ -23,6 +23,13 @@ References:
 >[!success] Solution
 >Create a mapping between hostname and [[IP Address]] using [[DNS]]. IP Address is capable of solving the limitation of hostname but not human-readable which is mitigated by DNS
 
+>[!important] `localhost` and `127.0.0.1` aren't interchangeable
+> ![[localhost_vs_127.0.0.1.webp|600]]
+> 
+> While playing with [[Socket|socket programming]], I noticed an interesting behaviour about `localhost`. It is actually a hostname that needs to be resolved into an [[IP Address|IP address]], and it usually resolves to [[IP Address#IPv6]] (`::1`) before [[IP Address#IPv4]] (`127.0.0.1`). This leads to two issues:
+> 
+> 1. This introduces some latency. When a client tries to connect, it will attempt IPv6 first.
+> 2. If the server app isn’t listening on IPv6 and nothing actively rejects the connection. Instead of failing fast, the client just waits and **times out after up to seconds** (which is insanely slow, given a normal http request takes a few ms), then it falls back to IPv4 and connects successfully.
 
 ### Canonical Hostname (CNAME)
 - A less readable [[Hostname]]
