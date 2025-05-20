@@ -7,8 +7,9 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2023-07-24T18:28:00
-Last Date: 2025-05-20T13:31:17+08:00
+Last Date: 2025-05-20T13:32:07+08:00
 References: 
+description: Learn the difference between hostnames, domain names, CNAMEs, and aliases. Understand the role of DNS in mapping human-readable names to IP addresses, resolving localhost vs 127.0.0.1, and how domain transfers work through EPP codes and registrars like Cloudflare. Perfect for developers exploring network fundamentals and DNS configurations.
 ---
 ## Abstract
 ---
