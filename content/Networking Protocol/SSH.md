@@ -10,7 +10,7 @@ tags:
   - linux
   - macos
 Creation Date: 2024-03-08, 21:34
-Last Date: 2025-03-21T16:22:13+08:00
+Last Date: 2025-05-14T11:38:03+08:00
 References: 
 draft: 
 description: SSH (Secure Shell) is a network protocol that enables secure remote server management through encrypted communications, supporting robust authentication methods like public-key cryptography over traditional passwords. It allows multiplexing a single connection into multiple channels for various data transfers including command execution and port forwarding.
@@ -74,7 +74,7 @@ Host *
 > - _Benefit_: Avoids typing username with every connection
 > 
 > **IdentityFile** - Specifies private key file for authentication 
-> - _Benefit_: Uses specific keys for specific servers, improving security
+> - _Benefit_: Uses specific keys for specific servers, improving security, especially if you are using multiple ssh keys and having a ssh agent that tries to perform the authentication
 >
 > **IdentitiesOnly** - Forces SSH to only use specified identity files
 > - _Benefit_: Prevents authentication failures from trying wrong keys
