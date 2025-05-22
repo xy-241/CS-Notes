@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-24T12:23:00
-Last Date: 2024-12-14T17:19:54+08:00
+Last Date: 2025-05-22T15:31:03+08:00
 References: 
 draft: 
 description: Concurrency manages multiple tasks at once through context switching or multiple cores, enhancing CPU utilization and user experience, while parallelism executes tasks simultaneously on separate cores for true multitasking.
@@ -25,6 +25,15 @@ title: Concurrency vs. Parallelism vs. Multitasking vs. Time-Sharing
 > [[CPU]] is idle when the process and thread are performing non CPU-bounded tasks like reading and writing to [[OS/IO/IO Device|IO Device]] and waiting a result from a remote [[Host#Server]] etc. By performing context switch, we can let another process or thread to use CPU to complete its computation. Parallelism allows us to run multiple threads of processes at the same, if we have 4 CPU cores, it means we can have 4 processes/threads consuming the CPU at the same time.
 > 
 > The above describes about how concurrency helps with CPU utilisation. Concurrency also ensures users feel everything is running at the same like **browsing the web and playing music at the same time**. 
+
+>[!important] Concurrency isn't always the answer
+> It is important to first understand the type of work before trying to optimise it with concurrency. 
+> 
+> CPU-bound tasks won’t benefit much, since they already max out the CPU. Concurrency mainly helps when the CPU isn’t fully utilised. In fact, it comes with overhead — [[Context Switch|context switching]] aren't free. 
+> 
+> IO-bound work, on the other hand, tends to block the CPU and can be optimised through concurrency. I demonstrated this in my attempt to optimise a simple web server I built. You can check out the journey [here](https://t.me/xy_241/65).
+> 
+> Complexity of handling [[Race Condition (竞态条件)|race condition]] is something we have to factor in too.
 
 ## Parallelism (并行)
 ---
