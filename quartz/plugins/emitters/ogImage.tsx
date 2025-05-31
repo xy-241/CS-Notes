@@ -11,7 +11,7 @@ import { write } from "./helpers"
 import { BuildCtx } from "../../util/ctx"
 import { QuartzPluginData } from "../vfile"
 import fs from "node:fs/promises"
-import chalk from "chalk"
+import { styleText } from "util"
 
 const defaultOptions: SocialImageOptions = {
   colorScheme: "lightMode",
@@ -36,7 +36,7 @@ async function generateSocialImage(
     const iconData = await fs.readFile(iconPath)
     iconBase64 = `data:image/png;base64,${iconData.toString("base64")}`
   } catch (err) {
-    console.warn(chalk.yellow(`Warning: Could not find icon at ${iconPath}`))
+    console.warn(styleText("yellow", `Warning: Could not find icon at ${iconPath}`))
   }
 
   const imageComponent = userOpts.imageStructure({

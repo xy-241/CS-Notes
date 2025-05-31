@@ -13,7 +13,7 @@ import workerpool, { Promise as WorkerPromise } from "workerpool"
 import { QuartzLogger } from "../util/log"
 import { trace } from "../util/trace"
 import { BuildCtx, WorkerSerializableBuildCtx } from "../util/ctx"
-import chalk from "chalk"
+import { styleText } from "util"
 
 export type QuartzMdProcessor = Processor<MDRoot, MDRoot, MDRoot>
 export type QuartzHtmlProcessor = Processor<undefined, MDRoot, HTMLRoot>
@@ -194,7 +194,7 @@ export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<Pro
       textToMarkdownPromises.map(async (promise) => {
         const result = await promise
         processedFiles += result.length
-        log.updateText(`text->markdown ${chalk.gray(`${processedFiles}/${fps.length}`)}`)
+        log.updateText(`text->markdown ${styleText("gray", `${processedFiles}/${fps.length}`)}`)
         return result
       }),
     ).catch(errorHandler)
@@ -208,7 +208,7 @@ export async function parseMarkdown(ctx: BuildCtx, fps: FilePath[]): Promise<Pro
       markdownToHtmlPromises.map(async (promise) => {
         const result = await promise
         processedFiles += result.length
-        log.updateText(`markdown->html ${chalk.gray(`${processedFiles}/${fps.length}`)}`)
+        log.updateText(`markdown->html ${styleText("gray", `${processedFiles}/${fps.length}`)}`)
         return result
       }),
     ).catch(errorHandler)

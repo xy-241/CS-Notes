@@ -8,7 +8,7 @@ import { FullPageLayout } from "../../cfg"
 import { pathToRoot } from "../../util/path"
 import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
 import { Content } from "../../components"
-import chalk from "chalk"
+import { styleText } from "util"
 import { write } from "./helpers"
 import { BuildCtx } from "../../util/ctx"
 import { Node } from "unist"
@@ -90,7 +90,8 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
 
       if (!containsIndex) {
         console.log(
-          chalk.yellow(
+          styleText(
+            "yellow",
             `\nWarning: you seem to be missing an \`index.md\` home page file at the root of your \`${ctx.argv.directory}\` folder (\`${path.join(ctx.argv.directory, "index.md")} does not exist\`). This may cause errors when deploying.`,
           ),
         )

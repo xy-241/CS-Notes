@@ -41,6 +41,7 @@ export interface Options {
   enableYouTubeEmbed: boolean
   enableVideoEmbed: boolean
   enableCheckbox: boolean
+  disableBrokenWikilinks: boolean
 }
 
 const defaultOptions: Options = {
@@ -56,6 +57,7 @@ const defaultOptions: Options = {
   enableYouTubeEmbed: true,
   enableVideoEmbed: true,
   enableCheckbox: false,
+  disableBrokenWikilinks: false,
 }
 
 const calloutMapping = {
@@ -206,7 +208,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
 
       return src
     },
-    markdownPlugins(_ctx) {
+    markdownPlugins(ctx) {
       const plugins: PluggableList = []
 
       // regex replacements
@@ -273,6 +275,18 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                   }
 
                   // otherwise, fall through to regular link
+                }
+
+                // treat as broken link if slug not in ctx.allSlugs
+                if (opts.disableBrokenWikilinks) {
+                  const slug = slugifyFilePath(fp as FilePath)
+                  const exists = ctx.allSlugs && ctx.allSlugs.includes(slug)
+                  if (!exists) {
+                    return {
+                      type: "html",
+                      value: `<a class=\"internal broken\">${alias ?? fp}</a>`,
+                    }
+                  }
                 }
 
                 // internal link

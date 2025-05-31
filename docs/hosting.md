@@ -189,7 +189,7 @@ stages:
   - build
   - deploy
 
-image: node:20
+image: node:22
 cache: # Cache modules in between jobs
   key: $CI_COMMIT_REF_SLUG
   paths:

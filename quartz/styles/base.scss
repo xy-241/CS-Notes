@@ -91,7 +91,7 @@ a {
   color: var(--secondary);
 
   &:hover {
-    color: var(--tertiary) !important;
+    color: var(--tertiary);
   }
 
   &.internal {
@@ -100,6 +100,15 @@ a {
     padding: 0 0.1rem;
     border-radius: 5px;
     line-height: 1.4rem;
+
+    &.broken {
+      color: var(--secondary);
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
 
     &:has(> img) {
       background-color: transparent;
@@ -601,6 +610,7 @@ ol.overflow {
 }
 
 .katex-display {
+  display: initial;
   overflow-x: auto;
   overflow-y: hidden;
 }

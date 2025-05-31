@@ -9,7 +9,7 @@ import { QUARTZ } from "./path"
 import { formatDate, getDate } from "../components/Date"
 import readingTime from "reading-time"
 import { i18n } from "../i18n"
-import chalk from "chalk"
+import { styleText } from "util"
 
 const defaultHeaderWeight = [700]
 const defaultBodyWeight = [400]
@@ -100,7 +100,8 @@ export async function fetchTtf(
 
   if (!match) {
     console.log(
-      chalk.yellow(
+      styleText(
+        "yellow",
         `\nWarning: Failed to fetch font ${rawFontName} with weight ${weight}, got ${cssResponse.statusText}`,
       ),
     )
