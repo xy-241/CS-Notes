@@ -7,7 +7,7 @@ tags:
   - programming
   - python
 Creation Date: 2025-06-04, 22:26
-Last Date: 2025-06-05T07:19:07+08:00
+Last Date: 2025-06-05T20:32:13+08:00
 References: 
 draft: 
 description: "Clean, idiomatic Python: Learn 20+ essential best practices to write safer, more readable, and maintainable code, with examples and reasons for each."
@@ -83,7 +83,25 @@ def add(a, b):
 def add(a: int, b: int) -> int:
     return a + b
 ```
-- **Why**: Improves code clarity and enables static analysis.
+- **Why**: Improves code clarity and enables static analysis
+
+## Keyword Arguments over Positional Arguments for Optional Parameters
+---
+```python
+# Bad
+def create_user(name, age, is_admin=False):
+    ...
+
+create_user("Alice", 30, True)
+
+
+# Good (Use keyword for clarity and flexibility)
+def create_user(name, age, is_admin=False):
+    ...
+create_user("Alice", 30, is_admin=True) # An admin
+create_user("Alice", 30) # Not an Admin
+```
+- **Why**: Improves readability and reduces errors, especially when functions have multiple optional parameters. Keyword arguments make the intent clearer and future-proof the code when defaults or parameter order change
 
 ## Avoid Magic Numbers or Strings
 ---
