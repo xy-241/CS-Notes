@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2025-06-05, 20:19
-Last Date: 2025-06-05T20:27:45+08:00
+Last Date: 2025-06-29T16:21:45+08:00
 References: 
 draft: 
 description: 
@@ -48,4 +48,23 @@ description:
 - Optional, used to release **test versions** before stable
 - Often used in CI pipelines, internal QA
 
+## Version Range Operators
+---
+### `^` Caret
+- Allows minor version updates
 
+>[!example]
+> - `^1.2.3` accepts `1.2.3` to `<2.0.0` (any 1.x.x version)
+> - `^0.2.3` accepts `0.2.3` to `<0.3.0` (any 0.2.x version)
+> - `^0.0.3` accepts only `0.0.3` to `<0.0.4` (only patch updates)
+
+### `~` Tilde
+- only allows [[#Patch|patch updates]]
+
+>[!example]
+> - `~1.2.3` accepts `1.2.3` to `<1.3.0` (any 1.2.x version)
+> - `~0.2.3` accepts `0.2.3` to `<0.3.0` (any 0.2.x version)
+> - `~1.2` accepts `1.2.0` to `<1.3.0`
+
+>[!tip]
+> Use `~` when you want to be more cautious and only accept bug fixes.
