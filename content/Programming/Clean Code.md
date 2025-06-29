@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - programming
 Creation Date: 2024-05-20, 22:45
-Last Date: 2024-12-21T22:24:15+08:00
+Last Date: 2025-06-21T19:53:10+08:00
 References: 
 draft: 
 description: 
@@ -18,6 +18,9 @@ description:
 >[!important]
 > Clean code should minimise cognitive load as much as possible, that means it takes less effort for new joiners or ourselves to get a sense of the codes. 
 
+## Safe Codes
+---
+- Write code with testing in mind, cover the **average case** (does it run smoothly?), the **error case** (can it catch issues and provide useful feedback to the right stakeholders?), and the **extreme case** (does it stay stable under stress?)
 
 ## Never Nester
 ---
