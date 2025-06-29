@@ -10,7 +10,7 @@ tags:
   - linux
   - macos
 Creation Date: 2024-03-08, 21:34
-Last Date: 2025-05-14T11:38:03+08:00
+Last Date: 2025-06-29T16:38:40+08:00
 References: 
 draft: 
 description: SSH (Secure Shell) is a network protocol that enables secure remote server management through encrypted communications, supporting robust authentication methods like public-key cryptography over traditional passwords. It allows multiplexing a single connection into multiple channels for various data transfers including command execution and port forwarding.
@@ -36,7 +36,7 @@ Host jump-host
   ForwardAgent yes
   
 # ===== Only use Jump host if we are not within network =====
-Match host target-host !exec "ping -c 1 <TARGET_SERVER_ADDRESS> &>/dev/null"
+Match host target-host,!<JUMP_HOST_ADDRESS> !exec "ping -c 1 <TARGET_SERVER_ADDRESS> &>/dev/null"
   ProxyJump jump-host
 Host target-host
   HostName <TARGET_SERVER_ADDRESS>       # Example: target.example.edu
