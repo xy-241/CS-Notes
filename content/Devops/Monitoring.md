@@ -7,8 +7,9 @@ tags:
   - system_design
   - devops
   - binance
+  - over
 Creation Date: 2024-01-02, 13:05
-Last Date: 2024-11-16T23:41:07+08:00
+Last Date: 2025-07-20T20:03:46+08:00
 References: 
 draft: 
 description: Getting alerted when something bad is about to happen
@@ -20,10 +21,13 @@ description: Getting alerted when something bad is about to happen
 
 ## 4 Golden Monitoring Signals
 ---
-- **Latency:** The time it takes for a request to travel from the client to the server and back
-- **Traffic:** The number of requests a system receives over a specific period
-- **Error rate:** The percentage of requests resulting in errors, such as 404 Page Not Found or 500 Internal Server Error
-- **Saturation:** A measure of resource utilisation, including CPU, memory, and disk space
+> Let's Track Every System
+
+
+- **Latency:** P50, P95, P99 response times
+- **Traffic:** Requests per second, [[Bandwidth#Network Throughput]]
+- **Error rate:** Error rates, 4xx/5xx responses
+- **Saturation:** CPU, memory, disk, network utilization etc
 
 
 >[!success] Data points for optimisation
