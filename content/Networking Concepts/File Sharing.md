@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2024-03-26, 16:13
-Last Date: 2024-04-01T20:40:21+08:00
+Last Date: 2025-08-04T18:52:46+08:00
 References: 
 draft: 
 description: 
@@ -15,12 +15,19 @@ description:
 ---
 - The sharing of data among [[Host]] over [[Computer Network]]
 
-| File Sharing Services                     | Use Case                                                                                       |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [[File Sharing#Airdrop\|Airdrop]]         | File sharing in [[Computer Network#Local Area Network (LAN)|LAN]] among **Apple devices only**.        |
-| [[File Sharing#LocalSend\|LocalSend]]     | File sharing in LAN among different devices like from Android to iPhone.                       |
-| [[File Sharing#SFTP\|SFTP]]               | File sharing with [[Host#Server\|Server]], since SFTP is pre-installed in all modern machines. |
-| [[File Sharing#Filebrowser\|Filebrowser]] | File sharing with **a nice web UI**.                                                           |
+| File Sharing Services                     | Use Case                                                                                                                            |                                     |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| SCP                                       | `scp file.txt user@remote:/path/to/dest/`<br><br>Simplest CLI tool using [[SSH]] underneath.                                        |                                     |
+| RSYNC                                     | `rsync -avz file.txt user@remote:/path/`<br><br>Efficient sync with [[#Delta Transfer\|delta-transfer]], supports resume, excludes. |                                     |
+| [[File Sharing#Airdrop\|Airdrop]]         | File sharing in [[Computer Network#Local Area Network (LAN)                                                                         | LAN]] among **Apple devices only**. |
+| [[File Sharing#LocalSend\|LocalSend]]     | File sharing in LAN among different devices like from Android to iPhone.                                                            |                                     |
+| [[File Sharing#SFTP\|SFTP]]               | File sharing with [[Host#Server\|Server]], since SFTP is pre-installed in all modern machines.                                      |                                     |
+| [[File Sharing#Filebrowser\|Filebrowser]] | File sharing with **a nice web UI**.                                                                                                |                                     |
+
+### Delta Transfer
+- Only parts of the a file that have changed (the "delta") are transferred, **not the whole file**. 
+
+
 
 ## Airdrop
 ---
