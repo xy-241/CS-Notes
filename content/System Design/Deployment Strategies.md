@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - system_design
 Creation Date: 2024-10-16, 01:21
-Last Date: 2024-10-18T22:25:20+08:00
+Last Date: 2025-07-20T19:36:12+08:00
 References: 
 draft: 
 description: 
@@ -19,7 +19,7 @@ description:
 
 ## Big Bang Deployment
 ---
-- Pushing all changes at once causes downtime because we need to shut down the old system and turn on the new one. This can lead to significant downtime if the new system fails to start. If things go wrong, we need to roll back
+- Pushing all changes all at once causes downtime because we need to shut down the old system and turn on the new one. This can lead to significant downtime if the new system fails to start. If things go wrong, we need to roll back
 
 >[!important]
 > This is the only option when an intricate database upgrade is involved.
@@ -29,6 +29,8 @@ description:
 > - Development environment
 > - Crash loop due to a bug in the code
 > - Limited resources
+
+
 ## Rolling Deployment
 ---
 - Incrementally upgrade the system over time
@@ -46,9 +48,11 @@ description:
 > 
 > - Reduces system-wide issues but doesn't entirely eliminate them. If an issue slips past the initial checks, it may still propagate as more servers are updated.
 >
-> - Doesn't support targeted rollouts. We can't control which users receive the new version during the rollout. All users gradually experience the new version as the servers are updated. There is no ability to direct the new version to specific users based on location, device type, etc., so A/B testing is not possible.
+> - Doesn't support targeted rollouts. We can't control which users receive the new version during the rollout. All users gradually experience the new version as the servers are updated. **There is no ability to direct the new version to specific users based on location, device type, etc., so A/B testing is not possible.**
 >
 > - Overloads other instances since a subset of compute resources is taken down to roll out the new changes.
+
+
 ## Blue-Green Deployment
 ---
 - We maintain two identical production systems. Blue serves the current live app, while Green is used to safely deploy and test the new app by the QA team. Once Green is ready, we simply switch the load balancer with **zero downtime**
@@ -63,18 +67,22 @@ description:
 > Resource-intensive: doubles the infrastructure and costs.
 > 
 > Data consistency challenges with databases and third-party services.
+
+
 ## Canary Deployment
 ---
-- We deploy a new version to a small set of targeted users, based on factors like geography, device type, etc., allowing us to monitor the performance of the new version under real-world conditions but at a smaller scale. If it performs well, we gradually roll it out to a larger audience.
+- We deploy a new version to a small set of targeted users, **based on factors like geography, device type**, etc., allowing us to monitor the performance of the new version under real-world conditions but at a smaller scale. If it performs well, we gradually roll it out to a larger audience.
 
 >[!important]
-> Targeted rollouts can enable A/B testing.
+> Targeted rollouts can **enable A/B testing**.
 
 >[!important]
 > This is usually not a standalone approach but is often combined with [[#Rolling Deployment|rolling deployments]] to leverage the benefits of both methods.
 
 >[!caution]
-> Careful monitoring and automated testing of live user activity are crucial to safely increase the rollout percentage, especially when managing database schema changes or API compatibility issues.
+> **Careful monitoring** and **automated testing of live user activity** are crucial to safely increase the rollout percentage, especially when managing database schema changes or API compatibility issues.
+
+
 ## Feature Toggle
 ---
 - Not deploying a new version of the app, but managing new features of an application
@@ -87,6 +95,8 @@ description:
 
 >[!caution]
 > This can add complexity to the codebase and make unit testing more difficult. Obsolete toggles need to be cleaned up to avoid toggle debt.
+
+
 ## References
 ---
 - [Top 5 Most-Used Deployment Strategies - YouTube](https://youtu.be/AWVTKBUnoIg?si=NtjzEeQPjbK1v4Ck)
