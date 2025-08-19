@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2025-08-19, 15:35
-Last Date: 2025-08-19T16:47:13+08:00
+Last Date: 2025-08-19T21:47:21+08:00
 References:
 draft: false
 description: Learn how Spanning Tree Protocol (STP) prevents Ethernet loops by blocking redundant paths, ensuring stable, loop-free switch networks.
