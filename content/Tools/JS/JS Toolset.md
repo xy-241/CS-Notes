@@ -6,9 +6,9 @@ Author Profile:
 tags:
   - js
 Creation Date: 2023-12-15, 20:01
-Last Date: 2024-03-10T18:19:32+08:00
-References: 
-title: 
+Last Date: 2025-08-19T15:11:38+08:00
+References:
+title:
 ---
 ## Abstract
 ---
@@ -26,6 +26,12 @@ title:
 - Stands for **Node Version Manager**
 - You can install [here](https://github.com/nvm-sh/nvm#install--update-script)
 - Includes [[Node.js]], [[Package Manager#NPM]] and [[#NPX]]
+
+>[!code] Change the global node version
+> 1. `nvm install <node_version>`
+> 2. `nvm alias default <node_version>`
+> 3. `nvm use default`
+
 
 ### NPX
 - Stands for Node Package eXecute
