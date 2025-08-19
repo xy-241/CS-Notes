@@ -7,7 +7,7 @@ tags:
   - networking
   - opcode
 Creation Date: 2023-10-03T11:11:00
-Last Date: 2025-05-15T14:56:04+08:00
+Last Date: 2025-08-20T03:08:30+08:00
 description: IP multicast enables efficient one-to-many data delivery. Learn how it works, its protocols (IGMP, PIM), use cases, and network requirements.
 ---
 ## Abstract
@@ -33,7 +33,7 @@ description: IP multicast enables efficient one-to-many data delivery. Learn how
 > - Protocols like SSDP use multicast for device discovery
 >
 > **Routing Protocols**
-> - OSPF and RIP2 use multicast for routing updates
+> - [[OSPF]] and RIP2 use multicast for routing updates
 
 >[!important] Limitations
 > - Not widely supported across the public internet
@@ -65,7 +65,7 @@ description: IP multicast enables efficient one-to-many data delivery. Learn how
 - Joining is done by sending an [[#IGMP (Internet Group Management Protocol)]] join message to the network
 - Once a receiver has joined a multicast group, it will continue to receive all of the packets that are sent to that group, until it leaves the group
 - A host can be part of multiple groups
-- Hosts/routers don't maintain lists of individual group members
+- Routers don’t know which exact host is in the group, only that “someone on this interface is interested
 - Hosts can send to multicast groups even without being members
 
 ## Network Protocols for Multicast
@@ -81,7 +81,7 @@ description: IP multicast enables efficient one-to-many data delivery. Learn how
 
 ### PIM (Protocol Independent Multicast)
 - **Function**: Router-to-router protocol for multicast distribution, builds multicast distribution trees between networks
-- **Independence:** Works with any unicast routing protocol (OSPF, BGP, etc.)
+- **Independence:** Works with any unicast routing protocol ([[OSPF]], BGP, etc.)
 - **Modes**:
 	- Sparse Mode (PIM-SM): Uses Rendezvous Points, efficient for widespread networks
 	- Dense Mode (PIM-DM): Flood and prune approach for densely clustered receivers
@@ -117,7 +117,7 @@ description: IP multicast enables efficient one-to-many data delivery. Learn how
 - Prevents flooding of multicast traffic to uninterested ports
 
 ### IP-to-MAC Multicast Mapping
-- Multicast IP addresses map to multicast MAC addresses
+- Every [[IP Address|multicast IP address]] must be mapped to a [[MAC Address|multicast MAC address]] so [[Network Switch|switches]] can forward frames at Layer 2
 - Formula: The first 25 bits are fixed (01:00:5E + 0 bit)
 - Last 23 bits of IP address map to last 23 bits of MAC address
 - This mapping isn't one-to-one (32 IP addresses can map to one MAC)
