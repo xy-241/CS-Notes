@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2024-07-15, 18:48
-Last Date: 2024-07-17T14:43:20+08:00
+Last Date: 2025-05-01T14:45:21+08:00
 References: 
 draft: 
 description: 
@@ -16,7 +16,7 @@ description:
 ![[page_table_mapping.png|500]]
 
 - Stands for **T**ranslation **L**ookaside **B**uffer
-- Part of [[MMU]] that **caches** the [[Page Table#Page Table Entry|PTE]]
+- Part of [[MMU]] that **caches** the [[Page Table#Page Table Entry|PTE]], [[Fully Associative Cache|fully associative cache]], which is not [[Direct Mapped Cache]] (each cache line is mapped to a certain group of memory addresses)
 
 >[!important]
 > **Super fast**
