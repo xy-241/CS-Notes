@@ -24,7 +24,7 @@ description: Learn how Spanning Tree Protocol (STP) prevents Ethernet loops by b
 >[!important] STP is old!
 > STP was released in the 1980s, it has [[#STP Port State|slow convergence times (~30secs)]], potentially causing temporary disruptions during topology changes.
 > 
-> We have [RSTP](https://networklessons.com/spanning-tree/rapid-spanning-tree-rstp) for fast recovery, and [MSTP](https://www.pynetlabs.com/what-is-mstp-protocol/) for handling multiple VLANs efficiently. [TRILL/SPB](https://eng.libretexts.org/Bookshelves/Computer_Science/Networks/An_Introduction_to_Computer_Networks_(Dordal)/02%3A_Ethernet/2.08%3A_TRILL_and_SPB) allows using all paths without loops (like smarter STP with load balancing).
+> We have [RSTP](https://networklessons.com/spanning-tree/rapid-spanning-tree-rstp) for fast recovery, and [MSTP](https://www.pynetlabs.com/what-is-mstp-protocol/) for handling multiple [[VLAN|VLANs]] efficiently. [TRILL/SPB](https://eng.libretexts.org/Bookshelves/Computer_Science/Networks/An_Introduction_to_Computer_Networks_(Dordal)/02%3A_Ethernet/2.08%3A_TRILL_and_SPB) allows using all paths without loops (like smarter STP with load balancing).
 
 ### Root Bridge
 - The central point in the STP topology, chosen based on priority (default 32768, but you can configure it) and [[MAC Address|MAC address]]
