@@ -7,7 +7,7 @@ tags:
   - networking
   - opcode
 Creation Date: 2023-10-03T11:11:00
-Last Date: 2025-08-20T03:08:30+08:00
+Last Date: 2025-08-20T19:34:17+08:00
 description: IP multicast enables efficient one-to-many data delivery. Learn how it works, its protocols (IGMP, PIM), use cases, and network requirements.
 ---
 ## Abstract
@@ -81,7 +81,7 @@ description: IP multicast enables efficient one-to-many data delivery. Learn how
 
 ### PIM (Protocol Independent Multicast)
 - **Function**: Router-to-router protocol for multicast distribution, builds multicast distribution trees between networks
-- **Independence:** Works with any unicast routing protocol ([[OSPF]], BGP, etc.)
+- **Independence:** Works with any unicast routing protocol ([[OSPF]], [[Border Gateway Protocol]], etc.)
 - **Modes**:
 	- Sparse Mode (PIM-SM): Uses Rendezvous Points, efficient for widespread networks
 	- Dense Mode (PIM-DM): Flood and prune approach for densely clustered receivers

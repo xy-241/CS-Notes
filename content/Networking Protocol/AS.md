@@ -22,13 +22,8 @@ description:
 
 >[!tool]
 > You use this [tool](https://mxtoolbox.com/SuperTool.aspx?action=asn%3aAutonomous+System&run=toolpage#) to check out the information of a particular AS.
-## BGP
----
 
-![[bgp.png|400]]
 
-- Stands for **B**order **G**ateway **P**rotocol
-- A [[Network Protocol]] for routing traffic among [[AS]], each AS is like an isolated [[Computer Network#Local Area Network (LAN)]], BGP is the component that connects them together, so the data can flow among different AS
 
 
 ## References

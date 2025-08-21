@@ -8,8 +8,8 @@ tags:
   - graph
   - shortest-path
 Creation Date: 2024-03-31T21:47:00
-Last Date: 2025-04-02T17:36:10+08:00
-References: 
+Last Date: 2025-08-20T19:33:54+08:00
+References:
 description: A versatile shortest path algorithm that can handle negative edge weights
 ---
 ## Abstract
@@ -82,7 +82,7 @@ description: A versatile shortest path algorithm that can handle negative edge w
 - **Key Applications**:
   - **Distance Vector Routing Protocols**:
     - RIP (Routing Information Protocol)
-    - BGP (Border Gateway Protocol)
+    - [[Border Gateway Protocol]]
 
 
 ### Arbitrage Detection

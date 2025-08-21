@@ -6,9 +6,9 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2025-08-11, 13:21
-Last Date: 2025-08-11T15:55:36+08:00
-References: 
-draft: 
+Last Date: 2025-08-20T19:34:58+08:00
+References:
+draft:
 description: "OSPF Routing Protocol Guide: Complete tutorial covering LSA flooding, LSDB management, area design, and router types including ABR and ASBR configurations for network engineers. This comprehensive resource explains OSPF fundamentals from link-state advertisements to inter-area routing with practical examples and network diagrams."
 ---
 ## Abstract
@@ -111,7 +111,7 @@ Step 3: LSA Flooding (multicast to neighbors)
 [OSPF Domain]  ←→  [ASBR]  ←→  [BGP/Internet]
 (Areas 0,1,2,3)              (Different AS)
 ```
-- Acts as a **translator**, taking routes learned via BGP (or other protocols) and advertising them into the OSPF domain as external routes ([[#LSA|Type-5 LSA]])
+- Acts as a **translator**, taking routes learned via [[Border Gateway Protocol]] (or other protocols) and advertising them into the OSPF domain as external routes ([[#LSA|Type-5 LSA]])
 
 ### Intra-area Route
 - A route to a destination inside the same [[#OSPF Area]]
