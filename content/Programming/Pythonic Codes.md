@@ -7,27 +7,14 @@ tags:
   - programming
   - python
 Creation Date: 2025-06-04, 22:26
-Last Date: 2025-06-05T20:32:13+08:00
-References: 
-draft: 
+Last Date: 2025-08-23T20:16:44+08:00
+References:
+draft:
 description: "Clean, idiomatic Python: Learn 20+ essential best practices to write safer, more readable, and maintainable code, with examples and reasons for each."
 ---
-## Duck Typing
+## Safer Python Codes
 ---
-```python
-# Bad 
-if isinstance(obj, list):
-    for x in obj:
-
-# Good (Avoid `isinstance`, `type`)
-try:
-    for x in obj:
-        process(x)
-except TypeError:
-    return  # or log/skip silently
-```
-
-- **Why**: Encourages polymorphism and flexible code while failing gracefully if the object isn't iterable, avoids hardcoding type checks
+- [[Duck Typing]]
 
 ## Avoid Mutable Default Arguments
 ---
