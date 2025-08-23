@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-29T19:10:00
-Last Date: 2025-02-01T11:37:57+08:00
-References: 
+Last Date: 2025-08-23T20:03:08+08:00
+References:
 sr-due: 2024-03-01
 sr-interval: 8
 sr-ease: 267
@@ -57,6 +57,10 @@ aliases:
 >[!example] Trap Interrupt
 > Used to switch from [[Privilege Level#User Mode]] to [[Privilege Level#Kernel Mode]]. See [[Trap Interrupt (陷入)]] for more details.
 
+>[!code] Kill signals
+> `kill -15` (SIGTERM) is the default kill signal for [[Process (进程)|process]] to terminate gracefully.
+> 
+> `kill -9` (SIGKILL) immediately terminates a process. We can use this if the process is unresponsive and we are okay with the risk of corrupted data.
 
 ## Upcall
 ---
