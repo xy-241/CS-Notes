@@ -7,17 +7,17 @@ tags:
   - OS
   - js
 Creation Date: 2024-03-25, 19:56
-Last Date: 2024-05-22T16:08:19+08:00
-References: 
-draft: 
-description: 
+Last Date: 2025-08-27T00:57:14+08:00
+References:
+draft:
+description:
 ---
 ## Abstract
 ---
 ![[async_io.png|500]]
 - Short for **asynchronous input/output**
 - A programming paradigm that allows [[OS/IO/IO Device#IO Operation]] to be performed [[Concurrency (并发)|concurrently]] with other tasks, without blocking the execution of the program, so the [[CPU]] can initiate **multiple other I/O operations** and continue executing other **CPU-bounded tasks** while **waiting for the results** 
-- Powered by [[Asynchronous Thread]]
+- Powered by [[Event Loop]]
 
 >[!caution] Higher complexity
 > Coding an excess of callback functions can get messy and becomes a nightmare for programmers attempting to analyze them. 
