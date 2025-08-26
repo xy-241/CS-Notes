@@ -10,21 +10,15 @@ tags:
   - functional
   - c
 Creation Date: 2023-07-21T15:28:12+08:00
-Last Date: 2024-08-26T15:24:59+08:00
-References: 
+Last Date: 2025-08-26T15:19:31+08:00
+References:
+description: Overview of functions in programming, covering scope rules, function calls, activation records, signatures, first-class and higher-order functions, with comparisons across C, Java, and Rust.
 ---
 ## Abstract
 ---
 - **A set** of [[Instruction]] that can be triggered to **accomplish a particular task**
 
-### Function Signature 
-- Refers to the declaration of a function
-- The signature is the combination of the **function's name**, **argument [[Datatype|types]]**, **argument order**, **argument count**, and **return type**
 
->[!important] Java function signature and function descriptor
-> In [[Java]], the return type isn't part of the function signature. The method signature is the combination of the method name and the parameter list (argument types, argument order and argument count).
-> 
-> The **method descriptor** of Java is made of the **function signature** and the **return type**.
 
 ### Function Scope Rule
 - **Local parameters** and **variables** are only accessible within the [[Function|function]] they are declared in
@@ -37,6 +31,17 @@ References:
 
 >[!important] Passing by value to a new function call
 > The new function receives **its own set of automatic variables and operates on them**, not the automatic variables of the calling function.
+
+## Function Signature 
+---
+- Refers to the declaration of a function
+- The signature is the combination of the **function's name**, **argument [[Datatype|types]]**, **argument order**, **argument count**, and **return type**
+
+### Java Function Signature
+- In [[Java]], the return type isn't part of the function signature. The method signature is the combination of the method name and the parameter list (argument types, argument order and argument count)
+
+### Java Function Descriptor
+- The **method descriptor** of Java is made of the [[#Java Function Signature|function signature]] and the **return type**
 
 
 ## First-class Citizen Function
