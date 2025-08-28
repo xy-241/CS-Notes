@@ -6,13 +6,21 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2025-08-16, 18:13
-Last Date: 2025-08-19T12:27:59+08:00
-References: 
-draft: 
+Last Date: 2025-08-21T21:20:11+08:00
+References:
+draft:
 description: "Step-by-step guide to check server connectivity: DNS, ports, services, firewall, SSH configs, and logs."
 ---
 ## Is it Reachable?
 ---
+
+```sh
+dig <hostname> # for detailed debugging
+
+nslookup <hostname> # for quick info check
+```
+- Check if [[DNS|DNS resolution]] is working 
+- If not, we can proceed if we know the [[IP Address]] of the [[Host|host]]
 
 ```sh
 ping <hostname>
@@ -20,9 +28,10 @@ ping <hostname>
 # example
 # ping notes.yxy.ninja 
 # PING notes.yxy.ninja (104.21.96.1): 56 data bytes
+
+traceroute <hostname> # to see which part of the path broken
 ```
-- Check if [[DNS]] is working 
-- If not, we can proceed if we know the [[IP Address]] of the [[Host|host]]
+- Check if the destination is reachable
 
 ```sh
 nc -vz <hostname> <port>
@@ -48,7 +57,7 @@ nmap -sV -p <port> <hostname>
 
 ## Is It Blocked?
 ---
-- We may have firewall rules that block certain type of traffic or certain ports
+- We may have [[Access Control List|firewall rules]] that block certain type of traffic or certain ports
 - It is important to check firewall rules on both client and server side
 
 
@@ -75,3 +84,4 @@ nmap -sV -p <port> <hostname>
 ## Check The Logs
 ---
 - We should push all [[Observability#Log|logs]] to a central place where we can have visibility into the server
+- If we didn't push logs to a central place, we can check the logs using `systemctl status <service>` or `journalctl -u <service>`
