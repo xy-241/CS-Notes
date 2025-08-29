@@ -7,8 +7,8 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-20T14:13:00
-Last Date: 2025-08-11T20:20:32+08:00
-References: 
+Last Date: 2025-08-29T10:54:55+08:00
+References:
 description: Hard links save space by directly referencing data, while soft links navigate paths across different file territories.
 ---
 ## Abstract
@@ -32,7 +32,7 @@ ln /path/to/file path/to/hardlink
 
 
 >[!important]
-> When we create a **Hard link** on [[#Soft (Symbolic) File System Link|soft link]], we create a **direct link** to the existing piece of data on disk, so independent of the soft file system link.
+> When we create a **hard link** on [[#Soft (Symbolic) File System Link|soft link]] (`ln existing_symlink hardlink_name`), It just resolves the soft link to its target inode (the real file’s inode) and then creates a new hard link to that inode. So the new hard link points **directly** to the real file’s inode, not “to the soft link inode”. Deleting the symlink only removes that symlink inode.
 
 
 
