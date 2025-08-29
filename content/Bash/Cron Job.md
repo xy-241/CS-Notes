@@ -9,9 +9,9 @@ tags:
   - OS
   - binance
 Creation Date: 2024-03-19, 17:24
-Last Date: 2025-08-04T17:22:20+08:00
-References: 
-draft: 
+Last Date: 2025-08-29T09:30:25+08:00
+References:
+draft:
 description: Cron jobs are automated tasks scheduled via crontab on Unix-like systems. Tools like Cronitor enhance monitoring for crontab, while XXL-Job supports distributed scheduling for Java applications.
 title: Cron Jobs and Enhanced Monitoring Tools
 ---
@@ -28,7 +28,7 @@ title: Cron Jobs and Enhanced Monitoring Tools
 > `0 0 */5 * *`: Runs the job every **5 days**.
 
 >[!info] Systemd Timers
-> [Systemd Timers] are the modern alternative to Cron jobs.
+> [Systemd Timers](https://wiki.archlinux.org/title/Systemd/Timers) are the modern alternative to Cron jobs.
 
 ### Set cron job with interactive visual
 
