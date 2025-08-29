@@ -48,6 +48,6 @@ description: Learn the basics of BGP, the inter-domain routing protocol that pow
 >[!money] Business deals + reputation
 > We advertise routes that pay us or maintaining reachability for our own customers and avoid carrying free transit traffic.
 > 
-> We also avoid unstable or [[AS|ASes]] if possible.
+> We also avoid unstable [[AS|ASes]] if possible.
 > 
 > This mean not all possible paths are advertised and the Internet is connected enough to work, shaped by money and agreements.
