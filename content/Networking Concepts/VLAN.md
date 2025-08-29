@@ -6,14 +6,14 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2025-08-19, 21:18
-Last Date: 2025-08-19T21:45:24+08:00
+Last Date: 2025-08-29T17:01:03+08:00
 References:
 draft:
 description: Learn what VLANs are, how they group switch ports into isolated networks, the difference between access and trunk ports, and why VLANs improve security, flexibility, and performance.
 ---
 ## Abstract
 ---
-- On a [[Network Switch|switch]], we can group ports into VLANs (e.g., Group 10 = VLAN 10, Group 20 = VLAN 20). Each VLAN acts like a separate network. Devices in one VLAN can only talk to each other unless a [[Network Router|router]] or L3 switch connects them. VLANs reduce broadcast traffic, improve security, and make networks more flexible to design
+- On a [[Network Switch|switch]], we can group ports into VLANs (e.g., Group 10 = VLAN 10, Group 20 = VLAN 20). Each VLAN acts like a separate network. Devices in one VLAN can't only talk to each other unless a [[Network Router|router]] or L3 switch connects them. VLANs reduce broadcast traffic, improve security, and make networks more flexible to design
 
 >[!important] Optimising network performance
 > By logically grouping a set of physical [[Network Port|network ports]], we reduce broadcast traffic. Thus, optimising network performance.
