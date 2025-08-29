@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-20T14:13:00
-Last Date: 2025-08-29T11:02:22+08:00
+Last Date: 2025-08-29T11:10:54+08:00
 References:
 description: Hard links save space by directly referencing data, while soft links navigate paths across different file territories.
 ---
@@ -62,5 +62,7 @@ ln -sf <source-location> <symlink-location>
 ```bash
 realpath path/to/file_or_directory
 ```
-- Display the resolved [[#Hard File System Link|hard link]] for a [[File|file]] or [[File System#File Directory|file directory]] from [[#Soft (Symbolic) File System Link|soft link]]
+- **[[#Soft (Symbolic) File System Link|Symbolic link]]**: `realpath` resolves the stored pathname until it reaches the [[Inode|inode]], then prints the canonical path (normalised absolute path with no `.` or `..` left)
+- **[[#Hard File System Link|Hard link]]**: `realpath` simply normalises the pathname (since the directory entry already points to the inode)
+- For **executables/binaries**, reveals the actual file location on disk after resolving symlinks (useful to see where a command is really stored)
 
