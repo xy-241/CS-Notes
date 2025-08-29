@@ -7,7 +7,7 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-20T14:13:00
-Last Date: 2025-08-29T10:54:55+08:00
+Last Date: 2025-08-29T11:02:22+08:00
 References:
 description: Hard links save space by directly referencing data, while soft links navigate paths across different file territories.
 ---
@@ -54,7 +54,7 @@ ln -sf <source-location> <symlink-location>
 > Tools like [GNU Stow](https://www.gnu.org/software/stow/) helps to manage dotfiles in one place in an organised manner, and we can version control it with [[Git]]. Refer to [Stow has forever changed the way I manage my dotfiles](https://youtu.be/y6XCebnB9gs?si=j4oYPrbRk5bWfq2b) for more details
 
 ### Dangling File System Link
-- When [[#Soft (Symbolic) File System Link|soft link]] points to an nonexistent [[File|file]]
+- A [[#Soft (Symbolic) File System Link|soft link]] whose stored pathname cannot be resolved to a valid [[Inode|inode]] (because the target file or directory has been moved or deleted)
 
 
 ## Useful Commands
