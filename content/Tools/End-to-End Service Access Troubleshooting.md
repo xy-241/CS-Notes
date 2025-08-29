@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2025-08-16, 18:13
-Last Date: 2025-08-21T21:20:11+08:00
+Last Date: 2025-08-29T11:20:22+08:00
 References:
 draft:
 description: "Step-by-step guide to check server connectivity: DNS, ports, services, firewall, SSH configs, and logs."
@@ -23,6 +23,15 @@ nslookup <hostname> # for quick info check
 - If not, we can proceed if we know the [[IP Address]] of the [[Host|host]]
 
 ```sh
+nc -vz <hostname> <port>
+
+# example
+# nc -vz notes.yxy.ninja 443
+# Connection to notes.yxy.ninja port 443 [tcp/https] succeeded!
+```
+- Check if [[Network Port|port]] is open
+
+```sh
 ping <hostname>
 
 # example
@@ -31,16 +40,8 @@ ping <hostname>
 
 traceroute <hostname> # to see which part of the path broken
 ```
-- Check if the destination is reachable
+- Check if the destination is reachable and path stable
 
-```sh
-nc -vz <hostname> <port>
-
-# example
-# nc -vz notes.yxy.ninja 443
-# Connection to notes.yxy.ninja port 443 [tcp/https] succeeded!
-```
-- Check if [[Network Port|port]] is open
 
 ## Is Service Up?
 ---
