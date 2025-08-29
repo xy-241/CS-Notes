@@ -40,7 +40,7 @@ description: An inode is a Linux filesystem data structure that stores file meta
 >[!code] Find all files sharing the same inode
 > `find / -xdev -inum <INODE_NUMBER> 2>/dev/null`
 > 
-> Search the whole [[File System|file system]] wfor every filename that points to the specified inode number, but don't cross into other mounted filesystems, and hide any permission errors from the output.
+> Search the whole [[File System|file system]] for every filename that points to the specified inode number, but don't cross into other mounted filesystems, and hide any permission errors from the output.
 
 
 ### Inode Number
