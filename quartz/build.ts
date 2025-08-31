@@ -125,9 +125,10 @@ async function startWatching(
     ctx,
     mut,
     contentMap,
-    ignored: (path) => {
-      if (gitIgnoredMatcher(path)) return true
-      const pathStr = path.toString()
+    ignored: (fp) => {
+      const pathStr = toPosixPath(fp.toString())
+      if (pathStr.startsWith(".git/")) return true
+      if (gitIgnoredMatcher(pathStr)) return true
       for (const pattern of cfg.configuration.ignorePatterns) {
         if (minimatch(pathStr, pattern)) {
           return true
@@ -250,9 +251,12 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
   // update allFiles and then allSlugs with the consistent view of content map
   ctx.allFiles = Array.from(contentMap.keys())
   ctx.allSlugs = ctx.allFiles.map((fp) => slugifyFilePath(fp as FilePath))
-  const processedFiles = Array.from(contentMap.values())
-    .filter((file) => file.type === "markdown")
-    .map((file) => file.content)
+  let processedFiles = filterContent(
+    ctx,
+    Array.from(contentMap.values())
+      .filter((file) => file.type === "markdown")
+      .map((file) => file.content),
+  )
 
   let emittedFiles = 0
   for (const emitter of cfg.plugins.emitters) {

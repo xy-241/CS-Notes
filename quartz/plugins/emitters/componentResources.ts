@@ -156,15 +156,19 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     `)
   } else if (cfg.analytics?.provider === "goatcounter") {
     componentResources.afterDOMLoaded.push(`
+      const goatcounterScriptPre = document.createElement('script');
+      goatcounterScriptPre.textContent = \`
+        window.goatcounter = { no_onload: true };
+      \`;
+      document.head.appendChild(goatcounterScriptPre);
+
+      const endpoint = "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count";
       const goatcounterScript = document.createElement('script');
       goatcounterScript.src = "${cfg.analytics.scriptSrc ?? "https://gc.zgo.at/count.js"}";
       goatcounterScript.defer = true;
-      goatcounterScript.setAttribute(
-        'data-goatcounter',
-        "https://${cfg.analytics.websiteId}.${cfg.analytics.host ?? "goatcounter.com"}/count"
-      );
+      goatcounterScript.setAttribute('data-goatcounter', endpoint);
       goatcounterScript.onload = () => {
-        window.goatcounter = { no_onload: true };
+        window.goatcounter.endpoint = endpoint;
         goatcounter.count({ path: location.pathname });
         document.addEventListener('nav', () => {
           goatcounter.count({ path: location.pathname });
@@ -217,6 +221,33 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "${cfg.analytics.projectId}");\`
       document.head.appendChild(clarityScript)
+    `)
+  } else if (cfg.analytics?.provider === "matomo") {
+    componentResources.afterDOMLoaded.push(`
+      const matomoScript = document.createElement("script");
+      matomoScript.innerHTML = \`
+      let _paq = window._paq = window._paq || [];
+
+      // Track SPA navigation
+      // https://developer.matomo.org/guides/spa-tracking
+      document.addEventListener("nav", () => {
+        _paq.push(['setCustomUrl', location.pathname]);
+        _paq.push(['setDocumentTitle', document.title]);
+        _paq.push(['trackPageView']);
+      });
+
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        const u="//${cfg.analytics.host}/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', ${cfg.analytics.siteId}]);
+        const d=document, g=d.createElement('script'), s=d.getElementsByTagName
+('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+      \`
+      document.head.appendChild(matomoScript);
     `)
   }
 

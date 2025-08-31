@@ -220,7 +220,7 @@ async function setupSearch(searchElement: Element, currentSlug: FullSlug, data: 
 
     // If search is active, then we will render the first result and display accordingly
     if (!container.classList.contains("active")) return
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && !e.isComposing) {
       // If result has focus, navigate to that one, otherwise pick first result
       if (results.contains(document.activeElement)) {
         const active = document.activeElement as HTMLInputElement

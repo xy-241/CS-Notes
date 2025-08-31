@@ -11,8 +11,7 @@ html {
   width: 100vw;
 }
 
-body,
-section {
+body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--light);
@@ -40,7 +39,9 @@ li,
 ol,
 ul,
 .katex,
-.math {
+.math,
+.typst-doc,
+.typst-doc * {
   color: var(--darkgray);
   fill: var(--darkgray);
   hyphens: auto;
@@ -54,7 +55,9 @@ li,
 ol,
 ul,
 .katex,
-.math {
+.math,
+.typst-doc,
+.typst-doc * {
   overflow-wrap: anywhere;
   /* tr and td removed from list of selectors for overflow-wrap, allowing them to use default 'normal' property value */
 }
@@ -132,16 +135,32 @@ a {
   }
 }
 
+.flex-component {
+  display: flex;
+}
+
 .desktop-only {
   display: initial;
+  &.flex-component {
+    display: flex;
+  }
   @media all and ($mobile) {
+    &.flex-component {
+      display: none;
+    }
     display: none;
   }
 }
 
 .mobile-only {
   display: none;
+  &.flex-component {
+    display: none;
+  }
   @media all and ($mobile) {
+    &.flex-component {
+      display: flex;
+    }
     display: initial;
   }
 }

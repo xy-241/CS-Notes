@@ -58,7 +58,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndexMap, limit?:
     <title>${escapeHTML(content.title)}</title>
     <link>https://${joinSegments(base, encodeURI(slug))}</link>
     <guid>https://${joinSegments(base, encodeURI(slug))}</guid>
-    <description>${content.richContent ?? content.description}</description>
+    <description><![CDATA[ ${content.richContent ?? content.description} ]]></description>
     <pubDate>${content.date?.toUTCString()}</pubDate>
   </item>`
 
