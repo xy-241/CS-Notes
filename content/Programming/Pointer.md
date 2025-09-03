@@ -10,9 +10,9 @@ tags:
   - java
   - go
 Creation Date: 2024-01-04, 14:55
-Last Date: 2024-08-30T15:07:17+08:00
-References: 
-draft: 
+Last Date: 2025-09-03T23:12:44+08:00
+References:
+draft:
 ---
 ## Abstract
 ---
@@ -31,6 +31,8 @@ draft:
 >[!important] More power!
 > [[Function#Function Scope Rule|Function scope rules]] prevent a [[Function#Function Call|function call]] from directly modifying variables outside its own scope. However, using pointers allows you to pass [[Memory Address|memory addresses]] to a function, **enabling changes made within the function to affect variables outside its scope**.
 
+>[!code] Pointer size
+> On a 32-bit system, a pointer is typically 4 bytes, while on a 64-bit system, it's usually 8 bytes. 
 
 ### Pointee
 - The **actual data** that a [[Pointer]] points-to inside the [[Address Space#Heap Segment]]
