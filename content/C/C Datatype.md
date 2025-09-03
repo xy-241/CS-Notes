@@ -7,10 +7,10 @@ tags:
   - c
   - computer_organisation
 Creation Date: 2024-08-17, 14:21
-Last Date: 2024-08-17T14:52:41+08:00
-References: 
-draft: 
-description: 
+Last Date: 2025-09-03T23:10:27+08:00
+References:
+draft:
+description:
 ---
 ## Abstract
 ---
@@ -33,6 +33,8 @@ description:
 >[!important] No boolean type in ANSI C!
 > `0` is used to represent `false`, any other value is used to represent `true`.
 
+>[!code] int size
+> `int` was designed to match the [[Computer Data Representation#Word|word]] size of the machine, so it was 16 bits on 16-bit machines, 32 bits on 32-bit machines, and so on.
 
 ## C Mixed-type Arithmetic Operation
 ---
