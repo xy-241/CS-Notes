@@ -6,13 +6,25 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-08-27T14:44:16+08:00
-Last Date: 2024-12-01T15:07:33+08:00
-References: 
+Last Date: 2025-09-03T16:52:00+08:00
+References:
 description: DMA enables direct data transfer between memory and device controllers, avoiding CPU intervention and busy waiting. Zero copy minimises memory copies using system calls like sendfile(2), freeing the CPU for other tasks.
 ---
 ## Abstract
 ---
 * Chip that control the flow of bits between [[Main Memory]] and some [[Device Controller]] without constant [[CPU]] intervention, avoids the potential **performance hit** from [[Busy Waiting]]
+
+## RDMA
+---
+- An extension of [[Direct Memory Access (DMA)]] across a network, allows one computer to **directly read/write the memory of another computer**, bypassing the [[CPU]], [[Kernel|kernel]], and [[Netfilter|OS network stack]] on both sides
+
+>[!important] Insane throughput and latency
+> Ultra-low latency and high throughput in distributed systems and HPC!
+
+>[!question] How does it work?
+> 1. NICs (often Infiniband or RoCE cards) are RDMA-capable.
+> 2. Applications can register memory regions, then remote nodes can directly read/write them.
+> 3. No [[System Call (系统调用)|syscalls]] per message, no copies between kernel/user buffers → [[#Zero Copy|“zero-copy networking”]].
 
 
 ## Zero Copy
