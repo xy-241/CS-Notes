@@ -6,7 +6,8 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-09-27T01:39:00
-Last Date: 2024-07-15T18:49:50+08:00
+Last Date: 2025-09-04T00:57:53+08:00
+description: Learn how the CPU, MMU, and page tables work together in virtual memory. Covers CR3 register, VPN bits, TLB misses, and page faults with clear examples.
 ---
 ## Abstract
 ---
@@ -14,17 +15,35 @@ Last Date: 2024-07-15T18:49:50+08:00
 ![[data_retrieval_during_process_execution.svg]]
 
 - Stands for **M**emory **M**anagement **U**nit
-- A hardware that takes in [[Virtual Memory#Virtual Address]] and translates it into a [[Main Memory#Physical Address]] using [[Page Table]]. This allows the [[CPU]] access data stored in [[Main Memory]] using virtual addresses. This **translation process** is what makes [[Virtual Memory]] possible
+- Hardware component that takes a [[Virtual Memory#Virtual Address]] and translates it into a [[Main Memory#Physical Address]] via the [[Page Table]].
+- This hardware-driven translation underpins [[Virtual Memory|virtual memory]], letting each [[Process (进程)|process]] see a consistent address space while the OS multiplexes physical memory.
+
+
+>[!important] Kernel is free
+> If there’s a [[TLB#TLB Miss|TLB miss]], the **MMU itself** (not the kernel) does a **page table walk**: it consults the [[Page Table#Multi-level Page Table|multi-level page table]] in memory to resolve the mapping.
+
+>[!important] Kernel’s role
+> The kernel doesn’t do the page walk for each access.
+> 
+> On boot, the kernel sets up the initial page tables and programs the MMU with:
+> - How many levels to use (e.g., 4 levels on x86_64: PML4 → PDPT → PD → PT)
+> - How many bits are allocated to virtual page number (VPN) vs page offset.
+> - The [[Register|base pointer]] to the root page table (in CR3 on x86).
+> 
+> After that, the **hardware owns the fast path**. The CPU+MMU work together to do page walks transparently.
+
+>[!important] Workflow behind TLB Miss
+> 1. CPU needs a physical address → checks the TLB
+> 2. TLB miss → MMU walks the page tables directly: uses CR3 (base) + VPN bits to index each level, fetches page table entries (PTEs) from memory & ends with a physical frame number (PFN).
+> 3. MMU fills the TLB with the new translation.
+> 4. CPU resumes execution as if nothing happened.
+> 
+> ⚠️ The kernel only steps in if:
+> - The page walk hits a PTE marked “not present” → **page fault exception**.
+> - Then the kernel decides whether to allocate a page, swap it in, or kill the process.
 
 >[!attention]
 > A [[Page Fault]] occurs when the Memory Management Unit (MMU) is unable to locate a specific [[Memory Page]] in its page table.
-
-
-
-
-
-
-
 
 ## References
 ---
