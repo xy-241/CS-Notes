@@ -7,9 +7,9 @@ tags:
   - devops
   - binance
 Creation Date: 2024-11-10, 14:50
-Last Date: 2024-11-12T14:41:30+08:00
-References: 
-draft: 
+Last Date: 2025-09-07T21:51:13+08:00
+References:
+draft:
 description: 3 Steps to Set Up Prometheus on Your macOS Laptop
 ---
 ## 1. Install Prometheus
@@ -28,7 +28,7 @@ description: 3 Steps to Set Up Prometheus on Your macOS Laptop
 - Start Node Exporter as a background service: `brew services start node_exporter`. Node Exporter exposes metrics on port `9100`: `http://localhost:9100/metrics`
 
 ### 2.1. Configure Prometheus to Scrape Node Exporter
-- Edit your [[Prometheus#Prometheus Configuration File|Prometheus configuration file]] and add the following scrape configuration under `scrape_configs`:
+- Edit your [[Prometheus#Prometheus Configuration File|Prometheus configuration file]] (which can be found at `/opt/homebrew/etc/prometheus.yml` on MacOs) and add the following scrape configuration under `scrape_configs`:
 
 ```yaml
 scrape_configs:
