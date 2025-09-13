@@ -10,8 +10,8 @@ tags:
   - python
   - programming
 Creation Date: 2023-07-24T17:49:41+08:00
-Last Date: 2024-09-09T18:18:33+08:00
-References: 
+Last Date: 2025-09-13T14:09:21+08:00
+References:
 ---
 ## Abstract
 ---
@@ -38,6 +38,29 @@ References:
 > Compiler takes a longer time to generate all the source codes and the resulting compiled code base is bigger.
 
 ### Raw Type
+
+```java
+import java.util.*;
+
+public class RawTypeDemo {
+    public static void main(String[] args) {
+        List raw = new ArrayList();   // raw type (no <T>) → disables generics
+        raw.add(123);                 // allowed: compiler only checks it's an Object
+
+        // Unchecked cast: compiler warns but lets it through
+        List<String> strings = (List<String>) raw; // ⚠️ unchecked cast
+
+        // Compiler thinks this is safe...
+        String s = strings.get(0);    // compiler inserts (String) cast
+        System.out.println(s);
+
+        // At runtime: Integer → String cast fails
+        // java.lang.ClassCastException: class java.lang.Integer cannot be cast to class java.lang.String
+    }
+}
+```
+
+- A **raw type** is what you get when you use a generic class or interface **without supplying any type arguments**
 - Without the [[Generics|generic type information]], this exists for backward-compatible purposes. We should avoid using it, as it removes the type information that the [[Language Processors#Compiler|compiler]] uses for type checking, which may result in runtime errors. However, there are specific cases where we may want to use the raw type (which I am still exploring)
 
 ## Java Generics
