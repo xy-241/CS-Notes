@@ -75,6 +75,9 @@ export default (() => {
         }}
         />
 
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9989227281541885"
+     crossorigin="anonymous"></script>
+
         <title>{title}</title>
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
