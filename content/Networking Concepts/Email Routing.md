@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-03-07, 16:38
-Last Date: 2025-09-24T18:26:52+08:00
+Last Date: 2025-09-24T22:32:21+08:00
 References:
 draft:
 description: Email routing directs emails to recipients using rules for secure, organized, and flexible delivery, including custom domain support. Cloudflare Email Routing is a free service that enhances this process with routing analytics and programmable handling via Cloudflare Workers.
@@ -83,7 +83,7 @@ title: "Email Routing: Mechanisms, Security, and Cloudflare Solutions"
 4. Enter:
     - **Name:** Your display name (e.g., pretty_email_xinyang)
     - **Email address:** `you@yourdomain.com`
-    - ✅ Tick **Treat as an alias** (recommended for personal use).
+    - Don't need to tick **Treat as an alias**, because we are using [[#Cloudflare Email Routing]] to control which email inbox we are are sending the emails to. More more information on alias, checkout [the official docs](https://support.google.com/a/answer/1710338?hl=en)
 5. Click **Next Step**.
 6. Enter the SMTP details:
     - **SMTP Server:** `smtp.gmail.com`
