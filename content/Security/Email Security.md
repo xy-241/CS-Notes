@@ -7,10 +7,10 @@ tags:
   - security
   - networking
 Creation Date: 2024-03-06, 17:07
-Last Date: 2024-10-16T20:10:58+08:00
-References: 
-draft: 
-description: 
+Last Date: 2025-09-24T17:51:28+08:00
+References:
+draft:
+description: Secure emails with SPF, DKIM & DMARC. Learn setup, examples & avoid common DNS mistakes to stop spoofing and spam.
 ---
 ## Abstract
 ---
@@ -38,6 +38,17 @@ description:
 > We can have multiple DKIM records for subdomains or for using different service providers
 
 ### DMARC 
+```bash
+_dmarc.yxy.ninja. 5m TXT "v=DMARC1; p=none; rua=mailto:dmrc@yxy.ninja"
+```
+
 - **Domain-based Message Authentication, Reporting & Conformance**
 - A **Policy Framework** that builds on top of [[#SPF]] and [[#DKIM]]. It allows us to create a **specific policy** within your [[DNS Record#TXT Record]] telling receiving mail servers how to handle emails that fail SPF or DKIM checks
 - For setup guide refer to [‎Setting Up DMARC](https://g.co/gemini/share/0e13a87d2063)
+
+>[!important]
+> A domain must have **exactly one DMARC record**!
+> 
+> Having multiple DMARC TXT records is **technically invalid**, but many receiving servers either:
+> 1. treat it as “no DMARC” and fall back to normal spam checks, or
+> 2. pick the first record they like and ignore the rest.
