@@ -7,7 +7,7 @@ tags:
   - security
   - networking
 Creation Date: 2024-03-06, 17:07
-Last Date: 2025-09-24T17:51:28+08:00
+Last Date: 2025-09-24T22:11:13+08:00
 References:
 draft:
 description: Secure emails with SPF, DKIM & DMARC. Learn setup, examples & avoid common DNS mistakes to stop spoofing and spam.
@@ -26,6 +26,9 @@ description: Secure emails with SPF, DKIM & DMARC. Learn setup, examples & avoid
 
 >[!example] Authorise Google & Cloudflare email servers
 > **TXT DNS Record**: `v=spf1 include:_spf.google.com  include:_spf.mx.cloudflare.net ~all`. `~all` means soft deny, so unverified emails will still be accepted and placed in spam
+
+>[!important] SPF no longer required manually
+> In the past, providers checked the **From domain** for SPF. Now they check the **Return-Path domain**. Services like Postmark controls the Return-Path → so SPF will **always pass by default** without you adding anything.
 
 ### DKIM
 - **DomainKeys Identified Mail**
