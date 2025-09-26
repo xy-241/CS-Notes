@@ -7,7 +7,7 @@ tags:
   - networking
   - cloudflare
 Creation Date: 2024-03-07, 16:38
-Last Date: 2025-09-24T22:32:21+08:00
+Last Date: 2025-09-26T19:07:07+08:00
 References:
 draft:
 description: Email routing directs emails to recipients using rules for secure, organized, and flexible delivery, including custom domain support. Cloudflare Email Routing is a free service that enhances this process with routing analytics and programmable handling via Cloudflare Workers.
@@ -111,6 +111,8 @@ To avoid leaking your Gmail address:
 > 2. They’ll give you DKIM TXT records to add in Cloudflare.
 > 3. Update [[#2. Configure Gmail to Send with Your Custom Domain| Gmail “Send mail as” (step 6)]] → use their SMTP server instead of `smtp.gmail.com`.
 > 4. Emails will be signed with DKIM and pass DMARC.
+>    
+> I recommend going with [Postmark](https://link.yxy.ninja/postmark) since it’s built for transactional emails. Unlike bulk senders, it doesn’t do heavy batching or long queueing, and because they manually vet accounts to keep spammers out, its reputation with inbox providers is much stronger. Plus, you get 100 free emails per month.
 
 ### 5. Test Your Setup
 1. Send an email to [mail-tester.com](https://www.mail-tester.com).
