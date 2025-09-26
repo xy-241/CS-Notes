@@ -7,9 +7,15 @@ const Banner: QuartzComponent = ({}: QuartzComponentProps) => {
         <div class="banner-header">
           <button class="close-button" aria-label="Close banner"></button>
         </div>
+        <p><strong>
+        🧪 I’ve been exploring how ads work and experimenting with them on this site (non-profit, just hands-on learning). Let me know if it affects your user experience <a href="https://github.com/xy-241/CS-Notes/issues">here</a>.
+        </strong></p>
+      
+        <br />
+
         <p><span class="wave">👋🏻</span> <strong>Join My <a href="https://link.yxy.ninja/tg">Telegram channel</a></strong>!</p>
         <br />
-        <p>I share real-world lessons from building scalable systems at <a href="https://www.binance.com/en">Binance</a>, and running mission-critical cloud ops at <a href="https://www.govtech.sg/">GovTech</a> and <a href="https://rsaf-agile-inno-digital.defence.gov.sg/">Singapore Air Force</a>. No fluff, just practical takeaways, hard-earned fixes, and deep dives that matter.</p>
+        <p>I share real-world lessons from building scalable systems at <a href="https://www.jumptrading.com/">Jump Trading</a>, <a href="https://www.binance.com/en">Binance</a>, and running mission-critical cloud ops at <a href="https://www.govtech.sg/">GovTech</a> and <a href="https://rsaf-agile-inno-digital.defence.gov.sg/">Singapore Air Force</a>. No fluff, just practical takeaways, hard-earned fixes, and deep dives that matter.</p>
       </div>
     </div>
   )
