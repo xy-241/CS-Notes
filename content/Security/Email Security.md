@@ -7,7 +7,7 @@ tags:
   - security
   - networking
 Creation Date: 2024-03-06, 17:07
-Last Date: 2025-09-24T22:11:13+08:00
+Last Date: 2025-09-26T18:16:48+08:00
 References:
 draft:
 description: Secure emails with SPF, DKIM & DMARC. Learn setup, examples & avoid common DNS mistakes to stop spoofing and spam.
@@ -43,6 +43,9 @@ description: Secure emails with SPF, DKIM & DMARC. Learn setup, examples & avoid
 ### DMARC 
 ```bash
 _dmarc.yxy.ninja. 5m TXT "v=DMARC1; p=none; rua=mailto:dmrc@yxy.ninja"
+
+# If an email claims to be from `yxy.ninja` but fails SPF and DKIM checks, then **always rejects it (100% of the time)** and send me reports at `dmarc-reports@yxy.ninja`.
+_dmarc.yxy.ninja. IN TXT "v=DMARC1; p=reject; pct=100; rua=mailto:dmarc-reports@yxy.ninja"
 ```
 
 - **Domain-based Message Authentication, Reporting & Conformance**
