@@ -7,11 +7,10 @@ const Banner: QuartzComponent = ({}: QuartzComponentProps) => {
         <div class="banner-header">
           <button class="close-button" aria-label="Close banner"></button>
         </div>
-        <p><strong>
+{/*        <p><strong>
         🧪 I’ve been exploring how ads work and experimenting with them on this site (non-profit, just hands-on learning). Let me know if it affects your user experience <a href="https://github.com/xy-241/CS-Notes/issues">here</a>.
         </strong></p>
-      
-        <br />
+        <br />*/}
 
         <p><span class="wave">👋🏻</span> <strong>Join My <a href="https://link.yxy.ninja/tg">Telegram channel</a></strong>!</p>
         <br />
