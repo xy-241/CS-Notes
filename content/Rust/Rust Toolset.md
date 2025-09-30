@@ -6,9 +6,9 @@ Author Profile:
 tags:
   - rust
 Creation Date: 2024-01-13, 16:52
-Last Date: 2024-03-10T18:15:15+08:00
-References: 
-draft: 
+Last Date: 2025-09-30T17:02:20+08:00
+References:
+draft:
 ---
 ## Abstract
 ----
@@ -22,6 +22,8 @@ draft:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 rustc --version # Verify rust is installed properly
+
+rustup update # update Rust compiler
 ```
 
 ```bash title="Cargo Cheatsheet"
