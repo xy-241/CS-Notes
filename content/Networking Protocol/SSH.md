@@ -10,9 +10,9 @@ tags:
   - linux
   - macos
 Creation Date: 2024-03-08, 21:34
-Last Date: 2025-06-29T16:38:40+08:00
-References: 
-draft: 
+Last Date: 2025-09-30T16:24:57+08:00
+References:
+draft:
 description: SSH (Secure Shell) is a network protocol that enables secure remote server management through encrypted communications, supporting robust authentication methods like public-key cryptography over traditional passwords. It allows multiplexing a single connection into multiple channels for various data transfers including command execution and port forwarding.
 ---
 ## Abstract
@@ -36,7 +36,7 @@ Host jump-host
   ForwardAgent yes
   
 # ===== Only use Jump host if we are not within network =====
-Match host target-host,!<JUMP_HOST_ADDRESS> !exec "ping -c 1 <TARGET_SERVER_ADDRESS> &>/dev/null"
+Match host target-host,!<JUMP_HOST_ADDRESS> !exec "ping -c 1 -W 500 <TARGET_SERVER_ADDRESS> &>/dev/null"
   ProxyJump jump-host
 Host target-host
   HostName <TARGET_SERVER_ADDRESS>       # Example: target.example.edu
@@ -99,6 +99,9 @@ Host *
 > 
 > **IdentityAgent** - Specifies socket path for SSH agent
 > - _Benefit_: Integrates with password managers like Strongbox for key management
+> 
+> **RemoteCommand** - Task specific
+> - _Benefit_: Best when you want “ssh host” to always run one thing and then exit.” Not so good for “I want a normal shell but with some tweaks.
 
 >[!tip] Connect to NUS SoC cluster without FortiClientVPN
 > Refter to setting up [Jump host](https://www.comp.nus.edu.sg/~chowcm/sjump.html) and use the config file stated above.
