@@ -7,10 +7,10 @@ tags:
   - software_engineering
   - bash
 Creation Date: 2024-03-10, 17:36
-Last Date: 2024-08-20T11:48:33+08:00
-References: 
-draft: 
-description: 
+Last Date: 2025-09-30T17:04:22+08:00
+References:
+draft:
+description:
 ---
 ## Terminal
 ---
@@ -32,6 +32,75 @@ description:
 > Your Termius configuration page should look something like the following picture
 > 
 > ![[termius_config.png|700]]
+
+## Terminal Multiplexer
+---
+- Tools that let you manage **multiple shells inside a single Terminal window** 
+- Useful for running long processes, splitting panes, and detaching/reattaching sessions
+
+### tmux
+- My daily driver for multiplexing
+- [Install tmux](https://github.com/tmux/tmux/wiki)  
+- Key features:
+  - Split windows into panes
+  - Detach/reattach sessions
+  - Persistent workflows (survive SSH disconnects and preserve command state like `lazygit`)
+
+>[!code]- Common Commands
+> ```bash
+> # Create new session (attach if exists)
+> tmux new-session -A -s cs_git
+>
+> # List all sessions
+> tmux ls
+>
+> # Kill a specific session
+> tmux kill-session -t mysession
+>
+> # Detach from a session (inside tmux)
+> Ctrl-b d
+>
+> # Reattach to last session
+> tmux attach
+> ```
+
+### Zellij
+- A modern Rust-based multiplexer with built-in layouts and plugin support
+- Install with `cargo install --locked zellij`
+
+>[!code]- Common Commands
+> ```bash
+> # Start a new Zellij session
+> zellij
+>
+> # Start a named session
+> zellij --session mysession
+>
+> # List all sessions
+> zellij list-sessions
+>
+> # Attach to an existing session
+> zellij attach mysession
+>
+> # Kill a specific session
+> zellij kill-session mysession
+>
+> # Kill all sessions
+> zellij kill-all-sessions
+> ```
+>
+> 🔑 Inside Zellij (default keybindings):
+> - `Ctrl-p` → command palette  
+> - `Alt-n` → new tab  
+> - `Alt-h/j/k/l` → move between panes (vim-style)  
+> - `Alt-[` → enter scroll mode  
+> - `Ctrl-g` → lock mode  
+
+### Alternatives
+- **GNU Screen** – the OG multiplexer, everywhere by default, but feels dated  
+- **Byobu** – a friendlier wrapper around tmux/Screen, adds status bar and easier bindings  
+- **WezTerm** – GPU-accelerated terminal emulator with built-in multiplexer mode  
+- **abduco + dvtm** – minimalist combo, lightweight but niche
 
 
 ## Shell
