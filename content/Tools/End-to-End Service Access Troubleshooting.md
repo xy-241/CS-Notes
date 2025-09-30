@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2025-08-16, 18:13
-Last Date: 2025-08-29T11:20:22+08:00
+Last Date: 2025-09-30T16:21:08+08:00
 References:
 draft:
 description: "Step-by-step guide to check server connectivity: DNS, ports, services, firewall, SSH configs, and logs."
@@ -41,6 +41,7 @@ ping <hostname>
 traceroute <hostname> # to see which part of the path broken
 ```
 - Check if the destination is reachable and path stable
+- You can use `-W` to fail fast as the default timeout is `10s`, `-W 500`  will timeout in `0.5s`
 
 
 ## Is Service Up?
