@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-18T12:59:13+08:00
-Last Date: 2024-04-29T01:52:14+08:00
-References: 
+Last Date: 2025-10-02T22:04:31+08:00
+References:
 ---
 ## Abstract
 ---
@@ -28,7 +28,7 @@ References:
 > 2. Technologies like [[Webpack]] consolidate many Object into a few object to minimise the chance of blocking
 > 
 > **Networking Solution**
-> - [[HTTP Multiplexing (多路复用)]]
+> - [[HTTP 2.0#HTTP Multiplexing]]
 
 
 

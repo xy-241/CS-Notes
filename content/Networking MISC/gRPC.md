@@ -8,15 +8,15 @@ tags:
   - programming
   - over
 Creation Date: 2025-07-20, 17:38
-Last Date: 2025-07-20T18:36:29+08:00
-References: 
-draft: 
+Last Date: 2025-10-02T22:12:38+08:00
+References:
+draft:
 description: Learn gRPC, the high-performance RPC framework that enables seamless network communication between applications using protobuf serialization, including step-by-step Python code examples for building type-safe distributed systems.
 ---
 ## Abstract
 ---
 - An **RPC framework** that allows applications to communicate across [[Computer Network|networks]] as if they were **calling local functions**, hiding the complexity of network communication
-- Built on top of. [[HTTP 1.2|HTTP 2.0]], using [protobuf](https://protobuf.dev/) for efficient data transfer in binary format
+- Built on top of. [[HTTP 2.0]], using [protobuf](https://protobuf.dev/) for efficient data transfer in binary format
 
 >[!important] Network protocol VS Framework
 > **Network protocol** is the low-level rules for how data moves across networks (like HTTP/2, [[TCP]]).
