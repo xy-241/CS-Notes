@@ -6,10 +6,10 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-18T12:56:00
-Last Date: 2025-10-02T22:17:23+08:00
+Last Date: 2025-10-02T22:35:41+08:00
 References:
 draft:
-description:
+description: Discover HTTP/2 improvements over HTTP/1.1, including multiplexing, server push, HPACK header compression, and binary framing for faster, more efficient web performance.
 ---
 ## Abstract
 ---
