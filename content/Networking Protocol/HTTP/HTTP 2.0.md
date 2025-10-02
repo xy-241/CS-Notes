@@ -52,7 +52,7 @@ description: Discover HTTP/2 improvements over HTTP/1.1, including multiplexing,
 - A [[HTTP 2.0]] improvement that allows client/server to push [[Network Object]] it thinks client/server needs without the need to receive any specific [[HTTP Request]] for the object. This **reduces the number of round trips taken**
 
 >[!caution]
-> However, if a host clicks on the web page, many network objects will be received. This may result in potential [[DDoS]: a single HTTP request can trigger multiple [[HTTP Response]].
+> However, if a host clicks on the web page, many network objects will be received. This may result in potential DDoS: a single HTTP request can trigger multiple [[HTTP Response]].
 > 
 > If not tuned carefully, the server might push unnecessary or already-cached resources, **wasting bandwidth**.
 
