@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-07-13T22:32:55+08:00
-Last Date: 2025-09-03T23:22:38+08:00
+Last Date: 2025-10-02T13:35:59+08:00
 References:
 ---
 ## Abstract
@@ -23,7 +23,7 @@ References:
 
 ## FPGA-enabled Switches
 ---
-- Usually used to deliver very high latency and throughput. One industry example is [[FPGA]] [[Network Switch|network switch]] is Arista 7130
+- Usually used to deliver very low latency and high throughput. One industry example is [[FPGA]] [[Network Switch|network switch]] is Arista 7130
 
 >[!info] Arista 7130's 3 features
 > **MetaWatch** (provides nanosecond-accurate timestamps for PCAPs)
