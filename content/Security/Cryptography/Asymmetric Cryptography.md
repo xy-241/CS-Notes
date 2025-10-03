@@ -7,8 +7,8 @@ tags:
   - security
   - bash
 Creation Date: 2023-10-05T11:42:46+08:00
-Last Date: 2024-03-08T22:20:32+08:00
-References: 
+Last Date: 2025-10-03T16:38:07+08:00
+References:
 ---
 ## Abstract 
 ---
@@ -23,10 +23,15 @@ References:
 >[!caution] Computationally Heavy
 > Compared to [[Symmetric Cryptography]], so we usually use asymmetric cryptography to exchange the symmetric key and use symmetric cryptography for the rest of the secure communication
 
->[!tip]- Verify the keys visually
+>[!code]- Verify the keys visually
 > ```bash
 > ssh-keygen -lv -f /path/to/your/key
 > ```
+
+>[!code] Obtain RSA pem files
+> 1. Generate a new [[#RSA]] key pair: `openssl genrsa -out <key_name>_private.pem 3096`
+> 
+> 2. Extract the public key in the right format: `openssl rsa -in <key_name>_private.pem -pubout -out <key_name>_public.pem`
 
 ### Public Key
 - Distributed to everyone & anyone
