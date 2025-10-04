@@ -7,7 +7,7 @@ tags:
   - hpc
   - OS
 Creation Date: 2025-10-04, 14:09
-Last Date: 2025-10-04T15:58:33+08:00
+Last Date: 2025-10-04T18:59:05+08:00
 References:
 draft:
 description:
@@ -29,9 +29,9 @@ description:
 - Each block runs **independently**, usually on a GPU **Streaming Multiprocessor (SM)** (kind of like a core, but each SM can handle multiple blocks).
 
 >[!code] CUDA’s built-in variables to understand this structure
-> - `gridDim` → total number of blocks in the grid
+> - `gridDim` → the dimension of the grid
 > - `blockIdx` → which block this thread belongs to
-> - `blockDim` → how many threads are in one block
+> - `blockDim` → the dimension of one block
 > - `threadIdx` → the position (ID) of this thread within its block
 
 ## Dimensions of Work
