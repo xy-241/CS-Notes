@@ -10,7 +10,7 @@ tags:
   - linux
   - macos
 Creation Date: 2024-03-08, 21:34
-Last Date: 2025-09-30T16:24:57+08:00
+Last Date: 2025-10-04T12:28:21+08:00
 References:
 draft:
 description: SSH (Secure Shell) is a network protocol that enables secure remote server management through encrypted communications, supporting robust authentication methods like public-key cryptography over traditional passwords. It allows multiplexing a single connection into multiple channels for various data transfers including command execution and port forwarding.
@@ -19,6 +19,15 @@ description: SSH (Secure Shell) is a network protocol that enables secure remote
 ---
 - Stands for **Secure [[Terminal#Shell|SHell]]**
 - A [[Network Protocol]] used to enable developers to manage [[Host#Server]] and network devices remotely with **encryption**
+
+>[!tip] Port forwarding trick
+> If we want to do [[Local Port Forwarding]], [[Remote Port Forwarding]] or [[Dynamic Port Forwarding]], we can start with `ssh -f -N -T` to have more efficient connection and smoother experience.
+> 
+> - **`-f`** → Forks to background after authentication (runs independently of your terminal process)
+> - **`-N`** → Don’t execute remote commands (just forwarding, no shell)
+> - **`-T`** → Disable TTY allocation (no interactive terminal)
+> 
+> This allows us to run only the tunnel, no shell, detached from the terminal.
 
 ## SSH Configuration File
 ---
