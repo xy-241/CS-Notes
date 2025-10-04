@@ -7,14 +7,14 @@ tags:
   - hpc
   - OS
 Creation Date: 2025-10-04, 14:09
-Last Date: 2025-10-04T18:59:05+08:00
+Last Date: 2025-10-04T22:45:59+08:00
 References:
 draft:
 description:
 ---
 ## Intro
 ---
-- A CUDA program ends with `.cu`. It’s basically a C++ program but with some special parts that can run on the GPU instead of the CPU. The `.cu` file defines the main logic of your program and also decides which parts should run on the GPU.
+- A CUDA program ends with `.cu`. It’s basically a C++ program but with some special parts that can run on the GPU instead of the CPU. The `.cu` file defines the main logic of your program and also decides which parts should run on the [[GPU]].
 - The CPU is called the **host**, and the GPU is called the **device**. In CUDA, you explicitly tell it which functions belong to the host and which to the device with a **specifier.** The ones that run on the GPU are called **kernels**.
 - If a function doesn’t have any specifier, it defaults to `__host__`, meaning it runs on the CPU as normal C++ code.
 
@@ -33,6 +33,18 @@ description:
 > - `blockIdx` → which block this thread belongs to
 > - `blockDim` → the dimension of one block
 > - `threadIdx` → the position (ID) of this thread within its block
+
+### Wrap
+- Each block contains multiple warps.
+- **Each warp always has 32 threads**, even if you only use part of it. If you launch fewer than 32 threads, the remaining lanes in that warp just stay idle, which wastes resources 
+
+>[!tip] Aim for better performance
+> We should always aim for better warp occupancy, since warps are the actual execution units on the GPU.
+> 
+> Each block also carries **scheduling overhead** like hardware initialization, resource allocation, and [[GPU#Streaming Multiprocessor|SM scheduling]], so excessively many small blocks hurt performance.
+
+>[!important] Order of execution
+> The GPU fires multiple blocks in parallel, so the threads don’t come out sequentially. Each warp runs 32 threads as one logical unit, so their outputs often look sequential because they execute together, but it’s not guaranteed as `printf` from different warps (and even threads within a warp) can still interleave.
 
 ## Dimensions of Work
 ---
