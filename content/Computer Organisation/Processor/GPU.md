@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-29T14:24:00
-Last Date: 2024-05-17T19:09:15+08:00
-References: 
+Last Date: 2025-10-04T22:19:05+08:00
+References:
 ---
 ## Abstract
 ---
@@ -25,6 +25,10 @@ References:
 >[!caution] Hard to program
 > That is why we have  [Nvidia's CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) which utilises GPU's [[Concurrency (并发)#Parallelism (并行)|parallel computing]] for **general purpose computing**.
 
+## Streaming Multiprocessor
+---
+- A physical unit inside the [[GPU]]. Each SM has its own [[Register|register]], [[ALU]] and [[CPU Cache|share memory]] and [[CUDA#Wrap|warp]] schedulers
+- An SM can handle multiple [[CUDA#CUDA’s Execution Structure|blocks]] at the time as long as there are enough resources available to fit them
 
 ## Comparison with CPU
 ---
