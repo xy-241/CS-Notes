@@ -108,11 +108,3 @@ printf("Grid: (%d,%d,%d), Block: (%d,%d,%d), BlockIdx: (%d,%d,%d), ThreadIdx: (%
 ```
 
 - The above print code snippet is useful to observe which block and thread process what
-
-## CUDA Synchronization
----
-```cpp
-cudaDeviceSynchronize()
-```
-
-- [[Barrier (屏障)|Barrier]] that waits for all GPU threads to finish before moving on. Without this, the CPU might continue executing while the GPU is still running tasks in the background.
