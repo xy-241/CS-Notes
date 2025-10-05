@@ -6,8 +6,9 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-29T14:24:00
-Last Date: 2025-10-05T16:51:46+08:00
+Last Date: 2025-10-05T18:25:16+08:00
 References:
+description: Learn how GPUs achieve massive parallel performance through thousands of CUDA and Tensor Cores. This guide explains Streaming Multiprocessors, warp scheduling, FLOPs, and why GPUs excel in AI training and game rendering compared to CPUs.
 ---
 ## Abstract
 ---
@@ -89,3 +90,7 @@ References:
 - [[CPU]] one core is way more power, and able to handle complication logics like [[Pipeline Branching]] and a lot of the real world application needs to run [[Instruction]] in a sequential manner
 - GPU shines when we need [[Concurrency (并发)#Parallelism (并行性)]] and the workload doesn't depend on each other
 
+
+## References
+---
+- [【硬核科普】从零开始认识显卡 - YouTube](https://youtu.be/vtR7cgYATdk?si=pbOVDOrwrWolUMQS)
