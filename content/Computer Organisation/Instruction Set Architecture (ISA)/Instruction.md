@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-09-28T09:59:05+08:00
-Last Date: 2024-09-03T17:40:28+08:00
-References: 
+Last Date: 2025-10-05T14:46:15+08:00
+References:
 ---
 ## Abstract
 ---
@@ -33,6 +33,11 @@ References:
 
 - An [[Instruction]] that causes [[CPU]] to jump to a different location in the codes of  [[Process (进程)]], instead of executing instruction sequentially 
 
+
+## Fused Multiply-Add Instruction
+---
+- It combines a multiply and an add into a single operation (`a*b + c`).
+- This makes sense because many AI and graphics workloads are dominated by this exact pattern (`a*b + c`), and performing it as a fused operation not only **doubles throughput** but also **reduces rounding error**. Since rounding happens **only once**, when the result is finally written back to a register.
 
 ## Terminologies
 ---
