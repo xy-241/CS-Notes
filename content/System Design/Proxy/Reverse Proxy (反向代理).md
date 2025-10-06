@@ -13,7 +13,7 @@ description: Learn how reverse proxies and API gateways enhance web architecture
 ## Abstract
 ---
 
-![[reverse_proxy.png|300px]]
+![[reverse_proxy.png|300]]
 - Sits between [[Internet]] and [[Host#Server]] that accepts a request from the [[Host#Client]], forwards the request to server, and returns the results to the client as if the proxy server had processed the request
 - The client doesn't know which destination server it is connecting to. However, some can add [[HTTP Headers]] to tell the client which destination server it is connecting to
 - We can have multiple layers of *Reverse Proxy* between the client and server to form a [[#Ingress Service]]
