@@ -6,9 +6,9 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2024-12-10T13:32:22+08:00
-References: 
-draft: 
+Last Date: 2025-10-07T17:06:17+08:00
+References:
+draft:
 description: Fly.io Starter Guide
 ---
 ## Abstract
@@ -31,6 +31,8 @@ fly ssh console -a <APP_NAME>
 
 fly image update -a <APP_NAME> # Updates the app's image to the latest available version.
 fly image update -a umami-self-host --image <IMAGE_ENDPOINT> # Full flexibility in the image we want to use
+
+fly config save --app <app-name> # Asks Fly’s control plane for the _current remote configuration_ and writes a `fly.toml` locally.
 ```
 
 ```bash title="App Secrets Management"
@@ -48,11 +50,19 @@ fly certs delete <CUSTOM_DOMAIN_ENDPOINT>
 ```
 - [[Local Port Forwarding#Fly.io App Port Forwarding]]
 
+```bash title="App Observability"
+fly logs -a umami-self-host # Get live logs
+
+fly dashboard metrics -a # Open the Metrics UI for your app
+```
+- [[Observability]]
+
 ```bash title="Postgres Management"
 fly postgres list
 
 fly postgres connect -a <APP_NAME>
 ```
+- If you want to view the database using DBeaver on your laptop, you have to first [[Local Port Forwarding#Fly.io App Port Forwarding|local port forward]] the db to your localhost port.
 
 
 ## Fly.io SSL
