@@ -6,9 +6,9 @@ Author Profile:
 tags:
   - postgres
 Creation Date: 2024-02-18, 18:28
-Last Date: 2024-04-18T22:24:43+08:00
-References: 
-draft: 
+Last Date: 2025-10-07T17:36:48+08:00
+References:
+draft:
 description: Postgres Starter Guide
 ---
 ## Abstract
@@ -19,6 +19,8 @@ description: Postgres Starter Guide
 
 >[!tip] Resolving PostgreSQL pg_dump server version mismatch
 > The newer version of Postgres isn't included in a lot of the [[Package Manager]], you need to add the package repository in manually! You can find many online tutorials on this, [here](https://vishalvyas.com/how-to-resolve-pg-dump-error-aborting-because-of-server-version-mismatch/) is one for APT package manager.
+> 
+> On MacOs, you can install with `brew install postgresql@<version_number>`. In order to use the new version, you have to `brew unlink postgresql@<old_version>`, then `brew link --force postgresql@<new_version>`.
 
 ## Postgres Migration
 ---
