@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - postgres
 Creation Date: 2024-02-18, 18:28
-Last Date: 2025-10-07T17:36:48+08:00
+Last Date: 2025-10-09T09:45:52+08:00
 References:
 draft:
 description: Postgres Starter Guide
@@ -43,6 +43,27 @@ pg_dump -O -v -d <source_database_connection_string> > export.sql
 
 - For more information, refer to this [guide](https://www.enterprisedb.com/postgres-tutorials/how-use-pgdump-and-pgrestore-multi-host-enviorment)
 
+## Postgres Database Setup
+
+```sql
+-- 1) Create DB and login role
+CREATE DATABASE new_db_name;
+CREATE USER new_db_username WITH PASSWORD 'new_db_user_password';
+
+-- 2) Give the user the right to connect/create temp schemas in the DB
+GRANT ALL PRIVILEGES ON DATABASE new_db_name TO new_db_username;
+-- (equivalent to CONNECT, CREATE, TEMP on the database)
+
+-- 3) Create a dedicated schema owned by the app user
+\c new_db_name
+CREATE SCHEMA IF NOT EXISTS new_schema_name AUTHORIZATION new_db_username;
+
+-- 4) Prefer setting search_path on the role (not DB-wide)
+ALTER ROLE new_db_username SET search_path = new_schema_name, public;
+
+-- 5) Ensure the user can use the schema and access objects
+GRANT USAGE ON SCHEMA new_schema_name TO new_db_username;
+```
 
 ## Neon DB
 ---
