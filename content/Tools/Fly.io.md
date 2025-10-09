@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2025-10-07T17:06:17+08:00
+Last Date: 2025-10-09T09:38:52+08:00
 References:
 draft:
 description: Fly.io Starter Guide
@@ -63,6 +63,23 @@ fly postgres list
 fly postgres connect -a <APP_NAME>
 ```
 - If you want to view the database using DBeaver on your laptop, you have to first [[Local Port Forwarding#Fly.io App Port Forwarding|local port forward]] the db to your localhost port.
+
+```bash title="App volume"
+fly volumes create <volume_name> --size <volume_size> --region <region_name> -a <app_name> # create a volume for an app
+
+fly volumes list -a <app_name> # inspect all the volume we have
+```
+
+```toml title="fly.io toml volume attachment"
+[[mounts]]
+  source = <volume_name>
+  destination = <container_path_to_attach_the_volume>
+  auto_extend_size_threshold = 80      # when usage > 80%, try to grow
+  auto_extend_size_increment = "1GB"   # grow by 1 GB each time
+  auto_extend_size_limit = "20GB"      # ABSOLUTE cap (must be >= current size)
+```
+
+
 
 
 ## Fly.io SSL
