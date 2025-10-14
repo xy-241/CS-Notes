@@ -6,12 +6,13 @@ Author Profile:
 tags:
   - aws
 Creation Date: 2023-08-01T16:41:00
-Last Date: 2024-07-02T17:18:52+08:00
+Last Date: 2025-10-14T22:26:59+08:00
+description: Automate full AWS account cleanup with aws-nuke (Docker + config.yml). Remove unused resources safely, includes filters & caution notes for manual removals.
 ---
 ## Abstract
 ---
 - A tool to remove *all resources* in an AWS Account automatically without manually clicking countless buttons 
-- Refer to [Github Repo](https://github.com/rebuy-de/aws-nuke#caution) for more details
+- ~~Refer to [Github Repo](https://github.com/rebuy-de/aws-nuke#caution) for more details~~ The original repo was archived by the owner on Oct 15, 2024, the actively maintained fork is [ekristen/aws-nuke](https://github.com/ekristen/aws-nuke)
 
 >[!CAUTION] 
 > Always double check what resources that AWS Nuke aren't able to remove. There are a few resources that require manual removal like **AWS Network Firewall**.
