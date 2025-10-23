@@ -24,9 +24,8 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import Banner from "./Banner"
-
-import Comments from "./Comments"
 import Author from "./Author"
+import NLWebChat from "./NLWebChat"
 
 export {
   ArticleTitle,
@@ -54,6 +53,7 @@ export {
 
   Comments,
   Author,
+  NLWebChat,
   Flex,
   ConditionalRender,
   Banner,

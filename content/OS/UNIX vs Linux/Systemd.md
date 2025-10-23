@@ -7,8 +7,8 @@ tags:
   - OS
   - bash
 Creation Date: 2023-10-23T15:22:00
-Last Date: 2024-04-13T18:01:33+08:00
-References: 
+Last Date: 2025-10-21T16:59:18+08:00
+References:
 aliases: []
 ---
 ## Abstract
@@ -34,6 +34,12 @@ aliases: []
 
 >[!tip] View the systemd unit configuration
 > `systemctl list-units` to find the systemd unit you interested in. Then use `systemctl cat <systemd_unit>` to view the configuration.
+
+>[!code] Modify systemd service file
+> `sudo systemctl edit cloudflared.service --full`
+> 
+> Replace `cloudflared.service` with the service you are interested in.
+
 ### Static Systemd Runtime Unit
 - [[#Systemd Unit]] stored inside `/lib/systemd/system`, provided by the [[OS]] or packages
 
