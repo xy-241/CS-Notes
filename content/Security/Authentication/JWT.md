@@ -11,6 +11,7 @@ References:
 ---
 ## Abstract
 ---
+![[jwt_token.png|600]]
 - Stands for **JSON Web Token**
 - [[Base 64 Encoding|Base64 encoded]]
 - Can be stored inside [[Cookie]], [[Request Body]], used for [[Network Protocol#Stateless Network Protocol|Stateless]] [[Authentication]]
@@ -35,6 +36,10 @@ References:
  </div>
 
 ## JWT Signature
+---
 - A [[Digital Signature]] made from [[#JWT Header]] and [[#JWT Claims]], the purpose is to verify the integrity of the [[JWT]]
 
 
+## References
+---
+- [99% of Developers Don't Get JSON Web Tokens - YouTube](https://youtu.be/fCP2FttGkt8?si=vdV91yC9D9B4yGMf)
