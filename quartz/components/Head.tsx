@@ -91,8 +91,6 @@ export default (() => {
           </>
         )}
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href="https://neuro-cs-nlweb.me-4b4.workers.dev/nlweb-dropdown-chat.css" />
-        <link rel="stylesheet" href="https://neuro-cs-nlweb.me-4b4.workers.dev/common-chat-styles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* OG/Twitter meta tags */}
         <meta name="og:site_name" content={cfg.pageTitle + ' by Xinyang Yu'}></meta>
