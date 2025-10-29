@@ -7,7 +7,7 @@ tags:
   - networking
   - opcode
 Creation Date: 2023-10-03T11:11:00
-Last Date: 2025-08-20T19:34:17+08:00
+Last Date: 2025-10-29T20:45:37+08:00
 description: IP multicast enables efficient one-to-many data delivery. Learn how it works, its protocols (IGMP, PIM), use cases, and network requirements.
 ---
 ## Abstract
@@ -40,6 +40,15 @@ description: IP multicast enables efficient one-to-many data delivery. Learn how
 > - Requires multicast-aware infrastructure throughout the path
 > - Security and traffic management concerns for ISPs
 > - Complex to implement and troubleshoot
+
+
+## Reliable Multicast
+---
+- Multicast is one-to-many, so using stateful [[TCP]] would force the sender to maintain per-receiver state (ACKs, congestion windows, retrans timers), which doesn’t scale. Even though [[Network Router|routers]] duplicate traffic in a tree, they don’t track transport-layer state, so retransmissions would explode if many receivers miss the same packet. TCP also doesn’t support multicast semantics at all (it’s strictly 1-to-1). UDP avoids all that overhead, and reliability is added in user space using  NORM (sequence numbers, NACKs, and sometimes FEC). Conceptually similar to how [[QUIC]] builds reliability on top of UDP, but QUIC itself is not multicast.
+
+### NORM
+- NORM (NACK-Oriented Reliable Multicast) builds reliability over UDP multicast using NACKs for missing packets. FEC adds extra parity so receivers can self-heal without asking the sender. Together, they avoid both ACK flooding and NACK storms, scaling to huge fan-out groups efficiently.
+- You can read up on the [RFC here](https://datatracker.ietf.org/doc/html/rfc5740)
 
 ## Fundamental Concepts
 ---
