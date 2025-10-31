@@ -7,10 +7,10 @@ tags:
   - OS
   - docker
 Creation Date: 2024-03-06, 14:20
-Last Date: 2025-01-22T20:50:32+08:00
-References: 
-draft: 
-description: 
+Last Date: 2025-10-31T23:55:24+08:00
+References:
+draft:
+description:
 ---
 ## Abstract
 ---
@@ -22,6 +22,10 @@ description:
 >[!important] Type 2 hypervisor
 > ![[type2_hypervisor.png|500]]
 
+## Firecracker
+---
+- Firecracker runs **microVMs**, which are extremely lightweight virtual machines that run on top of **KVM**, a type 1 hypervisor. Each microVM has its **own guest kernel**, providing hardware-level isolation that’s much stronger than container (OS-level) isolation
+- Because they boot extremely fast and use very little memory, they’re used by AWS Lambda and AWS Fargate to safely run multi-tenant workloads at massive scale
 
 ## Virtualisation Tools
 ---
