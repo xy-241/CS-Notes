@@ -43,6 +43,11 @@ pg_dump -O -v -d <source_database_connection_string> > export.sql
 
 - For more information, refer to this [guide](https://www.enterprisedb.com/postgres-tutorials/how-use-pgdump-and-pgrestore-multi-host-enviorment)
 
+>[!important] pgsync
+> `pg_dump`/`pg_restore` can be slow for large amount of data like 500GB, thus incurring a longer downtime.
+> 
+> Consider `pgsync` which offers a faster & live migration.
+
 ## Postgres Database Setup
 
 ```sql
