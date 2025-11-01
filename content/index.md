@@ -4,10 +4,10 @@ Author:
   - Xinyang YU
 Author Profile:
   - https://linkedin.com/in/xinyang-yu
-tags: 
+tags:
 Creation Date: 2023-11-30T23:29:00
-Last Date: 2025-05-16T03:03:07+08:00
-References: 
+Last Date: 2025-11-02T01:06:08+08:00
+References:
 description: Your go-to second brain for learning and sharing computer science concepts—zero fluff, just concise and actionable insights. Explore topics like algorithms, data structures, networking, databases, cloud computing, software design, system architecture, and more. Delve into tools like Docker, Linux, Python, and gain clear explanations on low-level learning, security, and engineering essentials.
 ---
 ![[ninja.jpg|400]]
@@ -20,23 +20,8 @@ description: Your go-to second brain for learning and sharing computer science c
 🙏🏻 Please feel free to [provide feedback](https://github.com/xy-241/CS-Notes/issues) regarding the accuracy of the notes, etc.
 
 ## Notes Navigator 🧭
-
-Use the quick index below to jump straight to the topics you care about. Expand any domain to browse the underlying tags and linked notes.
-
-| Domain | Focus |
-| --- | --- |
-| [Architecture, Cloud & Operations](#architecture-cloud-operations) | System design blueprints, observability, and cloud platform building blocks |
-| [Networking & Distributed Systems](#networking-distributed-systems) | Protocols, distributed primitives, and edge connectivity |
-| [Operating Systems, Hardware & HPC](#operating-systems-hardware-hpc) | Kernel internals, memory models, and digital logic |
-| [Programming Languages & Paradigms](#programming-languages-paradigms) | Language idioms, paradigms, and ecosystem insights |
-| [Software Engineering & Tooling](#software-engineering-tooling) | Engineering workflows, CLI mastery, and productivity tooling |
-| [Algorithms, Data Structures & Math](#algorithms-data-structures-math) | Problem-solving playbooks, math fundamentals, and contest prep |
-| [Data Management](#data-management) | Relational theory, storage engines, and SQL patterns |
-| [Security & Identity](#security-identity) | Security architecture, authentication, and enterprise trust |
-| [Past Job Experience](#past-job-experience) | Highlights from Binance, Hacktron, and Opcode workstreams |
-| [Career, Finance & Academia](#career-finance-academia) | Professional growth, financial literacy, and academic references |
-| [NUS](#nus) | School coursework, module notes, and academic projects |
-| [AI & Emerging Tech](#ai-emerging-tech) | High-performance AI workloads and modern ML infrastructure |
+---
+Expand any domain to browse the underlying tags and linked notes.
 
 <div class="domain-grid" style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: stretch;">
 
