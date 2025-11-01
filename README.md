@@ -70,6 +70,8 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 | [NUS](#nus) | School coursework, module notes, and academic projects |
 | [AI & Emerging Tech](#ai-emerging-tech) | High-performance AI workloads and modern ML infrastructure |
 
+<div style="margin-top: 1.5rem;"></div>
+
 <a id="architecture-cloud-operations"></a>
 <details>
 <summary><strong>Architecture, Cloud & Operations</strong></summary>
