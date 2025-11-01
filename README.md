@@ -65,9 +65,10 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 | [Algorithms, Data Structures & Math](#algorithms-data-structures-math) | Problem-solving playbooks, math fundamentals, and contest prep |
 | [Data Management](#data-management) | Relational theory, storage engines, and SQL patterns |
 | [Security & Identity](#security-identity) | Security architecture, authentication, and enterprise trust |
+| [Past Job Experience](#past-job-experience) | Highlights from Binance, Hacktron, and Opcode workstreams |
 | [Career, Finance & Academia](#career-finance-academia) | Professional growth, financial literacy, and academic references |
+| [NUS](#nus) | School coursework, module notes, and academic projects |
 | [AI & Emerging Tech](#ai-emerging-tech) | High-performance AI workloads and modern ML infrastructure |
-| [Visual Library](#visual-library) | Hand-crafted Excalidraw diagrams and visual aids |
 
 <a id="architecture-cloud-operations"></a>
 <details>
@@ -644,13 +645,6 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 - [GPIO Pins](https://notes.yxy.ninja/Electronics/GPIO-Pins)
 - [ROM](https://notes.yxy.ninja/OS/Memory/ROM)
 - [Serial Communication](https://notes.yxy.ninja/OS/IO/Serial-Communication)
-
-</details>
-
-<details>
-<summary><code>opcode</code> · 1 note</summary>
-
-- [Multicast](https://notes.yxy.ninja/Networking-Concepts/Multicast)
 
 </details>
 
@@ -1323,6 +1317,12 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
+</details>
+
+<a id="past-job-experience"></a>
+<details>
+<summary><strong>Past Job Experience</strong></summary>
+
 <details>
 <summary><code>binance</code> · 16 notes</summary>
 
@@ -1345,9 +1345,21 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
+<details>
+<summary><code>hacktron</code> · 2 notes</summary>
+
+- [Event Loop](https://notes.yxy.ninja/OS/Thread/Event-Loop)
+- [Redis Deployment](https://notes.yxy.ninja/Devops/Redis-Deployment)
+
 </details>
 
-<a id="career-finance-academia"></a>
+<details>
+<summary><code>opcode</code> · 1 note</summary>
+
+- [Multicast](https://notes.yxy.ninja/Networking-Concepts/Multicast)
+
+</details>
+
 <details>
 <summary><strong>Career, Finance & Academia</strong></summary>
 
@@ -1378,6 +1390,12 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
+</details>
+
+<a id="nus"></a>
+<details>
+<summary><strong>NUS</strong></summary>
+
 <details>
 <summary><code>nus</code> · 4 notes</summary>
 
@@ -1398,14 +1416,6 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<details>
-<summary><code>hacktron</code> · 2 notes</summary>
-
-- [Event Loop](https://notes.yxy.ninja/OS/Thread/Event-Loop)
-- [Redis Deployment](https://notes.yxy.ninja/Devops/Redis-Deployment)
-
-</details>
-
 </details>
 
 <a id="ai-emerging-tech"></a>
@@ -1421,17 +1431,3 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<a id="visual-library"></a>
-<details>
-<summary><strong>Visual Library</strong></summary>
-
-<details>
-<summary><code>excalidraw</code> · 3 notes</summary>
-
-- [base64_encoding.excalidraw](https://notes.yxy.ninja/Computer-Organisation/excalidraw/base64_encoding.excalidraw)
-- [Container With Most Water.excalidraw](https://notes.yxy.ninja/cp/greedy/excalidraw/Container-With-Most-Water.excalidraw)
-- [World Break.excalidraw](https://notes.yxy.ninja/cp/dynamic_programming/excalidraw/World-Break.excalidraw)
-
-</details>
-
-</details>

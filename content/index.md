@@ -33,13 +33,18 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 | [Algorithms, Data Structures & Math](#algorithms-data-structures-math) | Problem-solving playbooks, math fundamentals, and contest prep |
 | [Data Management](#data-management) | Relational theory, storage engines, and SQL patterns |
 | [Security & Identity](#security-identity) | Security architecture, authentication, and enterprise trust |
+| [Past Job Experience](#past-job-experience) | Highlights from Binance, Hacktron, and Opcode workstreams |
 | [Career, Finance & Academia](#career-finance-academia) | Professional growth, financial literacy, and academic references |
+| [NUS](#nus) | School coursework, module notes, and academic projects |
 | [AI & Emerging Tech](#ai-emerging-tech) | High-performance AI workloads and modern ML infrastructure |
-| [Visual Library](#visual-library) | Hand-crafted Excalidraw diagrams and visual aids |
 
-<a id="architecture-cloud-operations"></a>
+<div class="domain-grid" style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: stretch;">
+
+<div id="architecture-cloud-operations" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Architecture, Cloud & Operations</strong></summary>
+
+<p><em>System design blueprints, observability, and cloud platform building blocks</em></p>
 
 <details>
 <summary><code>system_design</code> · 24 notes</summary>
@@ -203,9 +208,14 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<a id="networking-distributed-systems"></a>
+</details>
+</div>
+
+<div id="networking-distributed-systems" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Networking & Distributed Systems</strong></summary>
+
+<p><em>Protocols, distributed primitives, and edge connectivity</em></p>
 
 <details>
 <summary><code>networking</code> · 95 notes</summary>
@@ -329,9 +339,14 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<a id="operating-systems-hardware-hpc"></a>
+</details>
+</div>
+
+<div id="operating-systems-hardware-hpc" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Operating Systems, Hardware & HPC</strong></summary>
+
+<p><em>Kernel internals, memory models, and digital logic</em></p>
 
 <details>
 <summary><code>OS</code> · 109 notes</summary>
@@ -616,13 +631,6 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 </details>
 
 <details>
-<summary><code>opcode</code> · 1 note</summary>
-
-- [Multicast](https://notes.yxy.ninja/Networking-Concepts/Multicast)
-
-</details>
-
-<details>
 <summary><code>boolean_algebra</code> · 11 notes</summary>
 
 - [AND](https://notes.yxy.ninja/Boolean-Algebra/Logic-Gates/AND)
@@ -641,9 +649,14 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<a id="programming-languages-paradigms"></a>
+</details>
+</div>
+
+<div id="programming-languages-paradigms" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Programming Languages & Paradigms</strong></summary>
+
+<p><em>Language idioms, paradigms, and ecosystem insights</em></p>
 
 <details>
 <summary><code>c</code> · 17 notes</summary>
@@ -886,9 +899,14 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<a id="software-engineering-tooling"></a>
+</details>
+</div>
+
+<div id="software-engineering-tooling" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Software Engineering & Tooling</strong></summary>
+
+<p><em>Engineering workflows, CLI mastery, and productivity tooling</em></p>
 
 <details>
 <summary><code>software_engineering</code> · 28 notes</summary>
@@ -981,9 +999,14 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<a id="algorithms-data-structures-math"></a>
+</details>
+</div>
+
+<div id="algorithms-data-structures-math" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Algorithms, Data Structures & Math</strong></summary>
+
+<p><em>Problem-solving playbooks, math fundamentals, and contest prep</em></p>
 
 <details>
 <summary><code>dsa</code> · 53 notes</summary>
@@ -1210,9 +1233,14 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<a id="data-management"></a>
+</details>
+</div>
+
+<div id="data-management" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Data Management</strong></summary>
+
+<p><em>Relational theory, storage engines, and SQL patterns</em></p>
 
 <details>
 <summary><code>database</code> · 11 notes</summary>
@@ -1248,9 +1276,14 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<a id="security-identity"></a>
+</details>
+</div>
+
+<div id="security-identity" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Security & Identity</strong></summary>
+
+<p><em>Security architecture, authentication, and enterprise trust</em></p>
 
 <details>
 <summary><code>security</code> · 33 notes</summary>
@@ -1291,6 +1324,17 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
+</details>
+
+</details>
+</div>
+
+<div id="past-job-experience" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
+<details>
+<summary><strong>Past Job Experience</strong></summary>
+
+<p><em>Highlights from Binance, Hacktron, and Opcode workstreams</em></p>
+
 <details>
 <summary><code>binance</code> · 16 notes</summary>
 
@@ -1313,11 +1357,29 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
+<details>
+<summary><code>hacktron</code> · 2 notes</summary>
+
+- [Event Loop](https://notes.yxy.ninja/OS/Thread/Event-Loop)
+- [Redis Deployment](https://notes.yxy.ninja/Devops/Redis-Deployment)
+
 </details>
 
-<a id="career-finance-academia"></a>
+<details>
+<summary><code>opcode</code> · 1 note</summary>
+
+- [Multicast](https://notes.yxy.ninja/Networking-Concepts/Multicast)
+
+</details>
+
+</details>
+</div>
+
+<div id="career-finance-academia" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>Career, Finance & Academia</strong></summary>
+
+<p><em>Professional growth, financial literacy, and academic references</em></p>
 
 <details>
 <summary><code>career</code> · 1 note</summary>
@@ -1346,6 +1408,17 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
+</details>
+
+</details>
+</div>
+
+<div id="nus" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
+<details>
+<summary><strong>NUS</strong></summary>
+
+<p><em>School coursework, module notes, and academic projects</em></p>
+
 <details>
 <summary><code>nus</code> · 4 notes</summary>
 
@@ -1366,19 +1439,14 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 
 </details>
 
-<details>
-<summary><code>hacktron</code> · 2 notes</summary>
-
-- [Event Loop](https://notes.yxy.ninja/OS/Thread/Event-Loop)
-- [Redis Deployment](https://notes.yxy.ninja/Devops/Redis-Deployment)
-
 </details>
+</div>
 
-</details>
-
-<a id="ai-emerging-tech"></a>
+<div id="ai-emerging-tech" class="domain-card" style="border: 1px solid var(--card-border, rgba(128, 128, 128, 0.25)); border-radius: 16px; padding: 1.25rem; background: var(--card-background, rgba(255, 255, 255, 0.04)); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);">
 <details>
 <summary><strong>AI & Emerging Tech</strong></summary>
+
+<p><em>High-performance AI workloads and modern ML infrastructure</em></p>
 
 <details>
 <summary><code>ai</code> · 1 note</summary>
@@ -1388,18 +1456,6 @@ Use the quick index below to jump straight to the topics you care about. Expand 
 </details>
 
 </details>
+</div>
 
-<a id="visual-library"></a>
-<details>
-<summary><strong>Visual Library</strong></summary>
-
-<details>
-<summary><code>excalidraw</code> · 3 notes</summary>
-
-- [base64_encoding.excalidraw](https://notes.yxy.ninja/Computer-Organisation/excalidraw/base64_encoding.excalidraw)
-- [Container With Most Water.excalidraw](https://notes.yxy.ninja/cp/greedy/excalidraw/Container-With-Most-Water.excalidraw)
-- [World Break.excalidraw](https://notes.yxy.ninja/cp/dynamic_programming/excalidraw/World-Break.excalidraw)
-
-</details>
-
-</details>
+</div>
