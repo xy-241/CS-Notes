@@ -6,9 +6,10 @@ Author Profile:
 tags:
   - OS
   - linux
+  - devops
 Creation Date: 2023-10-19T17:12:00
-Last Date: 2025-03-15T19:15:04+08:00
-References: 
+Last Date: 2025-11-03T18:46:17+08:00
+References:
 description: Dive into the world of processes in operating systems!
 ---
 
@@ -34,6 +35,11 @@ description: Dive into the world of processes in operating systems!
 > `VmSize` represents the size of [[Virtual Memory]] assigned to a process.
 > 
 > `VmRSS` represents the size of [[Main Memory#Memory Frames]] a process is currently using.
+
+>[!tool] Debugging in Linux
+> `gcore` lets you take a full snapshot of a running process’s memory so you can debug it later in gdb, while `gstack` is a quick way to inspect all thread stack traces on the spot to see what each thread is doing (blocked on a syscall, stuck on a lock, sleeping, etc). 
+> 
+> They rely on `ptrace`, so you’ll need proper permissions, matching namespaces, and relaxed kernel policies if you’re inside containers or hardened environments. In short, `gcore` is for deep post-mortem analysis, and `gstack` is for fast, live insight into why your program might look stuck.
 
 ### Core Image
 
