@@ -8,9 +8,9 @@ tags:
   - macos
   - linux
 Creation Date: 2024-02-07, 16:20
-Last Date: 2025-01-29T18:19:49+08:00
-References: 
-draft: 
+Last Date: 2025-11-10T22:53:36+08:00
+References:
+draft:
 description: FUSE (Filesystem in Userspace) lets programs manage filesystems without kernel privileges, enabling custom cloud storage mounts and powering tools like Rclone. It achieves this by acting as a bridge between user-space filesystem implementations and the kernel, forwarding requests and returning results.
 ---
 ## Abstract
@@ -55,6 +55,12 @@ description: FUSE (Filesystem in Userspace) lets programs manage filesystems wit
   </br>
   
 - When an application makes a filesystem request, the request is forwarded to the FUSE kernel module, which then passes it to the user-space filesystem implementation. Once the operation is completed in user space, the result is sent back to the kernel module, which returns the result to the application
+
+## Fast, Lazy Container Loading
+---
+- [Modal](https://modal.com/blog/jono-containers-talk)’s [[FUSE|FUSE filesystem]] runs inside the container runtime (like `runsc`), acting as the bridge between your code and the underlying storage. 
+- When the container starts, only lightweight metadata is loaded; the actual files are fetched lazily and asynchronously as they’re accessed. The FUSE layer intercepts file requests, serves cached data if available, or streams missing data from progressively slower tiers (RAM → SSD → CDN → blob storage) while prefetching likely-needed chunks in the background. 
+- This makes containers feel instantly ready, even though most data is still being pulled behind the scenes.
 
 
 ## RCLONE
