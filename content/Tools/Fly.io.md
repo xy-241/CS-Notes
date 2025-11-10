@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2025-10-09T09:38:52+08:00
+Last Date: 2025-11-10T14:59:06+08:00
 References:
 draft:
 description: Fly.io Starter Guide
@@ -15,6 +15,23 @@ description: Fly.io Starter Guide
 ---
 - Serverless Container Cloud Provider, come with **free hosting**!
 - You can record down the app infra configuration with `fly.toml`, see [Fly Launch configuration (fly.toml) · Fly Docs](https://fly.io/docs/reference/configuration/) for more details
+
+## Fly.io Cost Management
+---
+```toml
+[[services]]
+  auto_stop_machines = "stop"    # Machine will be turned off or suspended when there’s little or no traffic.
+  auto_start_machines = true     # Machine will automatically start again when traffic arrives.
+```
+- There are special settings in the `fly.toml` file called **auto-stop** and **auto-start** (under `[[services]]` or `[http_service]`).
+	- `auto_stop_machines = "stop"` or `"suspend"` means the machine will be turned off or suspended when there’s little or no traffic.
+	- `auto_start_machines = true` means the machine will automatically start again when traffic arrives.
+	- `min_machines_running` sets how many machines stay on even when idle (to avoid cold start delays).
+
+>[!important] For proper shutdown
+> If we don't include `auto_stop_machines` or `auto_start_machines`. The system will **automatically start** machines when needed (on traffic), but it will **not** automatically stop them when idle.
+> 
+> If the app has a publicly exposed service, any incoming traffic can trigger a machine to start if it was stopped. Make sure you set `auto_start_machines = false`, so you don't incur unexpected costs.
 
 ## Fly.io CLi Cheatsheet
 ---
