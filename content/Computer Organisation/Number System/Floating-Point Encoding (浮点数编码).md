@@ -5,9 +5,10 @@ Author Profile:
   - https://linkedin.com/in/xinyang-yu
 tags:
   - computer_organisation
+  - python
 Creation Date: 2023-10-12T15:43:00
-Last Date: 2024-08-26T16:04:25+08:00
-References: 
+Last Date: 2025-11-14T16:39:29+08:00
+References:
 ---
 ## Abstract
 ---
@@ -122,6 +123,50 @@ References:
 ![[float_NaA.png]]
 
 
+## Decimal Floating-point
+---
+```bash
+>>> d = Decimal('123.45') # coefficient (12345) × 10^exponent (-2)
+>>> d.as_tuple()
+DecimalTuple(sign=0, digits=(1, 2, 3, 4, 5), exponent=-2)
+```
+
+- It helps us to avoid the precision lose in binary float. In python, the implementation is `Decimal` which implements the IEEE 754-2008 standard for decimal floating-point arithmetic.
+
+>[!important] Always pass strings to Decimal
+> ![[python_decimal_accuracy_pitfall.png]]
+> 
+> When you do `Decimal(1.7)`, you're passing a **float** to `Decimal`. But remember, `1.7` as a float is already stored in binary and is **not exactly 1.7**, it's an approximation!
+> 
+> So `Decimal` is honestly showing you what that binary float actually contains. It's not losing precision. It's revealing the imprecision that was already there.
+
+>[!question] Why not the default?
+> **Performance:** Binary floats are _much_ faster because they're implemented directly in hardware (your CPU's floating-point unit). Decimal arithmetic is implemented in software, making it roughly 10-100x slower.
+> 
+> **Memory:** Decimal uses more memory per number. A `float` in Python is 8 bytes, while a `Decimal` can be 28+ bytes depending on precision.
+> 
+> Usually used in financial calculations (dealing with money).
+
+
+### Exponent Alignment for Operation
+
+```bash
+# Step 1: Represent both numbers
+123.45 = 12345 × 10^(-2)
+6.7    = 67 × 10^(-1)
+
+# Step 2: Align the exponents Find the smaller
+123.45 = 12345 × 10^(-2)
+6.7    = 670 × 10^(-2)    # shifted 67 × 10^(-1) to match
+
+# Step 3: Add the coefficients
+12345 + 670 = 13015
+
+# Step 4: Apply the exponent
+13015 × 10^(-2) = 130.15
+```
+
+- The algorithm aligns the decimal points (via exponent matching), then adds the digits (coefficients), keeping everything in exact decimal form throughout.
 
 ## References 
 ---
