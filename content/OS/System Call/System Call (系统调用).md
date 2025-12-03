@@ -6,8 +6,8 @@ Author Profile:
 tags:
   - OS
 Creation Date: 2023-11-21T11:55:53+08:00
-Last Date: 2025-01-27T17:54:40+08:00
-References: 
+Last Date: 2025-12-03T22:15:39+08:00
+References:
 description: "Unlock the power of your computer's hardware while staying secure! Dive into system calls: the essential bridges between programs and the operating system's kernel. Learn how they work, boost security, and vary across different CPU architectures. Explore examples from Linux and Windows to master this core computing concept."
 ---
 ## Abstract
@@ -46,8 +46,14 @@ description: "Unlock the power of your computer's hardware while staying secure!
 >[!important] System call & process management
 > Control is passed back to the [[Kernel]] when a system call is made by the [[Process (进程)]]. Kernel uses this opportunity to perform its [[Process Scheduling]]. If the process hogs to the [[CPU]] and doesn't make any system call, we have [[CPU Scheduling Techniques#Preemptive Scheduling]] to handle this.
 
->[!tip]
+>[!tool] Program troubleshooting
 > The system calls made by a process can be traced by [``strace``](https://stackoverflow.com/questions/65510246/can-a-system-call-happen-in-a-c-program).
+> 
+> I usually use `ltrace` to get a high-level overview ([[Library Call|library calls]]), then drill down using `strace` (system calls) for lower-level details.
+> 
+> `strace` allows us to either attach to an existing process using `-p <pid>`, or spin up a new process to trace from the start. We can use `-f` to follow child processes after a fork.
+> 
+> To filter specific syscalls, use `-e trace=` (e.g., `-e trace=file` or `-e trace=open,read,write`). For a summary/statistics view, use `-c`.
 
 ## System Call is ISA-dependent 
 ---
