@@ -6,12 +6,23 @@ Author Profile:
 tags:
   - python
 Creation Date: 2023-10-18T10:49:00
-Last Date: 2024-01-08T16:48:16+08:00
-References: 
+Last Date: 2026-01-05T21:05:53+09:00
+References:
 title: Unleash the Python Kraken Pyenv and Poetry - The Holy Grail of Python Project Setups
 ---
 ## Abstract
 ---
+
+>[!attention]
+> `uv` is a modern, Rust-based tool that unifies Python version management, virtual environments, package installation, and project/dependency management into a single fast CLI.
+> 
+> - **pyenv** → `uv python install 3.12` manages Python versions
+> - **venv/virtualenv** → `uv venv --python 3.11` creates virtual environments
+> - **pip** → `uv pip install` installs packages (10-100x faster)
+> - **pip-tools** → `uv pip compile` for lock files
+> - **poetry/pdm** → `uv init`, `uv add`, `uv lock`, `uv sync` for project management with `pyproject.toml`
+> - **pipx** → `uv tool install` for global CLI tools in isolated envs
+
 Get the gears ready
 - [ ] [[#pyenv & poetry Installation]]
 
