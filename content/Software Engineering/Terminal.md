@@ -7,7 +7,7 @@ tags:
   - software_engineering
   - bash
 Creation Date: 2024-03-10, 17:36
-Last Date: 2026-02-22T17:03:23+08:00
+Last Date: 2026-02-22T17:29:15+08:00
 References:
 draft:
 description:
@@ -15,6 +15,11 @@ description:
 ## Terminal
 ---
 - A program that provides a **text-based window** where you use the [[#Shell]] to interact with [[OS]]
+
+>[!tool] Fix `unknown terminal type` errors
+> `infocmp -x xterm-ghostty | ssh -i ~/.ssh/master_key xinyang@<ssh_server_endpoint> "tic -x -"`
+> 
+> This command takes your local Ghostty terminal definition and installs it on your remote server, so that when you SSH in using Ghostty, the remote machine knows how to handle it (correct colors, key sequences, etc.) instead of throwing `unknown terminal type` errors.
 
 ### iterm2
 - My daily drive, [Install iterm2 terminal](https://iterm2.com/downloads.html)
