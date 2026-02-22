@@ -7,7 +7,7 @@ tags:
   - software_engineering
   - bash
 Creation Date: 2024-03-10, 17:36
-Last Date: 2025-09-30T17:04:22+08:00
+Last Date: 2026-02-22T17:03:23+08:00
 References:
 draft:
 description:
@@ -106,6 +106,14 @@ description:
 ## Shell
 ---
 - The program that lets you control your [[OS]] using text commands
+
+>[!important] `/bin/sh` vs `/bin/bash`
+> `/bin/sh` is the POSIX shell - minimal, basic scripting features only. `/bin/bash` is the Bourne Again Shell - a superset of sh with extras like:
+> - Tab completion
+> - Arrow key history navigation
+> - Bash script syntax like conditionals, {1..10} brace expansion and $() nesting etc.
+> 
+> On Debian, `/bin/sh` is [[File System Link#Soft (Symbolic) File System Link|symlinked]] to `dash`, which is even more stripped down than traditional `sh`. For interactive use, you almost always want bash. You can configure it with `sudo chsh -s /bin/bash <username>`.
 
 ### ZSH
 - A [[Unix#Unix-like]] [[#Shell]] that is very extensive and powerful
