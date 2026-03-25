@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - computer_organisation
 Creation Date: 2023-08-29T14:24:00
-Last Date: 2025-10-05T18:25:16+08:00
+Last Date: 2026-03-25T23:37:45+08:00
 References:
 description: Learn how GPUs achieve massive parallel performance through thousands of CUDA and Tensor Cores. This guide explains Streaming Multiprocessors, warp scheduling, FLOPs, and why GPUs excel in AI training and game rendering compared to CPUs.
 ---
@@ -90,6 +90,21 @@ description: Learn how GPUs achieve massive parallel performance through thousan
 - [[CPU]] one core is way more power, and able to handle complication logics like [[Pipeline Branching]] and a lot of the real world application needs to run [[Instruction]] in a sequential manner
 - GPU shines when we need [[Concurrency (并发)#Parallelism (并行性)]] and the workload doesn't depend on each other
 
+
+## GPU Access in Virtualised Environments
+---
+- Different [[Virtualisation#Isolation Spectrum|isolation levels]] have different capabilities for GPU access
+
+| Isolation Level | GPU Access | Mechanism |
+|---|---|---|
+| [[Virtualisation#V8 Isolates|V8 Isolates]] | No | No system calls, JS/WASM only |
+| Containers (runc) | Yes | Direct access to host GPU via mounted device files |
+| [[Virtualisation#gVisor|gVisor]] | Yes | [[Virtualisation#NVProxy|NVProxy]] intercepts [[CUDA]] calls and proxies to host driver |
+| [[Virtualisation#Firecracker|Firecracker]] | No | Minimal [[Virtualisation#Device Model|device model]], no [[Virtualisation#PCI Passthrough|PCI passthrough]] |
+| QEMU | Yes | PCI passthrough or virtual GPU (vGPU) |
+
+- For GPU partitioning at the hardware level, see [[CUDA#Multi-Instance GPU|Multi-Instance GPU (MIG)]]
+- For GPU scheduling in Kubernetes, see [[Kubernetes#GPU Scheduling]]
 
 ## References
 ---
