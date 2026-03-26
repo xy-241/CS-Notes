@@ -6,15 +6,16 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2025-11-10T14:59:06+08:00
+Last Date: 2026-03-26T21:45:43+08:00
 References:
 draft:
 description: Fly.io Starter Guide
 ---
 ## Abstract
 ---
-- Serverless Container Cloud Provider, come with **free hosting**!
-- You can record down the app infra configuration with `fly.toml`, see [Fly Launch configuration (fly.toml) · Fly Docs](https://fly.io/docs/reference/configuration/) for more details
+- A cloud platform that runs full app servers at the edge by deploying [[Docker Container|containers]] as [[Virtualisation#Firecracker|Firecracker]] micro-VMs on bare metal servers across 30+ regions worldwide
+- You give it a [[Docker Image|Docker image]], it runs it as a micro-VM close to your users. The **Fly Proxy** handles global load balancing, TLS termination, and auto-start/stop
+- App infra is configured declaratively with `fly.toml`, see [Fly Launch configuration (fly.toml) · Fly Docs](https://fly.io/docs/reference/configuration/) for more details
 
 ## Fly.io Cost Management
 ---
@@ -32,6 +33,47 @@ description: Fly.io Starter Guide
 > If we don't include `auto_stop_machines` or `auto_start_machines`. The system will **automatically start** machines when needed (on traffic), but it will **not** automatically stop them when idle.
 > 
 > If the app has a publicly exposed service, any incoming traffic can trigger a machine to start if it was stopped. Make sure you set `auto_start_machines = false`, so you don't incur unexpected costs.
+
+## Fly.io Machine Lifecycle
+---
+- A **Fly Machine** is a fast-launching [[Docker Container|container]]-based micro-VM powered by [[Virtualisation#Firecracker|Firecracker]]. Each machine goes through lifecycle states: `created` -> `started` -> `stopped` -> `destroyed`
+- The **Fly Proxy** is a [[Reverse Proxy (反向代理)|reverse proxy]] that routes incoming traffic to machines, and is responsible for triggering `auto_stop` and `auto_start` transitions
+- Stopped machines **persist indefinitely**. There is no time-based garbage collection of stopped machines
+- **Rootfs** (root filesystem) is the machine's disk, made up of the container image layers plus any files written at runtime. When a machine is stopped, Fly.io keeps the rootfs assembled on the host for fast restarts, billed at $0.15/GB/month even while stopped. This is separate from **volumes** (persistent storage via `[[mounts]]`), which survive machine destruction
+
+### Auto-stop and Auto-start Internals
+- When `auto_stop_machines = "stop"` is set, the Fly Proxy monitors each machine's active connections. When a machine is idle (no connections), the proxy **cordons** the machine (stops routing new traffic to it), then sends a stop signal
+- `auto_start_machines = true` works reactively. When the proxy receives a request and all running machines are at capacity or none are running, it starts a stopped machine to handle the traffic
+- `auto_stop` only **stops** machines, it never creates or destroys them
+
+### How Machines Can Disappear
+- **Hardware failure** on the host. If the host is decommissioned, all machines on it are lost
+- **`auto_destroy: true`** in the machine config (default `false`). When enabled, a machine destroys itself after it exits
+- **Deployments** via `fly deploy` can replace old machines with new ones (new machine IDs)
+- **Platform incidents** can cause machines to temporarily vanish from `fly machine list`
+
+### Preventing Machine Loss
+```toml
+[[services]]
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1  # Always keep at least 1 machine running
+```
+- `min_machines_running = 1` ensures one machine **never gets stopped**, so the proxy always has a running machine to route traffic to
+- Running **2+ machines** across regions mitigates hardware failure risk
+
+>[!important] Lesson from a real incident (2026-03-18)
+> An Umami analytics instance on Fly.io went completely offline. `fly machines list` returned "No machines" (destroyed, not just stopped). Root cause analysis:
+>
+> | Hypothesis | Evidence | Verdict |
+> |---|---|---|
+> | Time-based GC | Not documented, Fly.io bills for stopped machines | Ruled out |
+> | `auto_destroy` | Not in machine config, defaults to `false` | Ruled out |
+> | Deploy replaced machines | No deploy between Jan 7 and Mar 26 | Ruled out |
+> | Platform API incident | Would be temporary, machines would return | Unlikely |
+> | **Host hardware failure** | Both machines in same region (`sin`), likely same host. Fly.io decommissions failed hosts and destroys all machines on them | **Most likely** |
+>
+> Fix: `min_machines_running = 1` keeps at least one machine alive. Spreading machines **across regions** mitigates single-host failure.
 
 ## Fly.io CLi Cheatsheet
 ---
@@ -108,6 +150,14 @@ fly volumes list -a <app_name> # inspect all the volume we have
 
 >[!important] Yes, I was right!
 > ![[flyio_custom_domain_ssl_proxy_issue.png]]
-> 
+>
 > The only way for domain name verification to work with the Cloudflare DNS proxy on is to add a [[DNS Record#CNAME Record|CNAME record]] to the [[Hostname#Domain Zone File|domain zone file]].
 
+## References
+---
+- [Machine states and lifecycle - Fly Docs](https://fly.io/docs/machines/machine-states/)
+- [An introduction to Fly Machines - Fly Docs](https://fly.io/docs/machines/overview/)
+- [Fly Proxy autostop/autostart - Fly Docs](https://fly.io/docs/reference/fly-proxy-autostop-autostart/)
+- [Fly.io Billing - Fly Docs](https://fly.io/docs/about/billing/)
+- [Troubleshoot host unavailable - Fly Docs](https://fly.io/docs/apps/trouble-host-unavailable/)
+- [Machines API Resource - Fly Docs](https://fly.io/docs/machines/api/machines-resource/)
