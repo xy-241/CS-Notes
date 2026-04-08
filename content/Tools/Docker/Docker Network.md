@@ -7,96 +7,160 @@ tags:
   - docker
   - networking
 Creation Date: 2023-08-22T12:09:04+08:00
-Last Date: 2024-10-16T19:56:09+08:00
-References: 
+Last Date: 2026-04-08T22:26:46+08:00
+References:
+draft:
+description: Learn Docker's network types (bridge, host, null), how user-defined bridges enable container-to-container DNS, and how shared external networks across docker-compose projects enable reverse proxy patterns like Traefik in front of unpublished backend services.
 aliases:
   - ../../Tools/Docker/Docker-Network/Docker-Network
 ---
 ## Abstract
 ---
-- There are 3 types of network [[Docker]] offers
-	1. [[#Docker Bridge Network]]
-	2. [[#Docker Host Network]]
-	3. [[#Docker Null Network]]
-</br>
+- [[Docker]] isolates each [[Docker Container]] in its own [[Network Namespace]], then provides **network drivers** to control which containers can talk to which
+- Three main driver types: [[#Docker Bridge Network]] (built-in `bridge` and [[#User-Defined Bridge Network|user-defined]] variants), [[#Docker Host Network]], and [[#Docker Null Network]]. Docker auto-creates `bridge`, `host`, and `none` at daemon startup and they cannot be removed
 
-- By default, all containers created are placed inside this default **Docker Bridge Network**
-- We can create **Docker Null Network** and **Docker Bridge Network** with the drivers shipped with docker
-- Network Comparison
-![[docker_network_comparison.png|500]]
-
->[!attention] 
-> We cant remove all the default Docker Network.
+| Driver | Namespace | Container-to-container | DNS by name | Typical use |
+| --- | --- | --- | --- | --- |
+| Built-in `bridge` | Isolated | By [[IP Address]] only | ❌ | Legacy default, avoid |
+| User-defined `bridge` | Isolated | Any port, no `-p` needed | ✅ | **Recommended default** |
+| `host` | Shared with host | Via `localhost` | N/A | Performance, host-level access |
+| `none` | Isolated, `lo` only | None | N/A | Sandboxing, no network |
 
 ### Docker Bridge Network
-- When we create a [[Docker Container]] inside this network
-- A [[Network Interface]] is created on the Host Machine which is 7, master is `docker0` which is 3, as shown below
+- The **default driver**. Every container is placed on the built-in `bridge` unless told otherwise, each with its own [[Network Interface]] and [[Network Namespace]]
+- On the host, Docker creates a bridge interface `docker0` (interface `3` below) with a veth endpoint (interface `7`) for the container
 ![[docker_bridge_host_networkInterface.png|500]]
-- A network interface which is 6, is also created inside the docker container, as shown below
+- The other end of the [[Virtual Ethernet]] pair (interface `6`) lives inside the container
 ![[docker_bridge_container_networkInterface.png|500]]
-</br>
-
-- There is a [[Virtual Ethernet]] that connects the 2 network interface mentioned above
+- Together they form the bridge connection between host and container
 ![[docker_bridge_network.png|500]]
 
->[!question] Accessing application running on host machine port
-> If we have an application running on host on port `80`, we can't access the application via `localhost:80`, because the network interface of the container is isolated from the network interface of the host. This only works on [[#Docker Host Network]] in which the network interface of host is shared with the container
+>[!question] Reaching host apps from a container
+> A container cannot reach host apps via `localhost` because the network namespaces are isolated. The `localhost` shortcut only works on [[#Docker Host Network]] where the host's interface is shared.
 > 
-> If we want to access the application running on host machine port, we need to use `host.docker.internal:80`, `host.docker.internal` will be converted to the [[IP Address]] of the host machine by docker automatically.  However, this is **a feature of Docker Desktop** for Mac and Windows specifically!!!
+> Use `host.docker.internal:80` instead. Docker resolves it to the host's [[IP Address]]. Docker Desktop (Mac/Windows/Linux) sets this up automatically. On plain Linux Docker Engine, pass `--add-host=host.docker.internal:host-gateway` to opt in.
 
-</br>
+>[!caution] The built-in `bridge` has no DNS
+> Containers on the default `bridge` can only reach each other by [[IP Address]], not by [[Hostname]], and those IPs change on every restart. Always prefer a [[#User-Defined Bridge Network]] for non-trivial setups.
 
-- Network communication from containers to host machine and the internet
-![[docker_network_bridge_network_communication.png|500]]
+### User-Defined Bridge Network
+- A bridge you create yourself with `docker network create` or a `docker-compose.yml`. The **recommended** approach for almost all real-world setups
+- Containers on the bridge reach each other directly, and the host NATs their traffic out to the internet
 
->[!important] Communication via hostname
-> Default docker bridge network doesn't support [[DNS Resolution]]. So it is impossible to communicate from one container to another container via [[Hostname]], same for host machine to containers.
-> 
-> But we are able to create a new bridge network that supports DNS Resolution, refer to [[#Create/Delete Docker Network]].
+| From | To | Reachable? | How |
+| --- | --- | --- | --- |
+| Container | Same-bridge container | ✅ | `http://<name>:<container-port>` via Docker DNS |
+| Container | Internet | ✅ | NAT via host |
+| Host | Container | Only via `-p` | `localhost:<host-port>` |
+| Internet | Container | Only via `-p` | Published host port |
+
+>[!important] Two big wins over the built-in `bridge`
+> 1. **[[DNS Resolution]] by container name**. Docker runs an embedded DNS server on user-defined bridges that resolves each container's name (e.g. `curl http://app:3000`). This is NOT the container's internal `hostname` (`/etc/hostname`), which is cosmetic. See the tip below for where the DNS name actually comes from
+> 2. **Talk on any port** the app binds to, with no `-p host:container` mapping needed. `-p` only controls whether the **host** (and thus the internet) can reach a container, not whether other containers on the same bridge can. If `app` binds to `:3000` internally and never publishes a host port, another container on the same bridge can still `curl http://app:3000` while the host and internet cannot. This is what enables the [[#Reverse Proxy Pattern]]
+
+>[!tip] Where does the container's DNS name come from?
+> On a **user-defined bridge**, Docker's embedded DNS resolves names from:
+> - **`docker run --name foo`**: `foo` is the DNS name. `--network-alias` adds extras
+> - **[[Docker Compose]] `services: foo:`**: the service key is auto-registered. `container_name:` and `networks.<net>.aliases:` add extras (plus the auto-generated `<project>-foo-1`)
+>
+> Gotchas: the built-in `bridge` has no DNS, so this only works on a user-defined bridge. And `--hostname` just writes `/etc/hostname` inside the container, it does NOT register with Docker DNS. Always use `--name` or the service key.
+>
+> **Mental model**: the DNS name is a **runtime identity** chosen at launch, not a build-time property. That's why you never set it in a Dockerfile.
 
 ### Docker Host Network
-- When we create a [[Docker Container]] inside this network, the container is basically an application running inside the host machine, sharing the same [[Network Interface]] as the host machine. That means in the host machine, we can access the container on `localhost:8080` if the the container is running on port 8080 without the need to tell docker to bridge the port between the host and container
-- The container is able to **access** other **applications running on the host** port via `localhost:<PORT_OF_OTHER_APP_RUNNING_ON_HOST>`
+- Bypasses the network namespace. The container shares the host's [[Network Interface]] directly, so a container on port `8080` is reachable at `localhost:8080` with no `-p` flag, and the container can reach host apps the same way
+
+>[!caution] No isolation
+> Two containers binding the same port will collide, and every port the container opens is exposed on the host immediately. Use sparingly.
 
 ### Docker Null Network
-- When we create a [[Docker Container]] inside this network, the container only has a [[Loopback Network]], so the container is isolated fully from the outside world
+- Created with the `none` driver. The container has only a [[Loopback Network]] (`lo`), fully isolated from other containers, the host, and the internet. Useful for sandboxing or compute-only workloads with no network needs
 
 
-
-
-
-## Useful Docker Network Command
+## Sharing Networks Across Compose Projects
 ---
-### Read Docker Network Info
-- List all Docker Networks
-```bash
-sudo docker network ls
+- By default, [[Docker Compose]] creates a per-project network `<project>_default`, so containers in different projects **cannot** talk to each other
+- To share, two compose files must reference the same network by name. There are two ways
+
+### Method 1: `name:` override
+- Setting `name:` bypasses the project-prefix rule. If two files use the same `name:`, they attach to the same bridge. Whichever project starts first creates it, no manual `docker network create` needed
+
+```yaml
+# project A: /home/services/network/docker-compose.yml
+networks:
+  intranet:
+    name: network_intranet
+
+# project B: /home/services/twenty/docker-compose.yml
+networks:
+  intranet:
+    name: network_intranet
 ```
 
-- Inspect a Docker Network
+### Method 2: `external: true`
+- The network must already exist before `docker compose up`. Compose will not create or destroy it
+
 ```bash
-sudo docker network inspect <NETWORK_NAME>
+docker network create network_intranet
 ```
 
-### Use Docker Network
-- Select which [[Docker Network]] to start the [[Docker Container]]
-```bash
-docker run -d --network host hashicorp/vault server
+```yaml
+networks:
+  intranet:
+    external: true
+    name: network_intranet
 ```
 
+>[!tip] When to use which
+> `external: true` makes the network's lifecycle **independent** of any single project, safer for shared infrastructure that outlives individual services. The `name:` override lets compose auto-create the network, saving a step. Good for prototypes.
 
-### Create/Delete Docker Network
-- Create a custom [[#Docker Bridge Network]]], We can only create **custom** Docker Bridge Network
-```bash
-# -d here refers to the driver Docker uses to create the network
-# This will create a network interface on host machine similar to the docker0 network interface
-sudo docker network create -d <NETWORK_DRIVER> <NETWORK_NAME>
+## Reverse Proxy Pattern
+---
+- A common use of a shared [[#User-Defined Bridge Network]] is running a [[Reverse Proxy (反向代理)|reverse proxy]] like [[Traefik]] in front of backend services. **Only the proxy publishes a host port**. Backends stay unpublished and are reached container-to-container over the bridge
+
+```text
+Internet
+   │
+   ▼
+┌──────────────────────────────────────┐
+│  Host                                │
+│  ┌────────────────────────────────┐  │
+│  │  network_intranet              │  │
+│  │  ┌─────────┐    ┌───────────┐  │  │
+│  │  │ traefik │ ─▶ │  twenty   │  │  │
+│  │  │  :443   │    │   :3000   │  │  │
+│  │  └─────────┘    └───────────┘  │  │
+│  │      ▲                         │  │
+│  └──────┼─────────────────────────┘  │
+│         │ -p 443:443                 │
+└─────────┼────────────────────────────┘
+          │
+       Internet
 ```
 
-- Remove a Docker Network
-```bash
-sudo docker network rm <NETWORK_NAME>
-```
+- Traefik publishes `-p 443:443` so the internet can reach it. Twenty's `3000` is only reachable from inside `network_intranet`, where Traefik also lives. If Twenty also published `3000`, the internet could bypass Traefik and skip TLS, auth, and routing, so leaving it unpublished **forces** all traffic through the proxy
+
+>[!success] How `/home/services/` uses this
+> Every service folder under `/home/services/` declares `network_intranet` as a shared network. Adding `traefik.enable=true` labels makes Traefik auto-discover it via the Docker socket. Dropping a new folder is enough to add a new service.
+
+## Useful Docker Network Commands
+---
+
+| Command | Purpose |
+| --- | --- |
+| `docker network ls` | List all networks |
+| `docker network inspect <name>` | Show a network's config, subnet, and connected containers |
+| `docker network create -d bridge <name>` | Create a [[#User-Defined Bridge Network]]. `-d` picks the driver (defaults to `bridge`) |
+| `docker network rm <name>` | Delete a network (must have no attached containers) |
+| `docker network prune` | Remove all unused networks |
+| `docker run --network <name> <image>` | Start a container on a specific network |
+| `docker network connect <network> <container>` | Attach a running container to an additional network |
+| `docker network disconnect <network> <container>` | Detach a running container from a network |
+
+>[!example] Run a container on the host network
+> ```bash
+> docker run -d --network host hashicorp/vault server
+> ```
 
 
 ## References
