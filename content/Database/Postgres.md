@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - postgres
 Creation Date: 2024-02-18, 18:28
-Last Date: 2025-10-09T09:45:52+08:00
+Last Date: 2026-04-19T19:50:08+08:00
 References:
 draft:
 description: Postgres Starter Guide
@@ -48,7 +48,38 @@ pg_dump -O -v -d <source_database_connection_string> > export.sql
 > 
 > Consider `pgsync` which offers a faster & live migration.
 
+## Postgres VACUUM
+---
+- A `DELETE` in Postgres does **not** immediately free disk. Under **MVCC** (multi-version concurrency control), deleted rows are kept as **dead tuples** so in-flight transactions keep a consistent view. The page bytes stay until vacuumed, so `du` / volume usage won't drop after a large `DELETE` on its own
+
+```sql
+-- 1. mark rows for reclaim
+DELETE FROM big_table WHERE created_at < NOW() - INTERVAL '30 days';
+
+-- 2a. reclaim space inside existing pages (non-blocking, online)
+VACUUM ANALYZE big_table;
+
+-- 2b. rewrite the whole table into a fresh file (blocking, releases OS disk)
+VACUUM FULL big_table;
+```
+
+| Command | Lock | Releases disk? | When |
+|---|---|---|---|
+| `VACUUM` | `SHARE UPDATE EXCLUSIVE`, reads and writes continue | No, just reuses dead pages for new inserts | Routine, handled by **autovacuum** automatically |
+| `VACUUM FULL` | `ACCESS EXCLUSIVE`, blocks everything on the table | Yes, rewrites the table into a new file and drops the old one | One-off reclaim after a large purge when the volume is tight |
+
+>[!caution] VACUUM FULL needs free disk to finish
+> `VACUUM FULL` copies live rows into a **new** relation file before dropping the old one, so disk usage roughly **doubles** for that table during the run. Extend the volume first (for example [[Fly.io#Fly.io Volume Snapshots|on Fly.io]]) if the disk is already tight.
+
+- **Autovacuum** handles routine `VACUUM` + `ANALYZE` in the background based on dead-tuple thresholds. Inspect activity with:
+```sql
+SELECT relname, n_dead_tup, last_autovacuum
+FROM pg_stat_user_tables
+ORDER BY n_dead_tup DESC;
+```
+
 ## Postgres Database Setup
+---
 
 ```sql
 -- 1) Create DB and login role
