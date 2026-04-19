@@ -126,6 +126,16 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
     umamiScript.defer = true;
 
     document.head.appendChild(umamiScript)
+
+    const umamiRecorder = document.createElement("script")
+    umamiRecorder.src = "https://notess.yxy.ninja/recorder.js"
+    umamiRecorder.setAttribute("data-website-id", "339ec462-99c5-450f-a994-9b452857c5d7")
+    umamiRecorder.setAttribute("data-sample-rate", "1")
+    umamiRecorder.setAttribute("data-mask-level", "moderate")
+    umamiRecorder.setAttribute("data-max-duration", "1200000")
+    umamiRecorder.defer = true
+
+    document.head.appendChild(umamiRecorder)
   `)
   } else if (cfg.analytics?.provider === "plausible") {
     const plausibleHost = cfg.analytics.host ?? "https://plausible.io"
