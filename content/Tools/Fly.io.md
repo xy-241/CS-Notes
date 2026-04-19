@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - fly_io
 Creation Date: 2024-02-18, 17:40
-Last Date: 2026-03-26T21:45:43+08:00
+Last Date: 2026-04-19T19:50:08+08:00
 References:
 draft:
 description: Fly.io Starter Guide
@@ -33,6 +33,13 @@ description: Fly.io Starter Guide
 > If we don't include `auto_stop_machines` or `auto_start_machines`. The system will **automatically start** machines when needed (on traffic), but it will **not** automatically stop them when idle.
 > 
 > If the app has a publicly exposed service, any incoming traffic can trigger a machine to start if it was stopped. Make sure you set `auto_start_machines = false`, so you don't incur unexpected costs.
+
+### Grandfathered Free Tier
+- **Grandfathered** = an old pricing rule kept for existing users after a policy change. Newcomers get the new terms, existing users keep the old ones as long as they don't switch plans
+- Fly.io retired its public free tier in October 2024. New orgs are **Pay As You Go** with no free allowance. Orgs that were already on the old **Hobby**, **Launch**, or **Scale** plans keep their allowances: up to 3 `shared-cpu-1x@256MB` machines, **3 GB** persistent volume total, and regional outbound transfer credits
+
+>[!caution] One-way door
+> The Fly docs warn: _"If you change your plan, you won't be able to return."_ Any upgrade or downgrade permanently drops grandfather status. Check the current plan first with `fly orgs show <org_slug>` or the billing dashboard. Labels **Hobby / Launch / Scale** = grandfathered, **Pay As You Go** only = not.
 
 ## Fly.io Machine Lifecycle
 ---
@@ -141,10 +148,52 @@ fly volumes list -a <app_name> # inspect all the volume we have
 
 
 
+## Fly.io Image Deployment
+---
+- `fly image update -a <app>` re-resolves the image tag pinned on each machine and rolls them onto the new digest
+- Gotcha with **mutable tags** (`:latest`, `:postgresql-latest`): Fly compares the _tag string_, not the upstream digest. If the tag hasn't changed, Fly reports _"Machines successfully updated"_ while still running the old digest. Logs reveal the no-op as `Container image ...@sha256:<old_digest> already prepared`
+
+>[!caution] Verify, don't trust "success"
+> After every `fly image update`, check the app version in logs and compare `fly image show` against the upstream manifest:
+> ```bash
+> TOKEN=$(curl -s 'https://ghcr.io/token?scope=repository:<org>/<repo>:pull&service=ghcr.io' \
+>   | python3 -c 'import sys,json; print(json.load(sys.stdin)["token"])')
+> curl -sI -H "Authorization: Bearer $TOKEN" \
+>      -H "Accept: application/vnd.oci.image.index.v1+json" \
+>      "https://ghcr.io/v2/<org>/<repo>/manifests/<tag>" \
+>   | grep -i docker-content-digest
+> ```
+
+- Force the re-pull by pinning an **explicit digest**:
+```bash
+fly image update -a <app> --image ghcr.io/<org>/<repo>@sha256:<digest>
+```
+- Trade-off: once pinned by digest, `fly image show` reports an empty tag and future `fly image update` calls without `--image` become no-ops (no tag to resolve). Either re-pin to the tag afterwards, or always supply a digest going forward
+
+## Fly.io Volume Snapshots
+---
+- **Block-level** copies of a volume at a point in time, stored on Fly infra. Created without restart or downtime
+- **Crash-consistent**, not transaction-consistent. A snapshot of a running Postgres restores like a sudden power-cut, so pair it with a logical `pg_dump` for anything important
+- Fly auto-snapshots daily with **5-day retention**. Manual snapshots share the same retention unless overridden
+- Restore creates a **new** volume from the snapshot, leaving the original untouched. Attach the new volume via `fly.toml` `[[mounts]]` or `fly machine update --volume`
+
+```bash title="Snapshot commands"
+fly volumes snapshots list <volume_id>
+fly volumes snapshots create <volume_id>
+
+fly volumes create <new_name> \
+  --snapshot-id <snap_id> \
+  --region <region> \
+  --size <gb>
+```
+
+>[!tip] Defence in depth for unmanaged Postgres
+> The **Unmanaged Fly Postgres** image has no official disaster recovery. Before a schema migration or image upgrade, take a Fly snapshot **and** a logical [[Postgres#Postgres Migration|pg_dump]] (via [[Local Port Forwarding#Fly.io App Port Forwarding|local port forward]]). Snapshots restore the whole disk, `pg_dump` gives you a portable SQL file that loads into any Postgres version.
+
 ## Fly.io SSL
 ---
 
-![[flyio_ssl.png|500]]
+![[flyio_ssl.png|248]]
 
 - I am using a custom [[Hostname#Domain Name]] with my fly.io app. For some reason, the [[X.509 Certificate]] didn't get auto-renew. This leads to the inaccessibility to the fly.io app. I suspect it is because by the [Cloudflare DNS Proxy](https://developers.cloudflare.com/dns/manage-dns-records/reference/proxied-dns-records/) which causes the custom domain verification to fail. I had to stop the proxy, run `fly certs delete <custom_domain_name>` and `fly certs create <custom_domain_name>` to get a valid X.509 certificate again
 
@@ -161,3 +210,5 @@ fly volumes list -a <app_name> # inspect all the volume we have
 - [Fly.io Billing - Fly Docs](https://fly.io/docs/about/billing/)
 - [Troubleshoot host unavailable - Fly Docs](https://fly.io/docs/apps/trouble-host-unavailable/)
 - [Machines API Resource - Fly Docs](https://fly.io/docs/machines/api/machines-resource/)
+- [Fly Volume snapshots - Fly Docs](https://fly.io/docs/volumes/snapshots/)
+- [Fly plans and pricing - Fly Docs](https://fly.io/docs/about/pricing/)
