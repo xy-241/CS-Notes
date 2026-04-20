@@ -7,7 +7,7 @@ tags:
   - database
   - binance
 Creation Date: 2025-01-16, 10:40
-Last Date: 2025-01-20T16:45:14+08:00
+Last Date: 2026-04-20T00:42:17+08:00
 References: 
 draft: 
 description: 
@@ -40,8 +40,10 @@ WHERE phone_number LIKE '9895-____';
 >[!success] In small databases
 > `LIKE` can be used for quick, non-indexed searches.
 
->[!attention] Avoid `LIKE`
-> **Large datasets**: it can be slow because it performs a **full table scan** without an [[Database Indexing|index]].
+>[!attention] Indexing caveat for `LIKE`
+> `LIKE 'john%'` can often use a normal [[Database Indexing|B-tree index]], because the search still has a left-hand prefix.
+>
+> `LIKE '%john%'` usually **cannot** use a normal B-tree index, because the leading wildcard removes the prefix needed for fast navigation. On large datasets, that often degrades into a full table scan.
 > 
 > **Complex search logic**: use [[#Full-text Search]] or other search systems like Elasticsearch.
 

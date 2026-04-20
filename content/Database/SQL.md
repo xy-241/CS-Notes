@@ -59,7 +59,9 @@ References:
 - Column names
 - Must specify [[#Constraints]]
 ### Index
-- Lookup table for specific columns
-- Used when `foregin key` [[#Constraints]] aren't allowed 
-- Pros: Faster read
-- Cons: Slower write & additional memory
+- Auxiliary lookup structure maintained by the DBMS for one or more columns
+- Commonly used to speed up `WHERE`, `JOIN`, and `ORDER BY` operations
+- `PRIMARY KEY` and `UNIQUE` constraints are often backed by indexes automatically
+- Foreign-key columns are common index candidates, but indexes do **not** replace foreign-key constraints
+- Pros: Faster reads on selective queries
+- Cons: Slower writes and additional storage
