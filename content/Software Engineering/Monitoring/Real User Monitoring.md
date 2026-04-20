@@ -6,8 +6,10 @@ Author Profile:
 tags:
   - software_engineering
 Creation Date: 2023-10-19T13:51:00
-Last Date: 2026-04-19T19:50:08+08:00
+Last Date: 2026-04-20T00:21:15+08:00
 References: 
+draft: 
+description: Real User Monitoring captures the client side of an application, including user-agent, IP address, and Session Replay. Covers rrweb-based session replay that reconstructs user sessions via DOM events instead of video (50 to 100 times smaller and searchable), masking levels for privacy, block selectors, storage and sampling knobs, and retention pruning with VACUUM.
 ---
 ## Abstract
 ---

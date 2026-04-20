@@ -9,7 +9,7 @@ Creation Date: 2024-02-18, 18:28
 Last Date: 2026-04-19T19:50:08+08:00
 References:
 draft:
-description: Postgres Starter Guide
+description: Postgres reference covering pg_dump/pg_restore migration including pgsync for large datasets, database and role setup with schema-scoped privileges, VACUUM and VACUUM FULL for reclaiming disk after DELETE under MVCC, autovacuum inspection, and NeonDB serverless Postgres as a managed alternative.
 ---
 ## Abstract
 ---

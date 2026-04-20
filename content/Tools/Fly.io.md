@@ -9,7 +9,7 @@ Creation Date: 2024-02-18, 17:40
 Last Date: 2026-04-19T19:50:08+08:00
 References:
 draft:
-description: Fly.io Starter Guide
+description: Fly.io reference covering app cost controls with auto-stop/auto-start, grandfathered free tier, machine lifecycle and how machines disappear, CLI cheatsheet, image deployment with the mutable-tag caching gotcha and digest pinning, volume snapshots for backup, and the Cloudflare DNS proxy issue that breaks SSL custom domain verification.
 ---
 ## Abstract
 ---
