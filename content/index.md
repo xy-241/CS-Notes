@@ -346,7 +346,6 @@ Expand any domain to browse the underlying tags and linked notes.
 - [Computer Booting](https://notes.yxy.ninja/OS/Computer-Booting)
 - [Concurrency (并发)](https://notes.yxy.ninja/OS/Synchronization/Concurrency-(并发))
 - [Condition Variable (条件变量)](https://notes.yxy.ninja/OS/Synchronization/Condition-Variable-(条件变量))
-- [Containerisation](https://notes.yxy.ninja/OS/Containerisation)
 - [Context Switch](https://notes.yxy.ninja/OS/Process/Context-Switch)
 - [CPU Cache](https://notes.yxy.ninja/OS/CPU/CPU-Cache)
 - [CPU Scheduling Techniques](https://notes.yxy.ninja/OS/CPU/CPU-Scheduling-Techniques)
