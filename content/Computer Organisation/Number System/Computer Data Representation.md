@@ -51,12 +51,32 @@ $$
 
 >[!question] KB vs KiB?
 > `B` refers to **Byte**, the `K` refers to $10^3$ and `Ki` refers to $2^{10}$. So `1KB` is **$1000$  bytes** and `1KiB` is **$1024$ bytes**.
+To find the number of bits needed to represent a decimal number \( N \):
+
+### Calculating the Number of Bits to Represent a Decimal Number
+
+To find the number of bits needed to represent a decimal number $N$:
+
+1. **Use the formula**: 
+   $$
+   \text{Number of bits} = \lceil \log_2(N + 1) \rceil
+   $$
+   
+2. **Example**: For $N = 150$:
+   - Add 1: $150 + 1 = 151$
+   - Calculate: $\log_2(151) \approx 7.238$
+   - Round up: $\lceil 7.238 \rceil = 8$
+
+Therefore, you need 8 bits to represent 150.
+
+
 
 ## Word
 ---
 - The size of a word can vary depending on the [[Instruction Set Architecture (ISA)]]
 - A single unit of transfer from the [[Main Memory]] to the [[CPU]] and within the CPU
 - Common word sizes are 16 bits, 32 bits, or 64 bits
+- typically a word in mips is 32 bits made up of $4 * 8 bytes$ which corresponds to the size of the register 
 
 >[!question] How do we check if a given memory address is word-aligned?
 > It should divisible by the word size.
