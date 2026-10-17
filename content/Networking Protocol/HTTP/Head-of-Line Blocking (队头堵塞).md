@@ -6,7 +6,7 @@ Author Profile:
 tags:
   - networking
 Creation Date: 2023-08-18T12:59:13+08:00
-Last Date: 2025-10-02T22:26:12+08:00
+Last Date: 2026-10-17T14:07:25-07:00
 References:
 ---
 ## Abstract
@@ -39,4 +39,4 @@ References:
 - When one of the many [[TCP Segment]] is lost, we need to wait for it to be resent & receive, in order to proceed with the receiving of the rest of the [[TCP Segment]]. All the [[HTTP Response]] in that [[TCP Connection]] is blocked!
 
 >[!success] Solution 
-> Solved by [[QUIC]]
+> Solved by [[QUIC#QUIC vs TCP|QUIC]].
