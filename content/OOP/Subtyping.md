@@ -24,6 +24,17 @@ References:
 > 
 > Subtyping is [[Relation Property#Transitive]], if $S <: T$ and $T <: U$, then $S <: U$
 
+>[!IMPORTANT] 
+>you can cast/make a parent type a child type but not the other way around 
+>example you can put a `float` number in args of a function that expects a `double` and it will work because you can pad/extend a `float` to be a `double` but not the other way around  
+>
+>
+
+>[!important] In java only
+>Anti symmetry: if $S <: T$ and $T <: S$ then $S$ must be the same type as $T$
+>
+>
+
 >[!important] OOP 
 > It can be a type that inherits from a [[OOP#OOP Class]] or [[Interface]]. Less specific compared to [[Sub-class]]
 

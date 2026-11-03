@@ -30,6 +30,8 @@ description:
 >[!success] Improves readability
 > It makes the code easier to understand as it **focuses on actions** and **responsibilities** rather than on the internal states of objects.
 
+>[!example]
+>The client should _tell_ a for example a `Circle` object what to do (compute the circumference), instead of _asking_ "What is your radius?" to get the value of a field, then perform the computation on the object's behalf.
 
 ## "Has-a" Relationship
 ---
@@ -42,3 +44,15 @@ description:
 > This allows for flexible designs as the `Engine` class can be **easily replaced** with another class that exhibits the same behaviour. It also promotes [[Encapsulation|encapsulation]] by **keeping related functionalities within the classes responsible for them**.
 > 
 > "Has-a" Relationship is employed when **one class** needs to **utilise** the **functionality of another class** **without** [[Inheritance|inheriting]] from it, resulting in a more **modular** and **adaptable design**.
+
+>[!example]
+>if Class A receives  instance of class b as a parameter to a method , class a is free to use the instance how ever they like as the instance acts as a interface/blueprint of what the object can and cant do 
+
+>[!important] why use composition instead of inheritance
+>lets say you have a parent class called image , this class contians the data and methods to implement and manipulate a image 
+>if you have a abstract method that implements save and load method for diffrent image types(jpg.png,etc) 
+>if lets say the children class is draw on image , it doesnt make sense to implement a load or save image , instead we pass the class a instance of image 
+
+## References 
+
+[flaws of inheritance and why you should use composition](https://youtu.be/hxGOiiR9ZKg?si=xThkAVOK7ficdsQd)
